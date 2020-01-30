@@ -19,6 +19,11 @@ namespace XingAPINet
             _xaQuery.ReceiveData += ReceiveData;
         }
 
+        public int Request(bool bNext = false)
+        {
+            return _xaQuery.Request(bNext);
+        }
+
         protected virtual void ReceiveData(string szTrCode)
         {
         }

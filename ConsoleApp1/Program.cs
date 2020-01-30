@@ -33,7 +33,10 @@ namespace ConsoleApp1
                     throw new ApplicationException("Failed to verify: " + inBlock.BlockName);
                 }
 
-                // query.SetData(inBlock);
+                //if (query.Request(inBlock) < 0)
+                //{
+                //    Console.WriteLine("Failed to send request");
+                //}
             }
         }
     }
