@@ -15,7 +15,7 @@ namespace XingAPINet
         public XingQuery(string resFileCode)
         {
             _xaQuery = new XAQueryClass();
-            _xaQuery.ResFileName = $"{resFileCode}.res";
+            _xaQuery.ResFileName = $".\\Res\\{resFileCode}.res";
             _xaQuery.ReceiveData += ReceiveData;
         }
 

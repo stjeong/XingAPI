@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Runtime.InteropServices;
 using WindowsFormsApp1;
 using XingAPINet;
@@ -9,7 +10,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            using (XingClient xing = new XingClient(true))
+            using (XingClient xing = new XingClient(false))
             {
                 xing.Login += xing_Login;
                 xing.Start();
@@ -21,17 +22,21 @@ namespace ConsoleApp1
 
         private static void xing_Login(object sender, LoginEventArgs e)
         {
-            Console.WriteLine("Use queries:");
+            string currentFolder = Path.GetDirectoryName(typeof(Program).Assembly.Location);
+
+            XingClient xingClient = sender as XingClient;
+            Console.WriteLine($"# of account: {xingClient.NumberOfAccount}");
+
+            foreach (string account in xingClient.GetAccounts())
+            {
+                Console.WriteLine("\t" + account);
+            }
 
             using (XQt1101 query = new XQt1101())
             {
                 XQt1101InBlock inBlock = new XQt1101InBlock();
                 inBlock.shcode = "078020";
 
-                if (inBlock.VerifyData() == false)
-                {
-                    throw new ApplicationException("Failed to verify: " + inBlock.BlockName);
-                }
 
                 //if (query.Request(inBlock) < 0)
                 //{

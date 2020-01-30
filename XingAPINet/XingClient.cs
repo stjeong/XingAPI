@@ -16,6 +16,36 @@ namespace XingAPINet
         bool _useDemoServer = true;
         bool _loggedIn = false;
 
+        public int NumberOfAccount
+        {
+            get
+            {
+                if (_loggedIn == false)
+                {
+                    return 0;
+                }
+
+                return _xingSession.GetAccountListCount();
+            }
+        }
+
+        public void SetPath(string path)
+        {
+            _xingSession.SetPath(path);
+        }
+
+        public string[] GetAccounts()
+        {
+            List<string> list = new List<string>();
+
+            for (int i = 0; i < _xingSession.GetAccountListCount(); i++)
+            {
+                list.Add(_xingSession.GetAccountList(i));
+            }
+
+            return list.ToArray();
+        }
+
         public XingClient(bool useDemoServer)
         {
             _useDemoServer = useDemoServer;
@@ -120,12 +150,6 @@ namespace XingAPINet
                 Console.WriteLine($"Failed to call Login API: {ErrorMessage}");
             }
 
-            Console.WriteLine("# of accounts: " + _xingSession.GetAccountListCount());
-
-            for (int i = 0; i < _xingSession.GetAccountListCount(); i++)
-            {
-                Console.WriteLine(_xingSession.GetAccountList(i));
-            }
         }
 
         private void _xingSession_Logout()
@@ -139,7 +163,7 @@ namespace XingAPINet
             if (szCode == ErrorCode.SUCCESS)
             {
                 _loggedIn = true;
-                Login?.Invoke(null, new LoginEventArgs(szCode, szMsg));
+                Login?.Invoke(this, new LoginEventArgs(szCode, szMsg));
             }
             else
             {

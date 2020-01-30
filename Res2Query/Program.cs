@@ -92,6 +92,7 @@ namespace Res2Query
             StringBuilder sbClass = new StringBuilder();
 
             List<string> blockText = new List<string>();
+            List<string> blockNameList = new List<string>();
             bool inputBlockStarted = false;
 
             foreach (string line2 in File.ReadAllLines(file, Encoding.GetEncoding("ks_c_5601-1987")))
@@ -139,7 +140,7 @@ namespace Res2Query
 
                 if (item == "end")
                 {
-                    string block = BlockToText(tab, inputBlockStarted, blockText);
+                    string block = BlockToText(tab, inputBlockStarted, blockText, blockNameList);
                     sbClass.AppendLine(block);
                     blockText.Clear();
                     continue;
@@ -153,12 +154,32 @@ namespace Res2Query
 
             sbClass.AppendLine(classPerTypeName);
 
+            sbClass.AppendLine();
+
+            StringBuilder sbBlock = new StringBuilder();
+            foreach (string blockTypeName in blockNameList)
+            {
+                sbBlock.AppendLine($"{tab}\tpublic int Request(XQ{blockTypeName} block, bool bNext = false)");
+                sbBlock.AppendLine($"{tab}\t{{");
+                {
+                    sbBlock.AppendLine($"{tab}\t\tif (block.VerifyData() == false)");
+                    sbBlock.AppendLine($"{tab}\t\t{{");
+                    sbBlock.AppendLine($"{tab}\t\t\tthrow new ApplicationException(\"Failed to verify: \" + block.BlockName);");
+                    sbBlock.AppendLine($"{tab}\t\t}}");
+                    sbBlock.AppendLine();
+                    sbBlock.AppendLine($"{tab}\t\treturn Request(bNext);");
+                }
+                sbBlock.AppendLine($"{tab}\t}}");
+                sbBlock.AppendLine();
+            }
+
+            sbClass.AppendLine(sbBlock.ToString());
             sbClass.AppendLine($"{tab}}}");
 
             return sbClass.ToString();
         }
 
-        private static string BlockToText(string tab, bool inputBlockStarted, List<string> blockText)
+        private static string BlockToText(string tab, bool inputBlockStarted, List<string> blockText, List<string> blockNameList)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -181,6 +202,8 @@ namespace Res2Query
                     sb.AppendLine($"{tab}\tpublic string BlockDesc => _blockDesc;");
                     sb.AppendLine($"{tab}\tpublic string BlockType => _blockType;");
                 }
+
+                blockNameList.Add(typeName);
             }
 
             sb.AppendLine();
@@ -341,6 +364,7 @@ namespace Res2Query
                 sb.AppendLine();
 
                 sb.AppendLine($"{tab}\tpublic XQ{typeName}() : base(\"{typeName}\") {{ }}");
+
             }
 
             return sb.ToString();
