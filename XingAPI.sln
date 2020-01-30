@@ -1,0 +1,128 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{3D772C7D-19DC-4AC7-8A11-211323D6E937}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8BC2DF5C-DF15-4F6B-8C28-CF14CA3BFBE6}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\ChartApiSample.exe = Lib\ChartApiSample.exe
+		Lib\CSCommError.txt = Lib\CSCommError.txt
+		Lib\DevCenter.exe = Lib\DevCenter.exe
+		Lib\enmsgoem.dll = Lib\enmsgoem.dll
+		Lib\glb_oem.ini = Lib\glb_oem.ini
+		Lib\hkdnsres.dll = Lib\hkdnsres.dll
+		Lib\inicore_v2.4.3.1.dll = Lib\inicore_v2.4.3.1.dll
+		Lib\inicrypto_v5.2.0.1.dll = Lib\inicrypto_v5.2.0.1.dll
+		Lib\inipki_v5.2.7.1.dll = Lib\inipki_v5.2.7.1.dll
+		Lib\inisafenet_v7.2.dll = Lib\inisafenet_v7.2.dll
+		Lib\IXingAPI.h = Lib\IXingAPI.h
+		Lib\Login.ini = Lib\Login.ini
+		Lib\mfc110.dll = Lib\mfc110.dll
+		Lib\mfc42.dll = Lib\mfc42.dll
+		Lib\msvcp110.dll = Lib\msvcp110.dll
+		Lib\msvcp60.dll = Lib\msvcp60.dll
+		Lib\msvcr110.dll = Lib\msvcr110.dll
+		Lib\msvcrt.dll = Lib\msvcrt.dll
+		Lib\nsldap32v11.dll = Lib\nsldap32v11.dll
+		Lib\readme.txt = Lib\readme.txt
+		Lib\reg.bat = Lib\reg.bat
+		Lib\Sample_xingACE.exe = Lib\Sample_xingACE.exe
+		Lib\SKComdCM.dll = Lib\SKComdCM.dll
+		Lib\SKComdEM.dll = Lib\SKComdEM.dll
+		Lib\SKComdIF.dll = Lib\SKComdIF.dll
+		Lib\SKComdSC.dll = Lib\SKComdSC.dll
+		Lib\SKCommCM.dll = Lib\SKCommCM.dll
+		Lib\SKCommEM.dll = Lib\SKCommEM.dll
+		Lib\SKCommIC.dll = Lib\SKCommIC.dll
+		Lib\SKCommIF.dll = Lib\SKCommIF.dll
+		Lib\SKCommSC.dll = Lib\SKCommSC.dll
+		Lib\unreg.bat = Lib\unreg.bat
+		Lib\XA_Common.dll = Lib\XA_Common.dll
+		Lib\XA_DataSet.dll = Lib\XA_DataSet.dll
+		Lib\XA_Session.dll = Lib\XA_Session.dll
+		Lib\XecureS.dll = Lib\XecureS.dll
+		Lib\xingACE.exe = Lib\xingACE.exe
+		Lib\xingAceRDSender.dll = Lib\xingAceRDSender.dll
+		Lib\xingAPI.dll = Lib\xingAPI.dll
+		Lib\xingAPI.ini = Lib\xingAPI.ini
+		Lib\XingAPI_Sample.exe = Lib\XingAPI_Sample.exe
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Manifests", "Manifests", "{51CDD680-4CC6-4483-A42F-0AC99E96D7F5}"
+	ProjectSection(SolutionItems) = preProject
+		Manifests\import_lib.bat = Manifests\import_lib.bat
+		Manifests\Interop.XA_DataSetLib.dll = Manifests\Interop.XA_DataSetLib.dll
+		Manifests\Interop.XA_SessionLib.dll = Manifests\Interop.XA_SessionLib.dll
+		Manifests\XA_DataSet.dll.manifest = Manifests\XA_DataSet.dll.manifest
+		Manifests\XA_Session.dll.manifest = Manifests\XA_Session.dll.manifest
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{EF05A9DC-E222-4421-A779-A7FFB68C361E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sys", "Sys", "{B933327A-B6F5-431A-AFA1-9C9BF51E3E54}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\Sys\AceTR.txt = Lib\Sys\AceTR.txt
+		Lib\Sys\default.lic = Lib\Sys\default.lic
+		Lib\Sys\DevCenter.ini = Lib\Sys\DevCenter.ini
+		Lib\Sys\Guide.ini = Lib\Sys\Guide.ini
+		Lib\Sys\RD.ini = Lib\Sys\RD.ini
+		Lib\Sys\webinfo.ini = Lib\Sys\webinfo.ini
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Res2Query", "Res2Query\Res2Query.csproj", "{45E35851-8BA1-4B01-A3ED-BCE85E352860}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAPINet", "XingAPINet\XingAPINet.csproj", "{90909CF8-707B-452D-9657-2FC14354D233}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D772C7D-19DC-4AC7-8A11-211323D6E937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D772C7D-19DC-4AC7-8A11-211323D6E937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D772C7D-19DC-4AC7-8A11-211323D6E937}.Debug|x86.ActiveCfg = Debug|x86
+		{3D772C7D-19DC-4AC7-8A11-211323D6E937}.Debug|x86.Build.0 = Debug|x86
+		{3D772C7D-19DC-4AC7-8A11-211323D6E937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D772C7D-19DC-4AC7-8A11-211323D6E937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D772C7D-19DC-4AC7-8A11-211323D6E937}.Release|x86.ActiveCfg = Release|x86
+		{3D772C7D-19DC-4AC7-8A11-211323D6E937}.Release|x86.Build.0 = Release|x86
+		{EF05A9DC-E222-4421-A779-A7FFB68C361E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF05A9DC-E222-4421-A779-A7FFB68C361E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF05A9DC-E222-4421-A779-A7FFB68C361E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EF05A9DC-E222-4421-A779-A7FFB68C361E}.Debug|x86.Build.0 = Debug|Any CPU
+		{EF05A9DC-E222-4421-A779-A7FFB68C361E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF05A9DC-E222-4421-A779-A7FFB68C361E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF05A9DC-E222-4421-A779-A7FFB68C361E}.Release|x86.ActiveCfg = Release|Any CPU
+		{EF05A9DC-E222-4421-A779-A7FFB68C361E}.Release|x86.Build.0 = Release|Any CPU
+		{45E35851-8BA1-4B01-A3ED-BCE85E352860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E35851-8BA1-4B01-A3ED-BCE85E352860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E35851-8BA1-4B01-A3ED-BCE85E352860}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{45E35851-8BA1-4B01-A3ED-BCE85E352860}.Debug|x86.Build.0 = Debug|Any CPU
+		{45E35851-8BA1-4B01-A3ED-BCE85E352860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E35851-8BA1-4B01-A3ED-BCE85E352860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E35851-8BA1-4B01-A3ED-BCE85E352860}.Release|x86.ActiveCfg = Release|Any CPU
+		{45E35851-8BA1-4B01-A3ED-BCE85E352860}.Release|x86.Build.0 = Release|Any CPU
+		{90909CF8-707B-452D-9657-2FC14354D233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90909CF8-707B-452D-9657-2FC14354D233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90909CF8-707B-452D-9657-2FC14354D233}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{90909CF8-707B-452D-9657-2FC14354D233}.Debug|x86.Build.0 = Debug|Any CPU
+		{90909CF8-707B-452D-9657-2FC14354D233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90909CF8-707B-452D-9657-2FC14354D233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90909CF8-707B-452D-9657-2FC14354D233}.Release|x86.ActiveCfg = Release|Any CPU
+		{90909CF8-707B-452D-9657-2FC14354D233}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B933327A-B6F5-431A-AFA1-9C9BF51E3E54} = {8BC2DF5C-DF15-4F6B-8C28-CF14CA3BFBE6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F332E45C-879C-4509-B47C-90E7F3D47657}
+	EndGlobalSection
+EndGlobal
