@@ -92,7 +92,7 @@ namespace Res2Query
             StringBuilder sbClass = new StringBuilder();
 
             List<string> blockText = new List<string>();
-            List<string> blockNameList = new List<string>();
+            Dictionary<string, BlockInfo> blockFieldSetList = new Dictionary<string, BlockInfo>();
             bool inputBlockStarted = false;
 
             foreach (string line2 in File.ReadAllLines(file, Encoding.GetEncoding("ks_c_5601-1987")))
@@ -140,7 +140,7 @@ namespace Res2Query
 
                 if (item == "end")
                 {
-                    string block = BlockToText(tab, inputBlockStarted, blockText, blockNameList);
+                    string block = BlockToText(tab, inputBlockStarted, blockText, blockFieldSetList);
                     sbClass.AppendLine(block);
                     blockText.Clear();
                     continue;
@@ -149,7 +149,7 @@ namespace Res2Query
                 blockText.Add(item);
             }
 
-            sbClass.AppendLine($"{tab}public class XQ{typeName} : XingQuery");
+            sbClass.AppendLine($"{tab}public partial class XQ{typeName} : XingQuery");
             sbClass.AppendLine($"{tab}{{");
 
             sbClass.AppendLine(classPerTypeName);
@@ -157,20 +157,27 @@ namespace Res2Query
             sbClass.AppendLine();
 
             StringBuilder sbBlock = new StringBuilder();
-            foreach (string blockTypeName in blockNameList)
+
+            foreach (string blockTypeName in blockFieldSetList.Keys)
             {
-                sbBlock.AppendLine($"{tab}\tpublic int Request(XQ{blockTypeName} block, bool bNext = false)");
-                sbBlock.AppendLine($"{tab}\t{{");
+                if (blockFieldSetList[blockTypeName].BlockType == BlockType.input)
                 {
-                    sbBlock.AppendLine($"{tab}\t\tif (block.VerifyData() == false)");
-                    sbBlock.AppendLine($"{tab}\t\t{{");
-                    sbBlock.AppendLine($"{tab}\t\t\tthrow new ApplicationException(\"Failed to verify: \" + block.BlockName);");
-                    sbBlock.AppendLine($"{tab}\t\t}}");
+                    sbBlock.AppendLine($"{tab}\tpublic bool SetFields(XQ{blockTypeName} block)");
+                    sbBlock.AppendLine($"{tab}\t{{");
+                    {
+                        sbBlock.AppendLine($"{tab}\t\tif (block.VerifyData() == false)");
+                        sbBlock.AppendLine($"{tab}\t\t{{");
+                        sbBlock.AppendLine($"{tab}\t\t\treturn false; // throw new ApplicationException(\"Failed to verify: \" + block.BlockName);");
+                        sbBlock.AppendLine($"{tab}\t\t}}");
+                        sbBlock.AppendLine();
+
+                        sbBlock.AppendLine(blockFieldSetList[blockTypeName].SetFieldData);
+
+                    }
+                    sbBlock.AppendLine($"{tab}\t\treturn true;");
+                    sbBlock.AppendLine($"{tab}\t}}");
                     sbBlock.AppendLine();
-                    sbBlock.AppendLine($"{tab}\t\treturn Request(bNext);");
                 }
-                sbBlock.AppendLine($"{tab}\t}}");
-                sbBlock.AppendLine();
             }
 
             sbClass.AppendLine(sbBlock.ToString());
@@ -179,18 +186,21 @@ namespace Res2Query
             return sbClass.ToString();
         }
 
-        private static string BlockToText(string tab, bool inputBlockStarted, List<string> blockText, List<string> blockNameList)
+        private static string BlockToText(string tab, bool inputBlockStarted, List<string> blockText, 
+            Dictionary<string, BlockInfo> blockFieldSetList)
         {
             StringBuilder sb = new StringBuilder();
+            string typeName;
+            string typeCode;
 
             {
                 string[] items = blockText[0].Trim(' ', ';').Split(',');
 
-                string typeName = items[0];
+                typeName = items[0];
                 string typeDesc = items[1];
-                string typeCode = items[2];
+                typeCode = items[2];
 
-                sb.AppendLine($"{tab}public class XQ{typeName}");
+                sb.AppendLine($"{tab}public partial class XQ{typeName}");
                 sb.AppendLine($"{tab}{{");
 
                 {
@@ -203,10 +213,17 @@ namespace Res2Query
                     sb.AppendLine($"{tab}\tpublic string BlockType => _blockType;");
                 }
 
-                blockNameList.Add(typeName);
+                if (blockFieldSetList.ContainsKey(typeName) == true)
+                {
+                    throw new ApplicationException("Duplicated: " + typeName);
+                }
             }
 
             sb.AppendLine();
+
+            StringBuilder setFields = new StringBuilder();
+            StringBuilder getFields = new StringBuilder();
+            int fieldIndex = 0;
 
             foreach (string item in blockText.Skip(1))
             {
@@ -226,12 +243,22 @@ namespace Res2Query
                 decimal formatOrLen = decimal.Parse(items[4].Trim());
 
                 {
+                    sb.AppendLine($"{tab}\t/// <summary>");
+                    sb.AppendLine($"{tab}\t/// {fieldDesc}");
+                    sb.AppendLine($"{tab}\t/// </summary>");
+                    sb.AppendLine($"{tab}\t[XAQueryFieldAttribute(\"{fieldDesc}\")]");
                     sb.AppendLine($"{tab}\tpublic {GetFieldType(fieldType, formatOrLen)} {name2};");
                 }
+
+                setFields.AppendLine($"{tab}\t\t_xaQuery.SetFieldData(block.BlockName, \"{name2}\", {fieldIndex}, block.{name2}{GetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
+                getFields.AppendLine($"{tab}\t\txaQuery.GetFieldData(block.BlockName, \"{name2}\", {fieldIndex}, block.{name2}{GetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
+
+                fieldIndex++;
             }
 
-            sb.AppendLine();
+            blockFieldSetList[typeName] = new BlockInfo(typeCode, setFields.ToString());
 
+            sb.AppendLine();
 
             sb.AppendLine($"{tab}\tpublic bool VerifyData()");
             sb.AppendLine($"{tab}\t{{");
@@ -246,11 +273,15 @@ namespace Res2Query
                 switch (GetFieldType(fieldType, formatOrLen))
                 {
                     case "long":
-                        sb.AppendLine($"{tab}\t\tif ({name2}.ToString().Length > {formatOrLen}) return false;");
+                        sb.AppendLine($"{tab}\t\tif ({name2}.ToString().Length > {formatOrLen}) return false; // {fieldType} {formatOrLen}");
                         break;
 
                     case "string":
-                        sb.AppendLine($"{tab}\t\tif ({name2}.Length > {formatOrLen}) return false;");
+                        sb.AppendLine($"{tab}\t\tif ({name2}.Length > {formatOrLen}) return false; // {fieldType} {formatOrLen}");
+                        break;
+
+                    default:
+                        sb.AppendLine($"{tab}\t\t// {name2} {fieldType} {formatOrLen}");
                         break;
                 }
 
@@ -264,12 +295,57 @@ namespace Res2Query
             return sb.ToString();
         }
 
-        public static string GetFieldType(string typeName, decimal Length)
+        public static string GetFieldToStringExp(string typeName, decimal length)
         {
             switch (typeName)
             {
                 case "char":
-                    if (Length == 1)
+                    if (length == 1)
+                    {
+                        return ".ToString()";
+                    }
+
+                    return "";
+
+                case "long":
+                    return $".ToString(\"d{length}\")";
+
+                case "float":
+                case "double":
+                    return $".ToString(\"{ToDoubleFormatSpecifier(length.ToString())}\")";
+            }
+
+            return "";
+        }
+
+        private static string ToDoubleFormatSpecifier(string text)
+        {
+            string[] digits = text.Split('.');
+            if (digits.Length > 2)
+            {
+                throw new ApplicationException("Invalid float/double format specifier");
+            }
+
+            int integral = Int32.Parse(digits[0]);
+            int fraction = 0;
+
+            if (digits.Length == 1)
+            {
+                return new string('0', integral);
+            }
+            else
+            {
+                fraction = Int32.Parse(digits[1]);
+                return new string('0', integral) + "." + new string('0', fraction);
+            }
+        }
+
+        public static string GetFieldType(string typeName, decimal length)
+        {
+            switch (typeName)
+            {
+                case "char":
+                    if (length == 1)
                     {
                         return typeName;
                     }

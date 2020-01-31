@@ -8,7 +8,7 @@ using XA_SessionLib;
 
 namespace XingAPINet
 {
-    public class XingClient : IDisposable
+    public partial class XingClient : IDisposable
     {
         MessageLoop _ml;
 
@@ -29,11 +29,6 @@ namespace XingAPINet
             }
         }
 
-        public void SetPath(string path)
-        {
-            _xingSession.SetPath(path);
-        }
-
         public string[] GetAccounts()
         {
             List<string> list = new List<string>();
@@ -44,6 +39,11 @@ namespace XingAPINet
             }
 
             return list.ToArray();
+        }
+
+        public string GetAccountName(string account)
+        {
+            return _xingSession.GetAccountName(account);
         }
 
         public XingClient(bool useDemoServer)
@@ -57,7 +57,6 @@ namespace XingAPINet
         {
             _ml = new MessageLoop();
             _ml.Loaded += _ml_Loaded;
-            _ml.Closed += _ml_Closed;
 
             _ml.Run();
         }
@@ -70,6 +69,8 @@ namespace XingAPINet
             {
                 if (disposing == true)
                 {
+                    CleanResources();
+
                     if (_ml != null)
                     {
                         _ml.Dispose();
@@ -81,13 +82,7 @@ namespace XingAPINet
             }
         }
 
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        private void _ml_Closed(object sender, EventArgs e)
+        private void CleanResources()
         {
             if (_xingSession == null)
             {
@@ -109,6 +104,12 @@ namespace XingAPINet
                 Marshal.ReleaseComObject(_xingSession);
                 _xingSession = null;
             }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         private void _ml_Loaded(object sender, EventArgs e)

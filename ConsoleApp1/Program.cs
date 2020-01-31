@@ -16,6 +16,7 @@ namespace ConsoleApp1
                 xing.Start();
 
                 Console.WriteLine("Press any key to exit...");
+                Console.WriteLine();
                 Console.ReadLine();
             }
         }
@@ -32,16 +33,27 @@ namespace ConsoleApp1
                 Console.WriteLine("\t" + account);
             }
 
-            using (XQt1101 query = new XQt1101())
+            XQt1101 query = new XQt1101();
             {
                 XQt1101InBlock inBlock = new XQt1101InBlock();
                 inBlock.shcode = "078020";
 
+                if (query.SetFields(inBlock) == false)
+                {
+                    Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
+                    return;
+                }
 
-                //if (query.Request(inBlock) < 0)
-                //{
-                //    Console.WriteLine("Failed to send request");
-                //}
+                Console.WriteLine("GetFields: " + inBlock.BlockName);
+
+                if (query.Request() < 0)
+                {
+                    Console.WriteLine("Failed to send request");
+                }
+
+                Console.WriteLine("Request");
+
+                // XQt1101OutBlock outBlock = XQt1101OutBlock.GetFields(query);
             }
         }
     }

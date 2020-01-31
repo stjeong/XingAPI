@@ -7,7 +7,7 @@ using System.Text;
 
 namespace XingAPINet
 {
-    internal class LoginInfo
+    internal partial class LoginInfo
     {
         public string Id;
         public string Password;
@@ -77,6 +77,18 @@ namespace XingAPINet
             }
 
             return entropy.ToArray();
+        }
+    }
+
+    [AttributeUsage(AttributeTargets.Field, Inherited = false)]
+    public partial class XAQueryFieldAttribute : Attribute
+    {
+        string _fieldDesc;
+        public string FieldDesc => _fieldDesc;
+
+        public XAQueryFieldAttribute(string fieldDesc)
+        {
+            _fieldDesc = fieldDesc;
         }
     }
 }
