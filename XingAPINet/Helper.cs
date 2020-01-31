@@ -7,7 +7,7 @@ using System.Text;
 
 namespace XingAPINet
 {
-    internal partial class LoginInfo
+    public partial class LoginInfo
     {
         public string Id;
         public string Password;

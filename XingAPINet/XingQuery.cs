@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
+using System.Windows.Forms;
 using XA_DataSetLib;
 
 namespace XingAPINet
@@ -29,7 +30,14 @@ namespace XingAPINet
 
             if (result >= 0)
             {
-                _ewh_RecvSync.WaitOne(1000);
+                while (true)
+                {
+                    Application.DoEvents();
+                    if (_ewh_RecvSync.WaitOne(16) == true)
+                    {
+                        break;
+                    }
+                }
             }
 
             return result;
@@ -37,7 +45,6 @@ namespace XingAPINet
 
         protected virtual void ReceiveData(string szTrCode)
         {
-            Console.WriteLine("Query_RecvData");
             _ewh_RecvSync.Set();
         }
 

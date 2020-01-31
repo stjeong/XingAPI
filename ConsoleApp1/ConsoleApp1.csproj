@@ -35,9 +35,6 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CustomMessageLoop">
-      <HintPath>D:\MyGit\DotNetSamples\WinConsole\UIThread\CustomMessageLoop\bin\Debug\CustomMessageLoop.dll</HintPath>
-    </Reference>
     <Reference Include="Interop.XA_DataSetLib">
       <HintPath>..\Manifests\Interop.XA_DataSetLib.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -56,10 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\WindowsFormsApp1\Helper.cs">
-      <Link>Helper.cs</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

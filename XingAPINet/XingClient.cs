@@ -1,20 +1,19 @@
-﻿using CustomMessageLoop;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
+using System.Threading;
+using System.Windows.Forms;
 using XA_SessionLib;
 
 namespace XingAPINet
 {
     public partial class XingClient : IDisposable
     {
-        MessageLoop _ml;
-
         XASessionClass _xingSession;
         bool _useDemoServer = true;
         bool _loggedIn = false;
+
+        EventWaitHandle _ewh_LoginSync = new EventWaitHandle(false, EventResetMode.ManualReset);
 
         public int NumberOfAccount
         {
@@ -53,14 +52,6 @@ namespace XingAPINet
 
         public event EventHandler<LoginEventArgs> Login;
 
-        public void Start()
-        {
-            _ml = new MessageLoop();
-            _ml.Loaded += _ml_Loaded;
-
-            _ml.Run();
-        }
-
         bool _disposed;
 
         protected virtual void Dispose(bool disposing)
@@ -70,12 +61,6 @@ namespace XingAPINet
                 if (disposing == true)
                 {
                     CleanResources();
-
-                    if (_ml != null)
-                    {
-                        _ml.Dispose();
-                        _ml = null;
-                    }
                 }
 
                 _disposed = true;
@@ -112,7 +97,7 @@ namespace XingAPINet
             GC.SuppressFinalize(this);
         }
 
-        private void _ml_Loaded(object sender, EventArgs e)
+        public bool ConnectWithLogin(LoginInfo user)
         {
             _xingSession = new XASessionClass();
             _xingSession.Disconnect += XingSession_Disconnect;
@@ -124,15 +109,13 @@ namespace XingAPINet
 
             if (bConnect == true)
             {
-                LoginTo();
+                return LoginTo(user);
             }
-            else
-            {
-                Console.WriteLine($"Failed to connect: {ErrorMessage}");
-            }
+
+            return false;
         }
 
-        string ErrorMessage
+        public string ErrorMessage
         {
             get
             {
@@ -141,40 +124,59 @@ namespace XingAPINet
             }
         }
 
-        void LoginTo()
+        bool LoginTo(LoginInfo user)
         {
-            LoginInfo user = LoginInfo.CreateInfo(_useDemoServer);
+            _ewh_LoginSync.Reset();
 
             bool result = _xingSession.Login(user.Id, user.Password, user.CertPassword, 0, false);
             if (result == false)
             {
-                Console.WriteLine($"Failed to call Login API: {ErrorMessage}");
+                return false;
             }
 
+            while (true)
+            {
+                Application.DoEvents();
+                if (_ewh_LoginSync.WaitOne(16) == true)
+                {
+                    break;
+                }
+            }
+
+            return _loggedIn;
         }
 
+        [Obsolete("Maybe not used anymore")]
         private void _xingSession_Logout()
         {
             _loggedIn = false;
-            Console.WriteLine("_xingSession_Logout");
+            Console.WriteLine("[Logout] event occurred");
         }
 
         private void _xingSession_Login(string szCode, string szMsg)
         {
-            if (szCode == ErrorCode.SUCCESS)
+            try
             {
-                _loggedIn = true;
-                Login?.Invoke(this, new LoginEventArgs(szCode, szMsg));
+                if (szCode == ErrorCode.SUCCESS)
+                {
+                    _loggedIn = true;
+                    Login?.Invoke(this, new LoginEventArgs(szCode, szMsg));
+                }
+                else
+                {
+                    Console.WriteLine($"Failed to Login: {szCode}, {szMsg}");
+                }
             }
-            else
+            finally
             {
-                Console.WriteLine($"Failed to Login: {szCode}, {szMsg}");
+                _ewh_LoginSync.Set();
             }
         }
 
+        [Obsolete("Maybe not used anymore")]
         private void XingSession_Disconnect()
         {
-            Console.WriteLine("Disconnected");
+            Console.WriteLine("[Disconnect] event occurred");
         }
     }
 

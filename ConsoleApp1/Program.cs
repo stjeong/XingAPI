@@ -1,7 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Runtime.InteropServices;
-using WindowsFormsApp1;
 using XingAPINet;
 
 namespace ConsoleApp1
@@ -10,50 +7,50 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            using (XingClient xing = new XingClient(false))
-            {
-                xing.Login += xing_Login;
-                xing.Start();
-
-                Console.WriteLine("Press any key to exit...");
-                Console.WriteLine();
-                Console.ReadLine();
-            }
+            Program pg = new Program();
+            pg.Main();
         }
 
-        private static void xing_Login(object sender, LoginEventArgs e)
+        void Main()
         {
-            string currentFolder = Path.GetDirectoryName(typeof(Program).Assembly.Location);
+            bool useDemoServer = false;
+            LoginInfo user = LoginInfo.CreateInfo(useDemoServer);
 
-            XingClient xingClient = sender as XingClient;
-            Console.WriteLine($"# of account: {xingClient.NumberOfAccount}");
-
-            foreach (string account in xingClient.GetAccounts())
+            using (XingClient xing = new XingClient(useDemoServer))
             {
-                Console.WriteLine("\t" + account);
-            }
-
-            XQt1101 query = new XQt1101();
-            {
-                XQt1101InBlock inBlock = new XQt1101InBlock();
-                inBlock.shcode = "078020";
-
-                if (query.SetFields(inBlock) == false)
+                if (xing.ConnectWithLogin(user) == false)
                 {
-                    Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
+                    Console.WriteLine(xing.ErrorMessage);
                     return;
                 }
 
-                Console.WriteLine("GetFields: " + inBlock.BlockName);
+                Console.WriteLine($"# of account: {xing.NumberOfAccount}");
 
-                if (query.Request() < 0)
+                foreach (string account in xing.GetAccounts())
                 {
-                    Console.WriteLine("Failed to send request");
+                    Console.WriteLine("\t" + account);
                 }
 
-                Console.WriteLine("Request");
+                XQt1101 query = new XQt1101();
+                {
+                    XQt1101InBlock inBlock = new XQt1101InBlock();
+                    inBlock.shcode = "078020";
 
-                // XQt1101OutBlock outBlock = XQt1101OutBlock.GetFields(query);
+                    if (query.SetFields(inBlock) == false)
+                    {
+                        Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
+                        return;
+                    }
+
+                    if (query.Request() < 0)
+                    {
+                        Console.WriteLine("Failed to send request");
+                    }
+
+                    Console.WriteLine("Request sent");
+
+                    // XQt1101OutBlock outBlock = XQt1101OutBlock.GetFields(query);
+                }
             }
         }
     }

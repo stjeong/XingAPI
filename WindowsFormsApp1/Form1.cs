@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using XA_SessionLib;
+using XingAPINet;
 
 namespace WindowsFormsApp1
 {
@@ -18,7 +19,14 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        XASessionClass _xingSession;
+        XingClient _xingClient;
+
+        protected override void OnClosed(EventArgs e)
+        {
+            _xingClient.Dispose();
+
+            base.OnClosed(e);
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -28,56 +36,44 @@ namespace WindowsFormsApp1
             IXASession xingSession = objSession as IXASession;
             */
 
-            XASessionClass xingSession = new XASessionClass();
-            bool useDemoServer = true;
-
-            string serverAddress = (useDemoServer == true) ? "demo.etrade.co.kr" : "hts.etrade.co.kr";
-            bool bConnect = _xingSession.ConnectServer(serverAddress, 20001);
-
-            if (bConnect == true)
-            {
-                _xingSession = xingSession;
-
-                _xingSession.Disconnect += XingSession_Disconnect;
-                _xingSession._IXASessionEvents_Event_Login += _xingSession__IXASessionEvents_Event_Login;
-                _xingSession._IXASessionEvents_Event_Logout += _xingSession__IXASessionEvents_Event_Logout;
-            }
-            else
-            {
-                MessageBox.Show("Failed to connect");
-                return;
-            }
+            bool useDemoServer = false;
 
             LoginInfo user = LoginInfo.CreateInfo(useDemoServer);
 
-            bool result = _xingSession.Login(user.Id, user.Password, user.CertPassword, 0, true);
-            if (result == true)
+            _xingClient = new XingClient(useDemoServer);
+            _xingClient.ConnectWithLogin(user);
+         
+            Console.WriteLine($"# of account: {_xingClient.NumberOfAccount}");
+
+            foreach (string account in _xingClient.GetAccounts())
             {
-                MessageBox.Show("Logged-in");
-                _xingSession.Logout();
+                Console.WriteLine("\t" + account);
             }
-            else
+
+            using (XQt1101 query = new XQt1101())
             {
-                MessageBox.Show("Failed to login");
+                XQt1101InBlock inBlock = new XQt1101InBlock();
+                inBlock.shcode = "078020";
+
+                if (query.SetFields(inBlock) == false)
+                {
+                    Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
+                    return;
+                }
+
+                Console.WriteLine("GetFields: " + inBlock.BlockName);
+
+                int queryResult = query.Request();
+                if (queryResult < 0)
+                {
+                    Console.WriteLine("Failed to send request");
+                }
+
+                MessageBox.Show(queryResult.ToString());
+
+                // XQt1101OutBlock outBlock = XQt1101OutBlock.GetFields(query);
             }
-
-            // xingSession.DisconnectServer();
         }
 
-        private void _xingSession__IXASessionEvents_Event_Logout()
-        {
-            Console.WriteLine("_xingSession__IXASessionEvents_Event_Logout");
-        }
-
-        private void _xingSession__IXASessionEvents_Event_Login(string szCode, string szMsg)
-        {
-            MessageBox.Show(szMsg);
-            Console.WriteLine("_xingSession__IXASessionEvents_Event_Login");
-        }
-
-        private void XingSession_Disconnect()
-        {
-            Console.WriteLine("Disconnected");
-        }
     }
 }
