@@ -2,11 +2,18 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Security;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace XingAPINet
 {
+    public enum DumpOutputType
+    {
+        FormattedKeyValue,
+    }
+
     public partial class LoginInfo
     {
         public string Id;
@@ -89,6 +96,150 @@ namespace XingAPINet
         public XAQueryFieldAttribute(string fieldDesc)
         {
             _fieldDesc = fieldDesc;
+        }
+    }
+
+    public partial class XAQueryFieldInfo
+    {
+        readonly string _fieldDesc;
+        public string FieldDesc => _fieldDesc;
+
+        readonly decimal _lengthOrFormat;
+        public decimal LengthOrFormat => _lengthOrFormat;
+
+        readonly string _fieldType;
+        public string FieldType => _fieldType;
+
+        readonly string _fieldValue;
+        public string FieldValue => _fieldValue;
+
+        public XAQueryFieldInfo(string fieldType, string fieldValue, string fieldDesc, decimal lengthOrFormat)
+        {
+            _fieldType = fieldType;
+            _fieldValue = fieldValue;
+            _fieldDesc = fieldDesc;
+            _lengthOrFormat = lengthOrFormat;
+        }
+    }
+
+    public partial class XAQueryResult
+    {
+        readonly bool _isSystemError;
+        public bool IsSystemError => _isSystemError;
+
+        readonly string _code;
+        public string Code => _code;
+
+        readonly string _message;
+        public string Message => _message;
+
+        public XAQueryResult(bool isSystemError, string messageCode, string message)
+        {
+            _isSystemError = isSystemError;
+            _code = messageCode;
+            _message = message;
+        }
+    }
+
+    public static class ExtensionMethods
+    {
+        public static long ParseLong(this string text, string fieldName)
+        {
+            if (string.IsNullOrEmpty(text) == true)
+            {
+                throw new InvalidDataFormatException(fieldName, text);
+            }
+
+            if (long.TryParse(text, out long parsedResult) == true)
+            {
+                return parsedResult;
+            }
+
+            throw new InvalidDataFormatException(fieldName, text);
+        }
+
+        public static float ParseFloat(this string text, string fieldName)
+        {
+            if (string.IsNullOrEmpty(text) == true)
+            {
+                throw new InvalidDataFormatException(fieldName, text);
+            }
+
+            if (float.TryParse(text, out float parsedResult) == true)
+            {
+                return parsedResult;
+            }
+
+            throw new InvalidDataFormatException(fieldName, text);
+        }
+
+        public static double ParseDouble(this string text, string fieldName)
+        {
+            if (string.IsNullOrEmpty(text) == true)
+            {
+                throw new InvalidDataFormatException(fieldName, text);
+            }
+
+            if (double.TryParse(text, out double parsedResult) == true)
+            {
+                return parsedResult;
+            }
+
+            throw new InvalidDataFormatException(fieldName, text);
+        }
+
+        public static void Dump(this TextWriter writer, string blockName, Dictionary<string, XAQueryFieldInfo> dict, DumpOutputType outputType)
+        {
+            StringBuilder sbDump = new StringBuilder();
+            StringBuilder fieldText = new StringBuilder();
+
+            switch (outputType)
+            {
+                case DumpOutputType.FormattedKeyValue:
+                    int totalSize = 0;
+                    foreach (string key in dict.Keys)
+                    {
+                        fieldText.AppendLine($"\t{key} == {dict[key].FieldValue}");
+                        totalSize += (int)Math.Truncate(dict[key].LengthOrFormat);
+                    }
+
+                    sbDump.AppendLine($"[{blockName}: sizeof() == {totalSize}]");
+                    writer.WriteLine(sbDump.ToString() + fieldText.ToString());
+                    break;
+            }
+        }
+    }
+
+    [Serializable]
+    public class InvalidDataFormatException : System.Exception, ISerializable
+    {
+        public readonly string DataFieldName;
+        public readonly string DataValue;
+
+        public InvalidDataFormatException(string dataFieldName, string invalidValue) : this(dataFieldName, invalidValue, "")
+        {
+        }
+
+        public InvalidDataFormatException(string dataFieldName, string invalidValue, string message) : base(message)
+        {
+            DataFieldName = dataFieldName;
+            DataValue = invalidValue;
+        }
+
+        public InvalidDataFormatException(string message, Exception innerException)
+            : base(message, innerException)
+        {
+        }
+
+        protected InvalidDataFormatException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
+        {
+        }
+
+        [SecurityCritical]
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            base.GetObjectData(info, context);
         }
     }
 }

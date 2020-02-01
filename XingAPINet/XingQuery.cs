@@ -15,16 +15,22 @@ namespace XingAPINet
         bool _disposed;
         EventWaitHandle _ewh_RecvSync = new EventWaitHandle(false, EventResetMode.ManualReset);
 
+        XAQueryResult _queryResult;
+        public XAQueryResult QueryResult => _queryResult;
+        public string ReceiveMessage => $"Code = {_queryResult.Code}, Message = {_queryResult.Message}";
+
         public XingQuery(string resFileCode)
         {
             _xaQuery = new XAQueryClass();
             _xaQuery.ResFileName = $".\\Res\\{resFileCode}.res";
             _xaQuery.ReceiveData += ReceiveData;
+            _xaQuery.ReceiveMessage += _xaQuery_ReceiveMessage;
         }
 
         public int Request(bool bNext = false)
         {
             _ewh_RecvSync.Reset();
+            _queryResult = null;
 
             int result = _xaQuery.Request(bNext);
 
@@ -43,9 +49,19 @@ namespace XingAPINet
             return result;
         }
 
+        public string GetFieldData(string blockName, string fieldName, int index)
+        {
+            return _xaQuery.GetFieldData(blockName, fieldName, index);
+        }
+
         protected virtual void ReceiveData(string szTrCode)
         {
             _ewh_RecvSync.Set();
+        }
+
+        private void _xaQuery_ReceiveMessage(bool bIsSystemError, string nMessageCode, string szMessage)
+        {
+            _queryResult = new XAQueryResult(bIsSystemError, nMessageCode, szMessage);
         }
 
         protected virtual void Dispose(bool disposing)

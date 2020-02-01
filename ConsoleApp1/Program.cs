@@ -31,6 +31,7 @@ namespace ConsoleApp1
                     Console.WriteLine("\t" + account);
                 }
 
+                // 현재가 조회한 후,
                 XQt1101 query = new XQt1101();
                 {
                     XQt1101InBlock inBlock = new XQt1101InBlock();
@@ -47,9 +48,21 @@ namespace ConsoleApp1
                         Console.WriteLine("Failed to send request");
                     }
 
-                    Console.WriteLine("Request sent");
+                    XQt1101OutBlock outBlock = query.GetBlock();
+                    if (outBlock.IsValidData == true)
+                    {
+                        outBlock.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                    }
+                }
 
-                    // XQt1101OutBlock outBlock = XQt1101OutBlock.GetFields(query);
+                // 실시간 데이터를 조회
+                while (true)
+                {
+                    
                 }
             }
         }

@@ -18,10 +18,10 @@ namespace Res2Query
 
         public readonly string SetFieldData;
 
-        public BlockInfo(string typeCode, string fieldData)
+        public BlockInfo(string typeCode, string setFieldData)
         {
             _blockType = typeCode;
-            SetFieldData = fieldData;
+            SetFieldData = setFieldData;
         }
     }
 

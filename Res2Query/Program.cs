@@ -29,6 +29,7 @@ namespace Res2Query
             string[] usingList = new string[]
             {
                 "System",
+                "System.IO",
                 "System.Collections.Generic",
                 "System.Linq",
                 "System.Runtime.InteropServices",
@@ -93,7 +94,8 @@ namespace Res2Query
 
             List<string> blockText = new List<string>();
             Dictionary<string, BlockInfo> blockFieldSetList = new Dictionary<string, BlockInfo>();
-            bool inputBlockStarted = false;
+            bool blockStarted = false;
+            bool isRealType = false;
 
             foreach (string line2 in File.ReadAllLines(file, Encoding.GetEncoding("ks_c_5601-1987")))
             {
@@ -101,7 +103,7 @@ namespace Res2Query
 
                 if (item.StartsWith(".Func,") == true)
                 {
-                    classPerTypeName = ToTypeName(item, tab, out typeName);
+                    classPerTypeName = ToQueryTypeName(item, tab, out typeName);
 
                     if (typeList.Contains(typeName) == true)
                     {
@@ -110,6 +112,18 @@ namespace Res2Query
 
                     typeList.Add(typeName);
                     continue;
+                }
+
+                if (item.StartsWith(".Feed,") == true)
+                {
+                    classPerTypeName = ToRealTypeName(item, tab, out typeName);
+
+                    if (typeList.Contains(typeName) == true)
+                    {
+                        return "";
+                    }
+
+                    isRealType = true;
                 }
 
                 if (item.StartsWith("BEGIN_DATA_MAP") == true)
@@ -123,33 +137,27 @@ namespace Res2Query
                     continue;
                 }
 
-                if (item.EndsWith("input;") == true)
-                {
-                    inputBlockStarted = true;
-                }
-
-                if (item.EndsWith("output;") == true)
-                {
-                    inputBlockStarted = false;
-                }
-
                 if (item == "begin")
                 {
+                    blockStarted = true;
                     continue;
                 }
 
-                if (item == "end")
+                if (blockStarted == true && item == "end")
                 {
-                    string block = BlockToText(tab, inputBlockStarted, blockText, blockFieldSetList);
+                    string block = BlockToText(tab, isRealType, typeName, blockText, blockFieldSetList);
                     sbClass.AppendLine(block);
                     blockText.Clear();
+                    blockStarted = false;
                     continue;
                 }
 
                 blockText.Add(item);
             }
 
-            sbClass.AppendLine($"{tab}public partial class XQ{typeName} : XingQuery");
+            string classPrefix = (isRealType == true) ? "XR" : "XQ";
+
+            sbClass.AppendLine($"{tab}public partial class {classPrefix}{typeName} : " + ((isRealType == true) ? "XingReal" : "XingQuery"));
             sbClass.AppendLine($"{tab}{{");
 
             sbClass.AppendLine(classPerTypeName);
@@ -162,7 +170,7 @@ namespace Res2Query
             {
                 if (blockFieldSetList[blockTypeName].BlockType == BlockType.input)
                 {
-                    sbBlock.AppendLine($"{tab}\tpublic bool SetFields(XQ{blockTypeName} block)");
+                    sbBlock.AppendLine($"{tab}\tpublic bool SetFields({classPrefix}{blockTypeName} block)");
                     sbBlock.AppendLine($"{tab}\t{{");
                     {
                         sbBlock.AppendLine($"{tab}\t\tif (block.VerifyData() == false)");
@@ -178,6 +186,18 @@ namespace Res2Query
                     sbBlock.AppendLine($"{tab}\t}}");
                     sbBlock.AppendLine();
                 }
+                else if (blockFieldSetList[blockTypeName].BlockType == BlockType.output)
+                {
+                    sbBlock.AppendLine($"{tab}\tpublic {classPrefix}{blockTypeName} Get{GetBlockIndex(typeName, blockTypeName)}()");
+                    sbBlock.AppendLine($"{tab}\t{{");
+                    {
+                        sbBlock.AppendLine($"{tab}\t\t{classPrefix}{blockTypeName} instance = {classPrefix}{blockTypeName}.FromQuery(this);");
+                        sbBlock.AppendLine($"{tab}\t\treturn instance;");
+                        sbBlock.AppendLine();
+                    }
+                    sbBlock.AppendLine($"{tab}\t}}");
+                    sbBlock.AppendLine();
+                }
             }
 
             sbClass.AppendLine(sbBlock.ToString());
@@ -186,12 +206,19 @@ namespace Res2Query
             return sbClass.ToString();
         }
 
-        private static string BlockToText(string tab, bool inputBlockStarted, List<string> blockText, 
+        public static string GetBlockIndex(string typeName, string blockTypeName)
+        {
+            return blockTypeName.Substring(typeName.Length + "Out".Length);
+        }
+
+        private static string BlockToText(string tab, bool isRealType, string queryTypeName, List<string> blockText,
             Dictionary<string, BlockInfo> blockFieldSetList)
         {
             StringBuilder sb = new StringBuilder();
             string typeName;
             string typeCode;
+
+            string classPrefix = (isRealType == true) ? "XR" : "XQ";
 
             {
                 string[] items = blockText[0].Trim(' ', ';').Split(',');
@@ -200,7 +227,7 @@ namespace Res2Query
                 string typeDesc = items[1];
                 typeCode = items[2];
 
-                sb.AppendLine($"{tab}public partial class XQ{typeName}");
+                sb.AppendLine($"{tab}public partial class {classPrefix}{typeName}");
                 sb.AppendLine($"{tab}{{");
 
                 {
@@ -227,7 +254,7 @@ namespace Res2Query
 
             foreach (string item in blockText.Skip(1))
             {
-                string [] items = item.Split(',', ';');
+                string[] items = item.Split(',', ';');
 
                 string fieldDesc = items[0].Trim();
                 // string name1 = items[1].Trim();
@@ -250,52 +277,148 @@ namespace Res2Query
                     sb.AppendLine($"{tab}\tpublic {GetFieldType(fieldType, formatOrLen)} {name2};");
                 }
 
-                setFields.AppendLine($"{tab}\t\t_xaQuery.SetFieldData(block.BlockName, \"{name2}\", {fieldIndex}, block.{name2}{GetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
-                getFields.AppendLine($"{tab}\t\txaQuery.GetFieldData(block.BlockName, \"{name2}\", {fieldIndex}, block.{name2}{GetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
-
-                fieldIndex++;
+                setFields.AppendLine($"{tab}\t\t_xaQuery.SetFieldData(block.BlockName, \"{name2}\", {fieldIndex}, block.{name2}{SetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
+                getFields.AppendLine($"{tab}\t\t\tinstance.{name2} = query.GetFieldData(\"{typeName}\", \"{name2}\", {fieldIndex}){GetFieldToStringExp(fieldType, name2, formatOrLen)}; // {fieldType} {formatOrLen}");
             }
 
             blockFieldSetList[typeName] = new BlockInfo(typeCode, setFields.ToString());
 
-            sb.AppendLine();
-
-            sb.AppendLine($"{tab}\tpublic bool VerifyData()");
-            sb.AppendLine($"{tab}\t{{");
-            foreach (string item in blockText.Skip(1))
+            // public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
             {
-                string[] items = item.Split(',', ';');
+                sb.AppendLine();
 
-                string name2 = items[2].Trim();
-                string fieldType = items[3].Trim();
-                decimal formatOrLen = decimal.Parse(items[4].Trim());
+                sb.AppendLine($"{tab}\tpublic void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)");
+                sb.AppendLine($"{tab}\t{{");
+                sb.AppendLine($"{tab}\t\tDictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();");
+                sb.AppendLine($"{tab}\t\twriter.Dump(_blockName, dict, outputType);");
+                sb.AppendLine();
+                sb.AppendLine($"{tab}\t}}");
+            }
 
-                switch (GetFieldType(fieldType, formatOrLen))
+            // public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+            {
+                sb.AppendLine();
+
+                sb.AppendLine($"{tab}\tpublic Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()");
+                sb.AppendLine($"{tab}\t{{");
+                sb.AppendLine($"{tab}\t\tDictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();");
+                foreach (string item in blockText.Skip(1))
                 {
-                    case "long":
-                        sb.AppendLine($"{tab}\t\tif ({name2}.ToString().Length > {formatOrLen}) return false; // {fieldType} {formatOrLen}");
-                        break;
+                    string[] items = item.Split(',', ';');
 
-                    case "string":
-                        sb.AppendLine($"{tab}\t\tif ({name2}.Length > {formatOrLen}) return false; // {fieldType} {formatOrLen}");
-                        break;
+                    string fieldDesc = items[0].Trim();
+                    string name2 = items[2].Trim();
+                    string fieldType = items[3].Trim();
+                    decimal formatOrLen = decimal.Parse(items[4].Trim());
 
-                    default:
-                        sb.AppendLine($"{tab}\t\t// {name2} {fieldType} {formatOrLen}");
-                        break;
+                    sb.AppendLine($"{tab}\t\tdict[\"{name2}\"] = new XAQueryFieldInfo(\"{fieldType}\", {name2}{SetFieldToStringExp(fieldType, formatOrLen)}, \"{fieldDesc}\", (decimal){formatOrLen});");
                 }
 
+                sb.AppendLine();
+                sb.AppendLine($"{tab}\t\treturn dict;");
+                sb.AppendLine($"{tab}\t}}");
             }
-            sb.AppendLine();
-            sb.AppendLine($"{tab}\t\treturn true;");
-            sb.AppendLine($"{tab}\t}}");
+
+            // public bool FromQuery
+            if (blockFieldSetList[typeName].BlockType == BlockType.output)
+            {
+                sb.AppendLine();
+
+                sb.AppendLine($"{tab}\tpublic bool IsValidData = true;");
+                sb.AppendLine($"{tab}\tpublic string InvalidReason;");
+
+                sb.AppendLine($"{tab}\tpublic static {classPrefix}{typeName} FromQuery({classPrefix}{queryTypeName} query)");
+                sb.AppendLine($"{tab}\t{{");
+
+                sb.AppendLine($"{tab}\t\t{classPrefix}{typeName} instance = new {classPrefix}{typeName}();");
+
+                sb.AppendLine($"{tab}\t\tif (query.QueryResult != null && query.QueryResult.IsSystemError == true)");
+                sb.AppendLine($"{tab}\t\t{{");
+                sb.AppendLine($"{tab}\t\t\tinstance.IsValidData = false;");
+                sb.AppendLine($"{tab}\t\t\tinstance.InvalidReason = query.ReceiveMessage;");
+                sb.AppendLine($"{tab}\t\t\treturn instance;");
+                sb.AppendLine($"{tab}\t\t}}");
+
+                sb.AppendLine($"{tab}\t\ttry");
+                sb.AppendLine($"{tab}\t\t{{");
+
+
+                sb.AppendLine(getFields.ToString());
+
+                sb.AppendLine($"{tab}\t\t}} catch (InvalidDataFormatException e) {{");
+                sb.AppendLine($"{tab}\t\t\tinstance.IsValidData = false;");
+                sb.AppendLine($"{tab}\t\t\tinstance.InvalidReason = $\"FieldName == {{e.DataFieldName}}, FieldData == \\\"{{e.DataValue}}\\\"\";");
+                sb.AppendLine($"{tab}\t\t}}");
+                sb.AppendLine($"{tab}\t\treturn instance;");
+                sb.AppendLine();
+                sb.AppendLine($"{tab}\t}}");
+            }
+
+            // public bool VerifyData
+            {
+                sb.AppendLine();
+
+                sb.AppendLine($"{tab}\tpublic bool VerifyData()");
+                sb.AppendLine($"{tab}\t{{");
+                foreach (string item in blockText.Skip(1))
+                {
+                    string[] items = item.Split(',', ';');
+
+                    string name2 = items[2].Trim();
+                    string fieldType = items[3].Trim();
+                    decimal formatOrLen = decimal.Parse(items[4].Trim());
+
+                    switch (GetFieldType(fieldType, formatOrLen))
+                    {
+                        case "long":
+                            sb.AppendLine($"{tab}\t\tif ({name2}.ToString().Length > {formatOrLen}) return false; // {fieldType} {formatOrLen}");
+                            break;
+
+                        case "string":
+                            sb.AppendLine($"{tab}\t\tif ({name2}.Length > {formatOrLen}) return false; // {fieldType} {formatOrLen}");
+                            break;
+
+                        default:
+                            sb.AppendLine($"{tab}\t\t// {name2} {fieldType} {formatOrLen}");
+                            break;
+                    }
+                }
+
+                sb.AppendLine();
+                sb.AppendLine($"{tab}\t\treturn true;");
+                sb.AppendLine($"{tab}\t}}");
+            }
 
             sb.AppendLine($"{tab}}}");
 
             return sb.ToString();
         }
 
-        public static string GetFieldToStringExp(string typeName, decimal length)
+        public static string GetFieldToStringExp(string typeName, string fieldName, decimal length)
+        {
+            switch (typeName)
+            {
+                case "char":
+                    if (length == 1)
+                    {
+                        return $".First()";
+                    }
+                    break;
+
+                case "long":
+                    return $".ParseLong(\"{fieldName}\")";
+
+                case "float":
+                    return $".ParseFloat(\"{fieldName}\")";
+
+                case "double":
+                    return $".ParseDouble(\"{fieldName}\")";
+            }
+
+            return "";
+        }
+
+        public static string SetFieldToStringExp(string typeName, decimal length)
         {
             switch (typeName)
             {
@@ -356,12 +479,65 @@ namespace Res2Query
             return typeName;
         }
 
-        private static string ToTypeName(string line, string tab, out string typeName)
+        static string ToRealTypeName(string line, string tab, out string typeName)
         {
             string[] items = line.Trim(' ', ';').Split(',');
 
-            string typeDesc = items[1];
-            typeName = items[2];
+            string typeDesc = items[1].Trim();
+            typeName = items[2].Trim();
+            int key = 0;
+            int group = 0;
+            bool hasAttr = false;
+
+            foreach (string item in items)
+            {
+                string[] keyValue = item.Split('=');
+                switch (keyValue[0])
+                {
+                    case "attr":
+                        hasAttr = true;
+                        break;
+
+                    case "key":
+                        key = int.Parse(keyValue[1]);
+                        break;
+
+                    case "group":
+                        group = int.Parse(keyValue[1]);
+                        break;
+                }
+            }
+
+            StringBuilder sb = new StringBuilder();
+
+            {
+                sb.AppendLine($"{tab}\treadonly string _typeName = \"{typeName}\";");
+                sb.AppendLine($"{tab}\treadonly bool _attr = {hasAttr.ToString().ToLower()};");
+                sb.AppendLine($"{tab}\treadonly int _key = {key};");
+                sb.AppendLine($"{tab}\treadonly int _group = {group};");
+
+                sb.AppendLine();
+
+                sb.AppendLine($"{tab}\tpublic string TypeName => _typeName;");
+                sb.AppendLine($"{tab}\tpublic bool Attr => _attr;");
+                sb.AppendLine($"{tab}\tpublic int Key => _key;");
+                sb.AppendLine($"{tab}\tpublic int Group => _group;");
+
+                sb.AppendLine();
+
+                sb.AppendLine($"{tab}\tpublic XR{typeName}() : base(\"{typeName}\") {{ }}");
+
+            }
+
+            return sb.ToString();
+        }
+
+        private static string ToQueryTypeName(string line, string tab, out string typeName)
+        {
+            string[] items = line.Trim(' ', ';').Split(',');
+
+            string typeDesc = items[1].Trim();
+            typeName = items[2].Trim();
             bool hasAttr = false;
             bool hasBlock = false;
             bool hasEncrypt = false;
@@ -393,19 +569,19 @@ namespace Res2Query
                         break;
 
                     case "SERVICE":
-                        typeService = keyValue[1];
+                        typeService = keyValue[1].Trim();
                         break;
 
                     case "headtype":
-                        headType = keyValue[1];
+                        headType = keyValue[1].Trim();
                         break;
 
                     case "CREATOR":
-                        creator = keyValue[1];
+                        creator = keyValue[1].Trim();
                         break;
 
                     case "CREDATE":
-                        credate = keyValue[1];
+                        credate = keyValue[1].Trim();
                         break;
                 }
             }
@@ -439,7 +615,7 @@ namespace Res2Query
 
                 sb.AppendLine();
 
-                sb.AppendLine($"{tab}\tpublic XQ{typeName}() : base(\"{typeName}\") {{ }}");
+                sb.AppendLine($"{tab}\tpublic XR{typeName}() : base(\"{typeName}\") {{ }}");
 
             }
 
