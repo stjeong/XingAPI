@@ -12,6 +12,7 @@ namespace XingAPINet
     public enum DumpOutputType
     {
         FormattedKeyValue,
+        KeyValue,
     }
 
     public partial class LoginInfo
@@ -113,10 +114,14 @@ namespace XingAPINet
         readonly string _fieldValue;
         public string FieldValue => _fieldValue;
 
-        public XAQueryFieldInfo(string fieldType, string fieldValue, string fieldDesc, decimal lengthOrFormat)
+        readonly string _fieldFormattedValue;
+        public string FieldFormattedValue => _fieldFormattedValue;
+
+        public XAQueryFieldInfo(string fieldType, object fieldValue, string fieldFormattedValue, string fieldDesc, decimal lengthOrFormat)
         {
             _fieldType = fieldType;
-            _fieldValue = fieldValue;
+            _fieldValue = fieldValue.ToString();
+            _fieldFormattedValue = fieldFormattedValue;
             _fieldDesc = fieldDesc;
             _lengthOrFormat = lengthOrFormat;
         }
@@ -192,11 +197,22 @@ namespace XingAPINet
         {
             StringBuilder sbDump = new StringBuilder();
             StringBuilder fieldText = new StringBuilder();
+            int totalSize = 0;
 
             switch (outputType)
             {
                 case DumpOutputType.FormattedKeyValue:
-                    int totalSize = 0;
+                    foreach (string key in dict.Keys)
+                    {
+                        fieldText.AppendLine($"\t{key} == {dict[key].FieldFormattedValue}");
+                        totalSize += (int)Math.Truncate(dict[key].LengthOrFormat);
+                    }
+
+                    sbDump.AppendLine($"[{blockName}: sizeof() == {totalSize}]");
+                    writer.WriteLine(sbDump.ToString() + fieldText.ToString());
+                    break;
+
+                case DumpOutputType.KeyValue:
                     foreach (string key in dict.Keys)
                     {
                         fieldText.AppendLine($"\t{key} == {dict[key].FieldValue}");
@@ -240,6 +256,17 @@ namespace XingAPINet
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             base.GetObjectData(info, context);
+        }
+    }
+
+    public class RealDataArgs : EventArgs
+    {
+        readonly string _trCode;
+        public string TrCode => _trCode;
+
+        public RealDataArgs(string trCode)
+        {
+            _trCode = trCode;
         }
     }
 }

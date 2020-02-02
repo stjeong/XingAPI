@@ -20,10 +20,19 @@ namespace WindowsFormsApp1
         }
 
         XingClient _xingClient;
+        XRS3_ _realS3;
 
         protected override void OnClosed(EventArgs e)
         {
-            _xingClient.Dispose();
+            if (_realS3 != null)
+            {
+                _realS3.Dispose();
+            }
+
+            if (_xingClient != null)
+            {
+                _xingClient.Dispose();
+            }
 
             base.OnClosed(e);
         }
@@ -42,7 +51,7 @@ namespace WindowsFormsApp1
 
             _xingClient = new XingClient(useDemoServer);
             _xingClient.ConnectWithLogin(user);
-         
+
             Console.WriteLine($"# of account: {_xingClient.NumberOfAccount}");
 
             foreach (string account in _xingClient.GetAccounts())
@@ -69,11 +78,43 @@ namespace WindowsFormsApp1
                     Console.WriteLine("Failed to send request");
                 }
 
-                MessageBox.Show(queryResult.ToString());
+                XQt1101OutBlock outBlock = query.GetBlock();
+                OutputPrice(outBlock.shcode, outBlock.price);
+            }
 
-                // XQt1101OutBlock outBlock = XQt1101OutBlock.GetFields(query);
+            {
+                _realS3 = new XRS3_();
+                _realS3.DataArrived += _realS3_DataArrived;
+
+                XRS3_InBlock inBlock = new XRS3_InBlock { shcode = "078020" };
+                if (_realS3.SetFields(inBlock) == false)
+                {
+                    Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
+                    return;
+                }
+
+                _realS3.Advise();
             }
         }
 
+        private void _realS3_DataArrived(object sender, RealDataArgs e)
+        {
+            XRS3_OutBlock outBlock = _realS3.GetBlock();
+            if (outBlock.IsValidData == true)
+            {
+                OutputPrice(outBlock.shcode, outBlock.price);
+            }
+            else
+            {
+                Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+            }
+        }
+
+        private void OutputPrice(string shcode, long price)
+        {
+            txtDateTime.Text = DateTime.Now.ToString();
+            txtShCode.Text = shcode;
+            txtPrice.Text = price.ToString();
+        }
     }
 }

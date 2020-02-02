@@ -59,5 +59,21 @@
     <Compile Include="XingQuery.cs" />
     <Compile Include="XingReal.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XingNativePack\XingNativePack.csproj">
+      <Project>{eadb5646-41c6-4da8-88a9-9ab55972fbb7}</Project>
+      <Name>XingNativePack</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Manifests\XA_DataSet.dll.manifest">
+      <Link>XA_DataSet.dll.manifest</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Manifests\XA_Session.dll.manifest">
+      <Link>XA_Session.dll.manifest</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

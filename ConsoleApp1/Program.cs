@@ -5,10 +5,19 @@ namespace ConsoleApp1
 {
     class Program
     {
+        static bool _exitProcess = false;
+
         static void Main(string[] args)
         {
+            Console.CancelKeyPress += Console_CancelKeyPress;
             Program pg = new Program();
             pg.Main();
+        }
+
+        private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            e.Cancel = true;
+            _exitProcess = true;
         }
 
         void Main()
@@ -32,7 +41,7 @@ namespace ConsoleApp1
                 }
 
                 // 현재가 조회한 후,
-                XQt1101 query = new XQt1101();
+                using (XQt1101 query = new XQt1101())
                 {
                     XQt1101InBlock inBlock = new XQt1101InBlock();
                     inBlock.shcode = "078020";
@@ -51,7 +60,7 @@ namespace ConsoleApp1
                     XQt1101OutBlock outBlock = query.GetBlock();
                     if (outBlock.IsValidData == true)
                     {
-                        outBlock.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+                        outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
                     }
                     else
                     {
@@ -60,9 +69,35 @@ namespace ConsoleApp1
                 }
 
                 // 실시간 데이터를 조회
-                while (true)
+                using (XRS3_ real = new XRS3_())
                 {
-                    
+                    XRS3_InBlock inBlock = new XRS3_InBlock { shcode = "078020" };
+                    if (real.SetFields(inBlock) == false)
+                    {
+                        Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
+                        return;
+                    }
+
+                    real.Advise();
+
+                    while (_exitProcess == false)
+                    {
+                        if (real.WaitForData(1000) == false)
+                        {
+                            Console.Write(".");
+                            continue;
+                        }
+
+                        XRS3_OutBlock outBlock = real.GetBlock();
+                        if (outBlock.IsValidData == true)
+                        {
+                            outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                        }
+                    }
                 }
             }
         }

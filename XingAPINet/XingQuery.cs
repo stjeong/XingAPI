@@ -23,7 +23,7 @@ namespace XingAPINet
         {
             _xaQuery = new XAQueryClass();
             _xaQuery.ResFileName = $".\\Res\\{resFileCode}.res";
-            _xaQuery.ReceiveData += ReceiveData;
+            _xaQuery.ReceiveData += _xaQuery_ReceiveData;
             _xaQuery.ReceiveMessage += _xaQuery_ReceiveMessage;
         }
 
@@ -49,12 +49,17 @@ namespace XingAPINet
             return result;
         }
 
+        public void SetFieldData(string blockName, string fieldName, int index, string value)
+        {
+            _xaQuery.SetFieldData(blockName, fieldName, index, value);
+        }
+
         public string GetFieldData(string blockName, string fieldName, int index)
         {
             return _xaQuery.GetFieldData(blockName, fieldName, index);
         }
 
-        protected virtual void ReceiveData(string szTrCode)
+        protected virtual void _xaQuery_ReceiveData(string szTrCode)
         {
             _ewh_RecvSync.Set();
         }

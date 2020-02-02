@@ -210,7 +210,7 @@ namespace Res2Query
         {
             return blockTypeName.Substring(typeName.Length + "Out".Length);
         }
-
+        
         private static string BlockToText(string tab, bool isRealType, string queryTypeName, List<string> blockText,
             Dictionary<string, BlockInfo> blockFieldSetList)
         {
@@ -223,7 +223,7 @@ namespace Res2Query
             {
                 string[] items = blockText[0].Trim(' ', ';').Split(',');
 
-                typeName = items[0];
+                typeName = (isRealType == true) ? queryTypeName + items[0] : items[0];
                 string typeDesc = items[1];
                 typeCode = items[2];
 
@@ -231,13 +231,14 @@ namespace Res2Query
                 sb.AppendLine($"{tab}{{");
 
                 {
-                    sb.AppendLine($"{tab}\treadonly string _blockName = \"{typeName}\";");
-                    sb.AppendLine($"{tab}\treadonly string _blockDesc = \"{typeDesc}\";");
-                    sb.AppendLine($"{tab}\treadonly string _blockType = \"{typeCode}\";");
+                    AddField(sb, tab + "\t", "string", "_blockName", items[0]);
+                    AddField(sb, tab + "\t", "string", "_blockDesc", typeDesc);
+                    AddField(sb, tab + "\t", "string", "_blockType", typeCode);
                     sb.AppendLine();
-                    sb.AppendLine($"{tab}\tpublic string BlockName => _blockName;");
-                    sb.AppendLine($"{tab}\tpublic string BlockDesc => _blockDesc;");
-                    sb.AppendLine($"{tab}\tpublic string BlockType => _blockType;");
+
+                    AddGetProperty(sb, tab + "\t", "string", "BlockName", "_blockName", items[0]);
+                    AddGetProperty(sb, tab + "\t", "string", "BlockDesc", "_blockDesc", typeDesc);
+                    AddGetProperty(sb, tab + "\t", "string", "BlockType", "_blockType", typeCode);
                 }
 
                 if (blockFieldSetList.ContainsKey(typeName) == true)
@@ -251,6 +252,8 @@ namespace Res2Query
             StringBuilder setFields = new StringBuilder();
             StringBuilder getFields = new StringBuilder();
             int fieldIndex = 0;
+
+            string baseClassInstance = (isRealType == true) ? "_xaReal" : "_xaQuery";
 
             foreach (string item in blockText.Skip(1))
             {
@@ -270,15 +273,23 @@ namespace Res2Query
                 decimal formatOrLen = decimal.Parse(items[4].Trim());
 
                 {
-                    sb.AppendLine($"{tab}\t/// <summary>");
-                    sb.AppendLine($"{tab}\t/// {fieldDesc}");
-                    sb.AppendLine($"{tab}\t/// </summary>");
+                    AddXmlHelp(sb, tab + "\t", fieldDesc);
                     sb.AppendLine($"{tab}\t[XAQueryFieldAttribute(\"{fieldDesc}\")]");
                     sb.AppendLine($"{tab}\tpublic {GetFieldType(fieldType, formatOrLen)} {name2};");
                 }
 
-                setFields.AppendLine($"{tab}\t\t_xaQuery.SetFieldData(block.BlockName, \"{name2}\", {fieldIndex}, block.{name2}{SetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
-                getFields.AppendLine($"{tab}\t\t\tinstance.{name2} = query.GetFieldData(\"{typeName}\", \"{name2}\", {fieldIndex}){GetFieldToStringExp(fieldType, name2, formatOrLen)}; // {fieldType} {formatOrLen}");
+                if (isRealType == true)
+                {
+                    setFields.AppendLine($"{tab}\t\t{baseClassInstance}.SetFieldData(block.BlockName, \"{name2}\", block.{name2}{SetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
+                    getFields.AppendLine($"{tab}\t\t\tblock.{name2} = query.GetFieldData(block.BlockName, \"{name2}\"){GetFieldToStringExp(fieldType, name2, formatOrLen)}; // {fieldType} {formatOrLen}");
+                }
+                else
+                {
+                    setFields.AppendLine($"{tab}\t\t{baseClassInstance}.SetFieldData(block.BlockName, \"{name2}\", {fieldIndex}, block.{name2}{SetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
+                    getFields.AppendLine($"{tab}\t\t\tblock.{name2} = query.GetFieldData(block.BlockName, \"{name2}\", {fieldIndex}){GetFieldToStringExp(fieldType, name2, formatOrLen)}; // {fieldType} {formatOrLen}");
+                }
+
+
             }
 
             blockFieldSetList[typeName] = new BlockInfo(typeCode, setFields.ToString());
@@ -311,7 +322,7 @@ namespace Res2Query
                     string fieldType = items[3].Trim();
                     decimal formatOrLen = decimal.Parse(items[4].Trim());
 
-                    sb.AppendLine($"{tab}\t\tdict[\"{name2}\"] = new XAQueryFieldInfo(\"{fieldType}\", {name2}{SetFieldToStringExp(fieldType, formatOrLen)}, \"{fieldDesc}\", (decimal){formatOrLen});");
+                    sb.AppendLine($"{tab}\t\tdict[\"{name2}\"] = new XAQueryFieldInfo(\"{fieldType}\", {name2}, {name2}{SetFieldToStringExp(fieldType, formatOrLen)}, \"{fieldDesc}\", (decimal){formatOrLen});");
                 }
 
                 sb.AppendLine();
@@ -330,26 +341,30 @@ namespace Res2Query
                 sb.AppendLine($"{tab}\tpublic static {classPrefix}{typeName} FromQuery({classPrefix}{queryTypeName} query)");
                 sb.AppendLine($"{tab}\t{{");
 
-                sb.AppendLine($"{tab}\t\t{classPrefix}{typeName} instance = new {classPrefix}{typeName}();");
+                sb.AppendLine($"{tab}\t\t{classPrefix}{typeName} block = new {classPrefix}{typeName}();");
 
-                sb.AppendLine($"{tab}\t\tif (query.QueryResult != null && query.QueryResult.IsSystemError == true)");
-                sb.AppendLine($"{tab}\t\t{{");
-                sb.AppendLine($"{tab}\t\t\tinstance.IsValidData = false;");
-                sb.AppendLine($"{tab}\t\t\tinstance.InvalidReason = query.ReceiveMessage;");
-                sb.AppendLine($"{tab}\t\t\treturn instance;");
-                sb.AppendLine($"{tab}\t\t}}");
+                if (isRealType == false)
+                {
+                    sb.AppendLine($"{tab}\t\tif (query.QueryResult != null && query.QueryResult.IsSystemError == true)");
+                    sb.AppendLine($"{tab}\t\t{{");
+                    sb.AppendLine($"{tab}\t\t\tblock.IsValidData = false;");
+                    sb.AppendLine($"{tab}\t\t\tblock.InvalidReason = query.ReceiveMessage;");
+                    sb.AppendLine($"{tab}\t\t\treturn block;");
+                    sb.AppendLine($"{tab}\t\t}}");
+                }
 
                 sb.AppendLine($"{tab}\t\ttry");
                 sb.AppendLine($"{tab}\t\t{{");
 
-
                 sb.AppendLine(getFields.ToString());
 
                 sb.AppendLine($"{tab}\t\t}} catch (InvalidDataFormatException e) {{");
-                sb.AppendLine($"{tab}\t\t\tinstance.IsValidData = false;");
-                sb.AppendLine($"{tab}\t\t\tinstance.InvalidReason = $\"FieldName == {{e.DataFieldName}}, FieldData == \\\"{{e.DataValue}}\\\"\";");
+                sb.AppendLine($"{tab}\t\t\tblock.IsValidData = false;");
+
+                sb.AppendLine($"{tab}\t\t\tblock.InvalidReason = $\"FieldName == {{e.DataFieldName}}, FieldData == \\\"{{e.DataValue}}\\\"\";");
+
                 sb.AppendLine($"{tab}\t\t}}");
-                sb.AppendLine($"{tab}\t\treturn instance;");
+                sb.AppendLine($"{tab}\t\treturn block;");
                 sb.AppendLine();
                 sb.AppendLine($"{tab}\t}}");
             }
@@ -511,17 +526,17 @@ namespace Res2Query
             StringBuilder sb = new StringBuilder();
 
             {
-                sb.AppendLine($"{tab}\treadonly string _typeName = \"{typeName}\";");
-                sb.AppendLine($"{tab}\treadonly bool _attr = {hasAttr.ToString().ToLower()};");
-                sb.AppendLine($"{tab}\treadonly int _key = {key};");
-                sb.AppendLine($"{tab}\treadonly int _group = {group};");
+                AddField(sb, tab + "\t", "string", "_typeName", typeName);
+                AddField(sb, tab + "\t", "bool", "_attr", hasAttr);
+                AddField(sb, tab + "\t", "int", "_key", key);
+                AddField(sb, tab + "\t", "int", "_group", group);
 
                 sb.AppendLine();
 
-                sb.AppendLine($"{tab}\tpublic string TypeName => _typeName;");
-                sb.AppendLine($"{tab}\tpublic bool Attr => _attr;");
-                sb.AppendLine($"{tab}\tpublic int Key => _key;");
-                sb.AppendLine($"{tab}\tpublic int Group => _group;");
+                AddGetProperty(sb, tab + "\t", "string", "TypeName", "_typeName", typeName);
+                AddGetProperty(sb, tab + "\t", "bool", "Attr", "_attr", hasAttr);
+                AddGetProperty(sb, tab + "\t", "int", "Key", "_key", key);
+                AddGetProperty(sb, tab + "\t", "int", "Group", "_group", group);
 
                 sb.AppendLine();
 
@@ -589,37 +604,90 @@ namespace Res2Query
             StringBuilder sb = new StringBuilder();
 
             {
-                sb.AppendLine($"{tab}\treadonly string _typeName = \"{typeName}\";");
-                sb.AppendLine($"{tab}\treadonly string _typeDesc = \"{typeDesc}\";");
-                sb.AppendLine($"{tab}\treadonly string _service = \"{typeService}\";");
-                sb.AppendLine($"{tab}\treadonly string _headType = \"{headType}\";");
-                sb.AppendLine($"{tab}\treadonly string _creator = \"{creator}\";");
-                sb.AppendLine($"{tab}\treadonly string _createdDate = \"{credate}\";");
-                sb.AppendLine($"{tab}\treadonly bool _attr = {hasAttr.ToString().ToLower()};");
-                sb.AppendLine($"{tab}\treadonly bool _block = {hasBlock.ToString().ToLower()};");
-                sb.AppendLine($"{tab}\treadonly bool _encrypt = {hasEncrypt.ToString().ToLower()};");
-                sb.AppendLine($"{tab}\treadonly bool _signature = {hasSignature.ToString().ToLower()};");
+                AddField(sb, tab + "\t", "string", "_typeName", typeName);
+                AddField(sb, tab + "\t", "string", "_typeDesc", typeDesc);
+                AddField(sb, tab + "\t", "string", "_service", typeService);
+                AddField(sb, tab + "\t", "string", "_headType", headType);
+                AddField(sb, tab + "\t", "string", "_creator", creator);
+                AddField(sb, tab + "\t", "string", "_createdDate", credate);
+                AddField(sb, tab + "\t", "bool", "_attr", hasAttr);
+                AddField(sb, tab + "\t", "bool", "_block", hasBlock);
+                AddField(sb, tab + "\t", "bool", "_encrypt", hasEncrypt);
+                AddField(sb, tab + "\t", "bool", "_signature", hasSignature);
 
                 sb.AppendLine();
 
-                sb.AppendLine($"{tab}\tpublic string TypeName => _typeName;");
-                sb.AppendLine($"{tab}\tpublic string TypeDesc => _typeDesc;");
-                sb.AppendLine($"{tab}\tpublic string Service => _service;");
-                sb.AppendLine($"{tab}\tpublic string HeadType => _headType;");
-                sb.AppendLine($"{tab}\tpublic string Creator => _creator;");
-                sb.AppendLine($"{tab}\tpublic string CreatedDate => _createdDate;");
-                sb.AppendLine($"{tab}\tpublic bool Attr => _attr;");
-                sb.AppendLine($"{tab}\tpublic bool Block => _block;");
-                sb.AppendLine($"{tab}\tpublic bool Encrypt => _encrypt;");
-                sb.AppendLine($"{tab}\tpublic bool Signature => _signature;");
+                AddGetProperty(sb, tab, "string", "TypeName", "_typeName", typeName);
+                AddGetProperty(sb, tab, "string", "TypeDesc", "_typeDesc", typeDesc);
+                AddGetProperty(sb, tab, "string", "Service", "_service", typeService);
+                AddGetProperty(sb, tab, "string", "HeadType", "_headType", headType);
+                AddGetProperty(sb, tab, "string", "Creator", "_creator", creator);
+                AddGetProperty(sb, tab, "string", "CreatedDate", "_createdDate", credate);
+
+                AddGetProperty(sb, tab, "bool", "Attr", "_attr", hasAttr);
+                AddGetProperty(sb, tab, "bool", "Block", "_block", hasBlock);
+                AddGetProperty(sb, tab, "bool", "Encrypt", "_encrypt", hasEncrypt);
+                AddGetProperty(sb, tab, "bool", "Signature", "_signature", hasSignature);
 
                 sb.AppendLine();
 
-                sb.AppendLine($"{tab}\tpublic XR{typeName}() : base(\"{typeName}\") {{ }}");
-
+                sb.AppendLine($"{tab}\tpublic XQ{typeName}() : base(\"{typeName}\") {{ }}");
             }
 
             return sb.ToString();
+        }
+
+        private static void AddField(StringBuilder sb, string tab, string fieldType, string fieldName, int value)
+        {
+            AddField(sb, tab, fieldType, fieldName, value.ToString());
+        }
+
+        private static void AddField(StringBuilder sb, string tab, string fieldType, string fieldName, bool value)
+        {
+            AddField(sb, tab, fieldType, fieldName, value.ToString().ToLower());
+        }
+
+        private static void AddField(StringBuilder sb, string tab, string fieldType, string fieldName, string value)
+        {
+            AddXmlHelp(sb, tab, value);
+
+            string valueText = value;
+            switch (fieldType)
+            {
+                case "string":
+                    valueText = $"\"{value}\"";
+                    break;
+            }
+
+            sb.AppendLine($"{tab}readonly {fieldType} {fieldName} = {valueText};");
+        }
+
+        private static void AddGetProperty(StringBuilder sb, string tab, string propType, string propName, string fieldName, int fieldValue)
+        {
+            AddGetProperty(sb, tab, propType, propName, fieldName, fieldValue.ToString());
+        }
+
+        private static void AddGetProperty(StringBuilder sb, string tab, string propType, string propName, string fieldName, bool fieldValue)
+        {
+            AddGetProperty(sb, tab, propType, propName, fieldName, fieldValue.ToString().ToLower());
+        }
+
+        private static void AddGetProperty(StringBuilder sb, string tab, string propType, string propName, string fieldName, string fieldValue)
+        {
+            AddXmlHelp(sb, tab, fieldValue);
+            sb.AppendLine($"{tab}public {propType} {propName} => {fieldName};");
+        }
+
+        public static void AddXmlHelp(StringBuilder sb, string tab, bool value)
+        {
+            AddXmlHelp(sb, tab, value.ToString().ToLower());
+        }
+
+        public static void AddXmlHelp(StringBuilder sb, string tab, string value)
+        {
+            sb.AppendLine($"{tab}/// <summary>");
+            sb.AppendLine($"{tab}/// {value}");
+            sb.AppendLine($"{tab}/// </summary>");
         }
     }
 }
