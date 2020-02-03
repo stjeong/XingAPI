@@ -19,7 +19,7 @@ namespace Res2Query
             }
             else
             {
-                resFolder = Path.Combine(currentFolder, "..", "..", "..", "ConsoleApp1", "bin", "Debug", "Res");
+                resFolder = Path.Combine(currentFolder, "..", "..", "..", "Lib", "Res");
             }
 
             string targetFolder = Path.Combine(currentFolder, "ResCS");

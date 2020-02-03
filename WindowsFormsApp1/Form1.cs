@@ -46,8 +46,7 @@ namespace WindowsFormsApp1
             */
 
             bool useDemoServer = false;
-
-            LoginInfo user = LoginInfo.CreateInfo(useDemoServer);
+            LoginInfo user = GetUserInfo(useDemoServer);
 
             _xingClient = new XingClient(useDemoServer);
             _xingClient.ConnectWithLogin(user);
@@ -115,6 +114,14 @@ namespace WindowsFormsApp1
             txtDateTime.Text = DateTime.Now.ToString();
             txtShCode.Text = shcode;
             txtPrice.Text = price.ToString();
+        }
+
+        private LoginInfo GetUserInfo(bool useDemoServer)
+        {
+            string fileName = (useDemoServer == true) ? "ebest.demo.txt" : "ebest.hts.txt";
+            string filePath = $@"d:\settings\{fileName}";
+
+            return LoginInfo.FromEncryptedFile(filePath);
         }
     }
 }

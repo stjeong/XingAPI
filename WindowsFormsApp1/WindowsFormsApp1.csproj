@@ -117,7 +117,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>robocopy $(TargetDir) \\192.168.105.20\d$\ebest /S /W:1
+    <PostBuildEvent>
+SET ORG_FILE_PATH=$(TargetDir)
+if exist $(SolutionDir)deploy_.bat cmd /C $(SolutionDir)deploy_.bat
 exit 0</PostBuildEvent>
   </PropertyGroup>
 </Project>

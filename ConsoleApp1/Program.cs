@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using XingAPINet;
 
 namespace ConsoleApp1
@@ -9,6 +10,17 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
+            if (args.Length == 4)
+            {
+                string id = args[0];
+                string pw = args[1];
+                string certPass = args[2];
+                string filePath = args[3];
+
+                LoginInfo.EncryptToFile(id, pw, certPass, filePath);
+                return;
+            }
+
             Console.CancelKeyPress += Console_CancelKeyPress;
             Program pg = new Program();
             pg.Main();
@@ -22,8 +34,8 @@ namespace ConsoleApp1
 
         void Main()
         {
-            bool useDemoServer = false;
-            LoginInfo user = LoginInfo.CreateInfo(useDemoServer);
+            bool useDemoServer = true;
+            LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
             {
@@ -60,7 +72,8 @@ namespace ConsoleApp1
                     XQt1101OutBlock outBlock = query.GetBlock();
                     if (outBlock.IsValidData == true)
                     {
-                        outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
+                        // outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
+                        Console.WriteLine(outBlock.price);
                     }
                     else
                     {
@@ -91,7 +104,8 @@ namespace ConsoleApp1
                         XRS3_OutBlock outBlock = real.GetBlock();
                         if (outBlock.IsValidData == true)
                         {
-                            outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
+                            // outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
+                            Console.WriteLine(outBlock.price);
                         }
                         else
                         {
@@ -100,6 +114,14 @@ namespace ConsoleApp1
                     }
                 }
             }
+        }
+
+        private LoginInfo GetUserInfo(bool useDemoServer)
+        {
+            string fileName = (useDemoServer == true) ? "ebest.demo.txt" : "ebest.hts.txt";
+            string filePath = $@"d:\settings\{fileName}";
+
+            return LoginInfo.FromEncryptedFile(filePath);
         }
     }
 }

@@ -21,21 +21,60 @@ namespace XingAPINet
         public string Password;
         public string CertPassword;
 
+        public static void EncryptToFile(string id, string pw, string certPass, string filePath)
+        {
+            StringBuilder output = new StringBuilder();
+
+            byte[] entropy = Encoding.UTF8.GetBytes(Guid.NewGuid().ToString());
+            string text = entropy.AsText();
+
+            output.AppendLine(text);
+            output.AppendLine(EncryptText(id, entropy, true));
+            output.AppendLine(EncryptText(pw, entropy, true));
+
+            if (string.IsNullOrEmpty(certPass) == false)
+            {
+                output.AppendLine(EncryptText(certPass, entropy, true));
+            }
+
+            File.WriteAllText(filePath, output.ToString());            
+        }
+
+        static string EncryptText(string text, byte [] entropy, bool useCurrentUser)
+        {
+            byte[] originalText = Encoding.Unicode.GetBytes(text);
+
+            // then use Protect() to encrypt your data 
+            byte[] encryptedText = ProtectedData.Protect(originalText, entropy,
+                (useCurrentUser == true) ? DataProtectionScope.CurrentUser : DataProtectionScope.LocalMachine);
+
+            return Convert.ToBase64String(encryptedText);
+        }
+
         private LoginInfo() { }
 
-        public static LoginInfo CreateInfo(bool useDemoServer)
+        public static LoginInfo FromPlainText(string id, string password, string certPassword)
         {
-            string fileName = (useDemoServer == true) ? "ebest.demo.txt" : "ebest.hts.txt";
-            string filePath = $@"d:\settings\{fileName}";
-
-            string[] lines = File.ReadAllLines(filePath);
             LoginInfo user = new LoginInfo();
 
+            user.Id = id;
+            user.Password = password;
+            user.CertPassword = certPassword;
+
+            return user;
+        }
+
+        public static LoginInfo FromEncryptedFile(string filePath)
+        {
+            LoginInfo user = new LoginInfo();
+
+            string[] lines = File.ReadAllLines(filePath);
+            
             byte[] entropy = EntropyFrom(lines[0]);
             user.Id = DecryptText(entropy, lines[1]);
             user.Password = DecryptText(entropy, lines[2]);
 
-            if (useDemoServer == false)
+            if (lines.Length >= 4)
             {
                 user.CertPassword = DecryptText(entropy, lines[3]);
             }
@@ -86,6 +125,7 @@ namespace XingAPINet
 
             return entropy.ToArray();
         }
+
     }
 
     [AttributeUsage(AttributeTargets.Field, Inherited = false)]
@@ -148,6 +188,18 @@ namespace XingAPINet
 
     public static class ExtensionMethods
     {
+        public static string AsText(this byte [] buffer)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (byte item in buffer)
+            {
+                sb.Append("0x" + item.ToString("x") + ",");
+            }
+
+            return sb.ToString().TrimEnd(',');
+        }
+
         public static long ParseLong(this string text, string fieldName)
         {
             if (string.IsNullOrEmpty(text) == true)

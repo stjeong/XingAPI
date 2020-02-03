@@ -23,6 +23,12 @@ namespace XingAPINet
             _xaReal = new XARealClass();
             _xaReal.ResFileName = $".\\Res\\{resFileCode}.res";
             _xaReal.ReceiveRealData += _xaReal_ReceiveRealData;
+            _xaReal.RecieveLinkData += _xaReal_RecieveLinkData;
+        }
+
+        private void _xaReal_RecieveLinkData(string szLinkName, string szData, string szFiller)
+        {
+            Console.WriteLine($"{szLinkName}, {szData}, {szFiller}");
         }
 
         public bool WaitForData(int milliseconds = 1000)
@@ -35,7 +41,7 @@ namespace XingAPINet
                 Application.DoEvents();
                 if (_ewh_ReadSync.WaitOne(elapsedUnit) == true)
                 {
-                    break;
+                    return true;
                 }
 
                 milliseconds -= elapsedUnit;
@@ -44,12 +50,11 @@ namespace XingAPINet
                     return false;
                 }
             }
-
-            return true;
         }
 
         private void _xaReal_ReceiveRealData(string szTrCode)
         {
+            Console.WriteLine("RealData: " + szTrCode);
             _ewh_ReadSync.Set();
             DataArrived?.Invoke(this, new RealDataArgs(szTrCode));
         }
