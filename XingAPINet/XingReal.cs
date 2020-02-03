@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -21,14 +22,14 @@ namespace XingAPINet
         public XingReal(string resFileCode)
         {
             _xaReal = new XARealClass();
-            _xaReal.ResFileName = $".\\Res\\{resFileCode}.res";
             _xaReal.ReceiveRealData += _xaReal_ReceiveRealData;
             _xaReal.RecieveLinkData += _xaReal_RecieveLinkData;
+            _xaReal.ResFileName = $".\\Res\\{resFileCode}.res";
         }
 
         private void _xaReal_RecieveLinkData(string szLinkName, string szData, string szFiller)
         {
-            Console.WriteLine($"{szLinkName}, {szData}, {szFiller}");
+            Debug.WriteLine($"{szLinkName}, {szData}, {szFiller}");
         }
 
         public bool WaitForData(int milliseconds = 1000)
@@ -54,7 +55,7 @@ namespace XingAPINet
 
         private void _xaReal_ReceiveRealData(string szTrCode)
         {
-            Console.WriteLine("RealData: " + szTrCode);
+            Debug.WriteLine("RealData: " + szTrCode);
             _ewh_ReadSync.Set();
             DataArrived?.Invoke(this, new RealDataArgs(szTrCode));
         }

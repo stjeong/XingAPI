@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.Serialization;
 using System.Security;
 using System.Security.Cryptography;
@@ -13,6 +14,7 @@ namespace XingAPINet
     {
         FormattedKeyValue,
         KeyValue,
+        Inline,
     }
 
     public partial class LoginInfo
@@ -200,11 +202,28 @@ namespace XingAPINet
             return sb.ToString().TrimEnd(',');
         }
 
+        public static int ParseInt(this string text, string fieldName)
+        {
+            if (string.IsNullOrEmpty(text) == true)
+            {
+                return 0;
+                // throw new InvalidDataFormatException(fieldName, text);
+            }
+
+            if (int.TryParse(text, out int parsedResult) == true)
+            {
+                return parsedResult;
+            }
+
+            throw new InvalidDataFormatException(fieldName, text);
+        }
+
         public static long ParseLong(this string text, string fieldName)
         {
             if (string.IsNullOrEmpty(text) == true)
             {
-                throw new InvalidDataFormatException(fieldName, text);
+                return 0;
+                // throw new InvalidDataFormatException(fieldName, text);
             }
 
             if (long.TryParse(text, out long parsedResult) == true)
@@ -219,7 +238,8 @@ namespace XingAPINet
         {
             if (string.IsNullOrEmpty(text) == true)
             {
-                throw new InvalidDataFormatException(fieldName, text);
+                return 0.0f;
+                // throw new InvalidDataFormatException(fieldName, text);
             }
 
             if (float.TryParse(text, out float parsedResult) == true)
@@ -273,6 +293,15 @@ namespace XingAPINet
 
                     sbDump.AppendLine($"[{blockName}: sizeof() == {totalSize}]");
                     writer.WriteLine(sbDump.ToString() + fieldText.ToString());
+                    break;
+
+                case DumpOutputType.Inline:
+                    foreach (string key in dict.Keys)
+                    {
+                        fieldText.Append($"{key} = {dict[key].FieldValue}, ");
+                    }
+
+                    writer.WriteLine(fieldText.ToString().TrimEnd(','));
                     break;
             }
         }

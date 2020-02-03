@@ -27,6 +27,11 @@ namespace XingAPINet
             _xaQuery.ReceiveMessage += _xaQuery_ReceiveMessage;
         }
 
+        public int GetBlockCount(string blockName)
+        {
+            return _xaQuery.GetBlockCount(blockName);
+        }
+
         public int Request(bool bNext = false)
         {
             _ewh_RecvSync.Reset();

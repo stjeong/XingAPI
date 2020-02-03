@@ -11,7 +11,7 @@
   <comInterfaceExternalProxyStub name="IXASession" 
                                  iid="{8C0F4618-3BAB-4F19-A59B-A32E08EA711F}" 
                                  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}" 
-                                 baseInterface="{00000000-0000-0000-C000-000000000046}" 
+                                 baseInterface="{00020400-0000-0000-C000-000000000046}" 
                                  tlbid="{F5CC65C5-2965-451B-A6C4-CBC7B8B4AE08}">
   </comInterfaceExternalProxyStub>
 </assembly>

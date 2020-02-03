@@ -63,6 +63,18 @@
       <Link>hkdnsres.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\Lib\Image\btnConnect.bmp">
+      <Link>Image\btnConnect.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Image\btnQuit.bmp">
+      <Link>Image\btnQuit.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Image\devcenter_login_back.bmp">
+      <Link>Image\devcenter_login_back.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\Lib\inicore_v2.4.3.1.dll">
       <Link>inicore_v2.4.3.1.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -115,36 +127,2236 @@
       <Link>readme.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\Lib\Res\B7_.res">
+      <Link>Res\B7_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\B7__1.res">
+      <Link>Res\B7__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\BMT.res">
+      <Link>Res\BMT.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\BMT_1.res">
+      <Link>Res\BMT_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\BM_.res">
+      <Link>Res\BM_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\BM__1.res">
+      <Link>Res\BM__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\C01.res">
+      <Link>Res\C01.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\C01_1.res">
+      <Link>Res\C01_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAQ01100.res">
+      <Link>Res\CCEAQ01100.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAQ01100_1.res">
+      <Link>Res\CCEAQ01100_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAQ06000.res">
+      <Link>Res\CCEAQ06000.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAQ06000_1.res">
+      <Link>Res\CCEAQ06000_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAQ10100.res">
+      <Link>Res\CCEAQ10100.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAQ10100_1.res">
+      <Link>Res\CCEAQ10100_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAQ50600.res">
+      <Link>Res\CCEAQ50600.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAQ50600_1.res">
+      <Link>Res\CCEAQ50600_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAT00100.res">
+      <Link>Res\CCEAT00100.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAT00100_1.res">
+      <Link>Res\CCEAT00100_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAT00200.res">
+      <Link>Res\CCEAT00200.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAT00200_1.res">
+      <Link>Res\CCEAT00200_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAT00300.res">
+      <Link>Res\CCEAT00300.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEAT00300_1.res">
+      <Link>Res\CCEAT00300_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEBQ10500.res">
+      <Link>Res\CCEBQ10500.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CCEBQ10500_1.res">
+      <Link>Res\CCEBQ10500_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CD0.res">
+      <Link>Res\CD0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CD0_1.res">
+      <Link>Res\CD0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\Lib\Res\CDPCQ04700.res">
       <Link>Res\CDPCQ04700.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CDPCQ04700_1.res">
+      <Link>Res\CDPCQ04700_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAQ21100.res">
+      <Link>Res\CEXAQ21100.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAQ21100_1.res">
+      <Link>Res\CEXAQ21100_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAQ21200.res">
+      <Link>Res\CEXAQ21200.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAQ21200_1.res">
+      <Link>Res\CEXAQ21200_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAQ31100.res">
+      <Link>Res\CEXAQ31100.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAQ31100_1.res">
+      <Link>Res\CEXAQ31100_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAQ31200.res">
+      <Link>Res\CEXAQ31200.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAQ31200_1.res">
+      <Link>Res\CEXAQ31200_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAQ44200.res">
+      <Link>Res\CEXAQ44200.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAQ44200_1.res">
+      <Link>Res\CEXAQ44200_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAT11100.res">
+      <Link>Res\CEXAT11100.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAT11100_1.res">
+      <Link>Res\CEXAT11100_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAT11200.res">
+      <Link>Res\CEXAT11200.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAT11200_1.res">
+      <Link>Res\CEXAT11200_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAT11300.res">
+      <Link>Res\CEXAT11300.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CEXAT11300_1.res">
+      <Link>Res\CEXAT11300_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOAQ00600.res">
+      <Link>Res\CFOAQ00600.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOAQ00600_1.res">
+      <Link>Res\CFOAQ00600_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOAQ10100.res">
+      <Link>Res\CFOAQ10100.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOAQ10100_1.res">
+      <Link>Res\CFOAQ10100_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOAT00100.res">
+      <Link>Res\CFOAT00100.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOAT00100_1.res">
+      <Link>Res\CFOAT00100_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOAT00200.res">
+      <Link>Res\CFOAT00200.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOAT00200_1.res">
+      <Link>Res\CFOAT00200_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOAT00300.res">
+      <Link>Res\CFOAT00300.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOAT00300_1.res">
+      <Link>Res\CFOAT00300_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOBQ10500.res">
+      <Link>Res\CFOBQ10500.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOBQ10500_1.res">
+      <Link>Res\CFOBQ10500_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOBQ10800.res">
+      <Link>Res\CFOBQ10800.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOBQ10800_1.res">
+      <Link>Res\CFOBQ10800_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOEQ11100.res">
+      <Link>Res\CFOEQ11100.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOEQ11100_1.res">
+      <Link>Res\CFOEQ11100_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOEQ82600.res">
+      <Link>Res\CFOEQ82600.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOEQ82600_1.res">
+      <Link>Res\CFOEQ82600_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOFQ02400.res">
+      <Link>Res\CFOFQ02400.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CFOFQ02400_1.res">
+      <Link>Res\CFOFQ02400_1.res</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Lib\Res\ChartExcel.res">
       <Link>Res\ChartExcel.res</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\Lib\Res\ChartExcel_1.res">
+      <Link>Res\ChartExcel_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\ChartIndex.res">
+      <Link>Res\ChartIndex.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\ChartIndex_1.res">
+      <Link>Res\ChartIndex_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CLNAQ00100.res">
+      <Link>Res\CLNAQ00100.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CLNAQ00100_1.res">
+      <Link>Res\CLNAQ00100_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CM0.res">
+      <Link>Res\CM0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CM0_1.res">
+      <Link>Res\CM0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CM1.res">
+      <Link>Res\CM1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CM1_1.res">
+      <Link>Res\CM1_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CM2.res">
+      <Link>Res\CM2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CM2_1.res">
+      <Link>Res\CM2_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CSPAQ12200.res">
+      <Link>Res\CSPAQ12200.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CSPAQ12200_1.res">
+      <Link>Res\CSPAQ12200_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CSPAQ12300.res">
+      <Link>Res\CSPAQ12300.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CSPAQ12300_1.res">
+      <Link>Res\CSPAQ12300_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CSPAQ13700.res">
+      <Link>Res\CSPAQ13700.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CSPAQ13700_1.res">
+      <Link>Res\CSPAQ13700_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\Lib\Res\CSPAT00600.res">
       <Link>Res\CSPAT00600.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CSPAT00600_1.res">
+      <Link>Res\CSPAT00600_1.res</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Lib\Res\CSPAT00700.res">
       <Link>Res\CSPAT00700.res</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\Lib\Res\CSPAT00700_1.res">
+      <Link>Res\CSPAT00700_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CSPAT00800.res">
+      <Link>Res\CSPAT00800.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CSPAT00800_1.res">
+      <Link>Res\CSPAT00800_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CSPBQ00200.res">
+      <Link>Res\CSPBQ00200.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\CSPBQ00200_1.res">
+      <Link>Res\CSPBQ00200_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\DVI.res">
+      <Link>Res\DVI.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\DVI_1.res">
+      <Link>Res\DVI_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\EC0.res">
+      <Link>Res\EC0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\EC0_1.res">
+      <Link>Res\EC0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\EH0.res">
+      <Link>Res\EH0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\EH0_1.res">
+      <Link>Res\EH0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\ESN.res">
+      <Link>Res\ESN.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\ESN_1.res">
+      <Link>Res\ESN_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\EU0.res">
+      <Link>Res\EU0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\EU0_1.res">
+      <Link>Res\EU0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\EU1.res">
+      <Link>Res\EU1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\EU1_1.res">
+      <Link>Res\EU1_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\EU2.res">
+      <Link>Res\EU2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\EU2_1.res">
+      <Link>Res\EU2_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FC0.res">
+      <Link>Res\FC0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FC0_1.res">
+      <Link>Res\FC0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FD0.res">
+      <Link>Res\FD0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FD0_1.res">
+      <Link>Res\FD0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FH0.res">
+      <Link>Res\FH0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FH0_1.res">
+      <Link>Res\FH0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FOCCQ33600.res">
+      <Link>Res\FOCCQ33600.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FOCCQ33600_1.res">
+      <Link>Res\FOCCQ33600_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FOCCQ33700.res">
+      <Link>Res\FOCCQ33700.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FOCCQ33700_1.res">
+      <Link>Res\FOCCQ33700_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FX0.res">
+      <Link>Res\FX0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\FX0_1.res">
+      <Link>Res\FX0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\H01.res">
+      <Link>Res\H01.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\H01_1.res">
+      <Link>Res\H01_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\H1_.res">
+      <Link>Res\H1_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\H1__1.res">
+      <Link>Res\H1__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\H2_.res">
+      <Link>Res\H2_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\h2_4ELW.res">
+      <Link>Res\h2_4ELW.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\h2_4ELW_2.res">
+      <Link>Res\h2_4ELW_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\H2__1.res">
+      <Link>Res\H2__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\h3_4ELW.res">
+      <Link>Res\h3_4ELW.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\h3_4ELW_2.res">
+      <Link>Res\h3_4ELW_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\HA_.res">
+      <Link>Res\HA_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\HA__1.res">
+      <Link>Res\HA__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\HB_.res">
+      <Link>Res\HB_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\HB__1.res">
+      <Link>Res\HB__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\I5_.res">
+      <Link>Res\I5_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\I5__1.res">
+      <Link>Res\I5__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\IJ_.res">
+      <Link>Res\IJ_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\IJ__1.res">
+      <Link>Res\IJ__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\JC0.res">
+      <Link>Res\JC0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\JC0_1.res">
+      <Link>Res\JC0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\JD0.res">
+      <Link>Res\JD0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\JD0_1.res">
+      <Link>Res\JD0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\JH0.res">
+      <Link>Res\JH0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\JH0_1.res">
+      <Link>Res\JH0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\JIF.res">
+      <Link>Res\JIF.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\JIF_1.res">
+      <Link>Res\JIF_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\JX0.res">
+      <Link>Res\JX0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\JX0_1.res">
+      <Link>Res\JX0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\K1_.res">
+      <Link>Res\K1_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\k1_4ELW.res">
+      <Link>Res\k1_4ELW.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\k1_4ELW_2.res">
+      <Link>Res\k1_4ELW_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\K1__1.res">
+      <Link>Res\K1__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\K3_.res">
+      <Link>Res\K3_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\K3__1.res">
+      <Link>Res\K3__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\KH_.res">
+      <Link>Res\KH_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\KH__1.res">
+      <Link>Res\KH__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\KM_.res">
+      <Link>Res\KM_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\KM__1.res">
+      <Link>Res\KM__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\KS_.res">
+      <Link>Res\KS_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\KS__1.res">
+      <Link>Res\KS__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\MK2.res">
+      <Link>Res\MK2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\MK2_1.res">
+      <Link>Res\MK2_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\MMDAQ91200.res">
+      <Link>Res\MMDAQ91200.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\MMDAQ91200_1.res">
+      <Link>Res\MMDAQ91200_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\NC0.res">
+      <Link>Res\NC0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\NC0_1.res">
+      <Link>Res\NC0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\NH0.res">
+      <Link>Res\NH0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\NH0_1.res">
+      <Link>Res\NH0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\NWS.res">
+      <Link>Res\NWS.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\NWS_1.res">
+      <Link>Res\NWS_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\O01.res">
+      <Link>Res\O01.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\O01_1.res">
+      <Link>Res\O01_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OC0.res">
+      <Link>Res\OC0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OC0_1.res">
+      <Link>Res\OC0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OD0.res">
+      <Link>Res\OD0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OD0_1.res">
+      <Link>Res\OD0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OH0.res">
+      <Link>Res\OH0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OH0_1.res">
+      <Link>Res\OH0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OK_.res">
+      <Link>Res\OK_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OK__1.res">
+      <Link>Res\OK__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OMG.res">
+      <Link>Res\OMG.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OMG_1.res">
+      <Link>Res\OMG_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OX0.res">
+      <Link>Res\OX0.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\OX0_1.res">
+      <Link>Res\OX0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\PH_.res">
+      <Link>Res\PH_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\PH__1.res">
+      <Link>Res\PH__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\PM_.res">
+      <Link>Res\PM_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\PM__1.res">
+      <Link>Res\PM__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\S2_.res">
+      <Link>Res\S2_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\s2_4ELW.res">
+      <Link>Res\s2_4ELW.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\s2_4ELW_2.res">
+      <Link>Res\s2_4ELW_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\S2__1.res">
+      <Link>Res\S2__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\Lib\Res\S3_.res">
       <Link>Res\S3_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\s3_4ELW.res">
+      <Link>Res\s3_4ELW.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\s3_4ELW_2.res">
+      <Link>Res\s3_4ELW_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\S3__1.res">
+      <Link>Res\S3__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\S4_.res">
+      <Link>Res\S4_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\s4_ELW.res">
+      <Link>Res\s4_ELW.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\s4_ELW_2.res">
+      <Link>Res\s4_ELW_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\S4__1.res">
+      <Link>Res\S4__1.res</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Lib\Res\SC0.res">
       <Link>Res\SC0.res</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\Lib\Res\SC0_1.res">
+      <Link>Res\SC0_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SC1.res">
+      <Link>Res\SC1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SC1_1.res">
+      <Link>Res\SC1_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SC2.res">
+      <Link>Res\SC2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SC2_1.res">
+      <Link>Res\SC2_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SC3.res">
+      <Link>Res\SC3.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SC3_1.res">
+      <Link>Res\SC3_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SC4.res">
+      <Link>Res\SC4.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SC4_1.res">
+      <Link>Res\SC4_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SHC.res">
+      <Link>Res\SHC.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SHC_1.res">
+      <Link>Res\SHC_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SHD.res">
+      <Link>Res\SHD.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SHD_1.res">
+      <Link>Res\SHD_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SHI.res">
+      <Link>Res\SHI.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SHI_1.res">
+      <Link>Res\SHI_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SHO.res">
+      <Link>Res\SHO.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\SHO_1.res">
+      <Link>Res\SHO_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0150.res">
+      <Link>Res\t0150.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0150_2.res">
+      <Link>Res\t0150_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0151.res">
+      <Link>Res\t0151.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0151_2.res">
+      <Link>Res\t0151_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0167.res">
+      <Link>Res\t0167.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0167_2.res">
+      <Link>Res\t0167_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0424.res">
+      <Link>Res\t0424.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0424_2.res">
+      <Link>Res\t0424_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0425.res">
+      <Link>Res\t0425.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0425_2.res">
+      <Link>Res\t0425_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0434.res">
+      <Link>Res\t0434.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0434_2.res">
+      <Link>Res\t0434_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0441.res">
+      <Link>Res\t0441.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t0441_2.res">
+      <Link>Res\t0441_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\Lib\Res\t1101.res">
       <Link>Res\t1101.res</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\Lib\Res\t1101_2.res">
+      <Link>Res\t1101_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\Lib\Res\t1102.res">
       <Link>Res\t1102.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1102_2.res">
+      <Link>Res\t1102_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1104.res">
+      <Link>Res\t1104.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1104_2.res">
+      <Link>Res\t1104_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1105.res">
+      <Link>Res\t1105.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1105_2.res">
+      <Link>Res\t1105_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1301.res">
+      <Link>Res\t1301.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1301_2.res">
+      <Link>Res\t1301_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1302.res">
+      <Link>Res\t1302.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1302_2.res">
+      <Link>Res\t1302_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1305.res">
+      <Link>Res\t1305.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1305_2.res">
+      <Link>Res\t1305_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1308.res">
+      <Link>Res\t1308.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1308_2.res">
+      <Link>Res\t1308_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1310.res">
+      <Link>Res\t1310.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1310_2.res">
+      <Link>Res\t1310_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1403.res">
+      <Link>Res\t1403.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1403_2.res">
+      <Link>Res\t1403_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1404.res">
+      <Link>Res\t1404.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1404_2.res">
+      <Link>Res\t1404_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1405.res">
+      <Link>Res\t1405.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1405_2.res">
+      <Link>Res\t1405_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1410.res">
+      <Link>Res\t1410.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1410_2.res">
+      <Link>Res\t1410_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1411.res">
+      <Link>Res\t1411.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1411_2.res">
+      <Link>Res\t1411_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1422.res">
+      <Link>Res\t1422.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1422_2.res">
+      <Link>Res\t1422_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1427.res">
+      <Link>Res\t1427.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1427_2.res">
+      <Link>Res\t1427_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1442.res">
+      <Link>Res\t1442.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1442_2.res">
+      <Link>Res\t1442_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1444.res">
+      <Link>Res\t1444.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1444_2.res">
+      <Link>Res\t1444_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1449.res">
+      <Link>Res\t1449.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1449_2.res">
+      <Link>Res\t1449_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1452.res">
+      <Link>Res\t1452.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1452_2.res">
+      <Link>Res\t1452_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1463.res">
+      <Link>Res\t1463.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1463_2.res">
+      <Link>Res\t1463_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1471.res">
+      <Link>Res\t1471.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1471_2.res">
+      <Link>Res\t1471_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1475.res">
+      <Link>Res\t1475.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1475_2.res">
+      <Link>Res\t1475_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1485.res">
+      <Link>Res\t1485.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1485_2.res">
+      <Link>Res\t1485_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1486.res">
+      <Link>Res\t1486.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1486_2.res">
+      <Link>Res\t1486_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1488.res">
+      <Link>Res\t1488.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1488_2.res">
+      <Link>Res\t1488_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1489.res">
+      <Link>Res\t1489.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1489_2.res">
+      <Link>Res\t1489_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1511.res">
+      <Link>Res\t1511.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1511_2.res">
+      <Link>Res\t1511_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1514.res">
+      <Link>Res\t1514.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1514_2.res">
+      <Link>Res\t1514_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1516.res">
+      <Link>Res\t1516.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1516_2.res">
+      <Link>Res\t1516_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1531.res">
+      <Link>Res\t1531.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1531_2.res">
+      <Link>Res\t1531_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1532.res">
+      <Link>Res\t1532.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1532_2.res">
+      <Link>Res\t1532_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1533.res">
+      <Link>Res\t1533.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1533_2.res">
+      <Link>Res\t1533_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1537.res">
+      <Link>Res\t1537.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1537_2.res">
+      <Link>Res\t1537_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1601.res">
+      <Link>Res\t1601.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1601_2.res">
+      <Link>Res\t1601_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1602.res">
+      <Link>Res\t1602.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1602_2.res">
+      <Link>Res\t1602_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1603.res">
+      <Link>Res\t1603.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1603_2.res">
+      <Link>Res\t1603_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1615.res">
+      <Link>Res\t1615.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1615_2.res">
+      <Link>Res\t1615_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1617.res">
+      <Link>Res\t1617.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1617_2.res">
+      <Link>Res\t1617_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1621.res">
+      <Link>Res\t1621.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1621_2.res">
+      <Link>Res\t1621_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1631.res">
+      <Link>Res\t1631.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1631_2.res">
+      <Link>Res\t1631_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1632.res">
+      <Link>Res\t1632.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1632_2.res">
+      <Link>Res\t1632_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1633.res">
+      <Link>Res\t1633.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1633_2.res">
+      <Link>Res\t1633_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1636.res">
+      <Link>Res\t1636.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1636_2.res">
+      <Link>Res\t1636_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1637.res">
+      <Link>Res\t1637.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1637_2.res">
+      <Link>Res\t1637_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1638.res">
+      <Link>Res\t1638.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1638_2.res">
+      <Link>Res\t1638_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1640.res">
+      <Link>Res\t1640.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1640_2.res">
+      <Link>Res\t1640_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1662.res">
+      <Link>Res\t1662.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1662_2.res">
+      <Link>Res\t1662_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1664.res">
+      <Link>Res\t1664.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1664_2.res">
+      <Link>Res\t1664_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1665.res">
+      <Link>Res\t1665.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1665_2.res">
+      <Link>Res\t1665_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1701.res">
+      <Link>Res\t1701.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1701_2.res">
+      <Link>Res\t1701_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1702.res">
+      <Link>Res\t1702.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1702_2.res">
+      <Link>Res\t1702_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1717.res">
+      <Link>Res\t1717.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1717_2.res">
+      <Link>Res\t1717_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1752.res">
+      <Link>Res\t1752.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1752_2.res">
+      <Link>Res\t1752_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1764.res">
+      <Link>Res\t1764.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1764_2.res">
+      <Link>Res\t1764_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1771.res">
+      <Link>Res\t1771.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1771_2.res">
+      <Link>Res\t1771_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1809.res">
+      <Link>Res\t1809.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1809_2.res">
+      <Link>Res\t1809_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1825.res">
+      <Link>Res\t1825.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1825_2.res">
+      <Link>Res\t1825_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1826.res">
+      <Link>Res\t1826.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1826_2.res">
+      <Link>Res\t1826_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1857.res">
+      <Link>Res\t1857.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1857_2.res">
+      <Link>Res\t1857_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1866.res">
+      <Link>Res\t1866.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1866_2.res">
+      <Link>Res\t1866_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1901.res">
+      <Link>Res\t1901.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1901_2.res">
+      <Link>Res\t1901_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1902.res">
+      <Link>Res\t1902.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1902_2.res">
+      <Link>Res\t1902_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1903.res">
+      <Link>Res\t1903.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1903_2.res">
+      <Link>Res\t1903_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1904.res">
+      <Link>Res\t1904.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1904_2.res">
+      <Link>Res\t1904_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1906.res">
+      <Link>Res\t1906.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1906_2.res">
+      <Link>Res\t1906_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1921.res">
+      <Link>Res\t1921.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1921_2.res">
+      <Link>Res\t1921_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1926.res">
+      <Link>Res\t1926.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1926_2.res">
+      <Link>Res\t1926_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1927.res">
+      <Link>Res\t1927.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1927_2.res">
+      <Link>Res\t1927_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1941.res">
+      <Link>Res\t1941.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1941_2.res">
+      <Link>Res\t1941_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1950.res">
+      <Link>Res\t1950.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1950_2.res">
+      <Link>Res\t1950_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1951.res">
+      <Link>Res\t1951.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1951_2.res">
+      <Link>Res\t1951_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1954.res">
+      <Link>Res\t1954.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1954_2.res">
+      <Link>Res\t1954_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1955.res">
+      <Link>Res\t1955.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1955_2.res">
+      <Link>Res\t1955_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1956.res">
+      <Link>Res\t1956.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1956_2.res">
+      <Link>Res\t1956_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1958.res">
+      <Link>Res\t1958.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1958_2.res">
+      <Link>Res\t1958_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1959.res">
+      <Link>Res\t1959.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1959_2.res">
+      <Link>Res\t1959_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1960.res">
+      <Link>Res\t1960.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1960_2.res">
+      <Link>Res\t1960_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1961.res">
+      <Link>Res\t1961.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1961_2.res">
+      <Link>Res\t1961_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1964.res">
+      <Link>Res\t1964.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1964_2.res">
+      <Link>Res\t1964_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1966.res">
+      <Link>Res\t1966.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1966_2.res">
+      <Link>Res\t1966_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1971.res">
+      <Link>Res\t1971.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1971_2.res">
+      <Link>Res\t1971_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1972.res">
+      <Link>Res\t1972.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1972_2.res">
+      <Link>Res\t1972_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1973.res">
+      <Link>Res\t1973.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1973_2.res">
+      <Link>Res\t1973_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1974.res">
+      <Link>Res\t1974.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1974_2.res">
+      <Link>Res\t1974_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1981.res">
+      <Link>Res\t1981.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t1981_2.res">
+      <Link>Res\t1981_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2101.res">
+      <Link>Res\t2101.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2101_2.res">
+      <Link>Res\t2101_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2105.res">
+      <Link>Res\t2105.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2105_2.res">
+      <Link>Res\t2105_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2106.res">
+      <Link>Res\t2106.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2106_2.res">
+      <Link>Res\t2106_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2201.res">
+      <Link>Res\t2201.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2201_2.res">
+      <Link>Res\t2201_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2203.res">
+      <Link>Res\t2203.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2203_2.res">
+      <Link>Res\t2203_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2209.res">
+      <Link>Res\t2209.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2209_2.res">
+      <Link>Res\t2209_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2210.res">
+      <Link>Res\t2210.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2210_2.res">
+      <Link>Res\t2210_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2301.res">
+      <Link>Res\t2301.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2301_2.res">
+      <Link>Res\t2301_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2405.res">
+      <Link>Res\t2405.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2405_2.res">
+      <Link>Res\t2405_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2421.res">
+      <Link>Res\t2421.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2421_2.res">
+      <Link>Res\t2421_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2541.res">
+      <Link>Res\t2541.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2541_2.res">
+      <Link>Res\t2541_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2545.res">
+      <Link>Res\t2545.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2545_2.res">
+      <Link>Res\t2545_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2801.res">
+      <Link>Res\t2801.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2801_2.res">
+      <Link>Res\t2801_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2802.res">
+      <Link>Res\t2802.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2802_2.res">
+      <Link>Res\t2802_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2804.res">
+      <Link>Res\t2804.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2804_2.res">
+      <Link>Res\t2804_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2805.res">
+      <Link>Res\t2805.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2805_2.res">
+      <Link>Res\t2805_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2813.res">
+      <Link>Res\t2813.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2813_2.res">
+      <Link>Res\t2813_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2814.res">
+      <Link>Res\t2814.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2814_2.res">
+      <Link>Res\t2814_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2816.res">
+      <Link>Res\t2816.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2816_2.res">
+      <Link>Res\t2816_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2830.res">
+      <Link>Res\t2830.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2830_2.res">
+      <Link>Res\t2830_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2831.res">
+      <Link>Res\t2831.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2831_2.res">
+      <Link>Res\t2831_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2832.res">
+      <Link>Res\t2832.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2832_2.res">
+      <Link>Res\t2832_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2833.res">
+      <Link>Res\t2833.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2833_2.res">
+      <Link>Res\t2833_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2835.res">
+      <Link>Res\t2835.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t2835_2.res">
+      <Link>Res\t2835_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3102.res">
+      <Link>Res\t3102.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3102_2.res">
+      <Link>Res\t3102_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3202.res">
+      <Link>Res\t3202.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3202_2.res">
+      <Link>Res\t3202_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3320.res">
+      <Link>Res\t3320.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3320_2.res">
+      <Link>Res\t3320_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3341.res">
+      <Link>Res\t3341.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3341_2.res">
+      <Link>Res\t3341_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3401.res">
+      <Link>Res\t3401.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3401_2.res">
+      <Link>Res\t3401_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3518.res">
+      <Link>Res\t3518.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3518_2.res">
+      <Link>Res\t3518_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3521.res">
+      <Link>Res\t3521.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t3521_2.res">
+      <Link>Res\t3521_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t4201.res">
+      <Link>Res\t4201.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t4201_2.res">
+      <Link>Res\t4201_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t4203.res">
+      <Link>Res\t4203.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t4203_2.res">
+      <Link>Res\t4203_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8401.res">
+      <Link>Res\t8401.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8401_2.res">
+      <Link>Res\t8401_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8402.res">
+      <Link>Res\t8402.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8402_2.res">
+      <Link>Res\t8402_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8403.res">
+      <Link>Res\t8403.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8403_2.res">
+      <Link>Res\t8403_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8404.res">
+      <Link>Res\t8404.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8404_2.res">
+      <Link>Res\t8404_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8405.res">
+      <Link>Res\t8405.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8405_2.res">
+      <Link>Res\t8405_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8406.res">
+      <Link>Res\t8406.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8406_2.res">
+      <Link>Res\t8406_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8407.res">
+      <Link>Res\t8407.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8407_2.res">
+      <Link>Res\t8407_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8408.res">
+      <Link>Res\t8408.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8408_2.res">
+      <Link>Res\t8408_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8409.res">
+      <Link>Res\t8409.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8409_2.res">
+      <Link>Res\t8409_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8411.res">
+      <Link>Res\t8411.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8411_2.res">
+      <Link>Res\t8411_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8412.res">
+      <Link>Res\t8412.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8412_2.res">
+      <Link>Res\t8412_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8413.res">
+      <Link>Res\t8413.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8413_2.res">
+      <Link>Res\t8413_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8414.res">
+      <Link>Res\t8414.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8414_2.res">
+      <Link>Res\t8414_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8415.res">
+      <Link>Res\t8415.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8415_2.res">
+      <Link>Res\t8415_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8416.res">
+      <Link>Res\t8416.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8416_2.res">
+      <Link>Res\t8416_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8417.res">
+      <Link>Res\t8417.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8417_2.res">
+      <Link>Res\t8417_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8418.res">
+      <Link>Res\t8418.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8418_2.res">
+      <Link>Res\t8418_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8419.res">
+      <Link>Res\t8419.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8419_2.res">
+      <Link>Res\t8419_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8424.res">
+      <Link>Res\t8424.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8424_2.res">
+      <Link>Res\t8424_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8425.res">
+      <Link>Res\t8425.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8425_2.res">
+      <Link>Res\t8425_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8426.res">
+      <Link>Res\t8426.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8426_2.res">
+      <Link>Res\t8426_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8427.res">
+      <Link>Res\t8427.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8427_2.res">
+      <Link>Res\t8427_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8428.res">
+      <Link>Res\t8428.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8428_2.res">
+      <Link>Res\t8428_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8429.res">
+      <Link>Res\t8429.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8429_2.res">
+      <Link>Res\t8429_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8430.res">
+      <Link>Res\t8430.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8430_2.res">
+      <Link>Res\t8430_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8431.res">
+      <Link>Res\t8431.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8431_2.res">
+      <Link>Res\t8431_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8432.res">
+      <Link>Res\t8432.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8432_2.res">
+      <Link>Res\t8432_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8433.res">
+      <Link>Res\t8433.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8433_2.res">
+      <Link>Res\t8433_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8434.res">
+      <Link>Res\t8434.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8434_2.res">
+      <Link>Res\t8434_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8435.res">
+      <Link>Res\t8435.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8435_2.res">
+      <Link>Res\t8435_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8436.res">
+      <Link>Res\t8436.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t8436_2.res">
+      <Link>Res\t8436_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9905.res">
+      <Link>Res\t9905.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9905_2.res">
+      <Link>Res\t9905_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9907.res">
+      <Link>Res\t9907.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9907_2.res">
+      <Link>Res\t9907_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9942.res">
+      <Link>Res\t9942.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9942_2.res">
+      <Link>Res\t9942_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9943.res">
+      <Link>Res\t9943.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9943_2.res">
+      <Link>Res\t9943_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9944.res">
+      <Link>Res\t9944.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9944_2.res">
+      <Link>Res\t9944_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9945.res">
+      <Link>Res\t9945.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\t9945_2.res">
+      <Link>Res\t9945_2.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\VI_.res">
+      <Link>Res\VI_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\VI__1.res">
+      <Link>Res\VI__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YC3.res">
+      <Link>Res\YC3.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YC3_1.res">
+      <Link>Res\YC3_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YFC.res">
+      <Link>Res\YFC.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YFC_1.res">
+      <Link>Res\YFC_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YJC.res">
+      <Link>Res\YJC.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YJC_1.res">
+      <Link>Res\YJC_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YJ_.res">
+      <Link>Res\YJ_.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YJ__1.res">
+      <Link>Res\YJ__1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YK3.res">
+      <Link>Res\YK3.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YK3_1.res">
+      <Link>Res\YK3_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YOC.res">
+      <Link>Res\YOC.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YOC_1.res">
+      <Link>Res\YOC_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YS3.res">
+      <Link>Res\YS3.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\YS3_1.res">
+      <Link>Res\YS3_1.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\Ys3_4ELW.res">
+      <Link>Res\Ys3_4ELW.res</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Lib\Res\Ys3_4ELW_1.res">
+      <Link>Res\Ys3_4ELW_1.res</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Lib\Sample_xingACE.exe">

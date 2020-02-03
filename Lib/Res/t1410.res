@@ -1,0 +1,25 @@
+BEGIN_FUNCTION_MAP
+	.Func,초저유동성조회(t1410),t1410,attr,block,headtype=A;
+	BEGIN_DATA_MAP
+	t1410InBlock,기본입력,input;
+	begin
+		구분,gubun,gubun,char,1;
+		종목코드_CTS,cts_shcode,cts_shcode,char,6;
+	end
+	t1410OutBlock,출력,output;
+	begin
+		종목코드_CTS,cts_shcode,cts_shcode,char,6;
+	end
+	t1410OutBlock1,출력1,output,occurs;
+	begin
+		한글명,hname,hname,char,20;
+		현재가,price,price,long,8;
+		전일대비구분,sign,sign,char,1;
+		전일대비,change,change,long,8;
+		등락율,diff,diff,float,6.2;
+		누적거래량,volume,volume,long,12;
+		종목코드,shcode,shcode,char,6;
+	end
+	END_DATA_MAP
+END_FUNCTION_MAP
+

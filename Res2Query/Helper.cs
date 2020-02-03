@@ -8,20 +8,18 @@ namespace Res2Query
     public struct BlockInfo
     {
         readonly string _blockType;
-        public BlockType BlockType
-        {
-            get
-            {
-                return (BlockType)Enum.Parse(typeof(BlockType), _blockType);
-            }
-        }
+        public BlockType BlockType => (BlockType)Enum.Parse(typeof(BlockType), _blockType);
+
+        readonly bool _hasOccurs;
+        public bool HasOccurs => _hasOccurs;
 
         public readonly string SetFieldData;
 
-        public BlockInfo(string typeCode, string setFieldData)
+        public BlockInfo(string typeCode, string setFieldData, bool hasOccurs)
         {
             _blockType = typeCode;
             SetFieldData = setFieldData;
+            _hasOccurs = hasOccurs;
         }
     }
 

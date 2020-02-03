@@ -20,5 +20,18 @@ namespace XingAPINet
             Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
             writer.Dump(this.GetBlockName(), dict, outputType);
         }
+
+        public void CopyValueFromBlock(XingBlock fromBlock)
+        {
+            var fields = fromBlock.GetFieldsInfo();
+
+            foreach (string key in fields.Keys)
+            {
+                XAQueryFieldInfo info = fields[key];
+                SetFieldValue(key, info);
+            }
+        }
+
+        public abstract void SetFieldValue(string fieldName, XAQueryFieldInfo fieldInfo);
     }
 }

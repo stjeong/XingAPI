@@ -75,7 +75,6 @@ namespace ConsoleApp1
                     if (outBlock.IsValidData == true)
                     {
                         outBlock.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
-                        Console.WriteLine(outBlock.price);
                     }
                     else
                     {
@@ -93,7 +92,7 @@ namespace ConsoleApp1
                     //    return;
                     //}
 
-                    real.SetFieldData(XRS3_InBlock.BlockName, "shcode", shcode);
+                    real.SetFieldData(XRS3_InBlock.BlockName, XRS3_InBlock.F.shcode, shcode);
                     real.Advise();
 
                     while (_exitProcess == false)

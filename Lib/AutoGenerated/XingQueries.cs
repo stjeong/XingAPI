@@ -8,28 +8,25 @@ using XingAPINet;
 
 namespace XingAPINet
 {
-	public partial class XQCDPCQ04700InBlock1 : XingBlock
+	public partial class XQCDPCQ04700InBlock1
 	{
 		/// <summary>
 		/// CDPCQ04700InBlock1
 		/// </summary>
-		static readonly string _blockName = "CDPCQ04700InBlock1";
+		readonly string _blockName = "CDPCQ04700InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		readonly string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		readonly string _blockType = "input";
+
 		/// <summary>
 		/// CDPCQ04700InBlock1
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CDPCQ04700InBlock1
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
@@ -90,7 +87,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("종목번호")]
 		public string IsuNo;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["RecCnt"] = new XAQueryFieldInfo("long", RecCnt, RecCnt.ToString("d5"), "레코드갯수", (decimal)5);
@@ -124,28 +128,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQCDPCQ04700OutBlock1 : XingBlock
+	public partial class XQCDPCQ04700OutBlock1
 	{
 		/// <summary>
 		/// CDPCQ04700OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CDPCQ04700OutBlock1";
+		readonly string _blockName = "CDPCQ04700OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		readonly string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// CDPCQ04700OutBlock1
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CDPCQ04700OutBlock1
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
@@ -206,7 +207,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("종목번호")]
 		public string IsuNo;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["RecCnt"] = new XAQueryFieldInfo("long", RecCnt, RecCnt.ToString("d5"), "레코드갯수", (decimal)5);
@@ -223,11 +231,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQCDPCQ04700OutBlock1 FromQuery(XQCDPCQ04700 query)
 		{
 			XQCDPCQ04700OutBlock1 block = new XQCDPCQ04700OutBlock1();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -236,16 +244,16 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.RecCnt = query.GetFieldData(block.GetBlockName(), "RecCnt", 0).ParseLong("RecCnt"); // long 5
-				block.QryTp = query.GetFieldData(block.GetBlockName(), "QryTp", 0).First(); // char 1
-				block.AcntNo = query.GetFieldData(block.GetBlockName(), "AcntNo", 0); // char 20
-				block.Pwd = query.GetFieldData(block.GetBlockName(), "Pwd", 0); // char 8
-				block.QrySrtDt = query.GetFieldData(block.GetBlockName(), "QrySrtDt", 0); // char 8
-				block.QryEndDt = query.GetFieldData(block.GetBlockName(), "QryEndDt", 0); // char 8
-				block.SrtNo = query.GetFieldData(block.GetBlockName(), "SrtNo", 0).ParseLong("SrtNo"); // long 10
-				block.PdptnCode = query.GetFieldData(block.GetBlockName(), "PdptnCode", 0); // char 2
-				block.IsuLgclssCode = query.GetFieldData(block.GetBlockName(), "IsuLgclssCode", 0); // char 2
-				block.IsuNo = query.GetFieldData(block.GetBlockName(), "IsuNo", 0); // char 12
+				block.RecCnt = query.GetFieldData(block.BlockName, "RecCnt", 0).ParseLong("RecCnt"); // long 5
+				block.QryTp = query.GetFieldData(block.BlockName, "QryTp", 0).First(); // char 1
+				block.AcntNo = query.GetFieldData(block.BlockName, "AcntNo", 0); // char 20
+				block.Pwd = query.GetFieldData(block.BlockName, "Pwd", 0); // char 8
+				block.QrySrtDt = query.GetFieldData(block.BlockName, "QrySrtDt", 0); // char 8
+				block.QryEndDt = query.GetFieldData(block.BlockName, "QryEndDt", 0); // char 8
+				block.SrtNo = query.GetFieldData(block.BlockName, "SrtNo", 0).ParseLong("SrtNo"); // long 10
+				block.PdptnCode = query.GetFieldData(block.BlockName, "PdptnCode", 0); // char 2
+				block.IsuLgclssCode = query.GetFieldData(block.BlockName, "IsuLgclssCode", 0); // char 2
+				block.IsuNo = query.GetFieldData(block.BlockName, "IsuNo", 0); // char 12
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -272,28 +280,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQCDPCQ04700OutBlock2 : XingBlock
+	public partial class XQCDPCQ04700OutBlock2
 	{
 		/// <summary>
 		/// CDPCQ04700OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CDPCQ04700OutBlock2";
+		readonly string _blockName = "CDPCQ04700OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		readonly string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// CDPCQ04700OutBlock2
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CDPCQ04700OutBlock2
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
@@ -314,7 +319,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("계좌명")]
 		public string AcntNm;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["RecCnt"] = new XAQueryFieldInfo("long", RecCnt, RecCnt.ToString("d5"), "레코드갯수", (decimal)5);
@@ -323,11 +335,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQCDPCQ04700OutBlock2 FromQuery(XQCDPCQ04700 query)
 		{
 			XQCDPCQ04700OutBlock2 block = new XQCDPCQ04700OutBlock2();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -336,8 +348,8 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.RecCnt = query.GetFieldData(block.GetBlockName(), "RecCnt", 0).ParseLong("RecCnt"); // long 5
-				block.AcntNm = query.GetFieldData(block.GetBlockName(), "AcntNm", 0); // char 40
+				block.RecCnt = query.GetFieldData(block.BlockName, "RecCnt", 0).ParseLong("RecCnt"); // long 5
+				block.AcntNm = query.GetFieldData(block.BlockName, "AcntNm", 0); // char 40
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -356,28 +368,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQCDPCQ04700OutBlock3 : XingBlock
+	public partial class XQCDPCQ04700OutBlock3
 	{
 		/// <summary>
 		/// CDPCQ04700OutBlock3
 		/// </summary>
-		static readonly string _blockName = "CDPCQ04700OutBlock3";
+		readonly string _blockName = "CDPCQ04700OutBlock3";
 		/// <summary>
 		/// Out2(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out2(*EMPTY*)";
+		readonly string _blockDesc = "Out2(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// CDPCQ04700OutBlock3
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CDPCQ04700OutBlock3
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// Out2(*EMPTY*)
 		/// </summary>
@@ -778,7 +787,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("외화증권거래세")]
 		public double FcstckTrtax;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["AcntNo"] = new XAQueryFieldInfo("char", AcntNo, AcntNo, "계좌번호", (decimal)20);
@@ -863,11 +879,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQCDPCQ04700OutBlock3 FromQuery(XQCDPCQ04700 query)
 		{
 			XQCDPCQ04700OutBlock3 block = new XQCDPCQ04700OutBlock3();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -876,84 +892,84 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.AcntNo = query.GetFieldData(block.GetBlockName(), "AcntNo", 0); // char 20
-				block.TrdDt = query.GetFieldData(block.GetBlockName(), "TrdDt", 0); // char 8
-				block.TrdNo = query.GetFieldData(block.GetBlockName(), "TrdNo", 0).ParseLong("TrdNo"); // long 10
-				block.TpCodeNm = query.GetFieldData(block.GetBlockName(), "TpCodeNm", 0); // char 50
-				block.SmryNo = query.GetFieldData(block.GetBlockName(), "SmryNo", 0); // char 4
-				block.SmryNm = query.GetFieldData(block.GetBlockName(), "SmryNm", 0); // char 40
-				block.CancTpNm = query.GetFieldData(block.GetBlockName(), "CancTpNm", 0); // char 20
-				block.TrdQty = query.GetFieldData(block.GetBlockName(), "TrdQty", 0).ParseLong("TrdQty"); // long 16
-				block.Trtax = query.GetFieldData(block.GetBlockName(), "Trtax", 0).ParseLong("Trtax"); // long 16
-				block.FcurrAdjstAmt = query.GetFieldData(block.GetBlockName(), "FcurrAdjstAmt", 0).ParseDouble("FcurrAdjstAmt"); // double 25.4
-				block.AdjstAmt = query.GetFieldData(block.GetBlockName(), "AdjstAmt", 0).ParseLong("AdjstAmt"); // long 16
-				block.OvdSum = query.GetFieldData(block.GetBlockName(), "OvdSum", 0).ParseLong("OvdSum"); // long 16
-				block.DpsBfbalAmt = query.GetFieldData(block.GetBlockName(), "DpsBfbalAmt", 0).ParseLong("DpsBfbalAmt"); // long 16
-				block.SellPldgRfundAmt = query.GetFieldData(block.GetBlockName(), "SellPldgRfundAmt", 0).ParseLong("SellPldgRfundAmt"); // long 16
-				block.DpspdgLoanBfbalAmt = query.GetFieldData(block.GetBlockName(), "DpspdgLoanBfbalAmt", 0).ParseLong("DpspdgLoanBfbalAmt"); // long 16
-				block.TrdmdaNm = query.GetFieldData(block.GetBlockName(), "TrdmdaNm", 0); // char 40
-				block.OrgTrdNo = query.GetFieldData(block.GetBlockName(), "OrgTrdNo", 0).ParseLong("OrgTrdNo"); // long 10
-				block.IsuNm = query.GetFieldData(block.GetBlockName(), "IsuNm", 0); // char 40
-				block.TrdUprc = query.GetFieldData(block.GetBlockName(), "TrdUprc", 0).ParseDouble("TrdUprc"); // double 13.2
-				block.CmsnAmt = query.GetFieldData(block.GetBlockName(), "CmsnAmt", 0).ParseLong("CmsnAmt"); // long 16
-				block.FcurrCmsnAmt = query.GetFieldData(block.GetBlockName(), "FcurrCmsnAmt", 0).ParseDouble("FcurrCmsnAmt"); // double 15.2
-				block.RfundDiffAmt = query.GetFieldData(block.GetBlockName(), "RfundDiffAmt", 0).ParseLong("RfundDiffAmt"); // long 16
-				block.RepayAmtSum = query.GetFieldData(block.GetBlockName(), "RepayAmtSum", 0).ParseLong("RepayAmtSum"); // long 16
-				block.SecCrbalQty = query.GetFieldData(block.GetBlockName(), "SecCrbalQty", 0).ParseLong("SecCrbalQty"); // long 16
-				block.CslLoanRfundIntrstAmt = query.GetFieldData(block.GetBlockName(), "CslLoanRfundIntrstAmt", 0).ParseLong("CslLoanRfundIntrstAmt"); // long 16
-				block.DpspdgLoanCrbalAmt = query.GetFieldData(block.GetBlockName(), "DpspdgLoanCrbalAmt", 0).ParseLong("DpspdgLoanCrbalAmt"); // long 16
-				block.TrxTime = query.GetFieldData(block.GetBlockName(), "TrxTime", 0); // char 9
-				block.Inouno = query.GetFieldData(block.GetBlockName(), "Inouno", 0).ParseLong("Inouno"); // long 10
-				block.IsuNo = query.GetFieldData(block.GetBlockName(), "IsuNo", 0); // char 12
-				block.TrdAmt = query.GetFieldData(block.GetBlockName(), "TrdAmt", 0).ParseLong("TrdAmt"); // long 16
-				block.ChckAmt = query.GetFieldData(block.GetBlockName(), "ChckAmt", 0).ParseLong("ChckAmt"); // long 16
-				block.TaxSumAmt = query.GetFieldData(block.GetBlockName(), "TaxSumAmt", 0).ParseLong("TaxSumAmt"); // long 16
-				block.FcurrTaxSumAmt = query.GetFieldData(block.GetBlockName(), "FcurrTaxSumAmt", 0).ParseDouble("FcurrTaxSumAmt"); // double 26.6
-				block.IntrstUtlfee = query.GetFieldData(block.GetBlockName(), "IntrstUtlfee", 0).ParseLong("IntrstUtlfee"); // long 16
-				block.MnyDvdAmt = query.GetFieldData(block.GetBlockName(), "MnyDvdAmt", 0).ParseLong("MnyDvdAmt"); // long 16
-				block.RcvblOcrAmt = query.GetFieldData(block.GetBlockName(), "RcvblOcrAmt", 0).ParseLong("RcvblOcrAmt"); // long 16
-				block.TrxBrnNo = query.GetFieldData(block.GetBlockName(), "TrxBrnNo", 0); // char 3
-				block.TrxBrnNm = query.GetFieldData(block.GetBlockName(), "TrxBrnNm", 0); // char 40
-				block.DpspdgLoanAmt = query.GetFieldData(block.GetBlockName(), "DpspdgLoanAmt", 0).ParseLong("DpspdgLoanAmt"); // long 16
-				block.DpspdgLoanRfundAmt = query.GetFieldData(block.GetBlockName(), "DpspdgLoanRfundAmt", 0).ParseLong("DpspdgLoanRfundAmt"); // long 16
-				block.BasePrc = query.GetFieldData(block.GetBlockName(), "BasePrc", 0).ParseDouble("BasePrc"); // double 13.2
-				block.DpsCrbalAmt = query.GetFieldData(block.GetBlockName(), "DpsCrbalAmt", 0).ParseLong("DpsCrbalAmt"); // long 16
-				block.BoaAmt = query.GetFieldData(block.GetBlockName(), "BoaAmt", 0).ParseLong("BoaAmt"); // long 16
-				block.MnyoutAbleAmt = query.GetFieldData(block.GetBlockName(), "MnyoutAbleAmt", 0).ParseLong("MnyoutAbleAmt"); // long 16
-				block.BcrLoanOcrAmt = query.GetFieldData(block.GetBlockName(), "BcrLoanOcrAmt", 0).ParseLong("BcrLoanOcrAmt"); // long 16
-				block.BcrLoanBfbalAmt = query.GetFieldData(block.GetBlockName(), "BcrLoanBfbalAmt", 0).ParseLong("BcrLoanBfbalAmt"); // long 16
-				block.BnsBasePrc = query.GetFieldData(block.GetBlockName(), "BnsBasePrc", 0).ParseDouble("BnsBasePrc"); // double 20.10
-				block.TaxchrBasePrc = query.GetFieldData(block.GetBlockName(), "TaxchrBasePrc", 0).ParseDouble("TaxchrBasePrc"); // double 20.10
-				block.TrdUnit = query.GetFieldData(block.GetBlockName(), "TrdUnit", 0).ParseLong("TrdUnit"); // long 16
-				block.BalUnit = query.GetFieldData(block.GetBlockName(), "BalUnit", 0).ParseLong("BalUnit"); // long 16
-				block.EvrTax = query.GetFieldData(block.GetBlockName(), "EvrTax", 0).ParseLong("EvrTax"); // long 16
-				block.EvalAmt = query.GetFieldData(block.GetBlockName(), "EvalAmt", 0).ParseLong("EvalAmt"); // long 16
-				block.BcrLoanRfundAmt = query.GetFieldData(block.GetBlockName(), "BcrLoanRfundAmt", 0).ParseLong("BcrLoanRfundAmt"); // long 16
-				block.BcrLoanCrbalAmt = query.GetFieldData(block.GetBlockName(), "BcrLoanCrbalAmt", 0).ParseLong("BcrLoanCrbalAmt"); // long 16
-				block.AddMgnOcrTotamt = query.GetFieldData(block.GetBlockName(), "AddMgnOcrTotamt", 0).ParseLong("AddMgnOcrTotamt"); // long 16
-				block.AddMnyMgnOcrAmt = query.GetFieldData(block.GetBlockName(), "AddMnyMgnOcrAmt", 0).ParseLong("AddMnyMgnOcrAmt"); // long 16
-				block.AddMgnDfryTotamt = query.GetFieldData(block.GetBlockName(), "AddMgnDfryTotamt", 0).ParseLong("AddMgnDfryTotamt"); // long 16
-				block.AddMnyMgnDfryAmt = query.GetFieldData(block.GetBlockName(), "AddMnyMgnDfryAmt", 0).ParseLong("AddMnyMgnDfryAmt"); // long 16
-				block.BnsplAmt = query.GetFieldData(block.GetBlockName(), "BnsplAmt", 0).ParseLong("BnsplAmt"); // long 16
-				block.Ictax = query.GetFieldData(block.GetBlockName(), "Ictax", 0).ParseLong("Ictax"); // long 16
-				block.Ihtax = query.GetFieldData(block.GetBlockName(), "Ihtax", 0).ParseLong("Ihtax"); // long 16
-				block.LoanDt = query.GetFieldData(block.GetBlockName(), "LoanDt", 0); // char 8
-				block.CrcyCode = query.GetFieldData(block.GetBlockName(), "CrcyCode", 0); // char 3
-				block.FcurrAmt = query.GetFieldData(block.GetBlockName(), "FcurrAmt", 0).ParseDouble("FcurrAmt"); // double 24.4
-				block.FcurrTrdAmt = query.GetFieldData(block.GetBlockName(), "FcurrTrdAmt", 0).ParseDouble("FcurrTrdAmt"); // double 24.4
-				block.FcurrDps = query.GetFieldData(block.GetBlockName(), "FcurrDps", 0).ParseDouble("FcurrDps"); // double 21.4
-				block.FcurrDpsBfbalAmt = query.GetFieldData(block.GetBlockName(), "FcurrDpsBfbalAmt", 0).ParseDouble("FcurrDpsBfbalAmt"); // double 21.4
-				block.OppAcntNm = query.GetFieldData(block.GetBlockName(), "OppAcntNm", 0); // char 40
-				block.OppAcntNo = query.GetFieldData(block.GetBlockName(), "OppAcntNo", 0); // char 20
-				block.LoanRfundAmt = query.GetFieldData(block.GetBlockName(), "LoanRfundAmt", 0).ParseLong("LoanRfundAmt"); // long 16
-				block.LoanIntrstAmt = query.GetFieldData(block.GetBlockName(), "LoanIntrstAmt", 0).ParseLong("LoanIntrstAmt"); // long 16
-				block.AskpsnNm = query.GetFieldData(block.GetBlockName(), "AskpsnNm", 0); // char 40
-				block.OrdDt = query.GetFieldData(block.GetBlockName(), "OrdDt", 0); // char 8
-				block.TrdXchrat = query.GetFieldData(block.GetBlockName(), "TrdXchrat", 0).ParseDouble("TrdXchrat"); // double 15.4
-				block.RdctCmsn = query.GetFieldData(block.GetBlockName(), "RdctCmsn", 0).ParseDouble("RdctCmsn"); // double 21.4
-				block.FcurrStmpTx = query.GetFieldData(block.GetBlockName(), "FcurrStmpTx", 0).ParseDouble("FcurrStmpTx"); // double 21.4
-				block.FcurrElecfnTrtax = query.GetFieldData(block.GetBlockName(), "FcurrElecfnTrtax", 0).ParseDouble("FcurrElecfnTrtax"); // double 21.4
-				block.FcstckTrtax = query.GetFieldData(block.GetBlockName(), "FcstckTrtax", 0).ParseDouble("FcstckTrtax"); // double 21.4
+				block.AcntNo = query.GetFieldData(block.BlockName, "AcntNo", 0); // char 20
+				block.TrdDt = query.GetFieldData(block.BlockName, "TrdDt", 0); // char 8
+				block.TrdNo = query.GetFieldData(block.BlockName, "TrdNo", 0).ParseLong("TrdNo"); // long 10
+				block.TpCodeNm = query.GetFieldData(block.BlockName, "TpCodeNm", 0); // char 50
+				block.SmryNo = query.GetFieldData(block.BlockName, "SmryNo", 0); // char 4
+				block.SmryNm = query.GetFieldData(block.BlockName, "SmryNm", 0); // char 40
+				block.CancTpNm = query.GetFieldData(block.BlockName, "CancTpNm", 0); // char 20
+				block.TrdQty = query.GetFieldData(block.BlockName, "TrdQty", 0).ParseLong("TrdQty"); // long 16
+				block.Trtax = query.GetFieldData(block.BlockName, "Trtax", 0).ParseLong("Trtax"); // long 16
+				block.FcurrAdjstAmt = query.GetFieldData(block.BlockName, "FcurrAdjstAmt", 0).ParseDouble("FcurrAdjstAmt"); // double 25.4
+				block.AdjstAmt = query.GetFieldData(block.BlockName, "AdjstAmt", 0).ParseLong("AdjstAmt"); // long 16
+				block.OvdSum = query.GetFieldData(block.BlockName, "OvdSum", 0).ParseLong("OvdSum"); // long 16
+				block.DpsBfbalAmt = query.GetFieldData(block.BlockName, "DpsBfbalAmt", 0).ParseLong("DpsBfbalAmt"); // long 16
+				block.SellPldgRfundAmt = query.GetFieldData(block.BlockName, "SellPldgRfundAmt", 0).ParseLong("SellPldgRfundAmt"); // long 16
+				block.DpspdgLoanBfbalAmt = query.GetFieldData(block.BlockName, "DpspdgLoanBfbalAmt", 0).ParseLong("DpspdgLoanBfbalAmt"); // long 16
+				block.TrdmdaNm = query.GetFieldData(block.BlockName, "TrdmdaNm", 0); // char 40
+				block.OrgTrdNo = query.GetFieldData(block.BlockName, "OrgTrdNo", 0).ParseLong("OrgTrdNo"); // long 10
+				block.IsuNm = query.GetFieldData(block.BlockName, "IsuNm", 0); // char 40
+				block.TrdUprc = query.GetFieldData(block.BlockName, "TrdUprc", 0).ParseDouble("TrdUprc"); // double 13.2
+				block.CmsnAmt = query.GetFieldData(block.BlockName, "CmsnAmt", 0).ParseLong("CmsnAmt"); // long 16
+				block.FcurrCmsnAmt = query.GetFieldData(block.BlockName, "FcurrCmsnAmt", 0).ParseDouble("FcurrCmsnAmt"); // double 15.2
+				block.RfundDiffAmt = query.GetFieldData(block.BlockName, "RfundDiffAmt", 0).ParseLong("RfundDiffAmt"); // long 16
+				block.RepayAmtSum = query.GetFieldData(block.BlockName, "RepayAmtSum", 0).ParseLong("RepayAmtSum"); // long 16
+				block.SecCrbalQty = query.GetFieldData(block.BlockName, "SecCrbalQty", 0).ParseLong("SecCrbalQty"); // long 16
+				block.CslLoanRfundIntrstAmt = query.GetFieldData(block.BlockName, "CslLoanRfundIntrstAmt", 0).ParseLong("CslLoanRfundIntrstAmt"); // long 16
+				block.DpspdgLoanCrbalAmt = query.GetFieldData(block.BlockName, "DpspdgLoanCrbalAmt", 0).ParseLong("DpspdgLoanCrbalAmt"); // long 16
+				block.TrxTime = query.GetFieldData(block.BlockName, "TrxTime", 0); // char 9
+				block.Inouno = query.GetFieldData(block.BlockName, "Inouno", 0).ParseLong("Inouno"); // long 10
+				block.IsuNo = query.GetFieldData(block.BlockName, "IsuNo", 0); // char 12
+				block.TrdAmt = query.GetFieldData(block.BlockName, "TrdAmt", 0).ParseLong("TrdAmt"); // long 16
+				block.ChckAmt = query.GetFieldData(block.BlockName, "ChckAmt", 0).ParseLong("ChckAmt"); // long 16
+				block.TaxSumAmt = query.GetFieldData(block.BlockName, "TaxSumAmt", 0).ParseLong("TaxSumAmt"); // long 16
+				block.FcurrTaxSumAmt = query.GetFieldData(block.BlockName, "FcurrTaxSumAmt", 0).ParseDouble("FcurrTaxSumAmt"); // double 26.6
+				block.IntrstUtlfee = query.GetFieldData(block.BlockName, "IntrstUtlfee", 0).ParseLong("IntrstUtlfee"); // long 16
+				block.MnyDvdAmt = query.GetFieldData(block.BlockName, "MnyDvdAmt", 0).ParseLong("MnyDvdAmt"); // long 16
+				block.RcvblOcrAmt = query.GetFieldData(block.BlockName, "RcvblOcrAmt", 0).ParseLong("RcvblOcrAmt"); // long 16
+				block.TrxBrnNo = query.GetFieldData(block.BlockName, "TrxBrnNo", 0); // char 3
+				block.TrxBrnNm = query.GetFieldData(block.BlockName, "TrxBrnNm", 0); // char 40
+				block.DpspdgLoanAmt = query.GetFieldData(block.BlockName, "DpspdgLoanAmt", 0).ParseLong("DpspdgLoanAmt"); // long 16
+				block.DpspdgLoanRfundAmt = query.GetFieldData(block.BlockName, "DpspdgLoanRfundAmt", 0).ParseLong("DpspdgLoanRfundAmt"); // long 16
+				block.BasePrc = query.GetFieldData(block.BlockName, "BasePrc", 0).ParseDouble("BasePrc"); // double 13.2
+				block.DpsCrbalAmt = query.GetFieldData(block.BlockName, "DpsCrbalAmt", 0).ParseLong("DpsCrbalAmt"); // long 16
+				block.BoaAmt = query.GetFieldData(block.BlockName, "BoaAmt", 0).ParseLong("BoaAmt"); // long 16
+				block.MnyoutAbleAmt = query.GetFieldData(block.BlockName, "MnyoutAbleAmt", 0).ParseLong("MnyoutAbleAmt"); // long 16
+				block.BcrLoanOcrAmt = query.GetFieldData(block.BlockName, "BcrLoanOcrAmt", 0).ParseLong("BcrLoanOcrAmt"); // long 16
+				block.BcrLoanBfbalAmt = query.GetFieldData(block.BlockName, "BcrLoanBfbalAmt", 0).ParseLong("BcrLoanBfbalAmt"); // long 16
+				block.BnsBasePrc = query.GetFieldData(block.BlockName, "BnsBasePrc", 0).ParseDouble("BnsBasePrc"); // double 20.10
+				block.TaxchrBasePrc = query.GetFieldData(block.BlockName, "TaxchrBasePrc", 0).ParseDouble("TaxchrBasePrc"); // double 20.10
+				block.TrdUnit = query.GetFieldData(block.BlockName, "TrdUnit", 0).ParseLong("TrdUnit"); // long 16
+				block.BalUnit = query.GetFieldData(block.BlockName, "BalUnit", 0).ParseLong("BalUnit"); // long 16
+				block.EvrTax = query.GetFieldData(block.BlockName, "EvrTax", 0).ParseLong("EvrTax"); // long 16
+				block.EvalAmt = query.GetFieldData(block.BlockName, "EvalAmt", 0).ParseLong("EvalAmt"); // long 16
+				block.BcrLoanRfundAmt = query.GetFieldData(block.BlockName, "BcrLoanRfundAmt", 0).ParseLong("BcrLoanRfundAmt"); // long 16
+				block.BcrLoanCrbalAmt = query.GetFieldData(block.BlockName, "BcrLoanCrbalAmt", 0).ParseLong("BcrLoanCrbalAmt"); // long 16
+				block.AddMgnOcrTotamt = query.GetFieldData(block.BlockName, "AddMgnOcrTotamt", 0).ParseLong("AddMgnOcrTotamt"); // long 16
+				block.AddMnyMgnOcrAmt = query.GetFieldData(block.BlockName, "AddMnyMgnOcrAmt", 0).ParseLong("AddMnyMgnOcrAmt"); // long 16
+				block.AddMgnDfryTotamt = query.GetFieldData(block.BlockName, "AddMgnDfryTotamt", 0).ParseLong("AddMgnDfryTotamt"); // long 16
+				block.AddMnyMgnDfryAmt = query.GetFieldData(block.BlockName, "AddMnyMgnDfryAmt", 0).ParseLong("AddMnyMgnDfryAmt"); // long 16
+				block.BnsplAmt = query.GetFieldData(block.BlockName, "BnsplAmt", 0).ParseLong("BnsplAmt"); // long 16
+				block.Ictax = query.GetFieldData(block.BlockName, "Ictax", 0).ParseLong("Ictax"); // long 16
+				block.Ihtax = query.GetFieldData(block.BlockName, "Ihtax", 0).ParseLong("Ihtax"); // long 16
+				block.LoanDt = query.GetFieldData(block.BlockName, "LoanDt", 0); // char 8
+				block.CrcyCode = query.GetFieldData(block.BlockName, "CrcyCode", 0); // char 3
+				block.FcurrAmt = query.GetFieldData(block.BlockName, "FcurrAmt", 0).ParseDouble("FcurrAmt"); // double 24.4
+				block.FcurrTrdAmt = query.GetFieldData(block.BlockName, "FcurrTrdAmt", 0).ParseDouble("FcurrTrdAmt"); // double 24.4
+				block.FcurrDps = query.GetFieldData(block.BlockName, "FcurrDps", 0).ParseDouble("FcurrDps"); // double 21.4
+				block.FcurrDpsBfbalAmt = query.GetFieldData(block.BlockName, "FcurrDpsBfbalAmt", 0).ParseDouble("FcurrDpsBfbalAmt"); // double 21.4
+				block.OppAcntNm = query.GetFieldData(block.BlockName, "OppAcntNm", 0); // char 40
+				block.OppAcntNo = query.GetFieldData(block.BlockName, "OppAcntNo", 0); // char 20
+				block.LoanRfundAmt = query.GetFieldData(block.BlockName, "LoanRfundAmt", 0).ParseLong("LoanRfundAmt"); // long 16
+				block.LoanIntrstAmt = query.GetFieldData(block.BlockName, "LoanIntrstAmt", 0).ParseLong("LoanIntrstAmt"); // long 16
+				block.AskpsnNm = query.GetFieldData(block.BlockName, "AskpsnNm", 0); // char 40
+				block.OrdDt = query.GetFieldData(block.BlockName, "OrdDt", 0); // char 8
+				block.TrdXchrat = query.GetFieldData(block.BlockName, "TrdXchrat", 0).ParseDouble("TrdXchrat"); // double 15.4
+				block.RdctCmsn = query.GetFieldData(block.BlockName, "RdctCmsn", 0).ParseDouble("RdctCmsn"); // double 21.4
+				block.FcurrStmpTx = query.GetFieldData(block.BlockName, "FcurrStmpTx", 0).ParseDouble("FcurrStmpTx"); // double 21.4
+				block.FcurrElecfnTrtax = query.GetFieldData(block.BlockName, "FcurrElecfnTrtax", 0).ParseDouble("FcurrElecfnTrtax"); // double 21.4
+				block.FcstckTrtax = query.GetFieldData(block.BlockName, "FcstckTrtax", 0).ParseDouble("FcstckTrtax"); // double 21.4
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -1048,28 +1064,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQCDPCQ04700OutBlock4 : XingBlock
+	public partial class XQCDPCQ04700OutBlock4
 	{
 		/// <summary>
 		/// CDPCQ04700OutBlock4
 		/// </summary>
-		static readonly string _blockName = "CDPCQ04700OutBlock4";
+		readonly string _blockName = "CDPCQ04700OutBlock4";
 		/// <summary>
 		/// Out3(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out3(*EMPTY*)";
+		readonly string _blockDesc = "Out3(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// CDPCQ04700OutBlock4
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CDPCQ04700OutBlock4
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// Out3(*EMPTY*)
 		/// </summary>
@@ -1100,7 +1113,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("수수료합계금액")]
 		public long CmsnAmtSumAmt;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["RecCnt"] = new XAQueryFieldInfo("long", RecCnt, RecCnt.ToString("d5"), "레코드갯수", (decimal)5);
@@ -1111,11 +1131,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQCDPCQ04700OutBlock4 FromQuery(XQCDPCQ04700 query)
 		{
 			XQCDPCQ04700OutBlock4 block = new XQCDPCQ04700OutBlock4();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -1124,10 +1144,10 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.RecCnt = query.GetFieldData(block.GetBlockName(), "RecCnt", 0).ParseLong("RecCnt"); // long 5
-				block.PnlSumAmt = query.GetFieldData(block.GetBlockName(), "PnlSumAmt", 0).ParseLong("PnlSumAmt"); // long 16
-				block.CtrctAsm = query.GetFieldData(block.GetBlockName(), "CtrctAsm", 0).ParseLong("CtrctAsm"); // long 16
-				block.CmsnAmtSumAmt = query.GetFieldData(block.GetBlockName(), "CmsnAmtSumAmt", 0).ParseLong("CmsnAmtSumAmt"); // long 16
+				block.RecCnt = query.GetFieldData(block.BlockName, "RecCnt", 0).ParseLong("RecCnt"); // long 5
+				block.PnlSumAmt = query.GetFieldData(block.BlockName, "PnlSumAmt", 0).ParseLong("PnlSumAmt"); // long 16
+				block.CtrctAsm = query.GetFieldData(block.BlockName, "CtrctAsm", 0).ParseLong("CtrctAsm"); // long 16
+				block.CmsnAmtSumAmt = query.GetFieldData(block.BlockName, "CmsnAmtSumAmt", 0).ParseLong("CmsnAmtSumAmt"); // long 16
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -1148,28 +1168,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQCDPCQ04700OutBlock5 : XingBlock
+	public partial class XQCDPCQ04700OutBlock5
 	{
 		/// <summary>
 		/// CDPCQ04700OutBlock5
 		/// </summary>
-		static readonly string _blockName = "CDPCQ04700OutBlock5";
+		readonly string _blockName = "CDPCQ04700OutBlock5";
 		/// <summary>
 		/// Out4(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out4(*EMPTY*)";
+		readonly string _blockDesc = "Out4(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// CDPCQ04700OutBlock5
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CDPCQ04700OutBlock5
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// Out4(*EMPTY*)
 		/// </summary>
@@ -1265,7 +1282,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("외화매수정산금액")]
 		public double FcurrBuyAdjstAmt;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["RecCnt"] = new XAQueryFieldInfo("long", RecCnt, RecCnt.ToString("d5"), "레코드갯수", (decimal)5);
@@ -1289,11 +1313,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQCDPCQ04700OutBlock5 FromQuery(XQCDPCQ04700 query)
 		{
 			XQCDPCQ04700OutBlock5 block = new XQCDPCQ04700OutBlock5();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -1302,23 +1326,23 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.RecCnt = query.GetFieldData(block.GetBlockName(), "RecCnt", 0).ParseLong("RecCnt"); // long 5
-				block.MnyinAmt = query.GetFieldData(block.GetBlockName(), "MnyinAmt", 0).ParseLong("MnyinAmt"); // long 16
-				block.SecinAmt = query.GetFieldData(block.GetBlockName(), "SecinAmt", 0).ParseLong("SecinAmt"); // long 16
-				block.MnyoutAmt = query.GetFieldData(block.GetBlockName(), "MnyoutAmt", 0).ParseLong("MnyoutAmt"); // long 16
-				block.SecoutAmt = query.GetFieldData(block.GetBlockName(), "SecoutAmt", 0).ParseLong("SecoutAmt"); // long 16
-				block.DiffAmt = query.GetFieldData(block.GetBlockName(), "DiffAmt", 0).ParseLong("DiffAmt"); // long 16
-				block.DiffAmt0 = query.GetFieldData(block.GetBlockName(), "DiffAmt0", 0).ParseLong("DiffAmt0"); // long 16
-				block.SellQty = query.GetFieldData(block.GetBlockName(), "SellQty", 0).ParseLong("SellQty"); // long 16
-				block.SellAmt = query.GetFieldData(block.GetBlockName(), "SellAmt", 0).ParseLong("SellAmt"); // long 16
-				block.SellCmsn = query.GetFieldData(block.GetBlockName(), "SellCmsn", 0).ParseLong("SellCmsn"); // long 16
-				block.EvrTax = query.GetFieldData(block.GetBlockName(), "EvrTax", 0).ParseLong("EvrTax"); // long 19
-				block.FcurrSellAdjstAmt = query.GetFieldData(block.GetBlockName(), "FcurrSellAdjstAmt", 0).ParseDouble("FcurrSellAdjstAmt"); // double 25.4
-				block.BuyQty = query.GetFieldData(block.GetBlockName(), "BuyQty", 0).ParseLong("BuyQty"); // long 16
-				block.BuyAmt = query.GetFieldData(block.GetBlockName(), "BuyAmt", 0).ParseLong("BuyAmt"); // long 16
-				block.BuyCmsn = query.GetFieldData(block.GetBlockName(), "BuyCmsn", 0).ParseLong("BuyCmsn"); // long 16
-				block.ExecTax = query.GetFieldData(block.GetBlockName(), "ExecTax", 0).ParseLong("ExecTax"); // long 16
-				block.FcurrBuyAdjstAmt = query.GetFieldData(block.GetBlockName(), "FcurrBuyAdjstAmt", 0).ParseDouble("FcurrBuyAdjstAmt"); // double 25.4
+				block.RecCnt = query.GetFieldData(block.BlockName, "RecCnt", 0).ParseLong("RecCnt"); // long 5
+				block.MnyinAmt = query.GetFieldData(block.BlockName, "MnyinAmt", 0).ParseLong("MnyinAmt"); // long 16
+				block.SecinAmt = query.GetFieldData(block.BlockName, "SecinAmt", 0).ParseLong("SecinAmt"); // long 16
+				block.MnyoutAmt = query.GetFieldData(block.BlockName, "MnyoutAmt", 0).ParseLong("MnyoutAmt"); // long 16
+				block.SecoutAmt = query.GetFieldData(block.BlockName, "SecoutAmt", 0).ParseLong("SecoutAmt"); // long 16
+				block.DiffAmt = query.GetFieldData(block.BlockName, "DiffAmt", 0).ParseLong("DiffAmt"); // long 16
+				block.DiffAmt0 = query.GetFieldData(block.BlockName, "DiffAmt0", 0).ParseLong("DiffAmt0"); // long 16
+				block.SellQty = query.GetFieldData(block.BlockName, "SellQty", 0).ParseLong("SellQty"); // long 16
+				block.SellAmt = query.GetFieldData(block.BlockName, "SellAmt", 0).ParseLong("SellAmt"); // long 16
+				block.SellCmsn = query.GetFieldData(block.BlockName, "SellCmsn", 0).ParseLong("SellCmsn"); // long 16
+				block.EvrTax = query.GetFieldData(block.BlockName, "EvrTax", 0).ParseLong("EvrTax"); // long 19
+				block.FcurrSellAdjstAmt = query.GetFieldData(block.BlockName, "FcurrSellAdjstAmt", 0).ParseDouble("FcurrSellAdjstAmt"); // double 25.4
+				block.BuyQty = query.GetFieldData(block.BlockName, "BuyQty", 0).ParseLong("BuyQty"); // long 16
+				block.BuyAmt = query.GetFieldData(block.BlockName, "BuyAmt", 0).ParseLong("BuyAmt"); // long 16
+				block.BuyCmsn = query.GetFieldData(block.BlockName, "BuyCmsn", 0).ParseLong("BuyCmsn"); // long 16
+				block.ExecTax = query.GetFieldData(block.BlockName, "ExecTax", 0).ParseLong("ExecTax"); // long 16
+				block.FcurrBuyAdjstAmt = query.GetFieldData(block.BlockName, "FcurrBuyAdjstAmt", 0).ParseDouble("FcurrBuyAdjstAmt"); // double 25.4
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -1357,43 +1381,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CDPCQ04700
 		/// </summary>
-		static readonly string _typeName = "CDPCQ04700";
+		readonly string _typeName = "CDPCQ04700";
 		/// <summary>
 		/// 계좌 거래내역
 		/// </summary>
-		static readonly string _typeDesc = "계좌 거래내역";
+		readonly string _typeDesc = "계좌 거래내역";
 		/// <summary>
 		/// CDPCQ04700
 		/// </summary>
-		static readonly string _service = "CDPCQ04700";
+		readonly string _service = "CDPCQ04700";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		readonly string _headType = "B";
 		/// <summary>
 		/// 류화숙
 		/// </summary>
-		static readonly string _creator = "류화숙";
+		readonly string _creator = "류화숙";
 		/// <summary>
 		/// 2012/06/14 10:25:09
 		/// </summary>
-		static readonly string _createdDate = "2012/06/14 10:25:09";
+		readonly string _createdDate = "2012/06/14 10:25:09";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		readonly bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		readonly bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		readonly bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		readonly bool _signature = false;
 
 	/// <summary>
 	/// CDPCQ04700
@@ -1446,16 +1470,16 @@ namespace XingAPINet
 				return false; // throw new ApplicationException("Failed to verify: " + block.BlockName);
 			}
 
-			_xaQuery.SetFieldData(block.GetBlockName(), "RecCnt", 0, block.RecCnt.ToString("d5")); // long 5
-			_xaQuery.SetFieldData(block.GetBlockName(), "QryTp", 0, block.QryTp.ToString()); // char 1
-			_xaQuery.SetFieldData(block.GetBlockName(), "AcntNo", 0, block.AcntNo); // char 20
-			_xaQuery.SetFieldData(block.GetBlockName(), "Pwd", 0, block.Pwd); // char 8
-			_xaQuery.SetFieldData(block.GetBlockName(), "QrySrtDt", 0, block.QrySrtDt); // char 8
-			_xaQuery.SetFieldData(block.GetBlockName(), "QryEndDt", 0, block.QryEndDt); // char 8
-			_xaQuery.SetFieldData(block.GetBlockName(), "SrtNo", 0, block.SrtNo.ToString("d10")); // long 10
-			_xaQuery.SetFieldData(block.GetBlockName(), "PdptnCode", 0, block.PdptnCode); // char 2
-			_xaQuery.SetFieldData(block.GetBlockName(), "IsuLgclssCode", 0, block.IsuLgclssCode); // char 2
-			_xaQuery.SetFieldData(block.GetBlockName(), "IsuNo", 0, block.IsuNo); // char 12
+			_xaQuery.SetFieldData(block.BlockName, "RecCnt", 0, block.RecCnt.ToString("d5")); // long 5
+			_xaQuery.SetFieldData(block.BlockName, "QryTp", 0, block.QryTp.ToString()); // char 1
+			_xaQuery.SetFieldData(block.BlockName, "AcntNo", 0, block.AcntNo); // char 20
+			_xaQuery.SetFieldData(block.BlockName, "Pwd", 0, block.Pwd); // char 8
+			_xaQuery.SetFieldData(block.BlockName, "QrySrtDt", 0, block.QrySrtDt); // char 8
+			_xaQuery.SetFieldData(block.BlockName, "QryEndDt", 0, block.QryEndDt); // char 8
+			_xaQuery.SetFieldData(block.BlockName, "SrtNo", 0, block.SrtNo.ToString("d10")); // long 10
+			_xaQuery.SetFieldData(block.BlockName, "PdptnCode", 0, block.PdptnCode); // char 2
+			_xaQuery.SetFieldData(block.BlockName, "IsuLgclssCode", 0, block.IsuLgclssCode); // char 2
+			_xaQuery.SetFieldData(block.BlockName, "IsuNo", 0, block.IsuNo); // char 12
 
 			return true;
 		}
@@ -1498,28 +1522,25 @@ namespace XingAPINet
 
 	}
 
-	public partial class XQChartExcelInBlock : XingBlock
+	public partial class XQChartExcelInBlock
 	{
 		/// <summary>
 		/// ChartExcelInBlock
 		/// </summary>
-		static readonly string _blockName = "ChartExcelInBlock";
+		readonly string _blockName = "ChartExcelInBlock";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		readonly string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		readonly string _blockType = "input";
+
 		/// <summary>
 		/// ChartExcelInBlock
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// ChartExcelInBlock
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
@@ -1580,7 +1601,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("실시간 데이터수신 자동등록 여부")]
 		public char IsReal;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["indexid"] = new XAQueryFieldInfo("long", indexid, indexid.ToString("d10"), "지표ID", (decimal)10);
@@ -1614,28 +1642,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQChartExcelOutBlock : XingBlock
+	public partial class XQChartExcelOutBlock
 	{
 		/// <summary>
 		/// ChartExcelOutBlock
 		/// </summary>
-		static readonly string _blockName = "ChartExcelOutBlock";
+		readonly string _blockName = "ChartExcelOutBlock";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		readonly string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// ChartExcelOutBlock
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// ChartExcelOutBlock
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
@@ -1661,7 +1686,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("유효 데이터 컬럼 갯수")]
 		public long validdata_cnt;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["indexid"] = new XAQueryFieldInfo("long", indexid, indexid.ToString("d10"), "지표ID", (decimal)10);
@@ -1671,11 +1703,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQChartExcelOutBlock FromQuery(XQCHARTEXCEL query)
 		{
 			XQChartExcelOutBlock block = new XQChartExcelOutBlock();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -1684,9 +1716,9 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.indexid = query.GetFieldData(block.GetBlockName(), "indexid", 0).ParseLong("indexid"); // long 10
-				block.rec_cnt = query.GetFieldData(block.GetBlockName(), "rec_cnt", 0).ParseLong("rec_cnt"); // long 5
-				block.validdata_cnt = query.GetFieldData(block.GetBlockName(), "validdata_cnt", 0).ParseLong("validdata_cnt"); // long 2
+				block.indexid = query.GetFieldData(block.BlockName, "indexid", 0).ParseLong("indexid"); // long 10
+				block.rec_cnt = query.GetFieldData(block.BlockName, "rec_cnt", 0).ParseLong("rec_cnt"); // long 5
+				block.validdata_cnt = query.GetFieldData(block.BlockName, "validdata_cnt", 0).ParseLong("validdata_cnt"); // long 2
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -1706,28 +1738,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQChartExcelOutBlock1 : XingBlock
+	public partial class XQChartExcelOutBlock1
 	{
 		/// <summary>
 		/// ChartExcelOutBlock1
 		/// </summary>
-		static readonly string _blockName = "ChartExcelOutBlock1";
+		readonly string _blockName = "ChartExcelOutBlock1";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		readonly string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// ChartExcelOutBlock1
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// ChartExcelOutBlock1
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
@@ -1803,7 +1832,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("위치")]
 		public long pos;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["date"] = new XAQueryFieldInfo("char", date, date, "일자", (decimal)8);
@@ -1823,11 +1859,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQChartExcelOutBlock1 FromQuery(XQCHARTEXCEL query)
 		{
 			XQChartExcelOutBlock1 block = new XQChartExcelOutBlock1();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -1836,19 +1872,19 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.date = query.GetFieldData(block.GetBlockName(), "date", 0); // char 8
-				block.time = query.GetFieldData(block.GetBlockName(), "time", 0); // char 6
-				block.open = query.GetFieldData(block.GetBlockName(), "open", 0).ParseFloat("open"); // float 10
-				block.high = query.GetFieldData(block.GetBlockName(), "high", 0).ParseFloat("high"); // float 10
-				block.low = query.GetFieldData(block.GetBlockName(), "low", 0).ParseFloat("low"); // float 10
-				block.close = query.GetFieldData(block.GetBlockName(), "close", 0).ParseFloat("close"); // float 10
-				block.volume = query.GetFieldData(block.GetBlockName(), "volume", 0).ParseFloat("volume"); // float 12
-				block.value1 = query.GetFieldData(block.GetBlockName(), "value1", 0).ParseFloat("value1"); // float 10
-				block.value2 = query.GetFieldData(block.GetBlockName(), "value2", 0).ParseFloat("value2"); // float 10
-				block.value3 = query.GetFieldData(block.GetBlockName(), "value3", 0).ParseFloat("value3"); // float 10
-				block.value4 = query.GetFieldData(block.GetBlockName(), "value4", 0).ParseFloat("value4"); // float 10
-				block.value5 = query.GetFieldData(block.GetBlockName(), "value5", 0).ParseFloat("value5"); // float 10
-				block.pos = query.GetFieldData(block.GetBlockName(), "pos", 0).ParseLong("pos"); // long 8
+				block.date = query.GetFieldData(block.BlockName, "date", 0); // char 8
+				block.time = query.GetFieldData(block.BlockName, "time", 0); // char 6
+				block.open = query.GetFieldData(block.BlockName, "open", 0).ParseFloat("open"); // float 10
+				block.high = query.GetFieldData(block.BlockName, "high", 0).ParseFloat("high"); // float 10
+				block.low = query.GetFieldData(block.BlockName, "low", 0).ParseFloat("low"); // float 10
+				block.close = query.GetFieldData(block.BlockName, "close", 0).ParseFloat("close"); // float 10
+				block.volume = query.GetFieldData(block.BlockName, "volume", 0).ParseFloat("volume"); // float 12
+				block.value1 = query.GetFieldData(block.BlockName, "value1", 0).ParseFloat("value1"); // float 10
+				block.value2 = query.GetFieldData(block.BlockName, "value2", 0).ParseFloat("value2"); // float 10
+				block.value3 = query.GetFieldData(block.BlockName, "value3", 0).ParseFloat("value3"); // float 10
+				block.value4 = query.GetFieldData(block.BlockName, "value4", 0).ParseFloat("value4"); // float 10
+				block.value5 = query.GetFieldData(block.BlockName, "value5", 0).ParseFloat("value5"); // float 10
+				block.pos = query.GetFieldData(block.BlockName, "pos", 0).ParseLong("pos"); // long 8
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -1883,43 +1919,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CHARTEXCEL
 		/// </summary>
-		static readonly string _typeName = "CHARTEXCEL";
+		readonly string _typeName = "CHARTEXCEL";
 		/// <summary>
 		/// 챠트엑셀데이터조회
 		/// </summary>
-		static readonly string _typeDesc = "챠트엑셀데이터조회";
+		readonly string _typeDesc = "챠트엑셀데이터조회";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		readonly string _service = "";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		readonly string _headType = "B";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		readonly string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		readonly string _createdDate = "";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		readonly bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		readonly bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		readonly bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		readonly bool _signature = false;
 
 	/// <summary>
 	/// CHARTEXCEL
@@ -1972,16 +2008,16 @@ namespace XingAPINet
 				return false; // throw new ApplicationException("Failed to verify: " + block.BlockName);
 			}
 
-			_xaQuery.SetFieldData(block.GetBlockName(), "indexid", 0, block.indexid.ToString("d10")); // long 10
-			_xaQuery.SetFieldData(block.GetBlockName(), "indexname", 0, block.indexname); // char 40
-			_xaQuery.SetFieldData(block.GetBlockName(), "indexparam", 0, block.indexparam); // char 40
-			_xaQuery.SetFieldData(block.GetBlockName(), "indexouttype", 0, block.indexouttype.ToString()); // char 1
-			_xaQuery.SetFieldData(block.GetBlockName(), "market", 0, block.market.ToString()); // char 1
-			_xaQuery.SetFieldData(block.GetBlockName(), "period", 0, block.period.ToString()); // char 1
-			_xaQuery.SetFieldData(block.GetBlockName(), "shcode", 0, block.shcode); // char 8
-			_xaQuery.SetFieldData(block.GetBlockName(), "isexcelout", 0, block.isexcelout.ToString()); // char 1
-			_xaQuery.SetFieldData(block.GetBlockName(), "excelfilename", 0, block.excelfilename); // char 256
-			_xaQuery.SetFieldData(block.GetBlockName(), "IsReal", 0, block.IsReal.ToString()); // char 1
+			_xaQuery.SetFieldData(block.BlockName, "indexid", 0, block.indexid.ToString("d10")); // long 10
+			_xaQuery.SetFieldData(block.BlockName, "indexname", 0, block.indexname); // char 40
+			_xaQuery.SetFieldData(block.BlockName, "indexparam", 0, block.indexparam); // char 40
+			_xaQuery.SetFieldData(block.BlockName, "indexouttype", 0, block.indexouttype.ToString()); // char 1
+			_xaQuery.SetFieldData(block.BlockName, "market", 0, block.market.ToString()); // char 1
+			_xaQuery.SetFieldData(block.BlockName, "period", 0, block.period.ToString()); // char 1
+			_xaQuery.SetFieldData(block.BlockName, "shcode", 0, block.shcode); // char 8
+			_xaQuery.SetFieldData(block.BlockName, "isexcelout", 0, block.isexcelout.ToString()); // char 1
+			_xaQuery.SetFieldData(block.BlockName, "excelfilename", 0, block.excelfilename); // char 256
+			_xaQuery.SetFieldData(block.BlockName, "IsReal", 0, block.IsReal.ToString()); // char 1
 
 			return true;
 		}
@@ -2003,28 +2039,25 @@ namespace XingAPINet
 
 	}
 
-	public partial class XQCSPAT00600InBlock1 : XingBlock
+	public partial class XQCSPAT00600InBlock1
 	{
 		/// <summary>
 		/// CSPAT00600InBlock1
 		/// </summary>
-		static readonly string _blockName = "CSPAT00600InBlock1";
+		readonly string _blockName = "CSPAT00600InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		readonly string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		readonly string _blockType = "input";
+
 		/// <summary>
 		/// CSPAT00600InBlock1
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CSPAT00600InBlock1
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
@@ -2085,7 +2118,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("주문조건구분")]
 		public char OrdCndiTpCode;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["AcntNo"] = new XAQueryFieldInfo("char", AcntNo, AcntNo, "계좌번호", (decimal)20);
@@ -2119,28 +2159,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQCSPAT00600OutBlock1 : XingBlock
+	public partial class XQCSPAT00600OutBlock1
 	{
 		/// <summary>
 		/// CSPAT00600OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CSPAT00600OutBlock1";
+		readonly string _blockName = "CSPAT00600OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		readonly string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// CSPAT00600OutBlock1
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CSPAT00600OutBlock1
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
@@ -2281,7 +2318,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("반대매매구분")]
 		public char CvrgTpCode;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["RecCnt"] = new XAQueryFieldInfo("long", RecCnt, RecCnt.ToString("d5"), "레코드갯수", (decimal)5);
@@ -2314,11 +2358,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQCSPAT00600OutBlock1 FromQuery(XQCSPAT00600 query)
 		{
 			XQCSPAT00600OutBlock1 block = new XQCSPAT00600OutBlock1();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -2327,32 +2371,32 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.RecCnt = query.GetFieldData(block.GetBlockName(), "RecCnt", 0).ParseLong("RecCnt"); // long 5
-				block.AcntNo = query.GetFieldData(block.GetBlockName(), "AcntNo", 0); // char 20
-				block.InptPwd = query.GetFieldData(block.GetBlockName(), "InptPwd", 0); // char 8
-				block.IsuNo = query.GetFieldData(block.GetBlockName(), "IsuNo", 0); // char 12
-				block.OrdQty = query.GetFieldData(block.GetBlockName(), "OrdQty", 0).ParseLong("OrdQty"); // long 16
-				block.OrdPrc = query.GetFieldData(block.GetBlockName(), "OrdPrc", 0).ParseDouble("OrdPrc"); // double 13.2
-				block.BnsTpCode = query.GetFieldData(block.GetBlockName(), "BnsTpCode", 0).First(); // char 1
-				block.OrdprcPtnCode = query.GetFieldData(block.GetBlockName(), "OrdprcPtnCode", 0); // char 2
-				block.PrgmOrdprcPtnCode = query.GetFieldData(block.GetBlockName(), "PrgmOrdprcPtnCode", 0); // char 2
-				block.StslAbleYn = query.GetFieldData(block.GetBlockName(), "StslAbleYn", 0).First(); // char 1
-				block.StslOrdprcTpCode = query.GetFieldData(block.GetBlockName(), "StslOrdprcTpCode", 0).First(); // char 1
-				block.CommdaCode = query.GetFieldData(block.GetBlockName(), "CommdaCode", 0); // char 2
-				block.MgntrnCode = query.GetFieldData(block.GetBlockName(), "MgntrnCode", 0); // char 3
-				block.LoanDt = query.GetFieldData(block.GetBlockName(), "LoanDt", 0); // char 8
-				block.MbrNo = query.GetFieldData(block.GetBlockName(), "MbrNo", 0); // char 3
-				block.OrdCndiTpCode = query.GetFieldData(block.GetBlockName(), "OrdCndiTpCode", 0).First(); // char 1
-				block.StrtgCode = query.GetFieldData(block.GetBlockName(), "StrtgCode", 0); // char 6
-				block.GrpId = query.GetFieldData(block.GetBlockName(), "GrpId", 0); // char 20
-				block.OrdSeqNo = query.GetFieldData(block.GetBlockName(), "OrdSeqNo", 0).ParseLong("OrdSeqNo"); // long 10
-				block.PtflNo = query.GetFieldData(block.GetBlockName(), "PtflNo", 0).ParseLong("PtflNo"); // long 10
-				block.BskNo = query.GetFieldData(block.GetBlockName(), "BskNo", 0).ParseLong("BskNo"); // long 10
-				block.TrchNo = query.GetFieldData(block.GetBlockName(), "TrchNo", 0).ParseLong("TrchNo"); // long 10
-				block.ItemNo = query.GetFieldData(block.GetBlockName(), "ItemNo", 0).ParseLong("ItemNo"); // long 10
-				block.OpDrtnNo = query.GetFieldData(block.GetBlockName(), "OpDrtnNo", 0); // char 12
-				block.LpYn = query.GetFieldData(block.GetBlockName(), "LpYn", 0).First(); // char 1
-				block.CvrgTpCode = query.GetFieldData(block.GetBlockName(), "CvrgTpCode", 0).First(); // char 1
+				block.RecCnt = query.GetFieldData(block.BlockName, "RecCnt", 0).ParseLong("RecCnt"); // long 5
+				block.AcntNo = query.GetFieldData(block.BlockName, "AcntNo", 0); // char 20
+				block.InptPwd = query.GetFieldData(block.BlockName, "InptPwd", 0); // char 8
+				block.IsuNo = query.GetFieldData(block.BlockName, "IsuNo", 0); // char 12
+				block.OrdQty = query.GetFieldData(block.BlockName, "OrdQty", 0).ParseLong("OrdQty"); // long 16
+				block.OrdPrc = query.GetFieldData(block.BlockName, "OrdPrc", 0).ParseDouble("OrdPrc"); // double 13.2
+				block.BnsTpCode = query.GetFieldData(block.BlockName, "BnsTpCode", 0).First(); // char 1
+				block.OrdprcPtnCode = query.GetFieldData(block.BlockName, "OrdprcPtnCode", 0); // char 2
+				block.PrgmOrdprcPtnCode = query.GetFieldData(block.BlockName, "PrgmOrdprcPtnCode", 0); // char 2
+				block.StslAbleYn = query.GetFieldData(block.BlockName, "StslAbleYn", 0).First(); // char 1
+				block.StslOrdprcTpCode = query.GetFieldData(block.BlockName, "StslOrdprcTpCode", 0).First(); // char 1
+				block.CommdaCode = query.GetFieldData(block.BlockName, "CommdaCode", 0); // char 2
+				block.MgntrnCode = query.GetFieldData(block.BlockName, "MgntrnCode", 0); // char 3
+				block.LoanDt = query.GetFieldData(block.BlockName, "LoanDt", 0); // char 8
+				block.MbrNo = query.GetFieldData(block.BlockName, "MbrNo", 0); // char 3
+				block.OrdCndiTpCode = query.GetFieldData(block.BlockName, "OrdCndiTpCode", 0).First(); // char 1
+				block.StrtgCode = query.GetFieldData(block.BlockName, "StrtgCode", 0); // char 6
+				block.GrpId = query.GetFieldData(block.BlockName, "GrpId", 0); // char 20
+				block.OrdSeqNo = query.GetFieldData(block.BlockName, "OrdSeqNo", 0).ParseLong("OrdSeqNo"); // long 10
+				block.PtflNo = query.GetFieldData(block.BlockName, "PtflNo", 0).ParseLong("PtflNo"); // long 10
+				block.BskNo = query.GetFieldData(block.BlockName, "BskNo", 0).ParseLong("BskNo"); // long 10
+				block.TrchNo = query.GetFieldData(block.BlockName, "TrchNo", 0).ParseLong("TrchNo"); // long 10
+				block.ItemNo = query.GetFieldData(block.BlockName, "ItemNo", 0).ParseLong("ItemNo"); // long 10
+				block.OpDrtnNo = query.GetFieldData(block.BlockName, "OpDrtnNo", 0); // char 12
+				block.LpYn = query.GetFieldData(block.BlockName, "LpYn", 0).First(); // char 1
+				block.CvrgTpCode = query.GetFieldData(block.BlockName, "CvrgTpCode", 0).First(); // char 1
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -2395,28 +2439,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQCSPAT00600OutBlock2 : XingBlock
+	public partial class XQCSPAT00600OutBlock2
 	{
 		/// <summary>
 		/// CSPAT00600OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CSPAT00600OutBlock2";
+		readonly string _blockName = "CSPAT00600OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		readonly string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// CSPAT00600OutBlock2
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CSPAT00600OutBlock2
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
@@ -2517,7 +2558,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("종목명")]
 		public string IsuNm;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["RecCnt"] = new XAQueryFieldInfo("long", RecCnt, RecCnt.ToString("d5"), "레코드갯수", (decimal)5);
@@ -2542,11 +2590,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQCSPAT00600OutBlock2 FromQuery(XQCSPAT00600 query)
 		{
 			XQCSPAT00600OutBlock2 block = new XQCSPAT00600OutBlock2();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -2555,24 +2603,24 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.RecCnt = query.GetFieldData(block.GetBlockName(), "RecCnt", 0).ParseLong("RecCnt"); // long 5
-				block.OrdNo = query.GetFieldData(block.GetBlockName(), "OrdNo", 0).ParseLong("OrdNo"); // long 10
-				block.OrdTime = query.GetFieldData(block.GetBlockName(), "OrdTime", 0); // char 9
-				block.OrdMktCode = query.GetFieldData(block.GetBlockName(), "OrdMktCode", 0); // char 2
-				block.OrdPtnCode = query.GetFieldData(block.GetBlockName(), "OrdPtnCode", 0); // char 2
-				block.ShtnIsuNo = query.GetFieldData(block.GetBlockName(), "ShtnIsuNo", 0); // char 9
-				block.MgempNo = query.GetFieldData(block.GetBlockName(), "MgempNo", 0); // char 9
-				block.OrdAmt = query.GetFieldData(block.GetBlockName(), "OrdAmt", 0).ParseLong("OrdAmt"); // long 16
-				block.SpareOrdNo = query.GetFieldData(block.GetBlockName(), "SpareOrdNo", 0).ParseLong("SpareOrdNo"); // long 10
-				block.CvrgSeqno = query.GetFieldData(block.GetBlockName(), "CvrgSeqno", 0).ParseLong("CvrgSeqno"); // long 10
-				block.RsvOrdNo = query.GetFieldData(block.GetBlockName(), "RsvOrdNo", 0).ParseLong("RsvOrdNo"); // long 10
-				block.SpotOrdQty = query.GetFieldData(block.GetBlockName(), "SpotOrdQty", 0).ParseLong("SpotOrdQty"); // long 16
-				block.RuseOrdQty = query.GetFieldData(block.GetBlockName(), "RuseOrdQty", 0).ParseLong("RuseOrdQty"); // long 16
-				block.MnyOrdAmt = query.GetFieldData(block.GetBlockName(), "MnyOrdAmt", 0).ParseLong("MnyOrdAmt"); // long 16
-				block.SubstOrdAmt = query.GetFieldData(block.GetBlockName(), "SubstOrdAmt", 0).ParseLong("SubstOrdAmt"); // long 16
-				block.RuseOrdAmt = query.GetFieldData(block.GetBlockName(), "RuseOrdAmt", 0).ParseLong("RuseOrdAmt"); // long 16
-				block.AcntNm = query.GetFieldData(block.GetBlockName(), "AcntNm", 0); // char 40
-				block.IsuNm = query.GetFieldData(block.GetBlockName(), "IsuNm", 0); // char 40
+				block.RecCnt = query.GetFieldData(block.BlockName, "RecCnt", 0).ParseLong("RecCnt"); // long 5
+				block.OrdNo = query.GetFieldData(block.BlockName, "OrdNo", 0).ParseLong("OrdNo"); // long 10
+				block.OrdTime = query.GetFieldData(block.BlockName, "OrdTime", 0); // char 9
+				block.OrdMktCode = query.GetFieldData(block.BlockName, "OrdMktCode", 0); // char 2
+				block.OrdPtnCode = query.GetFieldData(block.BlockName, "OrdPtnCode", 0); // char 2
+				block.ShtnIsuNo = query.GetFieldData(block.BlockName, "ShtnIsuNo", 0); // char 9
+				block.MgempNo = query.GetFieldData(block.BlockName, "MgempNo", 0); // char 9
+				block.OrdAmt = query.GetFieldData(block.BlockName, "OrdAmt", 0).ParseLong("OrdAmt"); // long 16
+				block.SpareOrdNo = query.GetFieldData(block.BlockName, "SpareOrdNo", 0).ParseLong("SpareOrdNo"); // long 10
+				block.CvrgSeqno = query.GetFieldData(block.BlockName, "CvrgSeqno", 0).ParseLong("CvrgSeqno"); // long 10
+				block.RsvOrdNo = query.GetFieldData(block.BlockName, "RsvOrdNo", 0).ParseLong("RsvOrdNo"); // long 10
+				block.SpotOrdQty = query.GetFieldData(block.BlockName, "SpotOrdQty", 0).ParseLong("SpotOrdQty"); // long 16
+				block.RuseOrdQty = query.GetFieldData(block.BlockName, "RuseOrdQty", 0).ParseLong("RuseOrdQty"); // long 16
+				block.MnyOrdAmt = query.GetFieldData(block.BlockName, "MnyOrdAmt", 0).ParseLong("MnyOrdAmt"); // long 16
+				block.SubstOrdAmt = query.GetFieldData(block.BlockName, "SubstOrdAmt", 0).ParseLong("SubstOrdAmt"); // long 16
+				block.RuseOrdAmt = query.GetFieldData(block.BlockName, "RuseOrdAmt", 0).ParseLong("RuseOrdAmt"); // long 16
+				block.AcntNm = query.GetFieldData(block.BlockName, "AcntNm", 0); // char 40
+				block.IsuNm = query.GetFieldData(block.BlockName, "IsuNm", 0); // char 40
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -2612,43 +2660,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPAT00600
 		/// </summary>
-		static readonly string _typeName = "CSPAT00600";
+		readonly string _typeName = "CSPAT00600";
 		/// <summary>
 		/// 현물주문
 		/// </summary>
-		static readonly string _typeDesc = "현물주문";
+		readonly string _typeDesc = "현물주문";
 		/// <summary>
 		/// CSPAT00600
 		/// </summary>
-		static readonly string _service = "CSPAT00600";
+		readonly string _service = "CSPAT00600";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		readonly string _headType = "B";
 		/// <summary>
 		/// 김기종
 		/// </summary>
-		static readonly string _creator = "김기종";
+		readonly string _creator = "김기종";
 		/// <summary>
 		/// 2011/12/07 09:23:39
 		/// </summary>
-		static readonly string _createdDate = "2011/12/07 09:23:39";
+		readonly string _createdDate = "2011/12/07 09:23:39";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		readonly bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		readonly bool _block = false;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _encrypt = true;
+		readonly bool _encrypt = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _signature = true;
+		readonly bool _signature = true;
 
 	/// <summary>
 	/// CSPAT00600
@@ -2701,16 +2749,16 @@ namespace XingAPINet
 				return false; // throw new ApplicationException("Failed to verify: " + block.BlockName);
 			}
 
-			_xaQuery.SetFieldData(block.GetBlockName(), "AcntNo", 0, block.AcntNo); // char 20
-			_xaQuery.SetFieldData(block.GetBlockName(), "InptPwd", 0, block.InptPwd); // char 8
-			_xaQuery.SetFieldData(block.GetBlockName(), "IsuNo", 0, block.IsuNo); // char 12
-			_xaQuery.SetFieldData(block.GetBlockName(), "OrdQty", 0, block.OrdQty.ToString("d16")); // long 16
-			_xaQuery.SetFieldData(block.GetBlockName(), "OrdPrc", 0, block.OrdPrc.ToString("0000000000000.00")); // double 13.2
-			_xaQuery.SetFieldData(block.GetBlockName(), "BnsTpCode", 0, block.BnsTpCode.ToString()); // char 1
-			_xaQuery.SetFieldData(block.GetBlockName(), "OrdprcPtnCode", 0, block.OrdprcPtnCode); // char 2
-			_xaQuery.SetFieldData(block.GetBlockName(), "MgntrnCode", 0, block.MgntrnCode); // char 3
-			_xaQuery.SetFieldData(block.GetBlockName(), "LoanDt", 0, block.LoanDt); // char 8
-			_xaQuery.SetFieldData(block.GetBlockName(), "OrdCndiTpCode", 0, block.OrdCndiTpCode.ToString()); // char 1
+			_xaQuery.SetFieldData(block.BlockName, "AcntNo", 0, block.AcntNo); // char 20
+			_xaQuery.SetFieldData(block.BlockName, "InptPwd", 0, block.InptPwd); // char 8
+			_xaQuery.SetFieldData(block.BlockName, "IsuNo", 0, block.IsuNo); // char 12
+			_xaQuery.SetFieldData(block.BlockName, "OrdQty", 0, block.OrdQty.ToString("d16")); // long 16
+			_xaQuery.SetFieldData(block.BlockName, "OrdPrc", 0, block.OrdPrc.ToString("0000000000000.00")); // double 13.2
+			_xaQuery.SetFieldData(block.BlockName, "BnsTpCode", 0, block.BnsTpCode.ToString()); // char 1
+			_xaQuery.SetFieldData(block.BlockName, "OrdprcPtnCode", 0, block.OrdprcPtnCode); // char 2
+			_xaQuery.SetFieldData(block.BlockName, "MgntrnCode", 0, block.MgntrnCode); // char 3
+			_xaQuery.SetFieldData(block.BlockName, "LoanDt", 0, block.LoanDt); // char 8
+			_xaQuery.SetFieldData(block.BlockName, "OrdCndiTpCode", 0, block.OrdCndiTpCode.ToString()); // char 1
 
 			return true;
 		}
@@ -2732,28 +2780,25 @@ namespace XingAPINet
 
 	}
 
-	public partial class XQCSPAT00700InBlock1 : XingBlock
+	public partial class XQCSPAT00700InBlock1
 	{
 		/// <summary>
 		/// CSPAT00700InBlock1
 		/// </summary>
-		static readonly string _blockName = "CSPAT00700InBlock1";
+		readonly string _blockName = "CSPAT00700InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		readonly string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		readonly string _blockType = "input";
+
 		/// <summary>
 		/// CSPAT00700InBlock1
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CSPAT00700InBlock1
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
@@ -2804,7 +2849,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("주문가")]
 		public double OrdPrc;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["OrgOrdNo"] = new XAQueryFieldInfo("long", OrgOrdNo, OrgOrdNo.ToString("d10"), "원주문번호", (decimal)10);
@@ -2834,28 +2886,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQCSPAT00700OutBlock1 : XingBlock
+	public partial class XQCSPAT00700OutBlock1
 	{
 		/// <summary>
 		/// CSPAT00700OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CSPAT00700OutBlock1";
+		readonly string _blockName = "CSPAT00700OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		readonly string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// CSPAT00700OutBlock1
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CSPAT00700OutBlock1
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
@@ -2951,7 +3000,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("아이템번호")]
 		public long ItemNo;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["RecCnt"] = new XAQueryFieldInfo("long", RecCnt, RecCnt.ToString("d5"), "레코드갯수", (decimal)5);
@@ -2975,11 +3031,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQCSPAT00700OutBlock1 FromQuery(XQCSPAT00700 query)
 		{
 			XQCSPAT00700OutBlock1 block = new XQCSPAT00700OutBlock1();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -2988,23 +3044,23 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.RecCnt = query.GetFieldData(block.GetBlockName(), "RecCnt", 0).ParseLong("RecCnt"); // long 5
-				block.OrgOrdNo = query.GetFieldData(block.GetBlockName(), "OrgOrdNo", 0).ParseLong("OrgOrdNo"); // long 10
-				block.AcntNo = query.GetFieldData(block.GetBlockName(), "AcntNo", 0); // char 20
-				block.InptPwd = query.GetFieldData(block.GetBlockName(), "InptPwd", 0); // char 8
-				block.IsuNo = query.GetFieldData(block.GetBlockName(), "IsuNo", 0); // char 12
-				block.OrdQty = query.GetFieldData(block.GetBlockName(), "OrdQty", 0).ParseLong("OrdQty"); // long 16
-				block.OrdprcPtnCode = query.GetFieldData(block.GetBlockName(), "OrdprcPtnCode", 0); // char 2
-				block.OrdCndiTpCode = query.GetFieldData(block.GetBlockName(), "OrdCndiTpCode", 0).First(); // char 1
-				block.OrdPrc = query.GetFieldData(block.GetBlockName(), "OrdPrc", 0).ParseDouble("OrdPrc"); // double 13.2
-				block.CommdaCode = query.GetFieldData(block.GetBlockName(), "CommdaCode", 0); // char 2
-				block.StrtgCode = query.GetFieldData(block.GetBlockName(), "StrtgCode", 0); // char 6
-				block.GrpId = query.GetFieldData(block.GetBlockName(), "GrpId", 0); // char 20
-				block.OrdSeqNo = query.GetFieldData(block.GetBlockName(), "OrdSeqNo", 0).ParseLong("OrdSeqNo"); // long 10
-				block.PtflNo = query.GetFieldData(block.GetBlockName(), "PtflNo", 0).ParseLong("PtflNo"); // long 10
-				block.BskNo = query.GetFieldData(block.GetBlockName(), "BskNo", 0).ParseLong("BskNo"); // long 10
-				block.TrchNo = query.GetFieldData(block.GetBlockName(), "TrchNo", 0).ParseLong("TrchNo"); // long 10
-				block.ItemNo = query.GetFieldData(block.GetBlockName(), "ItemNo", 0).ParseLong("ItemNo"); // long 10
+				block.RecCnt = query.GetFieldData(block.BlockName, "RecCnt", 0).ParseLong("RecCnt"); // long 5
+				block.OrgOrdNo = query.GetFieldData(block.BlockName, "OrgOrdNo", 0).ParseLong("OrgOrdNo"); // long 10
+				block.AcntNo = query.GetFieldData(block.BlockName, "AcntNo", 0); // char 20
+				block.InptPwd = query.GetFieldData(block.BlockName, "InptPwd", 0); // char 8
+				block.IsuNo = query.GetFieldData(block.BlockName, "IsuNo", 0); // char 12
+				block.OrdQty = query.GetFieldData(block.BlockName, "OrdQty", 0).ParseLong("OrdQty"); // long 16
+				block.OrdprcPtnCode = query.GetFieldData(block.BlockName, "OrdprcPtnCode", 0); // char 2
+				block.OrdCndiTpCode = query.GetFieldData(block.BlockName, "OrdCndiTpCode", 0).First(); // char 1
+				block.OrdPrc = query.GetFieldData(block.BlockName, "OrdPrc", 0).ParseDouble("OrdPrc"); // double 13.2
+				block.CommdaCode = query.GetFieldData(block.BlockName, "CommdaCode", 0); // char 2
+				block.StrtgCode = query.GetFieldData(block.BlockName, "StrtgCode", 0); // char 6
+				block.GrpId = query.GetFieldData(block.BlockName, "GrpId", 0); // char 20
+				block.OrdSeqNo = query.GetFieldData(block.BlockName, "OrdSeqNo", 0).ParseLong("OrdSeqNo"); // long 10
+				block.PtflNo = query.GetFieldData(block.BlockName, "PtflNo", 0).ParseLong("PtflNo"); // long 10
+				block.BskNo = query.GetFieldData(block.BlockName, "BskNo", 0).ParseLong("BskNo"); // long 10
+				block.TrchNo = query.GetFieldData(block.BlockName, "TrchNo", 0).ParseLong("TrchNo"); // long 10
+				block.ItemNo = query.GetFieldData(block.BlockName, "ItemNo", 0).ParseLong("ItemNo"); // long 10
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -3038,28 +3094,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQCSPAT00700OutBlock2 : XingBlock
+	public partial class XQCSPAT00700OutBlock2
 	{
 		/// <summary>
 		/// CSPAT00700OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CSPAT00700OutBlock2";
+		readonly string _blockName = "CSPAT00700OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		readonly string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// CSPAT00700OutBlock2
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// CSPAT00700OutBlock2
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
@@ -3195,7 +3248,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("종목명")]
 		public string IsuNm;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["RecCnt"] = new XAQueryFieldInfo("long", RecCnt, RecCnt.ToString("d5"), "레코드갯수", (decimal)5);
@@ -3227,11 +3287,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQCSPAT00700OutBlock2 FromQuery(XQCSPAT00700 query)
 		{
 			XQCSPAT00700OutBlock2 block = new XQCSPAT00700OutBlock2();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -3240,31 +3300,31 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.RecCnt = query.GetFieldData(block.GetBlockName(), "RecCnt", 0).ParseLong("RecCnt"); // long 5
-				block.OrdNo = query.GetFieldData(block.GetBlockName(), "OrdNo", 0).ParseLong("OrdNo"); // long 10
-				block.PrntOrdNo = query.GetFieldData(block.GetBlockName(), "PrntOrdNo", 0).ParseLong("PrntOrdNo"); // long 10
-				block.OrdTime = query.GetFieldData(block.GetBlockName(), "OrdTime", 0); // char 9
-				block.OrdMktCode = query.GetFieldData(block.GetBlockName(), "OrdMktCode", 0); // char 2
-				block.OrdPtnCode = query.GetFieldData(block.GetBlockName(), "OrdPtnCode", 0); // char 2
-				block.ShtnIsuNo = query.GetFieldData(block.GetBlockName(), "ShtnIsuNo", 0); // char 9
-				block.PrgmOrdprcPtnCode = query.GetFieldData(block.GetBlockName(), "PrgmOrdprcPtnCode", 0); // char 2
-				block.StslOrdprcTpCode = query.GetFieldData(block.GetBlockName(), "StslOrdprcTpCode", 0).First(); // char 1
-				block.StslAbleYn = query.GetFieldData(block.GetBlockName(), "StslAbleYn", 0).First(); // char 1
-				block.MgntrnCode = query.GetFieldData(block.GetBlockName(), "MgntrnCode", 0); // char 3
-				block.LoanDt = query.GetFieldData(block.GetBlockName(), "LoanDt", 0); // char 8
-				block.CvrgOrdTp = query.GetFieldData(block.GetBlockName(), "CvrgOrdTp", 0).First(); // char 1
-				block.LpYn = query.GetFieldData(block.GetBlockName(), "LpYn", 0).First(); // char 1
-				block.MgempNo = query.GetFieldData(block.GetBlockName(), "MgempNo", 0); // char 9
-				block.OrdAmt = query.GetFieldData(block.GetBlockName(), "OrdAmt", 0).ParseLong("OrdAmt"); // long 16
-				block.BnsTpCode = query.GetFieldData(block.GetBlockName(), "BnsTpCode", 0).First(); // char 1
-				block.SpareOrdNo = query.GetFieldData(block.GetBlockName(), "SpareOrdNo", 0).ParseLong("SpareOrdNo"); // long 10
-				block.CvrgSeqno = query.GetFieldData(block.GetBlockName(), "CvrgSeqno", 0).ParseLong("CvrgSeqno"); // long 10
-				block.RsvOrdNo = query.GetFieldData(block.GetBlockName(), "RsvOrdNo", 0).ParseLong("RsvOrdNo"); // long 10
-				block.MnyOrdAmt = query.GetFieldData(block.GetBlockName(), "MnyOrdAmt", 0).ParseLong("MnyOrdAmt"); // long 16
-				block.SubstOrdAmt = query.GetFieldData(block.GetBlockName(), "SubstOrdAmt", 0).ParseLong("SubstOrdAmt"); // long 16
-				block.RuseOrdAmt = query.GetFieldData(block.GetBlockName(), "RuseOrdAmt", 0).ParseLong("RuseOrdAmt"); // long 16
-				block.AcntNm = query.GetFieldData(block.GetBlockName(), "AcntNm", 0); // char 40
-				block.IsuNm = query.GetFieldData(block.GetBlockName(), "IsuNm", 0); // char 40
+				block.RecCnt = query.GetFieldData(block.BlockName, "RecCnt", 0).ParseLong("RecCnt"); // long 5
+				block.OrdNo = query.GetFieldData(block.BlockName, "OrdNo", 0).ParseLong("OrdNo"); // long 10
+				block.PrntOrdNo = query.GetFieldData(block.BlockName, "PrntOrdNo", 0).ParseLong("PrntOrdNo"); // long 10
+				block.OrdTime = query.GetFieldData(block.BlockName, "OrdTime", 0); // char 9
+				block.OrdMktCode = query.GetFieldData(block.BlockName, "OrdMktCode", 0); // char 2
+				block.OrdPtnCode = query.GetFieldData(block.BlockName, "OrdPtnCode", 0); // char 2
+				block.ShtnIsuNo = query.GetFieldData(block.BlockName, "ShtnIsuNo", 0); // char 9
+				block.PrgmOrdprcPtnCode = query.GetFieldData(block.BlockName, "PrgmOrdprcPtnCode", 0); // char 2
+				block.StslOrdprcTpCode = query.GetFieldData(block.BlockName, "StslOrdprcTpCode", 0).First(); // char 1
+				block.StslAbleYn = query.GetFieldData(block.BlockName, "StslAbleYn", 0).First(); // char 1
+				block.MgntrnCode = query.GetFieldData(block.BlockName, "MgntrnCode", 0); // char 3
+				block.LoanDt = query.GetFieldData(block.BlockName, "LoanDt", 0); // char 8
+				block.CvrgOrdTp = query.GetFieldData(block.BlockName, "CvrgOrdTp", 0).First(); // char 1
+				block.LpYn = query.GetFieldData(block.BlockName, "LpYn", 0).First(); // char 1
+				block.MgempNo = query.GetFieldData(block.BlockName, "MgempNo", 0); // char 9
+				block.OrdAmt = query.GetFieldData(block.BlockName, "OrdAmt", 0).ParseLong("OrdAmt"); // long 16
+				block.BnsTpCode = query.GetFieldData(block.BlockName, "BnsTpCode", 0).First(); // char 1
+				block.SpareOrdNo = query.GetFieldData(block.BlockName, "SpareOrdNo", 0).ParseLong("SpareOrdNo"); // long 10
+				block.CvrgSeqno = query.GetFieldData(block.BlockName, "CvrgSeqno", 0).ParseLong("CvrgSeqno"); // long 10
+				block.RsvOrdNo = query.GetFieldData(block.BlockName, "RsvOrdNo", 0).ParseLong("RsvOrdNo"); // long 10
+				block.MnyOrdAmt = query.GetFieldData(block.BlockName, "MnyOrdAmt", 0).ParseLong("MnyOrdAmt"); // long 16
+				block.SubstOrdAmt = query.GetFieldData(block.BlockName, "SubstOrdAmt", 0).ParseLong("SubstOrdAmt"); // long 16
+				block.RuseOrdAmt = query.GetFieldData(block.BlockName, "RuseOrdAmt", 0).ParseLong("RuseOrdAmt"); // long 16
+				block.AcntNm = query.GetFieldData(block.BlockName, "AcntNm", 0); // char 40
+				block.IsuNm = query.GetFieldData(block.BlockName, "IsuNm", 0); // char 40
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -3311,43 +3371,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPAT00700
 		/// </summary>
-		static readonly string _typeName = "CSPAT00700";
+		readonly string _typeName = "CSPAT00700";
 		/// <summary>
 		/// 현물정정주문
 		/// </summary>
-		static readonly string _typeDesc = "현물정정주문";
+		readonly string _typeDesc = "현물정정주문";
 		/// <summary>
 		/// CSPAT00700
 		/// </summary>
-		static readonly string _service = "CSPAT00700";
+		readonly string _service = "CSPAT00700";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		readonly string _headType = "B";
 		/// <summary>
 		/// 김기종
 		/// </summary>
-		static readonly string _creator = "김기종";
+		readonly string _creator = "김기종";
 		/// <summary>
 		/// 2011/12/07 09:23:43
 		/// </summary>
-		static readonly string _createdDate = "2011/12/07 09:23:43";
+		readonly string _createdDate = "2011/12/07 09:23:43";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		readonly bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		readonly bool _block = false;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _encrypt = true;
+		readonly bool _encrypt = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _signature = true;
+		readonly bool _signature = true;
 
 	/// <summary>
 	/// CSPAT00700
@@ -3400,14 +3460,14 @@ namespace XingAPINet
 				return false; // throw new ApplicationException("Failed to verify: " + block.BlockName);
 			}
 
-			_xaQuery.SetFieldData(block.GetBlockName(), "OrgOrdNo", 0, block.OrgOrdNo.ToString("d10")); // long 10
-			_xaQuery.SetFieldData(block.GetBlockName(), "AcntNo", 0, block.AcntNo); // char 20
-			_xaQuery.SetFieldData(block.GetBlockName(), "InptPwd", 0, block.InptPwd); // char 8
-			_xaQuery.SetFieldData(block.GetBlockName(), "IsuNo", 0, block.IsuNo); // char 12
-			_xaQuery.SetFieldData(block.GetBlockName(), "OrdQty", 0, block.OrdQty.ToString("d16")); // long 16
-			_xaQuery.SetFieldData(block.GetBlockName(), "OrdprcPtnCode", 0, block.OrdprcPtnCode); // char 2
-			_xaQuery.SetFieldData(block.GetBlockName(), "OrdCndiTpCode", 0, block.OrdCndiTpCode.ToString()); // char 1
-			_xaQuery.SetFieldData(block.GetBlockName(), "OrdPrc", 0, block.OrdPrc.ToString("0000000000000.00")); // double 13.2
+			_xaQuery.SetFieldData(block.BlockName, "OrgOrdNo", 0, block.OrgOrdNo.ToString("d10")); // long 10
+			_xaQuery.SetFieldData(block.BlockName, "AcntNo", 0, block.AcntNo); // char 20
+			_xaQuery.SetFieldData(block.BlockName, "InptPwd", 0, block.InptPwd); // char 8
+			_xaQuery.SetFieldData(block.BlockName, "IsuNo", 0, block.IsuNo); // char 12
+			_xaQuery.SetFieldData(block.BlockName, "OrdQty", 0, block.OrdQty.ToString("d16")); // long 16
+			_xaQuery.SetFieldData(block.BlockName, "OrdprcPtnCode", 0, block.OrdprcPtnCode); // char 2
+			_xaQuery.SetFieldData(block.BlockName, "OrdCndiTpCode", 0, block.OrdCndiTpCode.ToString()); // char 1
+			_xaQuery.SetFieldData(block.BlockName, "OrdPrc", 0, block.OrdPrc.ToString("0000000000000.00")); // double 13.2
 
 			return true;
 		}
@@ -3429,28 +3489,25 @@ namespace XingAPINet
 
 	}
 
-	public partial class XRS3_InBlock : XingBlock
+	public partial class XRS3_InBlock
 	{
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		readonly string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		readonly string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		readonly string _blockType = "input";
+
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// InBlock
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// 입력
 		/// </summary>
@@ -3466,7 +3523,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("단축코드")]
 		public string shcode;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["shcode"] = new XAQueryFieldInfo("char", shcode, shcode, "단축코드", (decimal)6);
@@ -3482,28 +3546,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XRS3_OutBlock : XingBlock
+	public partial class XRS3_OutBlock
 	{
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		readonly string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		readonly string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// OutBlock
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// 출력
 		/// </summary>
@@ -3644,7 +3705,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("단축코드")]
 		public string shcode;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["chetime"] = new XAQueryFieldInfo("char", chetime, chetime, "체결시간", (decimal)6);
@@ -3677,39 +3745,39 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XRS3_OutBlock FromQuery(XRS3_ query)
 		{
 			XRS3_OutBlock block = new XRS3_OutBlock();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			try
 			{
-				block.chetime = query.GetFieldData(block.GetBlockName(), "chetime"); // char 6
-				block.sign = query.GetFieldData(block.GetBlockName(), "sign").First(); // char 1
-				block.change = query.GetFieldData(block.GetBlockName(), "change").ParseLong("change"); // long 8
-				block.drate = query.GetFieldData(block.GetBlockName(), "drate").ParseFloat("drate"); // float 6.2
-				block.price = query.GetFieldData(block.GetBlockName(), "price").ParseLong("price"); // long 8
-				block.opentime = query.GetFieldData(block.GetBlockName(), "opentime"); // char 6
-				block.open = query.GetFieldData(block.GetBlockName(), "open").ParseLong("open"); // long 8
-				block.hightime = query.GetFieldData(block.GetBlockName(), "hightime"); // char 6
-				block.high = query.GetFieldData(block.GetBlockName(), "high").ParseLong("high"); // long 8
-				block.lowtime = query.GetFieldData(block.GetBlockName(), "lowtime"); // char 6
-				block.low = query.GetFieldData(block.GetBlockName(), "low").ParseLong("low"); // long 8
-				block.cgubun = query.GetFieldData(block.GetBlockName(), "cgubun").First(); // char 1
-				block.cvolume = query.GetFieldData(block.GetBlockName(), "cvolume").ParseLong("cvolume"); // long 8
-				block.volume = query.GetFieldData(block.GetBlockName(), "volume").ParseLong("volume"); // long 12
-				block.value = query.GetFieldData(block.GetBlockName(), "value").ParseLong("value"); // long 12
-				block.mdvolume = query.GetFieldData(block.GetBlockName(), "mdvolume").ParseLong("mdvolume"); // long 12
-				block.mdchecnt = query.GetFieldData(block.GetBlockName(), "mdchecnt").ParseLong("mdchecnt"); // long 8
-				block.msvolume = query.GetFieldData(block.GetBlockName(), "msvolume").ParseLong("msvolume"); // long 12
-				block.mschecnt = query.GetFieldData(block.GetBlockName(), "mschecnt").ParseLong("mschecnt"); // long 8
-				block.cpower = query.GetFieldData(block.GetBlockName(), "cpower").ParseFloat("cpower"); // float 9.2
-				block.w_avrg = query.GetFieldData(block.GetBlockName(), "w_avrg").ParseLong("w_avrg"); // long 8
-				block.offerho = query.GetFieldData(block.GetBlockName(), "offerho").ParseLong("offerho"); // long 8
-				block.bidho = query.GetFieldData(block.GetBlockName(), "bidho").ParseLong("bidho"); // long 8
-				block.status = query.GetFieldData(block.GetBlockName(), "status"); // char 2
-				block.jnilvolume = query.GetFieldData(block.GetBlockName(), "jnilvolume").ParseLong("jnilvolume"); // long 12
-				block.shcode = query.GetFieldData(block.GetBlockName(), "shcode"); // char 6
+				block.chetime = query.GetFieldData(block.BlockName, "chetime"); // char 6
+				block.sign = query.GetFieldData(block.BlockName, "sign").First(); // char 1
+				block.change = query.GetFieldData(block.BlockName, "change").ParseLong("change"); // long 8
+				block.drate = query.GetFieldData(block.BlockName, "drate").ParseFloat("drate"); // float 6.2
+				block.price = query.GetFieldData(block.BlockName, "price").ParseLong("price"); // long 8
+				block.opentime = query.GetFieldData(block.BlockName, "opentime"); // char 6
+				block.open = query.GetFieldData(block.BlockName, "open").ParseLong("open"); // long 8
+				block.hightime = query.GetFieldData(block.BlockName, "hightime"); // char 6
+				block.high = query.GetFieldData(block.BlockName, "high").ParseLong("high"); // long 8
+				block.lowtime = query.GetFieldData(block.BlockName, "lowtime"); // char 6
+				block.low = query.GetFieldData(block.BlockName, "low").ParseLong("low"); // long 8
+				block.cgubun = query.GetFieldData(block.BlockName, "cgubun").First(); // char 1
+				block.cvolume = query.GetFieldData(block.BlockName, "cvolume").ParseLong("cvolume"); // long 8
+				block.volume = query.GetFieldData(block.BlockName, "volume").ParseLong("volume"); // long 12
+				block.value = query.GetFieldData(block.BlockName, "value").ParseLong("value"); // long 12
+				block.mdvolume = query.GetFieldData(block.BlockName, "mdvolume").ParseLong("mdvolume"); // long 12
+				block.mdchecnt = query.GetFieldData(block.BlockName, "mdchecnt").ParseLong("mdchecnt"); // long 8
+				block.msvolume = query.GetFieldData(block.BlockName, "msvolume").ParseLong("msvolume"); // long 12
+				block.mschecnt = query.GetFieldData(block.BlockName, "mschecnt").ParseLong("mschecnt"); // long 8
+				block.cpower = query.GetFieldData(block.BlockName, "cpower").ParseFloat("cpower"); // float 9.2
+				block.w_avrg = query.GetFieldData(block.BlockName, "w_avrg").ParseLong("w_avrg"); // long 8
+				block.offerho = query.GetFieldData(block.BlockName, "offerho").ParseLong("offerho"); // long 8
+				block.bidho = query.GetFieldData(block.BlockName, "bidho").ParseLong("bidho"); // long 8
+				block.status = query.GetFieldData(block.BlockName, "status"); // char 2
+				block.jnilvolume = query.GetFieldData(block.BlockName, "jnilvolume").ParseLong("jnilvolume"); // long 12
+				block.shcode = query.GetFieldData(block.BlockName, "shcode"); // char 6
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -3757,19 +3825,19 @@ namespace XingAPINet
 		/// <summary>
 		/// S3_
 		/// </summary>
-		static readonly string _typeName = "S3_";
+		readonly string _typeName = "S3_";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		readonly bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		readonly int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		readonly int _group = 0;
 
 		/// <summary>
 		/// S3_
@@ -3798,7 +3866,7 @@ namespace XingAPINet
 				return false; // throw new ApplicationException("Failed to verify: " + block.BlockName);
 			}
 
-			_xaReal.SetFieldData(block.GetBlockName(), "shcode", block.shcode); // char 6
+			_xaReal.SetFieldData(block.BlockName, "shcode", block.shcode); // char 6
 
 			return true;
 		}
@@ -3813,28 +3881,25 @@ namespace XingAPINet
 
 	}
 
-	public partial class XRSC0InBlock : XingBlock
+	public partial class XRSC0InBlock
 	{
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		readonly string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		readonly string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		readonly string _blockType = "input";
+
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// InBlock
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// 입력
 		/// </summary>
@@ -3845,7 +3910,14 @@ namespace XingAPINet
 		public string BlockType => _blockType;
 
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 
@@ -3859,28 +3931,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XRSC0OutBlock : XingBlock
+	public partial class XRSC0OutBlock
 	{
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		readonly string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		readonly string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// OutBlock
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// 출력
 		/// </summary>
@@ -4456,7 +4525,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("재사용가능금액")]
 		public long ruseableamt;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["lineseq"] = new XAQueryFieldInfo("long", lineseq, lineseq.ToString("d10"), "라인일련번호", (decimal)10);
@@ -4576,126 +4652,126 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XRSC0OutBlock FromQuery(XRSC0 query)
 		{
 			XRSC0OutBlock block = new XRSC0OutBlock();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			try
 			{
-				block.lineseq = query.GetFieldData(block.GetBlockName(), "lineseq").ParseLong("lineseq"); // long 10
-				block.accno = query.GetFieldData(block.GetBlockName(), "accno"); // char 11
-				block.user = query.GetFieldData(block.GetBlockName(), "user"); // char 8
-				block.len = query.GetFieldData(block.GetBlockName(), "len").ParseLong("len"); // long 6
-				block.gubun = query.GetFieldData(block.GetBlockName(), "gubun").First(); // char 1
-				block.compress = query.GetFieldData(block.GetBlockName(), "compress").First(); // char 1
-				block.encrypt = query.GetFieldData(block.GetBlockName(), "encrypt").First(); // char 1
-				block.offset = query.GetFieldData(block.GetBlockName(), "offset").ParseLong("offset"); // long 3
-				block.trcode = query.GetFieldData(block.GetBlockName(), "trcode"); // char 8
-				block.compid = query.GetFieldData(block.GetBlockName(), "compid"); // char 3
-				block.userid = query.GetFieldData(block.GetBlockName(), "userid"); // char 16
-				block.media = query.GetFieldData(block.GetBlockName(), "media"); // char 2
-				block.ifid = query.GetFieldData(block.GetBlockName(), "ifid"); // char 3
-				block.seq = query.GetFieldData(block.GetBlockName(), "seq"); // char 9
-				block.trid = query.GetFieldData(block.GetBlockName(), "trid"); // char 16
-				block.pubip = query.GetFieldData(block.GetBlockName(), "pubip"); // char 12
-				block.prvip = query.GetFieldData(block.GetBlockName(), "prvip"); // char 12
-				block.pcbpno = query.GetFieldData(block.GetBlockName(), "pcbpno"); // char 3
-				block.bpno = query.GetFieldData(block.GetBlockName(), "bpno"); // char 3
-				block.termno = query.GetFieldData(block.GetBlockName(), "termno"); // char 8
-				block.lang = query.GetFieldData(block.GetBlockName(), "lang").First(); // char 1
-				block.proctm = query.GetFieldData(block.GetBlockName(), "proctm").ParseLong("proctm"); // long 9
-				block.msgcode = query.GetFieldData(block.GetBlockName(), "msgcode"); // char 4
-				block.outgu = query.GetFieldData(block.GetBlockName(), "outgu").First(); // char 1
-				block.compreq = query.GetFieldData(block.GetBlockName(), "compreq").First(); // char 1
-				block.funckey = query.GetFieldData(block.GetBlockName(), "funckey"); // char 4
-				block.reqcnt = query.GetFieldData(block.GetBlockName(), "reqcnt").ParseLong("reqcnt"); // long 4
-				block.filler = query.GetFieldData(block.GetBlockName(), "filler"); // char 6
-				block.cont = query.GetFieldData(block.GetBlockName(), "cont").First(); // char 1
-				block.contkey = query.GetFieldData(block.GetBlockName(), "contkey"); // char 18
-				block.varlen = query.GetFieldData(block.GetBlockName(), "varlen").ParseLong("varlen"); // long 2
-				block.varhdlen = query.GetFieldData(block.GetBlockName(), "varhdlen").ParseLong("varhdlen"); // long 2
-				block.varmsglen = query.GetFieldData(block.GetBlockName(), "varmsglen").ParseLong("varmsglen"); // long 2
-				block.trsrc = query.GetFieldData(block.GetBlockName(), "trsrc").First(); // char 1
-				block.eventid = query.GetFieldData(block.GetBlockName(), "eventid"); // char 4
-				block.ifinfo = query.GetFieldData(block.GetBlockName(), "ifinfo"); // char 4
-				block.filler1 = query.GetFieldData(block.GetBlockName(), "filler1"); // char 41
-				block.ordchegb = query.GetFieldData(block.GetBlockName(), "ordchegb"); // char 2
-				block.marketgb = query.GetFieldData(block.GetBlockName(), "marketgb"); // char 2
-				block.ordgb = query.GetFieldData(block.GetBlockName(), "ordgb"); // char 2
-				block.orgordno = query.GetFieldData(block.GetBlockName(), "orgordno").ParseLong("orgordno"); // long 10
-				block.accno1 = query.GetFieldData(block.GetBlockName(), "accno1"); // char 11
-				block.accno2 = query.GetFieldData(block.GetBlockName(), "accno2"); // char 9
-				block.passwd = query.GetFieldData(block.GetBlockName(), "passwd"); // char 8
-				block.expcode = query.GetFieldData(block.GetBlockName(), "expcode"); // char 12
-				block.shtcode = query.GetFieldData(block.GetBlockName(), "shtcode"); // char 9
-				block.hname = query.GetFieldData(block.GetBlockName(), "hname"); // char 40
-				block.ordqty = query.GetFieldData(block.GetBlockName(), "ordqty").ParseLong("ordqty"); // long 16
-				block.ordprice = query.GetFieldData(block.GetBlockName(), "ordprice").ParseLong("ordprice"); // long 13
-				block.hogagb = query.GetFieldData(block.GetBlockName(), "hogagb").First(); // char 1
-				block.etfhogagb = query.GetFieldData(block.GetBlockName(), "etfhogagb"); // char 2
-				block.pgmtype = query.GetFieldData(block.GetBlockName(), "pgmtype").ParseLong("pgmtype"); // long 2
-				block.gmhogagb = query.GetFieldData(block.GetBlockName(), "gmhogagb").ParseLong("gmhogagb"); // long 1
-				block.gmhogayn = query.GetFieldData(block.GetBlockName(), "gmhogayn").ParseLong("gmhogayn"); // long 1
-				block.singb = query.GetFieldData(block.GetBlockName(), "singb"); // char 3
-				block.loandt = query.GetFieldData(block.GetBlockName(), "loandt"); // char 8
-				block.cvrgordtp = query.GetFieldData(block.GetBlockName(), "cvrgordtp").First(); // char 1
-				block.strtgcode = query.GetFieldData(block.GetBlockName(), "strtgcode"); // char 6
-				block.groupid = query.GetFieldData(block.GetBlockName(), "groupid"); // char 20
-				block.ordseqno = query.GetFieldData(block.GetBlockName(), "ordseqno").ParseLong("ordseqno"); // long 10
-				block.prtno = query.GetFieldData(block.GetBlockName(), "prtno").ParseLong("prtno"); // long 10
-				block.basketno = query.GetFieldData(block.GetBlockName(), "basketno").ParseLong("basketno"); // long 10
-				block.trchno = query.GetFieldData(block.GetBlockName(), "trchno").ParseLong("trchno"); // long 10
-				block.itemno = query.GetFieldData(block.GetBlockName(), "itemno").ParseLong("itemno"); // long 10
-				block.brwmgmyn = query.GetFieldData(block.GetBlockName(), "brwmgmyn").ParseLong("brwmgmyn"); // long 1
-				block.mbrno = query.GetFieldData(block.GetBlockName(), "mbrno").ParseLong("mbrno"); // long 3
-				block.procgb = query.GetFieldData(block.GetBlockName(), "procgb").First(); // char 1
-				block.admbrchno = query.GetFieldData(block.GetBlockName(), "admbrchno"); // char 3
-				block.futaccno = query.GetFieldData(block.GetBlockName(), "futaccno"); // char 20
-				block.futmarketgb = query.GetFieldData(block.GetBlockName(), "futmarketgb").First(); // char 1
-				block.tongsingb = query.GetFieldData(block.GetBlockName(), "tongsingb"); // char 2
-				block.lpgb = query.GetFieldData(block.GetBlockName(), "lpgb").First(); // char 1
-				block.dummy = query.GetFieldData(block.GetBlockName(), "dummy"); // char 20
-				block.ordno = query.GetFieldData(block.GetBlockName(), "ordno").ParseLong("ordno"); // long 10
-				block.ordtm = query.GetFieldData(block.GetBlockName(), "ordtm"); // char 9
-				block.prntordno = query.GetFieldData(block.GetBlockName(), "prntordno").ParseLong("prntordno"); // long 10
-				block.mgempno = query.GetFieldData(block.GetBlockName(), "mgempno"); // char 9
-				block.orgordundrqty = query.GetFieldData(block.GetBlockName(), "orgordundrqty").ParseLong("orgordundrqty"); // long 16
-				block.orgordmdfyqty = query.GetFieldData(block.GetBlockName(), "orgordmdfyqty").ParseLong("orgordmdfyqty"); // long 16
-				block.ordordcancelqty = query.GetFieldData(block.GetBlockName(), "ordordcancelqty").ParseLong("ordordcancelqty"); // long 16
-				block.nmcpysndno = query.GetFieldData(block.GetBlockName(), "nmcpysndno").ParseLong("nmcpysndno"); // long 10
-				block.ordamt = query.GetFieldData(block.GetBlockName(), "ordamt").ParseLong("ordamt"); // long 16
-				block.bnstp = query.GetFieldData(block.GetBlockName(), "bnstp").First(); // char 1
-				block.spareordno = query.GetFieldData(block.GetBlockName(), "spareordno").ParseLong("spareordno"); // long 10
-				block.cvrgseqno = query.GetFieldData(block.GetBlockName(), "cvrgseqno").ParseLong("cvrgseqno"); // long 10
-				block.rsvordno = query.GetFieldData(block.GetBlockName(), "rsvordno").ParseLong("rsvordno"); // long 10
-				block.mtordseqno = query.GetFieldData(block.GetBlockName(), "mtordseqno").ParseLong("mtordseqno"); // long 10
-				block.spareordqty = query.GetFieldData(block.GetBlockName(), "spareordqty").ParseLong("spareordqty"); // long 16
-				block.orduserid = query.GetFieldData(block.GetBlockName(), "orduserid"); // char 16
-				block.spotordqty = query.GetFieldData(block.GetBlockName(), "spotordqty").ParseLong("spotordqty"); // long 16
-				block.ordruseqty = query.GetFieldData(block.GetBlockName(), "ordruseqty").ParseLong("ordruseqty"); // long 16
-				block.mnyordamt = query.GetFieldData(block.GetBlockName(), "mnyordamt").ParseLong("mnyordamt"); // long 16
-				block.ordsubstamt = query.GetFieldData(block.GetBlockName(), "ordsubstamt").ParseLong("ordsubstamt"); // long 16
-				block.ruseordamt = query.GetFieldData(block.GetBlockName(), "ruseordamt").ParseLong("ruseordamt"); // long 16
-				block.ordcmsnamt = query.GetFieldData(block.GetBlockName(), "ordcmsnamt").ParseLong("ordcmsnamt"); // long 16
-				block.crdtuseamt = query.GetFieldData(block.GetBlockName(), "crdtuseamt").ParseLong("crdtuseamt"); // long 16
-				block.secbalqty = query.GetFieldData(block.GetBlockName(), "secbalqty").ParseLong("secbalqty"); // long 16
-				block.spotordableqty = query.GetFieldData(block.GetBlockName(), "spotordableqty").ParseLong("spotordableqty"); // long 16
-				block.ordableruseqty = query.GetFieldData(block.GetBlockName(), "ordableruseqty").ParseLong("ordableruseqty"); // long 16
-				block.flctqty = query.GetFieldData(block.GetBlockName(), "flctqty").ParseLong("flctqty"); // long 16
-				block.secbalqtyd2 = query.GetFieldData(block.GetBlockName(), "secbalqtyd2").ParseLong("secbalqtyd2"); // long 16
-				block.sellableqty = query.GetFieldData(block.GetBlockName(), "sellableqty").ParseLong("sellableqty"); // long 16
-				block.unercsellordqty = query.GetFieldData(block.GetBlockName(), "unercsellordqty").ParseLong("unercsellordqty"); // long 16
-				block.avrpchsprc = query.GetFieldData(block.GetBlockName(), "avrpchsprc").ParseLong("avrpchsprc"); // long 13
-				block.pchsamt = query.GetFieldData(block.GetBlockName(), "pchsamt").ParseLong("pchsamt"); // long 16
-				block.deposit = query.GetFieldData(block.GetBlockName(), "deposit").ParseLong("deposit"); // long 16
-				block.substamt = query.GetFieldData(block.GetBlockName(), "substamt").ParseLong("substamt"); // long 16
-				block.csgnmnymgn = query.GetFieldData(block.GetBlockName(), "csgnmnymgn").ParseLong("csgnmnymgn"); // long 16
-				block.csgnsubstmgn = query.GetFieldData(block.GetBlockName(), "csgnsubstmgn").ParseLong("csgnsubstmgn"); // long 16
-				block.crdtpldgruseamt = query.GetFieldData(block.GetBlockName(), "crdtpldgruseamt").ParseLong("crdtpldgruseamt"); // long 16
-				block.ordablemny = query.GetFieldData(block.GetBlockName(), "ordablemny").ParseLong("ordablemny"); // long 16
-				block.ordablesubstamt = query.GetFieldData(block.GetBlockName(), "ordablesubstamt").ParseLong("ordablesubstamt"); // long 16
-				block.ruseableamt = query.GetFieldData(block.GetBlockName(), "ruseableamt").ParseLong("ruseableamt"); // long 16
+				block.lineseq = query.GetFieldData(block.BlockName, "lineseq").ParseLong("lineseq"); // long 10
+				block.accno = query.GetFieldData(block.BlockName, "accno"); // char 11
+				block.user = query.GetFieldData(block.BlockName, "user"); // char 8
+				block.len = query.GetFieldData(block.BlockName, "len").ParseLong("len"); // long 6
+				block.gubun = query.GetFieldData(block.BlockName, "gubun").First(); // char 1
+				block.compress = query.GetFieldData(block.BlockName, "compress").First(); // char 1
+				block.encrypt = query.GetFieldData(block.BlockName, "encrypt").First(); // char 1
+				block.offset = query.GetFieldData(block.BlockName, "offset").ParseLong("offset"); // long 3
+				block.trcode = query.GetFieldData(block.BlockName, "trcode"); // char 8
+				block.compid = query.GetFieldData(block.BlockName, "compid"); // char 3
+				block.userid = query.GetFieldData(block.BlockName, "userid"); // char 16
+				block.media = query.GetFieldData(block.BlockName, "media"); // char 2
+				block.ifid = query.GetFieldData(block.BlockName, "ifid"); // char 3
+				block.seq = query.GetFieldData(block.BlockName, "seq"); // char 9
+				block.trid = query.GetFieldData(block.BlockName, "trid"); // char 16
+				block.pubip = query.GetFieldData(block.BlockName, "pubip"); // char 12
+				block.prvip = query.GetFieldData(block.BlockName, "prvip"); // char 12
+				block.pcbpno = query.GetFieldData(block.BlockName, "pcbpno"); // char 3
+				block.bpno = query.GetFieldData(block.BlockName, "bpno"); // char 3
+				block.termno = query.GetFieldData(block.BlockName, "termno"); // char 8
+				block.lang = query.GetFieldData(block.BlockName, "lang").First(); // char 1
+				block.proctm = query.GetFieldData(block.BlockName, "proctm").ParseLong("proctm"); // long 9
+				block.msgcode = query.GetFieldData(block.BlockName, "msgcode"); // char 4
+				block.outgu = query.GetFieldData(block.BlockName, "outgu").First(); // char 1
+				block.compreq = query.GetFieldData(block.BlockName, "compreq").First(); // char 1
+				block.funckey = query.GetFieldData(block.BlockName, "funckey"); // char 4
+				block.reqcnt = query.GetFieldData(block.BlockName, "reqcnt").ParseLong("reqcnt"); // long 4
+				block.filler = query.GetFieldData(block.BlockName, "filler"); // char 6
+				block.cont = query.GetFieldData(block.BlockName, "cont").First(); // char 1
+				block.contkey = query.GetFieldData(block.BlockName, "contkey"); // char 18
+				block.varlen = query.GetFieldData(block.BlockName, "varlen").ParseLong("varlen"); // long 2
+				block.varhdlen = query.GetFieldData(block.BlockName, "varhdlen").ParseLong("varhdlen"); // long 2
+				block.varmsglen = query.GetFieldData(block.BlockName, "varmsglen").ParseLong("varmsglen"); // long 2
+				block.trsrc = query.GetFieldData(block.BlockName, "trsrc").First(); // char 1
+				block.eventid = query.GetFieldData(block.BlockName, "eventid"); // char 4
+				block.ifinfo = query.GetFieldData(block.BlockName, "ifinfo"); // char 4
+				block.filler1 = query.GetFieldData(block.BlockName, "filler1"); // char 41
+				block.ordchegb = query.GetFieldData(block.BlockName, "ordchegb"); // char 2
+				block.marketgb = query.GetFieldData(block.BlockName, "marketgb"); // char 2
+				block.ordgb = query.GetFieldData(block.BlockName, "ordgb"); // char 2
+				block.orgordno = query.GetFieldData(block.BlockName, "orgordno").ParseLong("orgordno"); // long 10
+				block.accno1 = query.GetFieldData(block.BlockName, "accno1"); // char 11
+				block.accno2 = query.GetFieldData(block.BlockName, "accno2"); // char 9
+				block.passwd = query.GetFieldData(block.BlockName, "passwd"); // char 8
+				block.expcode = query.GetFieldData(block.BlockName, "expcode"); // char 12
+				block.shtcode = query.GetFieldData(block.BlockName, "shtcode"); // char 9
+				block.hname = query.GetFieldData(block.BlockName, "hname"); // char 40
+				block.ordqty = query.GetFieldData(block.BlockName, "ordqty").ParseLong("ordqty"); // long 16
+				block.ordprice = query.GetFieldData(block.BlockName, "ordprice").ParseLong("ordprice"); // long 13
+				block.hogagb = query.GetFieldData(block.BlockName, "hogagb").First(); // char 1
+				block.etfhogagb = query.GetFieldData(block.BlockName, "etfhogagb"); // char 2
+				block.pgmtype = query.GetFieldData(block.BlockName, "pgmtype").ParseLong("pgmtype"); // long 2
+				block.gmhogagb = query.GetFieldData(block.BlockName, "gmhogagb").ParseLong("gmhogagb"); // long 1
+				block.gmhogayn = query.GetFieldData(block.BlockName, "gmhogayn").ParseLong("gmhogayn"); // long 1
+				block.singb = query.GetFieldData(block.BlockName, "singb"); // char 3
+				block.loandt = query.GetFieldData(block.BlockName, "loandt"); // char 8
+				block.cvrgordtp = query.GetFieldData(block.BlockName, "cvrgordtp").First(); // char 1
+				block.strtgcode = query.GetFieldData(block.BlockName, "strtgcode"); // char 6
+				block.groupid = query.GetFieldData(block.BlockName, "groupid"); // char 20
+				block.ordseqno = query.GetFieldData(block.BlockName, "ordseqno").ParseLong("ordseqno"); // long 10
+				block.prtno = query.GetFieldData(block.BlockName, "prtno").ParseLong("prtno"); // long 10
+				block.basketno = query.GetFieldData(block.BlockName, "basketno").ParseLong("basketno"); // long 10
+				block.trchno = query.GetFieldData(block.BlockName, "trchno").ParseLong("trchno"); // long 10
+				block.itemno = query.GetFieldData(block.BlockName, "itemno").ParseLong("itemno"); // long 10
+				block.brwmgmyn = query.GetFieldData(block.BlockName, "brwmgmyn").ParseLong("brwmgmyn"); // long 1
+				block.mbrno = query.GetFieldData(block.BlockName, "mbrno").ParseLong("mbrno"); // long 3
+				block.procgb = query.GetFieldData(block.BlockName, "procgb").First(); // char 1
+				block.admbrchno = query.GetFieldData(block.BlockName, "admbrchno"); // char 3
+				block.futaccno = query.GetFieldData(block.BlockName, "futaccno"); // char 20
+				block.futmarketgb = query.GetFieldData(block.BlockName, "futmarketgb").First(); // char 1
+				block.tongsingb = query.GetFieldData(block.BlockName, "tongsingb"); // char 2
+				block.lpgb = query.GetFieldData(block.BlockName, "lpgb").First(); // char 1
+				block.dummy = query.GetFieldData(block.BlockName, "dummy"); // char 20
+				block.ordno = query.GetFieldData(block.BlockName, "ordno").ParseLong("ordno"); // long 10
+				block.ordtm = query.GetFieldData(block.BlockName, "ordtm"); // char 9
+				block.prntordno = query.GetFieldData(block.BlockName, "prntordno").ParseLong("prntordno"); // long 10
+				block.mgempno = query.GetFieldData(block.BlockName, "mgempno"); // char 9
+				block.orgordundrqty = query.GetFieldData(block.BlockName, "orgordundrqty").ParseLong("orgordundrqty"); // long 16
+				block.orgordmdfyqty = query.GetFieldData(block.BlockName, "orgordmdfyqty").ParseLong("orgordmdfyqty"); // long 16
+				block.ordordcancelqty = query.GetFieldData(block.BlockName, "ordordcancelqty").ParseLong("ordordcancelqty"); // long 16
+				block.nmcpysndno = query.GetFieldData(block.BlockName, "nmcpysndno").ParseLong("nmcpysndno"); // long 10
+				block.ordamt = query.GetFieldData(block.BlockName, "ordamt").ParseLong("ordamt"); // long 16
+				block.bnstp = query.GetFieldData(block.BlockName, "bnstp").First(); // char 1
+				block.spareordno = query.GetFieldData(block.BlockName, "spareordno").ParseLong("spareordno"); // long 10
+				block.cvrgseqno = query.GetFieldData(block.BlockName, "cvrgseqno").ParseLong("cvrgseqno"); // long 10
+				block.rsvordno = query.GetFieldData(block.BlockName, "rsvordno").ParseLong("rsvordno"); // long 10
+				block.mtordseqno = query.GetFieldData(block.BlockName, "mtordseqno").ParseLong("mtordseqno"); // long 10
+				block.spareordqty = query.GetFieldData(block.BlockName, "spareordqty").ParseLong("spareordqty"); // long 16
+				block.orduserid = query.GetFieldData(block.BlockName, "orduserid"); // char 16
+				block.spotordqty = query.GetFieldData(block.BlockName, "spotordqty").ParseLong("spotordqty"); // long 16
+				block.ordruseqty = query.GetFieldData(block.BlockName, "ordruseqty").ParseLong("ordruseqty"); // long 16
+				block.mnyordamt = query.GetFieldData(block.BlockName, "mnyordamt").ParseLong("mnyordamt"); // long 16
+				block.ordsubstamt = query.GetFieldData(block.BlockName, "ordsubstamt").ParseLong("ordsubstamt"); // long 16
+				block.ruseordamt = query.GetFieldData(block.BlockName, "ruseordamt").ParseLong("ruseordamt"); // long 16
+				block.ordcmsnamt = query.GetFieldData(block.BlockName, "ordcmsnamt").ParseLong("ordcmsnamt"); // long 16
+				block.crdtuseamt = query.GetFieldData(block.BlockName, "crdtuseamt").ParseLong("crdtuseamt"); // long 16
+				block.secbalqty = query.GetFieldData(block.BlockName, "secbalqty").ParseLong("secbalqty"); // long 16
+				block.spotordableqty = query.GetFieldData(block.BlockName, "spotordableqty").ParseLong("spotordableqty"); // long 16
+				block.ordableruseqty = query.GetFieldData(block.BlockName, "ordableruseqty").ParseLong("ordableruseqty"); // long 16
+				block.flctqty = query.GetFieldData(block.BlockName, "flctqty").ParseLong("flctqty"); // long 16
+				block.secbalqtyd2 = query.GetFieldData(block.BlockName, "secbalqtyd2").ParseLong("secbalqtyd2"); // long 16
+				block.sellableqty = query.GetFieldData(block.BlockName, "sellableqty").ParseLong("sellableqty"); // long 16
+				block.unercsellordqty = query.GetFieldData(block.BlockName, "unercsellordqty").ParseLong("unercsellordqty"); // long 16
+				block.avrpchsprc = query.GetFieldData(block.BlockName, "avrpchsprc").ParseLong("avrpchsprc"); // long 13
+				block.pchsamt = query.GetFieldData(block.BlockName, "pchsamt").ParseLong("pchsamt"); // long 16
+				block.deposit = query.GetFieldData(block.BlockName, "deposit").ParseLong("deposit"); // long 16
+				block.substamt = query.GetFieldData(block.BlockName, "substamt").ParseLong("substamt"); // long 16
+				block.csgnmnymgn = query.GetFieldData(block.BlockName, "csgnmnymgn").ParseLong("csgnmnymgn"); // long 16
+				block.csgnsubstmgn = query.GetFieldData(block.BlockName, "csgnsubstmgn").ParseLong("csgnsubstmgn"); // long 16
+				block.crdtpldgruseamt = query.GetFieldData(block.BlockName, "crdtpldgruseamt").ParseLong("crdtpldgruseamt"); // long 16
+				block.ordablemny = query.GetFieldData(block.BlockName, "ordablemny").ParseLong("ordablemny"); // long 16
+				block.ordablesubstamt = query.GetFieldData(block.BlockName, "ordablesubstamt").ParseLong("ordablesubstamt"); // long 16
+				block.ruseableamt = query.GetFieldData(block.BlockName, "ruseableamt").ParseLong("ruseableamt"); // long 16
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -4830,19 +4906,19 @@ namespace XingAPINet
 		/// <summary>
 		/// SC0
 		/// </summary>
-		static readonly string _typeName = "SC0";
+		readonly string _typeName = "SC0";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		readonly bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		readonly int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		readonly int _group = 0;
 
 		/// <summary>
 		/// SC0
@@ -4885,28 +4961,25 @@ namespace XingAPINet
 
 	}
 
-	public partial class XQt1101InBlock : XingBlock
+	public partial class XQt1101InBlock
 	{
 		/// <summary>
 		/// t1101InBlock
 		/// </summary>
-		static readonly string _blockName = "t1101InBlock";
+		readonly string _blockName = "t1101InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		readonly string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		readonly string _blockType = "input";
+
 		/// <summary>
 		/// t1101InBlock
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// t1101InBlock
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// 기본입력
 		/// </summary>
@@ -4922,7 +4995,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("단축코드")]
 		public string shcode;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["shcode"] = new XAQueryFieldInfo("char", shcode, shcode, "단축코드", (decimal)6);
@@ -4938,28 +5018,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQt1101OutBlock : XingBlock
+	public partial class XQt1101OutBlock
 	{
 		/// <summary>
 		/// t1101OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1101OutBlock";
+		readonly string _blockName = "t1101OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		readonly string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// t1101OutBlock
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// t1101OutBlock
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// 출력
 		/// </summary>
@@ -5400,7 +5477,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("저가")]
 		public long low;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["hname"] = new XAQueryFieldInfo("char", hname, hname, "한글명", (decimal)20);
@@ -5493,11 +5577,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQt1101OutBlock FromQuery(XQt1101 query)
 		{
 			XQt1101OutBlock block = new XQt1101OutBlock();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -5506,92 +5590,92 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.hname = query.GetFieldData(block.GetBlockName(), "hname", 0); // char 20
-				block.price = query.GetFieldData(block.GetBlockName(), "price", 0).ParseLong("price"); // long 8
-				block.sign = query.GetFieldData(block.GetBlockName(), "sign", 0).First(); // char 1
-				block.change = query.GetFieldData(block.GetBlockName(), "change", 0).ParseLong("change"); // long 8
-				block.diff = query.GetFieldData(block.GetBlockName(), "diff", 0).ParseFloat("diff"); // float 6.2
-				block.volume = query.GetFieldData(block.GetBlockName(), "volume", 0).ParseLong("volume"); // long 12
-				block.jnilclose = query.GetFieldData(block.GetBlockName(), "jnilclose", 0).ParseLong("jnilclose"); // long 8
-				block.offerho1 = query.GetFieldData(block.GetBlockName(), "offerho1", 0).ParseLong("offerho1"); // long 8
-				block.bidho1 = query.GetFieldData(block.GetBlockName(), "bidho1", 0).ParseLong("bidho1"); // long 8
-				block.offerrem1 = query.GetFieldData(block.GetBlockName(), "offerrem1", 0).ParseLong("offerrem1"); // long 12
-				block.bidrem1 = query.GetFieldData(block.GetBlockName(), "bidrem1", 0).ParseLong("bidrem1"); // long 12
-				block.preoffercha1 = query.GetFieldData(block.GetBlockName(), "preoffercha1", 0).ParseLong("preoffercha1"); // long 12
-				block.prebidcha1 = query.GetFieldData(block.GetBlockName(), "prebidcha1", 0).ParseLong("prebidcha1"); // long 12
-				block.offerho2 = query.GetFieldData(block.GetBlockName(), "offerho2", 0).ParseLong("offerho2"); // long 8
-				block.bidho2 = query.GetFieldData(block.GetBlockName(), "bidho2", 0).ParseLong("bidho2"); // long 8
-				block.offerrem2 = query.GetFieldData(block.GetBlockName(), "offerrem2", 0).ParseLong("offerrem2"); // long 12
-				block.bidrem2 = query.GetFieldData(block.GetBlockName(), "bidrem2", 0).ParseLong("bidrem2"); // long 12
-				block.preoffercha2 = query.GetFieldData(block.GetBlockName(), "preoffercha2", 0).ParseLong("preoffercha2"); // long 12
-				block.prebidcha2 = query.GetFieldData(block.GetBlockName(), "prebidcha2", 0).ParseLong("prebidcha2"); // long 12
-				block.offerho3 = query.GetFieldData(block.GetBlockName(), "offerho3", 0).ParseLong("offerho3"); // long 8
-				block.bidho3 = query.GetFieldData(block.GetBlockName(), "bidho3", 0).ParseLong("bidho3"); // long 8
-				block.offerrem3 = query.GetFieldData(block.GetBlockName(), "offerrem3", 0).ParseLong("offerrem3"); // long 12
-				block.bidrem3 = query.GetFieldData(block.GetBlockName(), "bidrem3", 0).ParseLong("bidrem3"); // long 12
-				block.preoffercha3 = query.GetFieldData(block.GetBlockName(), "preoffercha3", 0).ParseLong("preoffercha3"); // long 12
-				block.prebidcha3 = query.GetFieldData(block.GetBlockName(), "prebidcha3", 0).ParseLong("prebidcha3"); // long 12
-				block.offerho4 = query.GetFieldData(block.GetBlockName(), "offerho4", 0).ParseLong("offerho4"); // long 8
-				block.bidho4 = query.GetFieldData(block.GetBlockName(), "bidho4", 0).ParseLong("bidho4"); // long 8
-				block.offerrem4 = query.GetFieldData(block.GetBlockName(), "offerrem4", 0).ParseLong("offerrem4"); // long 12
-				block.bidrem4 = query.GetFieldData(block.GetBlockName(), "bidrem4", 0).ParseLong("bidrem4"); // long 12
-				block.preoffercha4 = query.GetFieldData(block.GetBlockName(), "preoffercha4", 0).ParseLong("preoffercha4"); // long 12
-				block.prebidcha4 = query.GetFieldData(block.GetBlockName(), "prebidcha4", 0).ParseLong("prebidcha4"); // long 12
-				block.offerho5 = query.GetFieldData(block.GetBlockName(), "offerho5", 0).ParseLong("offerho5"); // long 8
-				block.bidho5 = query.GetFieldData(block.GetBlockName(), "bidho5", 0).ParseLong("bidho5"); // long 8
-				block.offerrem5 = query.GetFieldData(block.GetBlockName(), "offerrem5", 0).ParseLong("offerrem5"); // long 12
-				block.bidrem5 = query.GetFieldData(block.GetBlockName(), "bidrem5", 0).ParseLong("bidrem5"); // long 12
-				block.preoffercha5 = query.GetFieldData(block.GetBlockName(), "preoffercha5", 0).ParseLong("preoffercha5"); // long 12
-				block.prebidcha5 = query.GetFieldData(block.GetBlockName(), "prebidcha5", 0).ParseLong("prebidcha5"); // long 12
-				block.offerho6 = query.GetFieldData(block.GetBlockName(), "offerho6", 0).ParseLong("offerho6"); // long 8
-				block.bidho6 = query.GetFieldData(block.GetBlockName(), "bidho6", 0).ParseLong("bidho6"); // long 8
-				block.offerrem6 = query.GetFieldData(block.GetBlockName(), "offerrem6", 0).ParseLong("offerrem6"); // long 12
-				block.bidrem6 = query.GetFieldData(block.GetBlockName(), "bidrem6", 0).ParseLong("bidrem6"); // long 12
-				block.preoffercha6 = query.GetFieldData(block.GetBlockName(), "preoffercha6", 0).ParseLong("preoffercha6"); // long 12
-				block.prebidcha6 = query.GetFieldData(block.GetBlockName(), "prebidcha6", 0).ParseLong("prebidcha6"); // long 12
-				block.offerho7 = query.GetFieldData(block.GetBlockName(), "offerho7", 0).ParseLong("offerho7"); // long 8
-				block.bidho7 = query.GetFieldData(block.GetBlockName(), "bidho7", 0).ParseLong("bidho7"); // long 8
-				block.offerrem7 = query.GetFieldData(block.GetBlockName(), "offerrem7", 0).ParseLong("offerrem7"); // long 12
-				block.bidrem7 = query.GetFieldData(block.GetBlockName(), "bidrem7", 0).ParseLong("bidrem7"); // long 12
-				block.preoffercha7 = query.GetFieldData(block.GetBlockName(), "preoffercha7", 0).ParseLong("preoffercha7"); // long 12
-				block.prebidcha7 = query.GetFieldData(block.GetBlockName(), "prebidcha7", 0).ParseLong("prebidcha7"); // long 12
-				block.offerho8 = query.GetFieldData(block.GetBlockName(), "offerho8", 0).ParseLong("offerho8"); // long 8
-				block.bidho8 = query.GetFieldData(block.GetBlockName(), "bidho8", 0).ParseLong("bidho8"); // long 8
-				block.offerrem8 = query.GetFieldData(block.GetBlockName(), "offerrem8", 0).ParseLong("offerrem8"); // long 12
-				block.bidrem8 = query.GetFieldData(block.GetBlockName(), "bidrem8", 0).ParseLong("bidrem8"); // long 12
-				block.preoffercha8 = query.GetFieldData(block.GetBlockName(), "preoffercha8", 0).ParseLong("preoffercha8"); // long 12
-				block.prebidcha8 = query.GetFieldData(block.GetBlockName(), "prebidcha8", 0).ParseLong("prebidcha8"); // long 12
-				block.offerho9 = query.GetFieldData(block.GetBlockName(), "offerho9", 0).ParseLong("offerho9"); // long 8
-				block.bidho9 = query.GetFieldData(block.GetBlockName(), "bidho9", 0).ParseLong("bidho9"); // long 8
-				block.offerrem9 = query.GetFieldData(block.GetBlockName(), "offerrem9", 0).ParseLong("offerrem9"); // long 12
-				block.bidrem9 = query.GetFieldData(block.GetBlockName(), "bidrem9", 0).ParseLong("bidrem9"); // long 12
-				block.preoffercha9 = query.GetFieldData(block.GetBlockName(), "preoffercha9", 0).ParseLong("preoffercha9"); // long 12
-				block.prebidcha9 = query.GetFieldData(block.GetBlockName(), "prebidcha9", 0).ParseLong("prebidcha9"); // long 12
-				block.offerho10 = query.GetFieldData(block.GetBlockName(), "offerho10", 0).ParseLong("offerho10"); // long 8
-				block.bidho10 = query.GetFieldData(block.GetBlockName(), "bidho10", 0).ParseLong("bidho10"); // long 8
-				block.offerrem10 = query.GetFieldData(block.GetBlockName(), "offerrem10", 0).ParseLong("offerrem10"); // long 12
-				block.bidrem10 = query.GetFieldData(block.GetBlockName(), "bidrem10", 0).ParseLong("bidrem10"); // long 12
-				block.preoffercha10 = query.GetFieldData(block.GetBlockName(), "preoffercha10", 0).ParseLong("preoffercha10"); // long 12
-				block.prebidcha10 = query.GetFieldData(block.GetBlockName(), "prebidcha10", 0).ParseLong("prebidcha10"); // long 12
-				block.offer = query.GetFieldData(block.GetBlockName(), "offer", 0).ParseLong("offer"); // long 12
-				block.bid = query.GetFieldData(block.GetBlockName(), "bid", 0).ParseLong("bid"); // long 12
-				block.preoffercha = query.GetFieldData(block.GetBlockName(), "preoffercha", 0).ParseLong("preoffercha"); // long 12
-				block.prebidcha = query.GetFieldData(block.GetBlockName(), "prebidcha", 0).ParseLong("prebidcha"); // long 12
-				block.hotime = query.GetFieldData(block.GetBlockName(), "hotime", 0); // char 8
-				block.yeprice = query.GetFieldData(block.GetBlockName(), "yeprice", 0).ParseLong("yeprice"); // long 8
-				block.yevolume = query.GetFieldData(block.GetBlockName(), "yevolume", 0).ParseLong("yevolume"); // long 12
-				block.yesign = query.GetFieldData(block.GetBlockName(), "yesign", 0).First(); // char 1
-				block.yechange = query.GetFieldData(block.GetBlockName(), "yechange", 0).ParseLong("yechange"); // long 8
-				block.yediff = query.GetFieldData(block.GetBlockName(), "yediff", 0).ParseFloat("yediff"); // float 6.2
-				block.tmoffer = query.GetFieldData(block.GetBlockName(), "tmoffer", 0).ParseLong("tmoffer"); // long 12
-				block.tmbid = query.GetFieldData(block.GetBlockName(), "tmbid", 0).ParseLong("tmbid"); // long 12
-				block.ho_status = query.GetFieldData(block.GetBlockName(), "ho_status", 0).First(); // char 1
-				block.shcode = query.GetFieldData(block.GetBlockName(), "shcode", 0); // char 6
-				block.uplmtprice = query.GetFieldData(block.GetBlockName(), "uplmtprice", 0).ParseLong("uplmtprice"); // long 8
-				block.dnlmtprice = query.GetFieldData(block.GetBlockName(), "dnlmtprice", 0).ParseLong("dnlmtprice"); // long 8
-				block.open = query.GetFieldData(block.GetBlockName(), "open", 0).ParseLong("open"); // long 8
-				block.high = query.GetFieldData(block.GetBlockName(), "high", 0).ParseLong("high"); // long 8
-				block.low = query.GetFieldData(block.GetBlockName(), "low", 0).ParseLong("low"); // long 8
+				block.hname = query.GetFieldData(block.BlockName, "hname", 0); // char 20
+				block.price = query.GetFieldData(block.BlockName, "price", 0).ParseLong("price"); // long 8
+				block.sign = query.GetFieldData(block.BlockName, "sign", 0).First(); // char 1
+				block.change = query.GetFieldData(block.BlockName, "change", 0).ParseLong("change"); // long 8
+				block.diff = query.GetFieldData(block.BlockName, "diff", 0).ParseFloat("diff"); // float 6.2
+				block.volume = query.GetFieldData(block.BlockName, "volume", 0).ParseLong("volume"); // long 12
+				block.jnilclose = query.GetFieldData(block.BlockName, "jnilclose", 0).ParseLong("jnilclose"); // long 8
+				block.offerho1 = query.GetFieldData(block.BlockName, "offerho1", 0).ParseLong("offerho1"); // long 8
+				block.bidho1 = query.GetFieldData(block.BlockName, "bidho1", 0).ParseLong("bidho1"); // long 8
+				block.offerrem1 = query.GetFieldData(block.BlockName, "offerrem1", 0).ParseLong("offerrem1"); // long 12
+				block.bidrem1 = query.GetFieldData(block.BlockName, "bidrem1", 0).ParseLong("bidrem1"); // long 12
+				block.preoffercha1 = query.GetFieldData(block.BlockName, "preoffercha1", 0).ParseLong("preoffercha1"); // long 12
+				block.prebidcha1 = query.GetFieldData(block.BlockName, "prebidcha1", 0).ParseLong("prebidcha1"); // long 12
+				block.offerho2 = query.GetFieldData(block.BlockName, "offerho2", 0).ParseLong("offerho2"); // long 8
+				block.bidho2 = query.GetFieldData(block.BlockName, "bidho2", 0).ParseLong("bidho2"); // long 8
+				block.offerrem2 = query.GetFieldData(block.BlockName, "offerrem2", 0).ParseLong("offerrem2"); // long 12
+				block.bidrem2 = query.GetFieldData(block.BlockName, "bidrem2", 0).ParseLong("bidrem2"); // long 12
+				block.preoffercha2 = query.GetFieldData(block.BlockName, "preoffercha2", 0).ParseLong("preoffercha2"); // long 12
+				block.prebidcha2 = query.GetFieldData(block.BlockName, "prebidcha2", 0).ParseLong("prebidcha2"); // long 12
+				block.offerho3 = query.GetFieldData(block.BlockName, "offerho3", 0).ParseLong("offerho3"); // long 8
+				block.bidho3 = query.GetFieldData(block.BlockName, "bidho3", 0).ParseLong("bidho3"); // long 8
+				block.offerrem3 = query.GetFieldData(block.BlockName, "offerrem3", 0).ParseLong("offerrem3"); // long 12
+				block.bidrem3 = query.GetFieldData(block.BlockName, "bidrem3", 0).ParseLong("bidrem3"); // long 12
+				block.preoffercha3 = query.GetFieldData(block.BlockName, "preoffercha3", 0).ParseLong("preoffercha3"); // long 12
+				block.prebidcha3 = query.GetFieldData(block.BlockName, "prebidcha3", 0).ParseLong("prebidcha3"); // long 12
+				block.offerho4 = query.GetFieldData(block.BlockName, "offerho4", 0).ParseLong("offerho4"); // long 8
+				block.bidho4 = query.GetFieldData(block.BlockName, "bidho4", 0).ParseLong("bidho4"); // long 8
+				block.offerrem4 = query.GetFieldData(block.BlockName, "offerrem4", 0).ParseLong("offerrem4"); // long 12
+				block.bidrem4 = query.GetFieldData(block.BlockName, "bidrem4", 0).ParseLong("bidrem4"); // long 12
+				block.preoffercha4 = query.GetFieldData(block.BlockName, "preoffercha4", 0).ParseLong("preoffercha4"); // long 12
+				block.prebidcha4 = query.GetFieldData(block.BlockName, "prebidcha4", 0).ParseLong("prebidcha4"); // long 12
+				block.offerho5 = query.GetFieldData(block.BlockName, "offerho5", 0).ParseLong("offerho5"); // long 8
+				block.bidho5 = query.GetFieldData(block.BlockName, "bidho5", 0).ParseLong("bidho5"); // long 8
+				block.offerrem5 = query.GetFieldData(block.BlockName, "offerrem5", 0).ParseLong("offerrem5"); // long 12
+				block.bidrem5 = query.GetFieldData(block.BlockName, "bidrem5", 0).ParseLong("bidrem5"); // long 12
+				block.preoffercha5 = query.GetFieldData(block.BlockName, "preoffercha5", 0).ParseLong("preoffercha5"); // long 12
+				block.prebidcha5 = query.GetFieldData(block.BlockName, "prebidcha5", 0).ParseLong("prebidcha5"); // long 12
+				block.offerho6 = query.GetFieldData(block.BlockName, "offerho6", 0).ParseLong("offerho6"); // long 8
+				block.bidho6 = query.GetFieldData(block.BlockName, "bidho6", 0).ParseLong("bidho6"); // long 8
+				block.offerrem6 = query.GetFieldData(block.BlockName, "offerrem6", 0).ParseLong("offerrem6"); // long 12
+				block.bidrem6 = query.GetFieldData(block.BlockName, "bidrem6", 0).ParseLong("bidrem6"); // long 12
+				block.preoffercha6 = query.GetFieldData(block.BlockName, "preoffercha6", 0).ParseLong("preoffercha6"); // long 12
+				block.prebidcha6 = query.GetFieldData(block.BlockName, "prebidcha6", 0).ParseLong("prebidcha6"); // long 12
+				block.offerho7 = query.GetFieldData(block.BlockName, "offerho7", 0).ParseLong("offerho7"); // long 8
+				block.bidho7 = query.GetFieldData(block.BlockName, "bidho7", 0).ParseLong("bidho7"); // long 8
+				block.offerrem7 = query.GetFieldData(block.BlockName, "offerrem7", 0).ParseLong("offerrem7"); // long 12
+				block.bidrem7 = query.GetFieldData(block.BlockName, "bidrem7", 0).ParseLong("bidrem7"); // long 12
+				block.preoffercha7 = query.GetFieldData(block.BlockName, "preoffercha7", 0).ParseLong("preoffercha7"); // long 12
+				block.prebidcha7 = query.GetFieldData(block.BlockName, "prebidcha7", 0).ParseLong("prebidcha7"); // long 12
+				block.offerho8 = query.GetFieldData(block.BlockName, "offerho8", 0).ParseLong("offerho8"); // long 8
+				block.bidho8 = query.GetFieldData(block.BlockName, "bidho8", 0).ParseLong("bidho8"); // long 8
+				block.offerrem8 = query.GetFieldData(block.BlockName, "offerrem8", 0).ParseLong("offerrem8"); // long 12
+				block.bidrem8 = query.GetFieldData(block.BlockName, "bidrem8", 0).ParseLong("bidrem8"); // long 12
+				block.preoffercha8 = query.GetFieldData(block.BlockName, "preoffercha8", 0).ParseLong("preoffercha8"); // long 12
+				block.prebidcha8 = query.GetFieldData(block.BlockName, "prebidcha8", 0).ParseLong("prebidcha8"); // long 12
+				block.offerho9 = query.GetFieldData(block.BlockName, "offerho9", 0).ParseLong("offerho9"); // long 8
+				block.bidho9 = query.GetFieldData(block.BlockName, "bidho9", 0).ParseLong("bidho9"); // long 8
+				block.offerrem9 = query.GetFieldData(block.BlockName, "offerrem9", 0).ParseLong("offerrem9"); // long 12
+				block.bidrem9 = query.GetFieldData(block.BlockName, "bidrem9", 0).ParseLong("bidrem9"); // long 12
+				block.preoffercha9 = query.GetFieldData(block.BlockName, "preoffercha9", 0).ParseLong("preoffercha9"); // long 12
+				block.prebidcha9 = query.GetFieldData(block.BlockName, "prebidcha9", 0).ParseLong("prebidcha9"); // long 12
+				block.offerho10 = query.GetFieldData(block.BlockName, "offerho10", 0).ParseLong("offerho10"); // long 8
+				block.bidho10 = query.GetFieldData(block.BlockName, "bidho10", 0).ParseLong("bidho10"); // long 8
+				block.offerrem10 = query.GetFieldData(block.BlockName, "offerrem10", 0).ParseLong("offerrem10"); // long 12
+				block.bidrem10 = query.GetFieldData(block.BlockName, "bidrem10", 0).ParseLong("bidrem10"); // long 12
+				block.preoffercha10 = query.GetFieldData(block.BlockName, "preoffercha10", 0).ParseLong("preoffercha10"); // long 12
+				block.prebidcha10 = query.GetFieldData(block.BlockName, "prebidcha10", 0).ParseLong("prebidcha10"); // long 12
+				block.offer = query.GetFieldData(block.BlockName, "offer", 0).ParseLong("offer"); // long 12
+				block.bid = query.GetFieldData(block.BlockName, "bid", 0).ParseLong("bid"); // long 12
+				block.preoffercha = query.GetFieldData(block.BlockName, "preoffercha", 0).ParseLong("preoffercha"); // long 12
+				block.prebidcha = query.GetFieldData(block.BlockName, "prebidcha", 0).ParseLong("prebidcha"); // long 12
+				block.hotime = query.GetFieldData(block.BlockName, "hotime", 0); // char 8
+				block.yeprice = query.GetFieldData(block.BlockName, "yeprice", 0).ParseLong("yeprice"); // long 8
+				block.yevolume = query.GetFieldData(block.BlockName, "yevolume", 0).ParseLong("yevolume"); // long 12
+				block.yesign = query.GetFieldData(block.BlockName, "yesign", 0).First(); // char 1
+				block.yechange = query.GetFieldData(block.BlockName, "yechange", 0).ParseLong("yechange"); // long 8
+				block.yediff = query.GetFieldData(block.BlockName, "yediff", 0).ParseFloat("yediff"); // float 6.2
+				block.tmoffer = query.GetFieldData(block.BlockName, "tmoffer", 0).ParseLong("tmoffer"); // long 12
+				block.tmbid = query.GetFieldData(block.BlockName, "tmbid", 0).ParseLong("tmbid"); // long 12
+				block.ho_status = query.GetFieldData(block.BlockName, "ho_status", 0).First(); // char 1
+				block.shcode = query.GetFieldData(block.BlockName, "shcode", 0); // char 6
+				block.uplmtprice = query.GetFieldData(block.BlockName, "uplmtprice", 0).ParseLong("uplmtprice"); // long 8
+				block.dnlmtprice = query.GetFieldData(block.BlockName, "dnlmtprice", 0).ParseLong("dnlmtprice"); // long 8
+				block.open = query.GetFieldData(block.BlockName, "open", 0).ParseLong("open"); // long 8
+				block.high = query.GetFieldData(block.BlockName, "high", 0).ParseLong("high"); // long 8
+				block.low = query.GetFieldData(block.BlockName, "low", 0).ParseLong("low"); // long 8
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -5699,43 +5783,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1101
 		/// </summary>
-		static readonly string _typeName = "t1101";
+		readonly string _typeName = "t1101";
 		/// <summary>
 		/// 주식현재가호가조회(t1101)
 		/// </summary>
-		static readonly string _typeDesc = "주식현재가호가조회(t1101)";
+		readonly string _typeDesc = "주식현재가호가조회(t1101)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		readonly string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		readonly string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		readonly string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		readonly string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		readonly bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		readonly bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		readonly bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		readonly bool _signature = false;
 
 	/// <summary>
 	/// t1101
@@ -5788,7 +5872,7 @@ namespace XingAPINet
 				return false; // throw new ApplicationException("Failed to verify: " + block.BlockName);
 			}
 
-			_xaQuery.SetFieldData(block.GetBlockName(), "shcode", 0, block.shcode); // char 6
+			_xaQuery.SetFieldData(block.BlockName, "shcode", 0, block.shcode); // char 6
 
 			return true;
 		}
@@ -5803,28 +5887,25 @@ namespace XingAPINet
 
 	}
 
-	public partial class XQt1102InBlock : XingBlock
+	public partial class XQt1102InBlock
 	{
 		/// <summary>
 		/// t1102InBlock
 		/// </summary>
-		static readonly string _blockName = "t1102InBlock";
+		readonly string _blockName = "t1102InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		readonly string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		readonly string _blockType = "input";
+
 		/// <summary>
 		/// t1102InBlock
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// t1102InBlock
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// 기본입력
 		/// </summary>
@@ -5840,7 +5921,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("단축코드")]
 		public string shcode;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["shcode"] = new XAQueryFieldInfo("char", shcode, shcode, "단축코드", (decimal)6);
@@ -5856,28 +5944,25 @@ namespace XingAPINet
 		}
 	}
 
-	public partial class XQt1102OutBlock : XingBlock
+	public partial class XQt1102OutBlock
 	{
 		/// <summary>
 		/// t1102OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1102OutBlock";
+		readonly string _blockName = "t1102OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		readonly string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		readonly string _blockType = "output";
+
 		/// <summary>
 		/// t1102OutBlock
 		/// </summary>
-		public override string GetBlockName() => _blockName;
-		/// <summary>
-		/// t1102OutBlock
-		/// </summary>
-		public static string BlockName => _blockName;
+		public string BlockName => _blockName;
 		/// <summary>
 		/// 출력
 		/// </summary>
@@ -6683,7 +6768,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("대차불가표시")]
 		public string lend_text;
 
-		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();
+			writer.Dump(_blockName, dict, outputType);
+
+		}
+
+		public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
 			dict["hname"] = new XAQueryFieldInfo("char", hname, hname, "한글명", (decimal)20);
@@ -6849,11 +6941,11 @@ namespace XingAPINet
 			return dict;
 		}
 
+		public bool IsValidData = true;
+		public string InvalidReason;
 		public static XQt1102OutBlock FromQuery(XQt1102 query)
 		{
 			XQt1102OutBlock block = new XQt1102OutBlock();
-			block.IsValidData = true;
-			block.InvalidReason = "";
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				block.IsValidData = false;
@@ -6862,165 +6954,165 @@ namespace XingAPINet
 			}
 			try
 			{
-				block.hname = query.GetFieldData(block.GetBlockName(), "hname", 0); // char 20
-				block.price = query.GetFieldData(block.GetBlockName(), "price", 0).ParseLong("price"); // long 8
-				block.sign = query.GetFieldData(block.GetBlockName(), "sign", 0).First(); // char 1
-				block.change = query.GetFieldData(block.GetBlockName(), "change", 0).ParseLong("change"); // long 8
-				block.diff = query.GetFieldData(block.GetBlockName(), "diff", 0).ParseFloat("diff"); // float 6.2
-				block.volume = query.GetFieldData(block.GetBlockName(), "volume", 0).ParseLong("volume"); // long 12
-				block.recprice = query.GetFieldData(block.GetBlockName(), "recprice", 0).ParseLong("recprice"); // long 8
-				block.avg = query.GetFieldData(block.GetBlockName(), "avg", 0).ParseLong("avg"); // long 8
-				block.uplmtprice = query.GetFieldData(block.GetBlockName(), "uplmtprice", 0).ParseLong("uplmtprice"); // long 8
-				block.dnlmtprice = query.GetFieldData(block.GetBlockName(), "dnlmtprice", 0).ParseLong("dnlmtprice"); // long 8
-				block.jnilvolume = query.GetFieldData(block.GetBlockName(), "jnilvolume", 0).ParseLong("jnilvolume"); // long 12
-				block.volumediff = query.GetFieldData(block.GetBlockName(), "volumediff", 0).ParseLong("volumediff"); // long 12
-				block.open = query.GetFieldData(block.GetBlockName(), "open", 0).ParseLong("open"); // long 8
-				block.opentime = query.GetFieldData(block.GetBlockName(), "opentime", 0); // char 6
-				block.high = query.GetFieldData(block.GetBlockName(), "high", 0).ParseLong("high"); // long 8
-				block.hightime = query.GetFieldData(block.GetBlockName(), "hightime", 0); // char 6
-				block.low = query.GetFieldData(block.GetBlockName(), "low", 0).ParseLong("low"); // long 8
-				block.lowtime = query.GetFieldData(block.GetBlockName(), "lowtime", 0); // char 6
-				block.high52w = query.GetFieldData(block.GetBlockName(), "high52w", 0).ParseLong("high52w"); // long 8
-				block.high52wdate = query.GetFieldData(block.GetBlockName(), "high52wdate", 0); // char 8
-				block.low52w = query.GetFieldData(block.GetBlockName(), "low52w", 0).ParseLong("low52w"); // long 8
-				block.low52wdate = query.GetFieldData(block.GetBlockName(), "low52wdate", 0); // char 8
-				block.exhratio = query.GetFieldData(block.GetBlockName(), "exhratio", 0).ParseFloat("exhratio"); // float 6.2
-				block.per = query.GetFieldData(block.GetBlockName(), "per", 0).ParseFloat("per"); // float 6.2
-				block.pbrx = query.GetFieldData(block.GetBlockName(), "pbrx", 0).ParseFloat("pbrx"); // float 6.2
-				block.listing = query.GetFieldData(block.GetBlockName(), "listing", 0).ParseLong("listing"); // long 12
-				block.jkrate = query.GetFieldData(block.GetBlockName(), "jkrate", 0).ParseLong("jkrate"); // long 8
-				block.memedan = query.GetFieldData(block.GetBlockName(), "memedan", 0); // char 5
-				block.offernocd1 = query.GetFieldData(block.GetBlockName(), "offernocd1", 0); // char 3
-				block.bidnocd1 = query.GetFieldData(block.GetBlockName(), "bidnocd1", 0); // char 3
-				block.offerno1 = query.GetFieldData(block.GetBlockName(), "offerno1", 0); // char 6
-				block.bidno1 = query.GetFieldData(block.GetBlockName(), "bidno1", 0); // char 6
-				block.dvol1 = query.GetFieldData(block.GetBlockName(), "dvol1", 0).ParseLong("dvol1"); // long 8
-				block.svol1 = query.GetFieldData(block.GetBlockName(), "svol1", 0).ParseLong("svol1"); // long 8
-				block.dcha1 = query.GetFieldData(block.GetBlockName(), "dcha1", 0).ParseLong("dcha1"); // long 8
-				block.scha1 = query.GetFieldData(block.GetBlockName(), "scha1", 0).ParseLong("scha1"); // long 8
-				block.ddiff1 = query.GetFieldData(block.GetBlockName(), "ddiff1", 0).ParseFloat("ddiff1"); // float 6.2
-				block.sdiff1 = query.GetFieldData(block.GetBlockName(), "sdiff1", 0).ParseFloat("sdiff1"); // float 6.2
-				block.offernocd2 = query.GetFieldData(block.GetBlockName(), "offernocd2", 0); // char 3
-				block.bidnocd2 = query.GetFieldData(block.GetBlockName(), "bidnocd2", 0); // char 3
-				block.offerno2 = query.GetFieldData(block.GetBlockName(), "offerno2", 0); // char 6
-				block.bidno2 = query.GetFieldData(block.GetBlockName(), "bidno2", 0); // char 6
-				block.dvol2 = query.GetFieldData(block.GetBlockName(), "dvol2", 0).ParseLong("dvol2"); // long 8
-				block.svol2 = query.GetFieldData(block.GetBlockName(), "svol2", 0).ParseLong("svol2"); // long 8
-				block.dcha2 = query.GetFieldData(block.GetBlockName(), "dcha2", 0).ParseLong("dcha2"); // long 8
-				block.scha2 = query.GetFieldData(block.GetBlockName(), "scha2", 0).ParseLong("scha2"); // long 8
-				block.ddiff2 = query.GetFieldData(block.GetBlockName(), "ddiff2", 0).ParseFloat("ddiff2"); // float 6.2
-				block.sdiff2 = query.GetFieldData(block.GetBlockName(), "sdiff2", 0).ParseFloat("sdiff2"); // float 6.2
-				block.offernocd3 = query.GetFieldData(block.GetBlockName(), "offernocd3", 0); // char 3
-				block.bidnocd3 = query.GetFieldData(block.GetBlockName(), "bidnocd3", 0); // char 3
-				block.offerno3 = query.GetFieldData(block.GetBlockName(), "offerno3", 0); // char 6
-				block.bidno3 = query.GetFieldData(block.GetBlockName(), "bidno3", 0); // char 6
-				block.dvol3 = query.GetFieldData(block.GetBlockName(), "dvol3", 0).ParseLong("dvol3"); // long 8
-				block.svol3 = query.GetFieldData(block.GetBlockName(), "svol3", 0).ParseLong("svol3"); // long 8
-				block.dcha3 = query.GetFieldData(block.GetBlockName(), "dcha3", 0).ParseLong("dcha3"); // long 8
-				block.scha3 = query.GetFieldData(block.GetBlockName(), "scha3", 0).ParseLong("scha3"); // long 8
-				block.ddiff3 = query.GetFieldData(block.GetBlockName(), "ddiff3", 0).ParseFloat("ddiff3"); // float 6.2
-				block.sdiff3 = query.GetFieldData(block.GetBlockName(), "sdiff3", 0).ParseFloat("sdiff3"); // float 6.2
-				block.offernocd4 = query.GetFieldData(block.GetBlockName(), "offernocd4", 0); // char 3
-				block.bidnocd4 = query.GetFieldData(block.GetBlockName(), "bidnocd4", 0); // char 3
-				block.offerno4 = query.GetFieldData(block.GetBlockName(), "offerno4", 0); // char 6
-				block.bidno4 = query.GetFieldData(block.GetBlockName(), "bidno4", 0); // char 6
-				block.dvol4 = query.GetFieldData(block.GetBlockName(), "dvol4", 0).ParseLong("dvol4"); // long 8
-				block.svol4 = query.GetFieldData(block.GetBlockName(), "svol4", 0).ParseLong("svol4"); // long 8
-				block.dcha4 = query.GetFieldData(block.GetBlockName(), "dcha4", 0).ParseLong("dcha4"); // long 8
-				block.scha4 = query.GetFieldData(block.GetBlockName(), "scha4", 0).ParseLong("scha4"); // long 8
-				block.ddiff4 = query.GetFieldData(block.GetBlockName(), "ddiff4", 0).ParseFloat("ddiff4"); // float 6.2
-				block.sdiff4 = query.GetFieldData(block.GetBlockName(), "sdiff4", 0).ParseFloat("sdiff4"); // float 6.2
-				block.offernocd5 = query.GetFieldData(block.GetBlockName(), "offernocd5", 0); // char 3
-				block.bidnocd5 = query.GetFieldData(block.GetBlockName(), "bidnocd5", 0); // char 3
-				block.offerno5 = query.GetFieldData(block.GetBlockName(), "offerno5", 0); // char 6
-				block.bidno5 = query.GetFieldData(block.GetBlockName(), "bidno5", 0); // char 6
-				block.dvol5 = query.GetFieldData(block.GetBlockName(), "dvol5", 0).ParseLong("dvol5"); // long 8
-				block.svol5 = query.GetFieldData(block.GetBlockName(), "svol5", 0).ParseLong("svol5"); // long 8
-				block.dcha5 = query.GetFieldData(block.GetBlockName(), "dcha5", 0).ParseLong("dcha5"); // long 8
-				block.scha5 = query.GetFieldData(block.GetBlockName(), "scha5", 0).ParseLong("scha5"); // long 8
-				block.ddiff5 = query.GetFieldData(block.GetBlockName(), "ddiff5", 0).ParseFloat("ddiff5"); // float 6.2
-				block.sdiff5 = query.GetFieldData(block.GetBlockName(), "sdiff5", 0).ParseFloat("sdiff5"); // float 6.2
-				block.fwdvl = query.GetFieldData(block.GetBlockName(), "fwdvl", 0).ParseLong("fwdvl"); // long 12
-				block.ftradmdcha = query.GetFieldData(block.GetBlockName(), "ftradmdcha", 0).ParseLong("ftradmdcha"); // long 12
-				block.ftradmddiff = query.GetFieldData(block.GetBlockName(), "ftradmddiff", 0).ParseFloat("ftradmddiff"); // float 6.2
-				block.fwsvl = query.GetFieldData(block.GetBlockName(), "fwsvl", 0).ParseLong("fwsvl"); // long 12
-				block.ftradmscha = query.GetFieldData(block.GetBlockName(), "ftradmscha", 0).ParseLong("ftradmscha"); // long 12
-				block.ftradmsdiff = query.GetFieldData(block.GetBlockName(), "ftradmsdiff", 0).ParseFloat("ftradmsdiff"); // float 6.2
-				block.vol = query.GetFieldData(block.GetBlockName(), "vol", 0).ParseFloat("vol"); // float 6.2
-				block.shcode = query.GetFieldData(block.GetBlockName(), "shcode", 0); // char 6
-				block.value = query.GetFieldData(block.GetBlockName(), "value", 0).ParseLong("value"); // long 12
-				block.jvolume = query.GetFieldData(block.GetBlockName(), "jvolume", 0).ParseLong("jvolume"); // long 12
-				block.highyear = query.GetFieldData(block.GetBlockName(), "highyear", 0).ParseLong("highyear"); // long 8
-				block.highyeardate = query.GetFieldData(block.GetBlockName(), "highyeardate", 0); // char 8
-				block.lowyear = query.GetFieldData(block.GetBlockName(), "lowyear", 0).ParseLong("lowyear"); // long 8
-				block.lowyeardate = query.GetFieldData(block.GetBlockName(), "lowyeardate", 0); // char 8
-				block.target = query.GetFieldData(block.GetBlockName(), "target", 0).ParseLong("target"); // long 8
-				block.capital = query.GetFieldData(block.GetBlockName(), "capital", 0).ParseLong("capital"); // long 12
-				block.abscnt = query.GetFieldData(block.GetBlockName(), "abscnt", 0).ParseLong("abscnt"); // long 12
-				block.parprice = query.GetFieldData(block.GetBlockName(), "parprice", 0).ParseLong("parprice"); // long 8
-				block.gsmm = query.GetFieldData(block.GetBlockName(), "gsmm", 0); // char 2
-				block.subprice = query.GetFieldData(block.GetBlockName(), "subprice", 0).ParseLong("subprice"); // long 8
-				block.total = query.GetFieldData(block.GetBlockName(), "total", 0).ParseLong("total"); // long 12
-				block.listdate = query.GetFieldData(block.GetBlockName(), "listdate", 0); // char 8
-				block.name = query.GetFieldData(block.GetBlockName(), "name", 0); // char 10
-				block.bfsales = query.GetFieldData(block.GetBlockName(), "bfsales", 0).ParseLong("bfsales"); // long 12
-				block.bfoperatingincome = query.GetFieldData(block.GetBlockName(), "bfoperatingincome", 0).ParseLong("bfoperatingincome"); // long 12
-				block.bfordinaryincome = query.GetFieldData(block.GetBlockName(), "bfordinaryincome", 0).ParseLong("bfordinaryincome"); // long 12
-				block.bfnetincome = query.GetFieldData(block.GetBlockName(), "bfnetincome", 0).ParseLong("bfnetincome"); // long 12
-				block.bfeps = query.GetFieldData(block.GetBlockName(), "bfeps", 0).ParseFloat("bfeps"); // float 13.2
-				block.name2 = query.GetFieldData(block.GetBlockName(), "name2", 0); // char 10
-				block.bfsales2 = query.GetFieldData(block.GetBlockName(), "bfsales2", 0).ParseLong("bfsales2"); // long 12
-				block.bfoperatingincome2 = query.GetFieldData(block.GetBlockName(), "bfoperatingincome2", 0).ParseLong("bfoperatingincome2"); // long 12
-				block.bfordinaryincome2 = query.GetFieldData(block.GetBlockName(), "bfordinaryincome2", 0).ParseLong("bfordinaryincome2"); // long 12
-				block.bfnetincome2 = query.GetFieldData(block.GetBlockName(), "bfnetincome2", 0).ParseLong("bfnetincome2"); // long 12
-				block.bfeps2 = query.GetFieldData(block.GetBlockName(), "bfeps2", 0).ParseFloat("bfeps2"); // float 13.2
-				block.salert = query.GetFieldData(block.GetBlockName(), "salert", 0).ParseFloat("salert"); // float 7.2
-				block.opert = query.GetFieldData(block.GetBlockName(), "opert", 0).ParseFloat("opert"); // float 7.2
-				block.ordrt = query.GetFieldData(block.GetBlockName(), "ordrt", 0).ParseFloat("ordrt"); // float 7.2
-				block.netrt = query.GetFieldData(block.GetBlockName(), "netrt", 0).ParseFloat("netrt"); // float 7.2
-				block.epsrt = query.GetFieldData(block.GetBlockName(), "epsrt", 0).ParseFloat("epsrt"); // float 7.2
-				block.info1 = query.GetFieldData(block.GetBlockName(), "info1", 0); // char 10
-				block.info2 = query.GetFieldData(block.GetBlockName(), "info2", 0); // char 10
-				block.info3 = query.GetFieldData(block.GetBlockName(), "info3", 0); // char 10
-				block.info4 = query.GetFieldData(block.GetBlockName(), "info4", 0); // char 12
-				block.janginfo = query.GetFieldData(block.GetBlockName(), "janginfo", 0); // char 10
-				block.t_per = query.GetFieldData(block.GetBlockName(), "t_per", 0).ParseFloat("t_per"); // float 6.2
-				block.tonghwa = query.GetFieldData(block.GetBlockName(), "tonghwa", 0); // char 3
-				block.dval1 = query.GetFieldData(block.GetBlockName(), "dval1", 0).ParseLong("dval1"); // long 18
-				block.sval1 = query.GetFieldData(block.GetBlockName(), "sval1", 0).ParseLong("sval1"); // long 18
-				block.dval2 = query.GetFieldData(block.GetBlockName(), "dval2", 0).ParseLong("dval2"); // long 18
-				block.sval2 = query.GetFieldData(block.GetBlockName(), "sval2", 0).ParseLong("sval2"); // long 18
-				block.dval3 = query.GetFieldData(block.GetBlockName(), "dval3", 0).ParseLong("dval3"); // long 18
-				block.sval3 = query.GetFieldData(block.GetBlockName(), "sval3", 0).ParseLong("sval3"); // long 18
-				block.dval4 = query.GetFieldData(block.GetBlockName(), "dval4", 0).ParseLong("dval4"); // long 18
-				block.sval4 = query.GetFieldData(block.GetBlockName(), "sval4", 0).ParseLong("sval4"); // long 18
-				block.dval5 = query.GetFieldData(block.GetBlockName(), "dval5", 0).ParseLong("dval5"); // long 18
-				block.sval5 = query.GetFieldData(block.GetBlockName(), "sval5", 0).ParseLong("sval5"); // long 18
-				block.davg1 = query.GetFieldData(block.GetBlockName(), "davg1", 0).ParseLong("davg1"); // long 8
-				block.savg1 = query.GetFieldData(block.GetBlockName(), "savg1", 0).ParseLong("savg1"); // long 8
-				block.davg2 = query.GetFieldData(block.GetBlockName(), "davg2", 0).ParseLong("davg2"); // long 8
-				block.savg2 = query.GetFieldData(block.GetBlockName(), "savg2", 0).ParseLong("savg2"); // long 8
-				block.davg3 = query.GetFieldData(block.GetBlockName(), "davg3", 0).ParseLong("davg3"); // long 8
-				block.savg3 = query.GetFieldData(block.GetBlockName(), "savg3", 0).ParseLong("savg3"); // long 8
-				block.davg4 = query.GetFieldData(block.GetBlockName(), "davg4", 0).ParseLong("davg4"); // long 8
-				block.savg4 = query.GetFieldData(block.GetBlockName(), "savg4", 0).ParseLong("savg4"); // long 8
-				block.davg5 = query.GetFieldData(block.GetBlockName(), "davg5", 0).ParseLong("davg5"); // long 8
-				block.savg5 = query.GetFieldData(block.GetBlockName(), "savg5", 0).ParseLong("savg5"); // long 8
-				block.ftradmdval = query.GetFieldData(block.GetBlockName(), "ftradmdval", 0).ParseLong("ftradmdval"); // long 18
-				block.ftradmsval = query.GetFieldData(block.GetBlockName(), "ftradmsval", 0).ParseLong("ftradmsval"); // long 18
-				block.ftradmdavg = query.GetFieldData(block.GetBlockName(), "ftradmdavg", 0).ParseLong("ftradmdavg"); // long 8
-				block.ftradmsavg = query.GetFieldData(block.GetBlockName(), "ftradmsavg", 0).ParseLong("ftradmsavg"); // long 8
-				block.info5 = query.GetFieldData(block.GetBlockName(), "info5", 0); // char 8
-				block.spac_gubun = query.GetFieldData(block.GetBlockName(), "spac_gubun", 0).First(); // char 1
-				block.issueprice = query.GetFieldData(block.GetBlockName(), "issueprice", 0).ParseLong("issueprice"); // long 8
-				block.alloc_gubun = query.GetFieldData(block.GetBlockName(), "alloc_gubun", 0).First(); // char 1
-				block.alloc_text = query.GetFieldData(block.GetBlockName(), "alloc_text", 0); // char 8
-				block.shterm_text = query.GetFieldData(block.GetBlockName(), "shterm_text", 0); // char 10
-				block.svi_uplmtprice = query.GetFieldData(block.GetBlockName(), "svi_uplmtprice", 0).ParseLong("svi_uplmtprice"); // long 8
-				block.svi_dnlmtprice = query.GetFieldData(block.GetBlockName(), "svi_dnlmtprice", 0).ParseLong("svi_dnlmtprice"); // long 8
-				block.low_lqdt_gu = query.GetFieldData(block.GetBlockName(), "low_lqdt_gu", 0).First(); // char 1
-				block.abnormal_rise_gu = query.GetFieldData(block.GetBlockName(), "abnormal_rise_gu", 0).First(); // char 1
-				block.lend_text = query.GetFieldData(block.GetBlockName(), "lend_text", 0); // char 8
+				block.hname = query.GetFieldData(block.BlockName, "hname", 0); // char 20
+				block.price = query.GetFieldData(block.BlockName, "price", 0).ParseLong("price"); // long 8
+				block.sign = query.GetFieldData(block.BlockName, "sign", 0).First(); // char 1
+				block.change = query.GetFieldData(block.BlockName, "change", 0).ParseLong("change"); // long 8
+				block.diff = query.GetFieldData(block.BlockName, "diff", 0).ParseFloat("diff"); // float 6.2
+				block.volume = query.GetFieldData(block.BlockName, "volume", 0).ParseLong("volume"); // long 12
+				block.recprice = query.GetFieldData(block.BlockName, "recprice", 0).ParseLong("recprice"); // long 8
+				block.avg = query.GetFieldData(block.BlockName, "avg", 0).ParseLong("avg"); // long 8
+				block.uplmtprice = query.GetFieldData(block.BlockName, "uplmtprice", 0).ParseLong("uplmtprice"); // long 8
+				block.dnlmtprice = query.GetFieldData(block.BlockName, "dnlmtprice", 0).ParseLong("dnlmtprice"); // long 8
+				block.jnilvolume = query.GetFieldData(block.BlockName, "jnilvolume", 0).ParseLong("jnilvolume"); // long 12
+				block.volumediff = query.GetFieldData(block.BlockName, "volumediff", 0).ParseLong("volumediff"); // long 12
+				block.open = query.GetFieldData(block.BlockName, "open", 0).ParseLong("open"); // long 8
+				block.opentime = query.GetFieldData(block.BlockName, "opentime", 0); // char 6
+				block.high = query.GetFieldData(block.BlockName, "high", 0).ParseLong("high"); // long 8
+				block.hightime = query.GetFieldData(block.BlockName, "hightime", 0); // char 6
+				block.low = query.GetFieldData(block.BlockName, "low", 0).ParseLong("low"); // long 8
+				block.lowtime = query.GetFieldData(block.BlockName, "lowtime", 0); // char 6
+				block.high52w = query.GetFieldData(block.BlockName, "high52w", 0).ParseLong("high52w"); // long 8
+				block.high52wdate = query.GetFieldData(block.BlockName, "high52wdate", 0); // char 8
+				block.low52w = query.GetFieldData(block.BlockName, "low52w", 0).ParseLong("low52w"); // long 8
+				block.low52wdate = query.GetFieldData(block.BlockName, "low52wdate", 0); // char 8
+				block.exhratio = query.GetFieldData(block.BlockName, "exhratio", 0).ParseFloat("exhratio"); // float 6.2
+				block.per = query.GetFieldData(block.BlockName, "per", 0).ParseFloat("per"); // float 6.2
+				block.pbrx = query.GetFieldData(block.BlockName, "pbrx", 0).ParseFloat("pbrx"); // float 6.2
+				block.listing = query.GetFieldData(block.BlockName, "listing", 0).ParseLong("listing"); // long 12
+				block.jkrate = query.GetFieldData(block.BlockName, "jkrate", 0).ParseLong("jkrate"); // long 8
+				block.memedan = query.GetFieldData(block.BlockName, "memedan", 0); // char 5
+				block.offernocd1 = query.GetFieldData(block.BlockName, "offernocd1", 0); // char 3
+				block.bidnocd1 = query.GetFieldData(block.BlockName, "bidnocd1", 0); // char 3
+				block.offerno1 = query.GetFieldData(block.BlockName, "offerno1", 0); // char 6
+				block.bidno1 = query.GetFieldData(block.BlockName, "bidno1", 0); // char 6
+				block.dvol1 = query.GetFieldData(block.BlockName, "dvol1", 0).ParseLong("dvol1"); // long 8
+				block.svol1 = query.GetFieldData(block.BlockName, "svol1", 0).ParseLong("svol1"); // long 8
+				block.dcha1 = query.GetFieldData(block.BlockName, "dcha1", 0).ParseLong("dcha1"); // long 8
+				block.scha1 = query.GetFieldData(block.BlockName, "scha1", 0).ParseLong("scha1"); // long 8
+				block.ddiff1 = query.GetFieldData(block.BlockName, "ddiff1", 0).ParseFloat("ddiff1"); // float 6.2
+				block.sdiff1 = query.GetFieldData(block.BlockName, "sdiff1", 0).ParseFloat("sdiff1"); // float 6.2
+				block.offernocd2 = query.GetFieldData(block.BlockName, "offernocd2", 0); // char 3
+				block.bidnocd2 = query.GetFieldData(block.BlockName, "bidnocd2", 0); // char 3
+				block.offerno2 = query.GetFieldData(block.BlockName, "offerno2", 0); // char 6
+				block.bidno2 = query.GetFieldData(block.BlockName, "bidno2", 0); // char 6
+				block.dvol2 = query.GetFieldData(block.BlockName, "dvol2", 0).ParseLong("dvol2"); // long 8
+				block.svol2 = query.GetFieldData(block.BlockName, "svol2", 0).ParseLong("svol2"); // long 8
+				block.dcha2 = query.GetFieldData(block.BlockName, "dcha2", 0).ParseLong("dcha2"); // long 8
+				block.scha2 = query.GetFieldData(block.BlockName, "scha2", 0).ParseLong("scha2"); // long 8
+				block.ddiff2 = query.GetFieldData(block.BlockName, "ddiff2", 0).ParseFloat("ddiff2"); // float 6.2
+				block.sdiff2 = query.GetFieldData(block.BlockName, "sdiff2", 0).ParseFloat("sdiff2"); // float 6.2
+				block.offernocd3 = query.GetFieldData(block.BlockName, "offernocd3", 0); // char 3
+				block.bidnocd3 = query.GetFieldData(block.BlockName, "bidnocd3", 0); // char 3
+				block.offerno3 = query.GetFieldData(block.BlockName, "offerno3", 0); // char 6
+				block.bidno3 = query.GetFieldData(block.BlockName, "bidno3", 0); // char 6
+				block.dvol3 = query.GetFieldData(block.BlockName, "dvol3", 0).ParseLong("dvol3"); // long 8
+				block.svol3 = query.GetFieldData(block.BlockName, "svol3", 0).ParseLong("svol3"); // long 8
+				block.dcha3 = query.GetFieldData(block.BlockName, "dcha3", 0).ParseLong("dcha3"); // long 8
+				block.scha3 = query.GetFieldData(block.BlockName, "scha3", 0).ParseLong("scha3"); // long 8
+				block.ddiff3 = query.GetFieldData(block.BlockName, "ddiff3", 0).ParseFloat("ddiff3"); // float 6.2
+				block.sdiff3 = query.GetFieldData(block.BlockName, "sdiff3", 0).ParseFloat("sdiff3"); // float 6.2
+				block.offernocd4 = query.GetFieldData(block.BlockName, "offernocd4", 0); // char 3
+				block.bidnocd4 = query.GetFieldData(block.BlockName, "bidnocd4", 0); // char 3
+				block.offerno4 = query.GetFieldData(block.BlockName, "offerno4", 0); // char 6
+				block.bidno4 = query.GetFieldData(block.BlockName, "bidno4", 0); // char 6
+				block.dvol4 = query.GetFieldData(block.BlockName, "dvol4", 0).ParseLong("dvol4"); // long 8
+				block.svol4 = query.GetFieldData(block.BlockName, "svol4", 0).ParseLong("svol4"); // long 8
+				block.dcha4 = query.GetFieldData(block.BlockName, "dcha4", 0).ParseLong("dcha4"); // long 8
+				block.scha4 = query.GetFieldData(block.BlockName, "scha4", 0).ParseLong("scha4"); // long 8
+				block.ddiff4 = query.GetFieldData(block.BlockName, "ddiff4", 0).ParseFloat("ddiff4"); // float 6.2
+				block.sdiff4 = query.GetFieldData(block.BlockName, "sdiff4", 0).ParseFloat("sdiff4"); // float 6.2
+				block.offernocd5 = query.GetFieldData(block.BlockName, "offernocd5", 0); // char 3
+				block.bidnocd5 = query.GetFieldData(block.BlockName, "bidnocd5", 0); // char 3
+				block.offerno5 = query.GetFieldData(block.BlockName, "offerno5", 0); // char 6
+				block.bidno5 = query.GetFieldData(block.BlockName, "bidno5", 0); // char 6
+				block.dvol5 = query.GetFieldData(block.BlockName, "dvol5", 0).ParseLong("dvol5"); // long 8
+				block.svol5 = query.GetFieldData(block.BlockName, "svol5", 0).ParseLong("svol5"); // long 8
+				block.dcha5 = query.GetFieldData(block.BlockName, "dcha5", 0).ParseLong("dcha5"); // long 8
+				block.scha5 = query.GetFieldData(block.BlockName, "scha5", 0).ParseLong("scha5"); // long 8
+				block.ddiff5 = query.GetFieldData(block.BlockName, "ddiff5", 0).ParseFloat("ddiff5"); // float 6.2
+				block.sdiff5 = query.GetFieldData(block.BlockName, "sdiff5", 0).ParseFloat("sdiff5"); // float 6.2
+				block.fwdvl = query.GetFieldData(block.BlockName, "fwdvl", 0).ParseLong("fwdvl"); // long 12
+				block.ftradmdcha = query.GetFieldData(block.BlockName, "ftradmdcha", 0).ParseLong("ftradmdcha"); // long 12
+				block.ftradmddiff = query.GetFieldData(block.BlockName, "ftradmddiff", 0).ParseFloat("ftradmddiff"); // float 6.2
+				block.fwsvl = query.GetFieldData(block.BlockName, "fwsvl", 0).ParseLong("fwsvl"); // long 12
+				block.ftradmscha = query.GetFieldData(block.BlockName, "ftradmscha", 0).ParseLong("ftradmscha"); // long 12
+				block.ftradmsdiff = query.GetFieldData(block.BlockName, "ftradmsdiff", 0).ParseFloat("ftradmsdiff"); // float 6.2
+				block.vol = query.GetFieldData(block.BlockName, "vol", 0).ParseFloat("vol"); // float 6.2
+				block.shcode = query.GetFieldData(block.BlockName, "shcode", 0); // char 6
+				block.value = query.GetFieldData(block.BlockName, "value", 0).ParseLong("value"); // long 12
+				block.jvolume = query.GetFieldData(block.BlockName, "jvolume", 0).ParseLong("jvolume"); // long 12
+				block.highyear = query.GetFieldData(block.BlockName, "highyear", 0).ParseLong("highyear"); // long 8
+				block.highyeardate = query.GetFieldData(block.BlockName, "highyeardate", 0); // char 8
+				block.lowyear = query.GetFieldData(block.BlockName, "lowyear", 0).ParseLong("lowyear"); // long 8
+				block.lowyeardate = query.GetFieldData(block.BlockName, "lowyeardate", 0); // char 8
+				block.target = query.GetFieldData(block.BlockName, "target", 0).ParseLong("target"); // long 8
+				block.capital = query.GetFieldData(block.BlockName, "capital", 0).ParseLong("capital"); // long 12
+				block.abscnt = query.GetFieldData(block.BlockName, "abscnt", 0).ParseLong("abscnt"); // long 12
+				block.parprice = query.GetFieldData(block.BlockName, "parprice", 0).ParseLong("parprice"); // long 8
+				block.gsmm = query.GetFieldData(block.BlockName, "gsmm", 0); // char 2
+				block.subprice = query.GetFieldData(block.BlockName, "subprice", 0).ParseLong("subprice"); // long 8
+				block.total = query.GetFieldData(block.BlockName, "total", 0).ParseLong("total"); // long 12
+				block.listdate = query.GetFieldData(block.BlockName, "listdate", 0); // char 8
+				block.name = query.GetFieldData(block.BlockName, "name", 0); // char 10
+				block.bfsales = query.GetFieldData(block.BlockName, "bfsales", 0).ParseLong("bfsales"); // long 12
+				block.bfoperatingincome = query.GetFieldData(block.BlockName, "bfoperatingincome", 0).ParseLong("bfoperatingincome"); // long 12
+				block.bfordinaryincome = query.GetFieldData(block.BlockName, "bfordinaryincome", 0).ParseLong("bfordinaryincome"); // long 12
+				block.bfnetincome = query.GetFieldData(block.BlockName, "bfnetincome", 0).ParseLong("bfnetincome"); // long 12
+				block.bfeps = query.GetFieldData(block.BlockName, "bfeps", 0).ParseFloat("bfeps"); // float 13.2
+				block.name2 = query.GetFieldData(block.BlockName, "name2", 0); // char 10
+				block.bfsales2 = query.GetFieldData(block.BlockName, "bfsales2", 0).ParseLong("bfsales2"); // long 12
+				block.bfoperatingincome2 = query.GetFieldData(block.BlockName, "bfoperatingincome2", 0).ParseLong("bfoperatingincome2"); // long 12
+				block.bfordinaryincome2 = query.GetFieldData(block.BlockName, "bfordinaryincome2", 0).ParseLong("bfordinaryincome2"); // long 12
+				block.bfnetincome2 = query.GetFieldData(block.BlockName, "bfnetincome2", 0).ParseLong("bfnetincome2"); // long 12
+				block.bfeps2 = query.GetFieldData(block.BlockName, "bfeps2", 0).ParseFloat("bfeps2"); // float 13.2
+				block.salert = query.GetFieldData(block.BlockName, "salert", 0).ParseFloat("salert"); // float 7.2
+				block.opert = query.GetFieldData(block.BlockName, "opert", 0).ParseFloat("opert"); // float 7.2
+				block.ordrt = query.GetFieldData(block.BlockName, "ordrt", 0).ParseFloat("ordrt"); // float 7.2
+				block.netrt = query.GetFieldData(block.BlockName, "netrt", 0).ParseFloat("netrt"); // float 7.2
+				block.epsrt = query.GetFieldData(block.BlockName, "epsrt", 0).ParseFloat("epsrt"); // float 7.2
+				block.info1 = query.GetFieldData(block.BlockName, "info1", 0); // char 10
+				block.info2 = query.GetFieldData(block.BlockName, "info2", 0); // char 10
+				block.info3 = query.GetFieldData(block.BlockName, "info3", 0); // char 10
+				block.info4 = query.GetFieldData(block.BlockName, "info4", 0); // char 12
+				block.janginfo = query.GetFieldData(block.BlockName, "janginfo", 0); // char 10
+				block.t_per = query.GetFieldData(block.BlockName, "t_per", 0).ParseFloat("t_per"); // float 6.2
+				block.tonghwa = query.GetFieldData(block.BlockName, "tonghwa", 0); // char 3
+				block.dval1 = query.GetFieldData(block.BlockName, "dval1", 0).ParseLong("dval1"); // long 18
+				block.sval1 = query.GetFieldData(block.BlockName, "sval1", 0).ParseLong("sval1"); // long 18
+				block.dval2 = query.GetFieldData(block.BlockName, "dval2", 0).ParseLong("dval2"); // long 18
+				block.sval2 = query.GetFieldData(block.BlockName, "sval2", 0).ParseLong("sval2"); // long 18
+				block.dval3 = query.GetFieldData(block.BlockName, "dval3", 0).ParseLong("dval3"); // long 18
+				block.sval3 = query.GetFieldData(block.BlockName, "sval3", 0).ParseLong("sval3"); // long 18
+				block.dval4 = query.GetFieldData(block.BlockName, "dval4", 0).ParseLong("dval4"); // long 18
+				block.sval4 = query.GetFieldData(block.BlockName, "sval4", 0).ParseLong("sval4"); // long 18
+				block.dval5 = query.GetFieldData(block.BlockName, "dval5", 0).ParseLong("dval5"); // long 18
+				block.sval5 = query.GetFieldData(block.BlockName, "sval5", 0).ParseLong("sval5"); // long 18
+				block.davg1 = query.GetFieldData(block.BlockName, "davg1", 0).ParseLong("davg1"); // long 8
+				block.savg1 = query.GetFieldData(block.BlockName, "savg1", 0).ParseLong("savg1"); // long 8
+				block.davg2 = query.GetFieldData(block.BlockName, "davg2", 0).ParseLong("davg2"); // long 8
+				block.savg2 = query.GetFieldData(block.BlockName, "savg2", 0).ParseLong("savg2"); // long 8
+				block.davg3 = query.GetFieldData(block.BlockName, "davg3", 0).ParseLong("davg3"); // long 8
+				block.savg3 = query.GetFieldData(block.BlockName, "savg3", 0).ParseLong("savg3"); // long 8
+				block.davg4 = query.GetFieldData(block.BlockName, "davg4", 0).ParseLong("davg4"); // long 8
+				block.savg4 = query.GetFieldData(block.BlockName, "savg4", 0).ParseLong("savg4"); // long 8
+				block.davg5 = query.GetFieldData(block.BlockName, "davg5", 0).ParseLong("davg5"); // long 8
+				block.savg5 = query.GetFieldData(block.BlockName, "savg5", 0).ParseLong("savg5"); // long 8
+				block.ftradmdval = query.GetFieldData(block.BlockName, "ftradmdval", 0).ParseLong("ftradmdval"); // long 18
+				block.ftradmsval = query.GetFieldData(block.BlockName, "ftradmsval", 0).ParseLong("ftradmsval"); // long 18
+				block.ftradmdavg = query.GetFieldData(block.BlockName, "ftradmdavg", 0).ParseLong("ftradmdavg"); // long 8
+				block.ftradmsavg = query.GetFieldData(block.BlockName, "ftradmsavg", 0).ParseLong("ftradmsavg"); // long 8
+				block.info5 = query.GetFieldData(block.BlockName, "info5", 0); // char 8
+				block.spac_gubun = query.GetFieldData(block.BlockName, "spac_gubun", 0).First(); // char 1
+				block.issueprice = query.GetFieldData(block.BlockName, "issueprice", 0).ParseLong("issueprice"); // long 8
+				block.alloc_gubun = query.GetFieldData(block.BlockName, "alloc_gubun", 0).First(); // char 1
+				block.alloc_text = query.GetFieldData(block.BlockName, "alloc_text", 0); // char 8
+				block.shterm_text = query.GetFieldData(block.BlockName, "shterm_text", 0); // char 10
+				block.svi_uplmtprice = query.GetFieldData(block.BlockName, "svi_uplmtprice", 0).ParseLong("svi_uplmtprice"); // long 8
+				block.svi_dnlmtprice = query.GetFieldData(block.BlockName, "svi_dnlmtprice", 0).ParseLong("svi_dnlmtprice"); // long 8
+				block.low_lqdt_gu = query.GetFieldData(block.BlockName, "low_lqdt_gu", 0).First(); // char 1
+				block.abnormal_rise_gu = query.GetFieldData(block.BlockName, "abnormal_rise_gu", 0).First(); // char 1
+				block.lend_text = query.GetFieldData(block.BlockName, "lend_text", 0); // char 8
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -7201,43 +7293,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1102
 		/// </summary>
-		static readonly string _typeName = "t1102";
+		readonly string _typeName = "t1102";
 		/// <summary>
 		/// 주식현재가(시세)조회(t1102)
 		/// </summary>
-		static readonly string _typeDesc = "주식현재가(시세)조회(t1102)";
+		readonly string _typeDesc = "주식현재가(시세)조회(t1102)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		readonly string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		readonly string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		readonly string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		readonly string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		readonly bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		readonly bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		readonly bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		readonly bool _signature = false;
 
 	/// <summary>
 	/// t1102
@@ -7290,7 +7382,7 @@ namespace XingAPINet
 				return false; // throw new ApplicationException("Failed to verify: " + block.BlockName);
 			}
 
-			_xaQuery.SetFieldData(block.GetBlockName(), "shcode", 0, block.shcode); // char 6
+			_xaQuery.SetFieldData(block.BlockName, "shcode", 0, block.shcode); // char 6
 
 			return true;
 		}
