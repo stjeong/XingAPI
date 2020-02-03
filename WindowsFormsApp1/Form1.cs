@@ -65,11 +65,11 @@ namespace WindowsFormsApp1
 
                 if (query.SetFields(inBlock) == false)
                 {
-                    Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
+                    Console.WriteLine("Failed to verify data: " + XQt1101InBlock.BlockName);
                     return;
                 }
 
-                Console.WriteLine("GetFields: " + inBlock.BlockName);
+                Console.WriteLine("GetFields: " + XQt1101InBlock.BlockName);
 
                 int queryResult = query.Request();
                 if (queryResult < 0)
@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
                 XRS3_InBlock inBlock = new XRS3_InBlock { shcode = "078020" };
                 if (_realS3.SetFields(inBlock) == false)
                 {
-                    Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
+                    Console.WriteLine("Failed to verify data: " + XRS3_InBlock.BlockName);
                     return;
                 }
 

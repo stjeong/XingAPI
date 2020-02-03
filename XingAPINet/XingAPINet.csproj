@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XingBlock.cs" />
     <Compile Include="XingClient.cs" />
     <Compile Include="XingQuery.cs" />
     <Compile Include="XingReal.cs" />

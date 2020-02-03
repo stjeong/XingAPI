@@ -52,15 +52,17 @@ namespace ConsoleApp1
                     Console.WriteLine("\t" + account);
                 }
 
+                string shcode = "078020";
+
                 // 현재가 조회한 후,
                 using (XQt1101 query = new XQt1101())
                 {
                     XQt1101InBlock inBlock = new XQt1101InBlock();
-                    inBlock.shcode = "078020";
+                    inBlock.shcode = shcode;
 
                     if (query.SetFields(inBlock) == false)
                     {
-                        Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
+                        Console.WriteLine("Failed to verify data: " + XQt1101InBlock.BlockName);
                         return;
                     }
 
@@ -72,7 +74,7 @@ namespace ConsoleApp1
                     XQt1101OutBlock outBlock = query.GetBlock();
                     if (outBlock.IsValidData == true)
                     {
-                        // outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
+                        outBlock.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
                         Console.WriteLine(outBlock.price);
                     }
                     else
@@ -84,13 +86,14 @@ namespace ConsoleApp1
                 // 실시간 데이터를 조회
                 using (XRS3_ real = new XRS3_())
                 {
-                    XRS3_InBlock inBlock = new XRS3_InBlock { shcode = "078020" };
-                    if (real.SetFields(inBlock) == false)
-                    {
-                        Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
-                        return;
-                    }
+                    //XRS3_InBlock inBlock = new XRS3_InBlock { shcode = shcode };
+                    //if (real.SetFields(inBlock) == false)
+                    //{
+                    //    Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
+                    //    return;
+                    //}
 
+                    real.SetFieldData(XRS3_InBlock.BlockName, "shcode", shcode);
                     real.Advise();
 
                     while (_exitProcess == false)

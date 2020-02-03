@@ -227,16 +227,16 @@ namespace Res2Query
                 string typeDesc = items[1];
                 typeCode = items[2];
 
-                sb.AppendLine($"{tab}public partial class {classPrefix}{typeName}");
+                sb.AppendLine($"{tab}public partial class {classPrefix}{typeName} : XingBlock");
                 sb.AppendLine($"{tab}{{");
 
                 {
                     AddField(sb, tab + "\t", "string", "_blockName", items[0]);
                     AddField(sb, tab + "\t", "string", "_blockDesc", typeDesc);
                     AddField(sb, tab + "\t", "string", "_blockType", typeCode);
-                    sb.AppendLine();
 
-                    AddGetProperty(sb, tab + "\t", "string", "BlockName", "_blockName", items[0]);
+                    AddGetProperty(sb, tab + "\t", "override string", "GetBlockName()", "_blockName", items[0]);
+                    AddGetProperty(sb, tab + "\t", "static string", "BlockName", "_blockName", items[0]);
                     AddGetProperty(sb, tab + "\t", "string", "BlockDesc", "_blockDesc", typeDesc);
                     AddGetProperty(sb, tab + "\t", "string", "BlockType", "_blockType", typeCode);
                 }
@@ -280,37 +280,23 @@ namespace Res2Query
 
                 if (isRealType == true)
                 {
-                    setFields.AppendLine($"{tab}\t\t{baseClassInstance}.SetFieldData(block.BlockName, \"{name2}\", block.{name2}{SetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
-                    getFields.AppendLine($"{tab}\t\t\tblock.{name2} = query.GetFieldData(block.BlockName, \"{name2}\"){GetFieldToStringExp(fieldType, name2, formatOrLen)}; // {fieldType} {formatOrLen}");
+                    setFields.AppendLine($"{tab}\t\t{baseClassInstance}.SetFieldData(block.GetBlockName(), \"{name2}\", block.{name2}{SetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
+                    getFields.AppendLine($"{tab}\t\t\tblock.{name2} = query.GetFieldData(block.GetBlockName(), \"{name2}\"){GetFieldToStringExp(fieldType, name2, formatOrLen)}; // {fieldType} {formatOrLen}");
                 }
                 else
                 {
-                    setFields.AppendLine($"{tab}\t\t{baseClassInstance}.SetFieldData(block.BlockName, \"{name2}\", {fieldIndex}, block.{name2}{SetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
-                    getFields.AppendLine($"{tab}\t\t\tblock.{name2} = query.GetFieldData(block.BlockName, \"{name2}\", {fieldIndex}){GetFieldToStringExp(fieldType, name2, formatOrLen)}; // {fieldType} {formatOrLen}");
+                    setFields.AppendLine($"{tab}\t\t{baseClassInstance}.SetFieldData(block.GetBlockName(), \"{name2}\", {fieldIndex}, block.{name2}{SetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
+                    getFields.AppendLine($"{tab}\t\t\tblock.{name2} = query.GetFieldData(block.GetBlockName(), \"{name2}\", {fieldIndex}){GetFieldToStringExp(fieldType, name2, formatOrLen)}; // {fieldType} {formatOrLen}");
                 }
-
-
             }
 
             blockFieldSetList[typeName] = new BlockInfo(typeCode, setFields.ToString());
-
-            // public void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)
-            {
-                sb.AppendLine();
-
-                sb.AppendLine($"{tab}\tpublic void Dump(TextWriter writer, DumpOutputType outputType = DumpOutputType.FormattedKeyValue)");
-                sb.AppendLine($"{tab}\t{{");
-                sb.AppendLine($"{tab}\t\tDictionary<string, XAQueryFieldInfo> dict = GetFieldsInfo();");
-                sb.AppendLine($"{tab}\t\twriter.Dump(_blockName, dict, outputType);");
-                sb.AppendLine();
-                sb.AppendLine($"{tab}\t}}");
-            }
 
             // public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
             {
                 sb.AppendLine();
 
-                sb.AppendLine($"{tab}\tpublic Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()");
+                sb.AppendLine($"{tab}\tpublic override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()");
                 sb.AppendLine($"{tab}\t{{");
                 sb.AppendLine($"{tab}\t\tDictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();");
                 foreach (string item in blockText.Skip(1))
@@ -335,13 +321,12 @@ namespace Res2Query
             {
                 sb.AppendLine();
 
-                sb.AppendLine($"{tab}\tpublic bool IsValidData = true;");
-                sb.AppendLine($"{tab}\tpublic string InvalidReason;");
-
                 sb.AppendLine($"{tab}\tpublic static {classPrefix}{typeName} FromQuery({classPrefix}{queryTypeName} query)");
                 sb.AppendLine($"{tab}\t{{");
 
                 sb.AppendLine($"{tab}\t\t{classPrefix}{typeName} block = new {classPrefix}{typeName}();");
+                sb.AppendLine($"{tab}\t\tblock.IsValidData = true;");
+                sb.AppendLine($"{tab}\t\tblock.InvalidReason = \"\";");
 
                 if (isRealType == false)
                 {
@@ -659,7 +644,7 @@ namespace Res2Query
                     break;
             }
 
-            sb.AppendLine($"{tab}readonly {fieldType} {fieldName} = {valueText};");
+            sb.AppendLine($"{tab}static readonly {fieldType} {fieldName} = {valueText};");
         }
 
         private static void AddGetProperty(StringBuilder sb, string tab, string propType, string propName, string fieldName, int fieldValue)

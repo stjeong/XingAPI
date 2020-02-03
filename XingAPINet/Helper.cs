@@ -256,7 +256,7 @@ namespace XingAPINet
                 case DumpOutputType.FormattedKeyValue:
                     foreach (string key in dict.Keys)
                     {
-                        fieldText.AppendLine($"\t{key} == {dict[key].FieldFormattedValue}");
+                        fieldText.AppendLine($"\t{key} == {dict[key].FieldFormattedValue} // {dict[key].FieldDesc}");
                         totalSize += (int)Math.Truncate(dict[key].LengthOrFormat);
                     }
 
