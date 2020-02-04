@@ -1621,6 +1621,7 @@
 				public const string JTC = "950170"; // JTC KR8392080006
 				public const string SNK = "950180"; // SNK KR8392100002
 			}
+			public static int NumberOfKOSDAQ = 1407;
 			public partial class KOSPI
 			{
 				public const string 동화약품 = "000020"; // 동화약품 KR7000020008
@@ -3150,6 +3151,7 @@
 				public const string 미래에셋_중국_심천_1 = "590018"; // 미래에셋 중국 심천 1 KRG596100187
 				public const string 하나_코스피_변동성추 = "700001"; // 하나 코스피 변동성추 KRG701800010
 			}
+			public static int NumberOfKOSPI = 1526;
 		}
 
 	}

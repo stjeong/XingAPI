@@ -60,6 +60,8 @@ namespace StockCodeGen
             sb.AppendLine($"{tab}public partial class SHCODE");
             sb.AppendLine($"{tab}{{");
 
+            int totalCode = 0;
+
             {
                 sb.AppendLine($"{tab}\tpublic partial class KOSDAQ");
                 sb.AppendLine($"{tab}\t{{");
@@ -70,9 +72,12 @@ namespace StockCodeGen
                 foreach (var item in items)
                 {
                     sb.AppendLine($"{tab}\t\tpublic const string {ToVariableName(item.Name, names)} = \"{item.SHCode}\"; // {item.Name} {item.ExpCode}");
+                    totalCode++;
                 }
                 sb.AppendLine($"{tab}\t}}");
             }
+            sb.AppendLine($"{tab}\tpublic static int NumberOfKOSDAQ = {totalCode};");
+            totalCode = 0;
 
             {
                 sb.AppendLine($"{tab}\tpublic partial class KOSPI");
@@ -84,9 +89,12 @@ namespace StockCodeGen
                 foreach (var item in items)
                 {
                     sb.AppendLine($"{tab}\t\tpublic const string {ToVariableName(item.Name, names)} = \"{item.SHCode}\"; // {item.Name} {item.ExpCode}");
+                    totalCode++;
                 }
                 sb.AppendLine($"{tab}\t}}");
             }
+            sb.AppendLine($"{tab}\tpublic static int NumberOfKOSPI = {totalCode};");
+            totalCode = 0;
 
             sb.AppendLine($"{tab}}}");
 
