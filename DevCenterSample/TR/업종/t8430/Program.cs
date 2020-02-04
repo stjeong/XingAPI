@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using XingAPINet;
 
-namespace t1475
+namespace t8430
 {
     class Program
     {
@@ -33,13 +33,9 @@ namespace t1475
                     return;
                 }
 
-                int pageSize = 10;
-                int totalSize = 30;
-
                 if (useDemoServer)
                 {
-                    var items = XQt1475.Get(Stock.SHCODE.KOSDAQ.이베스트투자증권, datacnt: totalSize);
-
+                    var items = XQt8430.Get(XQt8430Gubun.코스닥);
                     foreach (var item in items)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline80Cols);
@@ -47,45 +43,21 @@ namespace t1475
                 }
                 else
                 {
-                    using (XQt1475 query = new XQt1475())
+                    using (var query = new XQt8430())
                     {
-                        XQt1475InBlock inBlock = new XQt1475InBlock
+                        query.SetFieldData(XQt8430InBlock.BlockName, XQt8430InBlock.F.gubun, 0, "1"); // 코스피 == '1'
+                        if (query.Request() < 0)
                         {
-                            shcode = Stock.SHCODE.KOSDAQ.이베스트투자증권,
-                            datacnt = pageSize,
-                        };
+                            Console.WriteLine("Failed to send request");
+                        }
 
-                        query.SetBlock(inBlock);
-
-                        bool nextPage = false;
-
-                        while (totalSize > 0)
+                        XQt8430OutBlock[] outBlocks = query.GetBlocks();
+                        foreach (var item in outBlocks)
                         {
-                            if (query.Request(nextPage) < 0)
-                            {
-                                Console.WriteLine("Failed to send request");
-                            }
-
-                            XQt1475OutBlock outBlock = query.GetBlock();
-                            if (outBlock.IsValidData == true)
-                            {
-                                outBlock.Dump(Console.Out, DumpOutputType.Inline);
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
-                            }
-
-                            foreach (var item in query.GetBlock1s())
+                            if (item.IsValidData == true)
                             {
                                 item.Dump(Console.Out, DumpOutputType.Inline80Cols);
-                                totalSize--;
                             }
-
-                            inBlock.CopyValueFromBlock(outBlock);
-                            query.SetBlock(inBlock);
-
-                            nextPage = true;
                         }
                     }
                 }

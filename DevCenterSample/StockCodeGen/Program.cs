@@ -35,14 +35,62 @@ namespace StockCodeGen
 
                 sb.AppendLine($"{tab}public partial class Stock");
                 sb.AppendLine($"{tab}{{");
-                string tmcodes = GetTmCode(tab + "\t");
-                sb.AppendLine(tmcodes);
+
+                {
+                    string tmcodes = GetTmCode(tab + "\t");
+                    sb.AppendLine(tmcodes);
+                }
+
+                {
+                    string shcodes = GetSHCode(tab + "\t");
+                    sb.AppendLine(shcodes);
+                }
+
                 sb.AppendLine($"{tab}}}");
             }
 
             sb.AppendLine("}");
 
             File.WriteAllText("Stock.cs", sb.ToString(), Encoding.UTF8);
+        }
+        private string GetSHCode(string tab)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"{tab}public partial class SHCODE");
+            sb.AppendLine($"{tab}{{");
+
+            {
+                sb.AppendLine($"{tab}\tpublic partial class KOSDAQ");
+                sb.AppendLine($"{tab}\t{{");
+
+                var items = XQt8430.GetKOSDAQ(true);
+                Dictionary<string, int> names = new Dictionary<string, int>();
+
+                foreach (var item in items)
+                {
+                    sb.AppendLine($"{tab}\t\tpublic const string {ToVariableName(item.Name, names)} = \"{item.SHCode}\"; // {item.Name} {item.ExpCode}");
+                }
+                sb.AppendLine($"{tab}\t}}");
+            }
+
+            {
+                sb.AppendLine($"{tab}\tpublic partial class KOSPI");
+                sb.AppendLine($"{tab}\t{{");
+
+                var items = XQt8430.GetKOSPI(true);
+                Dictionary<string, int> names = new Dictionary<string, int>();
+
+                foreach (var item in items)
+                {
+                    sb.AppendLine($"{tab}\t\tpublic const string {ToVariableName(item.Name, names)} = \"{item.SHCode}\"; // {item.Name} {item.ExpCode}");
+                }
+                sb.AppendLine($"{tab}\t}}");
+            }
+
+            sb.AppendLine($"{tab}}}");
+
+            return sb.ToString();
         }
 
         private string GetTmCode(string tab)
@@ -53,9 +101,11 @@ namespace StockCodeGen
             sb.AppendLine($"{tab}{{");
 
             var items = XQt8425.Get();
+            Dictionary<string, int> names = new Dictionary<string, int> ();
+
             foreach (var item in items)
             {
-                sb.AppendLine($"{tab}\tpublic const string {ToVariableName(item.tmname)} = \"{item.tmcode}\";");
+                sb.AppendLine($"{tab}\tpublic const string {ToVariableName(item.tmname, names)} = \"{item.tmcode}\"; // {item.tmname}");
             }
 
             sb.AppendLine($"{tab}}}");
@@ -63,9 +113,9 @@ namespace StockCodeGen
             return sb.ToString();
         }
 
-        private string ToVariableName(string tmname)
+        private string ToVariableName(string tmname, Dictionary<string, int> names)
         {
-            string result = tmname.Replace(" ", "");
+            string result = tmname.Replace(" ", "_");
             result = result.Replace("(", "");
             result = result.Replace(")", "");
             result = result.Replace("/", "");
@@ -73,8 +123,23 @@ namespace StockCodeGen
             result = result.Replace("＆", "");
             result = result.Replace(",", "");
             result = result.Replace("-", "");
+            result = result.Replace(".", "");
+            result = result.Replace("%", "");
+            result = result.Replace("+", "");
 
             result = AddIfStartWithDigit(result);
+
+            if (names.ContainsKey(result) == true)
+            {
+                string withDigit = result + ("_" + names[result]);
+                names[result] += 1;
+
+                result = withDigit;
+            }
+            else
+            {
+                names.Add(result, 2);
+            }
 
             return result;
         }

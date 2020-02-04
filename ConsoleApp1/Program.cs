@@ -55,7 +55,7 @@ namespace ConsoleApp1
                 // 현재가 조회한 후,
                 using (XQt1101 query = new XQt1101())
                 {
-                    XQt1101InBlock inBlock = new XQt1101InBlock { shcode = Stock.SHCODE.이베스트 };
+                    XQt1101InBlock inBlock = new XQt1101InBlock { shcode = Stock.SHCODE.KOSDAQ.이베스트투자증권 };
 
                     if (query.SetBlock(inBlock) == false)
                     {
@@ -89,7 +89,7 @@ namespace ConsoleApp1
                     //    return;
                     //}
 
-                    real.SetFieldData(XRS3_InBlock.BlockName, XRS3_InBlock.F.shcode, Stock.SHCODE.이베스트);
+                    real.SetFieldData(XRS3_InBlock.BlockName, XRS3_InBlock.F.shcode, Stock.SHCODE.KOSDAQ.이베스트투자증권);
                     real.Advise();
 
                     while (_exitProcess == false)

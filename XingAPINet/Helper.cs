@@ -12,12 +12,12 @@ namespace XingAPINet
 {
     public partial class Stock
     {
-        public static class SHCODE
-        {
-            public const string 이베스트 = "078020";
-            public const string 현대건설 = "000720";
-            public const string 현대로템 = "064350";
-        }
+        //public static class SHCODE
+        //{
+        //    public const string 이베스트 = "078020";
+        //    public const string 현대건설 = "000720";
+        //    public const string 현대로템 = "064350";
+        //}
     }
 
     public enum DumpOutputType

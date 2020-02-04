@@ -35,7 +35,7 @@ namespace t1532
 
                 if (useDemoServer)
                 {
-                    var items = XQt1532.Get(Stock.SHCODE.현대건설);
+                    var items = XQt1532.Get(Stock.SHCODE.KOSPI.현대건설);
                     foreach (var item in items)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline);
@@ -45,7 +45,7 @@ namespace t1532
                 {
                     using (var query = new XQt1532())
                     {
-                        query.SetFieldData(XQt1532InBlock.BlockName, XQt1532InBlock.F.shcode, 0, Stock.SHCODE.현대건설);
+                        query.SetFieldData(XQt1532InBlock.BlockName, XQt1532InBlock.F.shcode, 0, Stock.SHCODE.KOSPI.현대건설);
 
                         if (query.Request() < 0)
                         {
