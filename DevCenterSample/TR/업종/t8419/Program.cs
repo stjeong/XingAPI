@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using XingAPINet;
 
-namespace t1475
+namespace t8419
 {
     class Program
     {
@@ -33,13 +33,11 @@ namespace t1475
                     return;
                 }
 
-                int pageSize = 10;
-                int totalSize = 30;
-
                 if (useDemoServer)
                 {
-                    var items = XQt1475.Get("078020", datacnt: totalSize);
+                    var items = XQt8419.Get("001", '2', 0, "20190101", "201905030", null, 'N');
 
+                    Console.WriteLine($"[{XQt8419OutBlock1.BlockName}]");
                     foreach (var item in items)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline80Cols);
@@ -47,46 +45,44 @@ namespace t1475
                 }
                 else
                 {
-                    using (XQt1475 query = new XQt1475())
+                    using (XQt8419 query = new XQt8419())
                     {
-                        XQt1475InBlock inBlock = new XQt1475InBlock
+                        var inBlock = new XQt8419InBlock
                         {
-                            shcode = "078020",
-                            datacnt = pageSize,
+                            shcode = "001",
+                            gubun = '2',
+                            sdate = "20170101",
+                            edate = "20180424",
+                            /* qrycnt = pageSize, // not work */
+                            comp_yn = 'N',
                         };
 
                         query.SetBlock(inBlock);
 
-                        bool nextPage = false;
-
-                        while (totalSize > 0)
+                        if (query.Request() < 0)
                         {
-                            if (query.Request(nextPage) < 0)
-                            {
-                                Console.WriteLine("Failed to send request");
-                            }
-
-                            XQt1475OutBlock outBlock = query.GetBlock();
-                            if (outBlock.IsValidData == true)
-                            {
-                                outBlock.Dump(Console.Out, DumpOutputType.Inline);
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
-                            }
-
-                            foreach (var item in query.GetBlock1s())
-                            {
-                                item.Dump(Console.Out, DumpOutputType.Inline80Cols);
-                                totalSize--;
-                            }
-
-                            inBlock.CopyValueFromBlock(outBlock);
-                            query.SetBlock(inBlock);
-
-                            nextPage = true;
+                            Console.WriteLine("Failed to send request");
                         }
+
+                        var outBlock = query.GetBlock();
+                        if (outBlock.IsValidData == true)
+                        {
+                            Console.WriteLine($"[{outBlock.GetBlockName()}]");
+                            outBlock.Dump(Console.Out, DumpOutputType.Inline80Cols);
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                        }
+
+                        Console.WriteLine($"[{XQt8419OutBlock1.BlockName}]");
+                        foreach (var item in query.GetBlock1s())
+                        {
+                            item.Dump(Console.Out, DumpOutputType.Inline80Cols);
+                        }
+
+                        inBlock.CopyValueFromBlock(outBlock);
+                        query.SetBlock(inBlock);
                     }
                 }
             }
