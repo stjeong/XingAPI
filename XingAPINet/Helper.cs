@@ -93,7 +93,7 @@ namespace XingAPINet
             }
 
             byte[] encryptedText = Convert.FromBase64String(text);
-            byte[] plainText = null;
+            byte[] plainText;
 
             try
             {
@@ -132,9 +132,9 @@ namespace XingAPINet
     }
 
     [AttributeUsage(AttributeTargets.Field, Inherited = false)]
-    public partial class XAQueryFieldAttribute : Attribute
+    public sealed partial class XAQueryFieldAttribute : Attribute
     {
-        string _fieldDesc;
+        readonly string _fieldDesc;
         public string FieldDesc => _fieldDesc;
 
         public XAQueryFieldAttribute(string fieldDesc)
@@ -323,6 +323,10 @@ namespace XingAPINet
     {
         public readonly string DataFieldName;
         public readonly string DataValue;
+
+        public InvalidDataFormatException() : this("") { }
+
+        public InvalidDataFormatException(string message) : this("", "", message) { }
 
         public InvalidDataFormatException(string dataFieldName, string invalidValue) : this(dataFieldName, invalidValue, "")
         {

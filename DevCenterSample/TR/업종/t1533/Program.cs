@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using XingAPINet;
 
-namespace t1514
+namespace t1533
 {
     class Program
     {
@@ -33,13 +33,9 @@ namespace t1514
                     return;
                 }
 
-                int pageSize = 10;
-                int totalSize = 30;
-
                 if (useDemoServer)
                 {
-                    var items = XQt1514.Get("301", gubun2: XQt1514.Gubun2.일, cnt: totalSize);
-
+                    var items = XQt1533.Get(XQt1533Gubun.상승율상위);
                     foreach (var item in items)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline80Cols);
@@ -47,46 +43,22 @@ namespace t1514
                 }
                 else
                 {
-                    using (XQt1514 query = new XQt1514())
+                    using (var query = new XQt1533())
                     {
-                        var inBlock = new XQt1514InBlock
+                        query.SetFieldData(XQt1533InBlock.BlockName, XQt1533InBlock.F.gubun, 0, "2"); // 2 == XQt1533Gubun.하락율상위
+
+                        if (query.Request() < 0)
                         {
-                            upcode = "301",
-                            cnt = pageSize,
-                            gubun2 = XQt1514.Gubun2.월,
-                        };
+                            Console.WriteLine("Failed to send request");
+                        }
 
-                        query.SetBlock(inBlock);
-
-                        bool nextPage = false;
-
-                        while (totalSize > 0)
+                        XQt1533OutBlock[] outBlocks = query.GetBlocks();
+                        foreach (var item in outBlocks)
                         {
-                            if (query.Request(nextPage) < 0)
-                            {
-                                Console.WriteLine("Failed to send request");
-                            }
-
-                            var outBlock = query.GetBlock();
-                            if (outBlock.IsValidData == true)
-                            {
-                                outBlock.Dump(Console.Out, DumpOutputType.Inline);
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
-                            }
-
-                            foreach (var item in query.GetBlock1s())
+                            if (item.IsValidData == true)
                             {
                                 item.Dump(Console.Out, DumpOutputType.Inline80Cols);
-                                totalSize--;
                             }
-
-                            inBlock.CopyValueFromBlock(outBlock);
-                            query.SetBlock(inBlock);
-
-                            nextPage = true;
                         }
                     }
                 }

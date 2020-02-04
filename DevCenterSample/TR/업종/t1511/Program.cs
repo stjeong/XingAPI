@@ -35,14 +35,14 @@ namespace t1511
 
                 if (useDemoServer)
                 {
-                    var outBlock = XQt1511.Get("002");
+                    var outBlock = XQt1511.Get(XQt1511.Upcode.코스피200);
                     outBlock?.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
                 }
                 else
                 {
                     using (XQt1511 query = new XQt1511())
                     {
-                        query.SetFieldData(XQt1511InBlock.BlockName, XQt1511InBlock.F.upcode, 0, "001");
+                        query.SetFieldData(XQt1511InBlock.BlockName, XQt1511InBlock.F.upcode, 0, XQt1511.Upcode.코스피);
                         if (query.Request() < 0)
                         {
                             Console.WriteLine("Failed to send request");
