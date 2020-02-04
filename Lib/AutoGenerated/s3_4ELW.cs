@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -641,16 +641,16 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (chetime.Length > 6) return false; // char 6
+			if (chetime?.Length > 6) return false; // char 6
 			// sign char 1
 			if (change.ToString().Length > 8) return false; // long 8
 			// drate float 6.2
 			if (price.ToString().Length > 8) return false; // long 8
-			if (opentime.Length > 6) return false; // char 6
+			if (opentime?.Length > 6) return false; // char 6
 			if (open.ToString().Length > 8) return false; // long 8
-			if (hightime.Length > 6) return false; // char 6
+			if (hightime?.Length > 6) return false; // char 6
 			if (high.ToString().Length > 8) return false; // long 8
-			if (lowtime.Length > 6) return false; // char 6
+			if (lowtime?.Length > 6) return false; // char 6
 			if (low.ToString().Length > 8) return false; // long 8
 			// cgubun char 1
 			if (cvolume.ToString().Length > 8) return false; // long 8
@@ -664,11 +664,11 @@ namespace XingAPINet
 			if (w_avrg.ToString().Length > 8) return false; // long 8
 			if (offerho.ToString().Length > 8) return false; // long 8
 			if (bidho.ToString().Length > 8) return false; // long 8
-			if (status.Length > 2) return false; // char 2
+			if (status?.Length > 2) return false; // char 2
 			if (jnilvolume.ToString().Length > 12) return false; // long 12
 			// premium float 8.2
 			// moneyness char 1
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 			if (lpvolume.ToString().Length > 15) return false; // long 15
 
 			return true;
@@ -680,24 +680,32 @@ namespace XingAPINet
 		/// <summary>
 		/// s3_
 		/// </summary>
-		static readonly string _typeName = "s3_";
+		public const string _typeName = "s3_";
+		/// <summary>
+		/// ELW체결(s3)
+		/// </summary>
+		public const string _typeDesc = "ELW체결(s3)";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// s3_
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// ELW체결(s3)
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

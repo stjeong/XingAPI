@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// ChartExcelInBlock
 		/// </summary>
-		static readonly string _blockName = "ChartExcelInBlock";
+		public const string _blockName = "ChartExcelInBlock";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// ChartExcelInBlock
 		/// </summary>
@@ -225,14 +225,14 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (indexid.ToString().Length > 10) return false; // long 10
-			if (indexname.Length > 40) return false; // char 40
-			if (indexparam.Length > 40) return false; // char 40
+			if (indexname?.Length > 40) return false; // char 40
+			if (indexparam?.Length > 40) return false; // char 40
 			// indexouttype char 1
 			// market char 1
 			// period char 1
-			if (shcode.Length > 8) return false; // char 8
+			if (shcode?.Length > 8) return false; // char 8
 			// isexcelout char 1
-			if (excelfilename.Length > 256) return false; // char 256
+			if (excelfilename?.Length > 256) return false; // char 256
 			// IsReal char 1
 
 			return true;
@@ -244,19 +244,19 @@ namespace XingAPINet
 		/// <summary>
 		/// ChartExcelOutBlock
 		/// </summary>
-		static readonly string _blockName = "ChartExcelOutBlock";
+		public const string _blockName = "ChartExcelOutBlock";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// ChartExcelOutBlock
 		/// </summary>
@@ -388,19 +388,19 @@ namespace XingAPINet
 		/// <summary>
 		/// ChartExcelOutBlock1
 		/// </summary>
-		static readonly string _blockName = "ChartExcelOutBlock1";
+		public const string _blockName = "ChartExcelOutBlock1";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// ChartExcelOutBlock1
 		/// </summary>
@@ -683,8 +683,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (date.Length > 8) return false; // char 8
-			if (time.Length > 6) return false; // char 6
+			if (date?.Length > 8) return false; // char 8
+			if (time?.Length > 6) return false; // char 6
 			// open float 10
 			// high float 10
 			// low float 10
@@ -706,43 +706,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CHARTEXCEL
 		/// </summary>
-		static readonly string _typeName = "CHARTEXCEL";
+		public const string _typeName = "CHARTEXCEL";
 		/// <summary>
 		/// 챠트엑셀데이터조회
 		/// </summary>
-		static readonly string _typeDesc = "챠트엑셀데이터조회";
+		public const string _typeDesc = "챠트엑셀데이터조회";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CHARTEXCEL

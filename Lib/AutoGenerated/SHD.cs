@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -466,7 +466,7 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			// sijanggubun char 1
-			if (hname.Length > 20) return false; // char 20
+			if (hname?.Length > 20) return false; // char 20
 			if (price.ToString().Length > 8) return false; // long 8
 			// sign char 1
 			if (change.ToString().Length > 8) return false; // long 8
@@ -476,7 +476,7 @@ namespace XingAPINet
 			if (updnlmtprice.ToString().Length > 8) return false; // long 8
 			// updnlmtdrate float 6.2
 			if (jnilvolume.ToString().Length > 12) return false; // long 12
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 			// gwangubun char 1
 			// undergubun char 1
 			// tgubun char 1
@@ -493,24 +493,32 @@ namespace XingAPINet
 		/// <summary>
 		/// SHD
 		/// </summary>
-		static readonly string _typeName = "SHD";
+		public const string _typeName = "SHD";
+		/// <summary>
+		/// 상/하한가근접이탈(SHD)
+		/// </summary>
+		public const string _typeDesc = "상/하한가근접이탈(SHD)";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// SHD
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// 상/하한가근접이탈(SHD)
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

@@ -11,10 +11,10 @@ namespace XingAPINet
     public partial class XingClient : IDisposable
     {
         XASessionClass _xingSession;
-        bool _useDemoServer = true;
+        readonly bool _useDemoServer = true;
         bool _loggedIn = false;
 
-        EventWaitHandle _ewh_LoginSync = new EventWaitHandle(false, EventResetMode.ManualReset);
+        readonly EventWaitHandle _ewh_LoginSync = new EventWaitHandle(false, EventResetMode.ManualReset);
 
         public int NumberOfAccount
         {
@@ -101,9 +101,12 @@ namespace XingAPINet
         public bool ConnectWithLogin(LoginInfo user)
         {
             _xingSession = new XASessionClass();
-            _xingSession.Disconnect += XingSession_Disconnect;
             _xingSession._IXASessionEvents_Event_Login += _xingSession_Login;
+
+#pragma warning disable CS0618
+            _xingSession.Disconnect += XingSession_Disconnect;
             _xingSession._IXASessionEvents_Event_Logout += _xingSession_Logout;
+#pragma warning restore CS0618
 
             string serverAddress = (_useDemoServer == true) ? "demo.etrade.co.kr" : "hts.etrade.co.kr";
             bool bConnect = _xingSession.ConnectServer(serverAddress, 20001);
@@ -183,10 +186,10 @@ namespace XingAPINet
 
     public class LoginEventArgs : EventArgs
     {
-        string _szCode;
+        readonly string _szCode;
         public string SzCode => _szCode;
 
-        string _szMsg;
+        readonly string _szMsg;
         public string SzMsg => _szMsg;
 
         public LoginEventArgs(string szCode, string szMsg)

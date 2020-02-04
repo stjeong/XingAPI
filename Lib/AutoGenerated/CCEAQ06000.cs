@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CCEAQ06000InBlock1
 		/// </summary>
-		static readonly string _blockName = "CCEAQ06000InBlock1";
+		public const string _blockName = "CCEAQ06000InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CCEAQ06000InBlock1
 		/// </summary>
@@ -271,14 +271,14 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			// ChoicInptTpCode char 1
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (QrySrtDt.Length > 8) return false; // char 8
-			if (QryEndDt.Length > 8) return false; // char 8
-			if (FnoClssCode.Length > 2) return false; // char 2
-			if (PrdgrpCode.Length > 2) return false; // char 2
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (QrySrtDt?.Length > 8) return false; // char 8
+			if (QryEndDt?.Length > 8) return false; // char 8
+			if (FnoClssCode?.Length > 2) return false; // char 2
+			if (PrdgrpCode?.Length > 2) return false; // char 2
 			// PrdtExecTpCode char 1
-			if (FnoTrdPtnCode.Length > 2) return false; // char 2
+			if (FnoTrdPtnCode?.Length > 2) return false; // char 2
 			if (SrtOrdNo2.ToString().Length > 10) return false; // long 10
 			if (EndNo.ToString().Length > 10) return false; // long 10
 			// StnlnSeqTp char 1
@@ -292,19 +292,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CCEAQ06000OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CCEAQ06000OutBlock1";
+		public const string _blockName = "CCEAQ06000OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CCEAQ06000OutBlock1
 		/// </summary>
@@ -585,14 +585,14 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			// ChoicInptTpCode char 1
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (QrySrtDt.Length > 8) return false; // char 8
-			if (QryEndDt.Length > 8) return false; // char 8
-			if (FnoClssCode.Length > 2) return false; // char 2
-			if (PrdgrpCode.Length > 2) return false; // char 2
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (QrySrtDt?.Length > 8) return false; // char 8
+			if (QryEndDt?.Length > 8) return false; // char 8
+			if (FnoClssCode?.Length > 2) return false; // char 2
+			if (PrdgrpCode?.Length > 2) return false; // char 2
 			// PrdtExecTpCode char 1
-			if (FnoTrdPtnCode.Length > 2) return false; // char 2
+			if (FnoTrdPtnCode?.Length > 2) return false; // char 2
 			if (SrtOrdNo2.ToString().Length > 10) return false; // long 10
 			if (EndNo.ToString().Length > 10) return false; // long 10
 			// StnlnSeqTp char 1
@@ -606,19 +606,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CCEAQ06000OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CCEAQ06000OutBlock2";
+		public const string _blockName = "CCEAQ06000OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CCEAQ06000OutBlock2
 		/// </summary>
@@ -754,7 +754,7 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (AcntNm.Length > 40) return false; // char 40
+			if (AcntNm?.Length > 40) return false; // char 40
 			if (FutsOrdQty.ToString().Length > 16) return false; // long 16
 			if (FutsExecQty.ToString().Length > 16) return false; // long 16
 
@@ -767,19 +767,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CCEAQ06000OutBlock3
 		/// </summary>
-		static readonly string _blockName = "CCEAQ06000OutBlock3";
+		public const string _blockName = "CCEAQ06000OutBlock3";
 		/// <summary>
 		/// Out1(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out1(*EMPTY*)";
+		public const string _blockDesc = "Out1(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// CCEAQ06000OutBlock3
 		/// </summary>
@@ -1318,35 +1318,35 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (AcntNo1.Length > 20) return false; // char 20
-			if (OrdDt.Length > 8) return false; // char 8
+			if (AcntNo1?.Length > 20) return false; // char 20
+			if (OrdDt?.Length > 8) return false; // char 8
 			if (OrdNo.ToString().Length > 10) return false; // long 10
 			if (OrgOrdNo.ToString().Length > 10) return false; // long 10
-			if (OrdTime.Length > 9) return false; // char 9
-			if (FnoIsuNo.Length > 12) return false; // char 12
-			if (IsuNm.Length > 40) return false; // char 40
-			if (BnsTpNm.Length > 10) return false; // char 10
+			if (OrdTime?.Length > 9) return false; // char 9
+			if (FnoIsuNo?.Length > 12) return false; // char 12
+			if (IsuNm?.Length > 40) return false; // char 40
+			if (BnsTpNm?.Length > 10) return false; // char 10
 			// BnsTpCode char 1
-			if (MrcTpNm.Length > 10) return false; // char 10
-			if (FnoOrdprcPtnCode.Length > 2) return false; // char 2
-			if (FnoOrdprcPtnNm.Length > 40) return false; // char 40
+			if (MrcTpNm?.Length > 10) return false; // char 10
+			if (FnoOrdprcPtnCode?.Length > 2) return false; // char 2
+			if (FnoOrdprcPtnNm?.Length > 40) return false; // char 40
 			// OrdPrc double 13.2
 			if (OrdQty.ToString().Length > 16) return false; // long 16
-			if (OrdTpNm.Length > 10) return false; // char 10
-			if (ExecTpNm.Length > 10) return false; // char 10
+			if (OrdTpNm?.Length > 10) return false; // char 10
+			if (ExecTpNm?.Length > 10) return false; // char 10
 			// ExecPrc double 13.2
 			if (ExecQty.ToString().Length > 16) return false; // long 16
-			if (CtrctTime.Length > 9) return false; // char 9
+			if (CtrctTime?.Length > 9) return false; // char 9
 			if (CtrctNo.ToString().Length > 10) return false; // long 10
 			if (ExecNo.ToString().Length > 10) return false; // long 10
 			if (BnsplAmt.ToString().Length > 16) return false; // long 16
 			if (UnercQty.ToString().Length > 16) return false; // long 16
-			if (UserId.Length > 16) return false; // char 16
-			if (CommdaCode.Length > 2) return false; // char 2
-			if (CommdaCodeNm.Length > 40) return false; // char 40
-			if (IpAddr.Length > 16) return false; // char 16
-			if (TrdPtnTpNm.Length > 20) return false; // char 20
-			if (GrpId.Length > 20) return false; // char 20
+			if (UserId?.Length > 16) return false; // char 16
+			if (CommdaCode?.Length > 2) return false; // char 2
+			if (CommdaCodeNm?.Length > 40) return false; // char 40
+			if (IpAddr?.Length > 16) return false; // char 16
+			if (TrdPtnTpNm?.Length > 20) return false; // char 20
+			if (GrpId?.Length > 20) return false; // char 20
 
 			return true;
 		}
@@ -1357,43 +1357,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CCEAQ06000
 		/// </summary>
-		static readonly string _typeName = "CCEAQ06000";
+		public const string _typeName = "CCEAQ06000";
 		/// <summary>
 		/// 선물옵션 CME 주문체결내역조회
 		/// </summary>
-		static readonly string _typeDesc = "선물옵션 CME 주문체결내역조회";
+		public const string _typeDesc = "선물옵션 CME 주문체결내역조회";
 		/// <summary>
 		/// CCEAQ06000
 		/// </summary>
-		static readonly string _service = "CCEAQ06000";
+		public const string _service = "CCEAQ06000";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 김효종
 		/// </summary>
-		static readonly string _creator = "김효종";
+		public const string _creator = "김효종";
 		/// <summary>
 		/// 2012/04/17 17:48:18
 		/// </summary>
-		static readonly string _createdDate = "2012/04/17 17:48:18";
+		public const string _createdDate = "2012/04/17 17:48:18";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CCEAQ06000

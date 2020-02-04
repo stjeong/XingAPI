@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1638InBlock
 		/// </summary>
-		static readonly string _blockName = "t1638InBlock";
+		public const string _blockName = "t1638InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1638InBlock
 		/// </summary>
@@ -120,7 +120,7 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			// gubun1 char 1
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 			// gubun2 char 1
 
 			return true;
@@ -132,19 +132,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1638OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1638OutBlock";
+		public const string _blockName = "t1638OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t1638OutBlock
 		/// </summary>
@@ -444,7 +444,7 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (rank.ToString().Length > 4) return false; // long 4
-			if (hname.Length > 20) return false; // char 20
+			if (hname?.Length > 20) return false; // char 20
 			if (price.ToString().Length > 8) return false; // long 8
 			// sign char 1
 			if (change.ToString().Length > 8) return false; // long 8
@@ -456,7 +456,7 @@ namespace XingAPINet
 			if (sellrem.ToString().Length > 12) return false; // long 12
 			if (pdgvolume.ToString().Length > 12) return false; // long 12
 			if (sigatot.ToString().Length > 20) return false; // long 20
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -467,43 +467,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1638
 		/// </summary>
-		static readonly string _typeName = "t1638";
+		public const string _typeName = "t1638";
 		/// <summary>
 		/// 종목별잔량/사전공시(t1638)
 		/// </summary>
-		static readonly string _typeDesc = "종목별잔량/사전공시(t1638)";
+		public const string _typeDesc = "종목별잔량/사전공시(t1638)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1638

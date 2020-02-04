@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t2545InBlock
 		/// </summary>
-		static readonly string _blockName = "t2545InBlock";
+		public const string _blockName = "t2545InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t2545InBlock
 		/// </summary>
@@ -164,9 +164,9 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (eitem.Length > 2) return false; // char 2
+			if (eitem?.Length > 2) return false; // char 2
 			// sgubun char 1
-			if (upcode.Length > 3) return false; // char 3
+			if (upcode?.Length > 3) return false; // char 3
 			// nmin int 2
 			// cnt int 3
 			// bgubun char 1
@@ -180,19 +180,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t2545OutBlock
 		/// </summary>
-		static readonly string _blockName = "t2545OutBlock";
+		public const string _blockName = "t2545OutBlock";
 		/// <summary>
 		/// 기본출력
 		/// </summary>
-		static readonly string _blockDesc = "기본출력";
+		public const string _blockDesc = "기본출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t2545OutBlock
 		/// </summary>
@@ -519,22 +519,22 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (eitem.Length > 2) return false; // char 2
+			if (eitem?.Length > 2) return false; // char 2
 			// sgubun char 1
-			if (indcode.Length > 4) return false; // char 4
-			if (forcode.Length > 4) return false; // char 4
-			if (syscode.Length > 4) return false; // char 4
-			if (stocode.Length > 4) return false; // char 4
-			if (invcode.Length > 4) return false; // char 4
-			if (bancode.Length > 4) return false; // char 4
-			if (inscode.Length > 4) return false; // char 4
-			if (fincode.Length > 4) return false; // char 4
-			if (moncode.Length > 4) return false; // char 4
-			if (etccode.Length > 4) return false; // char 4
-			if (natcode.Length > 4) return false; // char 4
-			if (pefcode.Length > 4) return false; // char 4
-			if (jisucd.Length > 8) return false; // char 8
-			if (jisunm.Length > 20) return false; // char 20
+			if (indcode?.Length > 4) return false; // char 4
+			if (forcode?.Length > 4) return false; // char 4
+			if (syscode?.Length > 4) return false; // char 4
+			if (stocode?.Length > 4) return false; // char 4
+			if (invcode?.Length > 4) return false; // char 4
+			if (bancode?.Length > 4) return false; // char 4
+			if (inscode?.Length > 4) return false; // char 4
+			if (fincode?.Length > 4) return false; // char 4
+			if (moncode?.Length > 4) return false; // char 4
+			if (etccode?.Length > 4) return false; // char 4
+			if (natcode?.Length > 4) return false; // char 4
+			if (pefcode?.Length > 4) return false; // char 4
+			if (jisucd?.Length > 8) return false; // char 8
+			if (jisunm?.Length > 20) return false; // char 20
 
 			return true;
 		}
@@ -545,19 +545,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t2545OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t2545OutBlock1";
+		public const string _blockName = "t2545OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t2545OutBlock1
 		/// </summary>
@@ -1128,9 +1128,9 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (date.Length > 8) return false; // char 8
-			if (time.Length > 6) return false; // char 6
-			if (datetime.Length > 14) return false; // char 14
+			if (date?.Length > 8) return false; // char 8
+			if (time?.Length > 6) return false; // char 6
+			if (datetime?.Length > 14) return false; // char 14
 			if (indmsvol.ToString().Length > 8) return false; // long 8
 			// indmsamt double 12.0
 			if (formsvol.ToString().Length > 8) return false; // long 8
@@ -1169,43 +1169,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t2545
 		/// </summary>
-		static readonly string _typeName = "t2545";
+		public const string _typeName = "t2545";
 		/// <summary>
 		/// 상품선물투자자매매동향(챠트용)
 		/// </summary>
-		static readonly string _typeDesc = "상품선물투자자매매동향(챠트용)";
+		public const string _typeDesc = "상품선물투자자매매동향(챠트용)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t2545

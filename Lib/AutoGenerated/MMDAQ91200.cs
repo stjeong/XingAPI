@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// MMDAQ91200InBlock1
 		/// </summary>
-		static readonly string _blockName = "MMDAQ91200InBlock1";
+		public const string _blockName = "MMDAQ91200InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// MMDAQ91200InBlock1
 		/// </summary>
@@ -120,8 +120,8 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (IsuLgclssCode.Length > 2) return false; // char 2
-			if (IsuMdclssCode.Length > 2) return false; // char 2
+			if (IsuLgclssCode?.Length > 2) return false; // char 2
+			if (IsuMdclssCode?.Length > 2) return false; // char 2
 
 			return true;
 		}
@@ -132,19 +132,19 @@ namespace XingAPINet
 		/// <summary>
 		/// MMDAQ91200OutBlock1
 		/// </summary>
-		static readonly string _blockName = "MMDAQ91200OutBlock1";
+		public const string _blockName = "MMDAQ91200OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// MMDAQ91200OutBlock1
 		/// </summary>
@@ -264,8 +264,8 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (IsuLgclssCode.Length > 2) return false; // char 2
-			if (IsuMdclssCode.Length > 2) return false; // char 2
+			if (IsuLgclssCode?.Length > 2) return false; // char 2
+			if (IsuMdclssCode?.Length > 2) return false; // char 2
 
 			return true;
 		}
@@ -276,19 +276,19 @@ namespace XingAPINet
 		/// <summary>
 		/// MMDAQ91200OutBlock2
 		/// </summary>
-		static readonly string _blockName = "MMDAQ91200OutBlock2";
+		public const string _blockName = "MMDAQ91200OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// MMDAQ91200OutBlock2
 		/// </summary>
@@ -507,11 +507,11 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (IsuSmclssCode.Length > 3) return false; // char 3
-			if (IsuMdclssCode.Length > 2) return false; // char 2
-			if (IsuLrgMdclssNm.Length > 40) return false; // char 40
-			if (IsuLrgMidSmclssNm.Length > 40) return false; // char 40
-			if (ShtnHanglIsuNm.Length > 40) return false; // char 40
+			if (IsuSmclssCode?.Length > 3) return false; // char 3
+			if (IsuMdclssCode?.Length > 2) return false; // char 2
+			if (IsuLrgMdclssNm?.Length > 40) return false; // char 40
+			if (IsuLrgMidSmclssNm?.Length > 40) return false; // char 40
+			if (ShtnHanglIsuNm?.Length > 40) return false; // char 40
 			// CsgnMgnrt double 26.9
 			// MaintMgnrt double 26.9
 			// MnyMgnrt double 26.9
@@ -526,43 +526,43 @@ namespace XingAPINet
 		/// <summary>
 		/// MMDAQ91200
 		/// </summary>
-		static readonly string _typeName = "MMDAQ91200";
+		public const string _typeName = "MMDAQ91200";
 		/// <summary>
 		/// 파생상품증거금율조회
 		/// </summary>
-		static readonly string _typeDesc = "파생상품증거금율조회";
+		public const string _typeDesc = "파생상품증거금율조회";
 		/// <summary>
 		/// MMDAQ91200
 		/// </summary>
-		static readonly string _service = "MMDAQ91200";
+		public const string _service = "MMDAQ91200";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 임정선
 		/// </summary>
-		static readonly string _creator = "임정선";
+		public const string _creator = "임정선";
 		/// <summary>
 		/// 2014/09/03 15:16:28
 		/// </summary>
-		static readonly string _createdDate = "2014/09/03 15:16:28";
+		public const string _createdDate = "2014/09/03 15:16:28";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// MMDAQ91200

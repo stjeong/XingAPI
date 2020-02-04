@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// ChartIndexInBlock
 		/// </summary>
-		static readonly string _blockName = "ChartIndexInBlock";
+		public const string _blockName = "ChartIndexInBlock";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// ChartIndexInBlock
 		/// </summary>
@@ -270,15 +270,15 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (indexid.ToString().Length > 10) return false; // long 10
-			if (indexname.Length > 40) return false; // char 40
-			if (indexparam.Length > 40) return false; // char 40
+			if (indexname?.Length > 40) return false; // char 40
+			if (indexparam?.Length > 40) return false; // char 40
 			// market char 1
 			// period char 1
-			if (shcode.Length > 8) return false; // char 8
+			if (shcode?.Length > 8) return false; // char 8
 			if (qrycnt.ToString().Length > 4) return false; // long 4
 			if (ncnt.ToString().Length > 4) return false; // long 4
-			if (sdate.Length > 8) return false; // char 8
-			if (edate.Length > 8) return false; // char 8
+			if (sdate?.Length > 8) return false; // char 8
+			if (edate?.Length > 8) return false; // char 8
 			// Isamend char 1
 			// Isgab char 1
 			// IsReal char 1
@@ -292,19 +292,19 @@ namespace XingAPINet
 		/// <summary>
 		/// ChartIndexOutBlock
 		/// </summary>
-		static readonly string _blockName = "ChartIndexOutBlock";
+		public const string _blockName = "ChartIndexOutBlock";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// ChartIndexOutBlock
 		/// </summary>
@@ -436,19 +436,19 @@ namespace XingAPINet
 		/// <summary>
 		/// ChartIndexOutBlock1
 		/// </summary>
-		static readonly string _blockName = "ChartIndexOutBlock1";
+		public const string _blockName = "ChartIndexOutBlock1";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// ChartIndexOutBlock1
 		/// </summary>
@@ -731,8 +731,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (date.Length > 8) return false; // char 8
-			if (time.Length > 6) return false; // char 6
+			if (date?.Length > 8) return false; // char 8
+			if (time?.Length > 6) return false; // char 6
 			// open float 10
 			// high float 10
 			// low float 10
@@ -754,43 +754,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CHARTINDEX
 		/// </summary>
-		static readonly string _typeName = "CHARTINDEX";
+		public const string _typeName = "CHARTINDEX";
 		/// <summary>
 		/// 챠트지표데이터조회
 		/// </summary>
-		static readonly string _typeDesc = "챠트지표데이터조회";
+		public const string _typeDesc = "챠트지표데이터조회";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CHARTINDEX

@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOEQ11100InBlock1
 		/// </summary>
-		static readonly string _blockName = "CFOEQ11100InBlock1";
+		public const string _blockName = "CFOEQ11100InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CFOEQ11100InBlock1
 		/// </summary>
@@ -135,9 +135,9 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (BnsDt.Length > 8) return false; // char 8
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (BnsDt?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -148,19 +148,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOEQ11100OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CFOEQ11100OutBlock1";
+		public const string _blockName = "CFOEQ11100OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CFOEQ11100OutBlock1
 		/// </summary>
@@ -296,9 +296,9 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (BnsDt.Length > 8) return false; // char 8
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (BnsDt?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -309,19 +309,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOEQ11100OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CFOEQ11100OutBlock2";
+		public const string _blockName = "CFOEQ11100OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CFOEQ11100OutBlock2
 		/// </summary>
@@ -1977,7 +1977,7 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (AcntNm.Length > 40) return false; // char 40
+			if (AcntNm?.Length > 40) return false; // char 40
 			if (OpnmkDpsamtTotamt.ToString().Length > 16) return false; // long 16
 			if (OpnmkDps.ToString().Length > 16) return false; // long 16
 			if (OpnmkMnyrclAmt.ToString().Length > 16) return false; // long 16
@@ -2085,43 +2085,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOEQ11100
 		/// </summary>
-		static readonly string _typeName = "CFOEQ11100";
+		public const string _typeName = "CFOEQ11100";
 		/// <summary>
 		/// 선물옵션가정산예탁금상세
 		/// </summary>
-		static readonly string _typeDesc = "선물옵션가정산예탁금상세";
+		public const string _typeDesc = "선물옵션가정산예탁금상세";
 		/// <summary>
 		/// CFOEQ11100
 		/// </summary>
-		static readonly string _service = "CFOEQ11100";
+		public const string _service = "CFOEQ11100";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 김정현
 		/// </summary>
-		static readonly string _creator = "김정현";
+		public const string _creator = "김정현";
 		/// <summary>
 		/// 2012/03/16 14:04:41
 		/// </summary>
-		static readonly string _createdDate = "2012/03/16 14:04:41";
+		public const string _createdDate = "2012/03/16 14:04:41";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CFOEQ11100

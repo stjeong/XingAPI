@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// FOCCQ33600InBlock1
 		/// </summary>
-		static readonly string _blockName = "FOCCQ33600InBlock1";
+		public const string _blockName = "FOCCQ33600InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// FOCCQ33600InBlock1
 		/// </summary>
@@ -165,10 +165,10 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (QrySrtDt.Length > 8) return false; // char 8
-			if (QryEndDt.Length > 8) return false; // char 8
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (QrySrtDt?.Length > 8) return false; // char 8
+			if (QryEndDt?.Length > 8) return false; // char 8
 			// TermTp char 1
 
 			return true;
@@ -180,19 +180,19 @@ namespace XingAPINet
 		/// <summary>
 		/// FOCCQ33600OutBlock1
 		/// </summary>
-		static readonly string _blockName = "FOCCQ33600OutBlock1";
+		public const string _blockName = "FOCCQ33600OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// FOCCQ33600OutBlock1
 		/// </summary>
@@ -360,10 +360,10 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (QrySrtDt.Length > 8) return false; // char 8
-			if (QryEndDt.Length > 8) return false; // char 8
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (QrySrtDt?.Length > 8) return false; // char 8
+			if (QryEndDt?.Length > 8) return false; // char 8
 			// TermTp char 1
 
 			return true;
@@ -375,19 +375,19 @@ namespace XingAPINet
 		/// <summary>
 		/// FOCCQ33600OutBlock2
 		/// </summary>
-		static readonly string _blockName = "FOCCQ33600OutBlock2";
+		public const string _blockName = "FOCCQ33600OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// FOCCQ33600OutBlock2
 		/// </summary>
@@ -587,7 +587,7 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (AcntNm.Length > 40) return false; // char 40
+			if (AcntNm?.Length > 40) return false; // char 40
 			if (BnsctrAmt.ToString().Length > 16) return false; // long 16
 			if (MnyinAmt.ToString().Length > 16) return false; // long 16
 			if (MnyoutAmt.ToString().Length > 16) return false; // long 16
@@ -604,19 +604,19 @@ namespace XingAPINet
 		/// <summary>
 		/// FOCCQ33600OutBlock3
 		/// </summary>
-		static readonly string _blockName = "FOCCQ33600OutBlock3";
+		public const string _blockName = "FOCCQ33600OutBlock3";
 		/// <summary>
 		/// OutLst(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "OutLst(*EMPTY*)";
+		public const string _blockDesc = "OutLst(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// FOCCQ33600OutBlock3
 		/// </summary>
@@ -851,7 +851,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (BaseDt.Length > 8) return false; // char 8
+			if (BaseDt?.Length > 8) return false; // char 8
 			if (FdEvalAmt.ToString().Length > 19) return false; // long 19
 			if (EotEvalAmt.ToString().Length > 19) return false; // long 19
 			if (InvstAvrbalPramt.ToString().Length > 16) return false; // long 16
@@ -871,43 +871,43 @@ namespace XingAPINet
 		/// <summary>
 		/// FOCCQ33600
 		/// </summary>
-		static readonly string _typeName = "FOCCQ33600";
+		public const string _typeName = "FOCCQ33600";
 		/// <summary>
 		/// 주식계좌 기간별수익률 상세
 		/// </summary>
-		static readonly string _typeDesc = "주식계좌 기간별수익률 상세";
+		public const string _typeDesc = "주식계좌 기간별수익률 상세";
 		/// <summary>
 		/// FOCCQ33600
 		/// </summary>
-		static readonly string _service = "FOCCQ33600";
+		public const string _service = "FOCCQ33600";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 유종우
 		/// </summary>
-		static readonly string _creator = "유종우";
+		public const string _creator = "유종우";
 		/// <summary>
 		/// 2012/03/15 11:06:33
 		/// </summary>
-		static readonly string _createdDate = "2012/03/15 11:06:33";
+		public const string _createdDate = "2012/03/15 11:06:33";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// FOCCQ33600

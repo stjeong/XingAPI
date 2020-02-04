@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -80,19 +80,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -1966,64 +1966,64 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (lineseq.ToString().Length > 10) return false; // long 10
-			if (accno.Length > 11) return false; // char 11
-			if (user.Length > 8) return false; // char 8
+			if (accno?.Length > 11) return false; // char 11
+			if (user?.Length > 8) return false; // char 8
 			if (len.ToString().Length > 6) return false; // long 6
 			// gubun char 1
 			// compress char 1
 			// encrypt char 1
 			if (offset.ToString().Length > 3) return false; // long 3
-			if (trcode.Length > 8) return false; // char 8
-			if (compid.Length > 3) return false; // char 3
-			if (userid.Length > 16) return false; // char 16
-			if (media.Length > 2) return false; // char 2
-			if (ifid.Length > 3) return false; // char 3
-			if (seq.Length > 9) return false; // char 9
-			if (trid.Length > 16) return false; // char 16
-			if (pubip.Length > 12) return false; // char 12
-			if (prvip.Length > 12) return false; // char 12
-			if (pcbpno.Length > 3) return false; // char 3
-			if (bpno.Length > 3) return false; // char 3
-			if (termno.Length > 8) return false; // char 8
+			if (trcode?.Length > 8) return false; // char 8
+			if (compid?.Length > 3) return false; // char 3
+			if (userid?.Length > 16) return false; // char 16
+			if (media?.Length > 2) return false; // char 2
+			if (ifid?.Length > 3) return false; // char 3
+			if (seq?.Length > 9) return false; // char 9
+			if (trid?.Length > 16) return false; // char 16
+			if (pubip?.Length > 12) return false; // char 12
+			if (prvip?.Length > 12) return false; // char 12
+			if (pcbpno?.Length > 3) return false; // char 3
+			if (bpno?.Length > 3) return false; // char 3
+			if (termno?.Length > 8) return false; // char 8
 			// lang char 1
 			if (proctm.ToString().Length > 9) return false; // long 9
-			if (msgcode.Length > 4) return false; // char 4
+			if (msgcode?.Length > 4) return false; // char 4
 			// outgu char 1
 			// compreq char 1
-			if (funckey.Length > 4) return false; // char 4
+			if (funckey?.Length > 4) return false; // char 4
 			if (reqcnt.ToString().Length > 4) return false; // long 4
-			if (filler.Length > 6) return false; // char 6
+			if (filler?.Length > 6) return false; // char 6
 			// cont char 1
-			if (contkey.Length > 18) return false; // char 18
+			if (contkey?.Length > 18) return false; // char 18
 			if (varlen.ToString().Length > 2) return false; // long 2
 			if (varhdlen.ToString().Length > 2) return false; // long 2
 			if (varmsglen.ToString().Length > 2) return false; // long 2
 			// trsrc char 1
-			if (eventid.Length > 4) return false; // char 4
-			if (ifinfo.Length > 4) return false; // char 4
-			if (filler1.Length > 41) return false; // char 41
-			if (ordchegb.Length > 2) return false; // char 2
-			if (marketgb.Length > 2) return false; // char 2
-			if (ordgb.Length > 2) return false; // char 2
+			if (eventid?.Length > 4) return false; // char 4
+			if (ifinfo?.Length > 4) return false; // char 4
+			if (filler1?.Length > 41) return false; // char 41
+			if (ordchegb?.Length > 2) return false; // char 2
+			if (marketgb?.Length > 2) return false; // char 2
+			if (ordgb?.Length > 2) return false; // char 2
 			if (orgordno.ToString().Length > 10) return false; // long 10
-			if (accno1.Length > 11) return false; // char 11
-			if (accno2.Length > 9) return false; // char 9
-			if (passwd.Length > 8) return false; // char 8
-			if (expcode.Length > 12) return false; // char 12
-			if (shtcode.Length > 9) return false; // char 9
-			if (hname.Length > 40) return false; // char 40
+			if (accno1?.Length > 11) return false; // char 11
+			if (accno2?.Length > 9) return false; // char 9
+			if (passwd?.Length > 8) return false; // char 8
+			if (expcode?.Length > 12) return false; // char 12
+			if (shtcode?.Length > 9) return false; // char 9
+			if (hname?.Length > 40) return false; // char 40
 			if (ordqty.ToString().Length > 16) return false; // long 16
 			if (ordprice.ToString().Length > 13) return false; // long 13
 			// hogagb char 1
-			if (etfhogagb.Length > 2) return false; // char 2
+			if (etfhogagb?.Length > 2) return false; // char 2
 			if (pgmtype.ToString().Length > 2) return false; // long 2
 			if (gmhogagb.ToString().Length > 1) return false; // long 1
 			if (gmhogayn.ToString().Length > 1) return false; // long 1
-			if (singb.Length > 3) return false; // char 3
-			if (loandt.Length > 8) return false; // char 8
+			if (singb?.Length > 3) return false; // char 3
+			if (loandt?.Length > 8) return false; // char 8
 			// cvrgordtp char 1
-			if (strtgcode.Length > 6) return false; // char 6
-			if (groupid.Length > 20) return false; // char 20
+			if (strtgcode?.Length > 6) return false; // char 6
+			if (groupid?.Length > 20) return false; // char 20
 			if (ordseqno.ToString().Length > 10) return false; // long 10
 			if (prtno.ToString().Length > 10) return false; // long 10
 			if (basketno.ToString().Length > 10) return false; // long 10
@@ -2032,16 +2032,16 @@ namespace XingAPINet
 			if (brwmgmyn.ToString().Length > 1) return false; // long 1
 			if (mbrno.ToString().Length > 3) return false; // long 3
 			// procgb char 1
-			if (admbrchno.Length > 3) return false; // char 3
-			if (futaccno.Length > 20) return false; // char 20
+			if (admbrchno?.Length > 3) return false; // char 3
+			if (futaccno?.Length > 20) return false; // char 20
 			// futmarketgb char 1
-			if (tongsingb.Length > 2) return false; // char 2
+			if (tongsingb?.Length > 2) return false; // char 2
 			// lpgb char 1
-			if (dummy.Length > 20) return false; // char 20
+			if (dummy?.Length > 20) return false; // char 20
 			if (ordno.ToString().Length > 10) return false; // long 10
-			if (ordtm.Length > 9) return false; // char 9
+			if (ordtm?.Length > 9) return false; // char 9
 			if (prntordno.ToString().Length > 10) return false; // long 10
-			if (mgempno.Length > 9) return false; // char 9
+			if (mgempno?.Length > 9) return false; // char 9
 			if (orgordundrqty.ToString().Length > 16) return false; // long 16
 			if (orgordmdfyqty.ToString().Length > 16) return false; // long 16
 			if (ordordcancelqty.ToString().Length > 16) return false; // long 16
@@ -2053,7 +2053,7 @@ namespace XingAPINet
 			if (rsvordno.ToString().Length > 10) return false; // long 10
 			if (mtordseqno.ToString().Length > 10) return false; // long 10
 			if (spareordqty.ToString().Length > 16) return false; // long 16
-			if (orduserid.Length > 16) return false; // char 16
+			if (orduserid?.Length > 16) return false; // char 16
 			if (spotordqty.ToString().Length > 16) return false; // long 16
 			if (ordruseqty.ToString().Length > 16) return false; // long 16
 			if (mnyordamt.ToString().Length > 16) return false; // long 16
@@ -2088,24 +2088,32 @@ namespace XingAPINet
 		/// <summary>
 		/// SC0
 		/// </summary>
-		static readonly string _typeName = "SC0";
+		public const string _typeName = "SC0";
+		/// <summary>
+		/// 주식주문접수
+		/// </summary>
+		public const string _typeDesc = "주식주문접수";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// SC0
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// 주식주문접수
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

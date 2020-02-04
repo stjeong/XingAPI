@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1764InBlock
 		/// </summary>
-		static readonly string _blockName = "t1764InBlock";
+		public const string _blockName = "t1764InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1764InBlock
 		/// </summary>
@@ -104,7 +104,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 			// gubun1 char 1
 
 			return true;
@@ -116,19 +116,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1764OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1764OutBlock";
+		public const string _blockName = "t1764OutBlock";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t1764OutBlock
 		/// </summary>
@@ -252,8 +252,8 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (rank.ToString().Length > 4) return false; // long 4
-			if (tradno.Length > 3) return false; // char 3
-			if (tradname.Length > 20) return false; // char 20
+			if (tradno?.Length > 3) return false; // char 3
+			if (tradname?.Length > 20) return false; // char 20
 
 			return true;
 		}
@@ -264,43 +264,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1764
 		/// </summary>
-		static readonly string _typeName = "t1764";
+		public const string _typeName = "t1764";
 		/// <summary>
 		/// 회원사리스트(t1764)
 		/// </summary>
-		static readonly string _typeDesc = "회원사리스트(t1764)";
+		public const string _typeDesc = "회원사리스트(t1764)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1764

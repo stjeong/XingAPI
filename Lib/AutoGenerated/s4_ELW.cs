@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -357,13 +357,13 @@ namespace XingAPINet
 			if (change.ToString().Length > 8) return false; // long 8
 			// drate float 6.2
 			if (price.ToString().Length > 8) return false; // long 8
-			if (opentime.Length > 6) return false; // char 6
+			if (opentime?.Length > 6) return false; // char 6
 			if (open.ToString().Length > 8) return false; // long 8
-			if (hightime.Length > 6) return false; // char 6
+			if (hightime?.Length > 6) return false; // char 6
 			if (high.ToString().Length > 8) return false; // long 8
-			if (lowtime.Length > 6) return false; // char 6
+			if (lowtime?.Length > 6) return false; // char 6
 			if (low.ToString().Length > 8) return false; // long 8
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -374,24 +374,32 @@ namespace XingAPINet
 		/// <summary>
 		/// s4_
 		/// </summary>
-		static readonly string _typeName = "s4_";
+		public const string _typeName = "s4_";
+		/// <summary>
+		/// ELW기세(s4)
+		/// </summary>
+		public const string _typeDesc = "ELW기세(s4)";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// s4_
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// ELW기세(s4)
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

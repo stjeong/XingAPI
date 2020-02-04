@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t2801InBlock
 		/// </summary>
-		static readonly string _blockName = "t2801InBlock";
+		public const string _blockName = "t2801InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t2801InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (focode.Length > 8) return false; // char 8
+			if (focode?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t2801OutBlock
 		/// </summary>
-		static readonly string _blockName = "t2801OutBlock";
+		public const string _blockName = "t2801OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t2801OutBlock
 		/// </summary>
@@ -807,7 +807,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (hname.Length > 20) return false; // char 20
+			if (hname?.Length > 20) return false; // char 20
 			// price float 6.2
 			// sign char 1
 			// change float 6.2
@@ -830,7 +830,7 @@ namespace XingAPINet
 			// glyl float 6.3
 			// cbhprice float 6.2
 			// cblprice float 6.2
-			if (lastmonth.Length > 8) return false; // char 8
+			if (lastmonth?.Length > 8) return false; // char 8
 			if (jandatecnt.ToString().Length > 8) return false; // long 8
 			// pricejisu float 6.2
 			// jisusign char 1
@@ -856,43 +856,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t2801
 		/// </summary>
-		static readonly string _typeName = "t2801";
+		public const string _typeName = "t2801";
 		/// <summary>
 		/// CME야간선물현재가조회(t2801)
 		/// </summary>
-		static readonly string _typeDesc = "CME야간선물현재가조회(t2801)";
+		public const string _typeDesc = "CME야간선물현재가조회(t2801)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t2801

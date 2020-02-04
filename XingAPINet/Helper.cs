@@ -15,6 +15,7 @@ namespace XingAPINet
         FormattedKeyValue,
         KeyValue,
         Inline,
+        Inline80Cols,
     }
 
     public partial class LoginInfo
@@ -302,6 +303,16 @@ namespace XingAPINet
                     }
 
                     writer.WriteLine(fieldText.ToString().TrimEnd(','));
+                    break;
+
+                case DumpOutputType.Inline80Cols:
+                    foreach (string key in dict.Keys)
+                    {
+                        fieldText.Append($"{key} = {dict[key].FieldValue}, ");
+                    }
+
+                    string line = fieldText.ToString().TrimEnd(',');;
+                    writer.WriteLine(line.Substring(0, 80) + ((line.Length > 80) ? "..." : ""));
                     break;
             }
         }

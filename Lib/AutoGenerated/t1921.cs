@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1921InBlock
 		/// </summary>
-		static readonly string _blockName = "t1921InBlock";
+		public const string _blockName = "t1921InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1921InBlock
 		/// </summary>
@@ -134,9 +134,9 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 			// gubun char 1
-			if (date.Length > 8) return false; // char 8
+			if (date?.Length > 8) return false; // char 8
 			if (idx.ToString().Length > 4) return false; // long 4
 
 			return true;
@@ -148,19 +148,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1921OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1921OutBlock";
+		public const string _blockName = "t1921OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1921OutBlock
 		/// </summary>
@@ -280,7 +280,7 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (cnt.ToString().Length > 4) return false; // long 4
-			if (date.Length > 8) return false; // char 8
+			if (date?.Length > 8) return false; // char 8
 			if (idx.ToString().Length > 4) return false; // long 4
 
 			return true;
@@ -292,19 +292,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1921OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t1921OutBlock1";
+		public const string _blockName = "t1921OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t1921OutBlock1
 		/// </summary>
@@ -587,7 +587,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (mmdate.Length > 8) return false; // char 8
+			if (mmdate?.Length > 8) return false; // char 8
 			if (close.ToString().Length > 8) return false; // long 8
 			// sign char 1
 			if (jchange.ToString().Length > 8) return false; // long 8
@@ -599,7 +599,7 @@ namespace XingAPINet
 			if (change.ToString().Length > 8) return false; // long 8
 			// gyrate float 6.2
 			// jkrate float 6.2
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -610,43 +610,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1921
 		/// </summary>
-		static readonly string _typeName = "t1921";
+		public const string _typeName = "t1921";
 		/// <summary>
 		/// 신용거래동향(t1921)
 		/// </summary>
-		static readonly string _typeDesc = "신용거래동향(t1921)";
+		public const string _typeDesc = "신용거래동향(t1921)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1921

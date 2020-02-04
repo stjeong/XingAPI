@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (upcode.Length > 3) return false; // char 3
+			if (upcode?.Length > 3) return false; // char 3
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -353,8 +353,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (tjjcode.Length > 4) return false; // char 4
-			if (tjjtime.Length > 8) return false; // char 8
+			if (tjjcode?.Length > 4) return false; // char 4
+			if (tjjtime?.Length > 8) return false; // char 8
 			if (msvolume.ToString().Length > 8) return false; // long 8
 			if (mdvolume.ToString().Length > 8) return false; // long 8
 			if (msvol.ToString().Length > 8) return false; // long 8
@@ -363,7 +363,7 @@ namespace XingAPINet
 			if (mdvalue.ToString().Length > 6) return false; // long 6
 			if (msval.ToString().Length > 6) return false; // long 6
 			if (p_msval.ToString().Length > 6) return false; // long 6
-			if (upcode.Length > 3) return false; // char 3
+			if (upcode?.Length > 3) return false; // char 3
 
 			return true;
 		}
@@ -374,24 +374,32 @@ namespace XingAPINet
 		/// <summary>
 		/// BM_
 		/// </summary>
-		static readonly string _typeName = "BM_";
+		public const string _typeName = "BM_";
+		/// <summary>
+		/// 업종별투자자별매매현황(BM)
+		/// </summary>
+		public const string _typeDesc = "업종별투자자별매매현황(BM)";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// BM_
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// 업종별투자자별매매현황(BM)
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t2201InBlock
 		/// </summary>
-		static readonly string _blockName = "t2201InBlock";
+		public const string _blockName = "t2201InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t2201InBlock
 		/// </summary>
@@ -149,11 +149,11 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (focode.Length > 8) return false; // char 8
+			if (focode?.Length > 8) return false; // char 8
 			if (cvolume.ToString().Length > 12) return false; // long 12
-			if (stime.Length > 4) return false; // char 4
-			if (etime.Length > 4) return false; // char 4
-			if (cts_time.Length > 10) return false; // char 10
+			if (stime?.Length > 4) return false; // char 4
+			if (etime?.Length > 4) return false; // char 4
+			if (cts_time?.Length > 10) return false; // char 10
 
 			return true;
 		}
@@ -164,19 +164,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t2201OutBlock
 		/// </summary>
-		static readonly string _blockName = "t2201OutBlock";
+		public const string _blockName = "t2201OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t2201OutBlock
 		/// </summary>
@@ -263,7 +263,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (cts_time.Length > 10) return false; // char 10
+			if (cts_time?.Length > 10) return false; // char 10
 
 			return true;
 		}
@@ -274,19 +274,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t2201OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t2201OutBlock1";
+		public const string _blockName = "t2201OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t2201OutBlock1
 		/// </summary>
@@ -713,7 +713,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (chetime.Length > 10) return false; // char 10
+			if (chetime?.Length > 10) return false; // char 10
 			// price float 6.2
 			// sign char 1
 			// change float 6.2
@@ -745,43 +745,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t2201
 		/// </summary>
-		static readonly string _typeName = "t2201";
+		public const string _typeName = "t2201";
 		/// <summary>
 		/// 선물옵션시간대별체결조회(t2201)
 		/// </summary>
-		static readonly string _typeDesc = "선물옵션시간대별체결조회(t2201)";
+		public const string _typeDesc = "선물옵션시간대별체결조회(t2201)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t2201

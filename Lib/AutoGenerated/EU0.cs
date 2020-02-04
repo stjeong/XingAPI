@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -80,19 +80,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -2062,87 +2062,87 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (lineseq.ToString().Length > 10) return false; // long 10
-			if (accno.Length > 11) return false; // char 11
-			if (user.Length > 8) return false; // char 8
+			if (accno?.Length > 11) return false; // char 11
+			if (user?.Length > 8) return false; // char 8
 			if (len.ToString().Length > 6) return false; // long 6
 			// gubun char 1
 			// compress char 1
 			// encrypt char 1
 			if (offset.ToString().Length > 3) return false; // long 3
-			if (trcode.Length > 8) return false; // char 8
-			if (compid.Length > 3) return false; // char 3
-			if (userid.Length > 16) return false; // char 16
-			if (media.Length > 2) return false; // char 2
-			if (ifid.Length > 3) return false; // char 3
-			if (seq.Length > 9) return false; // char 9
-			if (trid.Length > 16) return false; // char 16
-			if (pubip.Length > 12) return false; // char 12
-			if (prvip.Length > 12) return false; // char 12
-			if (pcbpno.Length > 3) return false; // char 3
-			if (bpno.Length > 3) return false; // char 3
-			if (termno.Length > 8) return false; // char 8
+			if (trcode?.Length > 8) return false; // char 8
+			if (compid?.Length > 3) return false; // char 3
+			if (userid?.Length > 16) return false; // char 16
+			if (media?.Length > 2) return false; // char 2
+			if (ifid?.Length > 3) return false; // char 3
+			if (seq?.Length > 9) return false; // char 9
+			if (trid?.Length > 16) return false; // char 16
+			if (pubip?.Length > 12) return false; // char 12
+			if (prvip?.Length > 12) return false; // char 12
+			if (pcbpno?.Length > 3) return false; // char 3
+			if (bpno?.Length > 3) return false; // char 3
+			if (termno?.Length > 8) return false; // char 8
 			// lang char 1
 			if (proctm.ToString().Length > 9) return false; // long 9
-			if (msgcode.Length > 4) return false; // char 4
+			if (msgcode?.Length > 4) return false; // char 4
 			// outgu char 1
 			// compreq char 1
-			if (funckey.Length > 4) return false; // char 4
+			if (funckey?.Length > 4) return false; // char 4
 			if (reqcnt.ToString().Length > 4) return false; // long 4
-			if (filler.Length > 6) return false; // char 6
+			if (filler?.Length > 6) return false; // char 6
 			// cont char 1
-			if (contkey.Length > 18) return false; // char 18
+			if (contkey?.Length > 18) return false; // char 18
 			if (varlen.ToString().Length > 2) return false; // long 2
 			if (varhdlen.ToString().Length > 2) return false; // long 2
 			if (varmsglen.ToString().Length > 2) return false; // long 2
 			// trsrc char 1
-			if (eventid.Length > 4) return false; // char 4
-			if (ifinfo.Length > 4) return false; // char 4
-			if (filler1.Length > 41) return false; // char 41
-			if (trcode1.Length > 4) return false; // char 4
-			if (firmno.Length > 3) return false; // char 3
-			if (acntno.Length > 11) return false; // char 11
-			if (acntno1.Length > 9) return false; // char 9
-			if (acntnm.Length > 40) return false; // char 40
-			if (brnno.Length > 3) return false; // char 3
-			if (ordmktcode.Length > 2) return false; // char 2
-			if (ordno1.Length > 3) return false; // char 3
+			if (eventid?.Length > 4) return false; // char 4
+			if (ifinfo?.Length > 4) return false; // char 4
+			if (filler1?.Length > 41) return false; // char 41
+			if (trcode1?.Length > 4) return false; // char 4
+			if (firmno?.Length > 3) return false; // char 3
+			if (acntno?.Length > 11) return false; // char 11
+			if (acntno1?.Length > 9) return false; // char 9
+			if (acntnm?.Length > 40) return false; // char 40
+			if (brnno?.Length > 3) return false; // char 3
+			if (ordmktcode?.Length > 2) return false; // char 2
+			if (ordno1?.Length > 3) return false; // char 3
 			if (ordno.ToString().Length > 7) return false; // long 7
-			if (orgordno1.Length > 3) return false; // char 3
+			if (orgordno1?.Length > 3) return false; // char 3
 			if (orgordno.ToString().Length > 7) return false; // long 7
-			if (prntordno.Length > 3) return false; // char 3
+			if (prntordno?.Length > 3) return false; // char 3
 			if (prntordno1.ToString().Length > 7) return false; // long 7
-			if (isuno.Length > 12) return false; // char 12
-			if (fnoIsuno.Length > 8) return false; // char 8
-			if (fnoIsunm.Length > 40) return false; // char 40
-			if (pdgrpcode.Length > 2) return false; // char 2
+			if (isuno?.Length > 12) return false; // char 12
+			if (fnoIsuno?.Length > 8) return false; // char 8
+			if (fnoIsunm?.Length > 40) return false; // char 40
+			if (pdgrpcode?.Length > 2) return false; // char 2
 			// fnoIsuptntp char 1
 			// bnstp char 1
 			// mrctp char 1
 			if (ordqty.ToString().Length > 16) return false; // long 16
-			if (hogatype.Length > 2) return false; // char 2
-			if (mmgb.Length > 2) return false; // char 2
+			if (hogatype?.Length > 2) return false; // char 2
+			if (mmgb?.Length > 2) return false; // char 2
 			// ordprc double 13.2
 			if (unercqty.ToString().Length > 16) return false; // long 16
-			if (commdacode.Length > 2) return false; // char 2
-			if (peeamtcode.Length > 2) return false; // char 2
-			if (mgempno.Length > 9) return false; // char 9
+			if (commdacode?.Length > 2) return false; // char 2
+			if (peeamtcode?.Length > 2) return false; // char 2
+			if (mgempno?.Length > 9) return false; // char 9
 			// fnotrdunitamt double 19.8
-			if (trxtime.Length > 9) return false; // char 9
-			if (strtgcode.Length > 6) return false; // char 6
-			if (grpId.Length > 20) return false; // char 20
-			if (ordseqno.Length > 10) return false; // char 10
-			if (ptflno.Length > 10) return false; // char 10
-			if (bskno.Length > 10) return false; // char 10
-			if (trchno.Length > 10) return false; // char 10
-			if (Itemno.Length > 10) return false; // char 10
-			if (OrderID.Length > 16) return false; // char 16
-			if (opdrtnno.Length > 12) return false; // char 12
-			if (rjtcode.Length > 4) return false; // char 4
+			if (trxtime?.Length > 9) return false; // char 9
+			if (strtgcode?.Length > 6) return false; // char 6
+			if (grpId?.Length > 20) return false; // char 20
+			if (ordseqno?.Length > 10) return false; // char 10
+			if (ptflno?.Length > 10) return false; // char 10
+			if (bskno?.Length > 10) return false; // char 10
+			if (trchno?.Length > 10) return false; // char 10
+			if (Itemno?.Length > 10) return false; // char 10
+			if (OrderID?.Length > 16) return false; // char 16
+			if (opdrtnno?.Length > 12) return false; // char 12
+			if (rjtcode?.Length > 4) return false; // char 4
 			if (mrccnfqty.ToString().Length > 16) return false; // long 16
 			if (orgordunercqty.ToString().Length > 16) return false; // long 16
 			if (orgordmrcqty.ToString().Length > 16) return false; // long 16
-			if (ctrcttime.Length > 8) return false; // char 8
-			if (ctrctno.Length > 10) return false; // char 10
+			if (ctrcttime?.Length > 8) return false; // char 8
+			if (ctrctno?.Length > 10) return false; // char 10
 			// execprc double 13.2
 			if (execqty.ToString().Length > 16) return false; // long 16
 			if (newqty.ToString().Length > 16) return false; // long 16
@@ -2152,13 +2152,13 @@ namespace XingAPINet
 			if (allexecamt.ToString().Length > 16) return false; // long 16
 			// fnobalevaltp char 1
 			if (bnsplamt.ToString().Length > 16) return false; // long 16
-			if (fnoIsuno1.Length > 8) return false; // char 8
+			if (fnoIsuno1?.Length > 8) return false; // char 8
 			// bnstp1 char 1
 			// execprc1 double 13.2
 			if (newqty1.ToString().Length > 16) return false; // long 16
 			if (qdtqty1.ToString().Length > 16) return false; // long 16
 			if (allexecamt1.ToString().Length > 16) return false; // long 16
-			if (fnoIsuno2.Length > 8) return false; // char 8
+			if (fnoIsuno2?.Length > 8) return false; // char 8
 			// bnstp2 char 1
 			// execprc2 double 13.2
 			if (newqty2.ToString().Length > 16) return false; // long 16
@@ -2170,12 +2170,12 @@ namespace XingAPINet
 			if (mnymgn.ToString().Length > 16) return false; // long 16
 			if (ordableamt.ToString().Length > 16) return false; // long 16
 			if (mnyordableamt.ToString().Length > 16) return false; // long 16
-			if (fnoIsuno_1.Length > 8) return false; // char 8
+			if (fnoIsuno_1?.Length > 8) return false; // char 8
 			// bnstp_1 char 1
 			if (unsttqty_1.ToString().Length > 16) return false; // long 16
 			if (lqdtableqty_1.ToString().Length > 16) return false; // long 16
 			// avrprc_1 double 13.2
-			if (fnoIsuno_2.Length > 8) return false; // char 8
+			if (fnoIsuno_2?.Length > 8) return false; // char 8
 			// bnstp_2 char 1
 			if (unsttqty_2.ToString().Length > 16) return false; // long 16
 			if (lqdtableqty_2.ToString().Length > 16) return false; // long 16
@@ -2190,24 +2190,32 @@ namespace XingAPINet
 		/// <summary>
 		/// EU0
 		/// </summary>
-		static readonly string _typeName = "EU0";
+		public const string _typeName = "EU0";
+		/// <summary>
+		/// EUX접수
+		/// </summary>
+		public const string _typeDesc = "EUX접수";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// EU0
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// EUX접수
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

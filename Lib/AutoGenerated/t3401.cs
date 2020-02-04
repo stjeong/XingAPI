@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3401InBlock
 		/// </summary>
-		static readonly string _blockName = "t3401InBlock";
+		public const string _blockName = "t3401InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t3401InBlock
 		/// </summary>
@@ -134,10 +134,10 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 9) return false; // char 9
+			if (shcode?.Length > 9) return false; // char 9
 			// gubun1 char 1
-			if (tradno.Length > 3) return false; // char 3
-			if (cts_date.Length > 8) return false; // char 8
+			if (tradno?.Length > 3) return false; // char 3
+			if (cts_date?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -148,19 +148,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3401OutBlock
 		/// </summary>
-		static readonly string _blockName = "t3401OutBlock";
+		public const string _blockName = "t3401OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t3401OutBlock
 		/// </summary>
@@ -343,7 +343,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (cts_date.Length > 8) return false; // char 8
+			if (cts_date?.Length > 8) return false; // char 8
 			if (price.ToString().Length > 8) return false; // long 8
 			// sign char 1
 			if (change.ToString().Length > 8) return false; // long 8
@@ -360,19 +360,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3401OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t3401OutBlock1";
+		public const string _blockName = "t3401OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t3401OutBlock1
 		/// </summary>
@@ -591,12 +591,12 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 9) return false; // char 9
-			if (tradno.Length > 3) return false; // char 3
-			if (date.Length > 8) return false; // char 8
-			if (tradname.Length > 30) return false; // char 30
-			if (bopn.Length > 30) return false; // char 30
-			if (nopn.Length > 30) return false; // char 30
+			if (shcode?.Length > 9) return false; // char 9
+			if (tradno?.Length > 3) return false; // char 3
+			if (date?.Length > 8) return false; // char 8
+			if (tradname?.Length > 30) return false; // char 30
+			if (bopn?.Length > 30) return false; // char 30
+			if (nopn?.Length > 30) return false; // char 30
 			if (boga.ToString().Length > 12) return false; // long 12
 			if (noga.ToString().Length > 12) return false; // long 12
 			if (close.ToString().Length > 8) return false; // long 8
@@ -610,43 +610,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t3401
 		/// </summary>
-		static readonly string _typeName = "t3401";
+		public const string _typeName = "t3401";
 		/// <summary>
 		/// 투자의견(t3401)
 		/// </summary>
-		static readonly string _typeDesc = "투자의견(t3401)";
+		public const string _typeDesc = "투자의견(t3401)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t3401

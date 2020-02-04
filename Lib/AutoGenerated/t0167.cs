@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0167InBlock
 		/// </summary>
-		static readonly string _blockName = "t0167InBlock";
+		public const string _blockName = "t0167InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0167InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (id.Length > 8) return false; // char 8
+			if (id?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0167OutBlock
 		/// </summary>
-		static readonly string _blockName = "t0167OutBlock";
+		public const string _blockName = "t0167OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0167OutBlock
 		/// </summary>
@@ -215,8 +215,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (dt.Length > 8) return false; // char 8
-			if (time.Length > 12) return false; // char 12
+			if (dt?.Length > 8) return false; // char 8
+			if (time?.Length > 12) return false; // char 12
 
 			return true;
 		}
@@ -227,43 +227,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t0167
 		/// </summary>
-		static readonly string _typeName = "t0167";
+		public const string _typeName = "t0167";
 		/// <summary>
 		/// 서버시간조회(t0167)
 		/// </summary>
-		static readonly string _typeDesc = "서버시간조회(t0167)";
+		public const string _typeDesc = "서버시간조회(t0167)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t0167

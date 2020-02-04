@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0151InBlock
 		/// </summary>
-		static readonly string _blockName = "t0151InBlock";
+		public const string _blockName = "t0151InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0151InBlock
 		/// </summary>
@@ -164,12 +164,12 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (date.Length > 8) return false; // char 8
-			if (accno.Length > 11) return false; // char 11
+			if (date?.Length > 8) return false; // char 8
+			if (accno?.Length > 11) return false; // char 11
 			// cts_medosu char 1
-			if (cts_expcode.Length > 12) return false; // char 12
-			if (cts_price.Length > 9) return false; // char 9
-			if (cts_middiv.Length > 2) return false; // char 2
+			if (cts_expcode?.Length > 12) return false; // char 12
+			if (cts_price?.Length > 9) return false; // char 9
+			if (cts_middiv?.Length > 2) return false; // char 2
 
 			return true;
 		}
@@ -180,19 +180,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0151OutBlock
 		/// </summary>
-		static readonly string _blockName = "t0151OutBlock";
+		public const string _blockName = "t0151OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0151OutBlock
 		/// </summary>
@@ -651,9 +651,9 @@ namespace XingAPINet
 			if (ttax.ToString().Length > 18) return false; // long 18
 			if (tadjamt.ToString().Length > 18) return false; // long 18
 			// cts_medosu char 1
-			if (cts_expcode.Length > 12) return false; // char 12
-			if (cts_price.Length > 9) return false; // char 9
-			if (cts_middiv.Length > 2) return false; // char 2
+			if (cts_expcode?.Length > 12) return false; // char 12
+			if (cts_price?.Length > 9) return false; // char 9
+			if (cts_middiv?.Length > 2) return false; // char 2
 
 			return true;
 		}
@@ -664,19 +664,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0151OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t0151OutBlock1";
+		public const string _blockName = "t0151OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t0151OutBlock1
 		/// </summary>
@@ -911,8 +911,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (medosu.Length > 10) return false; // char 10
-			if (expcode.Length > 12) return false; // char 12
+			if (medosu?.Length > 10) return false; // char 10
+			if (expcode?.Length > 12) return false; // char 12
 			if (qty.ToString().Length > 9) return false; // long 9
 			if (price.ToString().Length > 9) return false; // long 9
 			if (amt.ToString().Length > 18) return false; // long 18
@@ -920,7 +920,7 @@ namespace XingAPINet
 			if (tax.ToString().Length > 18) return false; // long 18
 			if (argtax.ToString().Length > 18) return false; // long 18
 			if (adjamt.ToString().Length > 18) return false; // long 18
-			if (middiv.Length > 20) return false; // char 20
+			if (middiv?.Length > 20) return false; // char 20
 
 			return true;
 		}
@@ -931,43 +931,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t0151
 		/// </summary>
-		static readonly string _typeName = "t0151";
+		public const string _typeName = "t0151";
 		/// <summary>
 		/// 주식당일매매일지/수수료(전일)(t0151)
 		/// </summary>
-		static readonly string _typeDesc = "주식당일매매일지/수수료(전일)(t0151)";
+		public const string _typeDesc = "주식당일매매일지/수수료(전일)(t0151)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _headType = "";
+		public const string _headType = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t0151

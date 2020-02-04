@@ -8,7 +8,7 @@ namespace t1475
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
             Program pg = new Program();
             pg.Main();

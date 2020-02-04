@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CCEAT00200InBlock1
 		/// </summary>
-		static readonly string _blockName = "CCEAT00200InBlock1";
+		public const string _blockName = "CCEAT00200InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CCEAT00200InBlock1
 		/// </summary>
@@ -179,11 +179,11 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (FnoIsuNo.Length > 12) return false; // char 12
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (FnoIsuNo?.Length > 12) return false; // char 12
 			if (OrgOrdNo.ToString().Length > 10) return false; // long 10
-			if (FnoOrdprcPtnCode.Length > 2) return false; // char 2
+			if (FnoOrdprcPtnCode?.Length > 2) return false; // char 2
 			// OrdPrc double 15.2
 			if (MdfyQty.ToString().Length > 16) return false; // long 16
 
@@ -196,19 +196,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CCEAT00200OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CCEAT00200OutBlock1";
+		public const string _blockName = "CCEAT00200OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CCEAT00200OutBlock1
 		/// </summary>
@@ -632,25 +632,25 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (OrdMktCode.Length > 2) return false; // char 2
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (FnoIsuNo.Length > 12) return false; // char 12
-			if (FnoOrdPtnCode.Length > 2) return false; // char 2
+			if (OrdMktCode?.Length > 2) return false; // char 2
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (FnoIsuNo?.Length > 12) return false; // char 12
+			if (FnoOrdPtnCode?.Length > 2) return false; // char 2
 			if (OrgOrdNo.ToString().Length > 10) return false; // long 10
-			if (FnoOrdprcPtnCode.Length > 2) return false; // char 2
+			if (FnoOrdprcPtnCode?.Length > 2) return false; // char 2
 			// OrdPrc double 15.2
 			if (MdfyQty.ToString().Length > 16) return false; // long 16
-			if (CommdaCode.Length > 2) return false; // char 2
-			if (DscusBnsCmpltTime.Length > 9) return false; // char 9
-			if (GrpId.Length > 20) return false; // char 20
+			if (CommdaCode?.Length > 2) return false; // char 2
+			if (DscusBnsCmpltTime?.Length > 9) return false; // char 9
+			if (GrpId?.Length > 20) return false; // char 20
 			if (OrdSeqno.ToString().Length > 10) return false; // long 10
 			if (PtflNo.ToString().Length > 10) return false; // long 10
 			if (BskNo.ToString().Length > 10) return false; // long 10
 			if (TrchNo.ToString().Length > 10) return false; // long 10
 			if (ItemNo.ToString().Length > 10) return false; // long 10
-			if (MgempNo.Length > 9) return false; // char 9
-			if (FundId.Length > 12) return false; // char 12
+			if (MgempNo?.Length > 9) return false; // char 9
+			if (FundId?.Length > 12) return false; // char 12
 			if (FundOrgOrdNo.ToString().Length > 10) return false; // long 10
 			if (FundOrdNo.ToString().Length > 10) return false; // long 10
 
@@ -663,19 +663,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CCEAT00200OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CCEAT00200OutBlock2";
+		public const string _blockName = "CCEAT00200OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CCEAT00200OutBlock2
 		/// </summary>
@@ -908,9 +908,9 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			if (OrdNo.ToString().Length > 10) return false; // long 10
-			if (BrnNm.Length > 40) return false; // char 40
-			if (AcntNm.Length > 40) return false; // char 40
-			if (IsuNm.Length > 50) return false; // char 50
+			if (BrnNm?.Length > 40) return false; // char 40
+			if (AcntNm?.Length > 40) return false; // char 40
+			if (IsuNm?.Length > 50) return false; // char 50
 			if (OrdAbleAmt.ToString().Length > 16) return false; // long 16
 			if (MnyOrdAbleAmt.ToString().Length > 16) return false; // long 16
 			if (OrdMgn.ToString().Length > 16) return false; // long 16
@@ -926,43 +926,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CCEAT00200
 		/// </summary>
-		static readonly string _typeName = "CCEAT00200";
+		public const string _typeName = "CCEAT00200";
 		/// <summary>
 		/// CME 정정주문
 		/// </summary>
-		static readonly string _typeDesc = "CME 정정주문";
+		public const string _typeDesc = "CME 정정주문";
 		/// <summary>
 		/// CCEAT00200
 		/// </summary>
-		static readonly string _service = "CCEAT00200";
+		public const string _service = "CCEAT00200";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 이호섭
 		/// </summary>
-		static readonly string _creator = "이호섭";
+		public const string _creator = "이호섭";
 		/// <summary>
 		/// 2012/04/10 10:07:08
 		/// </summary>
-		static readonly string _createdDate = "2012/04/10 10:07:08";
+		public const string _createdDate = "2012/04/10 10:07:08";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CCEAT00200

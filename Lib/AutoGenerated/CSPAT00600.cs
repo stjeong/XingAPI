@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPAT00600InBlock1
 		/// </summary>
-		static readonly string _blockName = "CSPAT00600InBlock1";
+		public const string _blockName = "CSPAT00600InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CSPAT00600InBlock1
 		/// </summary>
@@ -224,15 +224,15 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (AcntNo.Length > 20) return false; // char 20
-			if (InptPwd.Length > 8) return false; // char 8
-			if (IsuNo.Length > 12) return false; // char 12
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (InptPwd?.Length > 8) return false; // char 8
+			if (IsuNo?.Length > 12) return false; // char 12
 			if (OrdQty.ToString().Length > 16) return false; // long 16
 			// OrdPrc double 13.2
 			// BnsTpCode char 1
-			if (OrdprcPtnCode.Length > 2) return false; // char 2
-			if (MgntrnCode.Length > 3) return false; // char 3
-			if (LoanDt.Length > 8) return false; // char 8
+			if (OrdprcPtnCode?.Length > 2) return false; // char 2
+			if (MgntrnCode?.Length > 3) return false; // char 3
+			if (LoanDt?.Length > 8) return false; // char 8
 			// OrdCndiTpCode char 1
 
 			return true;
@@ -244,19 +244,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPAT00600OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CSPAT00600OutBlock1";
+		public const string _blockName = "CSPAT00600OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CSPAT00600OutBlock1
 		/// </summary>
@@ -744,29 +744,29 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (AcntNo.Length > 20) return false; // char 20
-			if (InptPwd.Length > 8) return false; // char 8
-			if (IsuNo.Length > 12) return false; // char 12
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (InptPwd?.Length > 8) return false; // char 8
+			if (IsuNo?.Length > 12) return false; // char 12
 			if (OrdQty.ToString().Length > 16) return false; // long 16
 			// OrdPrc double 13.2
 			// BnsTpCode char 1
-			if (OrdprcPtnCode.Length > 2) return false; // char 2
-			if (PrgmOrdprcPtnCode.Length > 2) return false; // char 2
+			if (OrdprcPtnCode?.Length > 2) return false; // char 2
+			if (PrgmOrdprcPtnCode?.Length > 2) return false; // char 2
 			// StslAbleYn char 1
 			// StslOrdprcTpCode char 1
-			if (CommdaCode.Length > 2) return false; // char 2
-			if (MgntrnCode.Length > 3) return false; // char 3
-			if (LoanDt.Length > 8) return false; // char 8
-			if (MbrNo.Length > 3) return false; // char 3
+			if (CommdaCode?.Length > 2) return false; // char 2
+			if (MgntrnCode?.Length > 3) return false; // char 3
+			if (LoanDt?.Length > 8) return false; // char 8
+			if (MbrNo?.Length > 3) return false; // char 3
 			// OrdCndiTpCode char 1
-			if (StrtgCode.Length > 6) return false; // char 6
-			if (GrpId.Length > 20) return false; // char 20
+			if (StrtgCode?.Length > 6) return false; // char 6
+			if (GrpId?.Length > 20) return false; // char 20
 			if (OrdSeqNo.ToString().Length > 10) return false; // long 10
 			if (PtflNo.ToString().Length > 10) return false; // long 10
 			if (BskNo.ToString().Length > 10) return false; // long 10
 			if (TrchNo.ToString().Length > 10) return false; // long 10
 			if (ItemNo.ToString().Length > 10) return false; // long 10
-			if (OpDrtnNo.Length > 12) return false; // char 12
+			if (OpDrtnNo?.Length > 12) return false; // char 12
 			// LpYn char 1
 			// CvrgTpCode char 1
 
@@ -779,19 +779,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPAT00600OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CSPAT00600OutBlock2";
+		public const string _blockName = "CSPAT00600OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CSPAT00600OutBlock2
 		/// </summary>
@@ -1152,11 +1152,11 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			if (OrdNo.ToString().Length > 10) return false; // long 10
-			if (OrdTime.Length > 9) return false; // char 9
-			if (OrdMktCode.Length > 2) return false; // char 2
-			if (OrdPtnCode.Length > 2) return false; // char 2
-			if (ShtnIsuNo.Length > 9) return false; // char 9
-			if (MgempNo.Length > 9) return false; // char 9
+			if (OrdTime?.Length > 9) return false; // char 9
+			if (OrdMktCode?.Length > 2) return false; // char 2
+			if (OrdPtnCode?.Length > 2) return false; // char 2
+			if (ShtnIsuNo?.Length > 9) return false; // char 9
+			if (MgempNo?.Length > 9) return false; // char 9
 			if (OrdAmt.ToString().Length > 16) return false; // long 16
 			if (SpareOrdNo.ToString().Length > 10) return false; // long 10
 			if (CvrgSeqno.ToString().Length > 10) return false; // long 10
@@ -1166,8 +1166,8 @@ namespace XingAPINet
 			if (MnyOrdAmt.ToString().Length > 16) return false; // long 16
 			if (SubstOrdAmt.ToString().Length > 16) return false; // long 16
 			if (RuseOrdAmt.ToString().Length > 16) return false; // long 16
-			if (AcntNm.Length > 40) return false; // char 40
-			if (IsuNm.Length > 40) return false; // char 40
+			if (AcntNm?.Length > 40) return false; // char 40
+			if (IsuNm?.Length > 40) return false; // char 40
 
 			return true;
 		}
@@ -1178,43 +1178,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPAT00600
 		/// </summary>
-		static readonly string _typeName = "CSPAT00600";
+		public const string _typeName = "CSPAT00600";
 		/// <summary>
 		/// 현물주문
 		/// </summary>
-		static readonly string _typeDesc = "현물주문";
+		public const string _typeDesc = "현물주문";
 		/// <summary>
 		/// CSPAT00600
 		/// </summary>
-		static readonly string _service = "CSPAT00600";
+		public const string _service = "CSPAT00600";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 김기종
 		/// </summary>
-		static readonly string _creator = "김기종";
+		public const string _creator = "김기종";
 		/// <summary>
 		/// 2011/12/07 09:23:39
 		/// </summary>
-		static readonly string _createdDate = "2011/12/07 09:23:39";
+		public const string _createdDate = "2011/12/07 09:23:39";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _encrypt = true;
+		public const bool _encrypt = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _signature = true;
+		public const bool _signature = true;
 
 		/// <summary>
 		/// CSPAT00600

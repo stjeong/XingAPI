@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1903InBlock
 		/// </summary>
-		static readonly string _blockName = "t1903InBlock";
+		public const string _blockName = "t1903InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1903InBlock
 		/// </summary>
@@ -104,8 +104,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
-			if (date.Length > 8) return false; // char 8
+			if (shcode?.Length > 6) return false; // char 6
+			if (date?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -116,19 +116,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1903OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1903OutBlock";
+		public const string _blockName = "t1903OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1903OutBlock
 		/// </summary>
@@ -247,9 +247,9 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (date.Length > 8) return false; // char 8
-			if (hname.Length > 20) return false; // char 20
-			if (upname.Length > 20) return false; // char 20
+			if (date?.Length > 8) return false; // char 8
+			if (hname?.Length > 20) return false; // char 20
+			if (upname?.Length > 20) return false; // char 20
 
 			return true;
 		}
@@ -260,19 +260,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1903OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t1903OutBlock1";
+		public const string _blockName = "t1903OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t1903OutBlock1
 		/// </summary>
@@ -555,7 +555,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (date.Length > 8) return false; // char 8
+			if (date?.Length > 8) return false; // char 8
 			if (price.ToString().Length > 8) return false; // long 8
 			// sign char 1
 			if (change.ToString().Length > 8) return false; // long 8
@@ -578,43 +578,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1903
 		/// </summary>
-		static readonly string _typeName = "t1903";
+		public const string _typeName = "t1903";
 		/// <summary>
 		/// ETF일별추이(t1903)
 		/// </summary>
-		static readonly string _typeDesc = "ETF일별추이(t1903)";
+		public const string _typeDesc = "ETF일별추이(t1903)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1903

@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1959InBlock
 		/// </summary>
-		static readonly string _blockName = "t1959InBlock";
+		public const string _blockName = "t1959InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1959InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1959OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t1959OutBlock1";
+		public const string _blockName = "t1959OutBlock1";
 		/// <summary>
 		/// LP대상전종목정보
 		/// </summary>
-		static readonly string _blockDesc = "LP대상전종목정보";
+		public const string _blockDesc = "LP대상전종목정보";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t1959OutBlock1
 		/// </summary>
@@ -475,23 +475,23 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
-			if (hname.Length > 40) return false; // char 40
-			if (price.Length > 12) return false; // char 12
+			if (shcode?.Length > 6) return false; // char 6
+			if (hname?.Length > 40) return false; // char 40
+			if (price?.Length > 12) return false; // char 12
 			// sign char 1
-			if (change.Length > 12) return false; // char 12
+			if (change?.Length > 12) return false; // char 12
 			// rate float 5.2
-			if (volume.Length > 12) return false; // char 12
-			if (value.Length > 12) return false; // char 12
-			if (lp_gb.Length > 4) return false; // char 4
-			if (lp_mem_nm1.Length > 20) return false; // char 20
-			if (lp_mem_nm2.Length > 20) return false; // char 20
-			if (lp_mem_nm3.Length > 20) return false; // char 20
-			if (lp_mem_nm4.Length > 20) return false; // char 20
-			if (lp_mem_nm5.Length > 20) return false; // char 20
-			if (lp_min_qty.Length > 10) return false; // char 10
-			if (lp_st_date.Length > 8) return false; // char 8
-			if (lp_end_date.Length > 8) return false; // char 8
+			if (volume?.Length > 12) return false; // char 12
+			if (value?.Length > 12) return false; // char 12
+			if (lp_gb?.Length > 4) return false; // char 4
+			if (lp_mem_nm1?.Length > 20) return false; // char 20
+			if (lp_mem_nm2?.Length > 20) return false; // char 20
+			if (lp_mem_nm3?.Length > 20) return false; // char 20
+			if (lp_mem_nm4?.Length > 20) return false; // char 20
+			if (lp_mem_nm5?.Length > 20) return false; // char 20
+			if (lp_min_qty?.Length > 10) return false; // char 10
+			if (lp_st_date?.Length > 8) return false; // char 8
+			if (lp_end_date?.Length > 8) return false; // char 8
 			// lp_spread float 5.2
 
 			return true;
@@ -503,43 +503,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1959
 		/// </summary>
-		static readonly string _typeName = "t1959";
+		public const string _typeName = "t1959";
 		/// <summary>
 		/// LP대상종목정보조회(t1959)
 		/// </summary>
-		static readonly string _typeDesc = "LP대상종목정보조회(t1959)";
+		public const string _typeDesc = "LP대상종목정보조회(t1959)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1959

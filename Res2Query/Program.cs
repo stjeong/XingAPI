@@ -140,14 +140,6 @@ namespace Res2Query
                     continue;
                 }
 
-#if DEBUG
-                if (typeName == "YS3")
-                {
-                    int k = 0;
-                }
-#endif
-
-
                 if (item.StartsWith("BEGIN_DATA_MAP") == true)
                 {
                     dataMapStarted = true;
@@ -519,7 +511,7 @@ namespace Res2Query
                             break;
 
                         case "string":
-                            sb.AppendLine($"{tab}\t\tif ({name2}.Length > {formatOrLen}) return false; // {fieldType} {formatOrLen}");
+                            sb.AppendLine($"{tab}\t\tif ({name2}?.Length > {formatOrLen}) return false; // {fieldType} {formatOrLen}");
                             break;
 
                         default:
@@ -600,7 +592,6 @@ namespace Res2Query
             }
 
             int integral = Int32.Parse(digits[0]);
-            int fraction = 0;
 
             if (digits.Length == 1)
             {
@@ -608,7 +599,7 @@ namespace Res2Query
             }
             else
             {
-                fraction = Int32.Parse(digits[1]);
+                int fraction = Int32.Parse(digits[1]);
                 return new string('0', integral) + "." + new string('0', fraction);
             }
         }
@@ -665,6 +656,7 @@ namespace Res2Query
 
             {
                 AddField(sb, tab + "\t", "string", "_typeName", typeName);
+                AddField(sb, tab + "\t", "string", "_typeDesc", typeDesc);
                 AddField(sb, tab + "\t", "bool", "_attr", hasAttr);
                 AddField(sb, tab + "\t", "int", "_key", key);
                 AddField(sb, tab + "\t", "int", "_group", group);
@@ -672,6 +664,7 @@ namespace Res2Query
                 sb.AppendLine();
 
                 AddGetProperty(sb, tab + "\t", "string", "TypeName", "_typeName", typeName);
+                AddGetProperty(sb, tab + "\t", "string", "TypeDesc", "_typeDesc", typeDesc);
                 AddGetProperty(sb, tab + "\t", "bool", "Attr", "_attr", hasAttr);
                 AddGetProperty(sb, tab + "\t", "int", "Key", "_key", key);
                 AddGetProperty(sb, tab + "\t", "int", "Group", "_group", group);
@@ -797,7 +790,7 @@ namespace Res2Query
                     break;
             }
 
-            sb.AppendLine($"{tab}static readonly {fieldType} {fieldName} = {valueText};");
+            sb.AppendLine($"{tab}public const {fieldType} {fieldName} = {valueText};");
         }
 
         private static void AddGetProperty(StringBuilder sb, string tab, string propType, string propName, string fieldName, int fieldValue)

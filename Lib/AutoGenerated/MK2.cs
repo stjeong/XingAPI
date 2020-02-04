@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (symbol.Length > 16) return false; // char 16
+			if (symbol?.Length > 16) return false; // char 16
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -465,10 +465,10 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (date.Length > 8) return false; // char 8
-			if (time.Length > 6) return false; // char 6
-			if (kodate.Length > 8) return false; // char 8
-			if (kotime.Length > 6) return false; // char 6
+			if (date?.Length > 8) return false; // char 8
+			if (time?.Length > 6) return false; // char 6
+			if (kodate?.Length > 8) return false; // char 8
+			if (kotime?.Length > 6) return false; // char 6
 			// open float 9.2
 			// high float 9.2
 			// low float 9.2
@@ -481,7 +481,7 @@ namespace XingAPINet
 			// offerho float 9.2
 			if (offerrem.ToString().Length > 9) return false; // long 9
 			// volume float 12.0
-			if (xsymbol.Length > 16) return false; // char 16
+			if (xsymbol?.Length > 16) return false; // char 16
 			// cvolume float 8.0
 
 			return true;
@@ -493,24 +493,32 @@ namespace XingAPINet
 		/// <summary>
 		/// MK2
 		/// </summary>
-		static readonly string _typeName = "MK2";
+		public const string _typeName = "MK2";
+		/// <summary>
+		/// US지수(MK2)
+		/// </summary>
+		public const string _typeDesc = "US지수(MK2)";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// MK2
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// US지수(MK2)
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

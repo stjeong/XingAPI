@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1511InBlock
 		/// </summary>
-		static readonly string _blockName = "t1511InBlock";
+		public const string _blockName = "t1511InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1511InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (upcode.Length > 3) return false; // char 3
+			if (upcode?.Length > 3) return false; // char 3
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1511OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1511OutBlock";
+		public const string _blockName = "t1511OutBlock";
 		/// <summary>
 		/// 기본출력
 		/// </summary>
-		static readonly string _blockDesc = "기본출력";
+		public const string _blockDesc = "기본출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1511OutBlock
 		/// </summary>
@@ -1224,7 +1224,7 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			// gubun char 1
-			if (hname.Length > 20) return false; // char 20
+			if (hname?.Length > 20) return false; // char 20
 			// pricejisu float 7.2
 			// jniljisu float 7.2
 			// sign char 1
@@ -1240,45 +1240,45 @@ namespace XingAPINet
 			// valuerate float 6.2
 			// openjisu float 7.2
 			// opendiff float 6.2
-			if (opentime.Length > 6) return false; // char 6
+			if (opentime?.Length > 6) return false; // char 6
 			// highjisu float 7.2
 			// highdiff float 6.2
-			if (hightime.Length > 6) return false; // char 6
+			if (hightime?.Length > 6) return false; // char 6
 			// lowjisu float 7.2
 			// lowdiff float 6.2
-			if (lowtime.Length > 6) return false; // char 6
+			if (lowtime?.Length > 6) return false; // char 6
 			// whjisu float 7.2
 			// whchange float 7.2
-			if (whjday.Length > 8) return false; // char 8
+			if (whjday?.Length > 8) return false; // char 8
 			// wljisu float 7.2
 			// wlchange float 7.2
-			if (wljday.Length > 8) return false; // char 8
+			if (wljday?.Length > 8) return false; // char 8
 			// yhjisu float 7.2
 			// yhchange float 7.2
-			if (yhjday.Length > 8) return false; // char 8
+			if (yhjday?.Length > 8) return false; // char 8
 			// yljisu float 7.2
 			// ylchange float 7.2
-			if (yljday.Length > 8) return false; // char 8
-			if (firstjcode.Length > 3) return false; // char 3
-			if (firstjname.Length > 20) return false; // char 20
+			if (yljday?.Length > 8) return false; // char 8
+			if (firstjcode?.Length > 3) return false; // char 3
+			if (firstjname?.Length > 20) return false; // char 20
 			// firstjisu float 7.2
 			// firsign char 1
 			// firchange float 7.2
 			// firdiff float 6.2
-			if (secondjcode.Length > 3) return false; // char 3
-			if (secondjname.Length > 20) return false; // char 20
+			if (secondjcode?.Length > 3) return false; // char 3
+			if (secondjname?.Length > 20) return false; // char 20
 			// secondjisu float 7.2
 			// secsign char 1
 			// secchange float 7.2
 			// secdiff float 6.2
-			if (thirdjcode.Length > 3) return false; // char 3
-			if (thirdjname.Length > 20) return false; // char 20
+			if (thirdjcode?.Length > 3) return false; // char 3
+			if (thirdjname?.Length > 20) return false; // char 20
 			// thirdjisu float 7.2
 			// thrsign char 1
 			// thrchange float 7.2
 			// thrdiff float 6.2
-			if (fourthjcode.Length > 3) return false; // char 3
-			if (fourthjname.Length > 20) return false; // char 20
+			if (fourthjcode?.Length > 3) return false; // char 3
+			if (fourthjname?.Length > 20) return false; // char 20
 			// fourthjisu float 7.2
 			// forsign char 1
 			// forchange float 7.2
@@ -1298,43 +1298,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1511
 		/// </summary>
-		static readonly string _typeName = "t1511";
+		public const string _typeName = "t1511";
 		/// <summary>
 		/// 업종현재가(t1511)
 		/// </summary>
-		static readonly string _typeDesc = "업종현재가(t1511)";
+		public const string _typeDesc = "업종현재가(t1511)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1511

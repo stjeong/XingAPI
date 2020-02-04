@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t8414InBlock
 		/// </summary>
-		static readonly string _blockName = "t8414InBlock";
+		public const string _blockName = "t8414InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t8414InBlock
 		/// </summary>
@@ -239,16 +239,16 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 8) return false; // char 8
+			if (shcode?.Length > 8) return false; // char 8
 			if (ncnt.ToString().Length > 4) return false; // long 4
 			if (qrycnt.ToString().Length > 4) return false; // long 4
 			// nday char 1
-			if (sdate.Length > 8) return false; // char 8
-			if (stime.Length > 6) return false; // char 6
-			if (edate.Length > 8) return false; // char 8
-			if (etime.Length > 6) return false; // char 6
-			if (cts_date.Length > 8) return false; // char 8
-			if (cts_time.Length > 10) return false; // char 10
+			if (sdate?.Length > 8) return false; // char 8
+			if (stime?.Length > 6) return false; // char 6
+			if (edate?.Length > 8) return false; // char 8
+			if (etime?.Length > 6) return false; // char 6
+			if (cts_date?.Length > 8) return false; // char 8
+			if (cts_time?.Length > 10) return false; // char 10
 			// comp_yn char 1
 
 			return true;
@@ -260,19 +260,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t8414OutBlock
 		/// </summary>
-		static readonly string _blockName = "t8414OutBlock";
+		public const string _blockName = "t8414OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t8414OutBlock
 		/// </summary>
@@ -631,7 +631,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 8) return false; // char 8
+			if (shcode?.Length > 8) return false; // char 8
 			// jisiga float 6.2
 			// jihigh float 6.2
 			// jilow float 6.2
@@ -643,11 +643,11 @@ namespace XingAPINet
 			// diclose float 6.2
 			// highend float 6.2
 			// lowend float 6.2
-			if (cts_date.Length > 8) return false; // char 8
-			if (cts_time.Length > 10) return false; // char 10
-			if (s_time.Length > 6) return false; // char 6
-			if (e_time.Length > 6) return false; // char 6
-			if (dshmin.Length > 2) return false; // char 2
+			if (cts_date?.Length > 8) return false; // char 8
+			if (cts_time?.Length > 10) return false; // char 10
+			if (s_time?.Length > 6) return false; // char 6
+			if (e_time?.Length > 6) return false; // char 6
+			if (dshmin?.Length > 2) return false; // char 2
 			if (rec_count.ToString().Length > 7) return false; // long 7
 
 			return true;
@@ -659,19 +659,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t8414OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t8414OutBlock1";
+		public const string _blockName = "t8414OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t8414OutBlock1
 		/// </summary>
@@ -874,8 +874,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (date.Length > 8) return false; // char 8
-			if (time.Length > 10) return false; // char 10
+			if (date?.Length > 8) return false; // char 8
+			if (time?.Length > 10) return false; // char 10
 			// open float 6.2
 			// high float 6.2
 			// low float 6.2
@@ -892,43 +892,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t8414
 		/// </summary>
-		static readonly string _typeName = "t8414";
+		public const string _typeName = "t8414";
 		/// <summary>
 		/// 선물옵션차트(틱/n틱)(t8414)
 		/// </summary>
-		static readonly string _typeDesc = "선물옵션차트(틱/n틱)(t8414)";
+		public const string _typeDesc = "선물옵션차트(틱/n틱)(t8414)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t8414

@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1101InBlock
 		/// </summary>
-		static readonly string _blockName = "t1101InBlock";
+		public const string _blockName = "t1101InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1101InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1101OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1101OutBlock";
+		public const string _blockName = "t1101OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1101OutBlock
 		/// </summary>
@@ -1559,7 +1559,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (hname.Length > 20) return false; // char 20
+			if (hname?.Length > 20) return false; // char 20
 			if (price.ToString().Length > 8) return false; // long 8
 			// sign char 1
 			if (change.ToString().Length > 8) return false; // long 8
@@ -1630,7 +1630,7 @@ namespace XingAPINet
 			if (bid.ToString().Length > 12) return false; // long 12
 			if (preoffercha.ToString().Length > 12) return false; // long 12
 			if (prebidcha.ToString().Length > 12) return false; // long 12
-			if (hotime.Length > 8) return false; // char 8
+			if (hotime?.Length > 8) return false; // char 8
 			if (yeprice.ToString().Length > 8) return false; // long 8
 			if (yevolume.ToString().Length > 12) return false; // long 12
 			// yesign char 1
@@ -1639,7 +1639,7 @@ namespace XingAPINet
 			if (tmoffer.ToString().Length > 12) return false; // long 12
 			if (tmbid.ToString().Length > 12) return false; // long 12
 			// ho_status char 1
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 			if (uplmtprice.ToString().Length > 8) return false; // long 8
 			if (dnlmtprice.ToString().Length > 8) return false; // long 8
 			if (open.ToString().Length > 8) return false; // long 8
@@ -1655,43 +1655,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1101
 		/// </summary>
-		static readonly string _typeName = "t1101";
+		public const string _typeName = "t1101";
 		/// <summary>
 		/// 주식현재가호가조회(t1101)
 		/// </summary>
-		static readonly string _typeDesc = "주식현재가호가조회(t1101)";
+		public const string _typeDesc = "주식현재가호가조회(t1101)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1101

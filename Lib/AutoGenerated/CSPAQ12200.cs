@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPAQ12200InBlock1
 		/// </summary>
-		static readonly string _blockName = "CSPAQ12200InBlock1";
+		public const string _blockName = "CSPAQ12200InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CSPAQ12200InBlock1
 		/// </summary>
@@ -150,9 +150,9 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (MgmtBrnNo.Length > 3) return false; // char 3
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
+			if (MgmtBrnNo?.Length > 3) return false; // char 3
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
 			// BalCreTp char 1
 
 			return true;
@@ -164,19 +164,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPAQ12200OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CSPAQ12200OutBlock1";
+		public const string _blockName = "CSPAQ12200OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CSPAQ12200OutBlock1
 		/// </summary>
@@ -328,9 +328,9 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (MgmtBrnNo.Length > 3) return false; // char 3
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
+			if (MgmtBrnNo?.Length > 3) return false; // char 3
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
 			// BalCreTp char 1
 
 			return true;
@@ -342,19 +342,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPAQ12200OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CSPAQ12200OutBlock2";
+		public const string _blockName = "CSPAQ12200OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CSPAQ12200OutBlock2
 		/// </summary>
@@ -1354,8 +1354,8 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (BrnNm.Length > 40) return false; // char 40
-			if (AcntNm.Length > 40) return false; // char 40
+			if (BrnNm?.Length > 40) return false; // char 40
+			if (AcntNm?.Length > 40) return false; // char 40
 			if (MnyOrdAbleAmt.ToString().Length > 16) return false; // long 16
 			if (MnyoutAbleAmt.ToString().Length > 16) return false; // long 16
 			if (SeOrdAbleAmt.ToString().Length > 16) return false; // long 16
@@ -1421,43 +1421,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPAQ12200
 		/// </summary>
-		static readonly string _typeName = "CSPAQ12200";
+		public const string _typeName = "CSPAQ12200";
 		/// <summary>
 		/// 현물계좌예수금 주문가능금액 총평가 조회
 		/// </summary>
-		static readonly string _typeDesc = "현물계좌예수금 주문가능금액 총평가 조회";
+		public const string _typeDesc = "현물계좌예수금 주문가능금액 총평가 조회";
 		/// <summary>
 		/// CSPAQ12200
 		/// </summary>
-		static readonly string _service = "CSPAQ12200";
+		public const string _service = "CSPAQ12200";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 이상은
 		/// </summary>
-		static readonly string _creator = "이상은";
+		public const string _creator = "이상은";
 		/// <summary>
 		/// 2015/04/13 08:41:27
 		/// </summary>
-		static readonly string _createdDate = "2015/04/13 08:41:27";
+		public const string _createdDate = "2015/04/13 08:41:27";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CSPAQ12200

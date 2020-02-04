@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1809InBlock
 		/// </summary>
-		static readonly string _blockName = "t1809InBlock";
+		public const string _blockName = "t1809InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1809InBlock
 		/// </summary>
@@ -136,8 +136,8 @@ namespace XingAPINet
 		{
 			// gubun char 1
 			// jmGb char 1
-			if (jmcode.Length > 6) return false; // char 6
-			if (cts.Length > 30) return false; // char 30
+			if (jmcode?.Length > 6) return false; // char 6
+			if (cts?.Length > 30) return false; // char 30
 
 			return true;
 		}
@@ -148,19 +148,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1809OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1809OutBlock";
+		public const string _blockName = "t1809OutBlock";
 		/// <summary>
 		/// 기본출력
 		/// </summary>
-		static readonly string _blockDesc = "기본출력";
+		public const string _blockDesc = "기본출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1809OutBlock
 		/// </summary>
@@ -247,7 +247,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (cts.Length > 30) return false; // char 30
+			if (cts?.Length > 30) return false; // char 30
 
 			return true;
 		}
@@ -258,19 +258,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1809OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t1809OutBlock1";
+		public const string _blockName = "t1809OutBlock1";
 		/// <summary>
 		/// 기본출력1
 		/// </summary>
-		static readonly string _blockDesc = "기본출력1";
+		public const string _blockDesc = "기본출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t1809OutBlock1
 		/// </summary>
@@ -569,20 +569,20 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (date.Length > 8) return false; // char 8
-			if (time.Length > 6) return false; // char 6
-			if (signal_id.Length > 4) return false; // char 4
-			if (signal_desc.Length > 300) return false; // char 300
-			if (point.Length > 3) return false; // char 3
-			if (keyword.Length > 40) return false; // char 40
-			if (seq.Length > 24) return false; // char 24
-			if (gubun.Length > 2) return false; // char 2
-			if (jmcode.Length > 6) return false; // char 6
+			if (date?.Length > 8) return false; // char 8
+			if (time?.Length > 6) return false; // char 6
+			if (signal_id?.Length > 4) return false; // char 4
+			if (signal_desc?.Length > 300) return false; // char 300
+			if (point?.Length > 3) return false; // char 3
+			if (keyword?.Length > 40) return false; // char 40
+			if (seq?.Length > 24) return false; // char 24
+			if (gubun?.Length > 2) return false; // char 2
+			if (jmcode?.Length > 6) return false; // char 6
 			if (price.ToString().Length > 7) return false; // long 7
 			// sign char 1
 			// chgrate float 6.2
 			if (volume.ToString().Length > 9) return false; // long 9
-			if (datetime.Length > 16) return false; // char 16
+			if (datetime?.Length > 16) return false; // char 16
 
 			return true;
 		}
@@ -593,43 +593,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1809
 		/// </summary>
-		static readonly string _typeName = "t1809";
+		public const string _typeName = "t1809";
 		/// <summary>
 		/// 신호조회(t1809)
 		/// </summary>
-		static readonly string _typeDesc = "신호조회(t1809)";
+		public const string _typeDesc = "신호조회(t1809)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1809

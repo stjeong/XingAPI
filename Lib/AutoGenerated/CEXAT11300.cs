@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CEXAT11300InBlock1
 		/// </summary>
-		static readonly string _blockName = "CEXAT11300InBlock1";
+		public const string _blockName = "CEXAT11300InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CEXAT11300InBlock1
 		/// </summary>
@@ -135,9 +135,9 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (OrgOrdNo.ToString().Length > 10) return false; // long 10
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (FnoIsuNo.Length > 12) return false; // char 12
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (FnoIsuNo?.Length > 12) return false; // char 12
 
 			return true;
 		}
@@ -148,19 +148,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CEXAT11300OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CEXAT11300OutBlock1";
+		public const string _blockName = "CEXAT11300OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CEXAT11300OutBlock1
 		/// </summary>
@@ -345,11 +345,11 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			if (OrgOrdNo.ToString().Length > 10) return false; // long 10
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (FnoIsuNo.Length > 12) return false; // char 12
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (FnoIsuNo?.Length > 12) return false; // char 12
 			if (CancQty.ToString().Length > 16) return false; // long 16
-			if (CommdaCode.Length > 2) return false; // char 2
+			if (CommdaCode?.Length > 2) return false; // char 2
 
 			return true;
 		}
@@ -360,19 +360,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CEXAT11300OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CEXAT11300OutBlock2";
+		public const string _blockName = "CEXAT11300OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CEXAT11300OutBlock2
 		/// </summary>
@@ -605,9 +605,9 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			if (OrdNo.ToString().Length > 10) return false; // long 10
-			if (BrnNm.Length > 40) return false; // char 40
-			if (AcntNm.Length > 40) return false; // char 40
-			if (IsuNm.Length > 50) return false; // char 50
+			if (BrnNm?.Length > 40) return false; // char 40
+			if (AcntNm?.Length > 40) return false; // char 40
+			if (IsuNm?.Length > 50) return false; // char 50
 			if (OrdAbleAmt.ToString().Length > 16) return false; // long 16
 			if (MnyOrdAbleAmt.ToString().Length > 16) return false; // long 16
 			if (OrdMgn.ToString().Length > 16) return false; // long 16
@@ -623,43 +623,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CEXAT11300
 		/// </summary>
-		static readonly string _typeName = "CEXAT11300";
+		public const string _typeName = "CEXAT11300";
 		/// <summary>
 		/// 유렉스 취소주문
 		/// </summary>
-		static readonly string _typeDesc = "유렉스 취소주문";
+		public const string _typeDesc = "유렉스 취소주문";
 		/// <summary>
 		/// CEXAT11300
 		/// </summary>
-		static readonly string _service = "CEXAT11300";
+		public const string _service = "CEXAT11300";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 이시종
 		/// </summary>
-		static readonly string _creator = "이시종";
+		public const string _creator = "이시종";
 		/// <summary>
 		/// 2012/06/27 21:31:41
 		/// </summary>
-		static readonly string _createdDate = "2012/06/27 21:31:41";
+		public const string _createdDate = "2012/06/27 21:31:41";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CEXAT11300

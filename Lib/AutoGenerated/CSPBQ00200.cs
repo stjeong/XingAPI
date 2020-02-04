@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPBQ00200InBlock1
 		/// </summary>
-		static readonly string _blockName = "CSPBQ00200InBlock1";
+		public const string _blockName = "CSPBQ00200InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CSPBQ00200InBlock1
 		/// </summary>
@@ -181,11 +181,11 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			// BnsTpCode char 1
-			if (AcntNo.Length > 20) return false; // char 20
-			if (InptPwd.Length > 8) return false; // char 8
-			if (IsuNo.Length > 12) return false; // char 12
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (InptPwd?.Length > 8) return false; // char 8
+			if (IsuNo?.Length > 12) return false; // char 12
 			// OrdPrc double 15.2
-			if (RegCommdaCode.Length > 2) return false; // char 2
+			if (RegCommdaCode?.Length > 2) return false; // char 2
 
 			return true;
 		}
@@ -196,19 +196,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPBQ00200OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CSPBQ00200OutBlock1";
+		public const string _blockName = "CSPBQ00200OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CSPBQ00200OutBlock1
 		/// </summary>
@@ -393,11 +393,11 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			// BnsTpCode char 1
-			if (AcntNo.Length > 20) return false; // char 20
-			if (InptPwd.Length > 8) return false; // char 8
-			if (IsuNo.Length > 12) return false; // char 12
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (InptPwd?.Length > 8) return false; // char 8
+			if (IsuNo?.Length > 12) return false; // char 12
 			// OrdPrc double 15.2
-			if (RegCommdaCode.Length > 2) return false; // char 2
+			if (RegCommdaCode?.Length > 2) return false; // char 2
 
 			return true;
 		}
@@ -408,19 +408,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPBQ00200OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CSPBQ00200OutBlock2";
+		public const string _blockName = "CSPBQ00200OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CSPBQ00200OutBlock2
 		/// </summary>
@@ -1164,8 +1164,8 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (AcntNm.Length > 40) return false; // char 40
-			if (IsuNm.Length > 40) return false; // char 40
+			if (AcntNm?.Length > 40) return false; // char 40
+			if (IsuNm?.Length > 40) return false; // char 40
 			if (Dps.ToString().Length > 16) return false; // long 16
 			if (SubstAmt.ToString().Length > 16) return false; // long 16
 			if (CrdtPldgRuseAmt.ToString().Length > 16) return false; // long 16
@@ -1215,43 +1215,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CSPBQ00200
 		/// </summary>
-		static readonly string _typeName = "CSPBQ00200";
+		public const string _typeName = "CSPBQ00200";
 		/// <summary>
 		/// 현물계좌증거금률별주문가능수량조회
 		/// </summary>
-		static readonly string _typeDesc = "현물계좌증거금률별주문가능수량조회";
+		public const string _typeDesc = "현물계좌증거금률별주문가능수량조회";
 		/// <summary>
 		/// CSPBQ00200
 		/// </summary>
-		static readonly string _service = "CSPBQ00200";
+		public const string _service = "CSPBQ00200";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 이상은
 		/// </summary>
-		static readonly string _creator = "이상은";
+		public const string _creator = "이상은";
 		/// <summary>
 		/// 2011/12/12 09:22:25
 		/// </summary>
-		static readonly string _createdDate = "2011/12/12 09:22:25";
+		public const string _createdDate = "2011/12/12 09:22:25";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CSPBQ00200

@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOBQ10800InBlock1
 		/// </summary>
-		static readonly string _blockName = "CFOBQ10800InBlock1";
+		public const string _blockName = "CFOBQ10800InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CFOBQ10800InBlock1
 		/// </summary>
@@ -150,9 +150,9 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (PrdgrpClssCode.Length > 2) return false; // char 2
-			if (ClssGrpCode.Length > 3) return false; // char 3
-			if (BaseYear.Length > 4) return false; // char 4
+			if (PrdgrpClssCode?.Length > 2) return false; // char 2
+			if (ClssGrpCode?.Length > 3) return false; // char 3
+			if (BaseYear?.Length > 4) return false; // char 4
 			// FstmmTpCode char 1
 
 			return true;
@@ -164,19 +164,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOBQ10800OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CFOBQ10800OutBlock1";
+		public const string _blockName = "CFOBQ10800OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CFOBQ10800OutBlock1
 		/// </summary>
@@ -328,9 +328,9 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (PrdgrpClssCode.Length > 2) return false; // char 2
-			if (ClssGrpCode.Length > 3) return false; // char 3
-			if (BaseYear.Length > 4) return false; // char 4
+			if (PrdgrpClssCode?.Length > 2) return false; // char 2
+			if (ClssGrpCode?.Length > 3) return false; // char 3
+			if (BaseYear?.Length > 4) return false; // char 4
 			// FstmmTpCode char 1
 
 			return true;
@@ -342,19 +342,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOBQ10800OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CFOBQ10800OutBlock2";
+		public const string _blockName = "CFOBQ10800OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// CFOBQ10800OutBlock2
 		/// </summary>
@@ -670,16 +670,16 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			// ElwXrcPrc double 13.2
-			if (FnoIsuNo.Length > 12) return false; // char 12
-			if (HanglIsuNm1.Length > 40) return false; // char 40
-			if (TpNm1.Length > 40) return false; // char 40
+			if (FnoIsuNo?.Length > 12) return false; // char 12
+			if (HanglIsuNm1?.Length > 40) return false; // char 40
+			if (TpNm1?.Length > 40) return false; // char 40
 			// UpOptRegulThrprc double 27.8
 			// Thrprc1 double 19.8
 			// BasePrc1 double 13.2
 			if (OrdMgn1.ToString().Length > 16) return false; // long 16
-			if (FnoIsuNo0.Length > 12) return false; // char 12
-			if (HanglIsuNm2.Length > 40) return false; // char 40
-			if (TpNm2.Length > 40) return false; // char 40
+			if (FnoIsuNo0?.Length > 12) return false; // char 12
+			if (HanglIsuNm2?.Length > 40) return false; // char 40
+			if (TpNm2?.Length > 40) return false; // char 40
 			// DownOptRegulThrprc double 27.8
 			// Thrprc2 double 19.8
 			// BasePrc2 double 13.2
@@ -694,43 +694,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOBQ10800
 		/// </summary>
-		static readonly string _typeName = "CFOBQ10800";
+		public const string _typeName = "CFOBQ10800";
 		/// <summary>
 		/// 선물옵션 옵션매도시 주문증거금조회
 		/// </summary>
-		static readonly string _typeDesc = "선물옵션 옵션매도시 주문증거금조회";
+		public const string _typeDesc = "선물옵션 옵션매도시 주문증거금조회";
 		/// <summary>
 		/// CFOBQ10800
 		/// </summary>
-		static readonly string _service = "CFOBQ10800";
+		public const string _service = "CFOBQ10800";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 원종혁
 		/// </summary>
-		static readonly string _creator = "원종혁";
+		public const string _creator = "원종혁";
 		/// <summary>
 		/// 2019/08/01 10:51:29
 		/// </summary>
-		static readonly string _createdDate = "2019/08/01 10:51:29";
+		public const string _createdDate = "2019/08/01 10:51:29";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CFOBQ10800

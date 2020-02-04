@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1960InBlock
 		/// </summary>
-		static readonly string _blockName = "t1960InBlock";
+		public const string _blockName = "t1960InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1960InBlock
 		/// </summary>
@@ -240,10 +240,10 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			// gubun char 1
-			if (ggubun.Length > 2) return false; // char 2
-			if (itemcode.Length > 12) return false; // char 12
-			if (lastdate.Length > 8) return false; // char 8
-			if (exgubun.Length > 6) return false; // char 6
+			if (ggubun?.Length > 2) return false; // char 2
+			if (itemcode?.Length > 12) return false; // char 12
+			if (lastdate?.Length > 8) return false; // char 8
+			if (exgubun?.Length > 6) return false; // char 6
 			if (sprice.ToString().Length > 8) return false; // long 8
 			if (eprice.ToString().Length > 8) return false; // long 8
 			if (volume.ToString().Length > 12) return false; // long 12
@@ -260,19 +260,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1960OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1960OutBlock";
+		public const string _blockName = "t1960OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1960OutBlock
 		/// </summary>
@@ -370,19 +370,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1960OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t1960OutBlock1";
+		public const string _blockName = "t1960OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t1960OutBlock1
 		/// </summary>
@@ -745,7 +745,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (hname.Length > 40) return false; // char 40
+			if (hname?.Length > 40) return false; // char 40
 			if (price.ToString().Length > 8) return false; // long 8
 			// sign char 1
 			if (change.ToString().Length > 8) return false; // long 8
@@ -753,15 +753,15 @@ namespace XingAPINet
 			// volume double 12.0
 			// elwexec double 10.2
 			// convrate double 12.4
-			if (lastdate.Length > 8) return false; // char 8
-			if (itemcode.Length > 12) return false; // char 12
-			if (itemshcode.Length > 9) return false; // char 9
-			if (itemname.Length > 20) return false; // char 20
-			if (itemprice.Length > 10) return false; // char 10
+			if (lastdate?.Length > 8) return false; // char 8
+			if (itemcode?.Length > 12) return false; // char 12
+			if (itemshcode?.Length > 9) return false; // char 9
+			if (itemname?.Length > 20) return false; // char 20
+			if (itemprice?.Length > 10) return false; // char 10
 			// itemsign char 1
-			if (itemchange.Length > 10) return false; // char 10
+			if (itemchange?.Length > 10) return false; // char 10
 			// itemdiff double 6.2
-			if (elwshcode.Length > 6) return false; // char 6
+			if (elwshcode?.Length > 6) return false; // char 6
 			// bepoint double 12.2
 
 			return true;
@@ -773,43 +773,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1960
 		/// </summary>
-		static readonly string _typeName = "t1960";
+		public const string _typeName = "t1960";
 		/// <summary>
 		/// ELW등락율상위(t1960)
 		/// </summary>
-		static readonly string _typeDesc = "ELW등락율상위(t1960)";
+		public const string _typeDesc = "ELW등락율상위(t1960)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1960

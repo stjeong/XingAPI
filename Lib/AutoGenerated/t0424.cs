@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0424InBlock
 		/// </summary>
-		static readonly string _blockName = "t0424InBlock";
+		public const string _blockName = "t0424InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0424InBlock
 		/// </summary>
@@ -179,13 +179,13 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (accno.Length > 11) return false; // char 11
-			if (passwd.Length > 8) return false; // char 8
+			if (accno?.Length > 11) return false; // char 11
+			if (passwd?.Length > 8) return false; // char 8
 			// prcgb char 1
 			// chegb char 1
 			// dangb char 1
 			// charge char 1
-			if (cts_expcode.Length > 22) return false; // char 22
+			if (cts_expcode?.Length > 22) return false; // char 22
 
 			return true;
 		}
@@ -196,19 +196,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0424OutBlock
 		/// </summary>
-		static readonly string _blockName = "t0424OutBlock";
+		public const string _blockName = "t0424OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0424OutBlock
 		/// </summary>
@@ -395,7 +395,7 @@ namespace XingAPINet
 			if (dtsunik.ToString().Length > 18) return false; // long 18
 			if (mamt.ToString().Length > 18) return false; // long 18
 			if (sunamt1.ToString().Length > 18) return false; // long 18
-			if (cts_expcode.Length > 22) return false; // char 22
+			if (cts_expcode?.Length > 22) return false; // char 22
 			if (tappamt.ToString().Length > 18) return false; // long 18
 			if (tdtsunik.ToString().Length > 18) return false; // long 18
 
@@ -408,19 +408,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0424OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t0424OutBlock1";
+		public const string _blockName = "t0424OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t0424OutBlock1
 		/// </summary>
@@ -959,14 +959,14 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (expcode.Length > 12) return false; // char 12
-			if (jangb.Length > 10) return false; // char 10
+			if (expcode?.Length > 12) return false; // char 12
+			if (jangb?.Length > 10) return false; // char 10
 			if (janqty.ToString().Length > 18) return false; // long 18
 			if (mdposqt.ToString().Length > 18) return false; // long 18
 			if (pamt.ToString().Length > 18) return false; // long 18
 			if (mamt.ToString().Length > 18) return false; // long 18
 			if (sinamt.ToString().Length > 18) return false; // long 18
-			if (lastdt.Length > 8) return false; // char 8
+			if (lastdt?.Length > 8) return false; // char 8
 			if (msat.ToString().Length > 18) return false; // long 18
 			if (mpms.ToString().Length > 18) return false; // long 18
 			if (mdat.ToString().Length > 18) return false; // long 18
@@ -976,8 +976,8 @@ namespace XingAPINet
 			if (jdat.ToString().Length > 18) return false; // long 18
 			if (jpmd.ToString().Length > 18) return false; // long 18
 			if (sysprocseq.ToString().Length > 10) return false; // long 10
-			if (loandt.Length > 8) return false; // char 8
-			if (hname.Length > 20) return false; // char 20
+			if (loandt?.Length > 8) return false; // char 8
+			if (hname?.Length > 20) return false; // char 20
 			// marketgb char 1
 			// jonggb char 1
 			// janrt float 10.2
@@ -998,43 +998,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t0424
 		/// </summary>
-		static readonly string _typeName = "t0424";
+		public const string _typeName = "t0424";
 		/// <summary>
 		/// 주식잔고2(t0424)
 		/// </summary>
-		static readonly string _typeDesc = "주식잔고2(t0424)";
+		public const string _typeDesc = "주식잔고2(t0424)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// D
 		/// </summary>
-		static readonly string _headType = "D";
+		public const string _headType = "D";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t0424

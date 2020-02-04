@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1826InBlock
 		/// </summary>
-		static readonly string _blockName = "t1826InBlock";
+		public const string _blockName = "t1826InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1826InBlock
 		/// </summary>
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1826OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1826OutBlock";
+		public const string _blockName = "t1826OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t1826OutBlock
 		/// </summary>
@@ -219,8 +219,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (search_cd.Length > 4) return false; // char 4
-			if (search_nm.Length > 40) return false; // char 40
+			if (search_cd?.Length > 4) return false; // char 4
+			if (search_nm?.Length > 40) return false; // char 40
 
 			return true;
 		}
@@ -231,43 +231,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1826
 		/// </summary>
-		static readonly string _typeName = "t1826";
+		public const string _typeName = "t1826";
 		/// <summary>
 		/// 종목Q클릭검색리스트조회(씽큐스마트)(t1826)
 		/// </summary>
-		static readonly string _typeDesc = "종목Q클릭검색리스트조회(씽큐스마트)(t1826)";
+		public const string _typeDesc = "종목Q클릭검색리스트조회(씽큐스마트)(t1826)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1826

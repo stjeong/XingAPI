@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0434InBlock
 		/// </summary>
-		static readonly string _blockName = "t0434InBlock";
+		public const string _blockName = "t0434InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0434InBlock
 		/// </summary>
@@ -164,12 +164,12 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (accno.Length > 11) return false; // char 11
-			if (passwd.Length > 8) return false; // char 8
-			if (expcode.Length > 8) return false; // char 8
+			if (accno?.Length > 11) return false; // char 11
+			if (passwd?.Length > 8) return false; // char 8
+			if (expcode?.Length > 8) return false; // char 8
 			// chegb char 1
 			// sortgb char 1
-			if (cts_ordno.Length > 7) return false; // char 7
+			if (cts_ordno?.Length > 7) return false; // char 7
 
 			return true;
 		}
@@ -180,19 +180,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0434OutBlock
 		/// </summary>
-		static readonly string _blockName = "t0434OutBlock";
+		public const string _blockName = "t0434OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0434OutBlock
 		/// </summary>
@@ -279,7 +279,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (cts_ordno.Length > 7) return false; // char 7
+			if (cts_ordno?.Length > 7) return false; // char 7
 
 			return true;
 		}
@@ -290,19 +290,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0434OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t0434OutBlock1";
+		public const string _blockName = "t0434OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t0434OutBlock1
 		/// </summary>
@@ -635,18 +635,18 @@ namespace XingAPINet
 		{
 			if (ordno.ToString().Length > 7) return false; // long 7
 			if (orgordno.ToString().Length > 7) return false; // long 7
-			if (medosu.Length > 10) return false; // char 10
-			if (ordgb.Length > 20) return false; // char 20
+			if (medosu?.Length > 10) return false; // char 10
+			if (ordgb?.Length > 20) return false; // char 20
 			if (qty.ToString().Length > 9) return false; // long 9
 			// price float 9.2
 			if (cheqty.ToString().Length > 9) return false; // long 9
 			// cheprice float 9.2
 			if (ordrem.ToString().Length > 9) return false; // long 9
-			if (status.Length > 10) return false; // char 10
-			if (ordtime.Length > 8) return false; // char 8
-			if (ordermtd.Length > 10) return false; // char 10
-			if (expcode.Length > 8) return false; // char 8
-			if (rtcode.Length > 3) return false; // char 3
+			if (status?.Length > 10) return false; // char 10
+			if (ordtime?.Length > 8) return false; // char 8
+			if (ordermtd?.Length > 10) return false; // char 10
+			if (expcode?.Length > 8) return false; // char 8
+			if (rtcode?.Length > 3) return false; // char 3
 			if (sysprocseq.ToString().Length > 10) return false; // long 10
 			// hogatype char 1
 
@@ -659,43 +659,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t0434
 		/// </summary>
-		static readonly string _typeName = "t0434";
+		public const string _typeName = "t0434";
 		/// <summary>
 		/// 선물/옵션체결/미체결(t0434)
 		/// </summary>
-		static readonly string _typeDesc = "선물/옵션체결/미체결(t0434)";
+		public const string _typeDesc = "선물/옵션체결/미체결(t0434)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// D
 		/// </summary>
-		static readonly string _headType = "D";
+		public const string _headType = "D";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t0434

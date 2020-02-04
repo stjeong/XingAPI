@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (optcode.Length > 8) return false; // char 8
+			if (optcode?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -273,12 +273,12 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (ychetime.Length > 6) return false; // char 6
+			if (ychetime?.Length > 6) return false; // char 6
 			// yeprice float 6.2
 			// jnilysign char 1
 			// preychange float 6.2
 			// jnilydrate float 6.2
-			if (optcode.Length > 8) return false; // char 8
+			if (optcode?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -289,24 +289,32 @@ namespace XingAPINet
 		/// <summary>
 		/// YOC
 		/// </summary>
-		static readonly string _typeName = "YOC";
+		public const string _typeName = "YOC";
+		/// <summary>
+		/// 지수옵션예상체결(YOC)
+		/// </summary>
+		public const string _typeDesc = "지수옵션예상체결(YOC)";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// YOC
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// 지수옵션예상체결(YOC)
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

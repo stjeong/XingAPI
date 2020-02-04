@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOEQ82600InBlock1
 		/// </summary>
-		static readonly string _blockName = "CFOEQ82600InBlock1";
+		public const string _blockName = "CFOEQ82600InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CFOEQ82600InBlock1
 		/// </summary>
@@ -195,10 +195,10 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (QrySrtDt.Length > 8) return false; // char 8
-			if (QryEndDt.Length > 8) return false; // char 8
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (QrySrtDt?.Length > 8) return false; // char 8
+			if (QryEndDt?.Length > 8) return false; // char 8
 			// QryTp char 1
 			// StnlnSeqTp char 1
 			// FnoBalEvalTpCode char 1
@@ -212,19 +212,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOEQ82600OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CFOEQ82600OutBlock1";
+		public const string _blockName = "CFOEQ82600OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CFOEQ82600OutBlock1
 		/// </summary>
@@ -424,10 +424,10 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (QrySrtDt.Length > 8) return false; // char 8
-			if (QryEndDt.Length > 8) return false; // char 8
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (QrySrtDt?.Length > 8) return false; // char 8
+			if (QryEndDt?.Length > 8) return false; // char 8
 			// QryTp char 1
 			// StnlnSeqTp char 1
 			// FnoBalEvalTpCode char 1
@@ -441,19 +441,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOEQ82600OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CFOEQ82600OutBlock2";
+		public const string _blockName = "CFOEQ82600OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CFOEQ82600OutBlock2
 		/// </summary>
@@ -659,7 +659,7 @@ namespace XingAPINet
 			if (PnlSumAmt.ToString().Length > 16) return false; // long 16
 			if (MnyinSumAmt.ToString().Length > 16) return false; // long 16
 			if (MnyoutSumAmt.ToString().Length > 16) return false; // long 16
-			if (AcntNm.Length > 40) return false; // char 40
+			if (AcntNm?.Length > 40) return false; // char 40
 
 			return true;
 		}
@@ -670,19 +670,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOEQ82600OutBlock3
 		/// </summary>
-		static readonly string _blockName = "CFOEQ82600OutBlock3";
+		public const string _blockName = "CFOEQ82600OutBlock3";
 		/// <summary>
 		/// OutList(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "OutList(*EMPTY*)";
+		public const string _blockDesc = "OutList(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// CFOEQ82600OutBlock3
 		/// </summary>
@@ -1077,7 +1077,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (QryDt.Length > 8) return false; // char 8
+			if (QryDt?.Length > 8) return false; // char 8
 			if (DpstgTotamt.ToString().Length > 16) return false; // long 16
 			if (DpstgMny.ToString().Length > 16) return false; // long 16
 			if (FnoMgn.ToString().Length > 16) return false; // long 16
@@ -1107,43 +1107,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CFOEQ82600
 		/// </summary>
-		static readonly string _typeName = "CFOEQ82600";
+		public const string _typeName = "CFOEQ82600";
 		/// <summary>
 		/// 선물옵션 일별 계좌손익내역
 		/// </summary>
-		static readonly string _typeDesc = "선물옵션 일별 계좌손익내역";
+		public const string _typeDesc = "선물옵션 일별 계좌손익내역";
 		/// <summary>
 		/// CFOEQ82600
 		/// </summary>
-		static readonly string _service = "CFOEQ82600";
+		public const string _service = "CFOEQ82600";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 황규석
 		/// </summary>
-		static readonly string _creator = "황규석";
+		public const string _creator = "황규석";
 		/// <summary>
 		/// 2013/01/06 17:48:51
 		/// </summary>
-		static readonly string _createdDate = "2013/01/06 17:48:51";
+		public const string _createdDate = "2013/01/06 17:48:51";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CFOEQ82600

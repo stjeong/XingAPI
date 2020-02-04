@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1752InBlock
 		/// </summary>
-		static readonly string _blockName = "t1752InBlock";
+		public const string _blockName = "t1752InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1752InBlock
 		/// </summary>
@@ -149,9 +149,9 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
-			if (traddate1.Length > 8) return false; // char 8
-			if (traddate2.Length > 8) return false; // char 8
+			if (shcode?.Length > 6) return false; // char 6
+			if (traddate1?.Length > 8) return false; // char 8
+			if (traddate2?.Length > 8) return false; // char 8
 			// fwgubun1 char 1
 			if (cts_idx.ToString().Length > 4) return false; // long 4
 
@@ -164,19 +164,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1752OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1752OutBlock";
+		public const string _blockName = "t1752OutBlock";
 		/// <summary>
 		/// 기본출력
 		/// </summary>
-		static readonly string _blockDesc = "기본출력";
+		public const string _blockDesc = "기본출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1752OutBlock
 		/// </summary>
@@ -308,19 +308,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1752OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t1752OutBlock1";
+		public const string _blockName = "t1752OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t1752OutBlock1
 		/// </summary>
@@ -539,13 +539,13 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (tradname.Length > 20) return false; // char 20
+			if (tradname?.Length > 20) return false; // char 20
 			if (tradmdvol.ToString().Length > 12) return false; // long 12
 			if (tradmsvol.ToString().Length > 12) return false; // long 12
 			if (tradmssvol.ToString().Length > 12) return false; // long 12
 			if (wintrd.ToString().Length > 12) return false; // long 12
 			// winrat float 6.1
-			if (tradno.Length > 3) return false; // char 3
+			if (tradno?.Length > 3) return false; // char 3
 			// wgubun char 1
 			// swinrat float 6.1
 
@@ -558,43 +558,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1752
 		/// </summary>
-		static readonly string _typeName = "t1752";
+		public const string _typeName = "t1752";
 		/// <summary>
 		/// 종목별상위회원사(t1752)
 		/// </summary>
-		static readonly string _typeDesc = "종목별상위회원사(t1752)";
+		public const string _typeDesc = "종목별상위회원사(t1752)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1752

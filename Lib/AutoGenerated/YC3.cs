@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 8) return false; // char 8
+			if (shcode?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -289,13 +289,13 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (ychetime.Length > 6) return false; // char 6
+			if (ychetime?.Length > 6) return false; // char 6
 			// yeprice float 9.2
 			if (yevolume.ToString().Length > 6) return false; // long 6
 			// jnilysign char 1
 			// preychange float 9.2
 			// jnilydrate float 9.2
-			if (shcode.Length > 8) return false; // char 8
+			if (shcode?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -306,24 +306,32 @@ namespace XingAPINet
 		/// <summary>
 		/// YC3
 		/// </summary>
-		static readonly string _typeName = "YC3";
+		public const string _typeName = "YC3";
+		/// <summary>
+		/// 상품선물예상체결(YC3)
+		/// </summary>
+		public const string _typeDesc = "상품선물예상체결(YC3)";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// YC3
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// 상품선물예상체결(YC3)
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

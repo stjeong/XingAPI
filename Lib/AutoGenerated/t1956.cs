@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1956InBlock
 		/// </summary>
-		static readonly string _blockName = "t1956InBlock";
+		public const string _blockName = "t1956InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1956InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1956OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1956OutBlock";
+		public const string _blockName = "t1956OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1956OutBlock
 		/// </summary>
@@ -1479,8 +1479,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (hname.Length > 40) return false; // char 40
-			if (chetime.Length > 10) return false; // char 10
+			if (hname?.Length > 40) return false; // char 40
+			if (chetime?.Length > 10) return false; // char 10
 			if (price.ToString().Length > 8) return false; // long 8
 			// sign char 1
 			if (change.ToString().Length > 8) return false; // long 8
@@ -1496,22 +1496,22 @@ namespace XingAPINet
 			// volumediff float 6.2
 			if (open.ToString().Length > 8) return false; // long 8
 			// odiff float 6.2
-			if (opentime.Length > 6) return false; // char 6
+			if (opentime?.Length > 6) return false; // char 6
 			if (high.ToString().Length > 8) return false; // long 8
 			// hdiff float 6.2
-			if (hightime.Length > 6) return false; // char 6
+			if (hightime?.Length > 6) return false; // char 6
 			if (low.ToString().Length > 8) return false; // long 8
 			// ldiff float 6.2
-			if (lowtime.Length > 6) return false; // char 6
+			if (lowtime?.Length > 6) return false; // char 6
 			if (high52w.ToString().Length > 8) return false; // long 8
 			// high52wdiff float 6.2
-			if (high52wdate.Length > 8) return false; // char 8
+			if (high52wdate?.Length > 8) return false; // char 8
 			if (low52w.ToString().Length > 8) return false; // long 8
 			// low52wdiff float 6.2
-			if (low52wdate.Length > 8) return false; // char 8
+			if (low52wdate?.Length > 8) return false; // char 8
 			// exhratio float 6.2
 			// listing float 12
-			if (memedan.Length > 5) return false; // char 5
+			if (memedan?.Length > 5) return false; // char 5
 			// vol float 6.2
 			// parity float 8.2
 			// berate float 8.2
@@ -1519,7 +1519,7 @@ namespace XingAPINet
 			// elwexec float 8.2
 			if (issueprice.ToString().Length > 8) return false; // long 8
 			// convrate float 12.4
-			if (lastdate.Length > 8) return false; // char 8
+			if (lastdate?.Length > 8) return false; // char 8
 			// capt float 8.2
 			// egearing float 8.2
 			// premium float 8.2
@@ -1534,31 +1534,31 @@ namespace XingAPINet
 			// ceta float 13.6
 			// rhox float 13.6
 			if (bjandatecnt.ToString().Length > 4) return false; // long 4
-			if (mmsdate.Length > 8) return false; // char 8
-			if (mmedate.Length > 8) return false; // char 8
-			if (payday.Length > 8) return false; // char 8
-			if (listdate.Length > 8) return false; // char 8
-			if (lpmem.Length > 20) return false; // char 20
+			if (mmsdate?.Length > 8) return false; // char 8
+			if (mmedate?.Length > 8) return false; // char 8
+			if (payday?.Length > 8) return false; // char 8
+			if (listdate?.Length > 8) return false; // char 8
+			if (lpmem?.Length > 20) return false; // char 20
 			// lp_holdvol float 12
-			if (bcode.Length > 6) return false; // char 6
+			if (bcode?.Length > 6) return false; // char 6
 			// bgubun char 1
 			if (bprice.ToString().Length > 8) return false; // long 8
 			// bsign char 1
 			if (bchange.ToString().Length > 8) return false; // long 8
 			// bdiff float 6.2
 			// bvolume float 12
-			if (info1.Length > 10) return false; // char 10
-			if (info2.Length > 10) return false; // char 10
-			if (info3.Length > 10) return false; // char 10
-			if (info4.Length > 12) return false; // char 12
-			if (janginfo.Length > 10) return false; // char 10
+			if (info1?.Length > 10) return false; // char 10
+			if (info2?.Length > 10) return false; // char 10
+			if (info3?.Length > 10) return false; // char 10
+			if (info4?.Length > 12) return false; // char 12
+			if (janginfo?.Length > 10) return false; // char 10
 			// basketgb char 1
 			if (basketcnt.ToString().Length > 3) return false; // long 3
-			if (elwtype.Length > 2) return false; // char 2
-			if (settletype.Length > 2) return false; // char 2
-			if (lpord.Length > 2) return false; // char 2
-			if (elwdetail.Length > 100) return false; // char 100
-			if (valuation.Length > 100) return false; // char 100
+			if (elwtype?.Length > 2) return false; // char 2
+			if (settletype?.Length > 2) return false; // char 2
+			if (lpord?.Length > 2) return false; // char 2
+			if (elwdetail?.Length > 100) return false; // char 100
+			if (valuation?.Length > 100) return false; // char 100
 			// givemoney float 8.3
 
 			return true;
@@ -1570,19 +1570,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1956OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t1956OutBlock1";
+		public const string _blockName = "t1956OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t1956OutBlock1
 		/// </summary>
@@ -1785,7 +1785,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (bskcode.Length > 6) return false; // char 6
+			if (bskcode?.Length > 6) return false; // char 6
 			if (bskbno.ToString().Length > 3) return false; // long 3
 			if (bskprice.ToString().Length > 8) return false; // long 8
 			// bsksign char 1
@@ -1803,43 +1803,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1956
 		/// </summary>
-		static readonly string _typeName = "t1956";
+		public const string _typeName = "t1956";
 		/// <summary>
 		/// ELW현재가(확정지급액)조회(t1956)
 		/// </summary>
-		static readonly string _typeDesc = "ELW현재가(확정지급액)조회(t1956)";
+		public const string _typeDesc = "ELW현재가(확정지급액)조회(t1956)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1956

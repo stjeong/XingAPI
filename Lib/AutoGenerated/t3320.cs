@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3320InBlock
 		/// </summary>
-		static readonly string _blockName = "t3320InBlock";
+		public const string _blockName = "t3320InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t3320InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (gicode.Length > 7) return false; // char 7
+			if (gicode?.Length > 7) return false; // char 7
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3320OutBlock
 		/// </summary>
-		static readonly string _blockName = "t3320OutBlock";
+		public const string _blockName = "t3320OutBlock";
 		/// <summary>
 		/// 기업기본정보
 		/// </summary>
-		static readonly string _blockDesc = "기업기본정보";
+		public const string _blockDesc = "기업기본정보";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t3320OutBlock
 		/// </summary>
@@ -519,21 +519,21 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (upgubunnm.Length > 20) return false; // char 20
+			if (upgubunnm?.Length > 20) return false; // char 20
 			// sijangcd char 1
-			if (marketnm.Length > 10) return false; // char 10
-			if (company.Length > 100) return false; // char 100
-			if (baddress.Length > 100) return false; // char 100
-			if (btelno.Length > 20) return false; // char 20
-			if (gsyyyy.Length > 4) return false; // char 4
-			if (gsmm.Length > 2) return false; // char 2
-			if (gsym.Length > 6) return false; // char 6
+			if (marketnm?.Length > 10) return false; // char 10
+			if (company?.Length > 100) return false; // char 100
+			if (baddress?.Length > 100) return false; // char 100
+			if (btelno?.Length > 20) return false; // char 20
+			if (gsyyyy?.Length > 4) return false; // char 4
+			if (gsmm?.Length > 2) return false; // char 2
+			if (gsym?.Length > 6) return false; // char 6
 			if (lstprice.ToString().Length > 12) return false; // long 12
 			if (gstock.ToString().Length > 12) return false; // long 12
-			if (homeurl.Length > 50) return false; // char 50
-			if (grdnm.Length > 30) return false; // char 30
+			if (homeurl?.Length > 50) return false; // char 50
+			if (grdnm?.Length > 30) return false; // char 30
 			// foreignratio float 6.2
-			if (irtel.Length > 30) return false; // char 30
+			if (irtel?.Length > 30) return false; // char 30
 			// capital float 12.0
 			// sigavalue float 12.0
 			// cashsis float 12.0
@@ -550,19 +550,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3320OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t3320OutBlock1";
+		public const string _blockName = "t3320OutBlock1";
 		/// <summary>
 		/// 기업재무정보
 		/// </summary>
-		static readonly string _blockDesc = "기업재무정보";
+		public const string _blockDesc = "기업재무정보";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t3320OutBlock1
 		/// </summary>
@@ -937,8 +937,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (gicode.Length > 7) return false; // char 7
-			if (gsym.Length > 6) return false; // char 6
+			if (gicode?.Length > 7) return false; // char 7
+			if (gsym?.Length > 6) return false; // char 6
 			// gsgb char 1
 			// per float 13.2
 			// eps float 13.0
@@ -955,7 +955,7 @@ namespace XingAPINet
 			// t_eps float 13.0
 			// peg float 13.2
 			// t_peg float 13.2
-			if (t_gsym.Length > 6) return false; // char 6
+			if (t_gsym?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -966,43 +966,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t3320
 		/// </summary>
-		static readonly string _typeName = "t3320";
+		public const string _typeName = "t3320";
 		/// <summary>
 		/// FNG_요약(t3320)
 		/// </summary>
-		static readonly string _typeDesc = "FNG_요약(t3320)";
+		public const string _typeDesc = "FNG_요약(t3320)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t3320

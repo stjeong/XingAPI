@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1972InBlock
 		/// </summary>
-		static readonly string _blockName = "t1972InBlock";
+		public const string _blockName = "t1972InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1972InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1972OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1972OutBlock";
+		public const string _blockName = "t1972OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1972OutBlock
 		/// </summary>
@@ -967,43 +967,43 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (hname.Length > 40) return false; // char 40
-			if (expcode.Length > 12) return false; // char 12
-			if (shcode.Length > 9) return false; // char 9
-			if (offerno1.Length > 6) return false; // char 6
-			if (bidno1.Length > 6) return false; // char 6
+			if (hname?.Length > 40) return false; // char 40
+			if (expcode?.Length > 12) return false; // char 12
+			if (shcode?.Length > 9) return false; // char 9
+			if (offerno1?.Length > 6) return false; // char 6
+			if (bidno1?.Length > 6) return false; // char 6
 			if (dvol1.ToString().Length > 12) return false; // long 12
 			if (svol1.ToString().Length > 12) return false; // long 12
 			if (dcha1.ToString().Length > 12) return false; // long 12
 			if (scha1.ToString().Length > 12) return false; // long 12
 			// ddiff1 float 6.2
 			// sdiff1 float 6.2
-			if (offerno2.Length > 6) return false; // char 6
-			if (bidno2.Length > 6) return false; // char 6
+			if (offerno2?.Length > 6) return false; // char 6
+			if (bidno2?.Length > 6) return false; // char 6
 			if (dvol2.ToString().Length > 12) return false; // long 12
 			if (svol2.ToString().Length > 12) return false; // long 12
 			if (dcha2.ToString().Length > 12) return false; // long 12
 			if (scha2.ToString().Length > 12) return false; // long 12
 			// ddiff2 float 6.2
 			// sdiff2 float 6.2
-			if (offerno3.Length > 6) return false; // char 6
-			if (bidno3.Length > 6) return false; // char 6
+			if (offerno3?.Length > 6) return false; // char 6
+			if (bidno3?.Length > 6) return false; // char 6
 			if (dvol3.ToString().Length > 12) return false; // long 12
 			if (svol3.ToString().Length > 12) return false; // long 12
 			if (dcha3.ToString().Length > 12) return false; // long 12
 			if (scha3.ToString().Length > 12) return false; // long 12
 			// ddiff3 float 6.2
 			// sdiff3 float 6.2
-			if (offerno4.Length > 6) return false; // char 6
-			if (bidno4.Length > 6) return false; // char 6
+			if (offerno4?.Length > 6) return false; // char 6
+			if (bidno4?.Length > 6) return false; // char 6
 			if (dvol4.ToString().Length > 12) return false; // long 12
 			if (svol4.ToString().Length > 12) return false; // long 12
 			if (dcha4.ToString().Length > 12) return false; // long 12
 			if (scha4.ToString().Length > 12) return false; // long 12
 			// ddiff4 float 6.2
 			// sdiff4 float 6.2
-			if (offerno5.Length > 6) return false; // char 6
-			if (bidno5.Length > 6) return false; // char 6
+			if (offerno5?.Length > 6) return false; // char 6
+			if (bidno5?.Length > 6) return false; // char 6
 			if (dvol5.ToString().Length > 12) return false; // long 12
 			if (svol5.ToString().Length > 12) return false; // long 12
 			if (dcha5.ToString().Length > 12) return false; // long 12
@@ -1026,43 +1026,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1972
 		/// </summary>
-		static readonly string _typeName = "t1972";
+		public const string _typeName = "t1972";
 		/// <summary>
 		/// ELW현재가(거래원)조회(t1972)
 		/// </summary>
-		static readonly string _typeDesc = "ELW현재가(거래원)조회(t1972)";
+		public const string _typeDesc = "ELW현재가(거래원)조회(t1972)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1972

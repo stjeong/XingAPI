@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -1473,63 +1473,63 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (offerno1.Length > 3) return false; // char 3
-			if (bidno1.Length > 3) return false; // char 3
-			if (offertrad1.Length > 6) return false; // char 6
-			if (bidtrad1.Length > 6) return false; // char 6
+			if (offerno1?.Length > 3) return false; // char 3
+			if (bidno1?.Length > 3) return false; // char 3
+			if (offertrad1?.Length > 6) return false; // char 6
+			if (bidtrad1?.Length > 6) return false; // char 6
 			if (tradmdvol1.ToString().Length > 10) return false; // long 10
 			if (tradmsvol1.ToString().Length > 10) return false; // long 10
 			// tradmdrate1 float 6.2
 			// tradmsrate1 float 6.2
 			if (tradmdcha1.ToString().Length > 10) return false; // long 10
 			if (tradmscha1.ToString().Length > 10) return false; // long 10
-			if (offerno2.Length > 3) return false; // char 3
-			if (bidno2.Length > 3) return false; // char 3
-			if (offertrad2.Length > 6) return false; // char 6
-			if (bidtrad2.Length > 6) return false; // char 6
+			if (offerno2?.Length > 3) return false; // char 3
+			if (bidno2?.Length > 3) return false; // char 3
+			if (offertrad2?.Length > 6) return false; // char 6
+			if (bidtrad2?.Length > 6) return false; // char 6
 			if (tradmdvol2.ToString().Length > 10) return false; // long 10
 			if (tradmsvol2.ToString().Length > 10) return false; // long 10
 			// tradmdrate2 float 6.2
 			// tradmsrate2 float 6.2
 			if (tradmdcha2.ToString().Length > 10) return false; // long 10
 			if (tradmscha2.ToString().Length > 10) return false; // long 10
-			if (offerno3.Length > 3) return false; // char 3
-			if (bidno3.Length > 3) return false; // char 3
-			if (offertrad3.Length > 6) return false; // char 6
-			if (bidtrad3.Length > 6) return false; // char 6
+			if (offerno3?.Length > 3) return false; // char 3
+			if (bidno3?.Length > 3) return false; // char 3
+			if (offertrad3?.Length > 6) return false; // char 6
+			if (bidtrad3?.Length > 6) return false; // char 6
 			if (tradmdvol3.ToString().Length > 10) return false; // long 10
 			if (tradmsvol3.ToString().Length > 10) return false; // long 10
 			// tradmdrate3 float 6.2
 			// tradmsrate3 float 6.2
 			if (tradmdcha3.ToString().Length > 10) return false; // long 10
 			if (tradmscha3.ToString().Length > 10) return false; // long 10
-			if (offerno4.Length > 3) return false; // char 3
-			if (bidno4.Length > 3) return false; // char 3
-			if (offertrad4.Length > 6) return false; // char 6
-			if (bidtrad4.Length > 6) return false; // char 6
+			if (offerno4?.Length > 3) return false; // char 3
+			if (bidno4?.Length > 3) return false; // char 3
+			if (offertrad4?.Length > 6) return false; // char 6
+			if (bidtrad4?.Length > 6) return false; // char 6
 			if (tradmdvol4.ToString().Length > 10) return false; // long 10
 			if (tradmsvol4.ToString().Length > 10) return false; // long 10
 			// tradmdrate4 float 6.2
 			// tradmsrate4 float 6.2
 			if (tradmdcha4.ToString().Length > 10) return false; // long 10
 			if (tradmscha4.ToString().Length > 10) return false; // long 10
-			if (offerno5.Length > 3) return false; // char 3
-			if (bidno5.Length > 3) return false; // char 3
-			if (offertrad5.Length > 6) return false; // char 6
-			if (bidtrad5.Length > 6) return false; // char 6
+			if (offerno5?.Length > 3) return false; // char 3
+			if (bidno5?.Length > 3) return false; // char 3
+			if (offertrad5?.Length > 6) return false; // char 6
+			if (bidtrad5?.Length > 6) return false; // char 6
 			if (tradmdvol5.ToString().Length > 10) return false; // long 10
 			if (tradmsvol5.ToString().Length > 10) return false; // long 10
 			// tradmdrate5 float 6.2
 			// tradmsrate5 float 6.2
 			if (tradmdcha5.ToString().Length > 10) return false; // long 10
 			if (tradmscha5.ToString().Length > 10) return false; // long 10
-			if (ftradmdvol.Length > 10) return false; // char 10
-			if (ftradmsvol.Length > 10) return false; // char 10
+			if (ftradmdvol?.Length > 10) return false; // char 10
+			if (ftradmsvol?.Length > 10) return false; // char 10
 			// ftradmdrate float 6.2
 			// ftradmsrate float 6.2
-			if (ftradmdcha.Length > 10) return false; // char 10
-			if (ftradmscha.Length > 10) return false; // char 10
-			if (shcode.Length > 6) return false; // char 6
+			if (ftradmdcha?.Length > 10) return false; // char 10
+			if (ftradmscha?.Length > 10) return false; // char 10
+			if (shcode?.Length > 6) return false; // char 6
 			if (tradmdval1.ToString().Length > 15) return false; // long 15
 			if (tradmsval1.ToString().Length > 15) return false; // long 15
 			if (tradmdavg1.ToString().Length > 7) return false; // long 7
@@ -1564,24 +1564,32 @@ namespace XingAPINet
 		/// <summary>
 		/// K1_
 		/// </summary>
-		static readonly string _typeName = "K1_";
+		public const string _typeName = "K1_";
+		/// <summary>
+		/// KOSPI거래원(K1)
+		/// </summary>
+		public const string _typeDesc = "KOSPI거래원(K1)";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// K1_
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// KOSPI거래원(K1)
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

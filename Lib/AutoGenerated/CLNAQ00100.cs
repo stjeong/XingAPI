@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CLNAQ00100InBlock1
 		/// </summary>
-		static readonly string _blockName = "CLNAQ00100InBlock1";
+		public const string _blockName = "CLNAQ00100InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CLNAQ00100InBlock1
 		/// </summary>
@@ -166,9 +166,9 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			// QryTp char 1
-			if (IsuNo.Length > 12) return false; // char 12
+			if (IsuNo?.Length > 12) return false; // char 12
 			// SecTpCode char 1
-			if (LoanIntrstGrdCode.Length > 2) return false; // char 2
+			if (LoanIntrstGrdCode?.Length > 2) return false; // char 2
 			// LoanTp char 1
 
 			return true;
@@ -180,19 +180,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CLNAQ00100OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CLNAQ00100OutBlock1";
+		public const string _blockName = "CLNAQ00100OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CLNAQ00100OutBlock1
 		/// </summary>
@@ -361,9 +361,9 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			// QryTp char 1
-			if (IsuNo.Length > 12) return false; // char 12
+			if (IsuNo?.Length > 12) return false; // char 12
 			// SecTpCode char 1
-			if (LoanIntrstGrdCode.Length > 2) return false; // char 2
+			if (LoanIntrstGrdCode?.Length > 2) return false; // char 2
 			// LoanTp char 1
 
 			return true;
@@ -375,19 +375,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CLNAQ00100OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CLNAQ00100OutBlock2";
+		public const string _blockName = "CLNAQ00100OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// CLNAQ00100OutBlock2
 		/// </summary>
@@ -798,25 +798,25 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (IsuNo.Length > 12) return false; // char 12
-			if (IsuNm.Length > 40) return false; // char 40
+			if (IsuNo?.Length > 12) return false; // char 12
+			if (IsuNm?.Length > 40) return false; // char 40
 			// Parprc double 13.2
 			// PrdayCprc double 13.2
 			// RatVal double 19.8
 			// SubstPrc double 13.2
-			if (RegTpNm.Length > 20) return false; // char 20
-			if (SpotMgnLevyClssNm.Length > 40) return false; // char 40
-			if (FnoTrdStopRsnCnts.Length > 40) return false; // char 40
-			if (DgrsPtnNm.Length > 40) return false; // char 40
-			if (AcdPtnNm.Length > 40) return false; // char 40
-			if (MktTpNm.Length > 20) return false; // char 20
+			if (RegTpNm?.Length > 20) return false; // char 20
+			if (SpotMgnLevyClssNm?.Length > 40) return false; // char 40
+			if (FnoTrdStopRsnCnts?.Length > 40) return false; // char 40
+			if (DgrsPtnNm?.Length > 40) return false; // char 40
+			if (AcdPtnNm?.Length > 40) return false; // char 40
+			if (MktTpNm?.Length > 20) return false; // char 20
 			if (LmtVal.ToString().Length > 18) return false; // long 18
 			if (AcntLmtVal.ToString().Length > 18) return false; // long 18
-			if (LoanGrdCode.Length > 2) return false; // char 2
+			if (LoanGrdCode?.Length > 2) return false; // char 2
 			if (LoanAmt.ToString().Length > 16) return false; // long 16
 			// LoanAbleRat double 26.9
 			// LoanIntrat1 double 14.4
-			if (RegPsnId.Length > 16) return false; // char 16
+			if (RegPsnId?.Length > 16) return false; // char 16
 			// Rat01 double 19.8
 			// Rat02 double 19.8
 
@@ -829,19 +829,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CLNAQ00100OutBlock3
 		/// </summary>
-		static readonly string _blockName = "CLNAQ00100OutBlock3";
+		public const string _blockName = "CLNAQ00100OutBlock3";
 		/// <summary>
 		/// Sum(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Sum(*EMPTY*)";
+		public const string _blockDesc = "Sum(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CLNAQ00100OutBlock3
 		/// </summary>
@@ -956,43 +956,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CLNAQ00100
 		/// </summary>
-		static readonly string _typeName = "CLNAQ00100";
+		public const string _typeName = "CLNAQ00100";
 		/// <summary>
 		/// 예탁담보융자가능종목현황조회
 		/// </summary>
-		static readonly string _typeDesc = "예탁담보융자가능종목현황조회";
+		public const string _typeDesc = "예탁담보융자가능종목현황조회";
 		/// <summary>
 		/// CLNAQ00100
 		/// </summary>
-		static readonly string _service = "CLNAQ00100";
+		public const string _service = "CLNAQ00100";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 이성호
 		/// </summary>
-		static readonly string _creator = "이성호";
+		public const string _creator = "이성호";
 		/// <summary>
 		/// 2012/01/10 15:45:49
 		/// </summary>
-		static readonly string _createdDate = "2012/01/10 15:45:49";
+		public const string _createdDate = "2012/01/10 15:45:49";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CLNAQ00100

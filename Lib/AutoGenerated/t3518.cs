@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3518InBlock
 		/// </summary>
-		static readonly string _blockName = "t3518InBlock";
+		public const string _blockName = "t3518InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t3518InBlock
 		/// </summary>
@@ -180,12 +180,12 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			// kind char 1
-			if (symbol.Length > 16) return false; // char 16
+			if (symbol?.Length > 16) return false; // char 16
 			if (cnt.ToString().Length > 4) return false; // long 4
 			// jgbn char 1
 			if (nmin.ToString().Length > 3) return false; // long 3
-			if (cts_date.Length > 8) return false; // char 8
-			if (cts_time.Length > 6) return false; // char 6
+			if (cts_date?.Length > 8) return false; // char 8
+			if (cts_time?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -196,19 +196,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3518OutBlock
 		/// </summary>
-		static readonly string _blockName = "t3518OutBlock";
+		public const string _blockName = "t3518OutBlock";
 		/// <summary>
 		/// 단일출력
 		/// </summary>
-		static readonly string _blockDesc = "단일출력";
+		public const string _blockDesc = "단일출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t3518OutBlock
 		/// </summary>
@@ -311,8 +311,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (cts_date.Length > 8) return false; // char 8
-			if (cts_time.Length > 6) return false; // char 6
+			if (cts_date?.Length > 8) return false; // char 8
+			if (cts_time?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -323,19 +323,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3518OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t3518OutBlock1";
+		public const string _blockName = "t3518OutBlock1";
 		/// <summary>
 		/// 멀티출력
 		/// </summary>
-		static readonly string _blockDesc = "멀티출력";
+		public const string _blockDesc = "멀티출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t3518OutBlock1
 		/// </summary>
@@ -714,8 +714,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (date.Length > 8) return false; // char 8
-			if (time.Length > 8) return false; // char 8
+			if (date?.Length > 8) return false; // char 8
+			if (time?.Length > 8) return false; // char 8
 			// open double 9.4
 			// high double 9.4
 			// low double 9.4
@@ -729,10 +729,10 @@ namespace XingAPINet
 			// bidrem double 12.0
 			// offerrem double 12.0
 			// kind char 1
-			if (symbol.Length > 16) return false; // char 16
-			if (exid.Length > 4) return false; // char 4
-			if (kodate.Length > 8) return false; // char 8
-			if (kotime.Length > 8) return false; // char 8
+			if (symbol?.Length > 16) return false; // char 16
+			if (exid?.Length > 4) return false; // char 4
+			if (kodate?.Length > 8) return false; // char 8
+			if (kotime?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -743,43 +743,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t3518
 		/// </summary>
-		static readonly string _typeName = "t3518";
+		public const string _typeName = "t3518";
 		/// <summary>
 		/// 해외실시간지수(t3518)
 		/// </summary>
-		static readonly string _typeDesc = "해외실시간지수(t3518)";
+		public const string _typeDesc = "해외실시간지수(t3518)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t3518

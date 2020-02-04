@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3102InBlock
 		/// </summary>
-		static readonly string _blockName = "t3102InBlock";
+		public const string _blockName = "t3102InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t3102InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (sNewsno.Length > 24) return false; // char 24
+			if (sNewsno?.Length > 24) return false; // char 24
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3102OutBlock
 		/// </summary>
-		static readonly string _blockName = "t3102OutBlock";
+		public const string _blockName = "t3102OutBlock";
 		/// <summary>
 		/// 기본출력
 		/// </summary>
-		static readonly string _blockDesc = "기본출력";
+		public const string _blockDesc = "기본출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t3102OutBlock
 		/// </summary>
@@ -203,7 +203,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (sJongcode.Length > 6) return false; // char 6
+			if (sJongcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -214,19 +214,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3102OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t3102OutBlock1";
+		public const string _blockName = "t3102OutBlock1";
 		/// <summary>
 		/// 기본출력1
 		/// </summary>
-		static readonly string _blockDesc = "기본출력1";
+		public const string _blockDesc = "기본출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t3102OutBlock1
 		/// </summary>
@@ -317,7 +317,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (sBody.Length > 100) return false; // char 100
+			if (sBody?.Length > 100) return false; // char 100
 
 			return true;
 		}
@@ -328,19 +328,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3102OutBlock2
 		/// </summary>
-		static readonly string _blockName = "t3102OutBlock2";
+		public const string _blockName = "t3102OutBlock2";
 		/// <summary>
 		/// 기본출력2
 		/// </summary>
-		static readonly string _blockDesc = "기본출력2";
+		public const string _blockDesc = "기본출력2";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t3102OutBlock2
 		/// </summary>
@@ -427,7 +427,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (sTitle.Length > 300) return false; // char 300
+			if (sTitle?.Length > 300) return false; // char 300
 
 			return true;
 		}
@@ -438,43 +438,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t3102
 		/// </summary>
-		static readonly string _typeName = "t3102";
+		public const string _typeName = "t3102";
 		/// <summary>
 		/// 뉴스본문(t3102)
 		/// </summary>
-		static readonly string _typeDesc = "뉴스본문(t3102)";
+		public const string _typeDesc = "뉴스본문(t3102)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t3102

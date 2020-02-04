@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0441InBlock
 		/// </summary>
-		static readonly string _blockName = "t0441InBlock";
+		public const string _blockName = "t0441InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0441InBlock
 		/// </summary>
@@ -134,9 +134,9 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (accno.Length > 11) return false; // char 11
-			if (passwd.Length > 8) return false; // char 8
-			if (cts_expcode.Length > 8) return false; // char 8
+			if (accno?.Length > 11) return false; // char 11
+			if (passwd?.Length > 8) return false; // char 8
+			if (cts_expcode?.Length > 8) return false; // char 8
 			// cts_medocd char 1
 
 			return true;
@@ -148,19 +148,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0441OutBlock
 		/// </summary>
-		static readonly string _blockName = "t0441OutBlock";
+		public const string _blockName = "t0441OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0441OutBlock
 		/// </summary>
@@ -312,7 +312,7 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (tdtsunik.ToString().Length > 18) return false; // long 18
-			if (cts_expcode.Length > 8) return false; // char 8
+			if (cts_expcode?.Length > 8) return false; // char 8
 			// cts_medocd char 1
 			if (tappamt.ToString().Length > 18) return false; // long 18
 			if (tsunik.ToString().Length > 18) return false; // long 18
@@ -326,19 +326,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0441OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t0441OutBlock1";
+		public const string _blockName = "t0441OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t0441OutBlock1
 		/// </summary>
@@ -621,8 +621,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (expcode.Length > 8) return false; // char 8
-			if (medosu.Length > 4) return false; // char 4
+			if (expcode?.Length > 8) return false; // char 8
+			if (medosu?.Length > 4) return false; // char 4
 			if (jqty.ToString().Length > 10) return false; // long 10
 			if (cqty.ToString().Length > 10) return false; // long 10
 			// pamt float 10.2
@@ -644,43 +644,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t0441
 		/// </summary>
-		static readonly string _typeName = "t0441";
+		public const string _typeName = "t0441";
 		/// <summary>
 		/// 선물/옵션잔고평가(이동평균)(t0441)
 		/// </summary>
-		static readonly string _typeDesc = "선물/옵션잔고평가(이동평균)(t0441)";
+		public const string _typeDesc = "선물/옵션잔고평가(이동평균)(t0441)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// D
 		/// </summary>
-		static readonly string _headType = "D";
+		public const string _headType = "D";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t0441

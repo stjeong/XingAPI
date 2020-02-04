@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (upcode.Length > 3) return false; // char 3
+			if (upcode?.Length > 3) return false; // char 3
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -1553,86 +1553,86 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (tjjtime.Length > 8) return false; // char 8
-			if (tjjcode1.Length > 4) return false; // char 4
+			if (tjjtime?.Length > 8) return false; // char 8
+			if (tjjcode1?.Length > 4) return false; // char 4
 			if (msvolume1.ToString().Length > 8) return false; // long 8
 			if (mdvolume1.ToString().Length > 8) return false; // long 8
 			if (msvol1.ToString().Length > 8) return false; // long 8
 			if (msvalue1.ToString().Length > 6) return false; // long 6
 			if (mdvalue1.ToString().Length > 6) return false; // long 6
 			if (msval1.ToString().Length > 6) return false; // long 6
-			if (tjjcode2.Length > 4) return false; // char 4
+			if (tjjcode2?.Length > 4) return false; // char 4
 			if (msvolume2.ToString().Length > 8) return false; // long 8
 			if (mdvolume2.ToString().Length > 8) return false; // long 8
 			if (msvol2.ToString().Length > 8) return false; // long 8
 			if (msvalue2.ToString().Length > 6) return false; // long 6
 			if (mdvalue2.ToString().Length > 6) return false; // long 6
 			if (msval2.ToString().Length > 6) return false; // long 6
-			if (tjjcode3.Length > 4) return false; // char 4
+			if (tjjcode3?.Length > 4) return false; // char 4
 			if (msvolume3.ToString().Length > 8) return false; // long 8
 			if (mdvolume3.ToString().Length > 8) return false; // long 8
 			if (msvol3.ToString().Length > 8) return false; // long 8
 			if (msvalue3.ToString().Length > 6) return false; // long 6
 			if (mdvalue3.ToString().Length > 6) return false; // long 6
 			if (msval3.ToString().Length > 6) return false; // long 6
-			if (tjjcode4.Length > 4) return false; // char 4
+			if (tjjcode4?.Length > 4) return false; // char 4
 			if (msvolume4.ToString().Length > 8) return false; // long 8
 			if (mdvolume4.ToString().Length > 8) return false; // long 8
 			if (msvol4.ToString().Length > 8) return false; // long 8
 			if (msvalue4.ToString().Length > 6) return false; // long 6
 			if (mdvalue4.ToString().Length > 6) return false; // long 6
 			if (msval4.ToString().Length > 6) return false; // long 6
-			if (tjjcode5.Length > 4) return false; // char 4
+			if (tjjcode5?.Length > 4) return false; // char 4
 			if (msvolume5.ToString().Length > 8) return false; // long 8
 			if (mdvolume5.ToString().Length > 8) return false; // long 8
 			if (msvol5.ToString().Length > 8) return false; // long 8
 			if (msvalue5.ToString().Length > 6) return false; // long 6
 			if (mdvalue5.ToString().Length > 6) return false; // long 6
 			if (msval5.ToString().Length > 6) return false; // long 6
-			if (tjjcode6.Length > 4) return false; // char 4
+			if (tjjcode6?.Length > 4) return false; // char 4
 			if (msvolume6.ToString().Length > 8) return false; // long 8
 			if (mdvolume6.ToString().Length > 8) return false; // long 8
 			if (msvol6.ToString().Length > 8) return false; // long 8
 			if (msvalue6.ToString().Length > 6) return false; // long 6
 			if (mdvalue6.ToString().Length > 6) return false; // long 6
 			if (msval6.ToString().Length > 6) return false; // long 6
-			if (tjjcode7.Length > 4) return false; // char 4
+			if (tjjcode7?.Length > 4) return false; // char 4
 			if (msvolume7.ToString().Length > 8) return false; // long 8
 			if (mdvolume7.ToString().Length > 8) return false; // long 8
 			if (msvol7.ToString().Length > 8) return false; // long 8
 			if (msvalue7.ToString().Length > 6) return false; // long 6
 			if (mdvalue7.ToString().Length > 6) return false; // long 6
 			if (msval7.ToString().Length > 6) return false; // long 6
-			if (tjjcode8.Length > 4) return false; // char 4
+			if (tjjcode8?.Length > 4) return false; // char 4
 			if (msvolume8.ToString().Length > 8) return false; // long 8
 			if (mdvolume8.ToString().Length > 8) return false; // long 8
 			if (msvol8.ToString().Length > 8) return false; // long 8
 			if (msvalue8.ToString().Length > 6) return false; // long 6
 			if (mdvalue8.ToString().Length > 6) return false; // long 6
 			if (msval8.ToString().Length > 6) return false; // long 6
-			if (tjjcode9.Length > 4) return false; // char 4
+			if (tjjcode9?.Length > 4) return false; // char 4
 			if (msvolume9.ToString().Length > 8) return false; // long 8
 			if (mdvolume9.ToString().Length > 8) return false; // long 8
 			if (msvol9.ToString().Length > 8) return false; // long 8
 			if (msvalue9.ToString().Length > 6) return false; // long 6
 			if (mdvalue9.ToString().Length > 6) return false; // long 6
 			if (msval9.ToString().Length > 6) return false; // long 6
-			if (tjjcode10.Length > 4) return false; // char 4
+			if (tjjcode10?.Length > 4) return false; // char 4
 			if (msvolume10.ToString().Length > 8) return false; // long 8
 			if (mdvolume10.ToString().Length > 8) return false; // long 8
 			if (msvol10.ToString().Length > 8) return false; // long 8
 			if (msvalue10.ToString().Length > 6) return false; // long 6
 			if (mdvalue10.ToString().Length > 6) return false; // long 6
 			if (msval10.ToString().Length > 6) return false; // long 6
-			if (tjjcode11.Length > 4) return false; // char 4
+			if (tjjcode11?.Length > 4) return false; // char 4
 			if (msvolume11.ToString().Length > 8) return false; // long 8
 			if (mdvolume11.ToString().Length > 8) return false; // long 8
 			if (msvol11.ToString().Length > 8) return false; // long 8
 			if (msvalue11.ToString().Length > 6) return false; // long 6
 			if (mdvalue11.ToString().Length > 6) return false; // long 6
 			if (msval11.ToString().Length > 6) return false; // long 6
-			if (upcode.Length > 3) return false; // char 3
-			if (tjjcode0.Length > 4) return false; // char 4
+			if (upcode?.Length > 3) return false; // char 3
+			if (tjjcode0?.Length > 4) return false; // char 4
 			if (msvolume0.ToString().Length > 8) return false; // long 8
 			if (mdvolume0.ToString().Length > 8) return false; // long 8
 			if (msvol0.ToString().Length > 8) return false; // long 8
@@ -1649,24 +1649,32 @@ namespace XingAPINet
 		/// <summary>
 		/// BMT
 		/// </summary>
-		static readonly string _typeName = "BMT";
+		public const string _typeName = "BMT";
+		/// <summary>
+		/// 시간대별투자자매매추이(BMT)
+		/// </summary>
+		public const string _typeDesc = "시간대별투자자매매추이(BMT)";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// BMT
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// 시간대별투자자매매추이(BMT)
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

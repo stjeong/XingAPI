@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -80,19 +80,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -894,50 +894,50 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (lineseq.ToString().Length > 10) return false; // long 10
-			if (accno.Length > 11) return false; // char 11
-			if (user.Length > 8) return false; // char 8
+			if (accno?.Length > 11) return false; // char 11
+			if (user?.Length > 8) return false; // char 8
 			if (seq.ToString().Length > 11) return false; // long 11
-			if (trcode.Length > 11) return false; // char 11
-			if (megrpno.Length > 2) return false; // char 2
-			if (boardid.Length > 2) return false; // char 2
-			if (memberno.Length > 5) return false; // char 5
-			if (bpno.Length > 5) return false; // char 5
-			if (ordno.Length > 10) return false; // char 10
-			if (orgordno.Length > 10) return false; // char 10
-			if (expcode.Length > 12) return false; // char 12
+			if (trcode?.Length > 11) return false; // char 11
+			if (megrpno?.Length > 2) return false; // char 2
+			if (boardid?.Length > 2) return false; // char 2
+			if (memberno?.Length > 5) return false; // char 5
+			if (bpno?.Length > 5) return false; // char 5
+			if (ordno?.Length > 10) return false; // char 10
+			if (orgordno?.Length > 10) return false; // char 10
+			if (expcode?.Length > 12) return false; // char 12
 			// dosugb char 1
 			// mocagb char 1
-			if (accno1.Length > 12) return false; // char 12
+			if (accno1?.Length > 12) return false; // char 12
 			if (qty2.ToString().Length > 10) return false; // long 10
 			// price float 11.2
 			// ordgb char 1
 			// hogagb char 1
-			if (sihogagb.Length > 11) return false; // char 11
-			if (tradid.Length > 5) return false; // char 5
+			if (sihogagb?.Length > 11) return false; // char 11
+			if (tradid?.Length > 5) return false; // char 5
 			// treacode char 1
-			if (askcode.Length > 2) return false; // char 2
-			if (creditcode.Length > 2) return false; // char 2
-			if (jakigb.Length > 2) return false; // char 2
-			if (trustnum.Length > 5) return false; // char 5
-			if (ptgb.Length > 2) return false; // char 2
-			if (substonum.Length > 12) return false; // char 12
-			if (accgb.Length > 2) return false; // char 2
-			if (accmarggb.Length > 2) return false; // char 2
-			if (nationcode.Length > 3) return false; // char 3
-			if (investgb.Length > 4) return false; // char 4
-			if (forecode.Length > 2) return false; // char 2
+			if (askcode?.Length > 2) return false; // char 2
+			if (creditcode?.Length > 2) return false; // char 2
+			if (jakigb?.Length > 2) return false; // char 2
+			if (trustnum?.Length > 5) return false; // char 5
+			if (ptgb?.Length > 2) return false; // char 2
+			if (substonum?.Length > 12) return false; // char 12
+			if (accgb?.Length > 2) return false; // char 2
+			if (accmarggb?.Length > 2) return false; // char 2
+			if (nationcode?.Length > 3) return false; // char 3
+			if (investgb?.Length > 4) return false; // char 4
+			if (forecode?.Length > 2) return false; // char 2
 			// medcode char 1
-			if (ordid.Length > 12) return false; // char 12
-			if (macid.Length > 12) return false; // char 12
-			if (orddate.Length > 8) return false; // char 8
-			if (rcvtime.Length > 9) return false; // char 9
-			if (mem_filler.Length > 7) return false; // char 7
-			if (mem_accno.Length > 11) return false; // char 11
-			if (mem_filler1.Length > 42) return false; // char 42
-			if (ordacpttm.Length > 9) return false; // char 9
+			if (ordid?.Length > 12) return false; // char 12
+			if (macid?.Length > 12) return false; // char 12
+			if (orddate?.Length > 8) return false; // char 8
+			if (rcvtime?.Length > 9) return false; // char 9
+			if (mem_filler?.Length > 7) return false; // char 7
+			if (mem_accno?.Length > 11) return false; // char 11
+			if (mem_filler1?.Length > 42) return false; // char 42
+			if (ordacpttm?.Length > 9) return false; // char 9
 			if (qty.ToString().Length > 10) return false; // long 10
 			// autogb char 1
-			if (rejcode.Length > 4) return false; // char 4
+			if (rejcode?.Length > 4) return false; // char 4
 			// prgordde char 1
 
 			return true;
@@ -949,24 +949,32 @@ namespace XingAPINet
 		/// <summary>
 		/// H01
 		/// </summary>
-		static readonly string _typeName = "H01";
+		public const string _typeName = "H01";
+		/// <summary>
+		/// 선물주문정정취소
+		/// </summary>
+		public const string _typeDesc = "선물주문정정취소";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// H01
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// 선물주문정정취소
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

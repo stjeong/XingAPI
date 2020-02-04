@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3202InBlock
 		/// </summary>
-		static readonly string _blockName = "t3202InBlock";
+		public const string _blockName = "t3202InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t3202InBlock
 		/// </summary>
@@ -104,8 +104,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
-			if (date.Length > 8) return false; // char 8
+			if (shcode?.Length > 6) return false; // char 6
+			if (date?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -116,19 +116,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t3202OutBlock
 		/// </summary>
-		static readonly string _blockName = "t3202OutBlock";
+		public const string _blockName = "t3202OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t3202OutBlock
 		/// </summary>
@@ -315,13 +315,13 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (recdt.Length > 8) return false; // char 8
-			if (tableid.Length > 6) return false; // char 6
-			if (upgu.Length > 2) return false; // char 2
-			if (custno.Length > 5) return false; // char 5
-			if (custnm.Length > 80) return false; // char 80
-			if (shcode.Length > 6) return false; // char 6
-			if (upnm.Length > 20) return false; // char 20
+			if (recdt?.Length > 8) return false; // char 8
+			if (tableid?.Length > 6) return false; // char 6
+			if (upgu?.Length > 2) return false; // char 2
+			if (custno?.Length > 5) return false; // char 5
+			if (custnm?.Length > 80) return false; // char 80
+			if (shcode?.Length > 6) return false; // char 6
+			if (upnm?.Length > 20) return false; // char 20
 
 			return true;
 		}
@@ -332,43 +332,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t3202
 		/// </summary>
-		static readonly string _typeName = "t3202";
+		public const string _typeName = "t3202";
 		/// <summary>
 		/// 종목별증시일정(t3202)
 		/// </summary>
-		static readonly string _typeDesc = "종목별증시일정(t3202)";
+		public const string _typeDesc = "종목별증시일정(t3202)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t3202

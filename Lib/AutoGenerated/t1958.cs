@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1958InBlock
 		/// </summary>
-		static readonly string _blockName = "t1958InBlock";
+		public const string _blockName = "t1958InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1958InBlock
 		/// </summary>
@@ -104,8 +104,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode1.Length > 6) return false; // char 6
-			if (shcode2.Length > 6) return false; // char 6
+			if (shcode1?.Length > 6) return false; // char 6
+			if (shcode2?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -116,19 +116,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1958OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1958OutBlock";
+		public const string _blockName = "t1958OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1958OutBlock
 		/// </summary>
@@ -551,19 +551,19 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (hname.Length > 40) return false; // char 40
-			if (item1.Length > 12) return false; // char 12
-			if (issuernmk.Length > 40) return false; // char 40
-			if (elwopt.Length > 2) return false; // char 2
-			if (elwtype.Length > 2) return false; // char 2
-			if (settletype.Length > 2) return false; // char 2
+			if (hname?.Length > 40) return false; // char 40
+			if (item1?.Length > 12) return false; // char 12
+			if (issuernmk?.Length > 40) return false; // char 40
+			if (elwopt?.Length > 2) return false; // char 2
+			if (elwtype?.Length > 2) return false; // char 2
+			if (settletype?.Length > 2) return false; // char 2
 			// elwexec float 8.2
 			// convrate float 12.4
 			// listing float 12
-			if (mmsdate.Length > 8) return false; // char 8
-			if (lastdate.Length > 8) return false; // char 8
+			if (mmsdate?.Length > 8) return false; // char 8
+			if (lastdate?.Length > 8) return false; // char 8
 			if (nofdays.ToString().Length > 4) return false; // long 4
-			if (payday.Length > 8) return false; // char 8
+			if (payday?.Length > 8) return false; // char 8
 			// parity float 6.2
 			// premium float 6.2
 			// berate float 6.2
@@ -583,19 +583,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1958OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t1958OutBlock1";
+		public const string _blockName = "t1958OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1958OutBlock1
 		/// </summary>
@@ -1018,19 +1018,19 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (hname.Length > 40) return false; // char 40
-			if (item1.Length > 12) return false; // char 12
-			if (issuernmk.Length > 40) return false; // char 40
-			if (elwopt.Length > 2) return false; // char 2
-			if (elwtype.Length > 2) return false; // char 2
-			if (settletype.Length > 2) return false; // char 2
+			if (hname?.Length > 40) return false; // char 40
+			if (item1?.Length > 12) return false; // char 12
+			if (issuernmk?.Length > 40) return false; // char 40
+			if (elwopt?.Length > 2) return false; // char 2
+			if (elwtype?.Length > 2) return false; // char 2
+			if (settletype?.Length > 2) return false; // char 2
 			// elwexec float 8.2
 			// convrate float 12.4
 			// listing float 12
-			if (mmsdate.Length > 8) return false; // char 8
-			if (lastdate.Length > 8) return false; // char 8
+			if (mmsdate?.Length > 8) return false; // char 8
+			if (lastdate?.Length > 8) return false; // char 8
 			if (nofdays.ToString().Length > 4) return false; // long 4
-			if (payday.Length > 8) return false; // char 8
+			if (payday?.Length > 8) return false; // char 8
 			// parity float 6.2
 			// premium float 6.2
 			// berate float 6.2
@@ -1050,19 +1050,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1958OutBlock2
 		/// </summary>
-		static readonly string _blockName = "t1958OutBlock2";
+		public const string _blockName = "t1958OutBlock2";
 		/// <summary>
 		/// 출력2
 		/// </summary>
-		static readonly string _blockDesc = "출력2";
+		public const string _blockDesc = "출력2";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1958OutBlock2
 		/// </summary>
@@ -1485,19 +1485,19 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (hnamecmp.Length > 6) return false; // char 6
-			if (item1cmp.Length > 6) return false; // char 6
-			if (issuernmkcmp.Length > 6) return false; // char 6
-			if (elwoptcmp.Length > 6) return false; // char 6
-			if (elwtypecmp.Length > 6) return false; // char 6
-			if (settlecmp.Length > 6) return false; // char 6
+			if (hnamecmp?.Length > 6) return false; // char 6
+			if (item1cmp?.Length > 6) return false; // char 6
+			if (issuernmkcmp?.Length > 6) return false; // char 6
+			if (elwoptcmp?.Length > 6) return false; // char 6
+			if (elwtypecmp?.Length > 6) return false; // char 6
+			if (settlecmp?.Length > 6) return false; // char 6
 			// elwexeccmp float 8.2
 			// convcmp float 12.4
 			// listingcmp float 12
-			if (mmsdatecmp.Length > 6) return false; // char 6
-			if (lastdatecmp.Length > 6) return false; // char 6
-			if (nofdayscmp.Length > 6) return false; // char 6
-			if (paydaycmp.Length > 6) return false; // char 6
+			if (mmsdatecmp?.Length > 6) return false; // char 6
+			if (lastdatecmp?.Length > 6) return false; // char 6
+			if (nofdayscmp?.Length > 6) return false; // char 6
+			if (paydaycmp?.Length > 6) return false; // char 6
 			// paritycmp float 6.2
 			// premiumcmp float 6.2
 			// beratecmp float 6.2
@@ -1517,43 +1517,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1958
 		/// </summary>
-		static readonly string _typeName = "t1958";
+		public const string _typeName = "t1958";
 		/// <summary>
 		/// ELW종목비교(t1958)
 		/// </summary>
-		static readonly string _typeDesc = "ELW종목비교(t1958)";
+		public const string _typeDesc = "ELW종목비교(t1958)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1958

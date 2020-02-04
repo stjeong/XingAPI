@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CEXAQ44200InBlock1
 		/// </summary>
-		static readonly string _blockName = "CEXAQ44200InBlock1";
+		public const string _blockName = "CEXAQ44200InBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CEXAQ44200InBlock1
 		/// </summary>
@@ -226,12 +226,12 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			// ChoicInptTpCode char 1
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (QrySrtDt.Length > 8) return false; // char 8
-			if (QryEndDt.Length > 8) return false; // char 8
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (QrySrtDt?.Length > 8) return false; // char 8
+			if (QryEndDt?.Length > 8) return false; // char 8
 			// PrdtExecTpCode char 1
-			if (FnoTrdPtnCode.Length > 2) return false; // char 2
+			if (FnoTrdPtnCode?.Length > 2) return false; // char 2
 			if (SrtOrdNo2.ToString().Length > 10) return false; // long 10
 			// StnlnSeqTp char 1
 
@@ -244,19 +244,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CEXAQ44200OutBlock1
 		/// </summary>
-		static readonly string _blockName = "CEXAQ44200OutBlock1";
+		public const string _blockName = "CEXAQ44200OutBlock1";
 		/// <summary>
 		/// In(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "In(*EMPTY*)";
+		public const string _blockDesc = "In(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CEXAQ44200OutBlock1
 		/// </summary>
@@ -489,12 +489,12 @@ namespace XingAPINet
 		{
 			if (RecCnt.ToString().Length > 5) return false; // long 5
 			// ChoicInptTpCode char 1
-			if (AcntNo.Length > 20) return false; // char 20
-			if (Pwd.Length > 8) return false; // char 8
-			if (QrySrtDt.Length > 8) return false; // char 8
-			if (QryEndDt.Length > 8) return false; // char 8
+			if (AcntNo?.Length > 20) return false; // char 20
+			if (Pwd?.Length > 8) return false; // char 8
+			if (QrySrtDt?.Length > 8) return false; // char 8
+			if (QryEndDt?.Length > 8) return false; // char 8
 			// PrdtExecTpCode char 1
-			if (FnoTrdPtnCode.Length > 2) return false; // char 2
+			if (FnoTrdPtnCode?.Length > 2) return false; // char 2
 			if (SrtOrdNo2.ToString().Length > 10) return false; // long 10
 			// StnlnSeqTp char 1
 
@@ -507,19 +507,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CEXAQ44200OutBlock2
 		/// </summary>
-		static readonly string _blockName = "CEXAQ44200OutBlock2";
+		public const string _blockName = "CEXAQ44200OutBlock2";
 		/// <summary>
 		/// Out(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out(*EMPTY*)";
+		public const string _blockDesc = "Out(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// CEXAQ44200OutBlock2
 		/// </summary>
@@ -685,19 +685,19 @@ namespace XingAPINet
 		/// <summary>
 		/// CEXAQ44200OutBlock3
 		/// </summary>
-		static readonly string _blockName = "CEXAQ44200OutBlock3";
+		public const string _blockName = "CEXAQ44200OutBlock3";
 		/// <summary>
 		/// Out1(*EMPTY*)
 		/// </summary>
-		static readonly string _blockDesc = "Out1(*EMPTY*)";
+		public const string _blockDesc = "Out1(*EMPTY*)";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// CEXAQ44200OutBlock3
 		/// </summary>
@@ -1284,38 +1284,38 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (AcntNo1.Length > 20) return false; // char 20
-			if (AcntNm.Length > 40) return false; // char 40
-			if (OrdDt.Length > 8) return false; // char 8
+			if (AcntNo1?.Length > 20) return false; // char 20
+			if (AcntNm?.Length > 40) return false; // char 40
+			if (OrdDt?.Length > 8) return false; // char 8
 			if (OrdNo.ToString().Length > 10) return false; // long 10
 			if (OrgOrdNo.ToString().Length > 10) return false; // long 10
-			if (OrdTime.Length > 9) return false; // char 9
-			if (IsuNo.Length > 12) return false; // char 12
-			if (IsuNm.Length > 40) return false; // char 40
-			if (BnsTpNm.Length > 10) return false; // char 10
+			if (OrdTime?.Length > 9) return false; // char 9
+			if (IsuNo?.Length > 12) return false; // char 12
+			if (IsuNm?.Length > 40) return false; // char 40
+			if (BnsTpNm?.Length > 10) return false; // char 10
 			// BnsTpCode char 1
 			// ErxOrdprcTpCode char 1
-			if (MrcTpNm.Length > 10) return false; // char 10
+			if (MrcTpNm?.Length > 10) return false; // char 10
 			// ErxPrcCndiTpCode char 1
-			if (CodeNm.Length > 40) return false; // char 40
+			if (CodeNm?.Length > 40) return false; // char 40
 			// OrdPrc double 13.2
 			if (OrdQty.ToString().Length > 16) return false; // long 16
-			if (FnoRjtRsnCode.Length > 3) return false; // char 3
-			if (OrdTpNm.Length > 10) return false; // char 10
-			if (ExecTpNm.Length > 10) return false; // char 10
+			if (FnoRjtRsnCode?.Length > 3) return false; // char 3
+			if (OrdTpNm?.Length > 10) return false; // char 10
+			if (ExecTpNm?.Length > 10) return false; // char 10
 			// ExecPrc double 13.2
 			if (ExecQty.ToString().Length > 16) return false; // long 16
-			if (ExecTime.Length > 9) return false; // char 9
+			if (ExecTime?.Length > 9) return false; // char 9
 			if (ExecNo.ToString().Length > 10) return false; // long 10
 			if (UnercQty.ToString().Length > 16) return false; // long 16
-			if (UserId.Length > 16) return false; // char 16
-			if (CommdaCode.Length > 2) return false; // char 2
-			if (CommdaCodeNm.Length > 40) return false; // char 40
-			if (IpAddr.Length > 16) return false; // char 16
-			if (TrdPtnTpNm.Length > 20) return false; // char 20
+			if (UserId?.Length > 16) return false; // char 16
+			if (CommdaCode?.Length > 2) return false; // char 2
+			if (CommdaCodeNm?.Length > 40) return false; // char 40
+			if (IpAddr?.Length > 16) return false; // char 16
+			if (TrdPtnTpNm?.Length > 20) return false; // char 20
 			// ErxOrdStatCode char 1
-			if (CodeNm0.Length > 40) return false; // char 40
-			if (ExchRcptTime.Length > 30) return false; // char 30
+			if (CodeNm0?.Length > 40) return false; // char 40
+			if (ExchRcptTime?.Length > 30) return false; // char 30
 
 			return true;
 		}
@@ -1326,43 +1326,43 @@ namespace XingAPINet
 		/// <summary>
 		/// CEXAQ44200
 		/// </summary>
-		static readonly string _typeName = "CEXAQ44200";
+		public const string _typeName = "CEXAQ44200";
 		/// <summary>
 		/// EUREX 야간옵션 기간주문체결조회
 		/// </summary>
-		static readonly string _typeDesc = "EUREX 야간옵션 기간주문체결조회";
+		public const string _typeDesc = "EUREX 야간옵션 기간주문체결조회";
 		/// <summary>
 		/// CEXAQ44200
 		/// </summary>
-		static readonly string _service = "CEXAQ44200";
+		public const string _service = "CEXAQ44200";
 		/// <summary>
 		/// B
 		/// </summary>
-		static readonly string _headType = "B";
+		public const string _headType = "B";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 2012/11/08 17:10:28
 		/// </summary>
-		static readonly string _createdDate = "2012/11/08 17:10:28";
+		public const string _createdDate = "2012/11/08 17:10:28";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// CEXAQ44200

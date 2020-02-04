@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1102InBlock
 		/// </summary>
-		static readonly string _blockName = "t1102InBlock";
+		public const string _blockName = "t1102InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1102InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t1102OutBlock
 		/// </summary>
-		static readonly string _blockName = "t1102OutBlock";
+		public const string _blockName = "t1102OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1102OutBlock
 		/// </summary>
@@ -2727,7 +2727,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (hname.Length > 20) return false; // char 20
+			if (hname?.Length > 20) return false; // char 20
 			if (price.ToString().Length > 8) return false; // long 8
 			// sign char 1
 			if (change.ToString().Length > 8) return false; // long 8
@@ -2740,65 +2740,65 @@ namespace XingAPINet
 			if (jnilvolume.ToString().Length > 12) return false; // long 12
 			if (volumediff.ToString().Length > 12) return false; // long 12
 			if (open.ToString().Length > 8) return false; // long 8
-			if (opentime.Length > 6) return false; // char 6
+			if (opentime?.Length > 6) return false; // char 6
 			if (high.ToString().Length > 8) return false; // long 8
-			if (hightime.Length > 6) return false; // char 6
+			if (hightime?.Length > 6) return false; // char 6
 			if (low.ToString().Length > 8) return false; // long 8
-			if (lowtime.Length > 6) return false; // char 6
+			if (lowtime?.Length > 6) return false; // char 6
 			if (high52w.ToString().Length > 8) return false; // long 8
-			if (high52wdate.Length > 8) return false; // char 8
+			if (high52wdate?.Length > 8) return false; // char 8
 			if (low52w.ToString().Length > 8) return false; // long 8
-			if (low52wdate.Length > 8) return false; // char 8
+			if (low52wdate?.Length > 8) return false; // char 8
 			// exhratio float 6.2
 			// per float 6.2
 			// pbrx float 6.2
 			if (listing.ToString().Length > 12) return false; // long 12
 			if (jkrate.ToString().Length > 8) return false; // long 8
-			if (memedan.Length > 5) return false; // char 5
-			if (offernocd1.Length > 3) return false; // char 3
-			if (bidnocd1.Length > 3) return false; // char 3
-			if (offerno1.Length > 6) return false; // char 6
-			if (bidno1.Length > 6) return false; // char 6
+			if (memedan?.Length > 5) return false; // char 5
+			if (offernocd1?.Length > 3) return false; // char 3
+			if (bidnocd1?.Length > 3) return false; // char 3
+			if (offerno1?.Length > 6) return false; // char 6
+			if (bidno1?.Length > 6) return false; // char 6
 			if (dvol1.ToString().Length > 8) return false; // long 8
 			if (svol1.ToString().Length > 8) return false; // long 8
 			if (dcha1.ToString().Length > 8) return false; // long 8
 			if (scha1.ToString().Length > 8) return false; // long 8
 			// ddiff1 float 6.2
 			// sdiff1 float 6.2
-			if (offernocd2.Length > 3) return false; // char 3
-			if (bidnocd2.Length > 3) return false; // char 3
-			if (offerno2.Length > 6) return false; // char 6
-			if (bidno2.Length > 6) return false; // char 6
+			if (offernocd2?.Length > 3) return false; // char 3
+			if (bidnocd2?.Length > 3) return false; // char 3
+			if (offerno2?.Length > 6) return false; // char 6
+			if (bidno2?.Length > 6) return false; // char 6
 			if (dvol2.ToString().Length > 8) return false; // long 8
 			if (svol2.ToString().Length > 8) return false; // long 8
 			if (dcha2.ToString().Length > 8) return false; // long 8
 			if (scha2.ToString().Length > 8) return false; // long 8
 			// ddiff2 float 6.2
 			// sdiff2 float 6.2
-			if (offernocd3.Length > 3) return false; // char 3
-			if (bidnocd3.Length > 3) return false; // char 3
-			if (offerno3.Length > 6) return false; // char 6
-			if (bidno3.Length > 6) return false; // char 6
+			if (offernocd3?.Length > 3) return false; // char 3
+			if (bidnocd3?.Length > 3) return false; // char 3
+			if (offerno3?.Length > 6) return false; // char 6
+			if (bidno3?.Length > 6) return false; // char 6
 			if (dvol3.ToString().Length > 8) return false; // long 8
 			if (svol3.ToString().Length > 8) return false; // long 8
 			if (dcha3.ToString().Length > 8) return false; // long 8
 			if (scha3.ToString().Length > 8) return false; // long 8
 			// ddiff3 float 6.2
 			// sdiff3 float 6.2
-			if (offernocd4.Length > 3) return false; // char 3
-			if (bidnocd4.Length > 3) return false; // char 3
-			if (offerno4.Length > 6) return false; // char 6
-			if (bidno4.Length > 6) return false; // char 6
+			if (offernocd4?.Length > 3) return false; // char 3
+			if (bidnocd4?.Length > 3) return false; // char 3
+			if (offerno4?.Length > 6) return false; // char 6
+			if (bidno4?.Length > 6) return false; // char 6
 			if (dvol4.ToString().Length > 8) return false; // long 8
 			if (svol4.ToString().Length > 8) return false; // long 8
 			if (dcha4.ToString().Length > 8) return false; // long 8
 			if (scha4.ToString().Length > 8) return false; // long 8
 			// ddiff4 float 6.2
 			// sdiff4 float 6.2
-			if (offernocd5.Length > 3) return false; // char 3
-			if (bidnocd5.Length > 3) return false; // char 3
-			if (offerno5.Length > 6) return false; // char 6
-			if (bidno5.Length > 6) return false; // char 6
+			if (offernocd5?.Length > 3) return false; // char 3
+			if (bidnocd5?.Length > 3) return false; // char 3
+			if (offerno5?.Length > 6) return false; // char 6
+			if (bidno5?.Length > 6) return false; // char 6
 			if (dvol5.ToString().Length > 8) return false; // long 8
 			if (svol5.ToString().Length > 8) return false; // long 8
 			if (dcha5.ToString().Length > 8) return false; // long 8
@@ -2812,28 +2812,28 @@ namespace XingAPINet
 			if (ftradmscha.ToString().Length > 12) return false; // long 12
 			// ftradmsdiff float 6.2
 			// vol float 6.2
-			if (shcode.Length > 6) return false; // char 6
+			if (shcode?.Length > 6) return false; // char 6
 			if (value.ToString().Length > 12) return false; // long 12
 			if (jvolume.ToString().Length > 12) return false; // long 12
 			if (highyear.ToString().Length > 8) return false; // long 8
-			if (highyeardate.Length > 8) return false; // char 8
+			if (highyeardate?.Length > 8) return false; // char 8
 			if (lowyear.ToString().Length > 8) return false; // long 8
-			if (lowyeardate.Length > 8) return false; // char 8
+			if (lowyeardate?.Length > 8) return false; // char 8
 			if (target.ToString().Length > 8) return false; // long 8
 			if (capital.ToString().Length > 12) return false; // long 12
 			if (abscnt.ToString().Length > 12) return false; // long 12
 			if (parprice.ToString().Length > 8) return false; // long 8
-			if (gsmm.Length > 2) return false; // char 2
+			if (gsmm?.Length > 2) return false; // char 2
 			if (subprice.ToString().Length > 8) return false; // long 8
 			if (total.ToString().Length > 12) return false; // long 12
-			if (listdate.Length > 8) return false; // char 8
-			if (name.Length > 10) return false; // char 10
+			if (listdate?.Length > 8) return false; // char 8
+			if (name?.Length > 10) return false; // char 10
 			if (bfsales.ToString().Length > 12) return false; // long 12
 			if (bfoperatingincome.ToString().Length > 12) return false; // long 12
 			if (bfordinaryincome.ToString().Length > 12) return false; // long 12
 			if (bfnetincome.ToString().Length > 12) return false; // long 12
 			// bfeps float 13.2
-			if (name2.Length > 10) return false; // char 10
+			if (name2?.Length > 10) return false; // char 10
 			if (bfsales2.ToString().Length > 12) return false; // long 12
 			if (bfoperatingincome2.ToString().Length > 12) return false; // long 12
 			if (bfordinaryincome2.ToString().Length > 12) return false; // long 12
@@ -2844,13 +2844,13 @@ namespace XingAPINet
 			// ordrt float 7.2
 			// netrt float 7.2
 			// epsrt float 7.2
-			if (info1.Length > 10) return false; // char 10
-			if (info2.Length > 10) return false; // char 10
-			if (info3.Length > 10) return false; // char 10
-			if (info4.Length > 12) return false; // char 12
-			if (janginfo.Length > 10) return false; // char 10
+			if (info1?.Length > 10) return false; // char 10
+			if (info2?.Length > 10) return false; // char 10
+			if (info3?.Length > 10) return false; // char 10
+			if (info4?.Length > 12) return false; // char 12
+			if (janginfo?.Length > 10) return false; // char 10
 			// t_per float 6.2
-			if (tonghwa.Length > 3) return false; // char 3
+			if (tonghwa?.Length > 3) return false; // char 3
 			if (dval1.ToString().Length > 18) return false; // long 18
 			if (sval1.ToString().Length > 18) return false; // long 18
 			if (dval2.ToString().Length > 18) return false; // long 18
@@ -2875,17 +2875,17 @@ namespace XingAPINet
 			if (ftradmsval.ToString().Length > 18) return false; // long 18
 			if (ftradmdavg.ToString().Length > 8) return false; // long 8
 			if (ftradmsavg.ToString().Length > 8) return false; // long 8
-			if (info5.Length > 8) return false; // char 8
+			if (info5?.Length > 8) return false; // char 8
 			// spac_gubun char 1
 			if (issueprice.ToString().Length > 8) return false; // long 8
 			// alloc_gubun char 1
-			if (alloc_text.Length > 8) return false; // char 8
-			if (shterm_text.Length > 10) return false; // char 10
+			if (alloc_text?.Length > 8) return false; // char 8
+			if (shterm_text?.Length > 10) return false; // char 10
 			if (svi_uplmtprice.ToString().Length > 8) return false; // long 8
 			if (svi_dnlmtprice.ToString().Length > 8) return false; // long 8
 			// low_lqdt_gu char 1
 			// abnormal_rise_gu char 1
-			if (lend_text.Length > 8) return false; // char 8
+			if (lend_text?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -2896,43 +2896,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t1102
 		/// </summary>
-		static readonly string _typeName = "t1102";
+		public const string _typeName = "t1102";
 		/// <summary>
 		/// 주식현재가(시세)조회(t1102)
 		/// </summary>
-		static readonly string _typeDesc = "주식현재가(시세)조회(t1102)";
+		public const string _typeDesc = "주식현재가(시세)조회(t1102)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t1102

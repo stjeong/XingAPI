@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0425InBlock
 		/// </summary>
-		static readonly string _blockName = "t0425InBlock";
+		public const string _blockName = "t0425InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0425InBlock
 		/// </summary>
@@ -179,13 +179,13 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (accno.Length > 11) return false; // char 11
-			if (passwd.Length > 8) return false; // char 8
-			if (expcode.Length > 12) return false; // char 12
+			if (accno?.Length > 11) return false; // char 11
+			if (passwd?.Length > 8) return false; // char 8
+			if (expcode?.Length > 12) return false; // char 12
 			// chegb char 1
 			// medosu char 1
 			// sortgb char 1
-			if (cts_ordno.Length > 10) return false; // char 10
+			if (cts_ordno?.Length > 10) return false; // char 10
 
 			return true;
 		}
@@ -196,19 +196,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0425OutBlock
 		/// </summary>
-		static readonly string _blockName = "t0425OutBlock";
+		public const string _blockName = "t0425OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t0425OutBlock
 		/// </summary>
@@ -431,7 +431,7 @@ namespace XingAPINet
 			if (tmdamt.ToString().Length > 18) return false; // long 18
 			if (tmsamt.ToString().Length > 18) return false; // long 18
 			if (tax.ToString().Length > 18) return false; // long 18
-			if (cts_ordno.Length > 10) return false; // char 10
+			if (cts_ordno?.Length > 10) return false; // char 10
 
 			return true;
 		}
@@ -442,19 +442,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t0425OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t0425OutBlock1";
+		public const string _blockName = "t0425OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t0425OutBlock1
 		/// </summary>
@@ -850,25 +850,25 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (ordno.ToString().Length > 10) return false; // long 10
-			if (expcode.Length > 12) return false; // char 12
-			if (medosu.Length > 10) return false; // char 10
+			if (expcode?.Length > 12) return false; // char 12
+			if (medosu?.Length > 10) return false; // char 10
 			if (qty.ToString().Length > 9) return false; // long 9
 			if (price.ToString().Length > 9) return false; // long 9
 			if (cheqty.ToString().Length > 9) return false; // long 9
 			if (cheprice.ToString().Length > 9) return false; // long 9
 			if (ordrem.ToString().Length > 9) return false; // long 9
 			if (cfmqty.ToString().Length > 9) return false; // long 9
-			if (status.Length > 10) return false; // char 10
+			if (status?.Length > 10) return false; // char 10
 			if (orgordno.ToString().Length > 10) return false; // long 10
-			if (ordgb.Length > 20) return false; // char 20
-			if (ordtime.Length > 8) return false; // char 8
-			if (ordermtd.Length > 10) return false; // char 10
+			if (ordgb?.Length > 20) return false; // char 20
+			if (ordtime?.Length > 8) return false; // char 8
+			if (ordermtd?.Length > 10) return false; // char 10
 			if (sysprocseq.ToString().Length > 10) return false; // long 10
-			if (hogagb.Length > 2) return false; // char 2
+			if (hogagb?.Length > 2) return false; // char 2
 			if (price1.ToString().Length > 8) return false; // long 8
-			if (orggb.Length > 2) return false; // char 2
-			if (singb.Length > 2) return false; // char 2
-			if (loandt.Length > 8) return false; // char 8
+			if (orggb?.Length > 2) return false; // char 2
+			if (singb?.Length > 2) return false; // char 2
+			if (loandt?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -879,43 +879,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t0425
 		/// </summary>
-		static readonly string _typeName = "t0425";
+		public const string _typeName = "t0425";
 		/// <summary>
 		/// 주식체결/미체결(t0425)
 		/// </summary>
-		static readonly string _typeDesc = "주식체결/미체결(t0425)";
+		public const string _typeDesc = "주식체결/미체결(t0425)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// D
 		/// </summary>
-		static readonly string _headType = "D";
+		public const string _headType = "D";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _block = false;
+		public const bool _block = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t0425

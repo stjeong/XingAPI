@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t2541InBlock
 		/// </summary>
-		static readonly string _blockName = "t2541InBlock";
+		public const string _blockName = "t2541InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t2541InBlock
 		/// </summary>
@@ -194,12 +194,12 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (eitem.Length > 2) return false; // char 2
+			if (eitem?.Length > 2) return false; // char 2
 			// market char 1
-			if (upcode.Length > 3) return false; // char 3
+			if (upcode?.Length > 3) return false; // char 3
 			// gubun1 char 1
 			// gubun2 char 1
-			if (cts_time.Length > 8) return false; // char 8
+			if (cts_time?.Length > 8) return false; // char 8
 			if (cts_idx.ToString().Length > 4) return false; // long 4
 			// cnt int 4
 
@@ -212,19 +212,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t2541OutBlock
 		/// </summary>
-		static readonly string _blockName = "t2541OutBlock";
+		public const string _blockName = "t2541OutBlock";
 		/// <summary>
 		/// 기본출력
 		/// </summary>
-		static readonly string _blockDesc = "기본출력";
+		public const string _blockDesc = "기본출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t2541OutBlock
 		/// </summary>
@@ -1303,65 +1303,65 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (eitem.Length > 2) return false; // char 2
+			if (eitem?.Length > 2) return false; // char 2
 			// sgubun char 1
-			if (cts_time.Length > 8) return false; // char 8
-			if (tjjcode_08.Length > 4) return false; // char 4
+			if (cts_time?.Length > 8) return false; // char 8
+			if (tjjcode_08?.Length > 4) return false; // char 4
 			if (ms_08.ToString().Length > 12) return false; // long 12
 			if (md_08.ToString().Length > 12) return false; // long 12
 			if (rate_08.ToString().Length > 12) return false; // long 12
 			if (svolume_08.ToString().Length > 12) return false; // long 12
-			if (tjjcode_17.Length > 4) return false; // char 4
+			if (tjjcode_17?.Length > 4) return false; // char 4
 			if (ms_17.ToString().Length > 12) return false; // long 12
 			if (md_17.ToString().Length > 12) return false; // long 12
 			if (rate_17.ToString().Length > 12) return false; // long 12
 			if (svolume_17.ToString().Length > 12) return false; // long 12
-			if (tjjcode_18.Length > 4) return false; // char 4
+			if (tjjcode_18?.Length > 4) return false; // char 4
 			if (ms_18.ToString().Length > 12) return false; // long 12
 			if (md_18.ToString().Length > 12) return false; // long 12
 			if (rate_18.ToString().Length > 12) return false; // long 12
 			if (svolume_18.ToString().Length > 12) return false; // long 12
-			if (tjjcode_01.Length > 4) return false; // char 4
+			if (tjjcode_01?.Length > 4) return false; // char 4
 			if (ms_01.ToString().Length > 12) return false; // long 12
 			if (md_01.ToString().Length > 12) return false; // long 12
 			if (rate_01.ToString().Length > 12) return false; // long 12
 			if (svolume_01.ToString().Length > 12) return false; // long 12
-			if (tjjcode_03.Length > 4) return false; // char 4
+			if (tjjcode_03?.Length > 4) return false; // char 4
 			if (ms_03.ToString().Length > 12) return false; // long 12
 			if (md_03.ToString().Length > 12) return false; // long 12
 			if (rate_03.ToString().Length > 12) return false; // long 12
 			if (svolume_03.ToString().Length > 12) return false; // long 12
-			if (tjjcode_04.Length > 4) return false; // char 4
+			if (tjjcode_04?.Length > 4) return false; // char 4
 			if (ms_04.ToString().Length > 12) return false; // long 12
 			if (md_04.ToString().Length > 12) return false; // long 12
 			if (rate_04.ToString().Length > 12) return false; // long 12
 			if (svolume_04.ToString().Length > 12) return false; // long 12
-			if (tjjcode_02.Length > 4) return false; // char 4
+			if (tjjcode_02?.Length > 4) return false; // char 4
 			if (ms_02.ToString().Length > 12) return false; // long 12
 			if (md_02.ToString().Length > 12) return false; // long 12
 			if (rate_02.ToString().Length > 12) return false; // long 12
 			if (svolume_02.ToString().Length > 12) return false; // long 12
-			if (tjjcode_05.Length > 4) return false; // char 4
+			if (tjjcode_05?.Length > 4) return false; // char 4
 			if (ms_05.ToString().Length > 12) return false; // long 12
 			if (md_05.ToString().Length > 12) return false; // long 12
 			if (rate_05.ToString().Length > 12) return false; // long 12
 			if (svolume_05.ToString().Length > 12) return false; // long 12
-			if (tjjcode_06.Length > 4) return false; // char 4
+			if (tjjcode_06?.Length > 4) return false; // char 4
 			if (ms_06.ToString().Length > 12) return false; // long 12
 			if (md_06.ToString().Length > 12) return false; // long 12
 			if (rate_06.ToString().Length > 12) return false; // long 12
 			if (svolume_06.ToString().Length > 12) return false; // long 12
-			if (tjjcode_07.Length > 4) return false; // char 4
+			if (tjjcode_07?.Length > 4) return false; // char 4
 			if (ms_07.ToString().Length > 12) return false; // long 12
 			if (md_07.ToString().Length > 12) return false; // long 12
 			if (rate_07.ToString().Length > 12) return false; // long 12
 			if (svolume_07.ToString().Length > 12) return false; // long 12
-			if (tjjcode_11.Length > 4) return false; // char 4
+			if (tjjcode_11?.Length > 4) return false; // char 4
 			if (ms_11.ToString().Length > 12) return false; // long 12
 			if (md_11.ToString().Length > 12) return false; // long 12
 			if (rate_11.ToString().Length > 12) return false; // long 12
 			if (svolume_11.ToString().Length > 12) return false; // long 12
-			if (tjjcode_00.Length > 4) return false; // char 4
+			if (tjjcode_00?.Length > 4) return false; // char 4
 			if (ms_00.ToString().Length > 12) return false; // long 12
 			if (md_00.ToString().Length > 12) return false; // long 12
 			if (rate_00.ToString().Length > 12) return false; // long 12
@@ -1376,19 +1376,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t2541OutBlock1
 		/// </summary>
-		static readonly string _blockName = "t2541OutBlock1";
+		public const string _blockName = "t2541OutBlock1";
 		/// <summary>
 		/// 출력1
 		/// </summary>
-		static readonly string _blockDesc = "출력1";
+		public const string _blockDesc = "출력1";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t2541OutBlock1
 		/// </summary>
@@ -1671,7 +1671,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (time.Length > 8) return false; // char 8
+			if (time?.Length > 8) return false; // char 8
 			if (sv_08.ToString().Length > 12) return false; // long 12
 			if (sv_17.ToString().Length > 12) return false; // long 12
 			if (sv_18.ToString().Length > 12) return false; // long 12
@@ -1694,43 +1694,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t2541
 		/// </summary>
-		static readonly string _typeName = "t2541";
+		public const string _typeName = "t2541";
 		/// <summary>
 		/// 상품선물투자자매매동향(실시간)(t2541)
 		/// </summary>
-		static readonly string _typeDesc = "상품선물투자자매매동향(실시간)(t2541)";
+		public const string _typeDesc = "상품선물투자자매매동향(실시간)(t2541)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _attr = true;
+		public const bool _attr = true;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t2541

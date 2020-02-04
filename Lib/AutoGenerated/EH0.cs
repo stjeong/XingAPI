@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// InBlock
 		/// </summary>
-		static readonly string _blockName = "InBlock";
+		public const string _blockName = "InBlock";
 		/// <summary>
 		/// 입력
 		/// </summary>
-		static readonly string _blockDesc = "입력";
+		public const string _blockDesc = "입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// InBlock
 		/// </summary>
@@ -89,7 +89,7 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (optcode.Length > 8) return false; // char 8
+			if (optcode?.Length > 8) return false; // char 8
 
 			return true;
 		}
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// OutBlock
 		/// </summary>
-		static readonly string _blockName = "OutBlock";
+		public const string _blockName = "OutBlock";
 		/// <summary>
 		/// 출력
 		/// </summary>
-		static readonly string _blockDesc = "출력";
+		public const string _blockDesc = "출력";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// OutBlock
 		/// </summary>
@@ -785,8 +785,8 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (hotime.Length > 6) return false; // char 6
-			if (hotime1.Length > 6) return false; // char 6
+			if (hotime?.Length > 6) return false; // char 6
+			if (hotime1?.Length > 6) return false; // char 6
 			// offerho1 double 6.2
 			// bidho1 double 6.2
 			if (offerrem1.ToString().Length > 7) return false; // long 7
@@ -821,7 +821,7 @@ namespace XingAPINet
 			if (totbidrem.ToString().Length > 7) return false; // long 7
 			if (totoffercnt.ToString().Length > 5) return false; // long 5
 			if (totbidcnt.ToString().Length > 5) return false; // long 5
-			if (optcode.Length > 8) return false; // char 8
+			if (optcode?.Length > 8) return false; // char 8
 			// danhochk char 1
 
 			return true;
@@ -833,24 +833,32 @@ namespace XingAPINet
 		/// <summary>
 		/// EH0
 		/// </summary>
-		static readonly string _typeName = "EH0";
+		public const string _typeName = "EH0";
+		/// <summary>
+		/// EUREX연계KP200지수옵션선물호가(EH0)
+		/// </summary>
+		public const string _typeDesc = "EUREX연계KP200지수옵션선물호가(EH0)";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _key = 0;
+		public const int _key = 0;
 		/// <summary>
 		/// 0
 		/// </summary>
-		static readonly int _group = 0;
+		public const int _group = 0;
 
 		/// <summary>
 		/// EH0
 		/// </summary>
 		public string TypeName => _typeName;
+		/// <summary>
+		/// EUREX연계KP200지수옵션선물호가(EH0)
+		/// </summary>
+		public string TypeDesc => _typeDesc;
 		/// <summary>
 		/// false
 		/// </summary>

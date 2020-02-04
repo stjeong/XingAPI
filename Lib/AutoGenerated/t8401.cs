@@ -13,19 +13,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t8401InBlock
 		/// </summary>
-		static readonly string _blockName = "t8401InBlock";
+		public const string _blockName = "t8401InBlock";
 		/// <summary>
 		/// 기본입력
 		/// </summary>
-		static readonly string _blockDesc = "기본입력";
+		public const string _blockDesc = "기본입력";
 		/// <summary>
 		/// input
 		/// </summary>
-		static readonly string _blockType = "input";
+		public const string _blockType = "input";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _hasOccurs = false;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t8401InBlock
 		/// </summary>
@@ -100,19 +100,19 @@ namespace XingAPINet
 		/// <summary>
 		/// t8401OutBlock
 		/// </summary>
-		static readonly string _blockName = "t8401OutBlock";
+		public const string _blockName = "t8401OutBlock";
 		/// <summary>
 		/// 주식종목마스터
 		/// </summary>
-		static readonly string _blockDesc = "주식종목마스터";
+		public const string _blockDesc = "주식종목마스터";
 		/// <summary>
 		/// output
 		/// </summary>
-		static readonly string _blockType = "output";
+		public const string _blockType = "output";
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _hasOccurs = true;
+		public const bool _hasOccurs = true;
 		/// <summary>
 		/// t8401OutBlock
 		/// </summary>
@@ -251,10 +251,10 @@ namespace XingAPINet
 
 		public bool VerifyData()
 		{
-			if (hname.Length > 20) return false; // char 20
-			if (shcode.Length > 8) return false; // char 8
-			if (expcode.Length > 12) return false; // char 12
-			if (basecode.Length > 9) return false; // char 9
+			if (hname?.Length > 20) return false; // char 20
+			if (shcode?.Length > 8) return false; // char 8
+			if (expcode?.Length > 12) return false; // char 12
+			if (basecode?.Length > 9) return false; // char 9
 
 			return true;
 		}
@@ -265,43 +265,43 @@ namespace XingAPINet
 		/// <summary>
 		/// t8401
 		/// </summary>
-		static readonly string _typeName = "t8401";
+		public const string _typeName = "t8401";
 		/// <summary>
 		/// 주식선물마스터조회(API용)(t8401)
 		/// </summary>
-		static readonly string _typeDesc = "주식선물마스터조회(API용)(t8401)";
+		public const string _typeDesc = "주식선물마스터조회(API용)(t8401)";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _service = "";
+		public const string _service = "";
 		/// <summary>
 		/// A
 		/// </summary>
-		static readonly string _headType = "A";
+		public const string _headType = "A";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _creator = "";
+		public const string _creator = "";
 		/// <summary>
 		/// 
 		/// </summary>
-		static readonly string _createdDate = "";
+		public const string _createdDate = "";
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _attr = false;
+		public const bool _attr = false;
 		/// <summary>
 		/// true
 		/// </summary>
-		static readonly bool _block = true;
+		public const bool _block = true;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _encrypt = false;
+		public const bool _encrypt = false;
 		/// <summary>
 		/// false
 		/// </summary>
-		static readonly bool _signature = false;
+		public const bool _signature = false;
 
 		/// <summary>
 		/// t8401
