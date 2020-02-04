@@ -6908,7 +6908,8 @@ namespace XingAPINet
 		public XQt1601() : base("t1601") { }
 
 
-		public bool SetFields(XQt1601InBlock block)
+
+		public bool SetBlock(XQt1601InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -1194,7 +1194,8 @@ namespace XingAPINet
 		public XQCSPAT00700() : base("CSPAT00700") { }
 
 
-		public bool SetFields(XQCSPAT00700InBlock1 block)
+
+		public bool SetBlock(XQCSPAT00700InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

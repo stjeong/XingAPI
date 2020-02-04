@@ -828,7 +828,26 @@ namespace XingAPINet
 		public XQt1302() : base("t1302") { }
 
 
-		public bool SetFields(XQt1302InBlock block)
+		public static XQt1302OutBlock1[] Get(string shcode = default,char gubun = default,string time = default,int cnt = default)
+		{
+			using (XQt1302 instance = new XQt1302())
+			{
+				instance.SetFieldData(XQt1302InBlock.BlockName, XQt1302InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1302InBlock.BlockName, XQt1302InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1302InBlock.BlockName, XQt1302InBlock.F.time, 0, time); // char 6
+				instance.SetFieldData(XQt1302InBlock.BlockName, XQt1302InBlock.F.cnt, 0, cnt.ToString("d3")); // int 3
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1302InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

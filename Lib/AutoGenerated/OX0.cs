@@ -314,7 +314,7 @@ namespace XingAPINet
 		public XROX0() : base("OX0") { }
 
 
-		public bool SetFields(XROX0InBlock block)
+		public bool SetBlock(XROX0InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

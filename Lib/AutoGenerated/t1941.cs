@@ -515,7 +515,25 @@ namespace XingAPINet
 		public XQt1941() : base("t1941") { }
 
 
-		public bool SetFields(XQt1941InBlock block)
+		public static XQt1941OutBlock1[] Get(string shcode = default,string sdate = default,string edate = default)
+		{
+			using (XQt1941 instance = new XQt1941())
+			{
+				instance.SetFieldData(XQt1941InBlock.BlockName, XQt1941InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1941InBlock.BlockName, XQt1941InBlock.F.sdate, 0, sdate); // char 8
+				instance.SetFieldData(XQt1941InBlock.BlockName, XQt1941InBlock.F.edate, 0, edate); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1941InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

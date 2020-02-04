@@ -1743,7 +1743,8 @@ namespace XingAPINet
 		public XQt2301() : base("t2301") { }
 
 
-		public bool SetFields(XQt2301InBlock block)
+
+		public bool SetBlock(XQt2301InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

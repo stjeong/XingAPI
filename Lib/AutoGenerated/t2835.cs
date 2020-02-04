@@ -1217,7 +1217,8 @@ namespace XingAPINet
 		public XQt2835() : base("t2835") { }
 
 
-		public bool SetFields(XQt2835InBlock block)
+
+		public bool SetBlock(XQt2835InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

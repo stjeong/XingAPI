@@ -938,7 +938,27 @@ namespace XingAPINet
 		public XQt2801() : base("t2801") { }
 
 
-		public bool SetFields(XQt2801InBlock block)
+		public static XQt2801OutBlock Get(string focode = default)
+		{
+			using (XQt2801 instance = new XQt2801())
+			{
+				instance.SetFieldData(XQt2801InBlock.BlockName, XQt2801InBlock.F.focode, 0, focode); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock();
+				if (outBlock.IsValidData == false)
+				{
+					return null;
+				}
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2801InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

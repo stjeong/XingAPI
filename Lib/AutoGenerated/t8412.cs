@@ -1025,7 +1025,33 @@ namespace XingAPINet
 		public XQt8412() : base("t8412") { }
 
 
-		public bool SetFields(XQt8412InBlock block)
+		public static XQt8412OutBlock1[] Get(string shcode = default,long ncnt = default,long qrycnt = default,char nday = default,string sdate = default,string stime = default,string edate = default,string etime = default,string cts_date = default,string cts_time = default,char comp_yn = default)
+		{
+			using (XQt8412 instance = new XQt8412())
+			{
+				instance.SetFieldData(XQt8412InBlock.BlockName, XQt8412InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt8412InBlock.BlockName, XQt8412InBlock.F.ncnt, 0, ncnt.ToString("d4")); // long 4
+				instance.SetFieldData(XQt8412InBlock.BlockName, XQt8412InBlock.F.qrycnt, 0, qrycnt.ToString("d4")); // long 4
+				instance.SetFieldData(XQt8412InBlock.BlockName, XQt8412InBlock.F.nday, 0, nday.ToString()); // char 1
+				instance.SetFieldData(XQt8412InBlock.BlockName, XQt8412InBlock.F.sdate, 0, sdate); // char 8
+				instance.SetFieldData(XQt8412InBlock.BlockName, XQt8412InBlock.F.stime, 0, stime); // char 6
+				instance.SetFieldData(XQt8412InBlock.BlockName, XQt8412InBlock.F.edate, 0, edate); // char 8
+				instance.SetFieldData(XQt8412InBlock.BlockName, XQt8412InBlock.F.etime, 0, etime); // char 6
+				instance.SetFieldData(XQt8412InBlock.BlockName, XQt8412InBlock.F.cts_date, 0, cts_date); // char 8
+				instance.SetFieldData(XQt8412InBlock.BlockName, XQt8412InBlock.F.cts_time, 0, cts_time); // char 10
+				instance.SetFieldData(XQt8412InBlock.BlockName, XQt8412InBlock.F.comp_yn, 0, comp_yn.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8412InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

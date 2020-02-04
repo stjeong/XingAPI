@@ -1691,7 +1691,7 @@ namespace XingAPINet
 		public XRBMT() : base("BMT") { }
 
 
-		public bool SetFields(XRBMTInBlock block)
+		public bool SetBlock(XRBMTInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

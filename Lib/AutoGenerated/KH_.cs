@@ -756,7 +756,7 @@ namespace XingAPINet
 		public XRKH_() : base("KH_") { }
 
 
-		public bool SetFields(XRKH_InBlock block)
+		public bool SetBlock(XRKH_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

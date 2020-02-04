@@ -638,7 +638,29 @@ namespace XingAPINet
 		public XQt1603() : base("t1603") { }
 
 
-		public bool SetFields(XQt1603InBlock block)
+		public static XQt1603OutBlock1[] Get(char market = default,char gubun1 = default,char gubun2 = default,string cts_time = default,long cts_idx = default,int cnt = default,string upcode = default)
+		{
+			using (XQt1603 instance = new XQt1603())
+			{
+				instance.SetFieldData(XQt1603InBlock.BlockName, XQt1603InBlock.F.market, 0, market.ToString()); // char 1
+				instance.SetFieldData(XQt1603InBlock.BlockName, XQt1603InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+				instance.SetFieldData(XQt1603InBlock.BlockName, XQt1603InBlock.F.gubun2, 0, gubun2.ToString()); // char 1
+				instance.SetFieldData(XQt1603InBlock.BlockName, XQt1603InBlock.F.cts_time, 0, cts_time); // char 8
+				instance.SetFieldData(XQt1603InBlock.BlockName, XQt1603InBlock.F.cts_idx, 0, cts_idx.ToString("d4")); // long 4
+				instance.SetFieldData(XQt1603InBlock.BlockName, XQt1603InBlock.F.cnt, 0, cnt.ToString("d3")); // int 3
+				instance.SetFieldData(XQt1603InBlock.BlockName, XQt1603InBlock.F.upcode, 0, upcode); // char 3
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1603InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

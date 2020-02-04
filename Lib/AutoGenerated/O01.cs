@@ -2232,7 +2232,7 @@ namespace XingAPINet
 		public XRO01() : base("O01") { }
 
 
-		public bool SetFields(XRO01InBlock block)
+		public bool SetBlock(XRO01InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

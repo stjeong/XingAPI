@@ -314,7 +314,7 @@ namespace XingAPINet
 		public XROD0() : base("OD0") { }
 
 
-		public bool SetFields(XROD0InBlock block)
+		public bool SetBlock(XROD0InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -1868,7 +1868,23 @@ namespace XingAPINet
 		public XQt1950() : base("t1950") { }
 
 
-		public bool SetFields(XQt1950InBlock block)
+		public static XQt1950OutBlock1[] Get(string shcode = default)
+		{
+			using (XQt1950 instance = new XQt1950())
+			{
+				instance.SetFieldData(XQt1950InBlock.BlockName, XQt1950InBlock.F.shcode, 0, shcode); // char 6
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1950InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

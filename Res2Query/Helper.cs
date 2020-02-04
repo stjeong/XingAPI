@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Res2Query
 {
-    public struct BlockInfo
+    public class BlockInfo
     {
         readonly string _blockType;
         public BlockType BlockType => (BlockType)Enum.Parse(typeof(BlockType), _blockType);
@@ -14,12 +14,16 @@ namespace Res2Query
         public bool HasOccurs => _hasOccurs;
 
         public readonly string SetFieldData;
+        public readonly string GetParams;
+        public readonly string GetParamsSetFieldData;
 
-        public BlockInfo(string typeCode, string setFieldData, bool hasOccurs)
+        public BlockInfo(string typeCode, string setFieldData, string getParams, string getParamsSetFieldData, bool hasOccurs)
         {
             _blockType = typeCode;
             SetFieldData = setFieldData;
             _hasOccurs = hasOccurs;
+            GetParams = getParams;
+            GetParamsSetFieldData = getParamsSetFieldData;
         }
     }
 

@@ -1030,7 +1030,28 @@ namespace XingAPINet
 		public XQt1665() : base("t1665") { }
 
 
-		public bool SetFields(XQt1665InBlock block)
+		public static XQt1665OutBlock1[] Get(char market = default,string upcode = default,char gubun2 = default,char gubun3 = default,string from_date = default,string to_date = default)
+		{
+			using (XQt1665 instance = new XQt1665())
+			{
+				instance.SetFieldData(XQt1665InBlock.BlockName, XQt1665InBlock.F.market, 0, market.ToString()); // char 1
+				instance.SetFieldData(XQt1665InBlock.BlockName, XQt1665InBlock.F.upcode, 0, upcode); // char 3
+				instance.SetFieldData(XQt1665InBlock.BlockName, XQt1665InBlock.F.gubun2, 0, gubun2.ToString()); // char 1
+				instance.SetFieldData(XQt1665InBlock.BlockName, XQt1665InBlock.F.gubun3, 0, gubun3.ToString()); // char 1
+				instance.SetFieldData(XQt1665InBlock.BlockName, XQt1665InBlock.F.from_date, 0, from_date); // char 8
+				instance.SetFieldData(XQt1665InBlock.BlockName, XQt1665InBlock.F.to_date, 0, to_date); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1665InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

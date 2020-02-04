@@ -1710,7 +1710,28 @@ namespace XingAPINet
 		public XQt2813() : base("t2813") { }
 
 
-		public bool SetFields(XQt2813InBlock block)
+		public static XQt2813OutBlock1[] Get(char gubun1 = default,char gubun2 = default,string cts_time = default,long cts_idx = default,int cnt = default,char gubun3 = default)
+		{
+			using (XQt2813 instance = new XQt2813())
+			{
+				instance.SetFieldData(XQt2813InBlock.BlockName, XQt2813InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+				instance.SetFieldData(XQt2813InBlock.BlockName, XQt2813InBlock.F.gubun2, 0, gubun2.ToString()); // char 1
+				instance.SetFieldData(XQt2813InBlock.BlockName, XQt2813InBlock.F.cts_time, 0, cts_time); // char 8
+				instance.SetFieldData(XQt2813InBlock.BlockName, XQt2813InBlock.F.cts_idx, 0, cts_idx.ToString("d4")); // long 4
+				instance.SetFieldData(XQt2813InBlock.BlockName, XQt2813InBlock.F.cnt, 0, cnt.ToString("d4")); // int 4
+				instance.SetFieldData(XQt2813InBlock.BlockName, XQt2813InBlock.F.gubun3, 0, gubun3.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2813InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

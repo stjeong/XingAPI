@@ -2077,7 +2077,27 @@ namespace XingAPINet
 		public XQt1906() : base("t1906") { }
 
 
-		public bool SetFields(XQt1906InBlock block)
+		public static XQt1906OutBlock Get(string shcode = default)
+		{
+			using (XQt1906 instance = new XQt1906())
+			{
+				instance.SetFieldData(XQt1906InBlock.BlockName, XQt1906InBlock.F.shcode, 0, shcode); // char 6
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock();
+				if (outBlock.IsValidData == false)
+				{
+					return null;
+				}
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1906InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

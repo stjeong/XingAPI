@@ -535,7 +535,7 @@ namespace XingAPINet
 		public XRSHD() : base("SHD") { }
 
 
-		public bool SetFields(XRSHDInBlock block)
+		public bool SetBlock(XRSHDInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

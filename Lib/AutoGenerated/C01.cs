@@ -685,7 +685,7 @@ namespace XingAPINet
 		public XRC01() : base("C01") { }
 
 
-		public bool SetFields(XRC01InBlock block)
+		public bool SetBlock(XRC01InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

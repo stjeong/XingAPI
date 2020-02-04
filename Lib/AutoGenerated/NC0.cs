@@ -739,7 +739,7 @@ namespace XingAPINet
 		public XRNC0() : base("NC0") { }
 
 
-		public bool SetFields(XRNC0InBlock block)
+		public bool SetBlock(XRNC0InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

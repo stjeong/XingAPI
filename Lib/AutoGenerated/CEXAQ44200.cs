@@ -1408,7 +1408,8 @@ namespace XingAPINet
 		public XQCEXAQ44200() : base("CEXAQ44200") { }
 
 
-		public bool SetFields(XQCEXAQ44200InBlock1 block)
+
+		public bool SetBlock(XQCEXAQ44200InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

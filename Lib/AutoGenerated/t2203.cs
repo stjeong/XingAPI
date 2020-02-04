@@ -741,7 +741,28 @@ namespace XingAPINet
 		public XQt2203() : base("t2203") { }
 
 
-		public bool SetFields(XQt2203InBlock block)
+		public static XQt2203OutBlock1[] Get(string shcode = default,char futcheck = default,string date = default,string cts_code = default,string lastdate = default,int cnt = default)
+		{
+			using (XQt2203 instance = new XQt2203())
+			{
+				instance.SetFieldData(XQt2203InBlock.BlockName, XQt2203InBlock.F.shcode, 0, shcode); // char 8
+				instance.SetFieldData(XQt2203InBlock.BlockName, XQt2203InBlock.F.futcheck, 0, futcheck.ToString()); // char 1
+				instance.SetFieldData(XQt2203InBlock.BlockName, XQt2203InBlock.F.date, 0, date); // char 8
+				instance.SetFieldData(XQt2203InBlock.BlockName, XQt2203InBlock.F.cts_code, 0, cts_code); // char 8
+				instance.SetFieldData(XQt2203InBlock.BlockName, XQt2203InBlock.F.lastdate, 0, lastdate); // char 8
+				instance.SetFieldData(XQt2203InBlock.BlockName, XQt2203InBlock.F.cnt, 0, cnt.ToString("d3")); // int 3
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2203InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

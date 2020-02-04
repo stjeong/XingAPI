@@ -1351,7 +1351,7 @@ namespace XingAPINet
 		public XRh3_() : base("h3_") { }
 
 
-		public bool SetFields(XRh3_InBlock block)
+		public bool SetBlock(XRh3_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

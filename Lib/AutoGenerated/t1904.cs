@@ -1288,7 +1288,25 @@ namespace XingAPINet
 		public XQt1904() : base("t1904") { }
 
 
-		public bool SetFields(XQt1904InBlock block)
+		public static XQt1904OutBlock1[] Get(string shcode = default,string date = default,char sgb = default)
+		{
+			using (XQt1904 instance = new XQt1904())
+			{
+				instance.SetFieldData(XQt1904InBlock.BlockName, XQt1904InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1904InBlock.BlockName, XQt1904InBlock.F.date, 0, date); // char 8
+				instance.SetFieldData(XQt1904InBlock.BlockName, XQt1904InBlock.F.sgb, 0, sgb.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1904InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

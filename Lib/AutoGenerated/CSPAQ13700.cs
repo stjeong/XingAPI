@@ -1526,7 +1526,8 @@ namespace XingAPINet
 		public XQCSPAQ13700() : base("CSPAQ13700") { }
 
 
-		public bool SetFields(XQCSPAQ13700InBlock1 block)
+
+		public bool SetBlock(XQCSPAQ13700InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

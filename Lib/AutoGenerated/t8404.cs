@@ -827,7 +827,27 @@ namespace XingAPINet
 		public XQt8404() : base("t8404") { }
 
 
-		public bool SetFields(XQt8404InBlock block)
+		public static XQt8404OutBlock1[] Get(string focode = default,long cvolume = default,string stime = default,string etime = default,string cts_time = default)
+		{
+			using (XQt8404 instance = new XQt8404())
+			{
+				instance.SetFieldData(XQt8404InBlock.BlockName, XQt8404InBlock.F.focode, 0, focode); // char 8
+				instance.SetFieldData(XQt8404InBlock.BlockName, XQt8404InBlock.F.cvolume, 0, cvolume.ToString("d12")); // long 12
+				instance.SetFieldData(XQt8404InBlock.BlockName, XQt8404InBlock.F.stime, 0, stime); // char 4
+				instance.SetFieldData(XQt8404InBlock.BlockName, XQt8404InBlock.F.etime, 0, etime); // char 4
+				instance.SetFieldData(XQt8404InBlock.BlockName, XQt8404InBlock.F.cts_time, 0, cts_time); // char 10
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8404InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

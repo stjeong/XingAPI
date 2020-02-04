@@ -398,7 +398,23 @@ namespace XingAPINet
 		public XQt8431() : base("t8431") { }
 
 
-		public bool SetFields(XQt8431InBlock block)
+		public static XQt8431OutBlock[] Get(char dummy = default)
+		{
+			using (XQt8431 instance = new XQt8431())
+			{
+				instance.SetFieldData(XQt8431InBlock.BlockName, XQt8431InBlock.F.dummy, 0, dummy.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8431InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

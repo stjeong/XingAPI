@@ -1023,7 +1023,27 @@ namespace XingAPINet
 		public XQt2105() : base("t2105") { }
 
 
-		public bool SetFields(XQt2105InBlock block)
+		public static XQt2105OutBlock Get(string shcode = default)
+		{
+			using (XQt2105 instance = new XQt2105())
+			{
+				instance.SetFieldData(XQt2105InBlock.BlockName, XQt2105InBlock.F.shcode, 0, shcode); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock();
+				if (outBlock.IsValidData == false)
+				{
+					return null;
+				}
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2105InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

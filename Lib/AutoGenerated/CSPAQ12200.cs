@@ -1503,7 +1503,8 @@ namespace XingAPINet
 		public XQCSPAQ12200() : base("CSPAQ12200") { }
 
 
-		public bool SetFields(XQCSPAQ12200InBlock1 block)
+
+		public bool SetBlock(XQCSPAQ12200InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

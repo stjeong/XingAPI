@@ -756,7 +756,7 @@ namespace XingAPINet
 		public XRPH_() : base("PH_") { }
 
 
-		public bool SetFields(XRPH_InBlock block)
+		public bool SetBlock(XRPH_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -330,7 +330,23 @@ namespace XingAPINet
 		public XQt1532() : base("t1532") { }
 
 
-		public bool SetFields(XQt1532InBlock block)
+		public static XQt1532OutBlock[] Get(string shcode = default)
+		{
+			using (XQt1532 instance = new XQt1532())
+			{
+				instance.SetFieldData(XQt1532InBlock.BlockName, XQt1532InBlock.F.shcode, 0, shcode); // char 6
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1532InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

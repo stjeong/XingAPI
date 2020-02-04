@@ -741,7 +741,28 @@ namespace XingAPINet
 		public XQt0434() : base("t0434") { }
 
 
-		public bool SetFields(XQt0434InBlock block)
+		public static XQt0434OutBlock1[] Get(string accno = default,string passwd = default,string expcode = default,char chegb = default,char sortgb = default,string cts_ordno = default)
+		{
+			using (XQt0434 instance = new XQt0434())
+			{
+				instance.SetFieldData(XQt0434InBlock.BlockName, XQt0434InBlock.F.accno, 0, accno); // char 11
+				instance.SetFieldData(XQt0434InBlock.BlockName, XQt0434InBlock.F.passwd, 0, passwd); // char 8
+				instance.SetFieldData(XQt0434InBlock.BlockName, XQt0434InBlock.F.expcode, 0, expcode); // char 8
+				instance.SetFieldData(XQt0434InBlock.BlockName, XQt0434InBlock.F.chegb, 0, chegb.ToString()); // char 1
+				instance.SetFieldData(XQt0434InBlock.BlockName, XQt0434InBlock.F.sortgb, 0, sortgb.ToString()); // char 1
+				instance.SetFieldData(XQt0434InBlock.BlockName, XQt0434InBlock.F.cts_ordno, 0, cts_ordno); // char 7
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt0434InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

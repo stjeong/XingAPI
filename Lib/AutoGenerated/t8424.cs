@@ -313,7 +313,23 @@ namespace XingAPINet
 		public XQt8424() : base("t8424") { }
 
 
-		public bool SetFields(XQt8424InBlock block)
+		public static XQt8424OutBlock[] Get(char gubun1 = default)
+		{
+			using (XQt8424 instance = new XQt8424())
+			{
+				instance.SetFieldData(XQt8424InBlock.BlockName, XQt8424InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8424InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

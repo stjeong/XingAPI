@@ -691,7 +691,27 @@ namespace XingAPINet
 		public XQt1310() : base("t1310") { }
 
 
-		public bool SetFields(XQt1310InBlock block)
+		public static XQt1310OutBlock1[] Get(char daygb = default,char timegb = default,string shcode = default,string endtime = default,string cts_time = default)
+		{
+			using (XQt1310 instance = new XQt1310())
+			{
+				instance.SetFieldData(XQt1310InBlock.BlockName, XQt1310InBlock.F.daygb, 0, daygb.ToString()); // char 1
+				instance.SetFieldData(XQt1310InBlock.BlockName, XQt1310InBlock.F.timegb, 0, timegb.ToString()); // char 1
+				instance.SetFieldData(XQt1310InBlock.BlockName, XQt1310InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1310InBlock.BlockName, XQt1310InBlock.F.endtime, 0, endtime); // char 4
+				instance.SetFieldData(XQt1310InBlock.BlockName, XQt1310InBlock.F.cts_time, 0, cts_time); // char 10
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1310InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

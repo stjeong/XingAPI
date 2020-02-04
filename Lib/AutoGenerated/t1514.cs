@@ -877,7 +877,28 @@ namespace XingAPINet
 		public XQt1514() : base("t1514") { }
 
 
-		public bool SetFields(XQt1514InBlock block)
+		public static XQt1514OutBlock1[] Get(string upcode = default,char gubun1 = default,char gubun2 = default,string cts_date = default,int cnt = default,char rate_gbn = default)
+		{
+			using (XQt1514 instance = new XQt1514())
+			{
+				instance.SetFieldData(XQt1514InBlock.BlockName, XQt1514InBlock.F.upcode, 0, upcode); // char 3
+				instance.SetFieldData(XQt1514InBlock.BlockName, XQt1514InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+				instance.SetFieldData(XQt1514InBlock.BlockName, XQt1514InBlock.F.gubun2, 0, gubun2.ToString()); // char 1
+				instance.SetFieldData(XQt1514InBlock.BlockName, XQt1514InBlock.F.cts_date, 0, cts_date); // char 8
+				instance.SetFieldData(XQt1514InBlock.BlockName, XQt1514InBlock.F.cnt, 0, cnt.ToString("d4")); // int 4
+				instance.SetFieldData(XQt1514InBlock.BlockName, XQt1514InBlock.F.rate_gbn, 0, rate_gbn.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1514InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

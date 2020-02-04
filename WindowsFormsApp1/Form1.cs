@@ -58,27 +58,37 @@ namespace WindowsFormsApp1
                 Console.WriteLine("\t" + account);
             }
 
-            using (XQt1101 query = new XQt1101())
+            if (useDemoServer)
             {
-                XQt1101InBlock inBlock = new XQt1101InBlock();
-                inBlock.shcode = "078020";
-
-                if (query.SetFields(inBlock) == false)
+                var outBlock = XQt1101.Get(shcode: "078020");
+                if (outBlock != null)
                 {
-                    Console.WriteLine("Failed to verify data: " + XQt1101InBlock.BlockName);
-                    return;
+                    OutputPrice(outBlock.shcode, outBlock.price);
                 }
-
-                Console.WriteLine("GetFields: " + XQt1101InBlock.BlockName);
-
-                int queryResult = query.Request();
-                if (queryResult < 0)
+            }
+            else
+            {
+                using (XQt1101 query = new XQt1101())
                 {
-                    Console.WriteLine("Failed to send request");
-                }
+                    XQt1101InBlock inBlock = new XQt1101InBlock { shcode = "078020" };
 
-                XQt1101OutBlock outBlock = query.GetBlock();
-                OutputPrice(outBlock.shcode, outBlock.price);
+                    if (query.SetBlock(inBlock) == false)
+                    {
+                        Console.WriteLine("Failed to verify data: " + XQt1101InBlock.BlockName);
+                        return;
+                    }
+
+                    Console.WriteLine("GetFields: " + XQt1101InBlock.BlockName);
+
+                    int queryResult = query.Request();
+                    if (queryResult < 0)
+                    {
+                        Console.WriteLine("Failed to send request");
+                    }
+
+                    XQt1101OutBlock outBlock = query.GetBlock();
+                    OutputPrice(outBlock.shcode, outBlock.price);
+                }
             }
 
             {
@@ -86,7 +96,7 @@ namespace WindowsFormsApp1
                 _realS3.DataArrived += _realS3_DataArrived;
 
                 XRS3_InBlock inBlock = new XRS3_InBlock { shcode = "078020" };
-                if (_realS3.SetFields(inBlock) == false)
+                if (_realS3.SetBlock(inBlock) == false)
                 {
                     Console.WriteLine("Failed to verify data: " + XRS3_InBlock.BlockName);
                     return;
@@ -96,7 +106,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void _realS3_DataArrived(object sender, RealDataArgs e)
+        private void _realS3_DataArrived(object _, RealDataArgs _2)
         {
             XRS3_OutBlock outBlock = _realS3.GetBlock();
             if (outBlock.IsValidData == true)

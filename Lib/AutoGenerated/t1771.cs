@@ -740,7 +740,29 @@ namespace XingAPINet
 		public XQt1771() : base("t1771") { }
 
 
-		public bool SetFields(XQt1771InBlock block)
+		public static XQt1771OutBlock2[] Get(string shcode = default,string tradno = default,char gubun1 = default,string traddate1 = default,string traddate2 = default,long cts_idx = default,int cnt = default)
+		{
+			using (XQt1771 instance = new XQt1771())
+			{
+				instance.SetFieldData(XQt1771InBlock.BlockName, XQt1771InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1771InBlock.BlockName, XQt1771InBlock.F.tradno, 0, tradno); // char 3
+				instance.SetFieldData(XQt1771InBlock.BlockName, XQt1771InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+				instance.SetFieldData(XQt1771InBlock.BlockName, XQt1771InBlock.F.traddate1, 0, traddate1); // char 8
+				instance.SetFieldData(XQt1771InBlock.BlockName, XQt1771InBlock.F.traddate2, 0, traddate2); // char 8
+				instance.SetFieldData(XQt1771InBlock.BlockName, XQt1771InBlock.F.cts_idx, 0, cts_idx.ToString("d4")); // long 4
+				instance.SetFieldData(XQt1771InBlock.BlockName, XQt1771InBlock.F.cnt, 0, cnt.ToString("d3")); // int 3
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock2s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1771InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

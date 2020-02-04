@@ -558,7 +558,24 @@ namespace XingAPINet
 		public XQt1825() : base("t1825") { }
 
 
-		public bool SetFields(XQt1825InBlock block)
+		public static XQt1825OutBlock1[] Get(string search_cd = default,char gubun = default)
+		{
+			using (XQt1825 instance = new XQt1825())
+			{
+				instance.SetFieldData(XQt1825InBlock.BlockName, XQt1825InBlock.F.search_cd, 0, search_cd); // char 4
+				instance.SetFieldData(XQt1825InBlock.BlockName, XQt1825InBlock.F.gubun, 0, gubun.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1825InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

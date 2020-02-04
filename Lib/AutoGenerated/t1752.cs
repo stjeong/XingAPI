@@ -640,7 +640,27 @@ namespace XingAPINet
 		public XQt1752() : base("t1752") { }
 
 
-		public bool SetFields(XQt1752InBlock block)
+		public static XQt1752OutBlock1[] Get(string shcode = default,string traddate1 = default,string traddate2 = default,char fwgubun1 = default,long cts_idx = default)
+		{
+			using (XQt1752 instance = new XQt1752())
+			{
+				instance.SetFieldData(XQt1752InBlock.BlockName, XQt1752InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1752InBlock.BlockName, XQt1752InBlock.F.traddate1, 0, traddate1); // char 8
+				instance.SetFieldData(XQt1752InBlock.BlockName, XQt1752InBlock.F.traddate2, 0, traddate2); // char 8
+				instance.SetFieldData(XQt1752InBlock.BlockName, XQt1752InBlock.F.fwgubun1, 0, fwgubun1.ToString()); // char 1
+				instance.SetFieldData(XQt1752InBlock.BlockName, XQt1752InBlock.F.cts_idx, 0, cts_idx.ToString("d4")); // long 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1752InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

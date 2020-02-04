@@ -391,7 +391,30 @@ namespace XingAPINet
 		public XQt2210() : base("t2210") { }
 
 
-		public bool SetFields(XQt2210InBlock block)
+		public static XQt2210OutBlock Get(string focode = default,long cvolume = default,string stime = default,string etime = default)
+		{
+			using (XQt2210 instance = new XQt2210())
+			{
+				instance.SetFieldData(XQt2210InBlock.BlockName, XQt2210InBlock.F.focode, 0, focode); // char 8
+				instance.SetFieldData(XQt2210InBlock.BlockName, XQt2210InBlock.F.cvolume, 0, cvolume.ToString("d12")); // long 12
+				instance.SetFieldData(XQt2210InBlock.BlockName, XQt2210InBlock.F.stime, 0, stime); // char 4
+				instance.SetFieldData(XQt2210InBlock.BlockName, XQt2210InBlock.F.etime, 0, etime); // char 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock();
+				if (outBlock.IsValidData == false)
+				{
+					return null;
+				}
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2210InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -654,7 +654,7 @@ namespace XingAPINet
 		public XRIJ_() : base("IJ_") { }
 
 
-		public bool SetFields(XRIJ_InBlock block)
+		public bool SetBlock(XRIJ_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

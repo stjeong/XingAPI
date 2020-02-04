@@ -1599,7 +1599,8 @@ namespace XingAPINet
 		public XQt1958() : base("t1958") { }
 
 
-		public bool SetFields(XQt1958InBlock block)
+
+		public bool SetBlock(XQt1958InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

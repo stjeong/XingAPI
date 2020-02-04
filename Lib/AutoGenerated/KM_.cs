@@ -1691,7 +1691,7 @@ namespace XingAPINet
 		public XRKM_() : base("KM_") { }
 
 
-		public bool SetFields(XRKM_InBlock block)
+		public bool SetBlock(XRKM_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -416,7 +416,7 @@ namespace XingAPINet
 		public XRYK3() : base("YK3") { }
 
 
-		public bool SetFields(XRYK3InBlock block)
+		public bool SetBlock(XRYK3InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

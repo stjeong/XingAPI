@@ -331,7 +331,7 @@ namespace XingAPINet
 		public XRYOC() : base("YOC") { }
 
 
-		public bool SetFields(XRYOCInBlock block)
+		public bool SetBlock(XRYOCInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

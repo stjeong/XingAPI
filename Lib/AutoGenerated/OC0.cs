@@ -722,7 +722,7 @@ namespace XingAPINet
 		public XROC0() : base("OC0") { }
 
 
-		public bool SetFields(XROC0InBlock block)
+		public bool SetBlock(XROC0InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

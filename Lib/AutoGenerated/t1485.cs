@@ -660,7 +660,24 @@ namespace XingAPINet
 		public XQt1485() : base("t1485") { }
 
 
-		public bool SetFields(XQt1485InBlock block)
+		public static XQt1485OutBlock1[] Get(string upcode = default,char gubun = default)
+		{
+			using (XQt1485 instance = new XQt1485())
+			{
+				instance.SetFieldData(XQt1485InBlock.BlockName, XQt1485InBlock.F.upcode, 0, upcode); // char 3
+				instance.SetFieldData(XQt1485InBlock.BlockName, XQt1485InBlock.F.gubun, 0, gubun.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1485InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

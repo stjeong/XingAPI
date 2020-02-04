@@ -431,7 +431,24 @@ namespace XingAPINet
 		public XQt8434() : base("t8434") { }
 
 
-		public bool SetFields(XQt8434InBlock block)
+		public static XQt8434OutBlock1[] Get(long qrycnt = default,string focode = default)
+		{
+			using (XQt8434 instance = new XQt8434())
+			{
+				instance.SetFieldData(XQt8434InBlock.BlockName, XQt8434InBlock.F.qrycnt, 0, qrycnt.ToString("d3")); // long 3
+				instance.SetFieldData(XQt8434InBlock.BlockName, XQt8434InBlock.F.focode, 0, focode); // char 400
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8434InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -1021,7 +1021,8 @@ namespace XingAPINet
 		public XQCCEAQ01100() : base("CCEAQ01100") { }
 
 
-		public bool SetFields(XQCCEAQ01100InBlock1 block)
+
+		public bool SetBlock(XQCCEAQ01100InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

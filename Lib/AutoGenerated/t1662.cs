@@ -566,7 +566,25 @@ namespace XingAPINet
 		public XQt1662() : base("t1662") { }
 
 
-		public bool SetFields(XQt1662InBlock block)
+		public static XQt1662OutBlock[] Get(char gubun = default,char gubun1 = default,char gubun3 = default)
+		{
+			using (XQt1662 instance = new XQt1662())
+			{
+				instance.SetFieldData(XQt1662InBlock.BlockName, XQt1662InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1662InBlock.BlockName, XQt1662InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+				instance.SetFieldData(XQt1662InBlock.BlockName, XQt1662InBlock.F.gubun3, 0, gubun3.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1662InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

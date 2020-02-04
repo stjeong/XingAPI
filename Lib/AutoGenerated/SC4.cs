@@ -2419,7 +2419,7 @@ namespace XingAPINet
 		public XRSC4() : base("SC4") { }
 
 
-		public bool SetFields(XRSC4InBlock block)
+		public bool SetBlock(XRSC4InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

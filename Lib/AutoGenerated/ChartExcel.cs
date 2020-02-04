@@ -788,7 +788,32 @@ namespace XingAPINet
 		public XQCHARTEXCEL() : base("CHARTEXCEL") { }
 
 
-		public bool SetFields(XQChartExcelInBlock block)
+		public static XQChartExcelOutBlock1[] Get(long indexid = default,string indexname = default,string indexparam = default,char indexouttype = default,char market = default,char period = default,string shcode = default,char isexcelout = default,string excelfilename = default,char IsReal = default)
+		{
+			using (XQCHARTEXCEL instance = new XQCHARTEXCEL())
+			{
+				instance.SetFieldData(XQChartExcelInBlock.BlockName, XQChartExcelInBlock.F.indexid, 0, indexid.ToString("d10")); // long 10
+				instance.SetFieldData(XQChartExcelInBlock.BlockName, XQChartExcelInBlock.F.indexname, 0, indexname); // char 40
+				instance.SetFieldData(XQChartExcelInBlock.BlockName, XQChartExcelInBlock.F.indexparam, 0, indexparam); // char 40
+				instance.SetFieldData(XQChartExcelInBlock.BlockName, XQChartExcelInBlock.F.indexouttype, 0, indexouttype.ToString()); // char 1
+				instance.SetFieldData(XQChartExcelInBlock.BlockName, XQChartExcelInBlock.F.market, 0, market.ToString()); // char 1
+				instance.SetFieldData(XQChartExcelInBlock.BlockName, XQChartExcelInBlock.F.period, 0, period.ToString()); // char 1
+				instance.SetFieldData(XQChartExcelInBlock.BlockName, XQChartExcelInBlock.F.shcode, 0, shcode); // char 8
+				instance.SetFieldData(XQChartExcelInBlock.BlockName, XQChartExcelInBlock.F.isexcelout, 0, isexcelout.ToString()); // char 1
+				instance.SetFieldData(XQChartExcelInBlock.BlockName, XQChartExcelInBlock.F.excelfilename, 0, excelfilename); // char 256
+				instance.SetFieldData(XQChartExcelInBlock.BlockName, XQChartExcelInBlock.F.IsReal, 0, IsReal.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQChartExcelInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -280,7 +280,7 @@ namespace XingAPINet
 		public XRKS_() : base("KS_") { }
 
 
-		public bool SetFields(XRKS_InBlock block)
+		public bool SetBlock(XRKS_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

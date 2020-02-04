@@ -1011,7 +1011,7 @@ namespace XingAPINet
 		public XRH1_() : base("H1_") { }
 
 
-		public bool SetFields(XRH1_InBlock block)
+		public bool SetBlock(XRH1_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

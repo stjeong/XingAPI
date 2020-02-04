@@ -1351,7 +1351,7 @@ namespace XingAPINet
 		public XRB7_() : base("B7_") { }
 
 
-		public bool SetFields(XRB7_InBlock block)
+		public bool SetBlock(XRB7_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

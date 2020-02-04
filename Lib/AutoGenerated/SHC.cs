@@ -552,7 +552,7 @@ namespace XingAPINet
 		public XRSHC() : base("SHC") { }
 
 
-		public bool SetFields(XRSHCInBlock block)
+		public bool SetBlock(XRSHCInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

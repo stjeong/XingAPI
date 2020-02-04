@@ -1647,7 +1647,74 @@ namespace XingAPINet
 		public XQt1955() : base("t1955") { }
 
 
-		public bool SetFields(XQt1955InBlock block)
+		public static XQt1955OutBlock1[] Get(char chkitem = default,string cbitem = default,char chkissuer = default,string cbissuer = default,char chkcallput = default,string cbcallput = default,char chkexec = default,char cbexec = default,char chktype = default,string cbtype = default,char chksettle = default,string cbsettle = default,char chklast = default,string cblast = default,char chkelwexec = default,float elwexecs = default,float elwexece = default,char chkvolume = default,float volumes = default,float volumee = default,char chkrate = default,float rates = default,float ratee = default,char chkpremium = default,float premiums = default,float premiume = default,char chkparity = default,float paritys = default,float paritye = default,char chkberate = default,float berates = default,float beratee = default,char chkcapt = default,float capts = default,float capte = default,char chkegearing = default,float egearings = default,float egearinge = default,char chkgearing = default,float gearings = default,float gearinge = default,char chkdelta = default,float deltas = default,float deltae = default,char chktheta = default,float thetas = default,float thetae = default,char chkduedate = default,string duedates = default,string duedatee = default,char chkkoba = default,char cbkoba = default)
+		{
+			using (XQt1955 instance = new XQt1955())
+			{
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkitem, 0, chkitem.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.cbitem, 0, cbitem); // char 12
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkissuer, 0, chkissuer.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.cbissuer, 0, cbissuer); // char 12
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkcallput, 0, chkcallput.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.cbcallput, 0, cbcallput); // char 2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkexec, 0, chkexec.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.cbexec, 0, cbexec.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chktype, 0, chktype.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.cbtype, 0, cbtype); // char 2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chksettle, 0, chksettle.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.cbsettle, 0, cbsettle); // char 2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chklast, 0, chklast.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.cblast, 0, cblast); // char 6
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkelwexec, 0, chkelwexec.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.elwexecs, 0, elwexecs.ToString("0000000000.00")); // float 10.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.elwexece, 0, elwexece.ToString("0000000000.00")); // float 10.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkvolume, 0, chkvolume.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.volumes, 0, volumes.ToString("000000000000")); // float 12
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.volumee, 0, volumee.ToString("000000000000")); // float 12
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkrate, 0, chkrate.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.rates, 0, rates.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.ratee, 0, ratee.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkpremium, 0, chkpremium.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.premiums, 0, premiums.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.premiume, 0, premiume.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkparity, 0, chkparity.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.paritys, 0, paritys.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.paritye, 0, paritye.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkberate, 0, chkberate.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.berates, 0, berates.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.beratee, 0, beratee.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkcapt, 0, chkcapt.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.capts, 0, capts.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.capte, 0, capte.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkegearing, 0, chkegearing.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.egearings, 0, egearings.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.egearinge, 0, egearinge.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkgearing, 0, chkgearing.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.gearings, 0, gearings.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.gearinge, 0, gearinge.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkdelta, 0, chkdelta.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.deltas, 0, deltas.ToString("0000000000.000000")); // float 10.6
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.deltae, 0, deltae.ToString("0000000000.000000")); // float 10.6
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chktheta, 0, chktheta.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.thetas, 0, thetas.ToString("0000000000.000000")); // float 10.6
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.thetae, 0, thetae.ToString("0000000000.000000")); // float 10.6
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkduedate, 0, chkduedate.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.duedates, 0, duedates); // char 8
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.duedatee, 0, duedatee); // char 8
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.chkkoba, 0, chkkoba.ToString()); // char 1
+				instance.SetFieldData(XQt1955InBlock.BlockName, XQt1955InBlock.F.cbkoba, 0, cbkoba.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1955InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

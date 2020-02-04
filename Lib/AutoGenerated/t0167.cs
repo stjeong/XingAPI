@@ -309,7 +309,27 @@ namespace XingAPINet
 		public XQt0167() : base("t0167") { }
 
 
-		public bool SetFields(XQt0167InBlock block)
+		public static XQt0167OutBlock Get(string id = default)
+		{
+			using (XQt0167 instance = new XQt0167())
+			{
+				instance.SetFieldData(XQt0167InBlock.BlockName, XQt0167InBlock.F.id, 0, id); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock();
+				if (outBlock.IsValidData == false)
+				{
+					return null;
+				}
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt0167InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -1198,7 +1198,7 @@ namespace XingAPINet
 		public XRk1_() : base("k1_") { }
 
 
-		public bool SetFields(XRk1_InBlock block)
+		public bool SetBlock(XRk1_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

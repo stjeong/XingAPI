@@ -591,7 +591,8 @@ namespace XingAPINet
 		public XQt2106() : base("t2106") { }
 
 
-		public bool SetFields(XQt2106InBlock block)
+
+		public bool SetBlock(XQt2106InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{
@@ -604,7 +605,7 @@ namespace XingAPINet
 			return true;
 		}
 
-		public bool SetFields(XQt2106InBlock1 block)
+		public bool SetBlock(XQt2106InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

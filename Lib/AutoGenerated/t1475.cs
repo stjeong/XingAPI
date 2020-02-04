@@ -689,7 +689,29 @@ namespace XingAPINet
 		public XQt1475() : base("t1475") { }
 
 
-		public bool SetFields(XQt1475InBlock block)
+		public static XQt1475OutBlock1[] Get(string shcode = default,char vptype = default,long datacnt = default,long date = default,long time = default,long rankcnt = default,char gubun = default)
+		{
+			using (XQt1475 instance = new XQt1475())
+			{
+				instance.SetFieldData(XQt1475InBlock.BlockName, XQt1475InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1475InBlock.BlockName, XQt1475InBlock.F.vptype, 0, vptype.ToString()); // char 1
+				instance.SetFieldData(XQt1475InBlock.BlockName, XQt1475InBlock.F.datacnt, 0, datacnt.ToString("d4")); // long 4
+				instance.SetFieldData(XQt1475InBlock.BlockName, XQt1475InBlock.F.date, 0, date.ToString("d8")); // long 8
+				instance.SetFieldData(XQt1475InBlock.BlockName, XQt1475InBlock.F.time, 0, time.ToString("d6")); // long 6
+				instance.SetFieldData(XQt1475InBlock.BlockName, XQt1475InBlock.F.rankcnt, 0, rankcnt.ToString("d3")); // long 3
+				instance.SetFieldData(XQt1475InBlock.BlockName, XQt1475InBlock.F.gubun, 0, gubun.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1475InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

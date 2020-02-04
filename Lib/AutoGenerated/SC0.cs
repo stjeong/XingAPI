@@ -2130,7 +2130,7 @@ namespace XingAPINet
 		public XRSC0() : base("SC0") { }
 
 
-		public bool SetFields(XRSC0InBlock block)
+		public bool SetBlock(XRSC0InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

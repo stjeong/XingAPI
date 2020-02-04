@@ -863,7 +863,25 @@ namespace XingAPINet
 		public XQt1954() : base("t1954") { }
 
 
-		public bool SetFields(XQt1954InBlock block)
+		public static XQt1954OutBlock1[] Get(string shcode = default,string date = default,long cnt = default)
+		{
+			using (XQt1954 instance = new XQt1954())
+			{
+				instance.SetFieldData(XQt1954InBlock.BlockName, XQt1954InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1954InBlock.BlockName, XQt1954InBlock.F.date, 0, date); // char 8
+				instance.SetFieldData(XQt1954InBlock.BlockName, XQt1954InBlock.F.cnt, 0, cnt.ToString("d3")); // long 3
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1954InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

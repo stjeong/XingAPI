@@ -726,7 +726,26 @@ namespace XingAPINet
 		public XQt0441() : base("t0441") { }
 
 
-		public bool SetFields(XQt0441InBlock block)
+		public static XQt0441OutBlock1[] Get(string accno = default,string passwd = default,string cts_expcode = default,char cts_medocd = default)
+		{
+			using (XQt0441 instance = new XQt0441())
+			{
+				instance.SetFieldData(XQt0441InBlock.BlockName, XQt0441InBlock.F.accno, 0, accno); // char 11
+				instance.SetFieldData(XQt0441InBlock.BlockName, XQt0441InBlock.F.passwd, 0, passwd); // char 8
+				instance.SetFieldData(XQt0441InBlock.BlockName, XQt0441InBlock.F.cts_expcode, 0, cts_expcode); // char 8
+				instance.SetFieldData(XQt0441InBlock.BlockName, XQt0441InBlock.F.cts_medocd, 0, cts_medocd.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt0441InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

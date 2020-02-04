@@ -692,7 +692,26 @@ namespace XingAPINet
 		public XQt1921() : base("t1921") { }
 
 
-		public bool SetFields(XQt1921InBlock block)
+		public static XQt1921OutBlock1[] Get(string shcode = default,char gubun = default,string date = default,long idx = default)
+		{
+			using (XQt1921 instance = new XQt1921())
+			{
+				instance.SetFieldData(XQt1921InBlock.BlockName, XQt1921InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1921InBlock.BlockName, XQt1921InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1921InBlock.BlockName, XQt1921InBlock.F.date, 0, date); // char 8
+				instance.SetFieldData(XQt1921InBlock.BlockName, XQt1921InBlock.F.idx, 0, idx.ToString("d4")); // long 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1921InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -776,7 +776,27 @@ namespace XingAPINet
 		public XQCFOBQ10800() : base("CFOBQ10800") { }
 
 
-		public bool SetFields(XQCFOBQ10800InBlock1 block)
+		public static XQCFOBQ10800OutBlock2[] Get(long RecCnt = default,string PrdgrpClssCode = default,string ClssGrpCode = default,string BaseYear = default,char FstmmTpCode = default)
+		{
+			using (XQCFOBQ10800 instance = new XQCFOBQ10800())
+			{
+				instance.SetFieldData(XQCFOBQ10800InBlock1.BlockName, XQCFOBQ10800InBlock1.F.RecCnt, 0, RecCnt.ToString("d5")); // long 5
+				instance.SetFieldData(XQCFOBQ10800InBlock1.BlockName, XQCFOBQ10800InBlock1.F.PrdgrpClssCode, 0, PrdgrpClssCode); // char 2
+				instance.SetFieldData(XQCFOBQ10800InBlock1.BlockName, XQCFOBQ10800InBlock1.F.ClssGrpCode, 0, ClssGrpCode); // char 3
+				instance.SetFieldData(XQCFOBQ10800InBlock1.BlockName, XQCFOBQ10800InBlock1.F.BaseYear, 0, BaseYear); // char 4
+				instance.SetFieldData(XQCFOBQ10800InBlock1.BlockName, XQCFOBQ10800InBlock1.F.FstmmTpCode, 0, FstmmTpCode.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock2s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQCFOBQ10800InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

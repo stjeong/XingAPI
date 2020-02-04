@@ -330,7 +330,23 @@ namespace XingAPINet
 		public XQt9943() : base("t9943") { }
 
 
-		public bool SetFields(XQt9943InBlock block)
+		public static XQt9943OutBlock[] Get(char gubun = default)
+		{
+			using (XQt9943 instance = new XQt9943())
+			{
+				instance.SetFieldData(XQt9943InBlock.BlockName, XQt9943InBlock.F.gubun, 0, gubun.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt9943InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

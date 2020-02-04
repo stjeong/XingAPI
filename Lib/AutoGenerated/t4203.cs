@@ -890,7 +890,32 @@ namespace XingAPINet
 		public XQt4203() : base("t4203") { }
 
 
-		public bool SetFields(XQt4203InBlock block)
+		public static XQt4203OutBlock1[] Get(string shcode = default,char gubun = default,long ncnt = default,long qrycnt = default,char tdgb = default,string sdate = default,string edate = default,string cts_date = default,string cts_time = default,char cts_daygb = default)
+		{
+			using (XQt4203 instance = new XQt4203())
+			{
+				instance.SetFieldData(XQt4203InBlock.BlockName, XQt4203InBlock.F.shcode, 0, shcode); // char 3
+				instance.SetFieldData(XQt4203InBlock.BlockName, XQt4203InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt4203InBlock.BlockName, XQt4203InBlock.F.ncnt, 0, ncnt.ToString("d4")); // long 4
+				instance.SetFieldData(XQt4203InBlock.BlockName, XQt4203InBlock.F.qrycnt, 0, qrycnt.ToString("d4")); // long 4
+				instance.SetFieldData(XQt4203InBlock.BlockName, XQt4203InBlock.F.tdgb, 0, tdgb.ToString()); // char 1
+				instance.SetFieldData(XQt4203InBlock.BlockName, XQt4203InBlock.F.sdate, 0, sdate); // char 8
+				instance.SetFieldData(XQt4203InBlock.BlockName, XQt4203InBlock.F.edate, 0, edate); // char 8
+				instance.SetFieldData(XQt4203InBlock.BlockName, XQt4203InBlock.F.cts_date, 0, cts_date); // char 8
+				instance.SetFieldData(XQt4203InBlock.BlockName, XQt4203InBlock.F.cts_time, 0, cts_time); // char 10
+				instance.SetFieldData(XQt4203InBlock.BlockName, XQt4203InBlock.F.cts_daygb, 0, cts_daygb.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt4203InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

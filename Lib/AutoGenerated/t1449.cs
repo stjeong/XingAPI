@@ -660,7 +660,24 @@ namespace XingAPINet
 		public XQt1449() : base("t1449") { }
 
 
-		public bool SetFields(XQt1449InBlock block)
+		public static XQt1449OutBlock1[] Get(string shcode = default,char dategb = default)
+		{
+			using (XQt1449 instance = new XQt1449())
+			{
+				instance.SetFieldData(XQt1449InBlock.BlockName, XQt1449InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1449InBlock.BlockName, XQt1449InBlock.F.dategb, 0, dategb.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1449InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

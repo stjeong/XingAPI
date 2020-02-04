@@ -592,7 +592,24 @@ namespace XingAPINet
 		public XQt1444() : base("t1444") { }
 
 
-		public bool SetFields(XQt1444InBlock block)
+		public static XQt1444OutBlock1[] Get(string upcode = default,long idx = default)
+		{
+			using (XQt1444 instance = new XQt1444())
+			{
+				instance.SetFieldData(XQt1444InBlock.BlockName, XQt1444InBlock.F.upcode, 0, upcode); // char 3
+				instance.SetFieldData(XQt1444InBlock.BlockName, XQt1444InBlock.F.idx, 0, idx.ToString("d4")); // long 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1444InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

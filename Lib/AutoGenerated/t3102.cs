@@ -520,7 +520,8 @@ namespace XingAPINet
 		public XQt3102() : base("t3102") { }
 
 
-		public bool SetFields(XQt3102InBlock block)
+
+		public bool SetBlock(XQt3102InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

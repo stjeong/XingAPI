@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>CA1034;IDE0028;IDE0017;IDE1006</NoWarn>
+    <NoWarn>CA1034;IDE0028;IDE0017;IDE1006;CA1822</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>CA1034;IDE0028;IDE0017;IDE1006</NoWarn>
+    <NoWarn>CA1034;IDE0028;IDE0017;IDE1006;CA1822</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Interop.XA_DataSetLib">

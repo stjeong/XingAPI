@@ -708,7 +708,27 @@ namespace XingAPINet
 		public XQt2832() : base("t2832") { }
 
 
-		public bool SetFields(XQt2832InBlock block)
+		public static XQt2832OutBlock1[] Get(string focode = default,long cvolume = default,string stime = default,string etime = default,string cts_time = default)
+		{
+			using (XQt2832 instance = new XQt2832())
+			{
+				instance.SetFieldData(XQt2832InBlock.BlockName, XQt2832InBlock.F.focode, 0, focode); // char 8
+				instance.SetFieldData(XQt2832InBlock.BlockName, XQt2832InBlock.F.cvolume, 0, cvolume.ToString("d12")); // long 12
+				instance.SetFieldData(XQt2832InBlock.BlockName, XQt2832InBlock.F.stime, 0, stime); // char 4
+				instance.SetFieldData(XQt2832InBlock.BlockName, XQt2832InBlock.F.etime, 0, etime); // char 4
+				instance.SetFieldData(XQt2832InBlock.BlockName, XQt2832InBlock.F.cts_time, 0, cts_time); // char 10
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2832InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

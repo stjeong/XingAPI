@@ -671,7 +671,7 @@ namespace XingAPINet
 		public XRK3_() : base("K3_") { }
 
 
-		public bool SetFields(XRK3_InBlock block)
+		public bool SetBlock(XRK3_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -1025,7 +1025,8 @@ namespace XingAPINet
 		public XQCFOAT00100() : base("CFOAT00100") { }
 
 
-		public bool SetFields(XQCFOAT00100InBlock1 block)
+
+		public bool SetBlock(XQCFOAT00100InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

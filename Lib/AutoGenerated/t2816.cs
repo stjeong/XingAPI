@@ -2408,7 +2408,8 @@ namespace XingAPINet
 		public XQt2816() : base("t2816") { }
 
 
-		public bool SetFields(XQt2816InBlock block)
+
+		public bool SetBlock(XQt2816InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

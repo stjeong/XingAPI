@@ -1385,7 +1385,7 @@ namespace XingAPINet
 		public XRJH0() : base("JH0") { }
 
 
-		public bool SetFields(XRJH0InBlock block)
+		public bool SetBlock(XRJH0InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

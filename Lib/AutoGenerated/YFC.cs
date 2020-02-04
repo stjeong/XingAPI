@@ -331,7 +331,7 @@ namespace XingAPINet
 		public XRYFC() : base("YFC") { }
 
 
-		public bool SetFields(XRYFCInBlock block)
+		public bool SetBlock(XRYFCInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

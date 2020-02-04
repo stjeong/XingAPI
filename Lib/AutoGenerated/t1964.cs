@@ -1068,7 +1068,33 @@ namespace XingAPINet
 		public XQt1964() : base("t1964") { }
 
 
-		public bool SetFields(XQt1964InBlock block)
+		public static XQt1964OutBlock1[] Get(string item = default,string issuercd = default,string lastmonth = default,char elwopt = default,char atmgubun = default,string elwtype = default,string settletype = default,char elwexecgubun = default,string fromrat = default,string torat = default,string volume = default)
+		{
+			using (XQt1964 instance = new XQt1964())
+			{
+				instance.SetFieldData(XQt1964InBlock.BlockName, XQt1964InBlock.F.item, 0, item); // char 12
+				instance.SetFieldData(XQt1964InBlock.BlockName, XQt1964InBlock.F.issuercd, 0, issuercd); // char 12
+				instance.SetFieldData(XQt1964InBlock.BlockName, XQt1964InBlock.F.lastmonth, 0, lastmonth); // char 6
+				instance.SetFieldData(XQt1964InBlock.BlockName, XQt1964InBlock.F.elwopt, 0, elwopt.ToString()); // char 1
+				instance.SetFieldData(XQt1964InBlock.BlockName, XQt1964InBlock.F.atmgubun, 0, atmgubun.ToString()); // char 1
+				instance.SetFieldData(XQt1964InBlock.BlockName, XQt1964InBlock.F.elwtype, 0, elwtype); // char 2
+				instance.SetFieldData(XQt1964InBlock.BlockName, XQt1964InBlock.F.settletype, 0, settletype); // char 2
+				instance.SetFieldData(XQt1964InBlock.BlockName, XQt1964InBlock.F.elwexecgubun, 0, elwexecgubun.ToString()); // char 1
+				instance.SetFieldData(XQt1964InBlock.BlockName, XQt1964InBlock.F.fromrat, 0, fromrat); // char 5
+				instance.SetFieldData(XQt1964InBlock.BlockName, XQt1964InBlock.F.torat, 0, torat); // char 5
+				instance.SetFieldData(XQt1964InBlock.BlockName, XQt1964InBlock.F.volume, 0, volume); // char 12
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1964InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

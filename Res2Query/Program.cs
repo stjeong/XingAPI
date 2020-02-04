@@ -49,7 +49,7 @@ namespace Res2Query
                 sb.AppendLine("{");
 
                 {
-                    
+
                     string text = ResToCSharpCode(file, typeList);
                     if (string.IsNullOrEmpty(text) == true)
                     {
@@ -178,13 +178,18 @@ namespace Res2Query
 
             sbClass.AppendLine();
 
+            if (blockFieldSetList.Count >= 2 && isRealType == false)
+            {
+                sbClass.AppendLine(WriteSimpleGetMethod(blockFieldSetList, tab, classPrefix, typeName));
+            }
+
             StringBuilder sbBlock = new StringBuilder();
 
             foreach (string blockTypeName in blockFieldSetList.Keys)
             {
                 if (blockFieldSetList[blockTypeName].BlockType == BlockType.input)
                 {
-                    sbBlock.AppendLine($"{tab}\tpublic bool SetFields({classPrefix}{blockTypeName} block)");
+                    sbBlock.AppendLine($"{tab}\tpublic bool SetBlock({classPrefix}{blockTypeName} block)");
                     sbBlock.AppendLine($"{tab}\t{{");
                     {
                         sbBlock.AppendLine($"{tab}\t\tif (block.VerifyData() == false)");
@@ -222,11 +227,78 @@ namespace Res2Query
             return sbClass.ToString();
         }
 
+        private static string WriteSimpleGetMethod(Dictionary<string, BlockInfo> blockFieldSetList, string tab, string classPrefix, string typeName)
+        {
+            if (blockFieldSetList.Count == 2)
+            {
+                var inBlock = blockFieldSetList.First();
+                var outBlock = blockFieldSetList.Skip(1).First();
+
+                if (inBlock.Value.BlockType == BlockType.input && outBlock.Value.BlockType == BlockType.output)
+                {
+                    return WriteInblockAndOutblock(inBlock, outBlock, tab, classPrefix, typeName);
+                }
+            }
+            else if (blockFieldSetList.Count == 3)
+            {
+                var inBlock = blockFieldSetList.First();
+                var outBlock = blockFieldSetList.Skip(1).First();
+                var outBlocks = blockFieldSetList.Skip(2).First();
+
+                if (inBlock.Value.BlockType == BlockType.input && 
+                    (outBlock.Value.BlockType == BlockType.output && outBlock.Value.HasOccurs == false) &&
+                    (outBlocks.Value.BlockType == BlockType.output && outBlocks.Value.HasOccurs == true))
+                {
+                    return WriteInblockAndOutblock(inBlock, outBlocks, tab, classPrefix, typeName);
+                }
+            }
+
+            return "";
+        }
+        private static string WriteInblockAndOutblock(KeyValuePair<string, BlockInfo> inBlock, KeyValuePair<string, BlockInfo> outBlock, string tab, string classPrefix, string typeName)
+        {
+            StringBuilder sbGet = new StringBuilder();
+
+            string arrayPostfix = (outBlock.Value.HasOccurs == true) ? "[]" : "";
+
+            sbGet.AppendLine($"{tab}\tpublic static {classPrefix}{outBlock.Key}{arrayPostfix} Get({inBlock.Value.GetParams})");
+            sbGet.AppendLine($"{tab}\t{{");
+
+            sbGet.AppendLine($"{tab}\t\tusing ({classPrefix}{typeName} instance = new {classPrefix}{typeName}())");
+            sbGet.AppendLine($"{tab}\t\t{{");
+            sbGet.AppendLine($"{inBlock.Value.GetParamsSetFieldData}");
+            sbGet.AppendLine($"{tab}\t\t\tif (instance.Request() < 0)");
+            sbGet.AppendLine($"{tab}\t\t\t{{");
+            sbGet.AppendLine($"{tab}\t\t\t\treturn null;");
+            sbGet.AppendLine($"{tab}\t\t\t}}");
+            sbGet.AppendLine();
+
+            sbGet.AppendLine($"{tab}\t\t\tvar outBlock = instance.Get{GetBlockIndex(typeName, outBlock.Key, outBlock.Value.HasOccurs)}();");
+
+            if (outBlock.Value.HasOccurs == true)
+            {
+                sbGet.AppendLine($"{tab}\t\t\treturn outBlock;");
+            }
+            else
+            {
+                sbGet.AppendLine($"{tab}\t\t\tif (outBlock.IsValidData == false)");
+                sbGet.AppendLine($"{tab}\t\t\t{{");
+                sbGet.AppendLine($"{tab}\t\t\t\treturn null;");
+                sbGet.AppendLine($"{tab}\t\t\t}}");
+                sbGet.AppendLine($"{tab}\t\t\treturn outBlock;");
+            }
+
+            sbGet.AppendLine($"{tab}\t\t}}");
+            sbGet.AppendLine($"{tab}\t}}");
+
+            return sbGet.ToString();
+        }
+
         public static string GetBlockIndex(string typeName, string blockTypeName, bool hasOccurs)
         {
             return blockTypeName.Substring(typeName.Length + "Out".Length) + ((hasOccurs == true) ? "s" : "");
         }
-        
+
         private static string BlockToText(string tab, bool isRealType, string queryTypeName, List<string> blockText,
             Dictionary<string, BlockInfo> blockFieldSetList)
         {
@@ -283,7 +355,9 @@ namespace Res2Query
 
             StringBuilder fieldList = new StringBuilder();
             StringBuilder AllFields = new StringBuilder();
-            
+            StringBuilder getParams = new StringBuilder();
+            StringBuilder getParamsSetFieldData = new StringBuilder();
+
             fieldList.AppendLine();
             fieldList.AppendLine($"{tab}\tpublic static class F");
             fieldList.AppendLine($"{tab}\t{{");
@@ -348,6 +422,9 @@ namespace Res2Query
                 setByFieldNames.AppendLine($"{tab}\t\t\t\tthis.{name2} = fieldInfo.FieldValue{GetFieldToStringExp(fieldType, name2, formatOrLen)};");
                 setByFieldNames.AppendLine($"{tab}\t\t\tbreak;");
                 setByFieldNames.AppendLine();
+
+                getParams.Append($"{GetFieldType(fieldType, formatOrLen)} {name2} = default,");
+                getParamsSetFieldData.AppendLine($"{tab}\t\t\tinstance.SetFieldData({classPrefix}{typeName}.BlockName, {classPrefix}{typeName}.F.{name2}, 0, {name2}{SetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
             }
 
             fieldList.AppendLine($"{tab}\t}}");
@@ -356,7 +433,7 @@ namespace Res2Query
             sb.AppendLine(fieldList.ToString());
             sb.AppendLine(AllFields.ToString());
 
-            blockFieldSetList[typeName] = new BlockInfo(typeCode, setFields.ToString(), hasOccurs);
+            blockFieldSetList[typeName] = new BlockInfo(typeCode, setFields.ToString(), getParams.ToString().Trim(','), getParamsSetFieldData.ToString(), hasOccurs);
 
             // public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
             {

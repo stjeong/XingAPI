@@ -569,7 +569,7 @@ namespace XingAPINet
 		public XRSHI() : base("SHI") { }
 
 
-		public bool SetFields(XRSHIInBlock block)
+		public bool SetBlock(XRSHIInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

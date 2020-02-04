@@ -416,7 +416,7 @@ namespace XingAPINet
 		public XRs4_() : base("s4_") { }
 
 
-		public bool SetFields(XRs4_InBlock block)
+		public bool SetBlock(XRs4_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

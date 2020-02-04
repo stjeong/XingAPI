@@ -1185,7 +1185,26 @@ namespace XingAPINet
 		public XQt1621() : base("t1621") { }
 
 
-		public bool SetFields(XQt1621InBlock block)
+		public static XQt1621OutBlock1[] Get(string upcode = default,int nmin = default,int cnt = default,char bgubun = default)
+		{
+			using (XQt1621 instance = new XQt1621())
+			{
+				instance.SetFieldData(XQt1621InBlock.BlockName, XQt1621InBlock.F.upcode, 0, upcode); // char 3
+				instance.SetFieldData(XQt1621InBlock.BlockName, XQt1621InBlock.F.nmin, 0, nmin.ToString("d2")); // int 2
+				instance.SetFieldData(XQt1621InBlock.BlockName, XQt1621InBlock.F.cnt, 0, cnt.ToString("d3")); // int 3
+				instance.SetFieldData(XQt1621InBlock.BlockName, XQt1621InBlock.F.bgubun, 0, bgubun.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1621InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -280,7 +280,7 @@ namespace XingAPINet
 		public XRs2_() : base("s2_") { }
 
 
-		public bool SetFields(XRs2_InBlock block)
+		public bool SetBlock(XRs2_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

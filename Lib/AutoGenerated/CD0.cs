@@ -314,7 +314,7 @@ namespace XingAPINet
 		public XRCD0() : base("CD0") { }
 
 
-		public bool SetFields(XRCD0InBlock block)
+		public bool SetBlock(XRCD0InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

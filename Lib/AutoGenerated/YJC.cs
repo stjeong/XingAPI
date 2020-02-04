@@ -331,7 +331,7 @@ namespace XingAPINet
 		public XRYJC() : base("YJC") { }
 
 
-		public bool SetFields(XRYJCInBlock block)
+		public bool SetBlock(XRYJCInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

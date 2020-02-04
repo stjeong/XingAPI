@@ -792,7 +792,28 @@ namespace XingAPINet
 		public XQt8428() : base("t8428") { }
 
 
-		public bool SetFields(XQt8428InBlock block)
+		public static XQt8428OutBlock1[] Get(string fdate = default,string tdate = default,char gubun = default,string key_date = default,string upcode = default,int cnt = default)
+		{
+			using (XQt8428 instance = new XQt8428())
+			{
+				instance.SetFieldData(XQt8428InBlock.BlockName, XQt8428InBlock.F.fdate, 0, fdate); // char 8
+				instance.SetFieldData(XQt8428InBlock.BlockName, XQt8428InBlock.F.tdate, 0, tdate); // char 8
+				instance.SetFieldData(XQt8428InBlock.BlockName, XQt8428InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt8428InBlock.BlockName, XQt8428InBlock.F.key_date, 0, key_date); // char 8
+				instance.SetFieldData(XQt8428InBlock.BlockName, XQt8428InBlock.F.upcode, 0, upcode); // char 3
+				instance.SetFieldData(XQt8428InBlock.BlockName, XQt8428InBlock.F.cnt, 0, cnt.ToString("d3")); // int 3
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8428InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

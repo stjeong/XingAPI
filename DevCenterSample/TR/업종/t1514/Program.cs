@@ -8,15 +8,21 @@ namespace t1514
 {
     class Program
     {
-        static void Main(string[] _)
-        {
-            Program pg = new Program();
-            pg.Main();
-        }
-
-        void Main()
+        static void Main(string[] args)
         {
             bool useDemoServer = true;
+            Program pg = new Program();
+
+            if (args.Length == 1 && args[0] == "hts")
+            {
+                useDemoServer = false;
+            }
+
+            pg.Main(useDemoServer);
+        }
+
+        void Main(bool useDemoServer)
+        {
             LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
@@ -30,46 +36,58 @@ namespace t1514
                 int pageSize = 10;
                 int totalSize = 30;
 
-                using (XQt1514 query = new XQt1514())
+                if (useDemoServer)
                 {
-                    var inBlock = new XQt1514InBlock
+                    var items = XQt1514.Get("301", gubun2: '1', cnt: totalSize);
+
+                    foreach (var item in items)
                     {
-                        upcode = "301",
-                        cnt = pageSize,
-                        gubun2 = '1',
-                    };
-
-                    query.SetFields(inBlock);
-
-                    bool nextPage = false;
-
-                    while (totalSize > 0)
+                        item.Dump(Console.Out, DumpOutputType.Inline80Cols);
+                    }
+                }
+                else
+                {
+                    using (XQt1514 query = new XQt1514())
                     {
-                        if (query.Request(nextPage) < 0)
+                        var inBlock = new XQt1514InBlock
                         {
-                            Console.WriteLine("Failed to send request");
-                        }
+                            upcode = "301",
+                            cnt = pageSize,
+                            gubun2 = '1',
+                        };
 
-                        var outBlock = query.GetBlock();
-                        if (outBlock.IsValidData == true)
+                        query.SetBlock(inBlock);
+
+                        bool nextPage = false;
+
+                        while (totalSize > 0)
                         {
-                            outBlock.Dump(Console.Out, DumpOutputType.Inline);
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
-                        }
+                            if (query.Request(nextPage) < 0)
+                            {
+                                Console.WriteLine("Failed to send request");
+                            }
 
-                        foreach (var item in query.GetBlock1s())
-                        {
-                            item.Dump(Console.Out, DumpOutputType.Inline80Cols);
-                            totalSize--;
+                            var outBlock = query.GetBlock();
+                            if (outBlock.IsValidData == true)
+                            {
+                                outBlock.Dump(Console.Out, DumpOutputType.Inline);
+                            }
+                            else
+                            {
+                                Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                            }
+
+                            foreach (var item in query.GetBlock1s())
+                            {
+                                item.Dump(Console.Out, DumpOutputType.Inline80Cols);
+                                totalSize--;
+                            }
+
+                            inBlock.CopyValueFromBlock(outBlock);
+                            query.SetBlock(inBlock);
+
+                            nextPage = true;
                         }
-
-                        inBlock.CopyValueFromBlock(outBlock);
-                        query.SetFields(inBlock);
-
-                        nextPage = true;
                     }
                 }
             }

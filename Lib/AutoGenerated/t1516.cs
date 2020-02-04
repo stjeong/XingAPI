@@ -795,7 +795,25 @@ namespace XingAPINet
 		public XQt1516() : base("t1516") { }
 
 
-		public bool SetFields(XQt1516InBlock block)
+		public static XQt1516OutBlock1[] Get(string upcode = default,char gubun = default,string shcode = default)
+		{
+			using (XQt1516 instance = new XQt1516())
+			{
+				instance.SetFieldData(XQt1516InBlock.BlockName, XQt1516InBlock.F.upcode, 0, upcode); // char 3
+				instance.SetFieldData(XQt1516InBlock.BlockName, XQt1516InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1516InBlock.BlockName, XQt1516InBlock.F.shcode, 0, shcode); // char 6
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1516InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

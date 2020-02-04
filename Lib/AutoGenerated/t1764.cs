@@ -346,7 +346,24 @@ namespace XingAPINet
 		public XQt1764() : base("t1764") { }
 
 
-		public bool SetFields(XQt1764InBlock block)
+		public static XQt1764OutBlock[] Get(string shcode = default,char gubun1 = default)
+		{
+			using (XQt1764 instance = new XQt1764())
+			{
+				instance.SetFieldData(XQt1764InBlock.BlockName, XQt1764InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1764InBlock.BlockName, XQt1764InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1764InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

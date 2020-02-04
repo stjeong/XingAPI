@@ -660,7 +660,24 @@ namespace XingAPINet
 		public XQt1902() : base("t1902") { }
 
 
-		public bool SetFields(XQt1902InBlock block)
+		public static XQt1902OutBlock1[] Get(string shcode = default,string time = default)
+		{
+			using (XQt1902 instance = new XQt1902())
+			{
+				instance.SetFieldData(XQt1902InBlock.BlockName, XQt1902InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1902InBlock.BlockName, XQt1902InBlock.F.time, 0, time); // char 6
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1902InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

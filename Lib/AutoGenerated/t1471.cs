@@ -726,7 +726,26 @@ namespace XingAPINet
 		public XQt1471() : base("t1471") { }
 
 
-		public bool SetFields(XQt1471InBlock block)
+		public static XQt1471OutBlock1[] Get(string shcode = default,string gubun = default,string time = default,string cnt = default)
+		{
+			using (XQt1471 instance = new XQt1471())
+			{
+				instance.SetFieldData(XQt1471InBlock.BlockName, XQt1471InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1471InBlock.BlockName, XQt1471InBlock.F.gubun, 0, gubun); // char 2
+				instance.SetFieldData(XQt1471InBlock.BlockName, XQt1471InBlock.F.time, 0, time); // char 6
+				instance.SetFieldData(XQt1471InBlock.BlockName, XQt1471InBlock.F.cnt, 0, cnt); // char 3
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1471InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

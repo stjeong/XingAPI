@@ -1154,7 +1154,8 @@ namespace XingAPINet
 		public XQFOCCQ33700() : base("FOCCQ33700") { }
 
 
-		public bool SetFields(XQFOCCQ33700InBlock1 block)
+
+		public bool SetBlock(XQFOCCQ33700InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

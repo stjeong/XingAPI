@@ -825,7 +825,29 @@ namespace XingAPINet
 		public XQt3518() : base("t3518") { }
 
 
-		public bool SetFields(XQt3518InBlock block)
+		public static XQt3518OutBlock1[] Get(char kind = default,string symbol = default,long cnt = default,char jgbn = default,long nmin = default,string cts_date = default,string cts_time = default)
+		{
+			using (XQt3518 instance = new XQt3518())
+			{
+				instance.SetFieldData(XQt3518InBlock.BlockName, XQt3518InBlock.F.kind, 0, kind.ToString()); // char 1
+				instance.SetFieldData(XQt3518InBlock.BlockName, XQt3518InBlock.F.symbol, 0, symbol); // char 16
+				instance.SetFieldData(XQt3518InBlock.BlockName, XQt3518InBlock.F.cnt, 0, cnt.ToString("d4")); // long 4
+				instance.SetFieldData(XQt3518InBlock.BlockName, XQt3518InBlock.F.jgbn, 0, jgbn.ToString()); // char 1
+				instance.SetFieldData(XQt3518InBlock.BlockName, XQt3518InBlock.F.nmin, 0, nmin.ToString("d3")); // long 3
+				instance.SetFieldData(XQt3518InBlock.BlockName, XQt3518InBlock.F.cts_date, 0, cts_date); // char 8
+				instance.SetFieldData(XQt3518InBlock.BlockName, XQt3518InBlock.F.cts_time, 0, cts_time); // char 6
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt3518InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

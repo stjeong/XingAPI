@@ -893,7 +893,29 @@ namespace XingAPINet
 		public XQt2405() : base("t2405") { }
 
 
-		public bool SetFields(XQt2405InBlock block)
+		public static XQt2405OutBlock1[] Get(string focode = default,char bgubun = default,int nmin = default,string etime = default,char hgubun = default,int cnt = default,string cts_time = default)
+		{
+			using (XQt2405 instance = new XQt2405())
+			{
+				instance.SetFieldData(XQt2405InBlock.BlockName, XQt2405InBlock.F.focode, 0, focode); // char 8
+				instance.SetFieldData(XQt2405InBlock.BlockName, XQt2405InBlock.F.bgubun, 0, bgubun.ToString()); // char 1
+				instance.SetFieldData(XQt2405InBlock.BlockName, XQt2405InBlock.F.nmin, 0, nmin.ToString("d2")); // int 2
+				instance.SetFieldData(XQt2405InBlock.BlockName, XQt2405InBlock.F.etime, 0, etime); // char 4
+				instance.SetFieldData(XQt2405InBlock.BlockName, XQt2405InBlock.F.hgubun, 0, hgubun.ToString()); // char 1
+				instance.SetFieldData(XQt2405InBlock.BlockName, XQt2405InBlock.F.cnt, 0, cnt.ToString("d3")); // int 3
+				instance.SetFieldData(XQt2405InBlock.BlockName, XQt2405InBlock.F.cts_time, 0, cts_time); // char 6
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2405InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

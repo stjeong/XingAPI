@@ -805,7 +805,32 @@ namespace XingAPINet
 		public XQt8427() : base("t8427") { }
 
 
-		public bool SetFields(XQt8427InBlock block)
+		public static XQt8427OutBlock1[] Get(char fo_gbn = default,string yyyy = default,string mm = default,char cp_gbn = default,float actprice = default,string focode = default,char dt_gbn = default,string min_term = default,string date = default,string time = default)
+		{
+			using (XQt8427 instance = new XQt8427())
+			{
+				instance.SetFieldData(XQt8427InBlock.BlockName, XQt8427InBlock.F.fo_gbn, 0, fo_gbn.ToString()); // char 1
+				instance.SetFieldData(XQt8427InBlock.BlockName, XQt8427InBlock.F.yyyy, 0, yyyy); // char 4
+				instance.SetFieldData(XQt8427InBlock.BlockName, XQt8427InBlock.F.mm, 0, mm); // char 2
+				instance.SetFieldData(XQt8427InBlock.BlockName, XQt8427InBlock.F.cp_gbn, 0, cp_gbn.ToString()); // char 1
+				instance.SetFieldData(XQt8427InBlock.BlockName, XQt8427InBlock.F.actprice, 0, actprice.ToString("000000.00")); // float 6.2
+				instance.SetFieldData(XQt8427InBlock.BlockName, XQt8427InBlock.F.focode, 0, focode); // char 8
+				instance.SetFieldData(XQt8427InBlock.BlockName, XQt8427InBlock.F.dt_gbn, 0, dt_gbn.ToString()); // char 1
+				instance.SetFieldData(XQt8427InBlock.BlockName, XQt8427InBlock.F.min_term, 0, min_term); // char 2
+				instance.SetFieldData(XQt8427InBlock.BlockName, XQt8427InBlock.F.date, 0, date); // char 8
+				instance.SetFieldData(XQt8427InBlock.BlockName, XQt8427InBlock.F.time, 0, time); // char 6
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8427InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

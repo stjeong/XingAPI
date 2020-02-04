@@ -2682,7 +2682,8 @@ namespace XingAPINet
 		public XQCDPCQ04700() : base("CDPCQ04700") { }
 
 
-		public bool SetFields(XQCDPCQ04700InBlock1 block)
+
+		public bool SetBlock(XQCDPCQ04700InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

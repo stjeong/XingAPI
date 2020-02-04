@@ -608,7 +608,25 @@ namespace XingAPINet
 		public XQMMDAQ91200() : base("MMDAQ91200") { }
 
 
-		public bool SetFields(XQMMDAQ91200InBlock1 block)
+		public static XQMMDAQ91200OutBlock2[] Get(long RecCnt = default,string IsuLgclssCode = default,string IsuMdclssCode = default)
+		{
+			using (XQMMDAQ91200 instance = new XQMMDAQ91200())
+			{
+				instance.SetFieldData(XQMMDAQ91200InBlock1.BlockName, XQMMDAQ91200InBlock1.F.RecCnt, 0, RecCnt.ToString("d5")); // long 5
+				instance.SetFieldData(XQMMDAQ91200InBlock1.BlockName, XQMMDAQ91200InBlock1.F.IsuLgclssCode, 0, IsuLgclssCode); // char 2
+				instance.SetFieldData(XQMMDAQ91200InBlock1.BlockName, XQMMDAQ91200InBlock1.F.IsuMdclssCode, 0, IsuMdclssCode); // char 2
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock2s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQMMDAQ91200InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

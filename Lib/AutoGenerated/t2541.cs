@@ -1776,7 +1776,30 @@ namespace XingAPINet
 		public XQt2541() : base("t2541") { }
 
 
-		public bool SetFields(XQt2541InBlock block)
+		public static XQt2541OutBlock1[] Get(string eitem = default,char market = default,string upcode = default,char gubun1 = default,char gubun2 = default,string cts_time = default,long cts_idx = default,int cnt = default)
+		{
+			using (XQt2541 instance = new XQt2541())
+			{
+				instance.SetFieldData(XQt2541InBlock.BlockName, XQt2541InBlock.F.eitem, 0, eitem); // char 2
+				instance.SetFieldData(XQt2541InBlock.BlockName, XQt2541InBlock.F.market, 0, market.ToString()); // char 1
+				instance.SetFieldData(XQt2541InBlock.BlockName, XQt2541InBlock.F.upcode, 0, upcode); // char 3
+				instance.SetFieldData(XQt2541InBlock.BlockName, XQt2541InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+				instance.SetFieldData(XQt2541InBlock.BlockName, XQt2541InBlock.F.gubun2, 0, gubun2.ToString()); // char 1
+				instance.SetFieldData(XQt2541InBlock.BlockName, XQt2541InBlock.F.cts_time, 0, cts_time); // char 8
+				instance.SetFieldData(XQt2541InBlock.BlockName, XQt2541InBlock.F.cts_idx, 0, cts_idx.ToString("d4")); // long 4
+				instance.SetFieldData(XQt2541InBlock.BlockName, XQt2541InBlock.F.cnt, 0, cnt.ToString("d4")); // int 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2541InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

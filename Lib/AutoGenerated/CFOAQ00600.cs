@@ -1289,7 +1289,8 @@ namespace XingAPINet
 		public XQCFOAQ00600() : base("CFOAQ00600") { }
 
 
-		public bool SetFields(XQCFOAQ00600InBlock1 block)
+
+		public bool SetBlock(XQCFOAQ00600InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

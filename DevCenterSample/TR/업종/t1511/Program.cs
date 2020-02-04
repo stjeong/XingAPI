@@ -8,15 +8,21 @@ namespace t1511
 {
     class Program
     {
-        static void Main(string[] _)
+        static void Main(string[] args)
         {
+            bool useDemoServer = true;
             Program pg = new Program();
-            pg.Main();
+
+            if (args.Length == 1 && args[0] == "hts")
+            {
+                useDemoServer = false;
+            }
+
+            pg.Main(useDemoServer);
         }
 
-        void Main()
+        void Main(bool useDemoServer)
         {
-            bool useDemoServer = false;
             LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
@@ -27,22 +33,30 @@ namespace t1511
                     return;
                 }
 
-                using (XQt1511 query = new XQt1511())
+                if (useDemoServer)
                 {
-                    query.SetFieldData(XQt1511InBlock.BlockName, XQt1511InBlock.F.upcode, 0, "001");
-                    if (query.Request() < 0)
+                    var outBlock = XQt1511.Get("002");
+                    outBlock?.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+                }
+                else
+                {
+                    using (XQt1511 query = new XQt1511())
                     {
-                        Console.WriteLine("Failed to send request");
-                    }
+                        query.SetFieldData(XQt1511InBlock.BlockName, XQt1511InBlock.F.upcode, 0, "001");
+                        if (query.Request() < 0)
+                        {
+                            Console.WriteLine("Failed to send request");
+                        }
 
-                    XQt1511OutBlock outBlock = query.GetBlock();
-                    if (outBlock.IsValidData == true)
-                    {
-                        outBlock.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                        XQt1511OutBlock outBlock = query.GetBlock();
+                        if (outBlock.IsValidData == true)
+                        {
+                            outBlock.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                        }
                     }
                 }
             }

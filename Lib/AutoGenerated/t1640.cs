@@ -496,7 +496,27 @@ namespace XingAPINet
 		public XQt1640() : base("t1640") { }
 
 
-		public bool SetFields(XQt1640InBlock block)
+		public static XQt1640OutBlock Get(string gubun = default)
+		{
+			using (XQt1640 instance = new XQt1640())
+			{
+				instance.SetFieldData(XQt1640InBlock.BlockName, XQt1640InBlock.F.gubun, 0, gubun); // char 2
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock();
+				if (outBlock.IsValidData == false)
+				{
+					return null;
+				}
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1640InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

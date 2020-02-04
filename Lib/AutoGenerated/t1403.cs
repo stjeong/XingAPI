@@ -658,7 +658,26 @@ namespace XingAPINet
 		public XQt1403() : base("t1403") { }
 
 
-		public bool SetFields(XQt1403InBlock block)
+		public static XQt1403OutBlock1[] Get(char gubun = default,string styymm = default,string enyymm = default,long idx = default)
+		{
+			using (XQt1403 instance = new XQt1403())
+			{
+				instance.SetFieldData(XQt1403InBlock.BlockName, XQt1403InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1403InBlock.BlockName, XQt1403InBlock.F.styymm, 0, styymm); // char 6
+				instance.SetFieldData(XQt1403InBlock.BlockName, XQt1403InBlock.F.enyymm, 0, enyymm); // char 6
+				instance.SetFieldData(XQt1403InBlock.BlockName, XQt1403InBlock.F.idx, 0, idx.ToString("d4")); // long 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1403InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

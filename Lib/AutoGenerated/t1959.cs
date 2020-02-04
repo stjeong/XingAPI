@@ -585,7 +585,23 @@ namespace XingAPINet
 		public XQt1959() : base("t1959") { }
 
 
-		public bool SetFields(XQt1959InBlock block)
+		public static XQt1959OutBlock1[] Get(string shcode = default)
+		{
+			using (XQt1959 instance = new XQt1959())
+			{
+				instance.SetFieldData(XQt1959InBlock.BlockName, XQt1959InBlock.F.shcode, 0, shcode); // char 6
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1959InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

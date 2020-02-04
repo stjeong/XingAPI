@@ -538,7 +538,27 @@ namespace XingAPINet
 		public XQt1866() : base("t1866") { }
 
 
-		public bool SetFields(XQt1866InBlock block)
+		public static XQt1866OutBlock1[] Get(string user_id = default,char gb = default,string group_name = default,char cont = default,string cont_key = default)
+		{
+			using (XQt1866 instance = new XQt1866())
+			{
+				instance.SetFieldData(XQt1866InBlock.BlockName, XQt1866InBlock.F.user_id, 0, user_id); // char 8
+				instance.SetFieldData(XQt1866InBlock.BlockName, XQt1866InBlock.F.gb, 0, gb.ToString()); // char 1
+				instance.SetFieldData(XQt1866InBlock.BlockName, XQt1866InBlock.F.group_name, 0, group_name); // char 40
+				instance.SetFieldData(XQt1866InBlock.BlockName, XQt1866InBlock.F.cont, 0, cont.ToString()); // char 1
+				instance.SetFieldData(XQt1866InBlock.BlockName, XQt1866InBlock.F.cont_key, 0, cont_key); // char 40
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1866InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

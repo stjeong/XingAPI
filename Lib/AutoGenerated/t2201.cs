@@ -827,7 +827,27 @@ namespace XingAPINet
 		public XQt2201() : base("t2201") { }
 
 
-		public bool SetFields(XQt2201InBlock block)
+		public static XQt2201OutBlock1[] Get(string focode = default,long cvolume = default,string stime = default,string etime = default,string cts_time = default)
+		{
+			using (XQt2201 instance = new XQt2201())
+			{
+				instance.SetFieldData(XQt2201InBlock.BlockName, XQt2201InBlock.F.focode, 0, focode); // char 8
+				instance.SetFieldData(XQt2201InBlock.BlockName, XQt2201InBlock.F.cvolume, 0, cvolume.ToString("d12")); // long 12
+				instance.SetFieldData(XQt2201InBlock.BlockName, XQt2201InBlock.F.stime, 0, stime); // char 4
+				instance.SetFieldData(XQt2201InBlock.BlockName, XQt2201InBlock.F.etime, 0, etime); // char 4
+				instance.SetFieldData(XQt2201InBlock.BlockName, XQt2201InBlock.F.cts_time, 0, cts_time); // char 10
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2201InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

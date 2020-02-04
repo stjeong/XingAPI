@@ -416,7 +416,7 @@ namespace XingAPINet
 		public XRBM_() : base("BM_") { }
 
 
-		public bool SetFields(XRBM_InBlock block)
+		public bool SetBlock(XRBM_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

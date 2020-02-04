@@ -1691,7 +1691,7 @@ namespace XingAPINet
 		public XRPM_() : base("PM_") { }
 
 
-		public bool SetFields(XRPM_InBlock block)
+		public bool SetBlock(XRPM_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

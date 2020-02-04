@@ -1048,7 +1048,8 @@ namespace XingAPINet
 		public XQt3320() : base("t3320") { }
 
 
-		public bool SetFields(XQt3320InBlock block)
+
+		public bool SetBlock(XQt3320InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -518,7 +518,7 @@ namespace XingAPINet
 		public XROMG() : base("OMG") { }
 
 
-		public bool SetFields(XROMGInBlock block)
+		public bool SetBlock(XROMGInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

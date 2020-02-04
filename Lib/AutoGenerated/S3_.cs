@@ -671,7 +671,7 @@ namespace XingAPINet
 		public XRS3_() : base("S3_") { }
 
 
-		public bool SetFields(XRS3_InBlock block)
+		public bool SetBlock(XRS3_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

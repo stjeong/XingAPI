@@ -687,7 +687,31 @@ namespace XingAPINet
 		public XQt1452() : base("t1452") { }
 
 
-		public bool SetFields(XQt1452InBlock block)
+		public static XQt1452OutBlock1[] Get(char gubun = default,char jnilgubun = default,long sdiff = default,long ediff = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default)
+		{
+			using (XQt1452 instance = new XQt1452())
+			{
+				instance.SetFieldData(XQt1452InBlock.BlockName, XQt1452InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1452InBlock.BlockName, XQt1452InBlock.F.jnilgubun, 0, jnilgubun.ToString()); // char 1
+				instance.SetFieldData(XQt1452InBlock.BlockName, XQt1452InBlock.F.sdiff, 0, sdiff.ToString("d3")); // long 3
+				instance.SetFieldData(XQt1452InBlock.BlockName, XQt1452InBlock.F.ediff, 0, ediff.ToString("d3")); // long 3
+				instance.SetFieldData(XQt1452InBlock.BlockName, XQt1452InBlock.F.jc_num, 0, jc_num.ToString("d12")); // long 12
+				instance.SetFieldData(XQt1452InBlock.BlockName, XQt1452InBlock.F.sprice, 0, sprice.ToString("d8")); // long 8
+				instance.SetFieldData(XQt1452InBlock.BlockName, XQt1452InBlock.F.eprice, 0, eprice.ToString("d8")); // long 8
+				instance.SetFieldData(XQt1452InBlock.BlockName, XQt1452InBlock.F.volume, 0, volume.ToString("d12")); // long 12
+				instance.SetFieldData(XQt1452InBlock.BlockName, XQt1452InBlock.F.idx, 0, idx.ToString("d4")); // long 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1452InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

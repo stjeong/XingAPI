@@ -725,7 +725,27 @@ namespace XingAPINet
 		public XQt2421() : base("t2421") { }
 
 
-		public bool SetFields(XQt2421InBlock block)
+		public static XQt2421OutBlock1[] Get(string focode = default,char bdgubun = default,int nmin = default,char tcgubun = default,int cnt = default)
+		{
+			using (XQt2421 instance = new XQt2421())
+			{
+				instance.SetFieldData(XQt2421InBlock.BlockName, XQt2421InBlock.F.focode, 0, focode); // char 8
+				instance.SetFieldData(XQt2421InBlock.BlockName, XQt2421InBlock.F.bdgubun, 0, bdgubun.ToString()); // char 1
+				instance.SetFieldData(XQt2421InBlock.BlockName, XQt2421InBlock.F.nmin, 0, nmin.ToString("d3")); // int 3
+				instance.SetFieldData(XQt2421InBlock.BlockName, XQt2421InBlock.F.tcgubun, 0, tcgubun.ToString()); // char 1
+				instance.SetFieldData(XQt2421InBlock.BlockName, XQt2421InBlock.F.cnt, 0, cnt.ToString("d4")); // int 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2421InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

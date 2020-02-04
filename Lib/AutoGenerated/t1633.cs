@@ -756,7 +756,30 @@ namespace XingAPINet
 		public XQt1633() : base("t1633") { }
 
 
-		public bool SetFields(XQt1633InBlock block)
+		public static XQt1633OutBlock1[] Get(char gubun = default,char gubun1 = default,char gubun2 = default,char gubun3 = default,string fdate = default,string tdate = default,char gubun4 = default,string date = default)
+		{
+			using (XQt1633 instance = new XQt1633())
+			{
+				instance.SetFieldData(XQt1633InBlock.BlockName, XQt1633InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1633InBlock.BlockName, XQt1633InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+				instance.SetFieldData(XQt1633InBlock.BlockName, XQt1633InBlock.F.gubun2, 0, gubun2.ToString()); // char 1
+				instance.SetFieldData(XQt1633InBlock.BlockName, XQt1633InBlock.F.gubun3, 0, gubun3.ToString()); // char 1
+				instance.SetFieldData(XQt1633InBlock.BlockName, XQt1633InBlock.F.fdate, 0, fdate); // char 8
+				instance.SetFieldData(XQt1633InBlock.BlockName, XQt1633InBlock.F.tdate, 0, tdate); // char 8
+				instance.SetFieldData(XQt1633InBlock.BlockName, XQt1633InBlock.F.gubun4, 0, gubun4.ToString()); // char 1
+				instance.SetFieldData(XQt1633InBlock.BlockName, XQt1633InBlock.F.date, 0, date); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1633InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

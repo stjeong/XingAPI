@@ -939,7 +939,26 @@ namespace XingAPINet
 		public XQt1717() : base("t1717") { }
 
 
-		public bool SetFields(XQt1717InBlock block)
+		public static XQt1717OutBlock[] Get(string shcode = default,char gubun = default,string fromdt = default,string todt = default)
+		{
+			using (XQt1717 instance = new XQt1717())
+			{
+				instance.SetFieldData(XQt1717InBlock.BlockName, XQt1717InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1717InBlock.BlockName, XQt1717InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1717InBlock.BlockName, XQt1717InBlock.F.fromdt, 0, fromdt); // char 8
+				instance.SetFieldData(XQt1717InBlock.BlockName, XQt1717InBlock.F.todt, 0, todt); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1717InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

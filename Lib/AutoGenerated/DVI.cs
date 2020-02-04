@@ -348,7 +348,7 @@ namespace XingAPINet
 		public XRDVI() : base("DVI") { }
 
 
-		public bool SetFields(XRDVIInBlock block)
+		public bool SetBlock(XRDVIInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

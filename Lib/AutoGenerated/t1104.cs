@@ -591,7 +591,8 @@ namespace XingAPINet
 		public XQt1104() : base("t1104") { }
 
 
-		public bool SetFields(XQt1104InBlock block)
+
+		public bool SetBlock(XQt1104InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{
@@ -604,7 +605,7 @@ namespace XingAPINet
 			return true;
 		}
 
-		public bool SetFields(XQt1104InBlock1 block)
+		public bool SetBlock(XQt1104InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

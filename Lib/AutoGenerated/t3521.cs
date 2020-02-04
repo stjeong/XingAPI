@@ -410,7 +410,28 @@ namespace XingAPINet
 		public XQt3521() : base("t3521") { }
 
 
-		public bool SetFields(XQt3521InBlock block)
+		public static XQt3521OutBlock Get(char kind = default,string symbol = default)
+		{
+			using (XQt3521 instance = new XQt3521())
+			{
+				instance.SetFieldData(XQt3521InBlock.BlockName, XQt3521InBlock.F.kind, 0, kind.ToString()); // char 1
+				instance.SetFieldData(XQt3521InBlock.BlockName, XQt3521InBlock.F.symbol, 0, symbol); // char 16
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock();
+				if (outBlock.IsValidData == false)
+				{
+					return null;
+				}
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt3521InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

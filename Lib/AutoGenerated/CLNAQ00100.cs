@@ -1038,7 +1038,8 @@ namespace XingAPINet
 		public XQCLNAQ00100() : base("CLNAQ00100") { }
 
 
-		public bool SetFields(XQCLNAQ00100InBlock1 block)
+
+		public bool SetBlock(XQCLNAQ00100InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

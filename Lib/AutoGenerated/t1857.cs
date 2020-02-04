@@ -591,7 +591,25 @@ namespace XingAPINet
 		public XQt1857() : base("t1857") { }
 
 
-		public bool SetFields(XQt1857InBlock block)
+		public static XQt1857OutBlock1[] Get(char sRealFlag = default,char sSearchFlag = default,string query_index = default)
+		{
+			using (XQt1857 instance = new XQt1857())
+			{
+				instance.SetFieldData(XQt1857InBlock.BlockName, XQt1857InBlock.F.sRealFlag, 0, sRealFlag.ToString()); // char 1
+				instance.SetFieldData(XQt1857InBlock.BlockName, XQt1857InBlock.F.sSearchFlag, 0, sSearchFlag.ToString()); // char 1
+				instance.SetFieldData(XQt1857InBlock.BlockName, XQt1857InBlock.F.query_index, 0, query_index); // char 256
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1857InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

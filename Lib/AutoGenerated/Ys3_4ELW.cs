@@ -416,7 +416,7 @@ namespace XingAPINet
 		public XRYs3() : base("Ys3") { }
 
 
-		public bool SetFields(XRYs3InBlock block)
+		public bool SetBlock(XRYs3InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

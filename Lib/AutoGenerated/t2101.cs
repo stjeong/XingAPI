@@ -1448,7 +1448,27 @@ namespace XingAPINet
 		public XQt2101() : base("t2101") { }
 
 
-		public bool SetFields(XQt2101InBlock block)
+		public static XQt2101OutBlock Get(string focode = default)
+		{
+			using (XQt2101 instance = new XQt2101())
+			{
+				instance.SetFieldData(XQt2101InBlock.BlockName, XQt2101InBlock.F.focode, 0, focode); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock();
+				if (outBlock.IsValidData == false)
+				{
+					return null;
+				}
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2101InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

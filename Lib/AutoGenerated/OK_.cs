@@ -1606,7 +1606,7 @@ namespace XingAPINet
 		public XROK_() : base("OK_") { }
 
 
-		public bool SetFields(XROK_InBlock block)
+		public bool SetBlock(XROK_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

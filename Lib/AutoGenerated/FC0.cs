@@ -722,7 +722,7 @@ namespace XingAPINet
 		public XRFC0() : base("FC0") { }
 
 
-		public bool SetFields(XRFC0InBlock block)
+		public bool SetBlock(XRFC0InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

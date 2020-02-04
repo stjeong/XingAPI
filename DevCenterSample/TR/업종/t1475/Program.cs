@@ -8,15 +8,21 @@ namespace t1475
 {
     class Program
     {
-        static void Main(string[] _)
-        {
-            Program pg = new Program();
-            pg.Main();
-        }
-
-        void Main()
+        static void Main(string[] args)
         {
             bool useDemoServer = true;
+            Program pg = new Program();
+
+            if (args.Length == 1 && args[0] == "hts")
+            {
+                useDemoServer = false;
+            }
+
+            pg.Main(useDemoServer);
+        }
+
+        void Main(bool useDemoServer)
+        {
             LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
@@ -30,45 +36,57 @@ namespace t1475
                 int pageSize = 10;
                 int totalSize = 30;
 
-                using (XQt1475 query = new XQt1475())
+                if (useDemoServer)
                 {
-                    XQt1475InBlock inBlock = new XQt1475InBlock
+                    var items = XQt1475.Get("078020", datacnt: totalSize);
+
+                    foreach (var item in items)
                     {
-                        shcode = "078020",
-                        datacnt = pageSize,
-                    };
-
-                    query.SetFields(inBlock);
-
-                    bool nextPage = false;
-
-                    while (totalSize > 0)
+                        item.Dump(Console.Out, DumpOutputType.Inline80Cols);
+                    }
+                }
+                else
+                {
+                    using (XQt1475 query = new XQt1475())
                     {
-                        if (query.Request(nextPage) < 0)
+                        XQt1475InBlock inBlock = new XQt1475InBlock
                         {
-                            Console.WriteLine("Failed to send request");
-                        }
+                            shcode = "078020",
+                            datacnt = pageSize,
+                        };
 
-                        XQt1475OutBlock outBlock = query.GetBlock();
-                        if (outBlock.IsValidData == true)
+                        query.SetBlock(inBlock);
+
+                        bool nextPage = false;
+
+                        while (totalSize > 0)
                         {
-                            outBlock.Dump(Console.Out, DumpOutputType.Inline);
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
-                        }
+                            if (query.Request(nextPage) < 0)
+                            {
+                                Console.WriteLine("Failed to send request");
+                            }
 
-                        foreach (var item in query.GetBlock1s())
-                        {
-                            item.Dump(Console.Out, DumpOutputType.Inline);
-                            totalSize--;
+                            XQt1475OutBlock outBlock = query.GetBlock();
+                            if (outBlock.IsValidData == true)
+                            {
+                                outBlock.Dump(Console.Out, DumpOutputType.Inline);
+                            }
+                            else
+                            {
+                                Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                            }
+
+                            foreach (var item in query.GetBlock1s())
+                            {
+                                item.Dump(Console.Out, DumpOutputType.Inline);
+                                totalSize--;
+                            }
+
+                            inBlock.CopyValueFromBlock(outBlock);
+                            query.SetBlock(inBlock);
+
+                            nextPage = true;
                         }
-
-                        inBlock.CopyValueFromBlock(outBlock);
-                        query.SetFields(inBlock);
-
-                        nextPage = true;
                     }
                 }
             }

@@ -859,7 +859,29 @@ namespace XingAPINet
 		public XQt8419() : base("t8419") { }
 
 
-		public bool SetFields(XQt8419InBlock block)
+		public static XQt8419OutBlock1[] Get(string shcode = default,char gubun = default,long qrycnt = default,string sdate = default,string edate = default,string cts_date = default,char comp_yn = default)
+		{
+			using (XQt8419 instance = new XQt8419())
+			{
+				instance.SetFieldData(XQt8419InBlock.BlockName, XQt8419InBlock.F.shcode, 0, shcode); // char 3
+				instance.SetFieldData(XQt8419InBlock.BlockName, XQt8419InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt8419InBlock.BlockName, XQt8419InBlock.F.qrycnt, 0, qrycnt.ToString("d4")); // long 4
+				instance.SetFieldData(XQt8419InBlock.BlockName, XQt8419InBlock.F.sdate, 0, sdate); // char 8
+				instance.SetFieldData(XQt8419InBlock.BlockName, XQt8419InBlock.F.edate, 0, edate); // char 8
+				instance.SetFieldData(XQt8419InBlock.BlockName, XQt8419InBlock.F.cts_date, 0, cts_date); // char 8
+				instance.SetFieldData(XQt8419InBlock.BlockName, XQt8419InBlock.F.comp_yn, 0, comp_yn.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8419InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

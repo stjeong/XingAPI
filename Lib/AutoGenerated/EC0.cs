@@ -739,7 +739,7 @@ namespace XingAPINet
 		public XREC0() : base("EC0") { }
 
 
-		public bool SetFields(XREC0InBlock block)
+		public bool SetBlock(XREC0InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

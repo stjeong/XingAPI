@@ -313,7 +313,23 @@ namespace XingAPINet
 		public XQt1826() : base("t1826") { }
 
 
-		public bool SetFields(XQt1826InBlock block)
+		public static XQt1826OutBlock[] Get(char search_gb = default)
+		{
+			using (XQt1826 instance = new XQt1826())
+			{
+				instance.SetFieldData(XQt1826InBlock.BlockName, XQt1826InBlock.F.search_gb, 0, search_gb.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1826InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

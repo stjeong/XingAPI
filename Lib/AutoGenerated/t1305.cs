@@ -963,7 +963,27 @@ namespace XingAPINet
 		public XQt1305() : base("t1305") { }
 
 
-		public bool SetFields(XQt1305InBlock block)
+		public static XQt1305OutBlock1[] Get(string shcode = default,long dwmcode = default,string date = default,long idx = default,long cnt = default)
+		{
+			using (XQt1305 instance = new XQt1305())
+			{
+				instance.SetFieldData(XQt1305InBlock.BlockName, XQt1305InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1305InBlock.BlockName, XQt1305InBlock.F.dwmcode, 0, dwmcode.ToString("d1")); // long 1
+				instance.SetFieldData(XQt1305InBlock.BlockName, XQt1305InBlock.F.date, 0, date); // char 8
+				instance.SetFieldData(XQt1305InBlock.BlockName, XQt1305InBlock.F.idx, 0, idx.ToString("d4")); // long 4
+				instance.SetFieldData(XQt1305InBlock.BlockName, XQt1305InBlock.F.cnt, 0, cnt.ToString("d4")); // long 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1305InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

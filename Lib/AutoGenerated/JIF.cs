@@ -263,7 +263,7 @@ namespace XingAPINet
 		public XRJIF() : base("JIF") { }
 
 
-		public bool SetFields(XRJIFInBlock block)
+		public bool SetBlock(XRJIFInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

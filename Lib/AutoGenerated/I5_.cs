@@ -467,7 +467,7 @@ namespace XingAPINet
 		public XRI5_() : base("I5_") { }
 
 
-		public bool SetFields(XRI5_InBlock block)
+		public bool SetBlock(XRI5_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

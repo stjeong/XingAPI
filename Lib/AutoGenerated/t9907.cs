@@ -313,7 +313,23 @@ namespace XingAPINet
 		public XQt9907() : base("t9907") { }
 
 
-		public bool SetFields(XQt9907InBlock block)
+		public static XQt9907OutBlock1[] Get(char dummy = default)
+		{
+			using (XQt9907 instance = new XQt9907())
+			{
+				instance.SetFieldData(XQt9907InBlock.BlockName, XQt9907InBlock.F.dummy, 0, dummy.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt9907InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

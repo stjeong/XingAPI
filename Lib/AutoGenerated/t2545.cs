@@ -1251,7 +1251,28 @@ namespace XingAPINet
 		public XQt2545() : base("t2545") { }
 
 
-		public bool SetFields(XQt2545InBlock block)
+		public static XQt2545OutBlock1[] Get(string eitem = default,char sgubun = default,string upcode = default,int nmin = default,int cnt = default,char bgubun = default)
+		{
+			using (XQt2545 instance = new XQt2545())
+			{
+				instance.SetFieldData(XQt2545InBlock.BlockName, XQt2545InBlock.F.eitem, 0, eitem); // char 2
+				instance.SetFieldData(XQt2545InBlock.BlockName, XQt2545InBlock.F.sgubun, 0, sgubun.ToString()); // char 1
+				instance.SetFieldData(XQt2545InBlock.BlockName, XQt2545InBlock.F.upcode, 0, upcode); // char 3
+				instance.SetFieldData(XQt2545InBlock.BlockName, XQt2545InBlock.F.nmin, 0, nmin.ToString("d2")); // int 2
+				instance.SetFieldData(XQt2545InBlock.BlockName, XQt2545InBlock.F.cnt, 0, cnt.ToString("d3")); // int 3
+				instance.SetFieldData(XQt2545InBlock.BlockName, XQt2545InBlock.F.bgubun, 0, bgubun.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt2545InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

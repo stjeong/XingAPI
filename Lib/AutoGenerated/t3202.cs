@@ -414,7 +414,24 @@ namespace XingAPINet
 		public XQt3202() : base("t3202") { }
 
 
-		public bool SetFields(XQt3202InBlock block)
+		public static XQt3202OutBlock[] Get(string shcode = default,string date = default)
+		{
+			using (XQt3202 instance = new XQt3202())
+			{
+				instance.SetFieldData(XQt3202InBlock.BlockName, XQt3202InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt3202InBlock.BlockName, XQt3202InBlock.F.date, 0, date); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt3202InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

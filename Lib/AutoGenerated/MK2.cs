@@ -535,7 +535,7 @@ namespace XingAPINet
 		public XRMK2() : base("MK2") { }
 
 
-		public bool SetFields(XRMK2InBlock block)
+		public bool SetBlock(XRMK2InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

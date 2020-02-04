@@ -705,7 +705,30 @@ namespace XingAPINet
 		public XQt1463() : base("t1463") { }
 
 
-		public bool SetFields(XQt1463InBlock block)
+		public static XQt1463OutBlock1[] Get(char gubun = default,char jnilgubun = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default,long jc_num2 = default)
+		{
+			using (XQt1463 instance = new XQt1463())
+			{
+				instance.SetFieldData(XQt1463InBlock.BlockName, XQt1463InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1463InBlock.BlockName, XQt1463InBlock.F.jnilgubun, 0, jnilgubun.ToString()); // char 1
+				instance.SetFieldData(XQt1463InBlock.BlockName, XQt1463InBlock.F.jc_num, 0, jc_num.ToString("d12")); // long 12
+				instance.SetFieldData(XQt1463InBlock.BlockName, XQt1463InBlock.F.sprice, 0, sprice.ToString("d8")); // long 8
+				instance.SetFieldData(XQt1463InBlock.BlockName, XQt1463InBlock.F.eprice, 0, eprice.ToString("d8")); // long 8
+				instance.SetFieldData(XQt1463InBlock.BlockName, XQt1463InBlock.F.volume, 0, volume.ToString("d12")); // long 12
+				instance.SetFieldData(XQt1463InBlock.BlockName, XQt1463InBlock.F.idx, 0, idx.ToString("d4")); // long 4
+				instance.SetFieldData(XQt1463InBlock.BlockName, XQt1463InBlock.F.jc_num2, 0, jc_num2.ToString("d12")); // long 12
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1463InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

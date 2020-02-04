@@ -60,7 +60,7 @@ namespace ConsoleApp1
                     XQt1101InBlock inBlock = new XQt1101InBlock();
                     inBlock.shcode = shcode;
 
-                    if (query.SetFields(inBlock) == false)
+                    if (query.SetBlock(inBlock) == false)
                     {
                         Console.WriteLine("Failed to verify data: " + XQt1101InBlock.BlockName);
                         return;

@@ -348,7 +348,7 @@ namespace XingAPINet
 		public XRYC3() : base("YC3") { }
 
 
-		public bool SetFields(XRYC3InBlock block)
+		public bool SetBlock(XRYC3InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

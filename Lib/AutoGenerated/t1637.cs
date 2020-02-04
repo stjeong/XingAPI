@@ -707,7 +707,28 @@ namespace XingAPINet
 		public XQt1637() : base("t1637") { }
 
 
-		public bool SetFields(XQt1637InBlock block)
+		public static XQt1637OutBlock1[] Get(char gubun1 = default,char gubun2 = default,string shcode = default,string date = default,string time = default,long cts_idx = default)
+		{
+			using (XQt1637 instance = new XQt1637())
+			{
+				instance.SetFieldData(XQt1637InBlock.BlockName, XQt1637InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+				instance.SetFieldData(XQt1637InBlock.BlockName, XQt1637InBlock.F.gubun2, 0, gubun2.ToString()); // char 1
+				instance.SetFieldData(XQt1637InBlock.BlockName, XQt1637InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1637InBlock.BlockName, XQt1637InBlock.F.date, 0, date); // char 8
+				instance.SetFieldData(XQt1637InBlock.BlockName, XQt1637InBlock.F.time, 0, time); // char 6
+				instance.SetFieldData(XQt1637InBlock.BlockName, XQt1637InBlock.F.cts_idx, 0, cts_idx.ToString("d4")); // long 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1637InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

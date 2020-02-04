@@ -2232,7 +2232,7 @@ namespace XingAPINet
 		public XREU0() : base("EU0") { }
 
 
-		public bool SetFields(XREU0InBlock block)
+		public bool SetBlock(XREU0InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

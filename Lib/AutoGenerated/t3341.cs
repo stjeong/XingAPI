@@ -692,7 +692,26 @@ namespace XingAPINet
 		public XQt3341() : base("t3341") { }
 
 
-		public bool SetFields(XQt3341InBlock block)
+		public static XQt3341OutBlock1[] Get(char gubun = default,char gubun1 = default,char gubun2 = default,long idx = default)
+		{
+			using (XQt3341 instance = new XQt3341())
+			{
+				instance.SetFieldData(XQt3341InBlock.BlockName, XQt3341InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt3341InBlock.BlockName, XQt3341InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+				instance.SetFieldData(XQt3341InBlock.BlockName, XQt3341InBlock.F.gubun2, 0, gubun2.ToString()); // char 1
+				instance.SetFieldData(XQt3341InBlock.BlockName, XQt3341InBlock.F.idx, 0, idx.ToString("d4")); // long 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt3341InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -549,7 +549,25 @@ namespace XingAPINet
 		public XQt1638() : base("t1638") { }
 
 
-		public bool SetFields(XQt1638InBlock block)
+		public static XQt1638OutBlock[] Get(char gubun1 = default,string shcode = default,char gubun2 = default)
+		{
+			using (XQt1638 instance = new XQt1638())
+			{
+				instance.SetFieldData(XQt1638InBlock.BlockName, XQt1638InBlock.F.gubun1, 0, gubun1.ToString()); // char 1
+				instance.SetFieldData(XQt1638InBlock.BlockName, XQt1638InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1638InBlock.BlockName, XQt1638InBlock.F.gubun2, 0, gubun2.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1638InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

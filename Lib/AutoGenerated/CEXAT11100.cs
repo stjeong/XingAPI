@@ -804,7 +804,8 @@ namespace XingAPINet
 		public XQCEXAT11100() : base("CEXAT11100") { }
 
 
-		public bool SetFields(XQCEXAT11100InBlock1 block)
+
+		public bool SetBlock(XQCEXAT11100InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

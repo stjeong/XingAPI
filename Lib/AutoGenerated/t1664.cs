@@ -582,7 +582,26 @@ namespace XingAPINet
 		public XQt1664() : base("t1664") { }
 
 
-		public bool SetFields(XQt1664InBlock block)
+		public static XQt1664OutBlock1[] Get(char mgubun = default,char vagubun = default,char bdgubun = default,int cnt = default)
+		{
+			using (XQt1664 instance = new XQt1664())
+			{
+				instance.SetFieldData(XQt1664InBlock.BlockName, XQt1664InBlock.F.mgubun, 0, mgubun.ToString()); // char 1
+				instance.SetFieldData(XQt1664InBlock.BlockName, XQt1664InBlock.F.vagubun, 0, vagubun.ToString()); // char 1
+				instance.SetFieldData(XQt1664InBlock.BlockName, XQt1664InBlock.F.bdgubun, 0, bdgubun.ToString()); // char 1
+				instance.SetFieldData(XQt1664InBlock.BlockName, XQt1664InBlock.F.cnt, 0, cnt.ToString("d3")); // int 3
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1664InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

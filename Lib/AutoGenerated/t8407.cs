@@ -669,7 +669,24 @@ namespace XingAPINet
 		public XQt8407() : base("t8407") { }
 
 
-		public bool SetFields(XQt8407InBlock block)
+		public static XQt8407OutBlock1[] Get(long nrec = default,string shcode = default)
+		{
+			using (XQt8407 instance = new XQt8407())
+			{
+				instance.SetFieldData(XQt8407InBlock.BlockName, XQt8407InBlock.F.nrec, 0, nrec.ToString("d3")); // long 3
+				instance.SetFieldData(XQt8407InBlock.BlockName, XQt8407InBlock.F.shcode, 0, shcode); // char 300
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8407InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

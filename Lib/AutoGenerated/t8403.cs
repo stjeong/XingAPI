@@ -1533,7 +1533,27 @@ namespace XingAPINet
 		public XQt8403() : base("t8403") { }
 
 
-		public bool SetFields(XQt8403InBlock block)
+		public static XQt8403OutBlock Get(string shcode = default)
+		{
+			using (XQt8403 instance = new XQt8403())
+			{
+				instance.SetFieldData(XQt8403InBlock.BlockName, XQt8403InBlock.F.shcode, 0, shcode); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock();
+				if (outBlock.IsValidData == false)
+				{
+					return null;
+				}
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8403InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

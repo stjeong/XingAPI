@@ -675,7 +675,26 @@ namespace XingAPINet
 		public XQt1809() : base("t1809") { }
 
 
-		public bool SetFields(XQt1809InBlock block)
+		public static XQt1809OutBlock1[] Get(char gubun = default,char jmGb = default,string jmcode = default,string cts = default)
+		{
+			using (XQt1809 instance = new XQt1809())
+			{
+				instance.SetFieldData(XQt1809InBlock.BlockName, XQt1809InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1809InBlock.BlockName, XQt1809InBlock.F.jmGb, 0, jmGb.ToString()); // char 1
+				instance.SetFieldData(XQt1809InBlock.BlockName, XQt1809InBlock.F.jmcode, 0, jmcode); // char 6
+				instance.SetFieldData(XQt1809InBlock.BlockName, XQt1809InBlock.F.cts, 0, cts); // char 30
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1809InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

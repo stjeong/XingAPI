@@ -599,7 +599,26 @@ namespace XingAPINet
 		public XQt1308() : base("t1308") { }
 
 
-		public bool SetFields(XQt1308InBlock block)
+		public static XQt1308OutBlock1[] Get(string shcode = default,string starttime = default,string endtime = default,string bun_term = default)
+		{
+			using (XQt1308 instance = new XQt1308())
+			{
+				instance.SetFieldData(XQt1308InBlock.BlockName, XQt1308InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1308InBlock.BlockName, XQt1308InBlock.F.starttime, 0, starttime); // char 4
+				instance.SetFieldData(XQt1308InBlock.BlockName, XQt1308InBlock.F.endtime, 0, endtime); // char 4
+				instance.SetFieldData(XQt1308InBlock.BlockName, XQt1308InBlock.F.bun_term, 0, bun_term); // char 2
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1308InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

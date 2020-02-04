@@ -501,7 +501,7 @@ namespace XingAPINet
 		public XRESN() : base("ESN") { }
 
 
-		public bool SetFields(XRESNInBlock block)
+		public bool SetBlock(XRESNInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -448,7 +448,24 @@ namespace XingAPINet
 		public XQt1533() : base("t1533") { }
 
 
-		public bool SetFields(XQt1533InBlock block)
+		public static XQt1533OutBlock[] Get(char gubun = default,long chgdate = default)
+		{
+			using (XQt1533 instance = new XQt1533())
+			{
+				instance.SetFieldData(XQt1533InBlock.BlockName, XQt1533InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1533InBlock.BlockName, XQt1533InBlock.F.chgdate, 0, chgdate.ToString("d2")); // long 2
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1533InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

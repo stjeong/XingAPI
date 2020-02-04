@@ -875,7 +875,7 @@ namespace XingAPINet
 		public XROH0() : base("OH0") { }
 
 
-		public bool SetFields(XROH0InBlock block)
+		public bool SetBlock(XROH0InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

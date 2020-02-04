@@ -667,7 +667,26 @@ namespace XingAPINet
 		public XQt8406() : base("t8406") { }
 
 
-		public bool SetFields(XQt8406InBlock block)
+		public static XQt8406OutBlock1[] Get(string focode = default,char cgubun = default,int bgubun = default,int cnt = default)
+		{
+			using (XQt8406 instance = new XQt8406())
+			{
+				instance.SetFieldData(XQt8406InBlock.BlockName, XQt8406InBlock.F.focode, 0, focode); // char 8
+				instance.SetFieldData(XQt8406InBlock.BlockName, XQt8406InBlock.F.cgubun, 0, cgubun.ToString()); // char 1
+				instance.SetFieldData(XQt8406InBlock.BlockName, XQt8406InBlock.F.bgubun, 0, bgubun.ToString("d3")); // int 3
+				instance.SetFieldData(XQt8406InBlock.BlockName, XQt8406InBlock.F.cnt, 0, cnt.ToString("d3")); // int 3
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8406InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

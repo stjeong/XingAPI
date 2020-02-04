@@ -1108,7 +1108,27 @@ namespace XingAPINet
 		public XQt1972() : base("t1972") { }
 
 
-		public bool SetFields(XQt1972InBlock block)
+		public static XQt1972OutBlock Get(string shcode = default)
+		{
+			using (XQt1972 instance = new XQt1972())
+			{
+				instance.SetFieldData(XQt1972InBlock.BlockName, XQt1972InBlock.F.shcode, 0, shcode); // char 6
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock();
+				if (outBlock.IsValidData == false)
+				{
+					return null;
+				}
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1972InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

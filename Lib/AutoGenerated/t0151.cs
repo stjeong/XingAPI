@@ -1013,7 +1013,28 @@ namespace XingAPINet
 		public XQt0151() : base("t0151") { }
 
 
-		public bool SetFields(XQt0151InBlock block)
+		public static XQt0151OutBlock1[] Get(string date = default,string accno = default,char cts_medosu = default,string cts_expcode = default,string cts_price = default,string cts_middiv = default)
+		{
+			using (XQt0151 instance = new XQt0151())
+			{
+				instance.SetFieldData(XQt0151InBlock.BlockName, XQt0151InBlock.F.date, 0, date); // char 8
+				instance.SetFieldData(XQt0151InBlock.BlockName, XQt0151InBlock.F.accno, 0, accno); // char 11
+				instance.SetFieldData(XQt0151InBlock.BlockName, XQt0151InBlock.F.cts_medosu, 0, cts_medosu.ToString()); // char 1
+				instance.SetFieldData(XQt0151InBlock.BlockName, XQt0151InBlock.F.cts_expcode, 0, cts_expcode); // char 12
+				instance.SetFieldData(XQt0151InBlock.BlockName, XQt0151InBlock.F.cts_price, 0, cts_price); // char 9
+				instance.SetFieldData(XQt0151InBlock.BlockName, XQt0151InBlock.F.cts_middiv, 0, cts_middiv); // char 2
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt0151InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

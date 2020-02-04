@@ -348,7 +348,7 @@ namespace XingAPINet
 		public XRNWS() : base("NWS") { }
 
 
-		public bool SetFields(XRNWSInBlock block)
+		public bool SetBlock(XRNWSInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

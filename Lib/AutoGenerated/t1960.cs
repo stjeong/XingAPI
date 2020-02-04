@@ -855,7 +855,33 @@ namespace XingAPINet
 		public XQt1960() : base("t1960") { }
 
 
-		public bool SetFields(XQt1960InBlock block)
+		public static XQt1960OutBlock1[] Get(char gubun = default,string ggubun = default,string itemcode = default,string lastdate = default,string exgubun = default,long sprice = default,long eprice = default,long volume = default,long sjanday = default,long ejanday = default,long idx = default)
+		{
+			using (XQt1960 instance = new XQt1960())
+			{
+				instance.SetFieldData(XQt1960InBlock.BlockName, XQt1960InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1960InBlock.BlockName, XQt1960InBlock.F.ggubun, 0, ggubun); // char 2
+				instance.SetFieldData(XQt1960InBlock.BlockName, XQt1960InBlock.F.itemcode, 0, itemcode); // char 12
+				instance.SetFieldData(XQt1960InBlock.BlockName, XQt1960InBlock.F.lastdate, 0, lastdate); // char 8
+				instance.SetFieldData(XQt1960InBlock.BlockName, XQt1960InBlock.F.exgubun, 0, exgubun); // char 6
+				instance.SetFieldData(XQt1960InBlock.BlockName, XQt1960InBlock.F.sprice, 0, sprice.ToString("d8")); // long 8
+				instance.SetFieldData(XQt1960InBlock.BlockName, XQt1960InBlock.F.eprice, 0, eprice.ToString("d8")); // long 8
+				instance.SetFieldData(XQt1960InBlock.BlockName, XQt1960InBlock.F.volume, 0, volume.ToString("d12")); // long 12
+				instance.SetFieldData(XQt1960InBlock.BlockName, XQt1960InBlock.F.sjanday, 0, sjanday.ToString("d8")); // long 8
+				instance.SetFieldData(XQt1960InBlock.BlockName, XQt1960InBlock.F.ejanday, 0, ejanday.ToString("d8")); // long 8
+				instance.SetFieldData(XQt1960InBlock.BlockName, XQt1960InBlock.F.idx, 0, idx.ToString("d4")); // long 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1960InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

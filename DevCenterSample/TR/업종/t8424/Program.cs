@@ -8,15 +8,21 @@ namespace t8424
 {
     class Program
     {
-        static void Main(string[] _)
-        {
-            Program pg = new Program();
-            pg.Main();
-        }
-
-        void Main()
+        static void Main(string[] args)
         {
             bool useDemoServer = true;
+            Program pg = new Program();
+
+            if (args.Length == 1 && args[0] == "hts")
+            {
+                useDemoServer = false;
+            }
+
+            pg.Main(useDemoServer);
+        }
+
+        void Main(bool useDemoServer)
+        {
             LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
@@ -27,20 +33,31 @@ namespace t8424
                     return;
                 }
 
-                using (XQt8424 query = new XQt8424())
+                if (useDemoServer)
                 {
-                    query.SetFieldData(XQt8424InBlock.BlockName, XQt8424InBlock.F.gubun1, 0, "");
-                    if (query.Request() < 0)
+                    var items = XQt8424.Get('2');
+                    foreach (var item in items)
                     {
-                        Console.WriteLine("Failed to send request");
+                        item.Dump(Console.Out, DumpOutputType.Inline);
                     }
-
-                    XQt8424OutBlock[] outBlocks = query.GetBlocks();
-                    foreach (var item in outBlocks)
+                }
+                else
+                {
+                    using (XQt8424 query = new XQt8424())
                     {
-                        if (item.IsValidData == true)
+                        query.SetFieldData(XQt8424InBlock.BlockName, XQt8424InBlock.F.gubun1, 0, "");
+                        if (query.Request() < 0)
                         {
-                            item.Dump(Console.Out, DumpOutputType.Inline);
+                            Console.WriteLine("Failed to send request");
+                        }
+
+                        XQt8424OutBlock[] outBlocks = query.GetBlocks();
+                        foreach (var item in outBlocks)
+                        {
+                            if (item.IsValidData == true)
+                            {
+                                item.Dump(Console.Out, DumpOutputType.Inline);
+                            }
                         }
                     }
                 }

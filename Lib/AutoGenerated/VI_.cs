@@ -348,7 +348,7 @@ namespace XingAPINet
 		public XRVI_() : base("VI_") { }
 
 
-		public bool SetFields(XRVI_InBlock block)
+		public bool SetBlock(XRVI_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

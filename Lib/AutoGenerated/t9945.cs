@@ -364,7 +364,23 @@ namespace XingAPINet
 		public XQt9945() : base("t9945") { }
 
 
-		public bool SetFields(XQt9945InBlock block)
+		public static XQt9945OutBlock[] Get(char gubun = default)
+		{
+			using (XQt9945 instance = new XQt9945())
+			{
+				instance.SetFieldData(XQt9945InBlock.BlockName, XQt9945InBlock.F.gubun, 0, gubun.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlocks();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt9945InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

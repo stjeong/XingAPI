@@ -1080,7 +1080,29 @@ namespace XingAPINet
 		public XQt0424() : base("t0424") { }
 
 
-		public bool SetFields(XQt0424InBlock block)
+		public static XQt0424OutBlock1[] Get(string accno = default,string passwd = default,char prcgb = default,char chegb = default,char dangb = default,char charge = default,string cts_expcode = default)
+		{
+			using (XQt0424 instance = new XQt0424())
+			{
+				instance.SetFieldData(XQt0424InBlock.BlockName, XQt0424InBlock.F.accno, 0, accno); // char 11
+				instance.SetFieldData(XQt0424InBlock.BlockName, XQt0424InBlock.F.passwd, 0, passwd); // char 8
+				instance.SetFieldData(XQt0424InBlock.BlockName, XQt0424InBlock.F.prcgb, 0, prcgb.ToString()); // char 1
+				instance.SetFieldData(XQt0424InBlock.BlockName, XQt0424InBlock.F.chegb, 0, chegb.ToString()); // char 1
+				instance.SetFieldData(XQt0424InBlock.BlockName, XQt0424InBlock.F.dangb, 0, dangb.ToString()); // char 1
+				instance.SetFieldData(XQt0424InBlock.BlockName, XQt0424InBlock.F.charge, 0, charge.ToString()); // char 1
+				instance.SetFieldData(XQt0424InBlock.BlockName, XQt0424InBlock.F.cts_expcode, 0, cts_expcode); // char 22
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt0424InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

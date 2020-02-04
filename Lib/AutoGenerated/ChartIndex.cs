@@ -836,7 +836,35 @@ namespace XingAPINet
 		public XQCHARTINDEX() : base("CHARTINDEX") { }
 
 
-		public bool SetFields(XQChartIndexInBlock block)
+		public static XQChartIndexOutBlock1[] Get(long indexid = default,string indexname = default,string indexparam = default,char market = default,char period = default,string shcode = default,long qrycnt = default,long ncnt = default,string sdate = default,string edate = default,char Isamend = default,char Isgab = default,char IsReal = default)
+		{
+			using (XQCHARTINDEX instance = new XQCHARTINDEX())
+			{
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.indexid, 0, indexid.ToString("d10")); // long 10
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.indexname, 0, indexname); // char 40
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.indexparam, 0, indexparam); // char 40
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.market, 0, market.ToString()); // char 1
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.period, 0, period.ToString()); // char 1
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.shcode, 0, shcode); // char 8
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.qrycnt, 0, qrycnt.ToString("d4")); // long 4
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.ncnt, 0, ncnt.ToString("d4")); // long 4
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.sdate, 0, sdate); // char 8
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.edate, 0, edate); // char 8
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.Isamend, 0, Isamend.ToString()); // char 1
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.Isgab, 0, Isgab.ToString()); // char 1
+				instance.SetFieldData(XQChartIndexInBlock.BlockName, XQChartIndexInBlock.F.IsReal, 0, IsReal.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQChartIndexInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

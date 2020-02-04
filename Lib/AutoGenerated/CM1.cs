@@ -2232,7 +2232,7 @@ namespace XingAPINet
 		public XRCM1() : base("CM1") { }
 
 
-		public bool SetFields(XRCM1InBlock block)
+		public bool SetBlock(XRCM1InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

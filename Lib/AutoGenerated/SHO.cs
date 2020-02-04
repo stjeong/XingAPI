@@ -552,7 +552,7 @@ namespace XingAPINet
 		public XRSHO() : base("SHO") { }
 
 
-		public bool SetFields(XRSHOInBlock block)
+		public bool SetBlock(XRSHOInBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

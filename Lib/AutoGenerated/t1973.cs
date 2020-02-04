@@ -558,7 +558,24 @@ namespace XingAPINet
 		public XQt1973() : base("t1973") { }
 
 
-		public bool SetFields(XQt1973InBlock block)
+		public static XQt1973OutBlock1[] Get(string shcode = default,string cts_time = default)
+		{
+			using (XQt1973 instance = new XQt1973())
+			{
+				instance.SetFieldData(XQt1973InBlock.BlockName, XQt1973InBlock.F.shcode, 0, shcode); // char 6
+				instance.SetFieldData(XQt1973InBlock.BlockName, XQt1973InBlock.F.cts_time, 0, cts_time); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1973InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

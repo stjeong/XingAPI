@@ -330,7 +330,23 @@ namespace XingAPINet
 		public XQt9905() : base("t9905") { }
 
 
-		public bool SetFields(XQt9905InBlock block)
+		public static XQt9905OutBlock1[] Get(char dummy = default)
+		{
+			using (XQt9905 instance = new XQt9905())
+			{
+				instance.SetFieldData(XQt9905InBlock.BlockName, XQt9905InBlock.F.dummy, 0, dummy.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt9905InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

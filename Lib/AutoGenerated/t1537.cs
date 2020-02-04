@@ -678,7 +678,23 @@ namespace XingAPINet
 		public XQt1537() : base("t1537") { }
 
 
-		public bool SetFields(XQt1537InBlock block)
+		public static XQt1537OutBlock1[] Get(string tmcode = default)
+		{
+			using (XQt1537 instance = new XQt1537())
+			{
+				instance.SetFieldData(XQt1537InBlock.BlockName, XQt1537InBlock.F.tmcode, 0, tmcode); // char 4
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1537InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

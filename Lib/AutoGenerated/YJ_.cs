@@ -382,7 +382,7 @@ namespace XingAPINet
 		public XRYJ_() : base("YJ_") { }
 
 
-		public bool SetFields(XRYJ_InBlock block)
+		public bool SetBlock(XRYJ_InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

@@ -1297,7 +1297,8 @@ namespace XingAPINet
 		public XQCSPBQ00200() : base("CSPBQ00200") { }
 
 
-		public bool SetFields(XQCSPBQ00200InBlock1 block)
+
+		public bool SetBlock(XQCSPBQ00200InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

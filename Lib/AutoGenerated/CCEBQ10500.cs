@@ -1262,7 +1262,8 @@ namespace XingAPINet
 		public XQCCEBQ10500() : base("CCEBQ10500") { }
 
 
-		public bool SetFields(XQCCEBQ10500InBlock1 block)
+
+		public bool SetBlock(XQCCEBQ10500InBlock1 block)
 		{
 			if (block.VerifyData() == false)
 			{

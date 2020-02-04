@@ -642,7 +642,25 @@ namespace XingAPINet
 		public XQt1404() : base("t1404") { }
 
 
-		public bool SetFields(XQt1404InBlock block)
+		public static XQt1404OutBlock1[] Get(char gubun = default,char jongchk = default,string cts_shcode = default)
+		{
+			using (XQt1404 instance = new XQt1404())
+			{
+				instance.SetFieldData(XQt1404InBlock.BlockName, XQt1404InBlock.F.gubun, 0, gubun.ToString()); // char 1
+				instance.SetFieldData(XQt1404InBlock.BlockName, XQt1404InBlock.F.jongchk, 0, jongchk.ToString()); // char 1
+				instance.SetFieldData(XQt1404InBlock.BlockName, XQt1404InBlock.F.cts_shcode, 0, cts_shcode); // char 6
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1404InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

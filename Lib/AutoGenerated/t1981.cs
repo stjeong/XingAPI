@@ -576,7 +576,23 @@ namespace XingAPINet
 		public XQt1981() : base("t1981") { }
 
 
-		public bool SetFields(XQt1981InBlock block)
+		public static XQt1981OutBlock1[] Get(char mkt_gb = default)
+		{
+			using (XQt1981 instance = new XQt1981())
+			{
+				instance.SetFieldData(XQt1981InBlock.BlockName, XQt1981InBlock.F.mkt_gb, 0, mkt_gb.ToString()); // char 1
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock1s();
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt1981InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{

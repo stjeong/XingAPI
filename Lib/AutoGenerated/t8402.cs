@@ -1431,7 +1431,27 @@ namespace XingAPINet
 		public XQt8402() : base("t8402") { }
 
 
-		public bool SetFields(XQt8402InBlock block)
+		public static XQt8402OutBlock Get(string focode = default)
+		{
+			using (XQt8402 instance = new XQt8402())
+			{
+				instance.SetFieldData(XQt8402InBlock.BlockName, XQt8402InBlock.F.focode, 0, focode); // char 8
+
+				if (instance.Request() < 0)
+				{
+					return null;
+				}
+
+				var outBlock = instance.GetBlock();
+				if (outBlock.IsValidData == false)
+				{
+					return null;
+				}
+				return outBlock;
+			}
+		}
+
+		public bool SetBlock(XQt8402InBlock block)
 		{
 			if (block.VerifyData() == false)
 			{
