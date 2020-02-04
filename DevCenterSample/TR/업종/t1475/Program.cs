@@ -38,7 +38,7 @@ namespace t1475
 
                 if (useDemoServer)
                 {
-                    var items = XQt1475.Get("078020", datacnt: totalSize);
+                    var items = XQt1475.Get(Stock.SHCODE.이베스트, datacnt: totalSize);
 
                     foreach (var item in items)
                     {
@@ -51,7 +51,7 @@ namespace t1475
                     {
                         XQt1475InBlock inBlock = new XQt1475InBlock
                         {
-                            shcode = "078020",
+                            shcode = Stock.SHCODE.이베스트,
                             datacnt = pageSize,
                         };
 

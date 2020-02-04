@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
 
             if (useDemoServer)
             {
-                var outBlock = XQt1101.Get(shcode: "078020");
+                var outBlock = XQt1101.Get(shcode: Stock.SHCODE.이베스트);
                 if (outBlock != null)
                 {
                     OutputPrice(outBlock.shcode, outBlock.price);
@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
             {
                 using (XQt1101 query = new XQt1101())
                 {
-                    XQt1101InBlock inBlock = new XQt1101InBlock { shcode = "078020" };
+                    XQt1101InBlock inBlock = new XQt1101InBlock { shcode = Stock.SHCODE.이베스트 };
 
                     if (query.SetBlock(inBlock) == false)
                     {
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
                 _realS3 = new XRS3_();
                 _realS3.DataArrived += _realS3_DataArrived;
 
-                XRS3_InBlock inBlock = new XRS3_InBlock { shcode = "078020" };
+                XRS3_InBlock inBlock = new XRS3_InBlock { shcode = Stock.SHCODE.이베스트 };
                 if (_realS3.SetBlock(inBlock) == false)
                 {
                     Console.WriteLine("Failed to verify data: " + XRS3_InBlock.BlockName);

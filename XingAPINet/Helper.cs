@@ -10,6 +10,16 @@ using System.Text;
 
 namespace XingAPINet
 {
+    public partial class Stock
+    {
+        public static class SHCODE
+        {
+            public const string 이베스트 = "078020";
+            public const string 현대건설 = "000720";
+            public const string 현대로템 = "064350";
+        }
+    }
+
     public enum DumpOutputType
     {
         FormattedKeyValue,
@@ -312,7 +322,7 @@ namespace XingAPINet
                     }
 
                     string line = fieldText.ToString().TrimEnd(',');;
-                    writer.WriteLine(line.Substring(0, 80) + ((line.Length > 80) ? "..." : ""));
+                    writer.WriteLine(line.Substring(0, Math.Min(line.Length, 80)) + ((line.Length > 80) ? "..." : ""));
                     break;
             }
         }

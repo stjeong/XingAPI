@@ -52,13 +52,10 @@ namespace ConsoleApp1
                     Console.WriteLine("\t" + account);
                 }
 
-                string shcode = "078020";
-
                 // 현재가 조회한 후,
                 using (XQt1101 query = new XQt1101())
                 {
-                    XQt1101InBlock inBlock = new XQt1101InBlock();
-                    inBlock.shcode = shcode;
+                    XQt1101InBlock inBlock = new XQt1101InBlock { shcode = Stock.SHCODE.이베스트 };
 
                     if (query.SetBlock(inBlock) == false)
                     {
@@ -92,7 +89,7 @@ namespace ConsoleApp1
                     //    return;
                     //}
 
-                    real.SetFieldData(XRS3_InBlock.BlockName, XRS3_InBlock.F.shcode, shcode);
+                    real.SetFieldData(XRS3_InBlock.BlockName, XRS3_InBlock.F.shcode, Stock.SHCODE.이베스트);
                     real.Advise();
 
                     while (_exitProcess == false)
