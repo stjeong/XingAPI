@@ -641,6 +641,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 공매도일별추이(t1927)
+		/// </summary>
 		public XQt1927() : base("t1927") { }
 
 

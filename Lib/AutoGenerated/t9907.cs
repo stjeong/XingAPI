@@ -313,6 +313,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 만기월조회(t9907)
+		/// </summary>
 		public XQt9907() : base("t9907") { }
 
 

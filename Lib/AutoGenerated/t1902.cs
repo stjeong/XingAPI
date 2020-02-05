@@ -660,6 +660,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ETF시간별추이(t1902)
+		/// </summary>
 		public XQt1902() : base("t1902") { }
 
 

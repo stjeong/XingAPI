@@ -825,6 +825,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 해외실시간지수(t3518)
+		/// </summary>
 		public XQt3518() : base("t3518") { }
 
 

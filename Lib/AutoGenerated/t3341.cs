@@ -692,6 +692,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 재무순위종합(t3341)
+		/// </summary>
 		public XQt3341() : base("t3341") { }
 
 

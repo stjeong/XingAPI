@@ -1710,6 +1710,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// CME야간선물시간대별투자자매매추이(t2813)
+		/// </summary>
 		public XQt2813() : base("t2813") { }
 
 

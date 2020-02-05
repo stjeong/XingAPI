@@ -608,6 +608,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 파생상품증거금율조회
+		/// </summary>
 		public XQMMDAQ91200() : base("MMDAQ91200") { }
 
 

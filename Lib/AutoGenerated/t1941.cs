@@ -515,6 +515,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 종목별대차거래일간추이(t1941)
+		/// </summary>
 		public XQt1941() : base("t1941") { }
 
 

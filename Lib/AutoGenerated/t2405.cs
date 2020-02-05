@@ -893,6 +893,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물옵션호가잔량비율챠트(t2405)
+		/// </summary>
 		public XQt2405() : base("t2405") { }
 
 

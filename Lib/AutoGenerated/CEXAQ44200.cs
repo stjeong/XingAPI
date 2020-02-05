@@ -1408,6 +1408,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// EUREX 야간옵션 기간주문체결조회
+		/// </summary>
 		public XQCEXAQ44200() : base("CEXAQ44200") { }
 
 

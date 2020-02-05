@@ -675,6 +675,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 신호조회(t1809)
+		/// </summary>
 		public XQt1809() : base("t1809") { }
 
 

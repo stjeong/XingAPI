@@ -923,6 +923,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 업종차트(틱/n틱)(t8417)
+		/// </summary>
 		public XQt8417() : base("t8417") { }
 
 

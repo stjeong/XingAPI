@@ -2077,6 +2077,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ETFLP호가(t1906)
+		/// </summary>
 		public XQt1906() : base("t1906") { }
 
 

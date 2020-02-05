@@ -629,6 +629,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 외인기관종목별동향(t1701)
+		/// </summary>
 		public XQt1701() : base("t1701") { }
 
 

@@ -449,6 +449,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식종목조회(t8430)
+		/// </summary>
 		public XQt8430() : base("t8430") { }
 
 

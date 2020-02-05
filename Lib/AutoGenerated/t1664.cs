@@ -582,6 +582,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 투자자매매종합(챠트)
+		/// </summary>
 		public XQt1664() : base("t1664") { }
 
 

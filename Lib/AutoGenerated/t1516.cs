@@ -795,6 +795,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 업종별종목시세(t1516)
+		/// </summary>
 		public XQt1516() : base("t1516") { }
 
 

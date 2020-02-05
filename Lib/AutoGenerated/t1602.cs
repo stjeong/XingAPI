@@ -1742,6 +1742,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 시간대별투자자매매추이(t1602)
+		/// </summary>
 		public XQt1602() : base("t1602") { }
 
 

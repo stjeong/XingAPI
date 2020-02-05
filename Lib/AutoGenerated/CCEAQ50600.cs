@@ -1243,6 +1243,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물옵션 CME 계좌잔고 및 평가현황
+		/// </summary>
 		public XQCCEAQ50600() : base("CCEAQ50600") { }
 
 

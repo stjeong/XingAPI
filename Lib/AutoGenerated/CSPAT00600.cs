@@ -1260,6 +1260,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 현물주문
+		/// </summary>
 		public XQCSPAT00600() : base("CSPAT00600") { }
 
 

@@ -2094,6 +2094,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ELW현재가호가조회(t1971)
+		/// </summary>
 		public XQt1971() : base("t1971") { }
 
 

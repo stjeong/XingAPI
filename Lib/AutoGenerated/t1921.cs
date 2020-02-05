@@ -692,6 +692,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 신용거래동향(t1921)
+		/// </summary>
 		public XQt1921() : base("t1921") { }
 
 

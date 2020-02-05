@@ -1431,6 +1431,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식선물현재가조회(API용)(t8402)
+		/// </summary>
 		public XQt8402() : base("t8402") { }
 
 

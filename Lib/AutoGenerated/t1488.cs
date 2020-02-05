@@ -755,6 +755,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 예상체결가등락율상위조회(t1488)
+		/// </summary>
 		public XQt1488() : base("t1488") { }
 
 

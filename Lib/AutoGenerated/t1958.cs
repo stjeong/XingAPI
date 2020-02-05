@@ -1599,6 +1599,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ELW종목비교(t1958)
+		/// </summary>
 		public XQt1958() : base("t1958") { }
 
 

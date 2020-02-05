@@ -667,6 +667,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// CME야간선물틱분별체결조회(API용)(t8408)
+		/// </summary>
 		public XQt8408() : base("t8408") { }
 
 

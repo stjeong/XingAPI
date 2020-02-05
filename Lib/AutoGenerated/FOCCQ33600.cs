@@ -953,6 +953,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식계좌 기간별수익률 상세
+		/// </summary>
 		public XQFOCCQ33600() : base("FOCCQ33600") { }
 
 

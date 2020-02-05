@@ -726,6 +726,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 시간대별호가잔량추이(t1471)
+		/// </summary>
 		public XQt1471() : base("t1471") { }
 
 

@@ -658,6 +658,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 신규상장종목조회(t1403)
+		/// </summary>
 		public XQt1403() : base("t1403") { }
 
 

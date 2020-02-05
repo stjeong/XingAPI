@@ -926,6 +926,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// CME 취소주문
+		/// </summary>
 		public XQCCEAT00300() : base("CCEAT00300") { }
 
 

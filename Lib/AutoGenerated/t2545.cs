@@ -1251,6 +1251,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 상품선물투자자매매동향(챠트용)
+		/// </summary>
 		public XQt2545() : base("t2545") { }
 
 

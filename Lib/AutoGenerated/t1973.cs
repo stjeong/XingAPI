@@ -558,6 +558,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ELW시간대별예상체결조회(t1973)
+		/// </summary>
 		public XQt1973() : base("t1973") { }
 
 

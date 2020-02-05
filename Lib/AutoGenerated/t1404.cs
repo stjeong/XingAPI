@@ -642,6 +642,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 관리/불성실/투자유의조회(t1404)
+		/// </summary>
 		public XQt1404() : base("t1404") { }
 
 

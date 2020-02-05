@@ -1439,6 +1439,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물옵션 CME 주문체결내역조회
+		/// </summary>
 		public XQCCEAQ06000() : base("CCEAQ06000") { }
 
 

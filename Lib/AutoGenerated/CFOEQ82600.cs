@@ -1189,6 +1189,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물옵션 일별 계좌손익내역
+		/// </summary>
 		public XQCFOEQ82600() : base("CFOEQ82600") { }
 
 

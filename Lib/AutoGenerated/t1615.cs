@@ -575,6 +575,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 투자자매매종합1(t1615)
+		/// </summary>
 		public XQt1615() : base("t1615") { }
 
 

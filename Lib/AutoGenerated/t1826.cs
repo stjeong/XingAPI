@@ -313,6 +313,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 종목Q클릭검색리스트조회(씽큐스마트)(t1826)
+		/// </summary>
 		public XQt1826() : base("t1826") { }
 
 

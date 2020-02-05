@@ -705,6 +705,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 거래대금상위(t1463)
+		/// </summary>
 		public XQt1463() : base("t1463") { }
 
 

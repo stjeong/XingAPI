@@ -689,6 +689,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 체결강도추이(t1475)
+		/// </summary>
 		public XQt1475() : base("t1475") { }
 
 

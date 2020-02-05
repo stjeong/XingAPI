@@ -741,6 +741,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물/옵션체결/미체결(t0434)
+		/// </summary>
 		public XQt0434() : base("t0434") { }
 
 

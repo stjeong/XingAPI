@@ -938,6 +938,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// CME야간선물현재가조회(t2801)
+		/// </summary>
 		public XQt2801() : base("t2801") { }
 
 

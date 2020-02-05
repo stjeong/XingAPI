@@ -525,6 +525,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ELW기초자산동일종목(t1974)
+		/// </summary>
 		public XQt1974() : base("t1974") { }
 
 

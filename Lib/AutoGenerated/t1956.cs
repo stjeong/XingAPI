@@ -1885,6 +1885,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ELW현재가(확정지급액)조회(t1956)
+		/// </summary>
 		public XQt1956() : base("t1956") { }
 
 

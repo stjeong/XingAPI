@@ -1380,6 +1380,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 업종현재가(t1511)
+		/// </summary>
 		public XQt1511() : base("t1511") { }
 
 

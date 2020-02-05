@@ -707,6 +707,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 종목별프로그램매매추이(t1637)
+		/// </summary>
 		public XQt1637() : base("t1637") { }
 
 

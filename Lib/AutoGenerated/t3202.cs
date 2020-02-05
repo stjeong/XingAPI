@@ -414,6 +414,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 종목별증시일정(t3202)
+		/// </summary>
 		public XQt3202() : base("t3202") { }
 
 

@@ -961,6 +961,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식체결/미체결(t0425)
+		/// </summary>
 		public XQt0425() : base("t0425") { }
 
 

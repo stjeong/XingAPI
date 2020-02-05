@@ -1217,6 +1217,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// EUREX옵션선물시세전광판(t2835)
+		/// </summary>
 		public XQt2835() : base("t2835") { }
 
 

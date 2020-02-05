@@ -660,6 +660,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 가격대별매매비중조회(t1449)
+		/// </summary>
 		public XQt1449() : base("t1449") { }
 
 

@@ -538,6 +538,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 서버저장조건리스트조회(API)(t1866)
+		/// </summary>
 		public XQt1866() : base("t1866") { }
 
 

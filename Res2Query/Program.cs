@@ -859,6 +859,7 @@ namespace Res2Query
 
                 sb.AppendLine();
 
+                AddXmlHelp(sb, $"{tab}\t", typeDesc);
                 sb.AppendLine($"{tab}\tpublic XQ{typeName}() : base(\"{typeName}\") {{ }}");
             }
 

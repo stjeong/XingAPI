@@ -870,6 +870,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// EUREXKOSPI200옵션선물현재가(시세)조회(t2830)
+		/// </summary>
 		public XQt2830() : base("t2830") { }
 
 

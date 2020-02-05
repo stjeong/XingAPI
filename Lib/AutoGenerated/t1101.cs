@@ -1737,6 +1737,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식현재가호가조회(t1101)
+		/// </summary>
 		public XQt1101() : base("t1101") { }
 
 

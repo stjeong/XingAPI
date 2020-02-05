@@ -1526,6 +1526,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 현물계좌주문체결내역조회
+		/// </summary>
 		public XQCSPAQ13700() : base("CSPAQ13700") { }
 
 

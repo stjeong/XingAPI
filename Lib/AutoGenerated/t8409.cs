@@ -725,6 +725,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// CME야간선물미결제약정추이(API용)(t8409)
+		/// </summary>
 		public XQt8409() : base("t8409") { }
 
 

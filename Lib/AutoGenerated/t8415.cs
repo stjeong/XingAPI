@@ -991,6 +991,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물/옵션챠트(N분)(t8415)
+		/// </summary>
 		public XQt8415() : base("t8415") { }
 
 

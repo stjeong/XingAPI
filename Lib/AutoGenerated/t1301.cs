@@ -691,6 +691,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식시간대별체결조회(t1301)
+		/// </summary>
 		public XQt1301() : base("t1301") { }
 
 

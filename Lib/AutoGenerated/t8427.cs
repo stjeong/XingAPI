@@ -805,6 +805,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 과거데이터시간대별조회(t8427)
+		/// </summary>
 		public XQt8427() : base("t8427") { }
 
 

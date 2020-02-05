@@ -1013,6 +1013,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식당일매매일지/수수료(전일)(t0151)
+		/// </summary>
 		public XQt0151() : base("t0151") { }
 
 

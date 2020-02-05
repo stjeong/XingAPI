@@ -346,6 +346,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 회원사리스트(t1764)
+		/// </summary>
 		public XQt1764() : base("t1764") { }
 
 

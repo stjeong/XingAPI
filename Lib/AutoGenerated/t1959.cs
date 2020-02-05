@@ -585,6 +585,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// LP대상종목정보조회(t1959)
+		/// </summary>
 		public XQt1959() : base("t1959") { }
 
 

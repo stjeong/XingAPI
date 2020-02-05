@@ -5,7 +5,7 @@ using System.Text;
 
 namespace XingAPINet
 {
-    partial class t1475
+    partial class XQt1475
     {
         public static class VPType
         {
