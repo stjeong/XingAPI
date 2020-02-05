@@ -226,6 +226,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 만기월조회(t9907)
+	/// </summary>
 	public partial class XQt9907 : XingQuery
 	{
 		/// <summary>

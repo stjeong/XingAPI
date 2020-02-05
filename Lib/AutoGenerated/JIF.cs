@@ -216,6 +216,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 장운영정보(JIF)
+	/// </summary>
 	public partial class XRJIF : XingReal
 	{
 		/// <summary>
@@ -260,6 +263,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 장운영정보(JIF)
+		/// </summary>
 		public XRJIF() : base("JIF") { }
 
 

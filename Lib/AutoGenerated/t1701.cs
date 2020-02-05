@@ -542,6 +542,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 외인기관종목별동향(t1701)
+	/// </summary>
 	public partial class XQt1701 : XingQuery
 	{
 		/// <summary>

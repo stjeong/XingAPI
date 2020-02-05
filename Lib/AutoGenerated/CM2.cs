@@ -2185,6 +2185,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// CME확인
+	/// </summary>
 	public partial class XRCM2 : XingReal
 	{
 		/// <summary>
@@ -2229,6 +2232,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// CME확인
+		/// </summary>
 		public XRCM2() : base("CM2") { }
 
 

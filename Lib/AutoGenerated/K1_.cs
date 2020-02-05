@@ -1559,6 +1559,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSPI거래원(K1)
+	/// </summary>
 	public partial class XRK1_ : XingReal
 	{
 		/// <summary>
@@ -1603,6 +1606,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSPI거래원(K1)
+		/// </summary>
 		public XRK1_() : base("K1_") { }
 
 

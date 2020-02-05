@@ -938,6 +938,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// CME 정상주문
+	/// </summary>
 	public partial class XQCCEAT00100 : XingQuery
 	{
 		/// <summary>

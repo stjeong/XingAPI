@@ -839,6 +839,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// CME 취소주문
+	/// </summary>
 	public partial class XQCCEAT00300 : XingQuery
 	{
 		/// <summary>

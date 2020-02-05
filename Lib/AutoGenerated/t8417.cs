@@ -836,6 +836,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 업종차트(틱/n틱)(t8417)
+	/// </summary>
 	public partial class XQt8417 : XingQuery
 	{
 		/// <summary>

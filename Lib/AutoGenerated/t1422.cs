@@ -668,6 +668,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 상/하한(t1422)
+	/// </summary>
 	public partial class XQt1422 : XingQuery
 	{
 		/// <summary>

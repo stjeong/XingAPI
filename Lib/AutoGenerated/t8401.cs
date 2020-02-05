@@ -260,6 +260,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식선물마스터조회(API용)(t8401)
+	/// </summary>
 	public partial class XQt8401 : XingQuery
 	{
 		/// <summary>

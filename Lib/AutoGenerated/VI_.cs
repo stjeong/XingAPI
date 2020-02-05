@@ -301,6 +301,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// VI발동해제(VI_)
+	/// </summary>
 	public partial class XRVI_ : XingReal
 	{
 		/// <summary>
@@ -345,6 +348,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// VI발동해제(VI_)
+		/// </summary>
 		public XRVI_() : base("VI_") { }
 
 

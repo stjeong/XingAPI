@@ -580,6 +580,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식선물틱분별체결조회(API용)(t8406)
+	/// </summary>
 	public partial class XQt8406 : XingQuery
 	{
 		/// <summary>

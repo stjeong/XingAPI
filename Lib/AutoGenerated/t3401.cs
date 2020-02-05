@@ -605,6 +605,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 투자의견(t3401)
+	/// </summary>
 	public partial class XQt3401 : XingQuery
 	{
 		/// <summary>

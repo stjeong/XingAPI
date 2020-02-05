@@ -222,6 +222,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 서버시간조회(t0167)
+	/// </summary>
 	public partial class XQt0167 : XingQuery
 	{
 		/// <summary>

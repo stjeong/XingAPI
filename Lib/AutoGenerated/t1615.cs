@@ -488,6 +488,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 투자자매매종합1(t1615)
+	/// </summary>
 	public partial class XQt1615 : XingQuery
 	{
 		/// <summary>

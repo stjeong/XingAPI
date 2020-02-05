@@ -675,6 +675,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSPI200옵션체결(C0)
+	/// </summary>
 	public partial class XROC0 : XingReal
 	{
 		/// <summary>
@@ -719,6 +722,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSPI200옵션체결(C0)
+		/// </summary>
 		public XROC0() : base("OC0") { }
 
 

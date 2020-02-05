@@ -910,6 +910,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식당일매매일지/수수료(t0150)
+	/// </summary>
 	public partial class XQt0150 : XingQuery
 	{
 		/// <summary>

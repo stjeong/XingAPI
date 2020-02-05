@@ -768,6 +768,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW거래대금상위(t1966)
+	/// </summary>
 	public partial class XQt1966 : XingQuery
 	{
 		/// <summary>

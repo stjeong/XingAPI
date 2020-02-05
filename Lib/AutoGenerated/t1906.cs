@@ -1990,6 +1990,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ETFLP호가(t1906)
+	/// </summary>
 	public partial class XQt1906 : XingQuery
 	{
 		/// <summary>

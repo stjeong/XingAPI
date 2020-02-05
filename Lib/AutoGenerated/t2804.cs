@@ -757,6 +757,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// CME야간선물시간대별체결조회(t2804)
+	/// </summary>
 	public partial class XQt2804 : XingQuery
 	{
 		/// <summary>

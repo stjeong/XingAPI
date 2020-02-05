@@ -828,6 +828,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSPI200선물호가(H0)
+	/// </summary>
 	public partial class XRFH0 : XingReal
 	{
 		/// <summary>
@@ -872,6 +875,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSPI200선물호가(H0)
+		/// </summary>
 		public XRFH0() : base("FH0") { }
 
 

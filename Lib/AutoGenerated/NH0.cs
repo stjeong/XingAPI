@@ -811,6 +811,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// CME연계KP200지수선물호가(NH0)
+	/// </summary>
 	public partial class XRNH0 : XingReal
 	{
 		/// <summary>
@@ -855,6 +858,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// CME연계KP200지수선물호가(NH0)
+		/// </summary>
 		public XRNH0() : base("NH0") { }
 
 

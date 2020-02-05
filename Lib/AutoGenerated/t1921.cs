@@ -605,6 +605,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 신용거래동향(t1921)
+	/// </summary>
 	public partial class XQt1921 : XingQuery
 	{
 		/// <summary>

@@ -904,6 +904,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 선물/옵션챠트(N분)(t8415)
+	/// </summary>
 	public partial class XQt8415 : XingQuery
 	{
 		/// <summary>

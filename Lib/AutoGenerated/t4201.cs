@@ -888,6 +888,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식챠트(종합)(t4201)
+	/// </summary>
 	public partial class XQt4201 : XingQuery
 	{
 		/// <summary>

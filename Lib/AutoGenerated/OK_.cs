@@ -1559,6 +1559,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSDAQ거래원(OK)
+	/// </summary>
 	public partial class XROK_ : XingReal
 	{
 		/// <summary>
@@ -1603,6 +1606,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSDAQ거래원(OK)
+		/// </summary>
 		public XROK_() : base("OK_") { }
 
 

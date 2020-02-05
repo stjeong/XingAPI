@@ -1352,6 +1352,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 선물옵션 CME 주문체결내역조회
+	/// </summary>
 	public partial class XQCCEAQ06000 : XingQuery
 	{
 		/// <summary>

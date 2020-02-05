@@ -692,6 +692,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// CME연계KP200지수선물체결(NC0)
+	/// </summary>
 	public partial class XRNC0 : XingReal
 	{
 		/// <summary>
@@ -736,6 +739,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// CME연계KP200지수선물체결(NC0)
+		/// </summary>
 		public XRNC0() : base("NC0") { }
 
 

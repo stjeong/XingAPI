@@ -1781,6 +1781,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW현재가(시세)조회(t1950)
+	/// </summary>
 	public partial class XQt1950 : XingQuery
 	{
 		/// <summary>

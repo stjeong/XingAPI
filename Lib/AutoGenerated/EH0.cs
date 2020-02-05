@@ -828,6 +828,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// EUREX연계KP200지수옵션선물호가(EH0)
+	/// </summary>
 	public partial class XREH0 : XingReal
 	{
 		/// <summary>
@@ -872,6 +875,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// EUREX연계KP200지수옵션선물호가(EH0)
+		/// </summary>
 		public XREH0() : base("EH0") { }
 
 

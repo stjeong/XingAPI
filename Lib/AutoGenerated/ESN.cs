@@ -454,6 +454,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 뉴ELW투자지표민감도(ESN)
+	/// </summary>
 	public partial class XRESN : XingReal
 	{
 		/// <summary>
@@ -498,6 +501,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 뉴ELW투자지표민감도(ESN)
+		/// </summary>
 		public XRESN() : base("ESN") { }
 
 

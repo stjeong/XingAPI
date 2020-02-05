@@ -654,6 +654,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 선물/옵션체결/미체결(t0434)
+	/// </summary>
 	public partial class XQt0434 : XingQuery
 	{
 		/// <summary>

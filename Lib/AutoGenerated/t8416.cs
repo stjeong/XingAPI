@@ -806,6 +806,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 선물/옵션챠트(일주월)(t8416)
+	/// </summary>
 	public partial class XQt8416 : XingQuery
 	{
 		/// <summary>

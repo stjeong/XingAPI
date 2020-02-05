@@ -603,6 +603,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// EUREX야간옵션선물기간별추이(t2833)
+	/// </summary>
 	public partial class XQt2833 : XingQuery
 	{
 		/// <summary>

@@ -233,6 +233,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW우선호가(s2)
+	/// </summary>
 	public partial class XRs2_ : XingReal
 	{
 		/// <summary>
@@ -277,6 +280,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// ELW우선호가(s2)
+		/// </summary>
 		public XRs2_() : base("s2_") { }
 
 

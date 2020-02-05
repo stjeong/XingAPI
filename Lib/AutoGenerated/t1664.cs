@@ -495,6 +495,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 투자자매매종합(챠트)
+	/// </summary>
 	public partial class XQt1664 : XingQuery
 	{
 		/// <summary>

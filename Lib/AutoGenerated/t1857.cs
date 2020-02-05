@@ -504,6 +504,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// e종목검색(신버전API용)
+	/// </summary>
 	public partial class XQt1857 : XingQuery
 	{
 		/// <summary>

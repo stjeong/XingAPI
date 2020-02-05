@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <Content Include="$(MSBuildThisFileDirectory)..\build\x86\*.*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)..\build\x86\Image\*.*" Link="Image\%(RecursiveDir)\%(Filename)%(Extension)">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)..\build\x86\Res\*.*" Link="Res\%(RecursiveDir)\%(Filename)%(Extension)">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)..\build\x86\Sys\*.*" Link="Sys\%(RecursiveDir)\%(Filename)%(Extension)">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+
+        <Content Include="$(MSBuildThisFileDirectory)..\lib\net40\XA_DataSet.dll.manifest">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)..\lib\net40\XA_Session.dll.manifest">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+
+        <Content Include="$(MSBuildThisFileDirectory)..\lib\net40\Interop.XA_DataSetLib.dll">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)..\lib\net40\Interop.XA_SessionLib.dll">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+</Project>

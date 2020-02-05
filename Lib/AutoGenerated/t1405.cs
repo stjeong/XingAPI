@@ -487,6 +487,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 투자경고/매매정지/정리매매조회(t1405)
+	/// </summary>
 	public partial class XQt1405 : XingQuery
 	{
 		/// <summary>

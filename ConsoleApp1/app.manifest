@@ -15,13 +15,13 @@
     </compatibility>
 
     <dependency>
-        <dependentAssembly asmv2:dependencyType="install" asmv2:codebase="XA_Session.dll.manifest" asmv2:size="1035">
+        <dependentAssembly asmv2:dependencyType="install" asmv2:codebase="XA_Session.dll.manifest">
             <assemblyIdentity name="XA_Session.dll" version="1.0.0.1" processorArchitecture="x86" type="win32" />
         </dependentAssembly>
     </dependency>
 
     <dependency>
-        <dependentAssembly asmv2:dependencyType="install" asmv2:codebase="XA_DataSet.dll.manifest" asmv2:size="1654">
+        <dependentAssembly asmv2:dependencyType="install" asmv2:codebase="XA_DataSet.dll.manifest">
             <assemblyIdentity name="XA_DataSet.dll" version="1.0.0.1" processorArchitecture="x86" type="win32" />
         </dependentAssembly>
     </dependency>

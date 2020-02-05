@@ -1210,6 +1210,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 현물계좌증거금률별주문가능수량조회
+	/// </summary>
 	public partial class XQCSPBQ00200 : XingQuery
 	{
 		/// <summary>

@@ -709,6 +709,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSDAQ프로그램매매종목별(KH)
+	/// </summary>
 	public partial class XRKH_ : XingReal
 	{
 		/// <summary>
@@ -753,6 +756,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSDAQ프로그램매매종목별(KH)
+		/// </summary>
 		public XRKH_() : base("KH_") { }
 
 

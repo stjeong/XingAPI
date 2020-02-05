@@ -259,6 +259,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 회원사리스트(t1764)
+	/// </summary>
 	public partial class XQt1764 : XingQuery
 	{
 		/// <summary>

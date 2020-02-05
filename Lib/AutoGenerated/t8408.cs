@@ -580,6 +580,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// CME야간선물틱분별체결조회(API용)(t8408)
+	/// </summary>
 	public partial class XQt8408 : XingQuery
 	{
 		/// <summary>

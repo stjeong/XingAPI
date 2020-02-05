@@ -1512,6 +1512,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW종목비교(t1958)
+	/// </summary>
 	public partial class XQt1958 : XingQuery
 	{
 		/// <summary>

@@ -752,6 +752,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 상/하한가직전(t1427)
+	/// </summary>
 	public partial class XQt1427 : XingQuery
 	{
 		/// <summary>
