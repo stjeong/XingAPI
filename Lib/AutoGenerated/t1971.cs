@@ -2007,6 +2007,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW현재가호가조회(t1971)
+	/// </summary>
 	public partial class XQt1971 : XingQuery
 	{
 		/// <summary>

@@ -1102,6 +1102,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 선물옵션 일별 계좌손익내역
+	/// </summary>
 	public partial class XQCFOEQ82600 : XingQuery
 	{
 		/// <summary>

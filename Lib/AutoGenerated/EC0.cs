@@ -692,6 +692,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// EUREX연계KP200지수옵션선물체결(EC0)
+	/// </summary>
 	public partial class XREC0 : XingReal
 	{
 		/// <summary>
@@ -736,6 +739,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// EUREX연계KP200지수옵션선물체결(EC0)
+		/// </summary>
 		public XREC0() : base("EC0") { }
 
 

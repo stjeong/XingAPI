@@ -740,6 +740,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식선물시간대별체결조회(API용)(t8404)
+	/// </summary>
 	public partial class XQt8404 : XingQuery
 	{
 		/// <summary>

@@ -639,6 +639,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 시간대별호가잔량추이(t1471)
+	/// </summary>
 	public partial class XQt1471 : XingQuery
 	{
 		/// <summary>

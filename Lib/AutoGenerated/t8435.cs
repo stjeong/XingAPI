@@ -345,6 +345,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 파생종목마스터조회API용(t8435)
+	/// </summary>
 	public partial class XQt8435 : XingQuery
 	{
 		/// <summary>

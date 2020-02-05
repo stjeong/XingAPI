@@ -489,6 +489,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 기초자산리스트조회(t1981)
+	/// </summary>
 	public partial class XQt1981 : XingQuery
 	{
 		/// <summary>

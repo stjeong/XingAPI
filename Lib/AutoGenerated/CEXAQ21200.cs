@@ -782,6 +782,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 유렉스 주문가능 수량/금액 조회
+	/// </summary>
 	public partial class XQCEXAQ21200 : XingQuery
 	{
 		/// <summary>

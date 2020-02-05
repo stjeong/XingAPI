@@ -607,6 +607,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 지수(IJ)
+	/// </summary>
 	public partial class XRIJ_ : XingReal
 	{
 		/// <summary>
@@ -651,6 +654,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 지수(IJ)
+		/// </summary>
 		public XRIJ_() : base("IJ_") { }
 
 

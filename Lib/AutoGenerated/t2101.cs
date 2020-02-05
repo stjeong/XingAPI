@@ -1361,6 +1361,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 선물/옵션현재가(시세)조회(t2101)
+	/// </summary>
 	public partial class XQt2101 : XingQuery
 	{
 		/// <summary>

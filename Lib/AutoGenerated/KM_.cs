@@ -1644,6 +1644,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSDAQ프로그램매매전체집계(KM)
+	/// </summary>
 	public partial class XRKM_ : XingReal
 	{
 		/// <summary>
@@ -1688,6 +1691,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSDAQ프로그램매매전체집계(KM)
+		/// </summary>
 		public XRKM_() : base("KM_") { }
 
 

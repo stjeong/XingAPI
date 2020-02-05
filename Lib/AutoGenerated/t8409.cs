@@ -638,6 +638,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// CME야간선물미결제약정추이(API용)(t8409)
+	/// </summary>
 	public partial class XQt8409 : XingQuery
 	{
 		/// <summary>

@@ -654,6 +654,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 시간대별프로그램매매추이(t1632)
+	/// </summary>
 	public partial class XQt1632 : XingQuery
 	{
 		/// <summary>

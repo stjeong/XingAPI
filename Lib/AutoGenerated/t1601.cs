@@ -6821,6 +6821,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 투자자별종합(t1601)
+	/// </summary>
 	public partial class XQt1601 : XingQuery
 	{
 		/// <summary>

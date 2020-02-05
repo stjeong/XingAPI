@@ -1201,6 +1201,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ETF구성종목조회(t1904)
+	/// </summary>
 	public partial class XQt1904 : XingQuery
 	{
 		/// <summary>

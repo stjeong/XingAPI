@@ -692,6 +692,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식선물체결(JC0)
+	/// </summary>
 	public partial class XRJC0 : XingReal
 	{
 		/// <summary>
@@ -736,6 +739,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 주식선물체결(JC0)
+		/// </summary>
 		public XRJC0() : base("JC0") { }
 
 

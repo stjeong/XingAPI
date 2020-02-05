@@ -993,6 +993,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식잔고2(t0424)
+	/// </summary>
 	public partial class XQt0424 : XingQuery
 	{
 		/// <summary>

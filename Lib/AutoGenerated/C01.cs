@@ -638,6 +638,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 선물주문체결
+	/// </summary>
 	public partial class XRC01 : XingReal
 	{
 		/// <summary>
@@ -682,6 +685,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 선물주문체결
+		/// </summary>
 		public XRC01() : base("C01") { }
 
 

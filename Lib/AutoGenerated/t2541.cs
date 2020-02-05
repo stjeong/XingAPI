@@ -1689,6 +1689,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 상품선물투자자매매동향(실시간)(t2541)
+	/// </summary>
 	public partial class XQt2541 : XingQuery
 	{
 		/// <summary>

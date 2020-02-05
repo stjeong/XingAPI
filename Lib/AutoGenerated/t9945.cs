@@ -277,6 +277,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식마스터조회API용-종목명40bytes(t9945)
+	/// </summary>
 	public partial class XQt9945 : XingQuery
 	{
 		/// <summary>

@@ -772,6 +772,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 업종챠트(일주월)(t8419)
+	/// </summary>
 	public partial class XQt8419 : XingQuery
 	{
 		/// <summary>

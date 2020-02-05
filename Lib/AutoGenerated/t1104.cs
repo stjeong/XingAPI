@@ -504,6 +504,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식현재가시세메모(t1104)
+	/// </summary>
 	public partial class XQt1104 : XingQuery
 	{
 		/// <summary>

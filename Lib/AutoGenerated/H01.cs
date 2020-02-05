@@ -944,6 +944,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 선물주문정정취소
+	/// </summary>
 	public partial class XRH01 : XingReal
 	{
 		/// <summary>
@@ -988,6 +991,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 선물주문정정취소
+		/// </summary>
 		public XRH01() : base("H01") { }
 
 

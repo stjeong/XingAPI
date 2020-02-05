@@ -233,6 +233,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSPI우선호가(S2)
+	/// </summary>
 	public partial class XRS2_ : XingReal
 	{
 		/// <summary>
@@ -277,6 +280,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSPI우선호가(S2)
+		/// </summary>
 		public XRS2_() : base("S2_") { }
 
 

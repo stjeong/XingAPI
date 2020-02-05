@@ -571,6 +571,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 신규상장종목조회(t1403)
+	/// </summary>
 	public partial class XQt1403 : XingQuery
 	{
 		/// <summary>

@@ -618,6 +618,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 거래대금상위(t1463)
+	/// </summary>
 	public partial class XQt1463 : XingQuery
 	{
 		/// <summary>

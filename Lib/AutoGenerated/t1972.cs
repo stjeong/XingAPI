@@ -1021,6 +1021,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW현재가(거래원)조회(t1972)
+	/// </summary>
 	public partial class XQt1972 : XingQuery
 	{
 		/// <summary>

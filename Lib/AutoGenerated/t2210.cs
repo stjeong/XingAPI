@@ -304,6 +304,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 선물옵션시간대별체결조회(단일출력용)
+	/// </summary>
 	public partial class XQt2210 : XingQuery
 	{
 		/// <summary>

@@ -2321,6 +2321,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// CME야간선물투자자별종합(t2816)
+	/// </summary>
 	public partial class XQt2816 : XingQuery
 	{
 		/// <summary>

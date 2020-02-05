@@ -717,6 +717,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 유렉스 매수/매도주문
+	/// </summary>
 	public partial class XQCEXAT11100 : XingQuery
 	{
 		/// <summary>

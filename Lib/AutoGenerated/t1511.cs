@@ -1293,6 +1293,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 업종현재가(t1511)
+	/// </summary>
 	public partial class XQt1511 : XingQuery
 	{
 		/// <summary>

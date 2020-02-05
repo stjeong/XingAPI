@@ -705,6 +705,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 증시주변자금추이(t8428)
+	/// </summary>
 	public partial class XQt8428 : XingQuery
 	{
 		/// <summary>

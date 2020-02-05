@@ -921,6 +921,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식챠트(틱/n틱)(t8411)
+	/// </summary>
 	public partial class XQt8411 : XingQuery
 	{
 		/// <summary>

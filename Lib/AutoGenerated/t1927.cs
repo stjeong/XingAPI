@@ -554,6 +554,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 공매도일별추이(t1927)
+	/// </summary>
 	public partial class XQt1927 : XingQuery
 	{
 		/// <summary>

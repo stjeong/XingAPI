@@ -243,6 +243,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 지수옵션마스터조회API용(t9944)
+	/// </summary>
 	public partial class XQt9944 : XingQuery
 	{
 		/// <summary>

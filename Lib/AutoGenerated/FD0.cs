@@ -267,6 +267,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSPI200선물실시간상하한가(D0)
+	/// </summary>
 	public partial class XRFD0 : XingReal
 	{
 		/// <summary>
@@ -311,6 +314,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSPI200선물실시간상하한가(D0)
+		/// </summary>
 		public XRFD0() : base("FD0") { }
 
 

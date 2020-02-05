@@ -1107,6 +1107,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 현물정정주문
+	/// </summary>
 	public partial class XQCSPAT00700 : XingQuery
 	{
 		/// <summary>

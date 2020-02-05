@@ -551,6 +551,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 시간대별투자자매매추이상세(t1603)
+	/// </summary>
 	public partial class XQt1603 : XingQuery
 	{
 		/// <summary>

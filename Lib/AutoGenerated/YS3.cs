@@ -369,6 +369,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSPI예상체결(YS3)
+	/// </summary>
 	public partial class XRYS3 : XingReal
 	{
 		/// <summary>
@@ -413,6 +416,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSPI예상체결(YS3)
+		/// </summary>
 		public XRYS3() : base("YS3") { }
 
 

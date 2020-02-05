@@ -512,6 +512,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식시간대별체결조회챠트(t1308)
+	/// </summary>
 	public partial class XQt1308 : XingQuery
 	{
 		/// <summary>

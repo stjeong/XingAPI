@@ -783,6 +783,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// EUREXKOSPI200옵션선물현재가(시세)조회(t2830)
+	/// </summary>
 	public partial class XQt2830 : XingQuery
 	{
 		/// <summary>

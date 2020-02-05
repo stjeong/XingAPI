@@ -284,6 +284,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 지수옵션예상체결(YOC)
+	/// </summary>
 	public partial class XRYOC : XingReal
 	{
 		/// <summary>
@@ -328,6 +331,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 지수옵션예상체결(YOC)
+		/// </summary>
 		public XRYOC() : base("YOC") { }
 
 

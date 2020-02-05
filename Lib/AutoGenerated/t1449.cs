@@ -573,6 +573,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 가격대별매매비중조회(t1449)
+	/// </summary>
 	public partial class XQt1449 : XingQuery
 	{
 		/// <summary>

@@ -768,6 +768,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW등락율상위(t1960)
+	/// </summary>
 	public partial class XQt1960 : XingQuery
 	{
 		/// <summary>

@@ -369,6 +369,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW기세(s4)
+	/// </summary>
 	public partial class XRs4_ : XingReal
 	{
 		/// <summary>
@@ -413,6 +416,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// ELW기세(s4)
+		/// </summary>
 		public XRs4_() : base("s4_") { }
 
 
