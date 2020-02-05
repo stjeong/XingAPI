@@ -1416,6 +1416,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 현물계좌예수금 주문가능금액 총평가 조회
+	/// </summary>
 	public partial class XQCSPAQ12200 : XingQuery
 	{
 		/// <summary>

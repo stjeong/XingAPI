@@ -587,6 +587,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 증거금율별종목조회(t1411)
+	/// </summary>
 	public partial class XQt1411 : XingQuery
 	{
 		/// <summary>

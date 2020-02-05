@@ -80,7 +80,7 @@ namespace ConsoleApp1
                 }
 
                 // 실시간 데이터를 조회
-                using (XRS3_ real = new XRS3_())
+                using (XRS2_ real = new XRS2_())
                 {
                     //XRS3_InBlock inBlock = new XRS3_InBlock { shcode = shcode };
                     //if (real.SetFields(inBlock) == false)
@@ -89,7 +89,7 @@ namespace ConsoleApp1
                     //    return;
                     //}
 
-                    real.SetFieldData(XRS3_InBlock.BlockName, XRS3_InBlock.F.shcode, Stock.SHCODE.KOSDAQ.이베스트투자증권);
+                    real.SetFieldData(XRS2_InBlock.BlockName, XRS2_InBlock.F.shcode, Stock.SHCODE.KOSDAQ.이베스트투자증권);
                     real.Advise();
 
                     while (_exitProcess == false)
@@ -100,11 +100,11 @@ namespace ConsoleApp1
                             continue;
                         }
 
-                        XRS3_OutBlock outBlock = real.GetBlock();
+                        XRS2_OutBlock outBlock = real.GetBlock();
                         if (outBlock.IsValidData == true)
                         {
                             // outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
-                            Console.WriteLine(outBlock.price);
+                            Console.WriteLine(outBlock.bidho);
                         }
                         else
                         {

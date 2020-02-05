@@ -311,6 +311,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW종목조회(t8431)
+	/// </summary>
 	public partial class XQt8431 : XingQuery
 	{
 		/// <summary>

@@ -1644,6 +1644,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 시간대별투자자매매추이(BMT)
+	/// </summary>
 	public partial class XRBMT : XingReal
 	{
 		/// <summary>
@@ -1688,6 +1691,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 시간대별투자자매매추이(BMT)
+		/// </summary>
 		public XRBMT() : base("BMT") { }
 
 

@@ -874,6 +874,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식체결/미체결(t0425)
+	/// </summary>
 	public partial class XQt0425 : XingQuery
 	{
 		/// <summary>

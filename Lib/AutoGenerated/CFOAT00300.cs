@@ -855,6 +855,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 선물옵션 취소주문
+	/// </summary>
 	public partial class XQCFOAT00300 : XingQuery
 	{
 		/// <summary>

@@ -911,6 +911,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// CME야간선물기간별투자자매매추이(챠트)
+	/// </summary>
 	public partial class XQt2814 : XingQuery
 	{
 		/// <summary>

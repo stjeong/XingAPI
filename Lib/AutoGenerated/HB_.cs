@@ -284,6 +284,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSDAQ장전시간외호가잔량(HB)
+	/// </summary>
 	public partial class XRHB_ : XingReal
 	{
 		/// <summary>
@@ -328,6 +331,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSDAQ장전시간외호가잔량(HB)
+		/// </summary>
 		public XRHB_() : base("HB_") { }
 
 

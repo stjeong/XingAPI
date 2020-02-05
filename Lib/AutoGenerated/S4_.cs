@@ -369,6 +369,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSPI기세(S4)
+	/// </summary>
 	public partial class XRS4_ : XingReal
 	{
 		/// <summary>
@@ -413,6 +416,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSPI기세(S4)
+		/// </summary>
 		public XRS4_() : base("S4_") { }
 
 

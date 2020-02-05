@@ -267,6 +267,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식선물실시간상하한가(JD0)
+	/// </summary>
 	public partial class XRJD0 : XingReal
 	{
 		/// <summary>
@@ -311,6 +314,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 주식선물실시간상하한가(JD0)
+		/// </summary>
 		public XRJD0() : base("JD0") { }
 
 

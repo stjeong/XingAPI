@@ -580,6 +580,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 선물옵션틱분별체결조회챠트(t2209)
+	/// </summary>
 	public partial class XQt2209 : XingQuery
 	{
 		/// <summary>

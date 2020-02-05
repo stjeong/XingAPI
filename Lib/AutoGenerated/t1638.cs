@@ -462,6 +462,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 종목별잔량/사전공시(t1638)
+	/// </summary>
 	public partial class XQt1638 : XingQuery
 	{
 		/// <summary>

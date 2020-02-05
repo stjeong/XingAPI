@@ -428,6 +428,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 종목별대차거래일간추이(t1941)
+	/// </summary>
 	public partial class XQt1941 : XingQuery
 	{
 		/// <summary>

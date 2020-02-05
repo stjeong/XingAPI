@@ -618,6 +618,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 유렉스 취소주문
+	/// </summary>
 	public partial class XQCEXAT11300 : XingQuery
 	{
 		/// <summary>

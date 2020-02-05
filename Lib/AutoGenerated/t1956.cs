@@ -1798,6 +1798,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW현재가(확정지급액)조회(t1956)
+	/// </summary>
 	public partial class XQt1956 : XingQuery
 	{
 		/// <summary>

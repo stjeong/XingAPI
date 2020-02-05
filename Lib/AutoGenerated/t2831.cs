@@ -919,6 +919,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// EUREXKOSPI200옵션선물호가조회(t2831)
+	/// </summary>
 	public partial class XQt2831 : XingQuery
 	{
 		/// <summary>

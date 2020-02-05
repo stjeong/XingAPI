@@ -602,6 +602,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 체결강도추이(t1475)
+	/// </summary>
 	public partial class XQt1475 : XingQuery
 	{
 		/// <summary>

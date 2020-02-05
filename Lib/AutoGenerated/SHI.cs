@@ -522,6 +522,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 상/하한가진입(SHI)
+	/// </summary>
 	public partial class XRSHI : XingReal
 	{
 		/// <summary>
@@ -566,6 +569,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 상/하한가진입(SHI)
+		/// </summary>
 		public XRSHI() : base("SHI") { }
 
 

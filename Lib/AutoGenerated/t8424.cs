@@ -226,6 +226,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 전체업종(t8424)
+	/// </summary>
 	public partial class XQt8424 : XingQuery
 	{
 		/// <summary>

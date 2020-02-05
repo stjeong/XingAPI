@@ -323,6 +323,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 해외지수조회(API용)(t3521)
+	/// </summary>
 	public partial class XQt3521 : XingQuery
 	{
 		/// <summary>

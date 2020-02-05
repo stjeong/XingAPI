@@ -1446,6 +1446,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 주식선물호가조회(API용)(t8403)
+	/// </summary>
 	public partial class XQt8403 : XingQuery
 	{
 		/// <summary>

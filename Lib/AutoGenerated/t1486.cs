@@ -504,6 +504,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 시간별예상체결가(t1486)
+	/// </summary>
 	public partial class XQt1486 : XingQuery
 	{
 		/// <summary>

@@ -521,6 +521,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 파생상품증거금율조회
+	/// </summary>
 	public partial class XQMMDAQ91200 : XingQuery
 	{
 		/// <summary>

@@ -1321,6 +1321,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// EUREX 야간옵션 기간주문체결조회
+	/// </summary>
 	public partial class XQCEXAQ44200 : XingQuery
 	{
 		/// <summary>

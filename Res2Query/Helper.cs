@@ -27,6 +27,29 @@ namespace Res2Query
         }
     }
 
+    public class TypeInfo
+    {
+        readonly string _typeFullName;
+        public string TypeFullName => _typeFullName;
+
+        readonly string _typeDesc;
+        public string TypeDesc => _typeDesc;
+
+        readonly string _typeName;
+        public string TypeName => _typeName;
+
+        readonly bool _isReal;
+        public bool IsReal => _isReal;
+
+        public TypeInfo(string typeName, string typeFullName, string typeDesc, bool isReal)
+        {
+            _typeName = typeName;
+            _typeFullName = typeFullName;
+            _typeDesc = typeDesc;
+            _isReal = isReal;
+        }
+    }
+
     public enum BlockType
     {
         input,

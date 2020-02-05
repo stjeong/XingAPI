@@ -940,6 +940,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 현물취소주문
+	/// </summary>
 	public partial class XQCSPAT00800 : XingQuery
 	{
 		/// <summary>

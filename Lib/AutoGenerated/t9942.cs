@@ -243,6 +243,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW마스터조회API용(t9942)
+	/// </summary>
 	public partial class XQt9942 : XingQuery
 	{
 		/// <summary>

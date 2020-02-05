@@ -505,6 +505,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 상/하한가이탈(SHO)
+	/// </summary>
 	public partial class XRSHO : XingReal
 	{
 		/// <summary>
@@ -549,6 +552,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 상/하한가이탈(SHO)
+		/// </summary>
 		public XRSHO() : base("SHO") { }
 
 

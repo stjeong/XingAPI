@@ -621,6 +621,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// EUREX야간옵션선물시간대별체결조회(t2832)
+	/// </summary>
 	public partial class XQt2832 : XingQuery
 	{
 		/// <summary>

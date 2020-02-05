@@ -776,6 +776,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// ELW일별주가(t1954)
+	/// </summary>
 	public partial class XQt1954 : XingQuery
 	{
 		/// <summary>

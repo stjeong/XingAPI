@@ -505,6 +505,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 상/하한가근접진입(SHC)
+	/// </summary>
 	public partial class XRSHC : XingReal
 	{
 		/// <summary>
@@ -549,6 +552,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 상/하한가근접진입(SHC)
+		/// </summary>
 		public XRSHC() : base("SHC") { }
 
 

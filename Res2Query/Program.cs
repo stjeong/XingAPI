@@ -22,7 +22,7 @@ namespace Res2Query
                 resFolder = Path.Combine(currentFolder, "..", "..", "..", "Lib", "Res");
             }
 
-            HashSet<string> typeList = new HashSet<string>();
+            Dictionary<string, TypeInfo> typeList = new Dictionary<string, TypeInfo>();
 
             foreach (string file in Directory.EnumerateFiles(resFolder, "*.res"))
             {
@@ -70,34 +70,52 @@ namespace Res2Query
             }
         }
 
-        private static string TypeNameListToResourceCode(HashSet<string> typeList)
+        private static string TypeNameListToResourceCode(Dictionary<string, TypeInfo> typeList)
         {
             string tab = "\t";
 
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"{tab}public static class ResourceCodes");
-            sb.AppendLine($"{tab}{{");
+            StringBuilder sbTypes = new StringBuilder();
+            sbTypes.AppendLine("using System;");
+            sbTypes.AppendLine("using XingAPINet;");
+            sbTypes.AppendLine();
+
+            sbTypes.AppendLine($"public static class XingTypeList");
+            sbTypes.AppendLine($"{{");
+
+            StringBuilder sbName = new StringBuilder();
 
             int numberOfList = 0;
-            foreach (string typeName in typeList)
+            foreach (string typeName in typeList.Keys)
             {
                 if (string.IsNullOrEmpty(typeName) == false)
                 {
-                    sb.AppendLine($"{tab}{tab}public const string {typeName} = \"{typeName}\";");
+                    AddXmlHelp(sbTypes, $"{tab}", typeList[typeName].TypeDesc);
+                    sbTypes.AppendLine($"{tab}public const string {typeName} = \"{typeName}\";");
+
+                    sbName.AppendLine($"{tab}\t\ttypeof({typeList[typeName].TypeFullName}), // {typeList[typeName].TypeDesc}");
+
                     numberOfList++;
                 }
             }
 
-            sb.AppendLine($"{tab}\tpublic const int Count = {numberOfList};");
-            sb.AppendLine($"{tab}}}");
+            sbTypes.AppendLine();
 
-            return sb.ToString();
+            sbTypes.AppendLine($"{tab}public static Type [] All = new Type []");
+            sbTypes.AppendLine($"{tab}{{");
+            sbTypes.AppendLine(sbName.ToString());
+            sbTypes.AppendLine($"{tab}}};");
+
+            sbTypes.AppendLine($"{tab}public const int Count = {numberOfList};");
+            sbTypes.AppendLine($"}}");
+
+            return sbTypes.ToString();
         }
 
-        private static string ResToCSharpCode(string file, HashSet<string> typeList)
+        private static string ResToCSharpCode(string file, Dictionary<string, TypeInfo> typeList)
         {
             string tab = "\t";
             string typeName = null;
+            string typeDesc = null;
             string classPerTypeName = null;
 
             bool dataMapStarted = false;
@@ -115,28 +133,28 @@ namespace Res2Query
 
                 if (item.StartsWith(".Func,") == true)
                 {
-                    classPerTypeName = ToQueryTypeName(item, tab, out typeName);
+                    classPerTypeName = ToQueryTypeName(item, tab, out typeName, out typeDesc);
 
-                    if (typeList.Contains(typeName) == true)
+                    if (typeList.ContainsKey(typeName) == true)
                     {
                         return "";
                     }
 
-                    typeList.Add(typeName);
+                    typeList.Add(typeName, new TypeInfo(typeName, $"XQ{typeName}", typeDesc, false));
                     continue;
                 }
 
                 if (item.StartsWith(".Feed,") == true)
                 {
-                    classPerTypeName = ToRealTypeName(item, tab, out typeName);
+                    classPerTypeName = ToRealTypeName(item, tab, out typeName, out typeDesc);
 
-                    if (typeList.Contains(typeName) == true)
+                    if (typeList.ContainsKey(typeName) == true)
                     {
                         return "";
                     }
 
                     isRealType = true;
-                    typeList.Add(typeName);
+                    typeList.Add(typeName, new TypeInfo(typeName, $"XR{typeName}", typeDesc, true));
                     continue;
                 }
 
@@ -171,6 +189,7 @@ namespace Res2Query
 
             string classPrefix = (isRealType == true) ? "XR" : "XQ";
 
+            AddXmlHelp(sbClass, $"{tab}", typeDesc);
             sbClass.AppendLine($"{tab}public partial class {classPrefix}{typeName} : " + ((isRealType == true) ? "XingReal" : "XingQuery"));
             sbClass.AppendLine($"{tab}{{");
 
@@ -700,11 +719,11 @@ namespace Res2Query
             return typeName;
         }
 
-        static string ToRealTypeName(string line, string tab, out string typeName)
+        static string ToRealTypeName(string line, string tab, out string typeName, out string typeDesc)
         {
             string[] items = line.Trim(' ', ';').Split(',');
 
-            string typeDesc = items[1].Trim();
+            typeDesc = items[1].Trim();
             typeName = items[2].Trim();
             int key = 0;
             int group = 0;
@@ -748,6 +767,7 @@ namespace Res2Query
 
                 sb.AppendLine();
 
+                AddXmlHelp(sb, $"{tab}\t", typeDesc);
                 sb.AppendLine($"{tab}\tpublic XR{typeName}() : base(\"{typeName}\") {{ }}");
 
             }
@@ -755,11 +775,11 @@ namespace Res2Query
             return sb.ToString();
         }
 
-        private static string ToQueryTypeName(string line, string tab, out string typeName)
+        private static string ToQueryTypeName(string line, string tab, out string typeName, out string typeDesc)
         {
             string[] items = line.Trim(' ', ';').Split(',');
 
-            string typeDesc = items[1].Trim();
+            typeDesc = items[1].Trim();
             typeName = items[2].Trim();
             bool hasAttr = false;
             bool hasBlock = false;

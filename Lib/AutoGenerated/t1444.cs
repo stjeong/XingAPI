@@ -505,6 +505,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 시가총액상위(t1444)
+	/// </summary>
 	public partial class XQt1444 : XingQuery
 	{
 		/// <summary>

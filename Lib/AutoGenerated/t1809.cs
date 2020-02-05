@@ -588,6 +588,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 신호조회(t1809)
+	/// </summary>
 	public partial class XQt1809 : XingQuery
 	{
 		/// <summary>

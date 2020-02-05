@@ -964,6 +964,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// KOSDAQ호가잔량(HA)
+	/// </summary>
 	public partial class XRHA_ : XingReal
 	{
 		/// <summary>
@@ -1008,6 +1011,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// KOSDAQ호가잔량(HA)
+		/// </summary>
 		public XRHA_() : base("HA_") { }
 
 

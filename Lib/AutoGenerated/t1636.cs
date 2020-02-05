@@ -638,6 +638,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 종목별프로그램매매동향(t1636)
+	/// </summary>
 	public partial class XQt1636 : XingQuery
 	{
 		/// <summary>

@@ -301,6 +301,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 실시간 뉴스 제목 패킷(NWS)
+	/// </summary>
 	public partial class XRNWS : XingReal
 	{
 		/// <summary>
@@ -345,6 +348,9 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
+		/// <summary>
+		/// 실시간 뉴스 제목 패킷(NWS)
+		/// </summary>
 		public XRNWS() : base("NWS") { }
 
 

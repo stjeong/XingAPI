@@ -243,6 +243,9 @@ namespace XingAPINet
 		}
 	}
 
+	/// <summary>
+	/// 기초자산리스트조회(t9905)
+	/// </summary>
 	public partial class XQt9905 : XingQuery
 	{
 		/// <summary>
