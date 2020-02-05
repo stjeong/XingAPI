@@ -943,9 +943,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 기간별투자자매매추이(챠트)
-	/// </summary>
 	public partial class XQt1665 : XingQuery
 	{
 		/// <summary>

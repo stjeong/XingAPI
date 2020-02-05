@@ -1644,9 +1644,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSPI프로그램매매전체집계(PM)
-	/// </summary>
 	public partial class XRPM_ : XingReal
 	{
 		/// <summary>
@@ -1691,9 +1688,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSPI프로그램매매전체집계(PM)
-		/// </summary>
 		public XRPM_() : base("PM_") { }
 
 

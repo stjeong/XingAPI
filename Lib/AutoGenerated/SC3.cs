@@ -2372,9 +2372,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식주문취소
-	/// </summary>
 	public partial class XRSC3 : XingReal
 	{
 		/// <summary>
@@ -2419,9 +2416,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 주식주문취소
-		/// </summary>
 		public XRSC3() : base("SC3") { }
 
 

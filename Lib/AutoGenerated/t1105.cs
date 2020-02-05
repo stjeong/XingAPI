@@ -341,9 +341,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식피못/디마크조회(t1105)
-	/// </summary>
 	public partial class XQt1105 : XingQuery
 	{
 		/// <summary>

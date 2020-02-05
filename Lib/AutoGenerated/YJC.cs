@@ -284,9 +284,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식선물예상체결(YJC)
-	/// </summary>
 	public partial class XRYJC : XingReal
 	{
 		/// <summary>
@@ -331,9 +328,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 주식선물예상체결(YJC)
-		/// </summary>
 		public XRYJC() : base("YJC") { }
 
 

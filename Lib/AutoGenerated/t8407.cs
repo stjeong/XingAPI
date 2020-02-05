@@ -582,9 +582,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// API용주식멀티현재가조회(t8407)
-	/// </summary>
 	public partial class XQt8407 : XingQuery
 	{
 		/// <summary>

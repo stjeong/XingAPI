@@ -803,9 +803,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 업종챠트(종합)(t4203)
-	/// </summary>
 	public partial class XQt4203 : XingQuery
 	{
 		/// <summary>

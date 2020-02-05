@@ -573,9 +573,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 예상지수(t1485)
-	/// </summary>
 	public partial class XQt1485 : XingQuery
 	{
 		/// <summary>

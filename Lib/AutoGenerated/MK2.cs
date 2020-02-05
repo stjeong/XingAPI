@@ -488,9 +488,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// US지수(MK2)
-	/// </summary>
 	public partial class XRMK2 : XingReal
 	{
 		/// <summary>
@@ -535,9 +532,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// US지수(MK2)
-		/// </summary>
 		public XRMK2() : base("MK2") { }
 
 

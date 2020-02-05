@@ -409,9 +409,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 프로그램매매종합조회(미니)(t1640)
-	/// </summary>
 	public partial class XQt1640 : XingQuery
 	{
 		/// <summary>

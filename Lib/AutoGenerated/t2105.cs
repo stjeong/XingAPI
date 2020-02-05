@@ -936,9 +936,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물/옵션현재가호가조회(t2105)
-	/// </summary>
 	public partial class XQt2105 : XingQuery
 	{
 		/// <summary>

@@ -936,9 +936,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// CME야간선물호가조회(t2802)
-	/// </summary>
 	public partial class XQt2802 : XingQuery
 	{
 		/// <summary>

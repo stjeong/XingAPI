@@ -921,6 +921,8 @@
       <Link>XA_Session.dll.manifest</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="deploy_nuget.bat" />
+    <None Include="XingAPINet.nuspec" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

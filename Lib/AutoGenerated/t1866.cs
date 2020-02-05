@@ -451,9 +451,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 서버저장조건리스트조회(API)(t1866)
-	/// </summary>
 	public partial class XQt1866 : XingQuery
 	{
 		/// <summary>

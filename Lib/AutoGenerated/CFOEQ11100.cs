@@ -2080,9 +2080,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물옵션가정산예탁금상세
-	/// </summary>
 	public partial class XQCFOEQ11100 : XingQuery
 	{
 		/// <summary>

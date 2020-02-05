@@ -934,9 +934,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물옵션 CME 매매거래현황
-	/// </summary>
 	public partial class XQCCEAQ01100 : XingQuery
 	{
 		/// <summary>

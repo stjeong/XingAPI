@@ -1338,9 +1338,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식선물호가(JH0)
-	/// </summary>
 	public partial class XRJH0 : XingReal
 	{
 		/// <summary>
@@ -1385,9 +1382,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 주식선물호가(JH0)
-		/// </summary>
 		public XRJH0() : base("JH0") { }
 
 

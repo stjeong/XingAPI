@@ -498,9 +498,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// LP대상종목정보조회(t1959)
-	/// </summary>
 	public partial class XQt1959 : XingQuery
 	{
 		/// <summary>

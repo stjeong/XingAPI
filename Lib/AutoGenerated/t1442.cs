@@ -617,9 +617,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 신고/신저가(t1442)
-	/// </summary>
 	public partial class XQt1442 : XingQuery
 	{
 		/// <summary>

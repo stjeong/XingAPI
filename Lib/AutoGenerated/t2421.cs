@@ -638,9 +638,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 미결제약정추이(t2421)
-	/// </summary>
 	public partial class XQt2421 : XingQuery
 	{
 		/// <summary>

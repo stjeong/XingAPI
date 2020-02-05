@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+    <assemblyIdentity version="1.0.0.1" processorArchitecture="x86" name="XA_DataSet.dll" type="win32">
+    </assemblyIdentity>
+
+    <file name="XA_DataSet.dll">
+        <comClass clsid="{4D654021-F9D9-49F7-B2F9-6529A19746F7}" threadingModel="Apartment" tlbid="{CAA15009-CF22-4D1D-AF40-093DBC5A6A0F}" progid="XA_DataSet.XAReal" />
+        <comClass clsid="{781520A9-4C8C-433B-AA6E-EE9E94108639}" threadingModel="Apartment" tlbid="{CAA15009-CF22-4D1D-AF40-093DBC5A6A0F}" progid="XA_DataSet.XAQuery" />
+        <typelib tlbid="{CAA15009-CF22-4D1D-AF40-093DBC5A6A0F}" version="1.0" helpdir="" resourceid="0" />
+    </file>
+    <comInterfaceExternalProxyStub name="IXAReal"
+                                   iid="{ED0FC93A-7879-4C0D-BA8F-71A7E2B5A737}"
+                                   proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"
+                                   baseInterface="{00020400-0000-0000-C000-000000000046}"
+                                   tlbid="{CAA15009-CF22-4D1D-AF40-093DBC5A6A0F}">
+    </comInterfaceExternalProxyStub>
+
+    <comInterfaceExternalProxyStub name="IXAQuery"
+                                   iid="{255B43AE-B290-4435-9BA7-37FCAAD04D77}"
+                                   proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"
+                                   baseInterface="{00020400-0000-0000-C000-000000000046}"
+                                   tlbid="{CAA15009-CF22-4D1D-AF40-093DBC5A6A0F}">
+    </comInterfaceExternalProxyStub>
+</assembly>

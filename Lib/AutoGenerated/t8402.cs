@@ -1344,9 +1344,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식선물현재가조회(API용)(t8402)
-	/// </summary>
 	public partial class XQt8402 : XingQuery
 	{
 		/// <summary>

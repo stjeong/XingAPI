@@ -749,9 +749,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 챠트지표데이터조회
-	/// </summary>
 	public partial class XQCHARTINDEX : XingQuery
 	{
 		/// <summary>

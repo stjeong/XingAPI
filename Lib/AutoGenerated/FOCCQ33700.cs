@@ -1067,9 +1067,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물옵션 기간별 계좌 수익률 현황
-	/// </summary>
 	public partial class XQFOCCQ33700 : XingQuery
 	{
 		/// <summary>

@@ -926,9 +926,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식당일매매일지/수수료(전일)(t0151)
-	/// </summary>
 	public partial class XQt0151 : XingQuery
 	{
 		/// <summary>

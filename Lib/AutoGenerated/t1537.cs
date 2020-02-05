@@ -591,9 +591,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 테마종목별시세조회(t1537)
-	/// </summary>
 	public partial class XQt1537 : XingQuery
 	{
 		/// <summary>

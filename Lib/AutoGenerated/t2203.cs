@@ -654,9 +654,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 기간별주가(t2203)
-	/// </summary>
 	public partial class XQt2203 : XingQuery
 	{
 		/// <summary>

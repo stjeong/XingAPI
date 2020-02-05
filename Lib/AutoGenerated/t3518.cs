@@ -738,9 +738,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 해외실시간지수(t3518)
-	/// </summary>
 	public partial class XQt3518 : XingQuery
 	{
 		/// <summary>

@@ -1560,9 +1560,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ELW지표검색(t1955)
-	/// </summary>
 	public partial class XQt1955 : XingQuery
 	{
 		/// <summary>

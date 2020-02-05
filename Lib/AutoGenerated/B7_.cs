@@ -1304,9 +1304,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ETF호가잔량(B7)
-	/// </summary>
 	public partial class XRB7_ : XingReal
 	{
 		/// <summary>
@@ -1351,9 +1348,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// ETF호가잔량(B7)
-		/// </summary>
 		public XRB7_() : base("B7_") { }
 
 

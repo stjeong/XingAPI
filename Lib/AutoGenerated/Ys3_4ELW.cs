@@ -369,9 +369,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ELW예상체결(Ys3)
-	/// </summary>
 	public partial class XRYs3 : XingReal
 	{
 		/// <summary>
@@ -416,9 +413,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// ELW예상체결(Ys3)
-		/// </summary>
 		public XRYs3() : base("Ys3") { }
 
 

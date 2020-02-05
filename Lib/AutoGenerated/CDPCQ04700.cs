@@ -2595,9 +2595,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 계좌 거래내역
-	/// </summary>
 	public partial class XQCDPCQ04700 : XingQuery
 	{
 		/// <summary>

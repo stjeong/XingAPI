@@ -573,9 +573,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ETF시간별추이(t1902)
-	/// </summary>
 	public partial class XQt1902 : XingQuery
 	{
 		/// <summary>

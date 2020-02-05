@@ -866,9 +866,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식계좌 기간별수익률 상세
-	/// </summary>
 	public partial class XQFOCCQ33600 : XingQuery
 	{
 		/// <summary>

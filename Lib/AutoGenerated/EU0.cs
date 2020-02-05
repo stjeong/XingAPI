@@ -2185,9 +2185,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// EUX접수
-	/// </summary>
 	public partial class XREU0 : XingReal
 	{
 		/// <summary>
@@ -2232,9 +2229,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// EUX접수
-		/// </summary>
 		public XREU0() : base("EU0") { }
 
 

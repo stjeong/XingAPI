@@ -1623,9 +1623,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// CME야간선물시간대별투자자매매추이(t2813)
-	/// </summary>
 	public partial class XQt2813 : XingQuery
 	{
 		/// <summary>

@@ -782,9 +782,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물옵션 주문가능수량조회
-	/// </summary>
 	public partial class XQCFOAQ10100 : XingQuery
 	{
 		/// <summary>

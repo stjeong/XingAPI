@@ -301,9 +301,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 상품선물예상체결(YC3)
-	/// </summary>
 	public partial class XRYC3 : XingReal
 	{
 		/// <summary>
@@ -348,9 +345,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 상품선물예상체결(YC3)
-		/// </summary>
 		public XRYC3() : base("YC3") { }
 
 

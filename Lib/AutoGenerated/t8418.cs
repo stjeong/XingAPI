@@ -870,9 +870,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 업종챠트(N분)(t8418)
-	/// </summary>
 	public partial class XQt8418 : XingQuery
 	{
 		/// <summary>

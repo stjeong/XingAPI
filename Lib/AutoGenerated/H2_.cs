@@ -284,9 +284,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSPI장전시간외호가잔량(H2)
-	/// </summary>
 	public partial class XRH2_ : XingReal
 	{
 		/// <summary>
@@ -331,9 +328,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSPI장전시간외호가잔량(H2)
-		/// </summary>
 		public XRH2_() : base("H2_") { }
 
 

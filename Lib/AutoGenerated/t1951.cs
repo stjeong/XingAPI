@@ -604,9 +604,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ELW시간대별체결조회(t1951)
-	/// </summary>
 	public partial class XQt1951 : XingQuery
 	{
 		/// <summary>

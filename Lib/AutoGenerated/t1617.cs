@@ -689,9 +689,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 투자자매매종합2(t1617)
-	/// </summary>
 	public partial class XQt1617 : XingQuery
 	{
 		/// <summary>

@@ -413,9 +413,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식종목조회 API용(t8436)
-	/// </summary>
 	public partial class XQt8436 : XingQuery
 	{
 		/// <summary>

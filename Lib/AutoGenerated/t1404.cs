@@ -555,9 +555,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 관리/불성실/투자유의조회(t1404)
-	/// </summary>
 	public partial class XQt1404 : XingQuery
 	{
 		/// <summary>

@@ -961,9 +961,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// FNG_요약(t3320)
-	/// </summary>
 	public partial class XQt3320 : XingQuery
 	{
 		/// <summary>

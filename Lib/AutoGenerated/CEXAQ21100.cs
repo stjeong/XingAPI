@@ -985,9 +985,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 유렉스 주문체결내역조회
-	/// </summary>
 	public partial class XQCEXAQ21100 : XingQuery
 	{
 		/// <summary>

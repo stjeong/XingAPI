@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+  <assemblyIdentity version="1.0.0.1" processorArchitecture="x86" name="XA_Session.dll" type="win32">
+  </assemblyIdentity>
+  
+  <file name="XA_Session.dll">
+    <comClass clsid="{7FEF321C-6BFD-413C-AA80-541A275434A1}" threadingModel="Apartment" tlbid="{F5CC65C5-2965-451B-A6C4-CBC7B8B4AE08}" progid="XA_Session.XASession" />
+    <typelib tlbid="{F5CC65C5-2965-451B-A6C4-CBC7B8B4AE08}" version="1.0" helpdir="" resourceid="0" />
+  </file>
+  <comInterfaceExternalProxyStub name="IXASession" 
+                                 iid="{8C0F4618-3BAB-4F19-A59B-A32E08EA711F}" 
+                                 proxyStubClsid32="{00020424-0000-0000-C000-000000000046}" 
+                                 baseInterface="{00020400-0000-0000-C000-000000000046}" 
+                                 tlbid="{F5CC65C5-2965-451B-A6C4-CBC7B8B4AE08}">
+  </comInterfaceExternalProxyStub>
+</assembly>

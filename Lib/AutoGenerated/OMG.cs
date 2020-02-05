@@ -471,9 +471,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSPI200옵션민감도(MG)
-	/// </summary>
 	public partial class XROMG : XingReal
 	{
 		/// <summary>
@@ -518,9 +515,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSPI200옵션민감도(MG)
-		/// </summary>
 		public XROMG() : base("OMG") { }
 
 

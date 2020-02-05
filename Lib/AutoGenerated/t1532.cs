@@ -243,9 +243,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 종목별테마(t1532)
-	/// </summary>
 	public partial class XQt1532 : XingQuery
 	{
 		/// <summary>

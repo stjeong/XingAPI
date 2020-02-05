@@ -488,9 +488,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 상/하한가근접이탈(SHD)
-	/// </summary>
 	public partial class XRSHD : XingReal
 	{
 		/// <summary>
@@ -535,9 +532,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 상/하한가근접이탈(SHD)
-		/// </summary>
 		public XRSHD() : base("SHD") { }
 
 

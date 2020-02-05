@@ -344,9 +344,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물/옵션멀티현재가조회(t8434)
-	/// </summary>
 	public partial class XQt8434 : XingQuery
 	{
 		/// <summary>

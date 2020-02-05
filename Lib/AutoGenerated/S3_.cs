@@ -624,9 +624,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSPI체결(S3)
-	/// </summary>
 	public partial class XRS3_ : XingReal
 	{
 		/// <summary>
@@ -671,9 +668,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSPI체결(S3)
-		/// </summary>
 		public XRS3_() : base("S3_") { }
 
 

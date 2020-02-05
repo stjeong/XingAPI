@@ -1389,9 +1389,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 계좌 미결제 약정현황(평균가)
-	/// </summary>
 	public partial class XQCFOFQ02400 : XingQuery
 	{
 		/// <summary>

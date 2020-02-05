@@ -369,9 +369,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 업종별투자자별매매현황(BM)
-	/// </summary>
 	public partial class XRBM_ : XingReal
 	{
 		/// <summary>
@@ -416,9 +413,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 업종별투자자별매매현황(BM)
-		/// </summary>
 		public XRBM_() : base("BM_") { }
 
 

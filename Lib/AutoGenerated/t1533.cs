@@ -361,9 +361,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 특이테마(t1533)
-	/// </summary>
 	public partial class XQt1533 : XingQuery
 	{
 		/// <summary>

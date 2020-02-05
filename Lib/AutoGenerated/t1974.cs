@@ -438,9 +438,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ELW기초자산동일종목(t1974)
-	/// </summary>
 	public partial class XQt1974 : XingQuery
 	{
 		/// <summary>

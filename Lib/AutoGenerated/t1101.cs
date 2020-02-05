@@ -1650,9 +1650,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식현재가호가조회(t1101)
-	/// </summary>
 	public partial class XQt1101 : XingQuery
 	{
 		/// <summary>

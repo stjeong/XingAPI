@@ -2480,9 +2480,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// BEP단가조회
-	/// </summary>
 	public partial class XQCSPAQ12300 : XingQuery
 	{
 		/// <summary>

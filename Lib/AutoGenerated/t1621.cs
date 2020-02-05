@@ -1098,9 +1098,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 업종별분별투자자매매동향(챠트용)
-	/// </summary>
 	public partial class XQt1621 : XingQuery
 	{
 		/// <summary>

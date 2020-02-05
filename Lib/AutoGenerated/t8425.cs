@@ -226,9 +226,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 전체테마(t8425)
-	/// </summary>
 	public partial class XQt8425 : XingQuery
 	{
 		/// <summary>

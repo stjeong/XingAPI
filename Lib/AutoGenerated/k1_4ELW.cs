@@ -1151,9 +1151,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ELW거래원(k1)
-	/// </summary>
 	public partial class XRk1_ : XingReal
 	{
 		/// <summary>
@@ -1198,9 +1195,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// ELW거래원(k1)
-		/// </summary>
 		public XRk1_() : base("k1_") { }
 
 

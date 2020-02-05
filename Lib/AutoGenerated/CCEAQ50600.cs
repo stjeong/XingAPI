@@ -1156,9 +1156,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물옵션 CME 계좌잔고 및 평가현황
-	/// </summary>
 	public partial class XQCCEAQ50600 : XingQuery
 	{
 		/// <summary>

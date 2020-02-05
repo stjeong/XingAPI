@@ -2347,9 +2347,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ETF현재가(시세)조회(t1901)
-	/// </summary>
 	public partial class XQt1901 : XingQuery
 	{
 		/// <summary>

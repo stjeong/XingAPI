@@ -654,9 +654,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식선물기간별주가(API용)(t8405)
-	/// </summary>
 	public partial class XQt8405 : XingQuery
 	{
 		/// <summary>

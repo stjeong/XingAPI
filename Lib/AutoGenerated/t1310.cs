@@ -604,9 +604,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식당일전일분틱조회(t1310)
-	/// </summary>
 	public partial class XQt1310 : XingQuery
 	{
 		/// <summary>

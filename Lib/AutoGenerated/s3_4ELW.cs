@@ -675,9 +675,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ELW체결(s3)
-	/// </summary>
 	public partial class XRs3_ : XingReal
 	{
 		/// <summary>
@@ -722,9 +719,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// ELW체결(s3)
-		/// </summary>
 		public XRs3_() : base("s3_") { }
 
 

@@ -233,9 +233,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSDAQ우선호가(KS)
-	/// </summary>
 	public partial class XRKS_ : XingReal
 	{
 		/// <summary>
@@ -280,9 +277,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSDAQ우선호가(KS)
-		/// </summary>
 		public XRKS_() : base("KS_") { }
 
 

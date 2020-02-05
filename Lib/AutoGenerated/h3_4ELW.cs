@@ -1304,9 +1304,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ELW호가잔량(h3)
-	/// </summary>
 	public partial class XRh3_ : XingReal
 	{
 		/// <summary>
@@ -1351,9 +1348,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// ELW호가잔량(h3)
-		/// </summary>
 		public XRh3_() : base("h3_") { }
 
 

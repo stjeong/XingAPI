@@ -675,9 +675,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSPI200선물체결(C0)
-	/// </summary>
 	public partial class XRFC0 : XingReal
 	{
 		/// <summary>
@@ -722,9 +719,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSPI200선물체결(C0)
-		/// </summary>
 		public XRFC0() : base("FC0") { }
 
 

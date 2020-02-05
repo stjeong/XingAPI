@@ -654,9 +654,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// CME야간선물기간별주가(t2805)
-	/// </summary>
 	public partial class XQt2805 : XingQuery
 	{
 		/// <summary>

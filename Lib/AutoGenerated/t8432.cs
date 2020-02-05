@@ -345,9 +345,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 지수선물마스터조회API용(t8432)
-	/// </summary>
 	public partial class XQt8432 : XingQuery
 	{
 		/// <summary>

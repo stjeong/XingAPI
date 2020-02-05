@@ -420,9 +420,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 코스피ETF종목실시간NAV(I5)
-	/// </summary>
 	public partial class XRI5_ : XingReal
 	{
 		/// <summary>
@@ -467,9 +464,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 코스피ETF종목실시간NAV(I5)
-		/// </summary>
 		public XRI5_() : base("I5_") { }
 
 

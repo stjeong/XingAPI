@@ -718,9 +718,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 과거데이터시간대별조회(t8427)
-	/// </summary>
 	public partial class XQt8427 : XingQuery
 	{
 		/// <summary>

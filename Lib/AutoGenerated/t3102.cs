@@ -433,9 +433,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 뉴스본문(t3102)
-	/// </summary>
 	public partial class XQt3102 : XingQuery
 	{
 		/// <summary>

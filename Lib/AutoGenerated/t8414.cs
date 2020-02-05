@@ -887,9 +887,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물옵션차트(틱/n틱)(t8414)
-	/// </summary>
 	public partial class XQt8414 : XingQuery
 	{
 		/// <summary>

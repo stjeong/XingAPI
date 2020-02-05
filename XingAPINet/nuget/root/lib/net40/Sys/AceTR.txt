@@ -1,0 +1,27 @@
+;
+;시장:TRCODE:설명
+;
+주식:CSPAT00600:신규 주문
+주식:CSPAT00700:정정 주문
+주식:CSPAT00800:취소 주문
+주식:CSPAQ12300:잔고조회
+주식:CSPAQ13700:주문체결내역조회
+;
+선물옵션:CFOAT00100:신규 주문
+선물옵션:CFOAT00200:정정 주문
+선물옵션:CFOAT00300:취소 주문
+선물옵션:CFOFQ02400:미결재약정조회
+선물옵션:CFOAQ00600:주문체결내역조회
+;
+CME:CCEAT00100:신규 주문
+CME:CCEAT00200:정정 주문
+CME:CCEAT00300:취소 주문
+CME:CCEAQ06000:주문체결내역조회
+CME:CCEAQ50600:계좌잔고 및 평가현황
+;
+EUREX:CEXAT11100:신규 주문
+EUREX:CEXAT11200:정정 주문
+EUREX:CEXAT11300:취소 주문
+EUREX:CEXAQ21100:주문체결내역조회
+EUREX:CEXAQ31100:야간장잔고 및 평가현황
+;

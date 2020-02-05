@@ -874,9 +874,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식챠트(일주월)(t8413)
-	/// </summary>
 	public partial class XQt8413 : XingQuery
 	{
 		/// <summary>

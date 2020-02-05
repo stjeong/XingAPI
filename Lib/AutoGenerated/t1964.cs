@@ -981,9 +981,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ELW전광판(t1964)
-	/// </summary>
 	public partial class XQt1964 : XingQuery
 	{
 		/// <summary>

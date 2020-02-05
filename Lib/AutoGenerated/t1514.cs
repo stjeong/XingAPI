@@ -790,9 +790,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 업종기간별추이(t1514)
-	/// </summary>
 	public partial class XQt1514 : XingQuery
 	{
 		/// <summary>

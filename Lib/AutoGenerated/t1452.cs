@@ -600,9 +600,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 거래량상위(t1452)
-	/// </summary>
 	public partial class XQt1452 : XingQuery
 	{
 		/// <summary>

@@ -284,9 +284,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 지수선물예상체결(YFC)
-	/// </summary>
 	public partial class XRYFC : XingReal
 	{
 		/// <summary>
@@ -331,9 +328,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 지수선물예상체결(YFC)
-		/// </summary>
 		public XRYFC() : base("YFC") { }
 
 

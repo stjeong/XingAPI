@@ -259,9 +259,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 테마별종목(t1531)
-	/// </summary>
 	public partial class XQt1531 : XingQuery
 	{
 		/// <summary>

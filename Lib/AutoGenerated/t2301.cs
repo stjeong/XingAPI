@@ -1656,9 +1656,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 옵션전광판(t2301)
-	/// </summary>
 	public partial class XQt2301 : XingQuery
 	{
 		/// <summary>

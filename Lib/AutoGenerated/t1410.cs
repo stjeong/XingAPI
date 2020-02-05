@@ -437,9 +437,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 초저유동성조회(t1410)
-	/// </summary>
 	public partial class XQt1410 : XingQuery
 	{
 		/// <summary>

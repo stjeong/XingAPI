@@ -698,9 +698,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 종목별신용정보(t1926)
-	/// </summary>
 	public partial class XQt1926 : XingQuery
 	{
 		/// <summary>

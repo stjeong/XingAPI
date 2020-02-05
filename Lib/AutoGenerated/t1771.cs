@@ -653,9 +653,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 종목별회원사추이(t1771)
-	/// </summary>
 	public partial class XQt1771 : XingQuery
 	{
 		/// <summary>

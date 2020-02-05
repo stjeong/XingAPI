@@ -605,9 +605,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 재무순위종합(t3341)
-	/// </summary>
 	public partial class XQt3341 : XingQuery
 	{
 		/// <summary>

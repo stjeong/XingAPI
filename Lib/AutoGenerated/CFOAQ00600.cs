@@ -1202,9 +1202,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물옵션 계좌주문체결내역조회
-	/// </summary>
 	public partial class XQCFOAQ00600 : XingQuery
 	{
 		/// <summary>

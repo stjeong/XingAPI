@@ -369,9 +369,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSDAQ예상체결(YK3)
-	/// </summary>
 	public partial class XRYK3 : XingReal
 	{
 		/// <summary>
@@ -416,9 +413,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSDAQ예상체결(YK3)
-		/// </summary>
 		public XRYK3() : base("YK3") { }
 
 

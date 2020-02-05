@@ -267,9 +267,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식선물가격제한폭확대(JX0)
-	/// </summary>
 	public partial class XRJX0 : XingReal
 	{
 		/// <summary>
@@ -314,9 +311,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 주식선물가격제한폭확대(JX0)
-		/// </summary>
 		public XRJX0() : base("JX0") { }
 
 

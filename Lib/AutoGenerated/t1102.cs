@@ -2891,9 +2891,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식현재가(시세)조회(t1102)
-	/// </summary>
 	public partial class XQt1102 : XingQuery
 	{
 		/// <summary>

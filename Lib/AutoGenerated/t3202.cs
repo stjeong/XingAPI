@@ -327,9 +327,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 종목별증시일정(t3202)
-	/// </summary>
 	public partial class XQt3202 : XingQuery
 	{
 		/// <summary>

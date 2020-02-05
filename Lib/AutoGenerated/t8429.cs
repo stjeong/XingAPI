@@ -529,9 +529,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// EUREX야간옵션선물틱분별체결조회챠트(t8429)
-	/// </summary>
 	public partial class XQt8429 : XingQuery
 	{
 		/// <summary>

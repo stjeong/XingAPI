@@ -701,9 +701,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 챠트엑셀데이터조회
-	/// </summary>
 	public partial class XQCHARTEXCEL : XingQuery
 	{
 		/// <summary>

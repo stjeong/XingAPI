@@ -768,9 +768,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ELW거래량상위(t1961)
-	/// </summary>
 	public partial class XQt1961 : XingQuery
 	{
 		/// <summary>

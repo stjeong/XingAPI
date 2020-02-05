@@ -709,9 +709,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSPI프로그램매매종목별(PH)
-	/// </summary>
 	public partial class XRPH_ : XingReal
 	{
 		/// <summary>
@@ -756,9 +753,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSPI프로그램매매종목별(PH)
-		/// </summary>
 		public XRPH_() : base("PH_") { }
 
 

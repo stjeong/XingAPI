@@ -1175,9 +1175,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물옵션 CME 예탁금증거금조회
-	/// </summary>
 	public partial class XQCCEBQ10500 : XingQuery
 	{
 		/// <summary>

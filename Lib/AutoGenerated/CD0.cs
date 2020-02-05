@@ -267,9 +267,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 상품선물실시간상하한가(D0)
-	/// </summary>
 	public partial class XRCD0 : XingReal
 	{
 		/// <summary>
@@ -314,9 +311,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 상품선물실시간상하한가(D0)
-		/// </summary>
 		public XRCD0() : base("CD0") { }
 
 

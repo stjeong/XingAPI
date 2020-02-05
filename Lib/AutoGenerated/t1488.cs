@@ -668,9 +668,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 예상체결가등락율상위조회(t1488)
-	/// </summary>
 	public partial class XQt1488 : XingQuery
 	{
 		/// <summary>

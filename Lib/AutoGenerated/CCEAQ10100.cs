@@ -782,9 +782,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물옵션 CME 주문가능 수량/금액 조회
-	/// </summary>
 	public partial class XQCCEAQ10100 : XingQuery
 	{
 		/// <summary>

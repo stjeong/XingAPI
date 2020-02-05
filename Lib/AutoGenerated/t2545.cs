@@ -1164,9 +1164,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 상품선물투자자매매동향(챠트용)
-	/// </summary>
 	public partial class XQt2545 : XingQuery
 	{
 		/// <summary>

@@ -624,9 +624,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSDAQ체결(K3)
-	/// </summary>
 	public partial class XRK3_ : XingReal
 	{
 		/// <summary>
@@ -671,9 +668,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSDAQ체결(K3)
-		/// </summary>
 		public XRK3_() : base("K3_") { }
 
 

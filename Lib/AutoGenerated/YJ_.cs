@@ -335,9 +335,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 예상지수(YJ)
-	/// </summary>
 	public partial class XRYJ_ : XingReal
 	{
 		/// <summary>
@@ -382,9 +379,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 예상지수(YJ)
-		/// </summary>
 		public XRYJ_() : base("YJ_") { }
 
 

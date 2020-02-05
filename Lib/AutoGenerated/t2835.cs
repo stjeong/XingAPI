@@ -1130,9 +1130,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// EUREX옵션선물시세전광판(t2835)
-	/// </summary>
 	public partial class XQt2835 : XingQuery
 	{
 		/// <summary>

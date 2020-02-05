@@ -284,9 +284,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ELW장전시간외호가잔량(h2)
-	/// </summary>
 	public partial class XRh2_ : XingReal
 	{
 		/// <summary>
@@ -331,9 +328,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// ELW장전시간외호가잔량(h2)
-		/// </summary>
 		public XRh2_() : base("h2_") { }
 
 

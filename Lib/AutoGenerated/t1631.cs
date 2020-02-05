@@ -571,9 +571,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 프로그램매매종합조회(t1631)
-	/// </summary>
 	public partial class XQt1631 : XingQuery
 	{
 		/// <summary>

@@ -553,9 +553,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 종목별상위회원사(t1752)
-	/// </summary>
 	public partial class XQt1752 : XingQuery
 	{
 		/// <summary>

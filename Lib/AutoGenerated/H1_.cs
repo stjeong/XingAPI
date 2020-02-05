@@ -964,9 +964,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSPI호가잔량(H1)
-	/// </summary>
 	public partial class XRH1_ : XingReal
 	{
 		/// <summary>
@@ -1011,9 +1008,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSPI호가잔량(H1)
-		/// </summary>
 		public XRH1_() : base("H1_") { }
 
 

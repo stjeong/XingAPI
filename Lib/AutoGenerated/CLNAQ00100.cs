@@ -951,9 +951,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 예탁담보융자가능종목현황조회
-	/// </summary>
 	public partial class XQCLNAQ00100 : XingQuery
 	{
 		/// <summary>

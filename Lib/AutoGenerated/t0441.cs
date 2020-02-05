@@ -639,9 +639,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물/옵션잔고평가(이동평균)(t0441)
-	/// </summary>
 	public partial class XQt0441 : XingQuery
 	{
 		/// <summary>

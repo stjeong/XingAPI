@@ -243,9 +243,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 지수선물마스터조회API용(t9943)
-	/// </summary>
 	public partial class XQt9943 : XingQuery
 	{
 		/// <summary>

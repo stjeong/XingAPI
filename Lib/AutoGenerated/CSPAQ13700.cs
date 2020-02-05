@@ -1439,9 +1439,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 현물계좌주문체결내역조회
-	/// </summary>
 	public partial class XQCSPAQ13700 : XingQuery
 	{
 		/// <summary>

@@ -689,9 +689,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물옵션 옵션매도시 주문증거금조회
-	/// </summary>
 	public partial class XQCFOBQ10800 : XingQuery
 	{
 		/// <summary>

@@ -267,9 +267,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSPI200옵션가격제한폭확대(X0)
-	/// </summary>
 	public partial class XROX0 : XingReal
 	{
 		/// <summary>
@@ -314,9 +311,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSPI200옵션가격제한폭확대(X0)
-		/// </summary>
 		public XROX0() : base("OX0") { }
 
 

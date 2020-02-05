@@ -1175,9 +1175,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 선물옵션 계좌예탁금증거금조회
-	/// </summary>
 	public partial class XQCFOBQ10500 : XingQuery
 	{
 		/// <summary>

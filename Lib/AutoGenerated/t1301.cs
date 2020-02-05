@@ -604,9 +604,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식시간대별체결조회(t1301)
-	/// </summary>
 	public partial class XQt1301 : XingQuery
 	{
 		/// <summary>

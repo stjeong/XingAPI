@@ -471,9 +471,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 종목Q클릭검색(씽큐스마트)(t1825)
-	/// </summary>
 	public partial class XQt1825 : XingQuery
 	{
 		/// <summary>

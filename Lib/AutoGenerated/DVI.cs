@@ -301,9 +301,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 시간외단일가VI발동해제(DVI)
-	/// </summary>
 	public partial class XRDVI : XingReal
 	{
 		/// <summary>
@@ -348,9 +345,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// 시간외단일가VI발동해제(DVI)
-		/// </summary>
 		public XRDVI() : base("DVI") { }
 
 

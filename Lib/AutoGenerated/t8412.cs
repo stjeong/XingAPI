@@ -938,9 +938,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식챠트(N분)(t8412)
-	/// </summary>
 	public partial class XQt8412 : XingQuery
 	{
 		/// <summary>

@@ -934,9 +934,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 유렉스 야간장잔고및 평가현황
-	/// </summary>
 	public partial class XQCEXAQ31100 : XingQuery
 	{
 		/// <summary>

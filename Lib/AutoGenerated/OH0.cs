@@ -828,9 +828,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSPI200옵션호가(H0)
-	/// </summary>
 	public partial class XROH0 : XingReal
 	{
 		/// <summary>
@@ -875,9 +872,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSPI200옵션호가(H0)
-		/// </summary>
 		public XROH0() : base("OH0") { }
 
 

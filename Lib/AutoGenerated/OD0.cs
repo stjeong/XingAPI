@@ -267,9 +267,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// KOSPI200옵션실시간상하한가(D0)
-	/// </summary>
 	public partial class XROD0 : XingReal
 	{
 		/// <summary>
@@ -314,9 +311,6 @@ namespace XingAPINet
 		/// </summary>
 		public int Group => _group;
 
-		/// <summary>
-		/// KOSPI200옵션실시간상하한가(D0)
-		/// </summary>
 		public XROD0() : base("OD0") { }
 
 

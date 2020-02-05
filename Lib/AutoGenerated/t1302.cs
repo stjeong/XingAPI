@@ -741,9 +741,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// 주식분별주가조회(t1302)
-	/// </summary>
 	public partial class XQt1302 : XingQuery
 	{
 		/// <summary>

@@ -471,9 +471,6 @@ namespace XingAPINet
 		}
 	}
 
-	/// <summary>
-	/// ELW시간대별예상체결조회(t1973)
-	/// </summary>
 	public partial class XQt1973 : XingQuery
 	{
 		/// <summary>
