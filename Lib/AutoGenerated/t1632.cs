@@ -741,9 +741,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 시간대별프로그램매매추이(t1632)
-		/// </summary>
 		public XQt1632() : base("t1632") { }
 
 

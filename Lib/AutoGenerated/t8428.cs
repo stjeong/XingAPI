@@ -792,9 +792,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 증시주변자금추이(t8428)
-		/// </summary>
 		public XQt8428() : base("t8428") { }
 
 

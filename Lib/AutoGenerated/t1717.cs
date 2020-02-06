@@ -939,9 +939,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 외인기관종목별동향(t1717)
-		/// </summary>
 		public XQt1717() : base("t1717") { }
 
 

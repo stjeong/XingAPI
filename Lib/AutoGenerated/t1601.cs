@@ -6908,9 +6908,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 투자자별종합(t1601)
-		/// </summary>
 		public XQt1601() : base("t1601") { }
 
 

@@ -827,9 +827,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 주식선물시간대별체결조회(API용)(t8404)
-		/// </summary>
 		public XQt8404() : base("t8404") { }
 
 

@@ -667,9 +667,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 선물옵션틱분별체결조회챠트(t2209)
-		/// </summary>
 		public XQt2209() : base("t2209") { }
 
 

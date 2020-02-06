@@ -1647,9 +1647,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// ELW지표검색(t1955)
-		/// </summary>
 		public XQt1955() : base("t1955") { }
 
 

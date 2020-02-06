@@ -640,9 +640,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 종목별상위회원사(t1752)
-		/// </summary>
 		public XQt1752() : base("t1752") { }
 
 

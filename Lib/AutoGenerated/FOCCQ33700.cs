@@ -1154,9 +1154,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 선물옵션 기간별 계좌 수익률 현황
-		/// </summary>
 		public XQFOCCQ33700() : base("FOCCQ33700") { }
 
 

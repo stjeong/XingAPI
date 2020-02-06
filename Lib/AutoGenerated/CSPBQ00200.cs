@@ -1297,9 +1297,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 현물계좌증거금률별주문가능수량조회
-		/// </summary>
 		public XQCSPBQ00200() : base("CSPBQ00200") { }
 
 

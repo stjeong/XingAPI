@@ -1185,9 +1185,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 업종별분별투자자매매동향(챠트용)
-		/// </summary>
 		public XQt1621() : base("t1621") { }
 
 

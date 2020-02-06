@@ -998,9 +998,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// CME야간선물기간별투자자매매추이(챠트)
-		/// </summary>
 		public XQt2814() : base("t2814") { }
 
 

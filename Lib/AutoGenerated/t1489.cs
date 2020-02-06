@@ -655,9 +655,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 예상체결량상위조회(t1489)
-		/// </summary>
 		public XQt1489() : base("t1489") { }
 
 

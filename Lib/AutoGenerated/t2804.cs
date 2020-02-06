@@ -844,9 +844,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// CME야간선물시간대별체결조회(t2804)
-		/// </summary>
 		public XQt2804() : base("t2804") { }
 
 

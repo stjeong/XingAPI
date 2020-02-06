@@ -1072,9 +1072,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 유렉스 주문체결내역조회
-		/// </summary>
 		public XQCEXAQ21100() : base("CEXAQ21100") { }
 
 

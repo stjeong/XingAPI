@@ -741,9 +741,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 기간별주가(t2203)
-		/// </summary>
 		public XQt2203() : base("t2203") { }
 
 

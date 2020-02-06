@@ -678,9 +678,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 테마종목별시세조회(t1537)
-		/// </summary>
 		public XQt1537() : base("t1537") { }
 
 

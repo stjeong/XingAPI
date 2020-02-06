@@ -1023,9 +1023,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// CME야간선물호가조회(t2802)
-		/// </summary>
 		public XQt2802() : base("t2802") { }
 
 

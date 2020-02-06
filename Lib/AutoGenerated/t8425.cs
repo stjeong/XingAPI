@@ -313,9 +313,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 전체테마(t8425)
-		/// </summary>
 		public XQt8425() : base("t8425") { }
 
 

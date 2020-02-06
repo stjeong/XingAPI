@@ -669,9 +669,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// API용주식멀티현재가조회(t8407)
-		/// </summary>
 		public XQt8407() : base("t8407") { }
 
 

@@ -1277,9 +1277,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 유렉스 예탁금 및 통합잔고조회
-		/// </summary>
 		public XQCEXAQ31200() : base("CEXAQ31200") { }
 
 

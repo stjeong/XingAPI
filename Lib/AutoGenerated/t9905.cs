@@ -330,9 +330,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 기초자산리스트조회(t9905)
-		/// </summary>
 		public XQt9905() : base("t9905") { }
 
 

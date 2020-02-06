@@ -725,9 +725,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 미결제약정추이(t2421)
-		/// </summary>
 		public XQt2421() : base("t2421") { }
 
 

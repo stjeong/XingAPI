@@ -705,9 +705,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 유렉스 취소주문
-		/// </summary>
 		public XQCEXAT11300() : base("CEXAT11300") { }
 
 

@@ -1108,9 +1108,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// ELW현재가(거래원)조회(t1972)
-		/// </summary>
 		public XQt1972() : base("t1972") { }
 
 

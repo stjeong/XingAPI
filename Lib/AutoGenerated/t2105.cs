@@ -1023,9 +1023,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 선물/옵션현재가호가조회(t2105)
-		/// </summary>
 		public XQt2105() : base("t2105") { }
 
 

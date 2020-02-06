@@ -2408,9 +2408,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// CME야간선물투자자별종합(t2816)
-		/// </summary>
 		public XQt2816() : base("t2816") { }
 
 

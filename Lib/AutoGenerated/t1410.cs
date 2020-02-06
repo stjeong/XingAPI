@@ -524,9 +524,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 초저유동성조회(t1410)
-		/// </summary>
 		public XQt1410() : base("t1410") { }
 
 

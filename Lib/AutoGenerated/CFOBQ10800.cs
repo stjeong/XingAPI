@@ -776,9 +776,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 선물옵션 옵션매도시 주문증거금조회
-		/// </summary>
 		public XQCFOBQ10800() : base("CFOBQ10800") { }
 
 

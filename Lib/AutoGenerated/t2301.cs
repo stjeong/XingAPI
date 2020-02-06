@@ -1743,9 +1743,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 옵션전광판(t2301)
-		/// </summary>
 		public XQt2301() : base("t2301") { }
 
 

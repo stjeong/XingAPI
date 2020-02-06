@@ -309,9 +309,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 서버시간조회(t0167)
-		/// </summary>
 		public XQt0167() : base("t0167") { }
 
 

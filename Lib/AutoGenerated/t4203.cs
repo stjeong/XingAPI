@@ -890,9 +890,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 업종챠트(종합)(t4203)
-		/// </summary>
 		public XQt4203() : base("t4203") { }
 
 

@@ -788,9 +788,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 챠트엑셀데이터조회
-		/// </summary>
 		public XQCHARTEXCEL() : base("CHARTEXCEL") { }
 
 

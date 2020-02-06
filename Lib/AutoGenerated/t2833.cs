@@ -690,9 +690,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// EUREX야간옵션선물기간별추이(t2833)
-		/// </summary>
 		public XQt2833() : base("t2833") { }
 
 

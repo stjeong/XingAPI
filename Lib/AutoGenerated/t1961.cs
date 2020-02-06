@@ -855,9 +855,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// ELW거래량상위(t1961)
-		/// </summary>
 		public XQt1961() : base("t1961") { }
 
 

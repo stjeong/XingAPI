@@ -410,9 +410,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 해외지수조회(API용)(t3521)
-		/// </summary>
 		public XQt3521() : base("t3521") { }
 
 

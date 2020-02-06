@@ -330,9 +330,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// ELW마스터조회API용(t9942)
-		/// </summary>
 		public XQt9942() : base("t9942") { }
 
 

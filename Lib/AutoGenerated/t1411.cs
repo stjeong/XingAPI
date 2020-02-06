@@ -674,9 +674,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 증거금율별종목조회(t1411)
-		/// </summary>
 		public XQt1411() : base("t1411") { }
 
 

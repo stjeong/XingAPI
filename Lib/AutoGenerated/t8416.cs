@@ -893,9 +893,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 선물/옵션챠트(일주월)(t8416)
-		/// </summary>
 		public XQt8416() : base("t8416") { }
 
 

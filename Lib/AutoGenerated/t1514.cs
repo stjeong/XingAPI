@@ -877,9 +877,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 업종기간별추이(t1514)
-		/// </summary>
 		public XQt1514() : base("t1514") { }
 
 

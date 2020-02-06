@@ -660,9 +660,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 예상지수(t1485)
-		/// </summary>
 		public XQt1485() : base("t1485") { }
 
 

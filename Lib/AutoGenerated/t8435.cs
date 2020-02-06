@@ -432,9 +432,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 파생종목마스터조회API용(t8435)
-		/// </summary>
 		public XQt8435() : base("t8435") { }
 
 

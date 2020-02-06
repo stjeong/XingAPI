@@ -330,9 +330,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 종목별테마(t1532)
-		/// </summary>
 		public XQt1532() : base("t1532") { }
 
 

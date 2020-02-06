@@ -1288,9 +1288,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// ETF구성종목조회(t1904)
-		/// </summary>
 		public XQt1904() : base("t1904") { }
 
 

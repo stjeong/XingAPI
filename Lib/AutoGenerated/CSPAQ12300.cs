@@ -2567,9 +2567,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// BEP단가조회
-		/// </summary>
 		public XQCSPAQ12300() : base("CSPAQ12300") { }
 
 

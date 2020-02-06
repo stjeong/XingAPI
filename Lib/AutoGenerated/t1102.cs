@@ -2978,9 +2978,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 주식현재가(시세)조회(t1102)
-		/// </summary>
 		public XQt1102() : base("t1102") { }
 
 

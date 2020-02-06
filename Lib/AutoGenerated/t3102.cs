@@ -520,9 +520,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 뉴스본문(t3102)
-		/// </summary>
 		public XQt3102() : base("t3102") { }
 
 

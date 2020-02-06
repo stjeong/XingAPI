@@ -740,9 +740,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 종목별회원사추이(t1771)
-		/// </summary>
 		public XQt1771() : base("t1771") { }
 
 

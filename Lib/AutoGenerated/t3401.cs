@@ -692,9 +692,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 투자의견(t3401)
-		/// </summary>
 		public XQt3401() : base("t3401") { }
 
 

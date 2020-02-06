@@ -431,9 +431,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 선물/옵션멀티현재가조회(t8434)
-		/// </summary>
 		public XQt8434() : base("t8434") { }
 
 

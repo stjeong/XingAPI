@@ -398,9 +398,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// ELW종목조회(t8431)
-		/// </summary>
 		public XQt8431() : base("t8431") { }
 
 

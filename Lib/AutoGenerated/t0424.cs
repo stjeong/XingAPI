@@ -1080,9 +1080,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 주식잔고2(t0424)
-		/// </summary>
 		public XQt0424() : base("t0424") { }
 
 

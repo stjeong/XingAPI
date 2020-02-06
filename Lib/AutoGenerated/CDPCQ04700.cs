@@ -2682,9 +2682,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 계좌 거래내역
-		/// </summary>
 		public XQCDPCQ04700() : base("CDPCQ04700") { }
 
 

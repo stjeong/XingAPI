@@ -704,9 +704,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 신고/신저가(t1442)
-		/// </summary>
 		public XQt1442() : base("t1442") { }
 
 

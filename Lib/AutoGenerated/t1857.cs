@@ -591,9 +591,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// e종목검색(신버전API용)
-		/// </summary>
 		public XQt1857() : base("t1857") { }
 
 

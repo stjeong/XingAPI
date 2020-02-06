@@ -574,9 +574,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 투자경고/매매정지/정리매매조회(t1405)
-		/// </summary>
 		public XQt1405() : base("t1405") { }
 
 

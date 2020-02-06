@@ -1068,9 +1068,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// ELW전광판(t1964)
-		/// </summary>
 		public XQt1964() : base("t1964") { }
 
 

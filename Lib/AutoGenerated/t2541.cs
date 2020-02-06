@@ -1776,9 +1776,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 상품선물투자자매매동향(실시간)(t2541)
-		/// </summary>
 		public XQt2541() : base("t2541") { }
 
 

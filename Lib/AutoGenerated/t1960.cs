@@ -855,9 +855,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// ELW등락율상위(t1960)
-		/// </summary>
 		public XQt1960() : base("t1960") { }
 
 

@@ -741,9 +741,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// CME야간선물기간별주가(t2805)
-		/// </summary>
 		public XQt2805() : base("t2805") { }
 
 

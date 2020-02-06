@@ -1038,9 +1038,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 예탁담보융자가능종목현황조회
-		/// </summary>
 		public XQCLNAQ00100() : base("CLNAQ00100") { }
 
 

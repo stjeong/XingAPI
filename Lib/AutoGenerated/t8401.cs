@@ -347,9 +347,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 주식선물마스터조회(API용)(t8401)
-		/// </summary>
 		public XQt8401() : base("t8401") { }
 
 

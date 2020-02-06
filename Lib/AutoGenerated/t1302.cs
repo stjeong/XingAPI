@@ -828,9 +828,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 주식분별주가조회(t1302)
-		/// </summary>
 		public XQt1302() : base("t1302") { }
 
 

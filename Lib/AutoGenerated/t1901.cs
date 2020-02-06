@@ -2434,9 +2434,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// ETF현재가(시세)조회(t1901)
-		/// </summary>
 		public XQt1901() : base("t1901") { }
 
 

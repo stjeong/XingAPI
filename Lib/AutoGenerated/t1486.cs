@@ -591,9 +591,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 시간별예상체결가(t1486)
-		/// </summary>
 		public XQt1486() : base("t1486") { }
 
 

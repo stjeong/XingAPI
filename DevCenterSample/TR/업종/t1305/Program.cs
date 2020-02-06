@@ -58,7 +58,7 @@ namespace t1305
 
                         if (query.SetBlock(inBlock) == false)
                         {
-                            Console.WriteLine($"Failed to set block: {query}");
+                            Console.WriteLine($"Failed to set block");
                             return;
                         }
 

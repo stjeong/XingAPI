@@ -691,9 +691,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 주식당일전일분틱조회(t1310)
-		/// </summary>
 		public XQt1310() : base("t1310") { }
 
 

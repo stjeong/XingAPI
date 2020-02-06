@@ -330,9 +330,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 지수옵션마스터조회API용(t9944)
-		/// </summary>
 		public XQt9944() : base("t9944") { }
 
 

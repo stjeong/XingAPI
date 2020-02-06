@@ -576,9 +576,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 기초자산리스트조회(t1981)
-		/// </summary>
 		public XQt1981() : base("t1981") { }
 
 

@@ -591,9 +591,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 주식현재가시세메모(t1104)
-		/// </summary>
 		public XQt1104() : base("t1104") { }
 
 

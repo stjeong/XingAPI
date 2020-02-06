@@ -975,9 +975,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 주식챠트(종합)(t4201)
-		/// </summary>
 		public XQt4201() : base("t4201") { }
 
 

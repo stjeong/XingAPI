@@ -364,9 +364,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 주식마스터조회API용-종목명40bytes(t9945)
-		/// </summary>
 		public XQt9945() : base("t9945") { }
 
 

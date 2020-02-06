@@ -1030,9 +1030,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 기간별투자자매매추이(챠트)
-		/// </summary>
 		public XQt1665() : base("t1665") { }
 
 

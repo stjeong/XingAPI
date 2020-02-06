@@ -726,9 +726,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 선물/옵션잔고평가(이동평균)(t0441)
-		/// </summary>
 		public XQt0441() : base("t0441") { }
 
 

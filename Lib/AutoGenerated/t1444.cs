@@ -592,9 +592,6 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
-		/// <summary>
-		/// 시가총액상위(t1444)
-		/// </summary>
 		public XQt1444() : base("t1444") { }
 
 
