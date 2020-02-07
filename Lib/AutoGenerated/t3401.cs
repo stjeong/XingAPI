@@ -692,10 +692,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 투자의견(t3401)
+		/// </summary>
 		public XQt3401() : base("t3401") { }
 
 
-		public static XQt3401OutBlock1[] Get(string shcode = default,char gubun1 = default,string tradno = default,string cts_date = default)
+		public class XQAllOutBlocks
+		{
+			public XQt3401OutBlock OutBlock { get; internal set; }
+			public XQt3401OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,char gubun1 = default,string tradno = default,string cts_date = default)
 		{
 			using (XQt3401 instance = new XQt3401())
 			{
@@ -709,8 +718,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

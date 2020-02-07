@@ -591,10 +591,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 시간별예상체결가(t1486)
+		/// </summary>
 		public XQt1486() : base("t1486") { }
 
 
-		public static XQt1486OutBlock1[] Get(string shcode = default,string cts_time = default,int cnt = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1486OutBlock OutBlock { get; internal set; }
+			public XQt1486OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,string cts_time = default,int cnt = default)
 		{
 			using (XQt1486 instance = new XQt1486())
 			{
@@ -607,8 +616,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

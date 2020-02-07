@@ -741,10 +741,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물/옵션체결/미체결(t0434)
+		/// </summary>
 		public XQt0434() : base("t0434") { }
 
 
-		public static XQt0434OutBlock1[] Get(string accno = default,string passwd = default,string expcode = default,char chegb = default,char sortgb = default,string cts_ordno = default)
+		public class XQAllOutBlocks
+		{
+			public XQt0434OutBlock OutBlock { get; internal set; }
+			public XQt0434OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string accno = default,string passwd = default,string expcode = default,char chegb = default,char sortgb = default,string cts_ordno = default)
 		{
 			using (XQt0434 instance = new XQt0434())
 			{
@@ -760,8 +769,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

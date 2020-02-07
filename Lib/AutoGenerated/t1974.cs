@@ -525,10 +525,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ELW기초자산동일종목(t1974)
+		/// </summary>
 		public XQt1974() : base("t1974") { }
 
 
-		public static XQt1974OutBlock1[] Get(string shcode = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1974OutBlock OutBlock { get; internal set; }
+			public XQt1974OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default)
 		{
 			using (XQt1974 instance = new XQt1974())
 			{
@@ -539,8 +548,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -741,10 +741,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 시간대별프로그램매매추이(t1632)
+		/// </summary>
 		public XQt1632() : base("t1632") { }
 
 
-		public static XQt1632OutBlock1[] Get(char gubun = default,char gubun1 = default,char gubun2 = default,char gubun3 = default,string date = default,string time = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1632OutBlock OutBlock { get; internal set; }
+			public XQt1632OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun = default,char gubun1 = default,char gubun2 = default,char gubun3 = default,string date = default,string time = default)
 		{
 			using (XQt1632 instance = new XQt1632())
 			{
@@ -760,8 +769,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

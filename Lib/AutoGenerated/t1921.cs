@@ -692,10 +692,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 신용거래동향(t1921)
+		/// </summary>
 		public XQt1921() : base("t1921") { }
 
 
-		public static XQt1921OutBlock1[] Get(string shcode = default,char gubun = default,string date = default,long idx = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1921OutBlock OutBlock { get; internal set; }
+			public XQt1921OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,char gubun = default,string date = default,long idx = default)
 		{
 			using (XQt1921 instance = new XQt1921())
 			{
@@ -709,8 +718,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

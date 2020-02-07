@@ -963,10 +963,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 기간별주가(t1305)
+		/// </summary>
 		public XQt1305() : base("t1305") { }
 
 
-		public static XQt1305OutBlock1[] Get(string shcode = default,long dwmcode = default,string date = default,long idx = default,long cnt = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1305OutBlock OutBlock { get; internal set; }
+			public XQt1305OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,long dwmcode = default,string date = default,long idx = default,long cnt = default)
 		{
 			using (XQt1305 instance = new XQt1305())
 			{
@@ -981,8 +990,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

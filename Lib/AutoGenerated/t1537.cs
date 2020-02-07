@@ -678,10 +678,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 테마종목별시세조회(t1537)
+		/// </summary>
 		public XQt1537() : base("t1537") { }
 
 
-		public static XQt1537OutBlock1[] Get(string tmcode = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1537OutBlock OutBlock { get; internal set; }
+			public XQt1537OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string tmcode = default)
 		{
 			using (XQt1537 instance = new XQt1537())
 			{
@@ -692,8 +701,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

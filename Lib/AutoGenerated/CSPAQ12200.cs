@@ -1503,6 +1503,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 현물계좌예수금 주문가능금액 총평가 조회
+		/// </summary>
 		public XQCSPAQ12200() : base("CSPAQ12200") { }
 
 

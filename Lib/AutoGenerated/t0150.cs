@@ -997,10 +997,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식당일매매일지/수수료(t0150)
+		/// </summary>
 		public XQt0150() : base("t0150") { }
 
 
-		public static XQt0150OutBlock1[] Get(string accno = default,char cts_medosu = default,string cts_expcode = default,string cts_price = default,string cts_middiv = default)
+		public class XQAllOutBlocks
+		{
+			public XQt0150OutBlock OutBlock { get; internal set; }
+			public XQt0150OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string accno = default,char cts_medosu = default,string cts_expcode = default,string cts_price = default,string cts_middiv = default)
 		{
 			using (XQt0150 instance = new XQt0150())
 			{
@@ -1015,8 +1024,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

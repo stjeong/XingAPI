@@ -795,10 +795,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 업종별종목시세(t1516)
+		/// </summary>
 		public XQt1516() : base("t1516") { }
 
 
-		public static XQt1516OutBlock1[] Get(string upcode = default,char gubun = default,string shcode = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1516OutBlock OutBlock { get; internal set; }
+			public XQt1516OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string upcode = default,char gubun = default,string shcode = default)
 		{
 			using (XQt1516 instance = new XQt1516())
 			{
@@ -811,8 +820,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

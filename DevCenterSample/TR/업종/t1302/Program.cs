@@ -35,12 +35,19 @@ namespace t1302
 
                 if (useDemoServer)
                 {
-                    var items = XQt1302.Get(Stock.SHCODE.KOSPI.SK하이닉스,
+                    var multiBlock = XQt1302.Get(Stock.SHCODE.KOSPI.SK하이닉스,
                         gubun: XQt1302.Gubun._60분,
                         cnt: 10);
 
-                    Console.WriteLine($"# of items: {items.Length}");
-                    foreach (var item in items)
+                    if (multiBlock.OutBlock.IsValidData == false)
+                    {
+                        return;
+                    }
+
+                    multiBlock.OutBlock.Dump(Console.Out, DumpOutputType.Inline80Cols);
+
+                    Console.WriteLine($"# of items: {multiBlock.OutBlock1.Length}");
+                    foreach (var item in multiBlock.OutBlock1)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline80Cols);
                     }

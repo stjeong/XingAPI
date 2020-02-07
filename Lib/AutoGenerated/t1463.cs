@@ -705,10 +705,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 거래대금상위(t1463)
+		/// </summary>
 		public XQt1463() : base("t1463") { }
 
 
-		public static XQt1463OutBlock1[] Get(char gubun = default,char jnilgubun = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default,long jc_num2 = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1463OutBlock OutBlock { get; internal set; }
+			public XQt1463OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun = default,char jnilgubun = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default,long jc_num2 = default)
 		{
 			using (XQt1463 instance = new XQt1463())
 			{
@@ -726,8 +735,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -1476,6 +1476,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 계좌 미결제 약정현황(평균가)
+		/// </summary>
 		public XQCFOFQ02400() : base("CFOFQ02400") { }
 
 

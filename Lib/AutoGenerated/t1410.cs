@@ -524,10 +524,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 초저유동성조회(t1410)
+		/// </summary>
 		public XQt1410() : base("t1410") { }
 
 
-		public static XQt1410OutBlock1[] Get(char gubun = default,string cts_shcode = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1410OutBlock OutBlock { get; internal set; }
+			public XQt1410OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun = default,string cts_shcode = default)
 		{
 			using (XQt1410 instance = new XQt1410())
 			{
@@ -539,8 +548,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

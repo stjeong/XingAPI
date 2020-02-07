@@ -785,6 +785,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 종목별신용정보(t1926)
+		/// </summary>
 		public XQt1926() : base("t1926") { }
 
 

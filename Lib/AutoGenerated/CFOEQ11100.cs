@@ -2167,6 +2167,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물옵션가정산예탁금상세
+		/// </summary>
 		public XQCFOEQ11100() : base("CFOEQ11100") { }
 
 

@@ -432,6 +432,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 지수옵션마스터조회API용(t8433)
+		/// </summary>
 		public XQt8433() : base("t8433") { }
 
 

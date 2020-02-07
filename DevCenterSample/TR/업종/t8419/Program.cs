@@ -35,10 +35,15 @@ namespace t8419
 
                 if (useDemoServer)
                 {
-                    var items = XQt8419.Get("001", '2', 0, "20190101", "201905030", null, 'N');
+                    var multiBlock = XQt8419.Get("001", '2', 0, "20190101", "201905030", null, 'N');
+
+                    if (multiBlock.OutBlock.IsValidData == false)
+                    {
+                        return;
+                    }
 
                     Console.WriteLine($"[{XQt8419OutBlock1.BlockName}]");
-                    foreach (var item in items)
+                    foreach (var item in multiBlock.OutBlock1)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline80Cols);
                     }

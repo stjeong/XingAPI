@@ -975,10 +975,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식챠트(종합)(t4201)
+		/// </summary>
 		public XQt4201() : base("t4201") { }
 
 
-		public static XQt4201OutBlock1[] Get(string shcode = default,char gubun = default,long ncnt = default,long qrycnt = default,char tdgb = default,string sdate = default,string edate = default,string cts_date = default,string cts_time = default,char cts_daygb = default)
+		public class XQAllOutBlocks
+		{
+			public XQt4201OutBlock OutBlock { get; internal set; }
+			public XQt4201OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,char gubun = default,long ncnt = default,long qrycnt = default,char tdgb = default,string sdate = default,string edate = default,string cts_date = default,string cts_time = default,char cts_daygb = default)
 		{
 			using (XQt4201 instance = new XQt4201())
 			{
@@ -998,8 +1007,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

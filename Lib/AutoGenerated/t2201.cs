@@ -827,10 +827,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물옵션시간대별체결조회(t2201)
+		/// </summary>
 		public XQt2201() : base("t2201") { }
 
 
-		public static XQt2201OutBlock1[] Get(string focode = default,long cvolume = default,string stime = default,string etime = default,string cts_time = default)
+		public class XQAllOutBlocks
+		{
+			public XQt2201OutBlock OutBlock { get; internal set; }
+			public XQt2201OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string focode = default,long cvolume = default,string stime = default,string etime = default,string cts_time = default)
 		{
 			using (XQt2201 instance = new XQt2201())
 			{
@@ -845,8 +854,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

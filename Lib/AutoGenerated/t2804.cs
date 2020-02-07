@@ -844,10 +844,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// CME야간선물시간대별체결조회(t2804)
+		/// </summary>
 		public XQt2804() : base("t2804") { }
 
 
-		public static XQt2804OutBlock1[] Get(string focode = default,long cvolume = default,string stime = default,string etime = default,string cts_time = default)
+		public class XQAllOutBlocks
+		{
+			public XQt2804OutBlock OutBlock { get; internal set; }
+			public XQt2804OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string focode = default,long cvolume = default,string stime = default,string etime = default,string cts_time = default)
 		{
 			using (XQt2804 instance = new XQt2804())
 			{
@@ -862,8 +871,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

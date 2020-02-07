@@ -1710,10 +1710,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// CME야간선물시간대별투자자매매추이(t2813)
+		/// </summary>
 		public XQt2813() : base("t2813") { }
 
 
-		public static XQt2813OutBlock1[] Get(char gubun1 = default,char gubun2 = default,string cts_time = default,long cts_idx = default,int cnt = default,char gubun3 = default)
+		public class XQAllOutBlocks
+		{
+			public XQt2813OutBlock OutBlock { get; internal set; }
+			public XQt2813OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun1 = default,char gubun2 = default,string cts_time = default,long cts_idx = default,int cnt = default,char gubun3 = default)
 		{
 			using (XQt2813 instance = new XQt2813())
 			{
@@ -1729,8 +1738,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

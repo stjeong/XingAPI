@@ -549,6 +549,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 종목별잔량/사전공시(t1638)
+		/// </summary>
 		public XQt1638() : base("t1638") { }
 
 

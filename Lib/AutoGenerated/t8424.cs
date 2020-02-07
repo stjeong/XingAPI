@@ -313,6 +313,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 전체업종(t8424)
+		/// </summary>
 		public XQt8424() : base("t8424") { }
 
 

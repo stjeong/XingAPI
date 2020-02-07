@@ -805,10 +805,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 과거데이터시간대별조회(t8427)
+		/// </summary>
 		public XQt8427() : base("t8427") { }
 
 
-		public static XQt8427OutBlock1[] Get(char fo_gbn = default,string yyyy = default,string mm = default,char cp_gbn = default,float actprice = default,string focode = default,char dt_gbn = default,string min_term = default,string date = default,string time = default)
+		public class XQAllOutBlocks
+		{
+			public XQt8427OutBlock OutBlock { get; internal set; }
+			public XQt8427OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char fo_gbn = default,string yyyy = default,string mm = default,char cp_gbn = default,float actprice = default,string focode = default,char dt_gbn = default,string min_term = default,string date = default,string time = default)
 		{
 			using (XQt8427 instance = new XQt8427())
 			{
@@ -828,8 +837,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

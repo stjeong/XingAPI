@@ -660,10 +660,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ETF일별추이(t1903)
+		/// </summary>
 		public XQt1903() : base("t1903") { }
 
 
-		public static XQt1903OutBlock1[] Get(string shcode = default,string date = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1903OutBlock OutBlock { get; internal set; }
+			public XQt1903OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,string date = default)
 		{
 			using (XQt1903 instance = new XQt1903())
 			{
@@ -675,8 +684,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

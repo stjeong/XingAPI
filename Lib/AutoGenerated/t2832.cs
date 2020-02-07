@@ -708,10 +708,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// EUREX야간옵션선물시간대별체결조회(t2832)
+		/// </summary>
 		public XQt2832() : base("t2832") { }
 
 
-		public static XQt2832OutBlock1[] Get(string focode = default,long cvolume = default,string stime = default,string etime = default,string cts_time = default)
+		public class XQAllOutBlocks
+		{
+			public XQt2832OutBlock OutBlock { get; internal set; }
+			public XQt2832OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string focode = default,long cvolume = default,string stime = default,string etime = default,string cts_time = default)
 		{
 			using (XQt2832 instance = new XQt2832())
 			{
@@ -726,8 +735,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -690,10 +690,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// EUREX야간옵션선물기간별추이(t2833)
+		/// </summary>
 		public XQt2833() : base("t2833") { }
 
 
-		public static XQt2833OutBlock1[] Get(string shcode = default,char futcheck = default,string date = default,string cts_code = default,string lastdate = default,int cnt = default)
+		public class XQAllOutBlocks
+		{
+			public XQt2833OutBlock OutBlock { get; internal set; }
+			public XQt2833OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,char futcheck = default,string date = default,string cts_code = default,string lastdate = default,int cnt = default)
 		{
 			using (XQt2833 instance = new XQt2833())
 			{
@@ -709,8 +718,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

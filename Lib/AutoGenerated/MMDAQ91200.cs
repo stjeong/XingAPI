@@ -608,10 +608,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 파생상품증거금율조회
+		/// </summary>
 		public XQMMDAQ91200() : base("MMDAQ91200") { }
 
 
-		public static XQMMDAQ91200OutBlock2[] Get(long RecCnt = default,string IsuLgclssCode = default,string IsuMdclssCode = default)
+		public class XQAllOutBlocks
+		{
+			public XQMMDAQ91200OutBlock1 OutBlock1 { get; internal set; }
+			public XQMMDAQ91200OutBlock2[] OutBlock2 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(long RecCnt = default,string IsuLgclssCode = default,string IsuMdclssCode = default)
 		{
 			using (XQMMDAQ91200 instance = new XQMMDAQ91200())
 			{
@@ -624,8 +633,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock2s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock1 = instance.GetBlock1();
+				if (results.OutBlock1.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock2 = instance.GetBlock2s();
+				return results;
 			}
 		}
 

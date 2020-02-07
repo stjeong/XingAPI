@@ -575,10 +575,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 투자자매매종합1(t1615)
+		/// </summary>
 		public XQt1615() : base("t1615") { }
 
 
-		public static XQt1615OutBlock1[] Get(char gubun1 = default,char gubun2 = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1615OutBlock OutBlock { get; internal set; }
+			public XQt1615OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun1 = default,char gubun2 = default)
 		{
 			using (XQt1615 instance = new XQt1615())
 			{
@@ -590,8 +599,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

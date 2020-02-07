@@ -38,9 +38,17 @@ namespace t1514
 
                 if (useDemoServer)
                 {
-                    var items = XQt1514.Get("301", gubun2: XQt1514.Gubun2.일, cnt: totalSize);
+                    var multiBlock = XQt1514.Get("301", gubun2: XQt1514.Gubun2.일, cnt: totalSize);
 
-                    foreach (var item in items)
+                    if (multiBlock.OutBlock.IsValidData == false)
+                    {
+                        return;
+                    }
+
+                    multiBlock.OutBlock.Dump(Console.Out, DumpOutputType.Inline80Cols);
+                    
+                    Console.WriteLine($"# of items: {multiBlock.OutBlock1.Length}");
+                    foreach (var item in multiBlock.OutBlock1)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline80Cols);
                     }

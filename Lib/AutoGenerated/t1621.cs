@@ -1185,10 +1185,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 업종별분별투자자매매동향(챠트용)
+		/// </summary>
 		public XQt1621() : base("t1621") { }
 
 
-		public static XQt1621OutBlock1[] Get(string upcode = default,int nmin = default,int cnt = default,char bgubun = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1621OutBlock OutBlock { get; internal set; }
+			public XQt1621OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string upcode = default,int nmin = default,int cnt = default,char bgubun = default)
 		{
 			using (XQt1621 instance = new XQt1621())
 			{
@@ -1202,8 +1211,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

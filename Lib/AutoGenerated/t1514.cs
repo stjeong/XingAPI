@@ -877,10 +877,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 업종기간별추이(t1514)
+		/// </summary>
 		public XQt1514() : base("t1514") { }
 
 
-		public static XQt1514OutBlock1[] Get(string upcode = default,char gubun1 = default,char gubun2 = default,string cts_date = default,int cnt = default,char rate_gbn = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1514OutBlock OutBlock { get; internal set; }
+			public XQt1514OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string upcode = default,char gubun1 = default,char gubun2 = default,string cts_date = default,int cnt = default,char rate_gbn = default)
 		{
 			using (XQt1514 instance = new XQt1514())
 			{
@@ -896,8 +905,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

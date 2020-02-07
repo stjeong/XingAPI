@@ -638,10 +638,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 시간대별투자자매매추이상세(t1603)
+		/// </summary>
 		public XQt1603() : base("t1603") { }
 
 
-		public static XQt1603OutBlock1[] Get(char market = default,char gubun1 = default,char gubun2 = default,string cts_time = default,long cts_idx = default,int cnt = default,string upcode = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1603OutBlock OutBlock { get; internal set; }
+			public XQt1603OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char market = default,char gubun1 = default,char gubun2 = default,string cts_time = default,long cts_idx = default,int cnt = default,string upcode = default)
 		{
 			using (XQt1603 instance = new XQt1603())
 			{
@@ -658,8 +667,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

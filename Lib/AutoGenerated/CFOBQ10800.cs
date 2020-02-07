@@ -776,10 +776,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물옵션 옵션매도시 주문증거금조회
+		/// </summary>
 		public XQCFOBQ10800() : base("CFOBQ10800") { }
 
 
-		public static XQCFOBQ10800OutBlock2[] Get(long RecCnt = default,string PrdgrpClssCode = default,string ClssGrpCode = default,string BaseYear = default,char FstmmTpCode = default)
+		public class XQAllOutBlocks
+		{
+			public XQCFOBQ10800OutBlock1 OutBlock1 { get; internal set; }
+			public XQCFOBQ10800OutBlock2[] OutBlock2 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(long RecCnt = default,string PrdgrpClssCode = default,string ClssGrpCode = default,string BaseYear = default,char FstmmTpCode = default)
 		{
 			using (XQCFOBQ10800 instance = new XQCFOBQ10800())
 			{
@@ -794,8 +803,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock2s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock1 = instance.GetBlock1();
+				if (results.OutBlock1.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock2 = instance.GetBlock2s();
+				return results;
 			}
 		}
 

@@ -998,10 +998,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// CME야간선물기간별투자자매매추이(챠트)
+		/// </summary>
 		public XQt2814() : base("t2814") { }
 
 
-		public static XQt2814OutBlock1[] Get(char gubun1 = default,char gubun2 = default,string from_date = default,string to_date = default)
+		public class XQAllOutBlocks
+		{
+			public XQt2814OutBlock OutBlock { get; internal set; }
+			public XQt2814OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun1 = default,char gubun2 = default,string from_date = default,string to_date = default)
 		{
 			using (XQt2814 instance = new XQt2814())
 			{
@@ -1015,8 +1024,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -591,10 +591,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// e종목검색(신버전API용)
+		/// </summary>
 		public XQt1857() : base("t1857") { }
 
 
-		public static XQt1857OutBlock1[] Get(char sRealFlag = default,char sSearchFlag = default,string query_index = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1857OutBlock OutBlock { get; internal set; }
+			public XQt1857OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char sRealFlag = default,char sSearchFlag = default,string query_index = default)
 		{
 			using (XQt1857 instance = new XQt1857())
 			{
@@ -607,8 +616,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

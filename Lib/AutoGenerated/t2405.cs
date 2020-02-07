@@ -893,10 +893,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물옵션호가잔량비율챠트(t2405)
+		/// </summary>
 		public XQt2405() : base("t2405") { }
 
 
-		public static XQt2405OutBlock1[] Get(string focode = default,char bgubun = default,int nmin = default,string etime = default,char hgubun = default,int cnt = default,string cts_time = default)
+		public class XQAllOutBlocks
+		{
+			public XQt2405OutBlock OutBlock { get; internal set; }
+			public XQt2405OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string focode = default,char bgubun = default,int nmin = default,string etime = default,char hgubun = default,int cnt = default,string cts_time = default)
 		{
 			using (XQt2405 instance = new XQt2405())
 			{
@@ -913,8 +922,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

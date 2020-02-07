@@ -675,10 +675,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 신호조회(t1809)
+		/// </summary>
 		public XQt1809() : base("t1809") { }
 
 
-		public static XQt1809OutBlock1[] Get(char gubun = default,char jmGb = default,string jmcode = default,string cts = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1809OutBlock OutBlock { get; internal set; }
+			public XQt1809OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun = default,char jmGb = default,string jmcode = default,string cts = default)
 		{
 			using (XQt1809 instance = new XQt1809())
 			{
@@ -692,8 +701,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

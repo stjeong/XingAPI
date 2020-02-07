@@ -592,10 +592,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 시가총액상위(t1444)
+		/// </summary>
 		public XQt1444() : base("t1444") { }
 
 
-		public static XQt1444OutBlock1[] Get(string upcode = default,long idx = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1444OutBlock OutBlock { get; internal set; }
+			public XQt1444OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string upcode = default,long idx = default)
 		{
 			using (XQt1444 instance = new XQt1444())
 			{
@@ -607,8 +616,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

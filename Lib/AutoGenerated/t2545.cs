@@ -1251,10 +1251,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 상품선물투자자매매동향(챠트용)
+		/// </summary>
 		public XQt2545() : base("t2545") { }
 
 
-		public static XQt2545OutBlock1[] Get(string eitem = default,char sgubun = default,string upcode = default,int nmin = default,int cnt = default,char bgubun = default)
+		public class XQAllOutBlocks
+		{
+			public XQt2545OutBlock OutBlock { get; internal set; }
+			public XQt2545OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string eitem = default,char sgubun = default,string upcode = default,int nmin = default,int cnt = default,char bgubun = default)
 		{
 			using (XQt2545 instance = new XQt2545())
 			{
@@ -1270,8 +1279,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

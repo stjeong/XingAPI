@@ -1025,6 +1025,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물옵션 정상주문
+		/// </summary>
 		public XQCFOAT00100() : base("CFOAT00100") { }
 
 

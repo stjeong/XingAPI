@@ -642,10 +642,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 관리/불성실/투자유의조회(t1404)
+		/// </summary>
 		public XQt1404() : base("t1404") { }
 
 
-		public static XQt1404OutBlock1[] Get(char gubun = default,char jongchk = default,string cts_shcode = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1404OutBlock OutBlock { get; internal set; }
+			public XQt1404OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun = default,char jongchk = default,string cts_shcode = default)
 		{
 			using (XQt1404 instance = new XQt1404())
 			{
@@ -658,8 +667,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -755,10 +755,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 예상체결가등락율상위조회(t1488)
+		/// </summary>
 		public XQt1488() : base("t1488") { }
 
 
-		public static XQt1488OutBlock1[] Get(char gubun = default,char sign = default,char jgubun = default,string jongchk = default,long idx = default,char volume = default,long yesprice = default,long yeeprice = default,long yevolume = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1488OutBlock OutBlock { get; internal set; }
+			public XQt1488OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun = default,char sign = default,char jgubun = default,string jongchk = default,long idx = default,char volume = default,long yesprice = default,long yeeprice = default,long yevolume = default)
 		{
 			using (XQt1488 instance = new XQt1488())
 			{
@@ -777,8 +786,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

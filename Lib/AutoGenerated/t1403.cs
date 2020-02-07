@@ -658,10 +658,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 신규상장종목조회(t1403)
+		/// </summary>
 		public XQt1403() : base("t1403") { }
 
 
-		public static XQt1403OutBlock1[] Get(char gubun = default,string styymm = default,string enyymm = default,long idx = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1403OutBlock OutBlock { get; internal set; }
+			public XQt1403OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun = default,string styymm = default,string enyymm = default,long idx = default)
 		{
 			using (XQt1403 instance = new XQt1403())
 			{
@@ -675,8 +684,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -264,16 +264,17 @@ namespace Res2Query
                 var outBlock = blockFieldSetList.Skip(1).First();
                 var outBlocks = blockFieldSetList.Skip(2).First();
 
-                if (inBlock.Value.BlockType == BlockType.input && 
+                if (inBlock.Value.BlockType == BlockType.input &&
                     (outBlock.Value.BlockType == BlockType.output && outBlock.Value.HasOccurs == false) &&
                     (outBlocks.Value.BlockType == BlockType.output && outBlocks.Value.HasOccurs == true))
                 {
-                    return WriteInblockAndOutblock(inBlock, outBlocks, tab, classPrefix, typeName);
+                    return WriteInblockAndMultipleOutblock(inBlock, outBlock, outBlocks, tab, classPrefix, typeName);
                 }
             }
 
             return "";
         }
+
         private static string WriteInblockAndOutblock(KeyValuePair<string, BlockInfo> inBlock, KeyValuePair<string, BlockInfo> outBlock, string tab, string classPrefix, string typeName)
         {
             StringBuilder sbGet = new StringBuilder();
@@ -311,6 +312,70 @@ namespace Res2Query
             sbGet.AppendLine($"{tab}\t}}");
 
             return sbGet.ToString();
+        }
+
+        private static string WriteInblockAndMultipleOutblock(KeyValuePair<string, BlockInfo> inBlock,
+            KeyValuePair<string, BlockInfo> outBlock,
+            KeyValuePair<string, BlockInfo> outBlocks, string tab, string classPrefix, string typeName)
+        {
+            StringBuilder sbGet = new StringBuilder();
+            string multipleOutblockTypeName = $"{classPrefix}AllOutBlocks";
+
+            string arrayPostfix = (outBlocks.Value.HasOccurs == true) ? "[]" : "";
+
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine($"{tab}\tpublic class {multipleOutblockTypeName}");
+                sb.AppendLine($"{tab}\t{{");
+
+                sb.AppendLine($"{tab}\t\tpublic {classPrefix}{outBlock.Key} {RemoveBlockClode(outBlock.Key)} {{ get; internal set; }}");
+                sb.AppendLine($"{tab}\t\tpublic {classPrefix}{outBlocks.Key}{arrayPostfix} {RemoveBlockClode(outBlocks.Key)} {{ get; internal set; }}");
+
+                sb.AppendLine($"{tab}\t}}");
+
+                sbGet.AppendLine(sb.ToString());
+            }
+
+            sbGet.AppendLine($"{tab}\tpublic static {multipleOutblockTypeName} Get({inBlock.Value.GetParams})");
+            sbGet.AppendLine($"{tab}\t{{");
+
+            sbGet.AppendLine($"{tab}\t\tusing ({classPrefix}{typeName} instance = new {classPrefix}{typeName}())");
+            sbGet.AppendLine($"{tab}\t\t{{");
+            sbGet.AppendLine($"{inBlock.Value.GetParamsSetFieldData}");
+            sbGet.AppendLine($"{tab}\t\t\tif (instance.Request() < 0)");
+            sbGet.AppendLine($"{tab}\t\t\t{{");
+            sbGet.AppendLine($"{tab}\t\t\t\treturn null;");
+            sbGet.AppendLine($"{tab}\t\t\t}}");
+            sbGet.AppendLine();
+
+            sbGet.AppendLine($"{tab}\t\t\t{multipleOutblockTypeName} results = new {multipleOutblockTypeName}();");
+
+            sbGet.AppendLine($"{tab}\t\t\tresults.{RemoveBlockClode(outBlock.Key)} = instance.Get{GetBlockIndex(typeName, outBlock.Key, outBlock.Value.HasOccurs)}();");
+            sbGet.AppendLine($"{tab}\t\t\tif (results.{RemoveBlockClode(outBlock.Key)}.IsValidData == false)");
+            sbGet.AppendLine($"{tab}\t\t\t{{");
+            sbGet.AppendLine($"{tab}\t\t\t\treturn null;");
+            sbGet.AppendLine($"{tab}\t\t\t}}");
+
+            sbGet.AppendLine();
+
+            sbGet.AppendLine($"{tab}\t\t\tresults.{RemoveBlockClode(outBlocks.Key)} = instance.Get{GetBlockIndex(typeName, outBlocks.Key, outBlocks.Value.HasOccurs)}();");
+            sbGet.AppendLine($"{tab}\t\t\treturn results;");
+
+            sbGet.AppendLine($"{tab}\t\t}}");
+            sbGet.AppendLine($"{tab}\t}}");
+
+            return sbGet.ToString();
+
+            string RemoveBlockClode(string blockName)
+            {
+                int pos = blockName.IndexOf("Out");
+                if (pos == -1)
+                {
+                    return blockName;
+                }
+
+                return blockName.Substring(pos);
+            }
         }
 
         public static string GetBlockIndex(string typeName, string blockTypeName, bool hasOccurs)

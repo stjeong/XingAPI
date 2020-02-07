@@ -640,10 +640,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 종목별상위회원사(t1752)
+		/// </summary>
 		public XQt1752() : base("t1752") { }
 
 
-		public static XQt1752OutBlock1[] Get(string shcode = default,string traddate1 = default,string traddate2 = default,char fwgubun1 = default,long cts_idx = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1752OutBlock OutBlock { get; internal set; }
+			public XQt1752OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,string traddate1 = default,string traddate2 = default,char fwgubun1 = default,long cts_idx = default)
 		{
 			using (XQt1752 instance = new XQt1752())
 			{
@@ -658,8 +667,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -496,6 +496,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 프로그램매매종합조회(미니)(t1640)
+		/// </summary>
 		public XQt1640() : base("t1640") { }
 
 

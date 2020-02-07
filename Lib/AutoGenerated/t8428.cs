@@ -792,10 +792,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 증시주변자금추이(t8428)
+		/// </summary>
 		public XQt8428() : base("t8428") { }
 
 
-		public static XQt8428OutBlock1[] Get(string fdate = default,string tdate = default,char gubun = default,string key_date = default,string upcode = default,int cnt = default)
+		public class XQAllOutBlocks
+		{
+			public XQt8428OutBlock OutBlock { get; internal set; }
+			public XQt8428OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string fdate = default,string tdate = default,char gubun = default,string key_date = default,string upcode = default,int cnt = default)
 		{
 			using (XQt8428 instance = new XQt8428())
 			{
@@ -811,8 +820,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

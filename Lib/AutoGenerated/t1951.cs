@@ -691,10 +691,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ELW시간대별체결조회(t1951)
+		/// </summary>
 		public XQt1951() : base("t1951") { }
 
 
-		public static XQt1951OutBlock1[] Get(string shcode = default,long cvolume = default,string starttime = default,string endtime = default,string cts_time = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1951OutBlock OutBlock { get; internal set; }
+			public XQt1951OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,long cvolume = default,string starttime = default,string endtime = default,string cts_time = default)
 		{
 			using (XQt1951 instance = new XQt1951())
 			{
@@ -709,8 +718,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

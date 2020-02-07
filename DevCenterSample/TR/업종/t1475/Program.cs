@@ -38,9 +38,16 @@ namespace t1475
 
                 if (useDemoServer)
                 {
-                    var items = XQt1475.Get(Stock.SHCODE.KOSDAQ.이베스트투자증권, datacnt: totalSize);
+                    var multiBlock = XQt1475.Get(Stock.SHCODE.KOSDAQ.이베스트투자증권, datacnt: totalSize);
 
-                    foreach (var item in items)
+                    if (multiBlock.OutBlock.IsValidData == false)
+                    {
+                        return;
+                    }
+
+                    multiBlock.OutBlock.Dump(Console.Out, DumpOutputType.Inline80Cols);
+
+                    foreach (var item in multiBlock.OutBlock1)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline80Cols);
                     }

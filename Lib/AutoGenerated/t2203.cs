@@ -741,10 +741,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 기간별주가(t2203)
+		/// </summary>
 		public XQt2203() : base("t2203") { }
 
 
-		public static XQt2203OutBlock1[] Get(string shcode = default,char futcheck = default,string date = default,string cts_code = default,string lastdate = default,int cnt = default)
+		public class XQAllOutBlocks
+		{
+			public XQt2203OutBlock OutBlock { get; internal set; }
+			public XQt2203OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,char futcheck = default,string date = default,string cts_code = default,string lastdate = default,int cnt = default)
 		{
 			using (XQt2203 instance = new XQt2203())
 			{
@@ -760,8 +769,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

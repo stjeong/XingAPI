@@ -1868,10 +1868,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ELW현재가(시세)조회(t1950)
+		/// </summary>
 		public XQt1950() : base("t1950") { }
 
 
-		public static XQt1950OutBlock1[] Get(string shcode = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1950OutBlock OutBlock { get; internal set; }
+			public XQt1950OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default)
 		{
 			using (XQt1950 instance = new XQt1950())
 			{
@@ -1882,8 +1891,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

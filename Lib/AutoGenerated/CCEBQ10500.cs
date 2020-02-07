@@ -1262,6 +1262,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물옵션 CME 예탁금증거금조회
+		/// </summary>
 		public XQCCEBQ10500() : base("CCEBQ10500") { }
 
 

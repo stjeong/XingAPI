@@ -725,10 +725,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// CME야간선물미결제약정추이(API용)(t8409)
+		/// </summary>
 		public XQt8409() : base("t8409") { }
 
 
-		public static XQt8409OutBlock1[] Get(string focode = default,char bdgubun = default,int nmin = default,char tcgubun = default,int cnt = default)
+		public class XQAllOutBlocks
+		{
+			public XQt8409OutBlock OutBlock { get; internal set; }
+			public XQt8409OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string focode = default,char bdgubun = default,int nmin = default,char tcgubun = default,int cnt = default)
 		{
 			using (XQt8409 instance = new XQt8409())
 			{
@@ -743,8 +752,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

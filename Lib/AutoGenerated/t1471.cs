@@ -726,10 +726,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 시간대별호가잔량추이(t1471)
+		/// </summary>
 		public XQt1471() : base("t1471") { }
 
 
-		public static XQt1471OutBlock1[] Get(string shcode = default,string gubun = default,string time = default,string cnt = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1471OutBlock OutBlock { get; internal set; }
+			public XQt1471OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,string gubun = default,string time = default,string cnt = default)
 		{
 			using (XQt1471 instance = new XQt1471())
 			{
@@ -743,8 +752,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

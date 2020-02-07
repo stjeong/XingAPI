@@ -448,6 +448,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 특이테마(t1533)
+		/// </summary>
 		public XQt1533() : base("t1533") { }
 
 

@@ -836,10 +836,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 챠트지표데이터조회
+		/// </summary>
 		public XQCHARTINDEX() : base("CHARTINDEX") { }
 
 
-		public static XQChartIndexOutBlock1[] Get(long indexid = default,string indexname = default,string indexparam = default,char market = default,char period = default,string shcode = default,long qrycnt = default,long ncnt = default,string sdate = default,string edate = default,char Isamend = default,char Isgab = default,char IsReal = default)
+		public class XQAllOutBlocks
+		{
+			public XQChartIndexOutBlock OutBlock { get; internal set; }
+			public XQChartIndexOutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(long indexid = default,string indexname = default,string indexparam = default,char market = default,char period = default,string shcode = default,long qrycnt = default,long ncnt = default,string sdate = default,string edate = default,char Isamend = default,char Isgab = default,char IsReal = default)
 		{
 			using (XQCHARTINDEX instance = new XQCHARTINDEX())
 			{
@@ -862,8 +871,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -1006,6 +1006,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// EUREXKOSPI200옵션선물호가조회(t2831)
+		/// </summary>
 		public XQt2831() : base("t2831") { }
 
 

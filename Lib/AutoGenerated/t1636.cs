@@ -725,10 +725,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 종목별프로그램매매동향(t1636)
+		/// </summary>
 		public XQt1636() : base("t1636") { }
 
 
-		public static XQt1636OutBlock1[] Get(char gubun = default,char gubun1 = default,char gubun2 = default,string shcode = default,long cts_idx = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1636OutBlock OutBlock { get; internal set; }
+			public XQt1636OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun = default,char gubun1 = default,char gubun2 = default,string shcode = default,long cts_idx = default)
 		{
 			using (XQt1636 instance = new XQt1636())
 			{
@@ -743,8 +752,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

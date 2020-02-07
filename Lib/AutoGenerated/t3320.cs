@@ -1048,6 +1048,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// FNG_요약(t3320)
+		/// </summary>
 		public XQt3320() : base("t3320") { }
 
 

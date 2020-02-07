@@ -1080,10 +1080,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식잔고2(t0424)
+		/// </summary>
 		public XQt0424() : base("t0424") { }
 
 
-		public static XQt0424OutBlock1[] Get(string accno = default,string passwd = default,char prcgb = default,char chegb = default,char dangb = default,char charge = default,string cts_expcode = default)
+		public class XQAllOutBlocks
+		{
+			public XQt0424OutBlock OutBlock { get; internal set; }
+			public XQt0424OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string accno = default,string passwd = default,char prcgb = default,char chegb = default,char dangb = default,char charge = default,string cts_expcode = default)
 		{
 			using (XQt0424 instance = new XQt0424())
 			{
@@ -1100,8 +1109,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

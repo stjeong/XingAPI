@@ -691,10 +691,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식당일전일분틱조회(t1310)
+		/// </summary>
 		public XQt1310() : base("t1310") { }
 
 
-		public static XQt1310OutBlock1[] Get(char daygb = default,char timegb = default,string shcode = default,string endtime = default,string cts_time = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1310OutBlock OutBlock { get; internal set; }
+			public XQt1310OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char daygb = default,char timegb = default,string shcode = default,string endtime = default,string cts_time = default)
 		{
 			using (XQt1310 instance = new XQt1310())
 			{
@@ -709,8 +718,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -35,12 +35,19 @@ namespace t1305
 
                 if (useDemoServer)
                 {
-                    var items = XQt1305.Get(Stock.SHCODE.KOSPI.SK하이닉스, 
+                    var multiBlock = XQt1305.Get(Stock.SHCODE.KOSPI.SK하이닉스, 
                         dwmcode: XQt1305.DWMCode.일,
                         cnt: 10);
 
-                    Console.WriteLine($"# of items: {items.Length}");
-                    foreach (var item in items)
+                    if (multiBlock.OutBlock.IsValidData == false)
+                    {
+                        return;
+                    }
+
+                    multiBlock.OutBlock.Dump(Console.Out, DumpOutputType.Inline80Cols);
+
+                    Console.WriteLine($"# of items: {multiBlock.OutBlock1.Length}");
+                    foreach (var item in multiBlock.OutBlock1)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline80Cols);
                     }

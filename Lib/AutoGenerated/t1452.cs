@@ -687,10 +687,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 거래량상위(t1452)
+		/// </summary>
 		public XQt1452() : base("t1452") { }
 
 
-		public static XQt1452OutBlock1[] Get(char gubun = default,char jnilgubun = default,long sdiff = default,long ediff = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1452OutBlock OutBlock { get; internal set; }
+			public XQt1452OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun = default,char jnilgubun = default,long sdiff = default,long ediff = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default)
 		{
 			using (XQt1452 instance = new XQt1452())
 			{
@@ -709,8 +718,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -689,10 +689,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 체결강도추이(t1475)
+		/// </summary>
 		public XQt1475() : base("t1475") { }
 
 
-		public static XQt1475OutBlock1[] Get(string shcode = default,char vptype = default,long datacnt = default,long date = default,long time = default,long rankcnt = default,char gubun = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1475OutBlock OutBlock { get; internal set; }
+			public XQt1475OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,char vptype = default,long datacnt = default,long date = default,long time = default,long rankcnt = default,char gubun = default)
 		{
 			using (XQt1475 instance = new XQt1475())
 			{
@@ -709,8 +718,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

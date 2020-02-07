@@ -726,10 +726,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물/옵션잔고평가(이동평균)(t0441)
+		/// </summary>
 		public XQt0441() : base("t0441") { }
 
 
-		public static XQt0441OutBlock1[] Get(string accno = default,string passwd = default,string cts_expcode = default,char cts_medocd = default)
+		public class XQAllOutBlocks
+		{
+			public XQt0441OutBlock OutBlock { get; internal set; }
+			public XQt0441OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string accno = default,string passwd = default,string cts_expcode = default,char cts_medocd = default)
 		{
 			using (XQt0441 instance = new XQt0441())
 			{
@@ -743,8 +752,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -1288,10 +1288,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// ETF구성종목조회(t1904)
+		/// </summary>
 		public XQt1904() : base("t1904") { }
 
 
-		public static XQt1904OutBlock1[] Get(string shcode = default,string date = default,char sgb = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1904OutBlock OutBlock { get; internal set; }
+			public XQt1904OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,string date = default,char sgb = default)
 		{
 			using (XQt1904 instance = new XQt1904())
 			{
@@ -1304,8 +1313,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

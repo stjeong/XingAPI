@@ -500,6 +500,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식종목조회 API용(t8436)
+		/// </summary>
 		public XQt8436() : base("t8436") { }
 
 

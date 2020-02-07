@@ -538,10 +538,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 서버저장조건리스트조회(API)(t1866)
+		/// </summary>
 		public XQt1866() : base("t1866") { }
 
 
-		public static XQt1866OutBlock1[] Get(string user_id = default,char gb = default,string group_name = default,char cont = default,string cont_key = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1866OutBlock OutBlock { get; internal set; }
+			public XQt1866OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string user_id = default,char gb = default,string group_name = default,char cont = default,string cont_key = default)
 		{
 			using (XQt1866 instance = new XQt1866())
 			{
@@ -556,8 +565,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

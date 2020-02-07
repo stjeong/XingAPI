@@ -828,10 +828,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 주식분별주가조회(t1302)
+		/// </summary>
 		public XQt1302() : base("t1302") { }
 
 
-		public static XQt1302OutBlock1[] Get(string shcode = default,char gubun = default,string time = default,int cnt = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1302OutBlock OutBlock { get; internal set; }
+			public XQt1302OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,char gubun = default,string time = default,int cnt = default)
 		{
 			using (XQt1302 instance = new XQt1302())
 			{
@@ -845,8 +854,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

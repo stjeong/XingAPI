@@ -38,10 +38,12 @@ namespace t0424
                     foreach (string account in xing.GetAccounts())
                     {
                         Console.WriteLine($"[Account = {account}]");
-                        var items = XQt0424.Get(account);
+                        var multiBlock = XQt0424.Get(account);
 
-                        Console.WriteLine($"# of items: {items.Length}");
-                        foreach (var item in items)
+                        multiBlock.OutBlock?.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+
+                        Console.WriteLine($"# of items: {multiBlock.OutBlock1.Length}");
+                        foreach (var item in multiBlock.OutBlock1)
                         {
                             item.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
                         }

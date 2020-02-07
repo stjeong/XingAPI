@@ -755,10 +755,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 상/하한(t1422)
+		/// </summary>
 		public XQt1422() : base("t1422") { }
 
 
-		public static XQt1422OutBlock1[] Get(char qrygb = default,char gubun = default,char jnilgubun = default,char sign = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1422OutBlock OutBlock { get; internal set; }
+			public XQt1422OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char qrygb = default,char gubun = default,char jnilgubun = default,char sign = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default)
 		{
 			using (XQt1422 instance = new XQt1422())
 			{
@@ -777,8 +786,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

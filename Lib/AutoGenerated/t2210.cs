@@ -391,6 +391,9 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 선물옵션시간대별체결조회(단일출력용)
+		/// </summary>
 		public XQt2210() : base("t2210") { }
 
 

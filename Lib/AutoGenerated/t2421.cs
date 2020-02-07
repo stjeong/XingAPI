@@ -725,10 +725,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 미결제약정추이(t2421)
+		/// </summary>
 		public XQt2421() : base("t2421") { }
 
 
-		public static XQt2421OutBlock1[] Get(string focode = default,char bdgubun = default,int nmin = default,char tcgubun = default,int cnt = default)
+		public class XQAllOutBlocks
+		{
+			public XQt2421OutBlock OutBlock { get; internal set; }
+			public XQt2421OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string focode = default,char bdgubun = default,int nmin = default,char tcgubun = default,int cnt = default)
 		{
 			using (XQt2421 instance = new XQt2421())
 			{
@@ -743,8 +752,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

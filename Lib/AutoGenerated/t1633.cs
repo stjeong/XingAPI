@@ -756,10 +756,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 기간별프로그램매매추이(t1633)
+		/// </summary>
 		public XQt1633() : base("t1633") { }
 
 
-		public static XQt1633OutBlock1[] Get(char gubun = default,char gubun1 = default,char gubun2 = default,char gubun3 = default,string fdate = default,string tdate = default,char gubun4 = default,string date = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1633OutBlock OutBlock { get; internal set; }
+			public XQt1633OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun = default,char gubun1 = default,char gubun2 = default,char gubun3 = default,string fdate = default,string tdate = default,char gubun4 = default,string date = default)
 		{
 			using (XQt1633 instance = new XQt1633())
 			{
@@ -777,8 +786,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

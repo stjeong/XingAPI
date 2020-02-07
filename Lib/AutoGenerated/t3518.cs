@@ -825,10 +825,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 해외실시간지수(t3518)
+		/// </summary>
 		public XQt3518() : base("t3518") { }
 
 
-		public static XQt3518OutBlock1[] Get(char kind = default,string symbol = default,long cnt = default,char jgbn = default,long nmin = default,string cts_date = default,string cts_time = default)
+		public class XQAllOutBlocks
+		{
+			public XQt3518OutBlock OutBlock { get; internal set; }
+			public XQt3518OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char kind = default,string symbol = default,long cnt = default,char jgbn = default,long nmin = default,string cts_date = default,string cts_time = default)
 		{
 			using (XQt3518 instance = new XQt3518())
 			{
@@ -845,8 +854,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

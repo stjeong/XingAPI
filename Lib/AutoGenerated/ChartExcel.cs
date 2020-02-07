@@ -788,10 +788,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 챠트엑셀데이터조회
+		/// </summary>
 		public XQCHARTEXCEL() : base("CHARTEXCEL") { }
 
 
-		public static XQChartExcelOutBlock1[] Get(long indexid = default,string indexname = default,string indexparam = default,char indexouttype = default,char market = default,char period = default,string shcode = default,char isexcelout = default,string excelfilename = default,char IsReal = default)
+		public class XQAllOutBlocks
+		{
+			public XQChartExcelOutBlock OutBlock { get; internal set; }
+			public XQChartExcelOutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(long indexid = default,string indexname = default,string indexparam = default,char indexouttype = default,char market = default,char period = default,string shcode = default,char isexcelout = default,string excelfilename = default,char IsReal = default)
 		{
 			using (XQCHARTEXCEL instance = new XQCHARTEXCEL())
 			{
@@ -811,8 +820,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 

@@ -35,8 +35,16 @@ namespace t1537
 
                 if (useDemoServer)
                 {
-                    var items = XQt1537.Get(Stock.TMCODE.테마파크);
-                    foreach (var item in items)
+                    var multiBlock = XQt1537.Get(Stock.TMCODE.테마파크);
+
+                    if (multiBlock.OutBlock.IsValidData == false)
+                    {
+                        return;
+                    }
+
+                    multiBlock.OutBlock.Dump(Console.Out, DumpOutputType.Inline80Cols);
+                    
+                    foreach (var item in multiBlock.OutBlock1)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline);
                     }

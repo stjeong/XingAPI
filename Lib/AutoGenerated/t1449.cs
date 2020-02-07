@@ -660,10 +660,19 @@ namespace XingAPINet
 		/// </summary>
 		public bool Signature => _signature;
 
+		/// <summary>
+		/// 가격대별매매비중조회(t1449)
+		/// </summary>
 		public XQt1449() : base("t1449") { }
 
 
-		public static XQt1449OutBlock1[] Get(string shcode = default,char dategb = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1449OutBlock OutBlock { get; internal set; }
+			public XQt1449OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(string shcode = default,char dategb = default)
 		{
 			using (XQt1449 instance = new XQt1449())
 			{
@@ -675,8 +684,15 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlock1s();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 
