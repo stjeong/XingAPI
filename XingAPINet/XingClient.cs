@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
@@ -15,6 +16,12 @@ namespace XingAPINet
         bool _loggedIn = false;
 
         readonly EventWaitHandle _ewh_LoginSync = new EventWaitHandle(false, EventResetMode.ManualReset);
+
+        static DbProviderFactory _dbProviderFactory;
+        public static DbProviderFactory DBProviderFactory;
+
+        static string _dbConnectionString;
+        public static string DBConnectionString;
 
         public int NumberOfAccount
         {
