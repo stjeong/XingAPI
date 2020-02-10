@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분1
 		/// </summary>
-		[XAQueryFieldAttribute("구분1")]
+		[XAQueryFieldAttribute("구분1", "1")]
 		public char gubun1;
 
 		public static class F
@@ -137,12 +137,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 업종명
 		/// </summary>
-		[XAQueryFieldAttribute("업종명")]
+		[XAQueryFieldAttribute("업종명", "20")]
 		public string hname;
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드")]
+		[XAQueryFieldAttribute("업종코드", "3")]
 		public string upcode;
 
 		public static class F
@@ -354,6 +354,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt8424OutBlock),
+
+		};
 
 	}
 

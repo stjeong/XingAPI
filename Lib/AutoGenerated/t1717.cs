@@ -50,22 +50,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 구분(0:일간순매수1:기간누적순매수)
 		/// </summary>
-		[XAQueryFieldAttribute("구분(0:일간순매수1:기간누적순매수)")]
+		[XAQueryFieldAttribute("구분(0:일간순매수1:기간누적순매수)", "1")]
 		public char gubun;
 		/// <summary>
 		/// 시작일자(일간조회일경우는space)
 		/// </summary>
-		[XAQueryFieldAttribute("시작일자(일간조회일경우는space)")]
+		[XAQueryFieldAttribute("시작일자(일간조회일경우는space)", "8")]
 		public string fromdt;
 		/// <summary>
 		/// 종료일자
 		/// </summary>
-		[XAQueryFieldAttribute("종료일자")]
+		[XAQueryFieldAttribute("종료일자", "8")]
 		public string todt;
 
 		public static class F
@@ -185,182 +185,182 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자")]
+		[XAQueryFieldAttribute("일자", "8")]
 		public string date;
 		/// <summary>
 		/// 종가
 		/// </summary>
-		[XAQueryFieldAttribute("종가")]
+		[XAQueryFieldAttribute("종가", "8")]
 		public long close;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 사모펀드(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드(순매수량)")]
+		[XAQueryFieldAttribute("사모펀드(순매수량)", "12")]
 		public long tjj0000_vol;
 		/// <summary>
 		/// 증권(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("증권(순매수량)")]
+		[XAQueryFieldAttribute("증권(순매수량)", "12")]
 		public long tjj0001_vol;
 		/// <summary>
 		/// 보험(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("보험(순매수량)")]
+		[XAQueryFieldAttribute("보험(순매수량)", "12")]
 		public long tjj0002_vol;
 		/// <summary>
 		/// 투신(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("투신(순매수량)")]
+		[XAQueryFieldAttribute("투신(순매수량)", "12")]
 		public long tjj0003_vol;
 		/// <summary>
 		/// 은행(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("은행(순매수량)")]
+		[XAQueryFieldAttribute("은행(순매수량)", "12")]
 		public long tjj0004_vol;
 		/// <summary>
 		/// 종금(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("종금(순매수량)")]
+		[XAQueryFieldAttribute("종금(순매수량)", "12")]
 		public long tjj0005_vol;
 		/// <summary>
 		/// 기금(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("기금(순매수량)")]
+		[XAQueryFieldAttribute("기금(순매수량)", "12")]
 		public long tjj0006_vol;
 		/// <summary>
 		/// 기타법인(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("기타법인(순매수량)")]
+		[XAQueryFieldAttribute("기타법인(순매수량)", "12")]
 		public long tjj0007_vol;
 		/// <summary>
 		/// 개인(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("개인(순매수량)")]
+		[XAQueryFieldAttribute("개인(순매수량)", "12")]
 		public long tjj0008_vol;
 		/// <summary>
 		/// 등록외국인(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("등록외국인(순매수량)")]
+		[XAQueryFieldAttribute("등록외국인(순매수량)", "12")]
 		public long tjj0009_vol;
 		/// <summary>
 		/// 미등록외국인(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("미등록외국인(순매수량)")]
+		[XAQueryFieldAttribute("미등록외국인(순매수량)", "12")]
 		public long tjj0010_vol;
 		/// <summary>
 		/// 국가외(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("국가외(순매수량)")]
+		[XAQueryFieldAttribute("국가외(순매수량)", "12")]
 		public long tjj0011_vol;
 		/// <summary>
 		/// 기관(순매수량)
 		/// </summary>
-		[XAQueryFieldAttribute("기관(순매수량)")]
+		[XAQueryFieldAttribute("기관(순매수량)", "12")]
 		public long tjj0018_vol;
 		/// <summary>
 		/// 외인계(순매수량)(등록+미등록)
 		/// </summary>
-		[XAQueryFieldAttribute("외인계(순매수량)(등록+미등록)")]
+		[XAQueryFieldAttribute("외인계(순매수량)(등록+미등록)", "12")]
 		public long tjj0016_vol;
 		/// <summary>
 		/// 기타계(순매수량)(기타+국가)
 		/// </summary>
-		[XAQueryFieldAttribute("기타계(순매수량)(기타+국가)")]
+		[XAQueryFieldAttribute("기타계(순매수량)(기타+국가)", "12")]
 		public long tjj0017_vol;
 		/// <summary>
 		/// 사모펀드(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드(단가)")]
+		[XAQueryFieldAttribute("사모펀드(단가)", "12")]
 		public long tjj0000_dan;
 		/// <summary>
 		/// 증권(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("증권(단가)")]
+		[XAQueryFieldAttribute("증권(단가)", "12")]
 		public long tjj0001_dan;
 		/// <summary>
 		/// 보험(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("보험(단가)")]
+		[XAQueryFieldAttribute("보험(단가)", "12")]
 		public long tjj0002_dan;
 		/// <summary>
 		/// 투신(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("투신(단가)")]
+		[XAQueryFieldAttribute("투신(단가)", "12")]
 		public long tjj0003_dan;
 		/// <summary>
 		/// 은행(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("은행(단가)")]
+		[XAQueryFieldAttribute("은행(단가)", "12")]
 		public long tjj0004_dan;
 		/// <summary>
 		/// 종금(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("종금(단가)")]
+		[XAQueryFieldAttribute("종금(단가)", "12")]
 		public long tjj0005_dan;
 		/// <summary>
 		/// 기금(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("기금(단가)")]
+		[XAQueryFieldAttribute("기금(단가)", "12")]
 		public long tjj0006_dan;
 		/// <summary>
 		/// 기타법인(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("기타법인(단가)")]
+		[XAQueryFieldAttribute("기타법인(단가)", "12")]
 		public long tjj0007_dan;
 		/// <summary>
 		/// 개인(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("개인(단가)")]
+		[XAQueryFieldAttribute("개인(단가)", "12")]
 		public long tjj0008_dan;
 		/// <summary>
 		/// 등록외국인(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("등록외국인(단가)")]
+		[XAQueryFieldAttribute("등록외국인(단가)", "12")]
 		public long tjj0009_dan;
 		/// <summary>
 		/// 미등록외국인(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("미등록외국인(단가)")]
+		[XAQueryFieldAttribute("미등록외국인(단가)", "12")]
 		public long tjj0010_dan;
 		/// <summary>
 		/// 국가외(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("국가외(단가)")]
+		[XAQueryFieldAttribute("국가외(단가)", "12")]
 		public long tjj0011_dan;
 		/// <summary>
 		/// 기관(단가)
 		/// </summary>
-		[XAQueryFieldAttribute("기관(단가)")]
+		[XAQueryFieldAttribute("기관(단가)", "12")]
 		public long tjj0018_dan;
 		/// <summary>
 		/// 외인계(단가)(등록+미등록)
 		/// </summary>
-		[XAQueryFieldAttribute("외인계(단가)(등록+미등록)")]
+		[XAQueryFieldAttribute("외인계(단가)(등록+미등록)", "12")]
 		public long tjj0016_dan;
 		/// <summary>
 		/// 기타계(단가)(기타+국가)
 		/// </summary>
-		[XAQueryFieldAttribute("기타계(단가)(기타+국가)")]
+		[XAQueryFieldAttribute("기타계(단가)(기타+국가)", "12")]
 		public long tjj0017_dan;
 
 		public static class F
@@ -986,6 +986,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1717OutBlock),
+
+		};
 
 	}
 

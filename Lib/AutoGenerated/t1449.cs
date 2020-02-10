@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 일자구분
 		/// </summary>
-		[XAQueryFieldAttribute("일자구분")]
+		[XAQueryFieldAttribute("일자구분", "1")]
 		public char dategb;
 
 		public static class F
@@ -153,37 +153,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 매수체결량
 		/// </summary>
-		[XAQueryFieldAttribute("매수체결량")]
+		[XAQueryFieldAttribute("매수체결량", "12")]
 		public long msvolume;
 		/// <summary>
 		/// 매도체결량
 		/// </summary>
-		[XAQueryFieldAttribute("매도체결량")]
+		[XAQueryFieldAttribute("매도체결량", "12")]
 		public long mdvolume;
 
 		public static class F
@@ -365,47 +365,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 체결가
 		/// </summary>
-		[XAQueryFieldAttribute("체결가")]
+		[XAQueryFieldAttribute("체결가", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float tickdiff;
 		/// <summary>
 		/// 체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("체결수량")]
+		[XAQueryFieldAttribute("체결수량", "12")]
 		public long cvolume;
 		/// <summary>
 		/// 비중
 		/// </summary>
-		[XAQueryFieldAttribute("비중")]
+		[XAQueryFieldAttribute("비중", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 매도체결량
 		/// </summary>
-		[XAQueryFieldAttribute("매도체결량")]
+		[XAQueryFieldAttribute("매도체결량", "12")]
 		public long mdvolume;
 		/// <summary>
 		/// 매수체결량
 		/// </summary>
-		[XAQueryFieldAttribute("매수체결량")]
+		[XAQueryFieldAttribute("매수체결량", "12")]
 		public long msvolume;
 		/// <summary>
 		/// 매수비율
 		/// </summary>
-		[XAQueryFieldAttribute("매수비율")]
+		[XAQueryFieldAttribute("매수비율", "6.2")]
 		public float msdiff;
 
 		public static class F
@@ -723,6 +723,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1449OutBlock),
+			typeof(XQt1449OutBlock1),
+
+		};
 
 	}
 

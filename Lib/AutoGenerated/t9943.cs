@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분")]
+		[XAQueryFieldAttribute("구분", "1")]
 		public char gubun;
 
 		public static class F
@@ -137,17 +137,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명")]
+		[XAQueryFieldAttribute("종목명", "20")]
 		public string hname;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "8")]
 		public string shcode;
 		/// <summary>
 		/// 확장코드
 		/// </summary>
-		[XAQueryFieldAttribute("확장코드")]
+		[XAQueryFieldAttribute("확장코드", "12")]
 		public string expcode;
 
 		public static class F
@@ -371,6 +371,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt9943OutBlock),
+
+		};
 
 	}
 

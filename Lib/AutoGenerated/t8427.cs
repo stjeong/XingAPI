@@ -50,52 +50,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 선물옵션구분
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션구분")]
+		[XAQueryFieldAttribute("선물옵션구분", "1")]
 		public char fo_gbn;
 		/// <summary>
 		/// 조회년도
 		/// </summary>
-		[XAQueryFieldAttribute("조회년도")]
+		[XAQueryFieldAttribute("조회년도", "4")]
 		public string yyyy;
 		/// <summary>
 		/// 조회월
 		/// </summary>
-		[XAQueryFieldAttribute("조회월")]
+		[XAQueryFieldAttribute("조회월", "2")]
 		public string mm;
 		/// <summary>
 		/// 옵션콜풋구분
 		/// </summary>
-		[XAQueryFieldAttribute("옵션콜풋구분")]
+		[XAQueryFieldAttribute("옵션콜풋구분", "1")]
 		public char cp_gbn;
 		/// <summary>
 		/// 옵션행사가
 		/// </summary>
-		[XAQueryFieldAttribute("옵션행사가")]
+		[XAQueryFieldAttribute("옵션행사가", "6.2")]
 		public float actprice;
 		/// <summary>
 		/// 선물옵션코드
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션코드")]
+		[XAQueryFieldAttribute("선물옵션코드", "8")]
 		public string focode;
 		/// <summary>
 		/// 일분구분
 		/// </summary>
-		[XAQueryFieldAttribute("일분구분")]
+		[XAQueryFieldAttribute("일분구분", "1")]
 		public char dt_gbn;
 		/// <summary>
 		/// 분간격
 		/// </summary>
-		[XAQueryFieldAttribute("분간격")]
+		[XAQueryFieldAttribute("분간격", "2")]
 		public string min_term;
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜")]
+		[XAQueryFieldAttribute("날짜", "8")]
 		public string date;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "6")]
 		public string time;
 
 		public static class F
@@ -281,17 +281,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 선물옵션코드
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션코드")]
+		[XAQueryFieldAttribute("선물옵션코드", "8")]
 		public string focode;
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜")]
+		[XAQueryFieldAttribute("날짜", "8")]
 		public string date;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "6")]
 		public string time;
 
 		public static class F
@@ -425,72 +425,72 @@ namespace XingAPINet
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜")]
+		[XAQueryFieldAttribute("날짜", "8")]
 		public string date;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "6")]
 		public string time;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가")]
+		[XAQueryFieldAttribute("시가", "6.2")]
 		public float open;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가")]
+		[XAQueryFieldAttribute("고가", "6.2")]
 		public float high;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가")]
+		[XAQueryFieldAttribute("저가", "6.2")]
 		public float low;
 		/// <summary>
 		/// 종가
 		/// </summary>
-		[XAQueryFieldAttribute("종가")]
+		[XAQueryFieldAttribute("종가", "6.2")]
 		public float close;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "6.2")]
 		public float change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 거래증가율
 		/// </summary>
-		[XAQueryFieldAttribute("거래증가율")]
+		[XAQueryFieldAttribute("거래증가율", "10.2")]
 		public float diff_vol;
 		/// <summary>
 		/// 미결수량
 		/// </summary>
-		[XAQueryFieldAttribute("미결수량")]
+		[XAQueryFieldAttribute("미결수량", "8")]
 		public long openyak;
 		/// <summary>
 		/// 미결증감
 		/// </summary>
-		[XAQueryFieldAttribute("미결증감")]
+		[XAQueryFieldAttribute("미결증감", "8")]
 		public long openyakupdn;
 		/// <summary>
 		/// 거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금")]
+		[XAQueryFieldAttribute("거래대금", "12")]
 		public float value;
 
 		public static class F
@@ -884,6 +884,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt8427OutBlock),
+			typeof(XQt8427OutBlock1),
+
+		};
 
 	}
 

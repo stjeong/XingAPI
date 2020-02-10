@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,407 +137,407 @@ namespace XingAPINet
 		/// <summary>
 		/// 매도증권사코드1
 		/// </summary>
-		[XAQueryFieldAttribute("매도증권사코드1")]
+		[XAQueryFieldAttribute("매도증권사코드1", "3")]
 		public string offerno1;
 		/// <summary>
 		/// 매수증권사코드1
 		/// </summary>
-		[XAQueryFieldAttribute("매수증권사코드1")]
+		[XAQueryFieldAttribute("매수증권사코드1", "3")]
 		public string bidno1;
 		/// <summary>
 		/// 매도회원사명1
 		/// </summary>
-		[XAQueryFieldAttribute("매도회원사명1")]
+		[XAQueryFieldAttribute("매도회원사명1", "6")]
 		public string offertrad1;
 		/// <summary>
 		/// 매수회원사명1
 		/// </summary>
-		[XAQueryFieldAttribute("매수회원사명1")]
+		[XAQueryFieldAttribute("매수회원사명1", "6")]
 		public string bidtrad1;
 		/// <summary>
 		/// 매도거래량1
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량1")]
+		[XAQueryFieldAttribute("매도거래량1", "10")]
 		public long tradmdvol1;
 		/// <summary>
 		/// 매수거래량1
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량1")]
+		[XAQueryFieldAttribute("매수거래량1", "10")]
 		public long tradmsvol1;
 		/// <summary>
 		/// 매도거래량비중1
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량비중1")]
+		[XAQueryFieldAttribute("매도거래량비중1", "6.2")]
 		public float tradmdrate1;
 		/// <summary>
 		/// 매도거래량비중1
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량비중1")]
+		[XAQueryFieldAttribute("매도거래량비중1", "6.2")]
 		public float tradmsrate1;
 		/// <summary>
 		/// 매도거래량직전대비1
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량직전대비1")]
+		[XAQueryFieldAttribute("매도거래량직전대비1", "10")]
 		public long tradmdcha1;
 		/// <summary>
 		/// 매수거래량직전대비1
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량직전대비1")]
+		[XAQueryFieldAttribute("매수거래량직전대비1", "10")]
 		public long tradmscha1;
 		/// <summary>
 		/// 매도증권사코드2
 		/// </summary>
-		[XAQueryFieldAttribute("매도증권사코드2")]
+		[XAQueryFieldAttribute("매도증권사코드2", "3")]
 		public string offerno2;
 		/// <summary>
 		/// 매수증권사코드2
 		/// </summary>
-		[XAQueryFieldAttribute("매수증권사코드2")]
+		[XAQueryFieldAttribute("매수증권사코드2", "3")]
 		public string bidno2;
 		/// <summary>
 		/// 매도회원사명2
 		/// </summary>
-		[XAQueryFieldAttribute("매도회원사명2")]
+		[XAQueryFieldAttribute("매도회원사명2", "6")]
 		public string offertrad2;
 		/// <summary>
 		/// 매수회원사명2
 		/// </summary>
-		[XAQueryFieldAttribute("매수회원사명2")]
+		[XAQueryFieldAttribute("매수회원사명2", "6")]
 		public string bidtrad2;
 		/// <summary>
 		/// 매도거래량2
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량2")]
+		[XAQueryFieldAttribute("매도거래량2", "10")]
 		public long tradmdvol2;
 		/// <summary>
 		/// 매수거래량2
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량2")]
+		[XAQueryFieldAttribute("매수거래량2", "10")]
 		public long tradmsvol2;
 		/// <summary>
 		/// 매도거래량비중2
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량비중2")]
+		[XAQueryFieldAttribute("매도거래량비중2", "6.2")]
 		public float tradmdrate2;
 		/// <summary>
 		/// 매수거래량비중2
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량비중2")]
+		[XAQueryFieldAttribute("매수거래량비중2", "6.2")]
 		public float tradmsrate2;
 		/// <summary>
 		/// 매도거래량직전대비2
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량직전대비2")]
+		[XAQueryFieldAttribute("매도거래량직전대비2", "10")]
 		public long tradmdcha2;
 		/// <summary>
 		/// 매수거래량직전대비2
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량직전대비2")]
+		[XAQueryFieldAttribute("매수거래량직전대비2", "10")]
 		public long tradmscha2;
 		/// <summary>
 		/// 매도증권사코드3
 		/// </summary>
-		[XAQueryFieldAttribute("매도증권사코드3")]
+		[XAQueryFieldAttribute("매도증권사코드3", "3")]
 		public string offerno3;
 		/// <summary>
 		/// 매수증권사코드3
 		/// </summary>
-		[XAQueryFieldAttribute("매수증권사코드3")]
+		[XAQueryFieldAttribute("매수증권사코드3", "3")]
 		public string bidno3;
 		/// <summary>
 		/// 매도회원사명3
 		/// </summary>
-		[XAQueryFieldAttribute("매도회원사명3")]
+		[XAQueryFieldAttribute("매도회원사명3", "6")]
 		public string offertrad3;
 		/// <summary>
 		/// 매수회원사명3
 		/// </summary>
-		[XAQueryFieldAttribute("매수회원사명3")]
+		[XAQueryFieldAttribute("매수회원사명3", "6")]
 		public string bidtrad3;
 		/// <summary>
 		/// 매도거래량3
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량3")]
+		[XAQueryFieldAttribute("매도거래량3", "10")]
 		public long tradmdvol3;
 		/// <summary>
 		/// 매수거래량3
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량3")]
+		[XAQueryFieldAttribute("매수거래량3", "10")]
 		public long tradmsvol3;
 		/// <summary>
 		/// 매도거래량비중3
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량비중3")]
+		[XAQueryFieldAttribute("매도거래량비중3", "6.2")]
 		public float tradmdrate3;
 		/// <summary>
 		/// 매수거래량비중3
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량비중3")]
+		[XAQueryFieldAttribute("매수거래량비중3", "6.2")]
 		public float tradmsrate3;
 		/// <summary>
 		/// 매도거래량직전대비3
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량직전대비3")]
+		[XAQueryFieldAttribute("매도거래량직전대비3", "10")]
 		public long tradmdcha3;
 		/// <summary>
 		/// 매수거래량직전대비3
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량직전대비3")]
+		[XAQueryFieldAttribute("매수거래량직전대비3", "10")]
 		public long tradmscha3;
 		/// <summary>
 		/// 매도증권사코드4
 		/// </summary>
-		[XAQueryFieldAttribute("매도증권사코드4")]
+		[XAQueryFieldAttribute("매도증권사코드4", "3")]
 		public string offerno4;
 		/// <summary>
 		/// 매수증권사코드4
 		/// </summary>
-		[XAQueryFieldAttribute("매수증권사코드4")]
+		[XAQueryFieldAttribute("매수증권사코드4", "3")]
 		public string bidno4;
 		/// <summary>
 		/// 매도회원사명4
 		/// </summary>
-		[XAQueryFieldAttribute("매도회원사명4")]
+		[XAQueryFieldAttribute("매도회원사명4", "6")]
 		public string offertrad4;
 		/// <summary>
 		/// 매수회원사명4
 		/// </summary>
-		[XAQueryFieldAttribute("매수회원사명4")]
+		[XAQueryFieldAttribute("매수회원사명4", "6")]
 		public string bidtrad4;
 		/// <summary>
 		/// 매도거래량4
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량4")]
+		[XAQueryFieldAttribute("매도거래량4", "10")]
 		public long tradmdvol4;
 		/// <summary>
 		/// 매수거래량4
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량4")]
+		[XAQueryFieldAttribute("매수거래량4", "10")]
 		public long tradmsvol4;
 		/// <summary>
 		/// 매도거래량비중4
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량비중4")]
+		[XAQueryFieldAttribute("매도거래량비중4", "6.2")]
 		public float tradmdrate4;
 		/// <summary>
 		/// 매수거래량비중4
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량비중4")]
+		[XAQueryFieldAttribute("매수거래량비중4", "6.2")]
 		public float tradmsrate4;
 		/// <summary>
 		/// 매도거래량직전대비4
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량직전대비4")]
+		[XAQueryFieldAttribute("매도거래량직전대비4", "10")]
 		public long tradmdcha4;
 		/// <summary>
 		/// 매수거래량직전대비4
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량직전대비4")]
+		[XAQueryFieldAttribute("매수거래량직전대비4", "10")]
 		public long tradmscha4;
 		/// <summary>
 		/// 매도증권사코드5
 		/// </summary>
-		[XAQueryFieldAttribute("매도증권사코드5")]
+		[XAQueryFieldAttribute("매도증권사코드5", "3")]
 		public string offerno5;
 		/// <summary>
 		/// 매수증권사코드5
 		/// </summary>
-		[XAQueryFieldAttribute("매수증권사코드5")]
+		[XAQueryFieldAttribute("매수증권사코드5", "3")]
 		public string bidno5;
 		/// <summary>
 		/// 매도회원사명5
 		/// </summary>
-		[XAQueryFieldAttribute("매도회원사명5")]
+		[XAQueryFieldAttribute("매도회원사명5", "6")]
 		public string offertrad5;
 		/// <summary>
 		/// 매수회원사명5
 		/// </summary>
-		[XAQueryFieldAttribute("매수회원사명5")]
+		[XAQueryFieldAttribute("매수회원사명5", "6")]
 		public string bidtrad5;
 		/// <summary>
 		/// 매도거래량5
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량5")]
+		[XAQueryFieldAttribute("매도거래량5", "10")]
 		public long tradmdvol5;
 		/// <summary>
 		/// 매수거래량5
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량5")]
+		[XAQueryFieldAttribute("매수거래량5", "10")]
 		public long tradmsvol5;
 		/// <summary>
 		/// 매도거래량비중5
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량비중5")]
+		[XAQueryFieldAttribute("매도거래량비중5", "6.2")]
 		public float tradmdrate5;
 		/// <summary>
 		/// 매수거래량비중5
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량비중5")]
+		[XAQueryFieldAttribute("매수거래량비중5", "6.2")]
 		public float tradmsrate5;
 		/// <summary>
 		/// 매도거래량직전대비5
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래량직전대비5")]
+		[XAQueryFieldAttribute("매도거래량직전대비5", "10")]
 		public long tradmdcha5;
 		/// <summary>
 		/// 매수거래량직전대비5
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래량직전대비5")]
+		[XAQueryFieldAttribute("매수거래량직전대비5", "10")]
 		public long tradmscha5;
 		/// <summary>
 		/// 외국계증권사매도합계
 		/// </summary>
-		[XAQueryFieldAttribute("외국계증권사매도합계")]
+		[XAQueryFieldAttribute("외국계증권사매도합계", "10")]
 		public string ftradmdvol;
 		/// <summary>
 		/// 외국계증권사매수합계
 		/// </summary>
-		[XAQueryFieldAttribute("외국계증권사매수합계")]
+		[XAQueryFieldAttribute("외국계증권사매수합계", "10")]
 		public string ftradmsvol;
 		/// <summary>
 		/// 외국계증권사매도거래량비중
 		/// </summary>
-		[XAQueryFieldAttribute("외국계증권사매도거래량비중")]
+		[XAQueryFieldAttribute("외국계증권사매도거래량비중", "6.2")]
 		public float ftradmdrate;
 		/// <summary>
 		/// 외국계증권사매수거래량비중
 		/// </summary>
-		[XAQueryFieldAttribute("외국계증권사매수거래량비중")]
+		[XAQueryFieldAttribute("외국계증권사매수거래량비중", "6.2")]
 		public float ftradmsrate;
 		/// <summary>
 		/// 외국계증권사매도거래량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("외국계증권사매도거래량직전대비")]
+		[XAQueryFieldAttribute("외국계증권사매도거래량직전대비", "10")]
 		public string ftradmdcha;
 		/// <summary>
 		/// 외국계증권사매수거래량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("외국계증권사매수거래량직전대비")]
+		[XAQueryFieldAttribute("외국계증권사매수거래량직전대비", "10")]
 		public string ftradmscha;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 매도거래대금1
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래대금1")]
+		[XAQueryFieldAttribute("매도거래대금1", "15")]
 		public long tradmdval1;
 		/// <summary>
 		/// 매수거래대금1
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래대금1")]
+		[XAQueryFieldAttribute("매수거래대금1", "15")]
 		public long tradmsval1;
 		/// <summary>
 		/// 매도평균단가1
 		/// </summary>
-		[XAQueryFieldAttribute("매도평균단가1")]
+		[XAQueryFieldAttribute("매도평균단가1", "7")]
 		public long tradmdavg1;
 		/// <summary>
 		/// 매수평균단가1
 		/// </summary>
-		[XAQueryFieldAttribute("매수평균단가1")]
+		[XAQueryFieldAttribute("매수평균단가1", "7")]
 		public long tradmsavg1;
 		/// <summary>
 		/// 매도거래대금2
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래대금2")]
+		[XAQueryFieldAttribute("매도거래대금2", "15")]
 		public long tradmdval2;
 		/// <summary>
 		/// 매수거래대금2
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래대금2")]
+		[XAQueryFieldAttribute("매수거래대금2", "15")]
 		public long tradmsval2;
 		/// <summary>
 		/// 매도평균단가2
 		/// </summary>
-		[XAQueryFieldAttribute("매도평균단가2")]
+		[XAQueryFieldAttribute("매도평균단가2", "7")]
 		public long tradmdavg2;
 		/// <summary>
 		/// 매수평균단가2
 		/// </summary>
-		[XAQueryFieldAttribute("매수평균단가2")]
+		[XAQueryFieldAttribute("매수평균단가2", "7")]
 		public long tradmsavg2;
 		/// <summary>
 		/// 매도거래대금3
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래대금3")]
+		[XAQueryFieldAttribute("매도거래대금3", "15")]
 		public long tradmdval3;
 		/// <summary>
 		/// 매수거래대금3
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래대금3")]
+		[XAQueryFieldAttribute("매수거래대금3", "15")]
 		public long tradmsval3;
 		/// <summary>
 		/// 매도평균단가3
 		/// </summary>
-		[XAQueryFieldAttribute("매도평균단가3")]
+		[XAQueryFieldAttribute("매도평균단가3", "7")]
 		public long tradmdavg3;
 		/// <summary>
 		/// 매수평균단가3
 		/// </summary>
-		[XAQueryFieldAttribute("매수평균단가3")]
+		[XAQueryFieldAttribute("매수평균단가3", "7")]
 		public long tradmsavg3;
 		/// <summary>
 		/// 매도거래대금4
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래대금4")]
+		[XAQueryFieldAttribute("매도거래대금4", "15")]
 		public long tradmdval4;
 		/// <summary>
 		/// 매수거래대금4
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래대금4")]
+		[XAQueryFieldAttribute("매수거래대금4", "15")]
 		public long tradmsval4;
 		/// <summary>
 		/// 매도평균단가4
 		/// </summary>
-		[XAQueryFieldAttribute("매도평균단가4")]
+		[XAQueryFieldAttribute("매도평균단가4", "7")]
 		public long tradmdavg4;
 		/// <summary>
 		/// 매수평균단가4
 		/// </summary>
-		[XAQueryFieldAttribute("매수평균단가4")]
+		[XAQueryFieldAttribute("매수평균단가4", "7")]
 		public long tradmsavg4;
 		/// <summary>
 		/// 매도거래대금5
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래대금5")]
+		[XAQueryFieldAttribute("매도거래대금5", "15")]
 		public long tradmdval5;
 		/// <summary>
 		/// 매수거래대금5
 		/// </summary>
-		[XAQueryFieldAttribute("매수거래대금5")]
+		[XAQueryFieldAttribute("매수거래대금5", "15")]
 		public long tradmsval5;
 		/// <summary>
 		/// 매도평균단가5
 		/// </summary>
-		[XAQueryFieldAttribute("매도평균단가5")]
+		[XAQueryFieldAttribute("매도평균단가5", "7")]
 		public long tradmdavg5;
 		/// <summary>
 		/// 매수평균단가5
 		/// </summary>
-		[XAQueryFieldAttribute("매수평균단가5")]
+		[XAQueryFieldAttribute("매수평균단가5", "7")]
 		public long tradmsavg5;
 		/// <summary>
 		/// 외국계증권사매도거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("외국계증권사매도거래대금")]
+		[XAQueryFieldAttribute("외국계증권사매도거래대금", "15")]
 		public long ftradmdval;
 		/// <summary>
 		/// 외국계증권사매수거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("외국계증권사매수거래대금")]
+		[XAQueryFieldAttribute("외국계증권사매수거래대금", "15")]
 		public long ftradmsval;
 		/// <summary>
 		/// 외국계증권사매도평균단가
 		/// </summary>
-		[XAQueryFieldAttribute("외국계증권사매도평균단가")]
+		[XAQueryFieldAttribute("외국계증권사매도평균단가", "7")]
 		public long ftradmdavg;
 		/// <summary>
 		/// 외국계증권사매수평균단가
 		/// </summary>
-		[XAQueryFieldAttribute("외국계증권사매수평균단가")]
+		[XAQueryFieldAttribute("외국계증권사매수평균단가", "7")]
 		public long ftradmsavg;
 
 		public static class F
@@ -1631,6 +1631,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XROK_OutBlock),
+
+		};
 
 	}
 

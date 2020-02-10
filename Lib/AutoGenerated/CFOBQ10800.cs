@@ -50,27 +50,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 상품군코드
 		/// </summary>
-		[XAQueryFieldAttribute("상품군코드")]
+		[XAQueryFieldAttribute("상품군코드", "2")]
 		public string PrdgrpClssCode;
 		/// <summary>
 		/// 기초자산코드
 		/// </summary>
-		[XAQueryFieldAttribute("기초자산코드")]
+		[XAQueryFieldAttribute("기초자산코드", "3")]
 		public string ClssGrpCode;
 		/// <summary>
 		/// 기준연도
 		/// </summary>
-		[XAQueryFieldAttribute("기준연도")]
+		[XAQueryFieldAttribute("기준연도", "4")]
 		public string BaseYear;
 		/// <summary>
 		/// 최근월물구분
 		/// </summary>
-		[XAQueryFieldAttribute("최근월물구분")]
+		[XAQueryFieldAttribute("최근월물구분", "1")]
 		public char FstmmTpCode;
 
 		public static class F
@@ -201,27 +201,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 상품군코드
 		/// </summary>
-		[XAQueryFieldAttribute("상품군코드")]
+		[XAQueryFieldAttribute("상품군코드", "2")]
 		public string PrdgrpClssCode;
 		/// <summary>
 		/// 기초자산코드
 		/// </summary>
-		[XAQueryFieldAttribute("기초자산코드")]
+		[XAQueryFieldAttribute("기초자산코드", "3")]
 		public string ClssGrpCode;
 		/// <summary>
 		/// 기준연도
 		/// </summary>
-		[XAQueryFieldAttribute("기준연도")]
+		[XAQueryFieldAttribute("기준연도", "4")]
 		public string BaseYear;
 		/// <summary>
 		/// 최근월물구분
 		/// </summary>
-		[XAQueryFieldAttribute("최근월물구분")]
+		[XAQueryFieldAttribute("최근월물구분", "1")]
 		public char FstmmTpCode;
 
 		public static class F
@@ -379,77 +379,77 @@ namespace XingAPINet
 		/// <summary>
 		/// 행사가
 		/// </summary>
-		[XAQueryFieldAttribute("행사가")]
+		[XAQueryFieldAttribute("행사가", "13.2")]
 		public double ElwXrcPrc;
 		/// <summary>
 		/// 선물옵션종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션종목번호")]
+		[XAQueryFieldAttribute("선물옵션종목번호", "12")]
 		public string FnoIsuNo;
 		/// <summary>
 		/// 한글종목명1
 		/// </summary>
-		[XAQueryFieldAttribute("한글종목명1")]
+		[XAQueryFieldAttribute("한글종목명1", "40")]
 		public string HanglIsuNm1;
 		/// <summary>
 		/// 구분명1
 		/// </summary>
-		[XAQueryFieldAttribute("구분명1")]
+		[XAQueryFieldAttribute("구분명1", "40")]
 		public string TpNm1;
 		/// <summary>
 		/// 상승옵션조정이론가
 		/// </summary>
-		[XAQueryFieldAttribute("상승옵션조정이론가")]
+		[XAQueryFieldAttribute("상승옵션조정이론가", "27.8")]
 		public double UpOptRegulThrprc;
 		/// <summary>
 		/// 이론가1
 		/// </summary>
-		[XAQueryFieldAttribute("이론가1")]
+		[XAQueryFieldAttribute("이론가1", "19.8")]
 		public double Thrprc1;
 		/// <summary>
 		/// 기준가1
 		/// </summary>
-		[XAQueryFieldAttribute("기준가1")]
+		[XAQueryFieldAttribute("기준가1", "13.2")]
 		public double BasePrc1;
 		/// <summary>
 		/// 주문증거금액1
 		/// </summary>
-		[XAQueryFieldAttribute("주문증거금액1")]
+		[XAQueryFieldAttribute("주문증거금액1", "16")]
 		public long OrdMgn1;
 		/// <summary>
 		/// 선물옵션종목번호0
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션종목번호0")]
+		[XAQueryFieldAttribute("선물옵션종목번호0", "12")]
 		public string FnoIsuNo0;
 		/// <summary>
 		/// 한글종목명2
 		/// </summary>
-		[XAQueryFieldAttribute("한글종목명2")]
+		[XAQueryFieldAttribute("한글종목명2", "40")]
 		public string HanglIsuNm2;
 		/// <summary>
 		/// 구분명2
 		/// </summary>
-		[XAQueryFieldAttribute("구분명2")]
+		[XAQueryFieldAttribute("구분명2", "40")]
 		public string TpNm2;
 		/// <summary>
 		/// 하락옵션조정이론가
 		/// </summary>
-		[XAQueryFieldAttribute("하락옵션조정이론가")]
+		[XAQueryFieldAttribute("하락옵션조정이론가", "27.8")]
 		public double DownOptRegulThrprc;
 		/// <summary>
 		/// 이론가2
 		/// </summary>
-		[XAQueryFieldAttribute("이론가2")]
+		[XAQueryFieldAttribute("이론가2", "19.8")]
 		public double Thrprc2;
 		/// <summary>
 		/// 기준가2
 		/// </summary>
-		[XAQueryFieldAttribute("기준가2")]
+		[XAQueryFieldAttribute("기준가2", "13.2")]
 		public double BasePrc2;
 		/// <summary>
 		/// 주문증거금액2
 		/// </summary>
-		[XAQueryFieldAttribute("주문증거금액2")]
+		[XAQueryFieldAttribute("주문증거금액2", "16")]
 		public long OrdMgn2;
 
 		public static class F
@@ -845,6 +845,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQCFOBQ10800OutBlock1),
+			typeof(XQCFOBQ10800OutBlock2),
+
+		};
 
 	}
 

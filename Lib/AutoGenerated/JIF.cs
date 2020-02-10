@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 장구분
 		/// </summary>
-		[XAQueryFieldAttribute("장구분")]
+		[XAQueryFieldAttribute("장구분", "1")]
 		public char jangubun;
 
 		public static class F
@@ -137,12 +137,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 장구분
 		/// </summary>
-		[XAQueryFieldAttribute("장구분")]
+		[XAQueryFieldAttribute("장구분", "1")]
 		public char jangubun;
 		/// <summary>
 		/// 장상태
 		/// </summary>
-		[XAQueryFieldAttribute("장상태")]
+		[XAQueryFieldAttribute("장상태", "2")]
 		public string jstatus;
 
 		public static class F
@@ -288,6 +288,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRJIFOutBlock),
+
+		};
 
 	}
 

@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "8")]
 		public string futcode;
 
 		public static class F
@@ -137,152 +137,152 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "8")]
 		public string futcode;
 		/// <summary>
 		/// 체결시간
 		/// </summary>
-		[XAQueryFieldAttribute("체결시간")]
+		[XAQueryFieldAttribute("체결시간", "6")]
 		public string chetime;
 		/// <summary>
 		/// 대비기호
 		/// </summary>
-		[XAQueryFieldAttribute("대비기호")]
+		[XAQueryFieldAttribute("대비기호", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "10")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public double drate;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "10")]
 		public long price;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가")]
+		[XAQueryFieldAttribute("시가", "10")]
 		public long open;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가")]
+		[XAQueryFieldAttribute("고가", "10")]
 		public long high;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가")]
+		[XAQueryFieldAttribute("저가", "10")]
 		public long low;
 		/// <summary>
 		/// 체결구분
 		/// </summary>
-		[XAQueryFieldAttribute("체결구분")]
+		[XAQueryFieldAttribute("체결구분", "1")]
 		public char cgubun;
 		/// <summary>
 		/// 체결량
 		/// </summary>
-		[XAQueryFieldAttribute("체결량")]
+		[XAQueryFieldAttribute("체결량", "6")]
 		public long cvolume;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 누적거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래대금")]
+		[XAQueryFieldAttribute("누적거래대금", "15")]
 		public long value;
 		/// <summary>
 		/// 매도누적체결량
 		/// </summary>
-		[XAQueryFieldAttribute("매도누적체결량")]
+		[XAQueryFieldAttribute("매도누적체결량", "12")]
 		public long mdvolume;
 		/// <summary>
 		/// 매도누적체결건수
 		/// </summary>
-		[XAQueryFieldAttribute("매도누적체결건수")]
+		[XAQueryFieldAttribute("매도누적체결건수", "8")]
 		public long mdchecnt;
 		/// <summary>
 		/// 매수누적체결량
 		/// </summary>
-		[XAQueryFieldAttribute("매수누적체결량")]
+		[XAQueryFieldAttribute("매수누적체결량", "12")]
 		public long msvolume;
 		/// <summary>
 		/// 매수누적체결건수
 		/// </summary>
-		[XAQueryFieldAttribute("매수누적체결건수")]
+		[XAQueryFieldAttribute("매수누적체결건수", "8")]
 		public long mschecnt;
 		/// <summary>
 		/// 체결강도
 		/// </summary>
-		[XAQueryFieldAttribute("체결강도")]
+		[XAQueryFieldAttribute("체결강도", "9.2")]
 		public double cpower;
 		/// <summary>
 		/// 매도호가1
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가1")]
+		[XAQueryFieldAttribute("매도호가1", "10")]
 		public long offerho1;
 		/// <summary>
 		/// 매수호가1
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가1")]
+		[XAQueryFieldAttribute("매수호가1", "10")]
 		public long bidho1;
 		/// <summary>
 		/// 미결제약정수량
 		/// </summary>
-		[XAQueryFieldAttribute("미결제약정수량")]
+		[XAQueryFieldAttribute("미결제약정수량", "8")]
 		public long openyak;
 		/// <summary>
 		/// KOSPI200지수
 		/// </summary>
-		[XAQueryFieldAttribute("KOSPI200지수")]
+		[XAQueryFieldAttribute("KOSPI200지수", "6.2")]
 		public double k200jisu;
 		/// <summary>
 		/// 이론가
 		/// </summary>
-		[XAQueryFieldAttribute("이론가")]
+		[XAQueryFieldAttribute("이론가", "8")]
 		public long theoryprice;
 		/// <summary>
 		/// 괴리율
 		/// </summary>
-		[XAQueryFieldAttribute("괴리율")]
+		[XAQueryFieldAttribute("괴리율", "6.3")]
 		public double kasis;
 		/// <summary>
 		/// 시장BASIS
 		/// </summary>
-		[XAQueryFieldAttribute("시장BASIS")]
+		[XAQueryFieldAttribute("시장BASIS", "6")]
 		public long sbasis;
 		/// <summary>
 		/// 이론BASIS
 		/// </summary>
-		[XAQueryFieldAttribute("이론BASIS")]
+		[XAQueryFieldAttribute("이론BASIS", "6")]
 		public long ibasis;
 		/// <summary>
 		/// 미결제약정증감
 		/// </summary>
-		[XAQueryFieldAttribute("미결제약정증감")]
+		[XAQueryFieldAttribute("미결제약정증감", "8")]
 		public long openyakcha;
 		/// <summary>
 		/// 장운영정보
 		/// </summary>
-		[XAQueryFieldAttribute("장운영정보")]
+		[XAQueryFieldAttribute("장운영정보", "2")]
 		public string jgubun;
 		/// <summary>
 		/// 전일동시간대거래량
 		/// </summary>
-		[XAQueryFieldAttribute("전일동시간대거래량")]
+		[XAQueryFieldAttribute("전일동시간대거래량", "12")]
 		public long jnilvolume;
 		/// <summary>
 		/// 기초자산현재가
 		/// </summary>
-		[XAQueryFieldAttribute("기초자산현재가")]
+		[XAQueryFieldAttribute("기초자산현재가", "8")]
 		public long basprice;
 
 		public static class F
@@ -764,6 +764,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRJC0OutBlock),
+
+		};
 
 	}
 

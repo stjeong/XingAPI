@@ -50,32 +50,32 @@ namespace XingAPINet
 		/// <summary>
 		/// from일자
 		/// </summary>
-		[XAQueryFieldAttribute("from일자")]
+		[XAQueryFieldAttribute("from일자", "8")]
 		public string fdate;
 		/// <summary>
 		/// to일자
 		/// </summary>
-		[XAQueryFieldAttribute("to일자")]
+		[XAQueryFieldAttribute("to일자", "8")]
 		public string tdate;
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분")]
+		[XAQueryFieldAttribute("구분", "1")]
 		public char gubun;
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜")]
+		[XAQueryFieldAttribute("날짜", "8")]
 		public string key_date;
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드")]
+		[XAQueryFieldAttribute("업종코드", "3")]
 		public string upcode;
 		/// <summary>
 		/// 조회건수
 		/// </summary>
-		[XAQueryFieldAttribute("조회건수")]
+		[XAQueryFieldAttribute("조회건수", "3")]
 		public int cnt;
 
 		public static class F
@@ -217,12 +217,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 날짜CTS
 		/// </summary>
-		[XAQueryFieldAttribute("날짜CTS")]
+		[XAQueryFieldAttribute("날짜CTS", "8")]
 		public string date;
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX")]
+		[XAQueryFieldAttribute("IDX", "4")]
 		public long idx;
 
 		public static class F
@@ -344,92 +344,92 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자")]
+		[XAQueryFieldAttribute("일자", "8")]
 		public string date;
 		/// <summary>
 		/// 지수
 		/// </summary>
-		[XAQueryFieldAttribute("지수")]
+		[XAQueryFieldAttribute("지수", "7.2")]
 		public float jisu;
 		/// <summary>
 		/// 대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("대비구분")]
+		[XAQueryFieldAttribute("대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 대비
 		/// </summary>
-		[XAQueryFieldAttribute("대비")]
+		[XAQueryFieldAttribute("대비", "6.2")]
 		public float change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 고객예탁금_억원
 		/// </summary>
-		[XAQueryFieldAttribute("고객예탁금_억원")]
+		[XAQueryFieldAttribute("고객예탁금_억원", "12")]
 		public long custmoney;
 		/// <summary>
 		/// 예탁증감_억원
 		/// </summary>
-		[XAQueryFieldAttribute("예탁증감_억원")]
+		[XAQueryFieldAttribute("예탁증감_억원", "12")]
 		public long yecha;
 		/// <summary>
 		/// 회전율
 		/// </summary>
-		[XAQueryFieldAttribute("회전율")]
+		[XAQueryFieldAttribute("회전율", "6.2")]
 		public float vol;
 		/// <summary>
 		/// 미수금_억원
 		/// </summary>
-		[XAQueryFieldAttribute("미수금_억원")]
+		[XAQueryFieldAttribute("미수금_억원", "12")]
 		public long outmoney;
 		/// <summary>
 		/// 신용잔고_억원
 		/// </summary>
-		[XAQueryFieldAttribute("신용잔고_억원")]
+		[XAQueryFieldAttribute("신용잔고_억원", "12")]
 		public long trjango;
 		/// <summary>
 		/// 선물예수금_억원
 		/// </summary>
-		[XAQueryFieldAttribute("선물예수금_억원")]
+		[XAQueryFieldAttribute("선물예수금_억원", "12")]
 		public long futymoney;
 		/// <summary>
 		/// 주식형_억원
 		/// </summary>
-		[XAQueryFieldAttribute("주식형_억원")]
+		[XAQueryFieldAttribute("주식형_억원", "8")]
 		public long stkmoney;
 		/// <summary>
 		/// 혼합형_억원(주식)
 		/// </summary>
-		[XAQueryFieldAttribute("혼합형_억원(주식)")]
+		[XAQueryFieldAttribute("혼합형_억원(주식)", "8")]
 		public long mstkmoney;
 		/// <summary>
 		/// 혼합형_억원(채권)
 		/// </summary>
-		[XAQueryFieldAttribute("혼합형_억원(채권)")]
+		[XAQueryFieldAttribute("혼합형_억원(채권)", "8")]
 		public long mbndmoney;
 		/// <summary>
 		/// 채권형_억원
 		/// </summary>
-		[XAQueryFieldAttribute("채권형_억원")]
+		[XAQueryFieldAttribute("채권형_억원", "8")]
 		public long bndmoney;
 		/// <summary>
 		/// 필러(구.단기채권)
 		/// </summary>
-		[XAQueryFieldAttribute("필러(구.단기채권)")]
+		[XAQueryFieldAttribute("필러(구.단기채권)", "8")]
 		public long bndsmoney;
 		/// <summary>
 		/// MMF_억원(주식)
 		/// </summary>
-		[XAQueryFieldAttribute("MMF_억원(주식)")]
+		[XAQueryFieldAttribute("MMF_억원(주식)", "8")]
 		public long mmfmoney;
 
 		public static class F
@@ -863,6 +863,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt8428OutBlock),
+			typeof(XQt8428OutBlock1),
+
+		};
 
 	}
 

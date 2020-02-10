@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 검색구분(0:핵심검색1:지표검색2:시세동향3:투자자동향)
 		/// </summary>
-		[XAQueryFieldAttribute("검색구분(0:핵심검색1:지표검색2:시세동향3:투자자동향)")]
+		[XAQueryFieldAttribute("검색구분(0:핵심검색1:지표검색2:시세동향3:투자자동향)", "1")]
 		public char search_gb;
 
 		public static class F
@@ -137,12 +137,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 검색코드
 		/// </summary>
-		[XAQueryFieldAttribute("검색코드")]
+		[XAQueryFieldAttribute("검색코드", "4")]
 		public string search_cd;
 		/// <summary>
 		/// 검색명
 		/// </summary>
-		[XAQueryFieldAttribute("검색명")]
+		[XAQueryFieldAttribute("검색명", "40")]
 		public string search_nm;
 
 		public static class F
@@ -354,6 +354,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1826OutBlock),
+
+		};
 
 	}
 

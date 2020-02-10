@@ -50,17 +50,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분")]
+		[XAQueryFieldAttribute("구분", "1")]
 		public char gubun;
 		/// <summary>
 		/// 종목체크
 		/// </summary>
-		[XAQueryFieldAttribute("종목체크")]
+		[XAQueryFieldAttribute("종목체크", "1")]
 		public char jongchk;
 		/// <summary>
 		/// 종목코드_CTS
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드_CTS")]
+		[XAQueryFieldAttribute("종목코드_CTS", "6")]
 		public string cts_shcode;
 
 		public static class F
@@ -169,7 +169,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드_CTS
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드_CTS")]
+		[XAQueryFieldAttribute("종목코드_CTS", "6")]
 		public string cts_shcode;
 
 		public static class F
@@ -279,47 +279,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 한글명
 		/// </summary>
-		[XAQueryFieldAttribute("한글명")]
+		[XAQueryFieldAttribute("한글명", "20")]
 		public string hname;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 지정일
 		/// </summary>
-		[XAQueryFieldAttribute("지정일")]
+		[XAQueryFieldAttribute("지정일", "8")]
 		public string date;
 		/// <summary>
 		/// 해제일
 		/// </summary>
-		[XAQueryFieldAttribute("해제일")]
+		[XAQueryFieldAttribute("해제일", "8")]
 		public string edate;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -639,6 +639,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1405OutBlock),
+			typeof(XQt1405OutBlock1),
+
+		};
 
 	}
 

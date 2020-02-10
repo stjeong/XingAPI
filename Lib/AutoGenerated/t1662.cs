@@ -50,17 +50,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분")]
+		[XAQueryFieldAttribute("구분", "1")]
 		public char gubun;
 		/// <summary>
 		/// 금액수량구분
 		/// </summary>
-		[XAQueryFieldAttribute("금액수량구분")]
+		[XAQueryFieldAttribute("금액수량구분", "1")]
 		public char gubun1;
 		/// <summary>
 		/// 전일구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일구분")]
+		[XAQueryFieldAttribute("전일구분", "1")]
 		public char gubun3;
 
 		public static class F
@@ -169,77 +169,77 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "6")]
 		public string time;
 		/// <summary>
 		/// KP200
 		/// </summary>
-		[XAQueryFieldAttribute("KP200")]
+		[XAQueryFieldAttribute("KP200", "6.2")]
 		public float k200jisu;
 		/// <summary>
 		/// 대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("대비구분")]
+		[XAQueryFieldAttribute("대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 대비
 		/// </summary>
-		[XAQueryFieldAttribute("대비")]
+		[XAQueryFieldAttribute("대비", "6.2")]
 		public float change;
 		/// <summary>
 		/// BASIS
 		/// </summary>
-		[XAQueryFieldAttribute("BASIS")]
+		[XAQueryFieldAttribute("BASIS", "6.2")]
 		public float k200basis;
 		/// <summary>
 		/// 전체순매수
 		/// </summary>
-		[XAQueryFieldAttribute("전체순매수")]
+		[XAQueryFieldAttribute("전체순매수", "12")]
 		public long tot3;
 		/// <summary>
 		/// 전체매수
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수")]
+		[XAQueryFieldAttribute("전체매수", "12")]
 		public long tot1;
 		/// <summary>
 		/// 전체매도
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도")]
+		[XAQueryFieldAttribute("전체매도", "12")]
 		public long tot2;
 		/// <summary>
 		/// 차익순매수
 		/// </summary>
-		[XAQueryFieldAttribute("차익순매수")]
+		[XAQueryFieldAttribute("차익순매수", "12")]
 		public long cha3;
 		/// <summary>
 		/// 차익매수
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수")]
+		[XAQueryFieldAttribute("차익매수", "12")]
 		public long cha1;
 		/// <summary>
 		/// 차익매도
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도")]
+		[XAQueryFieldAttribute("차익매도", "12")]
 		public long cha2;
 		/// <summary>
 		/// 비차익순매수
 		/// </summary>
-		[XAQueryFieldAttribute("비차익순매수")]
+		[XAQueryFieldAttribute("비차익순매수", "12")]
 		public long bcha3;
 		/// <summary>
 		/// 비차익매수
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수")]
+		[XAQueryFieldAttribute("비차익매수", "12")]
 		public long bcha1;
 		/// <summary>
 		/// 비차익매도
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도")]
+		[XAQueryFieldAttribute("비차익매도", "12")]
 		public long bcha2;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "12")]
 		public long volume;
 
 		public static class F
@@ -611,6 +611,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1662OutBlock),
+
+		};
 
 	}
 

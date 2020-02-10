@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 뉴스코드
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스코드")]
+		[XAQueryFieldAttribute("뉴스코드", "6")]
 		public string nwcode;
 
 		public static class F
@@ -137,37 +137,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜")]
+		[XAQueryFieldAttribute("날짜", "8")]
 		public string date;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "6")]
 		public string time;
 		/// <summary>
 		/// 뉴스구분자
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스구분자")]
+		[XAQueryFieldAttribute("뉴스구분자", "2")]
 		public string id;
 		/// <summary>
 		/// 키값
 		/// </summary>
-		[XAQueryFieldAttribute("키값")]
+		[XAQueryFieldAttribute("키값", "24")]
 		public string realkey;
 		/// <summary>
 		/// 제목
 		/// </summary>
-		[XAQueryFieldAttribute("제목")]
+		[XAQueryFieldAttribute("제목", "300")]
 		public string title;
 		/// <summary>
 		/// 단축종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축종목코드")]
+		[XAQueryFieldAttribute("단축종목코드", "240")]
 		public string code;
 		/// <summary>
 		/// BODY길이
 		/// </summary>
-		[XAQueryFieldAttribute("BODY길이")]
+		[XAQueryFieldAttribute("BODY길이", "8")]
 		public long bodysize;
 
 		public static class F
@@ -373,6 +373,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRNWSOutBlock),
+
+		};
 
 	}
 

@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "8")]
 		public string optcode;
 
 		public static class F
@@ -137,27 +137,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 접속매매여부
 		/// </summary>
-		[XAQueryFieldAttribute("접속매매여부")]
+		[XAQueryFieldAttribute("접속매매여부", "1")]
 		public char gubun;
 		/// <summary>
 		/// 실시간가격제한여부
 		/// </summary>
-		[XAQueryFieldAttribute("실시간가격제한여부")]
+		[XAQueryFieldAttribute("실시간가격제한여부", "1")]
 		public char dy_gubun;
 		/// <summary>
 		/// 실시간상한가
 		/// </summary>
-		[XAQueryFieldAttribute("실시간상한가")]
+		[XAQueryFieldAttribute("실시간상한가", "8.2")]
 		public float dy_uplmtprice;
 		/// <summary>
 		/// 실시간하한가
 		/// </summary>
-		[XAQueryFieldAttribute("실시간하한가")]
+		[XAQueryFieldAttribute("실시간하한가", "8.2")]
 		public float dy_dnlmtprice;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "8")]
 		public string opttcode;
 
 		public static class F
@@ -339,6 +339,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XROD0OutBlock),
+
+		};
 
 	}
 

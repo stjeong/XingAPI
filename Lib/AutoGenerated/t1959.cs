@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,92 +137,92 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명")]
+		[XAQueryFieldAttribute("종목명", "40")]
 		public string hname;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "12")]
 		public string price;
 		/// <summary>
 		/// 부호
 		/// </summary>
-		[XAQueryFieldAttribute("부호")]
+		[XAQueryFieldAttribute("부호", "1")]
 		public char sign;
 		/// <summary>
 		/// 대비
 		/// </summary>
-		[XAQueryFieldAttribute("대비")]
+		[XAQueryFieldAttribute("대비", "12")]
 		public string change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "5.2")]
 		public float rate;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "12")]
 		public string volume;
 		/// <summary>
 		/// 누적거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래대금")]
+		[XAQueryFieldAttribute("누적거래대금", "12")]
 		public string value;
 		/// <summary>
 		/// LP주문가능여부
 		/// </summary>
-		[XAQueryFieldAttribute("LP주문가능여부")]
+		[XAQueryFieldAttribute("LP주문가능여부", "4")]
 		public string lp_gb;
 		/// <summary>
 		/// LP회원사명1
 		/// </summary>
-		[XAQueryFieldAttribute("LP회원사명1")]
+		[XAQueryFieldAttribute("LP회원사명1", "20")]
 		public string lp_mem_nm1;
 		/// <summary>
 		/// LP회원사명2
 		/// </summary>
-		[XAQueryFieldAttribute("LP회원사명2")]
+		[XAQueryFieldAttribute("LP회원사명2", "20")]
 		public string lp_mem_nm2;
 		/// <summary>
 		/// LP회원사명3
 		/// </summary>
-		[XAQueryFieldAttribute("LP회원사명3")]
+		[XAQueryFieldAttribute("LP회원사명3", "20")]
 		public string lp_mem_nm3;
 		/// <summary>
 		/// LP회원사명4
 		/// </summary>
-		[XAQueryFieldAttribute("LP회원사명4")]
+		[XAQueryFieldAttribute("LP회원사명4", "20")]
 		public string lp_mem_nm4;
 		/// <summary>
 		/// LP회원사명5
 		/// </summary>
-		[XAQueryFieldAttribute("LP회원사명5")]
+		[XAQueryFieldAttribute("LP회원사명5", "20")]
 		public string lp_mem_nm5;
 		/// <summary>
 		/// LP최소호가수량
 		/// </summary>
-		[XAQueryFieldAttribute("LP최소호가수량")]
+		[XAQueryFieldAttribute("LP최소호가수량", "10")]
 		public string lp_min_qty;
 		/// <summary>
 		/// LP시작일
 		/// </summary>
-		[XAQueryFieldAttribute("LP시작일")]
+		[XAQueryFieldAttribute("LP시작일", "8")]
 		public string lp_st_date;
 		/// <summary>
 		/// LP종료일
 		/// </summary>
-		[XAQueryFieldAttribute("LP종료일")]
+		[XAQueryFieldAttribute("LP종료일", "8")]
 		public string lp_end_date;
 		/// <summary>
 		/// LP스프레드
 		/// </summary>
-		[XAQueryFieldAttribute("LP스프레드")]
+		[XAQueryFieldAttribute("LP스프레드", "5.2")]
 		public float lp_spread;
 
 		public static class F
@@ -626,6 +626,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1959OutBlock1),
+
+		};
 
 	}
 

@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분")]
+		[XAQueryFieldAttribute("구분", "1")]
 		public char gubun;
 		/// <summary>
 		/// 대비일자
 		/// </summary>
-		[XAQueryFieldAttribute("대비일자")]
+		[XAQueryFieldAttribute("대비일자", "2")]
 		public long chgdate;
 
 		public static class F
@@ -153,47 +153,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 테마명
 		/// </summary>
-		[XAQueryFieldAttribute("테마명")]
+		[XAQueryFieldAttribute("테마명", "36")]
 		public string tmname;
 		/// <summary>
 		/// 전체
 		/// </summary>
-		[XAQueryFieldAttribute("전체")]
+		[XAQueryFieldAttribute("전체", "4")]
 		public long totcnt;
 		/// <summary>
 		/// 상승
 		/// </summary>
-		[XAQueryFieldAttribute("상승")]
+		[XAQueryFieldAttribute("상승", "4")]
 		public long upcnt;
 		/// <summary>
 		/// 하락
 		/// </summary>
-		[XAQueryFieldAttribute("하락")]
+		[XAQueryFieldAttribute("하락", "4")]
 		public long dncnt;
 		/// <summary>
 		/// 상승비율
 		/// </summary>
-		[XAQueryFieldAttribute("상승비율")]
+		[XAQueryFieldAttribute("상승비율", "6.2")]
 		public float uprate;
 		/// <summary>
 		/// 거래증가율
 		/// </summary>
-		[XAQueryFieldAttribute("거래증가율")]
+		[XAQueryFieldAttribute("거래증가율", "10.2")]
 		public float diff_vol;
 		/// <summary>
 		/// 평균등락율
 		/// </summary>
-		[XAQueryFieldAttribute("평균등락율")]
+		[XAQueryFieldAttribute("평균등락율", "6.2")]
 		public float avgdiff;
 		/// <summary>
 		/// 대비등락율
 		/// </summary>
-		[XAQueryFieldAttribute("대비등락율")]
+		[XAQueryFieldAttribute("대비등락율", "6.2")]
 		public float chgdiff;
 		/// <summary>
 		/// 테마코드
 		/// </summary>
-		[XAQueryFieldAttribute("테마코드")]
+		[XAQueryFieldAttribute("테마코드", "4")]
 		public string tmcode;
 
 		public static class F
@@ -491,6 +491,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1533OutBlock),
+
+		};
 
 	}
 

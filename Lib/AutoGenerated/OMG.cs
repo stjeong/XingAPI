@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 옵션코드
 		/// </summary>
-		[XAQueryFieldAttribute("옵션코드")]
+		[XAQueryFieldAttribute("옵션코드", "8")]
 		public string optcode;
 
 		public static class F
@@ -137,87 +137,87 @@ namespace XingAPINet
 		/// <summary>
 		/// 체결시간
 		/// </summary>
-		[XAQueryFieldAttribute("체결시간")]
+		[XAQueryFieldAttribute("체결시간", "6")]
 		public string chetime;
 		/// <summary>
 		/// 행사가
 		/// </summary>
-		[XAQueryFieldAttribute("행사가")]
+		[XAQueryFieldAttribute("행사가", "6.2")]
 		public float actprice;
 		/// <summary>
 		/// KOSPI200지수
 		/// </summary>
-		[XAQueryFieldAttribute("KOSPI200지수")]
+		[XAQueryFieldAttribute("KOSPI200지수", "6.2")]
 		public float k200jisu;
 		/// <summary>
 		/// 선물가격
 		/// </summary>
-		[XAQueryFieldAttribute("선물가격")]
+		[XAQueryFieldAttribute("선물가격", "6.2")]
 		public float fut200jisu;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "6.2")]
 		public float price;
 		/// <summary>
 		/// 대표내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("대표내재변동성")]
+		[XAQueryFieldAttribute("대표내재변동성", "6.2")]
 		public float capimpv;
 		/// <summary>
 		/// 내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("내재변동성")]
+		[XAQueryFieldAttribute("내재변동성", "6.2")]
 		public float impv;
 		/// <summary>
 		/// 델타(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("델타(블랙숄즈)")]
+		[XAQueryFieldAttribute("델타(블랙숄즈)", "7.4")]
 		public float delt;
 		/// <summary>
 		/// 감마(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("감마(블랙숄즈)")]
+		[XAQueryFieldAttribute("감마(블랙숄즈)", "7.4")]
 		public float gama;
 		/// <summary>
 		/// 세타(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("세타(블랙숄즈)")]
+		[XAQueryFieldAttribute("세타(블랙숄즈)", "7.4")]
 		public float ceta;
 		/// <summary>
 		/// 베가(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("베가(블랙숄즈)")]
+		[XAQueryFieldAttribute("베가(블랙숄즈)", "7.4")]
 		public float vega;
 		/// <summary>
 		/// 로우(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("로우(블랙숄즈)")]
+		[XAQueryFieldAttribute("로우(블랙숄즈)", "7.4")]
 		public float rhox;
 		/// <summary>
 		/// 이론가(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("이론가(블랙숄즈)")]
+		[XAQueryFieldAttribute("이론가(블랙숄즈)", "6.2")]
 		public float theoryprice;
 		/// <summary>
 		/// 전일가내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("전일가내재변동성")]
+		[XAQueryFieldAttribute("전일가내재변동성", "6.2")]
 		public float bimpv;
 		/// <summary>
 		/// 매도가내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("매도가내재변동성")]
+		[XAQueryFieldAttribute("매도가내재변동성", "6.2")]
 		public float offerimpv;
 		/// <summary>
 		/// 매수가내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("매수가내재변동성")]
+		[XAQueryFieldAttribute("매수가내재변동성", "6.2")]
 		public float bidimpv;
 		/// <summary>
 		/// 옵션코드
 		/// </summary>
-		[XAQueryFieldAttribute("옵션코드")]
+		[XAQueryFieldAttribute("옵션코드", "8")]
 		public string optcode;
 
 		public static class F
@@ -543,6 +543,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XROMGOutBlock),
+
+		};
 
 	}
 

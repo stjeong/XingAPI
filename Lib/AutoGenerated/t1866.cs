@@ -50,27 +50,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 로그인ID
 		/// </summary>
-		[XAQueryFieldAttribute("로그인ID")]
+		[XAQueryFieldAttribute("로그인ID", "8")]
 		public string user_id;
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분")]
+		[XAQueryFieldAttribute("조회구분", "1")]
 		public char gb;
 		/// <summary>
 		/// 그룹명
 		/// </summary>
-		[XAQueryFieldAttribute("그룹명")]
+		[XAQueryFieldAttribute("그룹명", "40")]
 		public string group_name;
 		/// <summary>
 		/// 연속여부
 		/// </summary>
-		[XAQueryFieldAttribute("연속여부")]
+		[XAQueryFieldAttribute("연속여부", "1")]
 		public char cont;
 		/// <summary>
 		/// 연속키
 		/// </summary>
-		[XAQueryFieldAttribute("연속키")]
+		[XAQueryFieldAttribute("연속키", "40")]
 		public string cont_key;
 
 		public static class F
@@ -201,17 +201,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 저장조건수
 		/// </summary>
-		[XAQueryFieldAttribute("저장조건수")]
+		[XAQueryFieldAttribute("저장조건수", "5")]
 		public long result_count;
 		/// <summary>
 		/// 연속여부
 		/// </summary>
-		[XAQueryFieldAttribute("연속여부")]
+		[XAQueryFieldAttribute("연속여부", "1")]
 		public char cont;
 		/// <summary>
 		/// 연속키
 		/// </summary>
-		[XAQueryFieldAttribute("연속키")]
+		[XAQueryFieldAttribute("연속키", "40")]
 		public string cont_key;
 
 		public static class F
@@ -345,17 +345,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 서버저장인덱스
 		/// </summary>
-		[XAQueryFieldAttribute("서버저장인덱스")]
+		[XAQueryFieldAttribute("서버저장인덱스", "12")]
 		public string query_index;
 		/// <summary>
 		/// 그룹명
 		/// </summary>
-		[XAQueryFieldAttribute("그룹명")]
+		[XAQueryFieldAttribute("그룹명", "40")]
 		public string group_name;
 		/// <summary>
 		/// 조건저장명
 		/// </summary>
-		[XAQueryFieldAttribute("조건저장명")]
+		[XAQueryFieldAttribute("조건저장명", "40")]
 		public string query_name;
 
 		public static class F
@@ -607,6 +607,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1866OutBlock),
+			typeof(XQt1866OutBlock1),
+
+		};
 
 	}
 

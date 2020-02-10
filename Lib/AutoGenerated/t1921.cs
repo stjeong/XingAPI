@@ -50,22 +50,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 융자대주구분
 		/// </summary>
-		[XAQueryFieldAttribute("융자대주구분")]
+		[XAQueryFieldAttribute("융자대주구분", "1")]
 		public char gubun;
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜")]
+		[XAQueryFieldAttribute("날짜", "8")]
 		public string date;
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX")]
+		[XAQueryFieldAttribute("IDX", "4")]
 		public long idx;
 
 		public static class F
@@ -185,17 +185,17 @@ namespace XingAPINet
 		/// <summary>
 		/// CNT
 		/// </summary>
-		[XAQueryFieldAttribute("CNT")]
+		[XAQueryFieldAttribute("CNT", "4")]
 		public long cnt;
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜")]
+		[XAQueryFieldAttribute("날짜", "8")]
 		public string date;
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX")]
+		[XAQueryFieldAttribute("IDX", "4")]
 		public long idx;
 
 		public static class F
@@ -329,67 +329,67 @@ namespace XingAPINet
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜")]
+		[XAQueryFieldAttribute("날짜", "8")]
 		public string mmdate;
 		/// <summary>
 		/// 종가
 		/// </summary>
-		[XAQueryFieldAttribute("종가")]
+		[XAQueryFieldAttribute("종가", "8")]
 		public long close;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long jchange;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 신규
 		/// </summary>
-		[XAQueryFieldAttribute("신규")]
+		[XAQueryFieldAttribute("신규", "8")]
 		public long nvolume;
 		/// <summary>
 		/// 상환
 		/// </summary>
-		[XAQueryFieldAttribute("상환")]
+		[XAQueryFieldAttribute("상환", "8")]
 		public long svolume;
 		/// <summary>
 		/// 잔고
 		/// </summary>
-		[XAQueryFieldAttribute("잔고")]
+		[XAQueryFieldAttribute("잔고", "8")]
 		public long jvolume;
 		/// <summary>
 		/// 금액
 		/// </summary>
-		[XAQueryFieldAttribute("금액")]
+		[XAQueryFieldAttribute("금액", "8")]
 		public long price;
 		/// <summary>
 		/// 대비
 		/// </summary>
-		[XAQueryFieldAttribute("대비")]
+		[XAQueryFieldAttribute("대비", "8")]
 		public long change;
 		/// <summary>
 		/// 공여율
 		/// </summary>
-		[XAQueryFieldAttribute("공여율")]
+		[XAQueryFieldAttribute("공여율", "6.2")]
 		public float gyrate;
 		/// <summary>
 		/// 잔고율
 		/// </summary>
-		[XAQueryFieldAttribute("잔고율")]
+		[XAQueryFieldAttribute("잔고율", "6.2")]
 		public float jkrate;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -759,6 +759,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1921OutBlock),
+			typeof(XQt1921OutBlock1),
+
+		};
 
 	}
 

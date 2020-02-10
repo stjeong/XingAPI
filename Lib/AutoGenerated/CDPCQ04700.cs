@@ -50,52 +50,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분")]
+		[XAQueryFieldAttribute("조회구분", "1")]
 		public char QryTp;
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호")]
+		[XAQueryFieldAttribute("계좌번호", "20")]
 		public string AcntNo;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호")]
+		[XAQueryFieldAttribute("비밀번호", "8")]
 		public string Pwd;
 		/// <summary>
 		/// 조회시작일
 		/// </summary>
-		[XAQueryFieldAttribute("조회시작일")]
+		[XAQueryFieldAttribute("조회시작일", "8")]
 		public string QrySrtDt;
 		/// <summary>
 		/// 조회종료일
 		/// </summary>
-		[XAQueryFieldAttribute("조회종료일")]
+		[XAQueryFieldAttribute("조회종료일", "8")]
 		public string QryEndDt;
 		/// <summary>
 		/// 시작번호
 		/// </summary>
-		[XAQueryFieldAttribute("시작번호")]
+		[XAQueryFieldAttribute("시작번호", "10")]
 		public long SrtNo;
 		/// <summary>
 		/// 상품유형코드
 		/// </summary>
-		[XAQueryFieldAttribute("상품유형코드")]
+		[XAQueryFieldAttribute("상품유형코드", "2")]
 		public string PdptnCode;
 		/// <summary>
 		/// 종목대분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목대분류코드")]
+		[XAQueryFieldAttribute("종목대분류코드", "2")]
 		public string IsuLgclssCode;
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호")]
+		[XAQueryFieldAttribute("종목번호", "12")]
 		public string IsuNo;
 
 		public static class F
@@ -281,52 +281,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분")]
+		[XAQueryFieldAttribute("조회구분", "1")]
 		public char QryTp;
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호")]
+		[XAQueryFieldAttribute("계좌번호", "20")]
 		public string AcntNo;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호")]
+		[XAQueryFieldAttribute("비밀번호", "8")]
 		public string Pwd;
 		/// <summary>
 		/// 조회시작일
 		/// </summary>
-		[XAQueryFieldAttribute("조회시작일")]
+		[XAQueryFieldAttribute("조회시작일", "8")]
 		public string QrySrtDt;
 		/// <summary>
 		/// 조회종료일
 		/// </summary>
-		[XAQueryFieldAttribute("조회종료일")]
+		[XAQueryFieldAttribute("조회종료일", "8")]
 		public string QryEndDt;
 		/// <summary>
 		/// 시작번호
 		/// </summary>
-		[XAQueryFieldAttribute("시작번호")]
+		[XAQueryFieldAttribute("시작번호", "10")]
 		public long SrtNo;
 		/// <summary>
 		/// 상품유형코드
 		/// </summary>
-		[XAQueryFieldAttribute("상품유형코드")]
+		[XAQueryFieldAttribute("상품유형코드", "2")]
 		public string PdptnCode;
 		/// <summary>
 		/// 종목대분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목대분류코드")]
+		[XAQueryFieldAttribute("종목대분류코드", "2")]
 		public string IsuLgclssCode;
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호")]
+		[XAQueryFieldAttribute("종목번호", "12")]
 		public string IsuNo;
 
 		public static class F
@@ -544,12 +544,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 계좌명
 		/// </summary>
-		[XAQueryFieldAttribute("계좌명")]
+		[XAQueryFieldAttribute("계좌명", "40")]
 		public string AcntNm;
 
 		public static class F
@@ -671,392 +671,392 @@ namespace XingAPINet
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호")]
+		[XAQueryFieldAttribute("계좌번호", "20")]
 		public string AcntNo;
 		/// <summary>
 		/// 거래일자
 		/// </summary>
-		[XAQueryFieldAttribute("거래일자")]
+		[XAQueryFieldAttribute("거래일자", "8")]
 		public string TrdDt;
 		/// <summary>
 		/// 거래번호
 		/// </summary>
-		[XAQueryFieldAttribute("거래번호")]
+		[XAQueryFieldAttribute("거래번호", "10")]
 		public long TrdNo;
 		/// <summary>
 		/// 구분코드명
 		/// </summary>
-		[XAQueryFieldAttribute("구분코드명")]
+		[XAQueryFieldAttribute("구분코드명", "50")]
 		public string TpCodeNm;
 		/// <summary>
 		/// 적요번호
 		/// </summary>
-		[XAQueryFieldAttribute("적요번호")]
+		[XAQueryFieldAttribute("적요번호", "4")]
 		public string SmryNo;
 		/// <summary>
 		/// 적요명
 		/// </summary>
-		[XAQueryFieldAttribute("적요명")]
+		[XAQueryFieldAttribute("적요명", "40")]
 		public string SmryNm;
 		/// <summary>
 		/// 취소구분
 		/// </summary>
-		[XAQueryFieldAttribute("취소구분")]
+		[XAQueryFieldAttribute("취소구분", "20")]
 		public string CancTpNm;
 		/// <summary>
 		/// 거래수량
 		/// </summary>
-		[XAQueryFieldAttribute("거래수량")]
+		[XAQueryFieldAttribute("거래수량", "16")]
 		public long TrdQty;
 		/// <summary>
 		/// 거래세
 		/// </summary>
-		[XAQueryFieldAttribute("거래세")]
+		[XAQueryFieldAttribute("거래세", "16")]
 		public long Trtax;
 		/// <summary>
 		/// 외화정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("외화정산금액")]
+		[XAQueryFieldAttribute("외화정산금액", "25.4")]
 		public double FcurrAdjstAmt;
 		/// <summary>
 		/// 정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("정산금액")]
+		[XAQueryFieldAttribute("정산금액", "16")]
 		public long AdjstAmt;
 		/// <summary>
 		/// 연체합
 		/// </summary>
-		[XAQueryFieldAttribute("연체합")]
+		[XAQueryFieldAttribute("연체합", "16")]
 		public long OvdSum;
 		/// <summary>
 		/// 예수금전잔금액
 		/// </summary>
-		[XAQueryFieldAttribute("예수금전잔금액")]
+		[XAQueryFieldAttribute("예수금전잔금액", "16")]
 		public long DpsBfbalAmt;
 		/// <summary>
 		/// 매도담보상환금
 		/// </summary>
-		[XAQueryFieldAttribute("매도담보상환금")]
+		[XAQueryFieldAttribute("매도담보상환금", "16")]
 		public long SellPldgRfundAmt;
 		/// <summary>
 		/// 예탁담보대출전잔금액
 		/// </summary>
-		[XAQueryFieldAttribute("예탁담보대출전잔금액")]
+		[XAQueryFieldAttribute("예탁담보대출전잔금액", "16")]
 		public long DpspdgLoanBfbalAmt;
 		/// <summary>
 		/// 거래매체명
 		/// </summary>
-		[XAQueryFieldAttribute("거래매체명")]
+		[XAQueryFieldAttribute("거래매체명", "40")]
 		public string TrdmdaNm;
 		/// <summary>
 		/// 원거래번호
 		/// </summary>
-		[XAQueryFieldAttribute("원거래번호")]
+		[XAQueryFieldAttribute("원거래번호", "10")]
 		public long OrgTrdNo;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명")]
+		[XAQueryFieldAttribute("종목명", "40")]
 		public string IsuNm;
 		/// <summary>
 		/// 거래단가
 		/// </summary>
-		[XAQueryFieldAttribute("거래단가")]
+		[XAQueryFieldAttribute("거래단가", "13.2")]
 		public double TrdUprc;
 		/// <summary>
 		/// 수수료
 		/// </summary>
-		[XAQueryFieldAttribute("수수료")]
+		[XAQueryFieldAttribute("수수료", "16")]
 		public long CmsnAmt;
 		/// <summary>
 		/// 외화수수료금액
 		/// </summary>
-		[XAQueryFieldAttribute("외화수수료금액")]
+		[XAQueryFieldAttribute("외화수수료금액", "15.2")]
 		public double FcurrCmsnAmt;
 		/// <summary>
 		/// 상환차이금액
 		/// </summary>
-		[XAQueryFieldAttribute("상환차이금액")]
+		[XAQueryFieldAttribute("상환차이금액", "16")]
 		public long RfundDiffAmt;
 		/// <summary>
 		/// 변제금합계
 		/// </summary>
-		[XAQueryFieldAttribute("변제금합계")]
+		[XAQueryFieldAttribute("변제금합계", "16")]
 		public long RepayAmtSum;
 		/// <summary>
 		/// 유가증권금잔수량
 		/// </summary>
-		[XAQueryFieldAttribute("유가증권금잔수량")]
+		[XAQueryFieldAttribute("유가증권금잔수량", "16")]
 		public long SecCrbalQty;
 		/// <summary>
 		/// 매도대금담보대출상환이자금액
 		/// </summary>
-		[XAQueryFieldAttribute("매도대금담보대출상환이자금액")]
+		[XAQueryFieldAttribute("매도대금담보대출상환이자금액", "16")]
 		public long CslLoanRfundIntrstAmt;
 		/// <summary>
 		/// 예탁담보대출금잔금액
 		/// </summary>
-		[XAQueryFieldAttribute("예탁담보대출금잔금액")]
+		[XAQueryFieldAttribute("예탁담보대출금잔금액", "16")]
 		public long DpspdgLoanCrbalAmt;
 		/// <summary>
 		/// 처리시각
 		/// </summary>
-		[XAQueryFieldAttribute("처리시각")]
+		[XAQueryFieldAttribute("처리시각", "9")]
 		public string TrxTime;
 		/// <summary>
 		/// 출납번호
 		/// </summary>
-		[XAQueryFieldAttribute("출납번호")]
+		[XAQueryFieldAttribute("출납번호", "10")]
 		public long Inouno;
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호")]
+		[XAQueryFieldAttribute("종목번호", "12")]
 		public string IsuNo;
 		/// <summary>
 		/// 거래금액
 		/// </summary>
-		[XAQueryFieldAttribute("거래금액")]
+		[XAQueryFieldAttribute("거래금액", "16")]
 		public long TrdAmt;
 		/// <summary>
 		/// 수표금액
 		/// </summary>
-		[XAQueryFieldAttribute("수표금액")]
+		[XAQueryFieldAttribute("수표금액", "16")]
 		public long ChckAmt;
 		/// <summary>
 		/// 세금합계금액
 		/// </summary>
-		[XAQueryFieldAttribute("세금합계금액")]
+		[XAQueryFieldAttribute("세금합계금액", "16")]
 		public long TaxSumAmt;
 		/// <summary>
 		/// 외화세금합계금액
 		/// </summary>
-		[XAQueryFieldAttribute("외화세금합계금액")]
+		[XAQueryFieldAttribute("외화세금합계금액", "26.6")]
 		public double FcurrTaxSumAmt;
 		/// <summary>
 		/// 이자이용료
 		/// </summary>
-		[XAQueryFieldAttribute("이자이용료")]
+		[XAQueryFieldAttribute("이자이용료", "16")]
 		public long IntrstUtlfee;
 		/// <summary>
 		/// 배당금액
 		/// </summary>
-		[XAQueryFieldAttribute("배당금액")]
+		[XAQueryFieldAttribute("배당금액", "16")]
 		public long MnyDvdAmt;
 		/// <summary>
 		/// 미수발생금액
 		/// </summary>
-		[XAQueryFieldAttribute("미수발생금액")]
+		[XAQueryFieldAttribute("미수발생금액", "16")]
 		public long RcvblOcrAmt;
 		/// <summary>
 		/// 처리지점번호
 		/// </summary>
-		[XAQueryFieldAttribute("처리지점번호")]
+		[XAQueryFieldAttribute("처리지점번호", "3")]
 		public string TrxBrnNo;
 		/// <summary>
 		/// 처리지점명
 		/// </summary>
-		[XAQueryFieldAttribute("처리지점명")]
+		[XAQueryFieldAttribute("처리지점명", "40")]
 		public string TrxBrnNm;
 		/// <summary>
 		/// 예탁담보대출금액
 		/// </summary>
-		[XAQueryFieldAttribute("예탁담보대출금액")]
+		[XAQueryFieldAttribute("예탁담보대출금액", "16")]
 		public long DpspdgLoanAmt;
 		/// <summary>
 		/// 예탁담보대출상환금액
 		/// </summary>
-		[XAQueryFieldAttribute("예탁담보대출상환금액")]
+		[XAQueryFieldAttribute("예탁담보대출상환금액", "16")]
 		public long DpspdgLoanRfundAmt;
 		/// <summary>
 		/// 기준가
 		/// </summary>
-		[XAQueryFieldAttribute("기준가")]
+		[XAQueryFieldAttribute("기준가", "13.2")]
 		public double BasePrc;
 		/// <summary>
 		/// 예수금금잔금액
 		/// </summary>
-		[XAQueryFieldAttribute("예수금금잔금액")]
+		[XAQueryFieldAttribute("예수금금잔금액", "16")]
 		public long DpsCrbalAmt;
 		/// <summary>
 		/// 과표
 		/// </summary>
-		[XAQueryFieldAttribute("과표")]
+		[XAQueryFieldAttribute("과표", "16")]
 		public long BoaAmt;
 		/// <summary>
 		/// 출금가능금액
 		/// </summary>
-		[XAQueryFieldAttribute("출금가능금액")]
+		[XAQueryFieldAttribute("출금가능금액", "16")]
 		public long MnyoutAbleAmt;
 		/// <summary>
 		/// 수익증권담보대출발생금
 		/// </summary>
-		[XAQueryFieldAttribute("수익증권담보대출발생금")]
+		[XAQueryFieldAttribute("수익증권담보대출발생금", "16")]
 		public long BcrLoanOcrAmt;
 		/// <summary>
 		/// 수익증권담보대출전잔금
 		/// </summary>
-		[XAQueryFieldAttribute("수익증권담보대출전잔금")]
+		[XAQueryFieldAttribute("수익증권담보대출전잔금", "16")]
 		public long BcrLoanBfbalAmt;
 		/// <summary>
 		/// 매매기준가
 		/// </summary>
-		[XAQueryFieldAttribute("매매기준가")]
+		[XAQueryFieldAttribute("매매기준가", "20.10")]
 		public double BnsBasePrc;
 		/// <summary>
 		/// 과세기준가
 		/// </summary>
-		[XAQueryFieldAttribute("과세기준가")]
+		[XAQueryFieldAttribute("과세기준가", "20.10")]
 		public double TaxchrBasePrc;
 		/// <summary>
 		/// 거래좌수
 		/// </summary>
-		[XAQueryFieldAttribute("거래좌수")]
+		[XAQueryFieldAttribute("거래좌수", "16")]
 		public long TrdUnit;
 		/// <summary>
 		/// 잔고좌수
 		/// </summary>
-		[XAQueryFieldAttribute("잔고좌수")]
+		[XAQueryFieldAttribute("잔고좌수", "16")]
 		public long BalUnit;
 		/// <summary>
 		/// 제세금
 		/// </summary>
-		[XAQueryFieldAttribute("제세금")]
+		[XAQueryFieldAttribute("제세금", "16")]
 		public long EvrTax;
 		/// <summary>
 		/// 평가금액
 		/// </summary>
-		[XAQueryFieldAttribute("평가금액")]
+		[XAQueryFieldAttribute("평가금액", "16")]
 		public long EvalAmt;
 		/// <summary>
 		/// 수익증권담보대출상환금
 		/// </summary>
-		[XAQueryFieldAttribute("수익증권담보대출상환금")]
+		[XAQueryFieldAttribute("수익증권담보대출상환금", "16")]
 		public long BcrLoanRfundAmt;
 		/// <summary>
 		/// 수익증권담보대출금잔금
 		/// </summary>
-		[XAQueryFieldAttribute("수익증권담보대출금잔금")]
+		[XAQueryFieldAttribute("수익증권담보대출금잔금", "16")]
 		public long BcrLoanCrbalAmt;
 		/// <summary>
 		/// 추가증거금발생총액
 		/// </summary>
-		[XAQueryFieldAttribute("추가증거금발생총액")]
+		[XAQueryFieldAttribute("추가증거금발생총액", "16")]
 		public long AddMgnOcrTotamt;
 		/// <summary>
 		/// 추가현금증거금발생금액
 		/// </summary>
-		[XAQueryFieldAttribute("추가현금증거금발생금액")]
+		[XAQueryFieldAttribute("추가현금증거금발생금액", "16")]
 		public long AddMnyMgnOcrAmt;
 		/// <summary>
 		/// 추가증거금납부총액
 		/// </summary>
-		[XAQueryFieldAttribute("추가증거금납부총액")]
+		[XAQueryFieldAttribute("추가증거금납부총액", "16")]
 		public long AddMgnDfryTotamt;
 		/// <summary>
 		/// 추가현금증거금납부금액
 		/// </summary>
-		[XAQueryFieldAttribute("추가현금증거금납부금액")]
+		[XAQueryFieldAttribute("추가현금증거금납부금액", "16")]
 		public long AddMnyMgnDfryAmt;
 		/// <summary>
 		/// 매매손익금액
 		/// </summary>
-		[XAQueryFieldAttribute("매매손익금액")]
+		[XAQueryFieldAttribute("매매손익금액", "16")]
 		public long BnsplAmt;
 		/// <summary>
 		/// 소득세
 		/// </summary>
-		[XAQueryFieldAttribute("소득세")]
+		[XAQueryFieldAttribute("소득세", "16")]
 		public long Ictax;
 		/// <summary>
 		/// 주민세
 		/// </summary>
-		[XAQueryFieldAttribute("주민세")]
+		[XAQueryFieldAttribute("주민세", "16")]
 		public long Ihtax;
 		/// <summary>
 		/// 대출일
 		/// </summary>
-		[XAQueryFieldAttribute("대출일")]
+		[XAQueryFieldAttribute("대출일", "8")]
 		public string LoanDt;
 		/// <summary>
 		/// 통화코드
 		/// </summary>
-		[XAQueryFieldAttribute("통화코드")]
+		[XAQueryFieldAttribute("통화코드", "3")]
 		public string CrcyCode;
 		/// <summary>
 		/// 외화금액
 		/// </summary>
-		[XAQueryFieldAttribute("외화금액")]
+		[XAQueryFieldAttribute("외화금액", "24.4")]
 		public double FcurrAmt;
 		/// <summary>
 		/// 외화거래금액
 		/// </summary>
-		[XAQueryFieldAttribute("외화거래금액")]
+		[XAQueryFieldAttribute("외화거래금액", "24.4")]
 		public double FcurrTrdAmt;
 		/// <summary>
 		/// 외화예수금
 		/// </summary>
-		[XAQueryFieldAttribute("외화예수금")]
+		[XAQueryFieldAttribute("외화예수금", "21.4")]
 		public double FcurrDps;
 		/// <summary>
 		/// 외화예수금전잔금액
 		/// </summary>
-		[XAQueryFieldAttribute("외화예수금전잔금액")]
+		[XAQueryFieldAttribute("외화예수금전잔금액", "21.4")]
 		public double FcurrDpsBfbalAmt;
 		/// <summary>
 		/// 상대계좌명
 		/// </summary>
-		[XAQueryFieldAttribute("상대계좌명")]
+		[XAQueryFieldAttribute("상대계좌명", "40")]
 		public string OppAcntNm;
 		/// <summary>
 		/// 상대계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("상대계좌번호")]
+		[XAQueryFieldAttribute("상대계좌번호", "20")]
 		public string OppAcntNo;
 		/// <summary>
 		/// 대출상환금액
 		/// </summary>
-		[XAQueryFieldAttribute("대출상환금액")]
+		[XAQueryFieldAttribute("대출상환금액", "16")]
 		public long LoanRfundAmt;
 		/// <summary>
 		/// 대출이자금액
 		/// </summary>
-		[XAQueryFieldAttribute("대출이자금액")]
+		[XAQueryFieldAttribute("대출이자금액", "16")]
 		public long LoanIntrstAmt;
 		/// <summary>
 		/// 의뢰인명
 		/// </summary>
-		[XAQueryFieldAttribute("의뢰인명")]
+		[XAQueryFieldAttribute("의뢰인명", "40")]
 		public string AskpsnNm;
 		/// <summary>
 		/// 주문일자
 		/// </summary>
-		[XAQueryFieldAttribute("주문일자")]
+		[XAQueryFieldAttribute("주문일자", "8")]
 		public string OrdDt;
 		/// <summary>
 		/// 거래환율
 		/// </summary>
-		[XAQueryFieldAttribute("거래환율")]
+		[XAQueryFieldAttribute("거래환율", "15.4")]
 		public double TrdXchrat;
 		/// <summary>
 		/// 감면수수료
 		/// </summary>
-		[XAQueryFieldAttribute("감면수수료")]
+		[XAQueryFieldAttribute("감면수수료", "21.4")]
 		public double RdctCmsn;
 		/// <summary>
 		/// 외화인지세
 		/// </summary>
-		[XAQueryFieldAttribute("외화인지세")]
+		[XAQueryFieldAttribute("외화인지세", "21.4")]
 		public double FcurrStmpTx;
 		/// <summary>
 		/// 외화전자금융거래세
 		/// </summary>
-		[XAQueryFieldAttribute("외화전자금융거래세")]
+		[XAQueryFieldAttribute("외화전자금융거래세", "21.4")]
 		public double FcurrElecfnTrtax;
 		/// <summary>
 		/// 외화증권거래세
 		/// </summary>
-		[XAQueryFieldAttribute("외화증권거래세")]
+		[XAQueryFieldAttribute("외화증권거래세", "21.4")]
 		public double FcstckTrtax;
 
 		public static class F
@@ -2094,22 +2094,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 손익합계금액
 		/// </summary>
-		[XAQueryFieldAttribute("손익합계금액")]
+		[XAQueryFieldAttribute("손익합계금액", "16")]
 		public long PnlSumAmt;
 		/// <summary>
 		/// 약정누계
 		/// </summary>
-		[XAQueryFieldAttribute("약정누계")]
+		[XAQueryFieldAttribute("약정누계", "16")]
 		public long CtrctAsm;
 		/// <summary>
 		/// 수수료합계금액
 		/// </summary>
-		[XAQueryFieldAttribute("수수료합계금액")]
+		[XAQueryFieldAttribute("수수료합계금액", "16")]
 		public long CmsnAmtSumAmt;
 
 		public static class F
@@ -2255,87 +2255,87 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 입금금액
 		/// </summary>
-		[XAQueryFieldAttribute("입금금액")]
+		[XAQueryFieldAttribute("입금금액", "16")]
 		public long MnyinAmt;
 		/// <summary>
 		/// 입고금액
 		/// </summary>
-		[XAQueryFieldAttribute("입고금액")]
+		[XAQueryFieldAttribute("입고금액", "16")]
 		public long SecinAmt;
 		/// <summary>
 		/// 출금금액
 		/// </summary>
-		[XAQueryFieldAttribute("출금금액")]
+		[XAQueryFieldAttribute("출금금액", "16")]
 		public long MnyoutAmt;
 		/// <summary>
 		/// 출고금액
 		/// </summary>
-		[XAQueryFieldAttribute("출고금액")]
+		[XAQueryFieldAttribute("출고금액", "16")]
 		public long SecoutAmt;
 		/// <summary>
 		/// 차이금액
 		/// </summary>
-		[XAQueryFieldAttribute("차이금액")]
+		[XAQueryFieldAttribute("차이금액", "16")]
 		public long DiffAmt;
 		/// <summary>
 		/// 차이금액0
 		/// </summary>
-		[XAQueryFieldAttribute("차이금액0")]
+		[XAQueryFieldAttribute("차이금액0", "16")]
 		public long DiffAmt0;
 		/// <summary>
 		/// 매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도수량")]
+		[XAQueryFieldAttribute("매도수량", "16")]
 		public long SellQty;
 		/// <summary>
 		/// 매도금액
 		/// </summary>
-		[XAQueryFieldAttribute("매도금액")]
+		[XAQueryFieldAttribute("매도금액", "16")]
 		public long SellAmt;
 		/// <summary>
 		/// 매도수수료
 		/// </summary>
-		[XAQueryFieldAttribute("매도수수료")]
+		[XAQueryFieldAttribute("매도수수료", "16")]
 		public long SellCmsn;
 		/// <summary>
 		/// 제세금
 		/// </summary>
-		[XAQueryFieldAttribute("제세금")]
+		[XAQueryFieldAttribute("제세금", "19")]
 		public long EvrTax;
 		/// <summary>
 		/// 외화매도정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("외화매도정산금액")]
+		[XAQueryFieldAttribute("외화매도정산금액", "25.4")]
 		public double FcurrSellAdjstAmt;
 		/// <summary>
 		/// 매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수수량")]
+		[XAQueryFieldAttribute("매수수량", "16")]
 		public long BuyQty;
 		/// <summary>
 		/// 매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("매수금액")]
+		[XAQueryFieldAttribute("매수금액", "16")]
 		public long BuyAmt;
 		/// <summary>
 		/// 매수수수료
 		/// </summary>
-		[XAQueryFieldAttribute("매수수수료")]
+		[XAQueryFieldAttribute("매수수수료", "16")]
 		public long BuyCmsn;
 		/// <summary>
 		/// 체결세금
 		/// </summary>
-		[XAQueryFieldAttribute("체결세금")]
+		[XAQueryFieldAttribute("체결세금", "16")]
 		public long ExecTax;
 		/// <summary>
 		/// 외화매수정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("외화매수정산금액")]
+		[XAQueryFieldAttribute("외화매수정산금액", "25.4")]
 		public double FcurrBuyAdjstAmt;
 
 		public static class F
@@ -2745,6 +2745,15 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQCDPCQ04700OutBlock1),
+			typeof(XQCDPCQ04700OutBlock2),
+			typeof(XQCDPCQ04700OutBlock3),
+			typeof(XQCDPCQ04700OutBlock4),
+			typeof(XQCDPCQ04700OutBlock5),
+
+		};
 
 	}
 

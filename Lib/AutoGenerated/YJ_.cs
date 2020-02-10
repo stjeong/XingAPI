@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드")]
+		[XAQueryFieldAttribute("업종코드", "3")]
 		public string upcode;
 
 		public static class F
@@ -137,47 +137,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "6")]
 		public string time;
 		/// <summary>
 		/// 예상지수
 		/// </summary>
-		[XAQueryFieldAttribute("예상지수")]
+		[XAQueryFieldAttribute("예상지수", "8.2")]
 		public float jisu;
 		/// <summary>
 		/// 예상전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("예상전일대비구분")]
+		[XAQueryFieldAttribute("예상전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 예상전일비
 		/// </summary>
-		[XAQueryFieldAttribute("예상전일비")]
+		[XAQueryFieldAttribute("예상전일비", "8.2")]
 		public float change;
 		/// <summary>
 		/// 예상등락율
 		/// </summary>
-		[XAQueryFieldAttribute("예상등락율")]
+		[XAQueryFieldAttribute("예상등락율", "6.2")]
 		public float drate;
 		/// <summary>
 		/// 예상체결량
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결량")]
+		[XAQueryFieldAttribute("예상체결량", "8")]
 		public long cvolume;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "8")]
 		public long volume;
 		/// <summary>
 		/// 예상거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("예상거래대금")]
+		[XAQueryFieldAttribute("예상거래대금", "8")]
 		public long value;
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드")]
+		[XAQueryFieldAttribute("업종코드", "3")]
 		public string upcode;
 
 		public static class F
@@ -407,6 +407,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRYJ_OutBlock),
+
+		};
 
 	}
 

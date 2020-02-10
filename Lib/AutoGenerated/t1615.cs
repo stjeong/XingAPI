@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 주식구분
 		/// </summary>
-		[XAQueryFieldAttribute("주식구분")]
+		[XAQueryFieldAttribute("주식구분", "1")]
 		public char gubun1;
 		/// <summary>
 		/// 옵션구분
 		/// </summary>
-		[XAQueryFieldAttribute("옵션구분")]
+		[XAQueryFieldAttribute("옵션구분", "1")]
 		public char gubun2;
 
 		public static class F
@@ -153,32 +153,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 위탁매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("위탁매도수량")]
+		[XAQueryFieldAttribute("위탁매도수량", "12")]
 		public long dwvolume;
 		/// <summary>
 		/// 위탁매도금액
 		/// </summary>
-		[XAQueryFieldAttribute("위탁매도금액")]
+		[XAQueryFieldAttribute("위탁매도금액", "12")]
 		public long dwvalue;
 		/// <summary>
 		/// 자기매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("자기매도수량")]
+		[XAQueryFieldAttribute("자기매도수량", "12")]
 		public long djvolume;
 		/// <summary>
 		/// 자기매도금액
 		/// </summary>
-		[XAQueryFieldAttribute("자기매도금액")]
+		[XAQueryFieldAttribute("자기매도금액", "12")]
 		public long djvalue;
 		/// <summary>
 		/// 합계수량
 		/// </summary>
-		[XAQueryFieldAttribute("합계수량")]
+		[XAQueryFieldAttribute("합계수량", "12")]
 		public long sum_volume;
 		/// <summary>
 		/// 합계금액
 		/// </summary>
-		[XAQueryFieldAttribute("합계금액")]
+		[XAQueryFieldAttribute("합계금액", "12")]
 		public long sum_value;
 
 		public static class F
@@ -348,27 +348,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 시장명
 		/// </summary>
-		[XAQueryFieldAttribute("시장명")]
+		[XAQueryFieldAttribute("시장명", "20")]
 		public string hname;
 		/// <summary>
 		/// 개인
 		/// </summary>
-		[XAQueryFieldAttribute("개인")]
+		[XAQueryFieldAttribute("개인", "12")]
 		public long sv_08;
 		/// <summary>
 		/// 외국인
 		/// </summary>
-		[XAQueryFieldAttribute("외국인")]
+		[XAQueryFieldAttribute("외국인", "12")]
 		public long sv_17;
 		/// <summary>
 		/// 기관계
 		/// </summary>
-		[XAQueryFieldAttribute("기관계")]
+		[XAQueryFieldAttribute("기관계", "12")]
 		public long sv_18;
 		/// <summary>
 		/// 증권
 		/// </summary>
-		[XAQueryFieldAttribute("증권")]
+		[XAQueryFieldAttribute("증권", "12")]
 		public long sv_07;
 
 		public static class F
@@ -638,6 +638,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1615OutBlock),
+			typeof(XQt1615OutBlock1),
+
+		};
 
 	}
 

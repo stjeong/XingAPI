@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,17 +137,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 매도호가
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가")]
+		[XAQueryFieldAttribute("매도호가", "8")]
 		public long offerho;
 		/// <summary>
 		/// 매수호가
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가")]
+		[XAQueryFieldAttribute("매수호가", "8")]
 		public long bidho;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -305,6 +305,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRKS_OutBlock),
+
+		};
 
 	}
 

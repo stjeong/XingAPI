@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "6")]
 		public string time;
 
 		public static class F
@@ -153,17 +153,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "6")]
 		public string time;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명")]
+		[XAQueryFieldAttribute("종목명", "20")]
 		public string hname;
 		/// <summary>
 		/// 업종지수명
 		/// </summary>
-		[XAQueryFieldAttribute("업종지수명")]
+		[XAQueryFieldAttribute("업종지수명", "20")]
 		public string upname;
 
 		public static class F
@@ -297,67 +297,67 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "8")]
 		public string time;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "12")]
 		public float volume;
 		/// <summary>
 		/// NAV대비
 		/// </summary>
-		[XAQueryFieldAttribute("NAV대비")]
+		[XAQueryFieldAttribute("NAV대비", "9.2")]
 		public float navdiff;
 		/// <summary>
 		/// NAV
 		/// </summary>
-		[XAQueryFieldAttribute("NAV")]
+		[XAQueryFieldAttribute("NAV", "9.2")]
 		public float nav;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "9.2")]
 		public float navchange;
 		/// <summary>
 		/// 추적오차
 		/// </summary>
-		[XAQueryFieldAttribute("추적오차")]
+		[XAQueryFieldAttribute("추적오차", "9.2")]
 		public float crate;
 		/// <summary>
 		/// 괴리
 		/// </summary>
-		[XAQueryFieldAttribute("괴리")]
+		[XAQueryFieldAttribute("괴리", "9.2")]
 		public float grate;
 		/// <summary>
 		/// 지수
 		/// </summary>
-		[XAQueryFieldAttribute("지수")]
+		[XAQueryFieldAttribute("지수", "8.2")]
 		public float jisu;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8.2")]
 		public float jichange;
 		/// <summary>
 		/// 전일대비율
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비율")]
+		[XAQueryFieldAttribute("전일대비율", "8.2")]
 		public float jirate;
 
 		public static class F
@@ -723,6 +723,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1902OutBlock),
+			typeof(XQt1902OutBlock1),
+
+		};
 
 	}
 

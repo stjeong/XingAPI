@@ -50,42 +50,42 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분")]
+		[XAQueryFieldAttribute("구분", "1")]
 		public char gubun;
 		/// <summary>
 		/// 시작일자
 		/// </summary>
-		[XAQueryFieldAttribute("시작일자")]
+		[XAQueryFieldAttribute("시작일자", "8")]
 		public string fromdt;
 		/// <summary>
 		/// 종료일자
 		/// </summary>
-		[XAQueryFieldAttribute("종료일자")]
+		[XAQueryFieldAttribute("종료일자", "8")]
 		public string todt;
 		/// <summary>
 		/// PR적용
 		/// </summary>
-		[XAQueryFieldAttribute("PR적용")]
+		[XAQueryFieldAttribute("PR적용", "3")]
 		public long prapp;
 		/// <summary>
 		/// PR적용구분
 		/// </summary>
-		[XAQueryFieldAttribute("PR적용구분")]
+		[XAQueryFieldAttribute("PR적용구분", "1")]
 		public char prgubun;
 		/// <summary>
 		/// 기관적용
 		/// </summary>
-		[XAQueryFieldAttribute("기관적용")]
+		[XAQueryFieldAttribute("기관적용", "1")]
 		public char orggubun;
 		/// <summary>
 		/// 외인적용
 		/// </summary>
-		[XAQueryFieldAttribute("외인적용")]
+		[XAQueryFieldAttribute("외인적용", "1")]
 		public char frggubun;
 
 		public static class F
@@ -249,72 +249,72 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자")]
+		[XAQueryFieldAttribute("일자", "8")]
 		public string date;
 		/// <summary>
 		/// 종가
 		/// </summary>
-		[XAQueryFieldAttribute("종가")]
+		[XAQueryFieldAttribute("종가", "8")]
 		public long close;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 개인
 		/// </summary>
-		[XAQueryFieldAttribute("개인")]
+		[XAQueryFieldAttribute("개인", "12")]
 		public long psnvolume;
 		/// <summary>
 		/// 기관
 		/// </summary>
-		[XAQueryFieldAttribute("기관")]
+		[XAQueryFieldAttribute("기관", "12")]
 		public long orgvolume;
 		/// <summary>
 		/// 외국인
 		/// </summary>
-		[XAQueryFieldAttribute("외국인")]
+		[XAQueryFieldAttribute("외국인", "12")]
 		public long frgvolume;
 		/// <summary>
 		/// 외국계
 		/// </summary>
-		[XAQueryFieldAttribute("외국계")]
+		[XAQueryFieldAttribute("외국계", "12")]
 		public long frgvolumesum;
 		/// <summary>
 		/// 프로그램
 		/// </summary>
-		[XAQueryFieldAttribute("프로그램")]
+		[XAQueryFieldAttribute("프로그램", "12")]
 		public long pgmvolume;
 		/// <summary>
 		/// 보유주식수
 		/// </summary>
-		[XAQueryFieldAttribute("보유주식수")]
+		[XAQueryFieldAttribute("보유주식수", "12")]
 		public long listing;
 		/// <summary>
 		/// 발행증감
 		/// </summary>
-		[XAQueryFieldAttribute("발행증감")]
+		[XAQueryFieldAttribute("발행증감", "12")]
 		public long listupdn;
 		/// <summary>
 		/// 소진율
 		/// </summary>
-		[XAQueryFieldAttribute("소진율")]
+		[XAQueryFieldAttribute("소진율", "6.2")]
 		public float sjrate;
 
 		public static class F
@@ -684,6 +684,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1701OutBlock),
+
+		};
 
 	}
 

@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분(0:전체1:코스피2:코스닥)
 		/// </summary>
-		[XAQueryFieldAttribute("구분(0:전체1:코스피2:코스닥)")]
+		[XAQueryFieldAttribute("구분(0:전체1:코스피2:코스닥)", "1")]
 		public char gubun;
 
 		public static class F
@@ -137,67 +137,67 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명")]
+		[XAQueryFieldAttribute("종목명", "20")]
 		public string hname;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 확장코드
 		/// </summary>
-		[XAQueryFieldAttribute("확장코드")]
+		[XAQueryFieldAttribute("확장코드", "12")]
 		public string expcode;
 		/// <summary>
 		/// ETF구분(1:ETF2:ETN)
 		/// </summary>
-		[XAQueryFieldAttribute("ETF구분(1:ETF2:ETN)")]
+		[XAQueryFieldAttribute("ETF구분(1:ETF2:ETN)", "1")]
 		public char etfgubun;
 		/// <summary>
 		/// 상한가
 		/// </summary>
-		[XAQueryFieldAttribute("상한가")]
+		[XAQueryFieldAttribute("상한가", "8")]
 		public long uplmtprice;
 		/// <summary>
 		/// 하한가
 		/// </summary>
-		[XAQueryFieldAttribute("하한가")]
+		[XAQueryFieldAttribute("하한가", "8")]
 		public long dnlmtprice;
 		/// <summary>
 		/// 전일가
 		/// </summary>
-		[XAQueryFieldAttribute("전일가")]
+		[XAQueryFieldAttribute("전일가", "8")]
 		public long jnilclose;
 		/// <summary>
 		/// 주문수량단위
 		/// </summary>
-		[XAQueryFieldAttribute("주문수량단위")]
+		[XAQueryFieldAttribute("주문수량단위", "5")]
 		public string memedan;
 		/// <summary>
 		/// 기준가
 		/// </summary>
-		[XAQueryFieldAttribute("기준가")]
+		[XAQueryFieldAttribute("기준가", "8")]
 		public long recprice;
 		/// <summary>
 		/// 구분(1:코스피2:코스닥)
 		/// </summary>
-		[XAQueryFieldAttribute("구분(1:코스피2:코스닥)")]
+		[XAQueryFieldAttribute("구분(1:코스피2:코스닥)", "1")]
 		public char gubun;
 		/// <summary>
 		/// 증권그룹
 		/// </summary>
-		[XAQueryFieldAttribute("증권그룹")]
+		[XAQueryFieldAttribute("증권그룹", "2")]
 		public string bu12gubun;
 		/// <summary>
 		/// 기업인수목적회사여부(Y/N)
 		/// </summary>
-		[XAQueryFieldAttribute("기업인수목적회사여부(Y/N)")]
+		[XAQueryFieldAttribute("기업인수목적회사여부(Y/N)", "1")]
 		public char spac_gubun;
 		/// <summary>
 		/// filler(미사용)
 		/// </summary>
-		[XAQueryFieldAttribute("filler(미사용)")]
+		[XAQueryFieldAttribute("filler(미사용)", "32")]
 		public string filler;
 
 		public static class F
@@ -541,6 +541,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt8436OutBlock),
+
+		};
 
 	}
 

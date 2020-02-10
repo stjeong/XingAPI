@@ -17,11 +17,11 @@ namespace XingAPINet
 
         readonly EventWaitHandle _ewh_LoginSync = new EventWaitHandle(false, EventResetMode.ManualReset);
 
-        static DbProviderFactory _dbProviderFactory;
-        public static DbProviderFactory DBProviderFactory;
+        static DbProviderFactory _dbProviderFactory = null;
+        public static DbProviderFactory DBProviderFactory { get => _dbProviderFactory; set => _dbProviderFactory = value; }
 
-        static string _dbConnectionString;
-        public static string DBConnectionString;
+        static string _dbConnectionString = null;
+        public static string DBConnectionString { get => _dbConnectionString; set => _dbConnectionString = value; }
 
         public int NumberOfAccount
         {

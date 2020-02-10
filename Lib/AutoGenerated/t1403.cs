@@ -50,22 +50,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분")]
+		[XAQueryFieldAttribute("구분", "1")]
 		public char gubun;
 		/// <summary>
 		/// 시작상장월
 		/// </summary>
-		[XAQueryFieldAttribute("시작상장월")]
+		[XAQueryFieldAttribute("시작상장월", "6")]
 		public string styymm;
 		/// <summary>
 		/// 종료상장월
 		/// </summary>
-		[XAQueryFieldAttribute("종료상장월")]
+		[XAQueryFieldAttribute("종료상장월", "6")]
 		public string enyymm;
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX")]
+		[XAQueryFieldAttribute("IDX", "4")]
 		public long idx;
 
 		public static class F
@@ -185,7 +185,7 @@ namespace XingAPINet
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX")]
+		[XAQueryFieldAttribute("IDX", "4")]
 		public long idx;
 
 		public static class F
@@ -295,67 +295,67 @@ namespace XingAPINet
 		/// <summary>
 		/// 한글명
 		/// </summary>
-		[XAQueryFieldAttribute("한글명")]
+		[XAQueryFieldAttribute("한글명", "20")]
 		public string hname;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 공모가
 		/// </summary>
-		[XAQueryFieldAttribute("공모가")]
+		[XAQueryFieldAttribute("공모가", "8")]
 		public long kmprice;
 		/// <summary>
 		/// 등록일
 		/// </summary>
-		[XAQueryFieldAttribute("등록일")]
+		[XAQueryFieldAttribute("등록일", "8")]
 		public string date;
 		/// <summary>
 		/// 등록일기준가
 		/// </summary>
-		[XAQueryFieldAttribute("등록일기준가")]
+		[XAQueryFieldAttribute("등록일기준가", "8")]
 		public long recprice;
 		/// <summary>
 		/// 기준가등락율
 		/// </summary>
-		[XAQueryFieldAttribute("기준가등락율")]
+		[XAQueryFieldAttribute("기준가등락율", "6.2")]
 		public float kmdiff;
 		/// <summary>
 		/// 등록일종가
 		/// </summary>
-		[XAQueryFieldAttribute("등록일종가")]
+		[XAQueryFieldAttribute("등록일종가", "8")]
 		public long close;
 		/// <summary>
 		/// 등록일등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등록일등락율")]
+		[XAQueryFieldAttribute("등록일등락율", "6.2")]
 		public float recdiff;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -725,6 +725,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1403OutBlock),
+			typeof(XQt1403OutBlock1),
+
+		};
 
 	}
 

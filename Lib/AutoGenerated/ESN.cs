@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,82 +137,82 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "6")]
 		public string time;
 		/// <summary>
 		/// 장중이론가
 		/// </summary>
-		[XAQueryFieldAttribute("장중이론가")]
+		[XAQueryFieldAttribute("장중이론가", "10.2")]
 		public float theoryprice;
 		/// <summary>
 		/// 델타
 		/// </summary>
-		[XAQueryFieldAttribute("델타")]
+		[XAQueryFieldAttribute("델타", "7.6")]
 		public float delt;
 		/// <summary>
 		/// 감마
 		/// </summary>
-		[XAQueryFieldAttribute("감마")]
+		[XAQueryFieldAttribute("감마", "7.6")]
 		public float gama;
 		/// <summary>
 		/// 세타
 		/// </summary>
-		[XAQueryFieldAttribute("세타")]
+		[XAQueryFieldAttribute("세타", "12.6")]
 		public float ceta;
 		/// <summary>
 		/// 베가
 		/// </summary>
-		[XAQueryFieldAttribute("베가")]
+		[XAQueryFieldAttribute("베가", "12.6")]
 		public float vega;
 		/// <summary>
 		/// 로우
 		/// </summary>
-		[XAQueryFieldAttribute("로우")]
+		[XAQueryFieldAttribute("로우", "12.6")]
 		public float rhox;
 		/// <summary>
 		/// 내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("내재변동성")]
+		[XAQueryFieldAttribute("내재변동성", "5.2")]
 		public float impv;
 		/// <summary>
 		/// E.기어링
 		/// </summary>
-		[XAQueryFieldAttribute("E.기어링")]
+		[XAQueryFieldAttribute("E.기어링", "8.2")]
 		public float egearing;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// ELW현재가
 		/// </summary>
-		[XAQueryFieldAttribute("ELW현재가")]
+		[XAQueryFieldAttribute("ELW현재가", "8")]
 		public long elwclose;
 		/// <summary>
 		/// ELW전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("ELW전일대비구분")]
+		[XAQueryFieldAttribute("ELW전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// ELW전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("ELW전일대비")]
+		[XAQueryFieldAttribute("ELW전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자")]
+		[XAQueryFieldAttribute("일자", "8")]
 		public string date;
 		/// <summary>
 		/// 틱환산
 		/// </summary>
-		[XAQueryFieldAttribute("틱환산")]
+		[XAQueryFieldAttribute("틱환산", "10.2")]
 		public float tickvalue;
 		/// <summary>
 		/// LP내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("LP내재변동성")]
+		[XAQueryFieldAttribute("LP내재변동성", "5.2")]
 		public float lp_impv;
 
 		public static class F
@@ -526,6 +526,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRESNOutBlock),
+
+		};
 
 	}
 

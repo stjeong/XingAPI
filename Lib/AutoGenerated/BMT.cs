@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드")]
+		[XAQueryFieldAttribute("업종코드", "3")]
 		public string upcode;
 
 		public static class F
@@ -137,432 +137,432 @@ namespace XingAPINet
 		/// <summary>
 		/// 수신시간
 		/// </summary>
-		[XAQueryFieldAttribute("수신시간")]
+		[XAQueryFieldAttribute("수신시간", "8")]
 		public string tjjtime;
 		/// <summary>
 		/// 투자자코드1(개인)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드1(개인)")]
+		[XAQueryFieldAttribute("투자자코드1(개인)", "4")]
 		public string tjjcode1;
 		/// <summary>
 		/// 매수 거래량1
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량1")]
+		[XAQueryFieldAttribute("매수 거래량1", "8")]
 		public long msvolume1;
 		/// <summary>
 		/// 매도 거래량1
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량1")]
+		[XAQueryFieldAttribute("매도 거래량1", "8")]
 		public long mdvolume1;
 		/// <summary>
 		/// 거래량 순매수1
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수1")]
+		[XAQueryFieldAttribute("거래량 순매수1", "8")]
 		public long msvol1;
 		/// <summary>
 		/// 매수 거래대금1
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금1")]
+		[XAQueryFieldAttribute("매수 거래대금1", "6")]
 		public long msvalue1;
 		/// <summary>
 		/// 매도 거래대금1
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금1")]
+		[XAQueryFieldAttribute("매도 거래대금1", "6")]
 		public long mdvalue1;
 		/// <summary>
 		/// 거래대금 순매수1
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수1")]
+		[XAQueryFieldAttribute("거래대금 순매수1", "6")]
 		public long msval1;
 		/// <summary>
 		/// 투자자코드2(외국인)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드2(외국인)")]
+		[XAQueryFieldAttribute("투자자코드2(외국인)", "4")]
 		public string tjjcode2;
 		/// <summary>
 		/// 매수 거래량2
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량2")]
+		[XAQueryFieldAttribute("매수 거래량2", "8")]
 		public long msvolume2;
 		/// <summary>
 		/// 매도 거래량2
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량2")]
+		[XAQueryFieldAttribute("매도 거래량2", "8")]
 		public long mdvolume2;
 		/// <summary>
 		/// 거래량 순매수2
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수2")]
+		[XAQueryFieldAttribute("거래량 순매수2", "8")]
 		public long msvol2;
 		/// <summary>
 		/// 매수 거래대금2
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금2")]
+		[XAQueryFieldAttribute("매수 거래대금2", "6")]
 		public long msvalue2;
 		/// <summary>
 		/// 매도 거래대금2
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금2")]
+		[XAQueryFieldAttribute("매도 거래대금2", "6")]
 		public long mdvalue2;
 		/// <summary>
 		/// 거래대금 순매수2
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수2")]
+		[XAQueryFieldAttribute("거래대금 순매수2", "6")]
 		public long msval2;
 		/// <summary>
 		/// 투자자코드3(기관계)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드3(기관계)")]
+		[XAQueryFieldAttribute("투자자코드3(기관계)", "4")]
 		public string tjjcode3;
 		/// <summary>
 		/// 매수 거래량3
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량3")]
+		[XAQueryFieldAttribute("매수 거래량3", "8")]
 		public long msvolume3;
 		/// <summary>
 		/// 매도 거래량3
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량3")]
+		[XAQueryFieldAttribute("매도 거래량3", "8")]
 		public long mdvolume3;
 		/// <summary>
 		/// 거래량 순매수3
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수3")]
+		[XAQueryFieldAttribute("거래량 순매수3", "8")]
 		public long msvol3;
 		/// <summary>
 		/// 매수 거래대금3
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금3")]
+		[XAQueryFieldAttribute("매수 거래대금3", "6")]
 		public long msvalue3;
 		/// <summary>
 		/// 매도 거래대금3
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금3")]
+		[XAQueryFieldAttribute("매도 거래대금3", "6")]
 		public long mdvalue3;
 		/// <summary>
 		/// 거래대금 순매수3
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수3")]
+		[XAQueryFieldAttribute("거래대금 순매수3", "6")]
 		public long msval3;
 		/// <summary>
 		/// 투자자코드4(증권)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드4(증권)")]
+		[XAQueryFieldAttribute("투자자코드4(증권)", "4")]
 		public string tjjcode4;
 		/// <summary>
 		/// 매수 거래량4
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량4")]
+		[XAQueryFieldAttribute("매수 거래량4", "8")]
 		public long msvolume4;
 		/// <summary>
 		/// 매도 거래량4
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량4")]
+		[XAQueryFieldAttribute("매도 거래량4", "8")]
 		public long mdvolume4;
 		/// <summary>
 		/// 거래량 순매수4
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수4")]
+		[XAQueryFieldAttribute("거래량 순매수4", "8")]
 		public long msvol4;
 		/// <summary>
 		/// 매수 거래대금4
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금4")]
+		[XAQueryFieldAttribute("매수 거래대금4", "6")]
 		public long msvalue4;
 		/// <summary>
 		/// 매도 거래대금4
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금4")]
+		[XAQueryFieldAttribute("매도 거래대금4", "6")]
 		public long mdvalue4;
 		/// <summary>
 		/// 거래대금 순매수4
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수4")]
+		[XAQueryFieldAttribute("거래대금 순매수4", "6")]
 		public long msval4;
 		/// <summary>
 		/// 투자자코드5(투신)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드5(투신)")]
+		[XAQueryFieldAttribute("투자자코드5(투신)", "4")]
 		public string tjjcode5;
 		/// <summary>
 		/// 매수 거래량5
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량5")]
+		[XAQueryFieldAttribute("매수 거래량5", "8")]
 		public long msvolume5;
 		/// <summary>
 		/// 매도 거래량5
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량5")]
+		[XAQueryFieldAttribute("매도 거래량5", "8")]
 		public long mdvolume5;
 		/// <summary>
 		/// 거래량 순매수5
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수5")]
+		[XAQueryFieldAttribute("거래량 순매수5", "8")]
 		public long msvol5;
 		/// <summary>
 		/// 매수 거래대금5
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금5")]
+		[XAQueryFieldAttribute("매수 거래대금5", "6")]
 		public long msvalue5;
 		/// <summary>
 		/// 매도 거래대금5
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금5")]
+		[XAQueryFieldAttribute("매도 거래대금5", "6")]
 		public long mdvalue5;
 		/// <summary>
 		/// 거래대금 순매수5
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수5")]
+		[XAQueryFieldAttribute("거래대금 순매수5", "6")]
 		public long msval5;
 		/// <summary>
 		/// 투자자코드6(은행)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드6(은행)")]
+		[XAQueryFieldAttribute("투자자코드6(은행)", "4")]
 		public string tjjcode6;
 		/// <summary>
 		/// 매수 거래량6
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량6")]
+		[XAQueryFieldAttribute("매수 거래량6", "8")]
 		public long msvolume6;
 		/// <summary>
 		/// 매도 거래량6
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량6")]
+		[XAQueryFieldAttribute("매도 거래량6", "8")]
 		public long mdvolume6;
 		/// <summary>
 		/// 거래량 순매수6
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수6")]
+		[XAQueryFieldAttribute("거래량 순매수6", "8")]
 		public long msvol6;
 		/// <summary>
 		/// 매수 거래대금6
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금6")]
+		[XAQueryFieldAttribute("매수 거래대금6", "6")]
 		public long msvalue6;
 		/// <summary>
 		/// 매도 거래대금6
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금6")]
+		[XAQueryFieldAttribute("매도 거래대금6", "6")]
 		public long mdvalue6;
 		/// <summary>
 		/// 거래대금 순매수6
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수6")]
+		[XAQueryFieldAttribute("거래대금 순매수6", "6")]
 		public long msval6;
 		/// <summary>
 		/// 투자자코드7(보험)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드7(보험)")]
+		[XAQueryFieldAttribute("투자자코드7(보험)", "4")]
 		public string tjjcode7;
 		/// <summary>
 		/// 매수 거래량7
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량7")]
+		[XAQueryFieldAttribute("매수 거래량7", "8")]
 		public long msvolume7;
 		/// <summary>
 		/// 매도 거래량7
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량7")]
+		[XAQueryFieldAttribute("매도 거래량7", "8")]
 		public long mdvolume7;
 		/// <summary>
 		/// 거래량 순매수7
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수7")]
+		[XAQueryFieldAttribute("거래량 순매수7", "8")]
 		public long msvol7;
 		/// <summary>
 		/// 매수 거래대금7
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금7")]
+		[XAQueryFieldAttribute("매수 거래대금7", "6")]
 		public long msvalue7;
 		/// <summary>
 		/// 매도 거래대금7
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금7")]
+		[XAQueryFieldAttribute("매도 거래대금7", "6")]
 		public long mdvalue7;
 		/// <summary>
 		/// 거래대금 순매수7
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수7")]
+		[XAQueryFieldAttribute("거래대금 순매수7", "6")]
 		public long msval7;
 		/// <summary>
 		/// 투자자코드8(종금)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드8(종금)")]
+		[XAQueryFieldAttribute("투자자코드8(종금)", "4")]
 		public string tjjcode8;
 		/// <summary>
 		/// 매수 거래량8
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량8")]
+		[XAQueryFieldAttribute("매수 거래량8", "8")]
 		public long msvolume8;
 		/// <summary>
 		/// 매도 거래량8
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량8")]
+		[XAQueryFieldAttribute("매도 거래량8", "8")]
 		public long mdvolume8;
 		/// <summary>
 		/// 거래량 순매수8
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수8")]
+		[XAQueryFieldAttribute("거래량 순매수8", "8")]
 		public long msvol8;
 		/// <summary>
 		/// 매수 거래대금8
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금8")]
+		[XAQueryFieldAttribute("매수 거래대금8", "6")]
 		public long msvalue8;
 		/// <summary>
 		/// 매도 거래대금8
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금8")]
+		[XAQueryFieldAttribute("매도 거래대금8", "6")]
 		public long mdvalue8;
 		/// <summary>
 		/// 거래대금 순매수8
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수8")]
+		[XAQueryFieldAttribute("거래대금 순매수8", "6")]
 		public long msval8;
 		/// <summary>
 		/// 투자자코드9(기금)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드9(기금)")]
+		[XAQueryFieldAttribute("투자자코드9(기금)", "4")]
 		public string tjjcode9;
 		/// <summary>
 		/// 매수 거래량9
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량9")]
+		[XAQueryFieldAttribute("매수 거래량9", "8")]
 		public long msvolume9;
 		/// <summary>
 		/// 매도 거래량9
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량9")]
+		[XAQueryFieldAttribute("매도 거래량9", "8")]
 		public long mdvolume9;
 		/// <summary>
 		/// 거래량 순매수9
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수9")]
+		[XAQueryFieldAttribute("거래량 순매수9", "8")]
 		public long msvol9;
 		/// <summary>
 		/// 매수 거래대금9
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금9")]
+		[XAQueryFieldAttribute("매수 거래대금9", "6")]
 		public long msvalue9;
 		/// <summary>
 		/// 매도 거래대금9
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금9")]
+		[XAQueryFieldAttribute("매도 거래대금9", "6")]
 		public long mdvalue9;
 		/// <summary>
 		/// 거래대금 순매수9
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수9")]
+		[XAQueryFieldAttribute("거래대금 순매수9", "6")]
 		public long msval9;
 		/// <summary>
 		/// 투자자코드10(선물업자)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드10(선물업자)")]
+		[XAQueryFieldAttribute("투자자코드10(선물업자)", "4")]
 		public string tjjcode10;
 		/// <summary>
 		/// 매수 거래량10
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량10")]
+		[XAQueryFieldAttribute("매수 거래량10", "8")]
 		public long msvolume10;
 		/// <summary>
 		/// 매도 거래량10
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량10")]
+		[XAQueryFieldAttribute("매도 거래량10", "8")]
 		public long mdvolume10;
 		/// <summary>
 		/// 거래량 순매수10
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수10")]
+		[XAQueryFieldAttribute("거래량 순매수10", "8")]
 		public long msvol10;
 		/// <summary>
 		/// 매수 거래대금10
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금10")]
+		[XAQueryFieldAttribute("매수 거래대금10", "6")]
 		public long msvalue10;
 		/// <summary>
 		/// 매도 거래대금10
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금10")]
+		[XAQueryFieldAttribute("매도 거래대금10", "6")]
 		public long mdvalue10;
 		/// <summary>
 		/// 거래대금 순매수10
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수10")]
+		[XAQueryFieldAttribute("거래대금 순매수10", "6")]
 		public long msval10;
 		/// <summary>
 		/// 투자자코드11(기타)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드11(기타)")]
+		[XAQueryFieldAttribute("투자자코드11(기타)", "4")]
 		public string tjjcode11;
 		/// <summary>
 		/// 매수 거래량11
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량11")]
+		[XAQueryFieldAttribute("매수 거래량11", "8")]
 		public long msvolume11;
 		/// <summary>
 		/// 매도 거래량11
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량11")]
+		[XAQueryFieldAttribute("매도 거래량11", "8")]
 		public long mdvolume11;
 		/// <summary>
 		/// 거래량 순매수11
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수11")]
+		[XAQueryFieldAttribute("거래량 순매수11", "8")]
 		public long msvol11;
 		/// <summary>
 		/// 매수 거래대금11
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금11")]
+		[XAQueryFieldAttribute("매수 거래대금11", "6")]
 		public long msvalue11;
 		/// <summary>
 		/// 매도 거래대금11
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금11")]
+		[XAQueryFieldAttribute("매도 거래대금11", "6")]
 		public long mdvalue11;
 		/// <summary>
 		/// 거래대금 순매수11
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수11")]
+		[XAQueryFieldAttribute("거래대금 순매수11", "6")]
 		public long msval11;
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드")]
+		[XAQueryFieldAttribute("업종코드", "3")]
 		public string upcode;
 		/// <summary>
 		/// 투자자코드0(사모펀드)
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드0(사모펀드)")]
+		[XAQueryFieldAttribute("투자자코드0(사모펀드)", "4")]
 		public string tjjcode0;
 		/// <summary>
 		/// 매수 거래량0
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량0")]
+		[XAQueryFieldAttribute("매수 거래량0", "8")]
 		public long msvolume0;
 		/// <summary>
 		/// 매도 거래량0
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량0")]
+		[XAQueryFieldAttribute("매도 거래량0", "8")]
 		public long mdvolume0;
 		/// <summary>
 		/// 거래량 순매수0
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수0")]
+		[XAQueryFieldAttribute("거래량 순매수0", "8")]
 		public long msvol0;
 		/// <summary>
 		/// 매수 거래대금0
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금0")]
+		[XAQueryFieldAttribute("매수 거래대금0", "6")]
 		public long msvalue0;
 		/// <summary>
 		/// 매도 거래대금0
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금0")]
+		[XAQueryFieldAttribute("매도 거래대금0", "6")]
 		public long mdvalue0;
 		/// <summary>
 		/// 거래대금 순매수0
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수0")]
+		[XAQueryFieldAttribute("거래대금 순매수0", "6")]
 		public long msval0;
 
 		public static class F
@@ -1716,6 +1716,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRBMTOutBlock),
+
+		};
 
 	}
 

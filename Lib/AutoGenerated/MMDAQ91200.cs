@@ -50,17 +50,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 종목대분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목대분류코드")]
+		[XAQueryFieldAttribute("종목대분류코드", "2")]
 		public string IsuLgclssCode;
 		/// <summary>
 		/// 종목중분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목중분류코드")]
+		[XAQueryFieldAttribute("종목중분류코드", "2")]
 		public string IsuMdclssCode;
 
 		public static class F
@@ -169,17 +169,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 종목대분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목대분류코드")]
+		[XAQueryFieldAttribute("종목대분류코드", "2")]
 		public string IsuLgclssCode;
 		/// <summary>
 		/// 종목중분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목중분류코드")]
+		[XAQueryFieldAttribute("종목중분류코드", "2")]
 		public string IsuMdclssCode;
 
 		public static class F
@@ -313,47 +313,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목소분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목소분류코드")]
+		[XAQueryFieldAttribute("종목소분류코드", "3")]
 		public string IsuSmclssCode;
 		/// <summary>
 		/// 종목중분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목중분류코드")]
+		[XAQueryFieldAttribute("종목중분류코드", "2")]
 		public string IsuMdclssCode;
 		/// <summary>
 		/// 종목대중분류명
 		/// </summary>
-		[XAQueryFieldAttribute("종목대중분류명")]
+		[XAQueryFieldAttribute("종목대중분류명", "40")]
 		public string IsuLrgMdclssNm;
 		/// <summary>
 		/// 종목대중소분류명
 		/// </summary>
-		[XAQueryFieldAttribute("종목대중소분류명")]
+		[XAQueryFieldAttribute("종목대중소분류명", "40")]
 		public string IsuLrgMidSmclssNm;
 		/// <summary>
 		/// 단축한글종목명
 		/// </summary>
-		[XAQueryFieldAttribute("단축한글종목명")]
+		[XAQueryFieldAttribute("단축한글종목명", "40")]
 		public string ShtnHanglIsuNm;
 		/// <summary>
 		/// 위탁증거금율
 		/// </summary>
-		[XAQueryFieldAttribute("위탁증거금율")]
+		[XAQueryFieldAttribute("위탁증거금율", "26.9")]
 		public double CsgnMgnrt;
 		/// <summary>
 		/// 유지증거금율
 		/// </summary>
-		[XAQueryFieldAttribute("유지증거금율")]
+		[XAQueryFieldAttribute("유지증거금율", "26.9")]
 		public double MaintMgnrt;
 		/// <summary>
 		/// 현금증거금율
 		/// </summary>
-		[XAQueryFieldAttribute("현금증거금율")]
+		[XAQueryFieldAttribute("현금증거금율", "26.9")]
 		public double MnyMgnrt;
 		/// <summary>
 		/// 잔여일수
 		/// </summary>
-		[XAQueryFieldAttribute("잔여일수")]
+		[XAQueryFieldAttribute("잔여일수", "6")]
 		public long RmndDays;
 
 		public static class F
@@ -673,6 +673,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQMMDAQ91200OutBlock1),
+			typeof(XQMMDAQ91200OutBlock2),
+
+		};
 
 	}
 

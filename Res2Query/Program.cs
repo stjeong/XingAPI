@@ -92,7 +92,7 @@ namespace Res2Query
                     AddXmlHelp(sbTypes, $"{tab}", typeList[typeName].TypeDesc);
                     sbTypes.AppendLine($"{tab}public const string {typeName} = \"{typeName}\";");
 
-                    sbName.AppendLine($"{tab}\t\ttypeof({typeList[typeName].TypeFullName}), // {typeList[typeName].TypeDesc}");
+                    sbName.AppendLine($"{tab}\ttypeof({typeList[typeName].TypeFullName}), // {typeList[typeName].TypeDesc}");
 
                     numberOfList++;
                 }
@@ -203,6 +203,7 @@ namespace Res2Query
             }
 
             StringBuilder sbBlock = new StringBuilder();
+            StringBuilder sbOutBlockList = new StringBuilder();
 
             foreach (string blockTypeName in blockFieldSetList.Keys)
             {
@@ -237,8 +238,15 @@ namespace Res2Query
                     }
                     sbBlock.AppendLine($"{tab}\t}}");
                     sbBlock.AppendLine();
+
+                    sbOutBlockList.AppendLine($"{tab}\t\ttypeof({classPrefix}{blockTypeName}),");
                 }
             }
+
+            sbBlock.AppendLine($"{tab}\tpublic static Type [] OutBlockTypes = new Type []");
+            sbBlock.AppendLine($"{tab}\t{{");
+            sbBlock.AppendLine(sbOutBlockList.ToString());
+            sbBlock.AppendLine($"{tab}\t}};");
 
             sbClass.AppendLine(sbBlock.ToString());
             sbClass.AppendLine($"{tab}}}");
@@ -480,7 +488,7 @@ namespace Res2Query
 
                 {
                     AddXmlHelp(sb, tab + "\t", fieldDesc);
-                    sb.AppendLine($"{tab}\t[XAQueryFieldAttribute(\"{fieldDesc}\")]");
+                    sb.AppendLine($"{tab}\t[XAQueryFieldAttribute(\"{fieldDesc}\", \"{formatOrLen}\")]");
                     sb.AppendLine($"{tab}\tpublic {GetFieldType(fieldType, formatOrLen)} {name2};");
                 }
 

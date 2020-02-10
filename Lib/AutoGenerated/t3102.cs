@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 뉴스번호
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스번호")]
+		[XAQueryFieldAttribute("뉴스번호", "24")]
 		public string sNewsno;
 
 		public static class F
@@ -137,7 +137,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 뉴스종목
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스종목")]
+		[XAQueryFieldAttribute("뉴스종목", "6")]
 		public string sJongcode;
 
 		public static class F
@@ -251,7 +251,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 뉴스본문
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스본문")]
+		[XAQueryFieldAttribute("뉴스본문", "100")]
 		public string sBody;
 
 		public static class F
@@ -365,7 +365,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 뉴스타이틀
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스타이틀")]
+		[XAQueryFieldAttribute("뉴스타이틀", "300")]
 		public string sTitle;
 
 		public static class F
@@ -560,6 +560,13 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt3102OutBlock),
+			typeof(XQt3102OutBlock1),
+			typeof(XQt3102OutBlock2),
+
+		};
 
 	}
 

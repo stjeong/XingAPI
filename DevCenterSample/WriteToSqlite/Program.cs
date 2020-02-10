@@ -8,7 +8,7 @@ namespace WriteToSqlite
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
             Program pg = new Program();
             pg.Main(true);
@@ -18,7 +18,7 @@ namespace WriteToSqlite
         {
             LoginInfo user = GetUserInfo(useDemoServer);
 
-            DBExtension.UseSqlite("test.sqlite");
+            SqliteExtension.UseSqlite("test.sqlite");
 
             using (XingClient xing = new XingClient(useDemoServer))
             {
@@ -34,32 +34,13 @@ namespace WriteToSqlite
         }
         private void WriteSHCode()
         {
-            int totalCode = 0;
-
-            {
-                XQt8430.Get(XQt8430Gubun.코스닥).WriteToDB();
-                // XQt8430.LoadFrom(XQt8430Gubun.코스닥);
-            }
-
-            {
-                var items = XQt8430.GetKOSPI(true);
-                Dictionary<string, int> names = new Dictionary<string, int>();
-
-                foreach (var item in items)
-                {
-                    totalCode++;
-                }
-            }
+            XQt8430.Get().WriteToDB();
+            // XQt8430.LoadFrom(XQt8430Gubun.코스닥);
         }
 
         private void WriteTmCode()
         {
-            var items = XQt8425.Get();
-            Dictionary<string, int> names = new Dictionary<string, int>();
-
-            foreach (var item in items)
-            {
-            }
+            XQt8425.Get().WriteToDB();
         }
 
         private LoginInfo GetUserInfo(bool useDemoServer)

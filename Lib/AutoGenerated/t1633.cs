@@ -50,42 +50,42 @@ namespace XingAPINet
 		/// <summary>
 		/// 시장구분
 		/// </summary>
-		[XAQueryFieldAttribute("시장구분")]
+		[XAQueryFieldAttribute("시장구분", "1")]
 		public char gubun;
 		/// <summary>
 		/// 금액수량구분
 		/// </summary>
-		[XAQueryFieldAttribute("금액수량구분")]
+		[XAQueryFieldAttribute("금액수량구분", "1")]
 		public char gubun1;
 		/// <summary>
 		/// 수치누적구분
 		/// </summary>
-		[XAQueryFieldAttribute("수치누적구분")]
+		[XAQueryFieldAttribute("수치누적구분", "1")]
 		public char gubun2;
 		/// <summary>
 		/// 일주월구분
 		/// </summary>
-		[XAQueryFieldAttribute("일주월구분")]
+		[XAQueryFieldAttribute("일주월구분", "1")]
 		public char gubun3;
 		/// <summary>
 		/// from일자
 		/// </summary>
-		[XAQueryFieldAttribute("from일자")]
+		[XAQueryFieldAttribute("from일자", "8")]
 		public string fdate;
 		/// <summary>
 		/// to일자
 		/// </summary>
-		[XAQueryFieldAttribute("to일자")]
+		[XAQueryFieldAttribute("to일자", "8")]
 		public string tdate;
 		/// <summary>
 		/// 직전대비증감구분
 		/// </summary>
-		[XAQueryFieldAttribute("직전대비증감구분")]
+		[XAQueryFieldAttribute("직전대비증감구분", "1")]
 		public char gubun4;
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜")]
+		[XAQueryFieldAttribute("날짜", "8")]
 		public string date;
 
 		public static class F
@@ -249,12 +249,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜")]
+		[XAQueryFieldAttribute("날짜", "8")]
 		public string date;
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX")]
+		[XAQueryFieldAttribute("IDX", "4")]
 		public long idx;
 
 		public static class F
@@ -376,72 +376,72 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자")]
+		[XAQueryFieldAttribute("일자", "8")]
 		public string date;
 		/// <summary>
 		/// KP200
 		/// </summary>
-		[XAQueryFieldAttribute("KP200")]
+		[XAQueryFieldAttribute("KP200", "6.2")]
 		public float jisu;
 		/// <summary>
 		/// 대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("대비구분")]
+		[XAQueryFieldAttribute("대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 대비
 		/// </summary>
-		[XAQueryFieldAttribute("대비")]
+		[XAQueryFieldAttribute("대비", "6.2")]
 		public float change;
 		/// <summary>
 		/// 전체순매수
 		/// </summary>
-		[XAQueryFieldAttribute("전체순매수")]
+		[XAQueryFieldAttribute("전체순매수", "12")]
 		public long tot3;
 		/// <summary>
 		/// 전체매수
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수")]
+		[XAQueryFieldAttribute("전체매수", "12")]
 		public long tot1;
 		/// <summary>
 		/// 전체매도
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도")]
+		[XAQueryFieldAttribute("전체매도", "12")]
 		public long tot2;
 		/// <summary>
 		/// 차익순매수
 		/// </summary>
-		[XAQueryFieldAttribute("차익순매수")]
+		[XAQueryFieldAttribute("차익순매수", "12")]
 		public long cha3;
 		/// <summary>
 		/// 차익매수
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수")]
+		[XAQueryFieldAttribute("차익매수", "12")]
 		public long cha1;
 		/// <summary>
 		/// 차익매도
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도")]
+		[XAQueryFieldAttribute("차익매도", "12")]
 		public long cha2;
 		/// <summary>
 		/// 비차익순매수
 		/// </summary>
-		[XAQueryFieldAttribute("비차익순매수")]
+		[XAQueryFieldAttribute("비차익순매수", "12")]
 		public long bcha3;
 		/// <summary>
 		/// 비차익매수
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수")]
+		[XAQueryFieldAttribute("비차익매수", "12")]
 		public long bcha1;
 		/// <summary>
 		/// 비차익매도
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도")]
+		[XAQueryFieldAttribute("비차익매도", "12")]
 		public long bcha2;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "12")]
 		public long volume;
 
 		public static class F
@@ -831,6 +831,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1633OutBlock),
+			typeof(XQt1633OutBlock1),
+
+		};
 
 	}
 

@@ -50,27 +50,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "8")]
 		public string focode;
 		/// <summary>
 		/// 특이거래량
 		/// </summary>
-		[XAQueryFieldAttribute("특이거래량")]
+		[XAQueryFieldAttribute("특이거래량", "12")]
 		public long cvolume;
 		/// <summary>
 		/// 시작시간
 		/// </summary>
-		[XAQueryFieldAttribute("시작시간")]
+		[XAQueryFieldAttribute("시작시간", "4")]
 		public string stime;
 		/// <summary>
 		/// 종료시간
 		/// </summary>
-		[XAQueryFieldAttribute("종료시간")]
+		[XAQueryFieldAttribute("종료시간", "4")]
 		public string etime;
 		/// <summary>
 		/// 시간CTS
 		/// </summary>
-		[XAQueryFieldAttribute("시간CTS")]
+		[XAQueryFieldAttribute("시간CTS", "10")]
 		public string cts_time;
 
 		public static class F
@@ -201,7 +201,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간CTS
 		/// </summary>
-		[XAQueryFieldAttribute("시간CTS")]
+		[XAQueryFieldAttribute("시간CTS", "10")]
 		public string cts_time;
 
 		public static class F
@@ -311,112 +311,112 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "10")]
 		public string chetime;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public float change;
 		/// <summary>
 		/// 체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("체결수량")]
+		[XAQueryFieldAttribute("체결수량", "8")]
 		public long cvolume;
 		/// <summary>
 		/// 체결강도
 		/// </summary>
-		[XAQueryFieldAttribute("체결강도")]
+		[XAQueryFieldAttribute("체결강도", "8.2")]
 		public float chdegree;
 		/// <summary>
 		/// 매도호가
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가")]
+		[XAQueryFieldAttribute("매도호가", "8")]
 		public long offerho;
 		/// <summary>
 		/// 매수호가
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가")]
+		[XAQueryFieldAttribute("매수호가", "8")]
 		public long bidho;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "12.0")]
 		public double volume;
 		/// <summary>
 		/// 미결수량
 		/// </summary>
-		[XAQueryFieldAttribute("미결수량")]
+		[XAQueryFieldAttribute("미결수량", "8")]
 		public long openyak;
 		/// <summary>
 		/// 미결전일증감
 		/// </summary>
-		[XAQueryFieldAttribute("미결전일증감")]
+		[XAQueryFieldAttribute("미결전일증감", "8")]
 		public long jnilopenupdn;
 		/// <summary>
 		/// 이론BASIS
 		/// </summary>
-		[XAQueryFieldAttribute("이론BASIS")]
+		[XAQueryFieldAttribute("이론BASIS", "8")]
 		public long ibasis;
 		/// <summary>
 		/// 시장BASIS
 		/// </summary>
-		[XAQueryFieldAttribute("시장BASIS")]
+		[XAQueryFieldAttribute("시장BASIS", "8")]
 		public long sbasis;
 		/// <summary>
 		/// 괴리율
 		/// </summary>
-		[XAQueryFieldAttribute("괴리율")]
+		[XAQueryFieldAttribute("괴리율", "6.2")]
 		public float kasis;
 		/// <summary>
 		/// 거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금")]
+		[XAQueryFieldAttribute("거래대금", "12.0")]
 		public double value;
 		/// <summary>
 		/// 미결직전증감
 		/// </summary>
-		[XAQueryFieldAttribute("미결직전증감")]
+		[XAQueryFieldAttribute("미결직전증감", "8")]
 		public long j_openupdn;
 		/// <summary>
 		/// 누적매수체결량
 		/// </summary>
-		[XAQueryFieldAttribute("누적매수체결량")]
+		[XAQueryFieldAttribute("누적매수체결량", "12.0")]
 		public double n_msvolume;
 		/// <summary>
 		/// 누적매도체결량
 		/// </summary>
-		[XAQueryFieldAttribute("누적매도체결량")]
+		[XAQueryFieldAttribute("누적매도체결량", "12.0")]
 		public double n_mdvolume;
 		/// <summary>
 		/// 누적순매수체결량
 		/// </summary>
-		[XAQueryFieldAttribute("누적순매수체결량")]
+		[XAQueryFieldAttribute("누적순매수체결량", "12.0")]
 		public double s_msvolume;
 		/// <summary>
 		/// 누적매수체결건수
 		/// </summary>
-		[XAQueryFieldAttribute("누적매수체결건수")]
+		[XAQueryFieldAttribute("누적매수체결건수", "8")]
 		public long n_mschecnt;
 		/// <summary>
 		/// 누적매도체결건수
 		/// </summary>
-		[XAQueryFieldAttribute("누적매도체결건수")]
+		[XAQueryFieldAttribute("누적매도체결건수", "8")]
 		public long n_mdchecnt;
 		/// <summary>
 		/// 누적순매수체결건수
 		/// </summary>
-		[XAQueryFieldAttribute("누적순매수체결건수")]
+		[XAQueryFieldAttribute("누적순매수체결건수", "8")]
 		public long s_mschecnt;
 
 		public static class F
@@ -896,6 +896,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt8404OutBlock),
+			typeof(XQt8404OutBlock1),
+
+		};
 
 	}
 

@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 테마코드
 		/// </summary>
-		[XAQueryFieldAttribute("테마코드")]
+		[XAQueryFieldAttribute("테마코드", "4")]
 		public string tmcode;
 
 		public static class F
@@ -137,22 +137,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 상승종목수
 		/// </summary>
-		[XAQueryFieldAttribute("상승종목수")]
+		[XAQueryFieldAttribute("상승종목수", "4")]
 		public long upcnt;
 		/// <summary>
 		/// 테마종목수
 		/// </summary>
-		[XAQueryFieldAttribute("테마종목수")]
+		[XAQueryFieldAttribute("테마종목수", "4")]
 		public long tmcnt;
 		/// <summary>
 		/// 상승종목비율
 		/// </summary>
-		[XAQueryFieldAttribute("상승종목비율")]
+		[XAQueryFieldAttribute("상승종목비율", "4")]
 		public long uprate;
 		/// <summary>
 		/// 테마명
 		/// </summary>
-		[XAQueryFieldAttribute("테마명")]
+		[XAQueryFieldAttribute("테마명", "36")]
 		public string tmname;
 
 		public static class F
@@ -298,72 +298,72 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명")]
+		[XAQueryFieldAttribute("종목명", "20")]
 		public string hname;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 전일동시간
 		/// </summary>
-		[XAQueryFieldAttribute("전일동시간")]
+		[XAQueryFieldAttribute("전일동시간", "9.2")]
 		public float jniltime;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 예상체결가
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가")]
+		[XAQueryFieldAttribute("예상체결가", "8")]
 		public long yeprice;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가")]
+		[XAQueryFieldAttribute("시가", "8")]
 		public long open;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가")]
+		[XAQueryFieldAttribute("고가", "8")]
 		public long high;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가")]
+		[XAQueryFieldAttribute("저가", "8")]
 		public long low;
 		/// <summary>
 		/// 누적거래대금(단위:백만)
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래대금(단위:백만)")]
+		[XAQueryFieldAttribute("누적거래대금(단위:백만)", "12")]
 		public long value;
 		/// <summary>
 		/// 시가총액(단위:백만)
 		/// </summary>
-		[XAQueryFieldAttribute("시가총액(단위:백만)")]
+		[XAQueryFieldAttribute("시가총액(단위:백만)", "12")]
 		public long marketcap;
 
 		public static class F
@@ -739,6 +739,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1537OutBlock),
+			typeof(XQt1537OutBlock1),
+
+		};
 
 	}
 

@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// Dummy
 		/// </summary>
-		[XAQueryFieldAttribute("Dummy")]
+		[XAQueryFieldAttribute("Dummy", "1")]
 		public char dummy;
 
 		public static class F
@@ -137,12 +137,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 테마명
 		/// </summary>
-		[XAQueryFieldAttribute("테마명")]
+		[XAQueryFieldAttribute("테마명", "36")]
 		public string tmname;
 		/// <summary>
 		/// 테마코드
 		/// </summary>
-		[XAQueryFieldAttribute("테마코드")]
+		[XAQueryFieldAttribute("테마코드", "4")]
 		public string tmcode;
 
 		public static class F
@@ -354,6 +354,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt8425OutBlock),
+
+		};
 
 	}
 

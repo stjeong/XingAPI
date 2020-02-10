@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "8")]
 		public string futcode;
 
 		public static class F
@@ -137,32 +137,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 예상체결시간
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결시간")]
+		[XAQueryFieldAttribute("예상체결시간", "6")]
 		public string ychetime;
 		/// <summary>
 		/// 예상체결가격
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가격")]
+		[XAQueryFieldAttribute("예상체결가격", "6.2")]
 		public float yeprice;
 		/// <summary>
 		/// 예상체결가전일종가대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가전일종가대비구분")]
+		[XAQueryFieldAttribute("예상체결가전일종가대비구분", "1")]
 		public char jnilysign;
 		/// <summary>
 		/// 예상체결가전일종가대비
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가전일종가대비")]
+		[XAQueryFieldAttribute("예상체결가전일종가대비", "6.2")]
 		public float preychange;
 		/// <summary>
 		/// 예상체결가전일종가등락율
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가전일종가등락율")]
+		[XAQueryFieldAttribute("예상체결가전일종가등락율", "6.2")]
 		public float jnilydrate;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "8")]
 		public string futcode;
 
 		public static class F
@@ -356,6 +356,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRYFCOutBlock),
+
+		};
 
 	}
 

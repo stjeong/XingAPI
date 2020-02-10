@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,17 +137,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 테마명
 		/// </summary>
-		[XAQueryFieldAttribute("테마명")]
+		[XAQueryFieldAttribute("테마명", "36")]
 		public string tmname;
 		/// <summary>
 		/// 평균등락율
 		/// </summary>
-		[XAQueryFieldAttribute("평균등락율")]
+		[XAQueryFieldAttribute("평균등락율", "6.2")]
 		public float avgdiff;
 		/// <summary>
 		/// 테마코드
 		/// </summary>
-		[XAQueryFieldAttribute("테마코드")]
+		[XAQueryFieldAttribute("테마코드", "4")]
 		public string tmcode;
 
 		public static class F
@@ -371,6 +371,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1532OutBlock),
+
+		};
 
 	}
 

@@ -50,32 +50,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호")]
+		[XAQueryFieldAttribute("계좌번호", "11")]
 		public string accno;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호")]
+		[XAQueryFieldAttribute("비밀번호", "8")]
 		public string passwd;
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호")]
+		[XAQueryFieldAttribute("종목번호", "8")]
 		public string expcode;
 		/// <summary>
 		/// 체결구분
 		/// </summary>
-		[XAQueryFieldAttribute("체결구분")]
+		[XAQueryFieldAttribute("체결구분", "1")]
 		public char chegb;
 		/// <summary>
 		/// 정렬순서
 		/// </summary>
-		[XAQueryFieldAttribute("정렬순서")]
+		[XAQueryFieldAttribute("정렬순서", "1")]
 		public char sortgb;
 		/// <summary>
 		/// CTS_주문번호
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_주문번호")]
+		[XAQueryFieldAttribute("CTS_주문번호", "7")]
 		public string cts_ordno;
 
 		public static class F
@@ -217,7 +217,7 @@ namespace XingAPINet
 		/// <summary>
 		/// CTS_주문번호
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_주문번호")]
+		[XAQueryFieldAttribute("CTS_주문번호", "7")]
 		public string cts_ordno;
 
 		public static class F
@@ -327,82 +327,82 @@ namespace XingAPINet
 		/// <summary>
 		/// 주문번호
 		/// </summary>
-		[XAQueryFieldAttribute("주문번호")]
+		[XAQueryFieldAttribute("주문번호", "7")]
 		public long ordno;
 		/// <summary>
 		/// 원주문번호
 		/// </summary>
-		[XAQueryFieldAttribute("원주문번호")]
+		[XAQueryFieldAttribute("원주문번호", "7")]
 		public long orgordno;
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분")]
+		[XAQueryFieldAttribute("구분", "10")]
 		public string medosu;
 		/// <summary>
 		/// 유형
 		/// </summary>
-		[XAQueryFieldAttribute("유형")]
+		[XAQueryFieldAttribute("유형", "20")]
 		public string ordgb;
 		/// <summary>
 		/// 주문수량
 		/// </summary>
-		[XAQueryFieldAttribute("주문수량")]
+		[XAQueryFieldAttribute("주문수량", "9")]
 		public long qty;
 		/// <summary>
 		/// 주문가격
 		/// </summary>
-		[XAQueryFieldAttribute("주문가격")]
+		[XAQueryFieldAttribute("주문가격", "9.2")]
 		public float price;
 		/// <summary>
 		/// 체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("체결수량")]
+		[XAQueryFieldAttribute("체결수량", "9")]
 		public long cheqty;
 		/// <summary>
 		/// 체결가격
 		/// </summary>
-		[XAQueryFieldAttribute("체결가격")]
+		[XAQueryFieldAttribute("체결가격", "9.2")]
 		public float cheprice;
 		/// <summary>
 		/// 미체결잔량
 		/// </summary>
-		[XAQueryFieldAttribute("미체결잔량")]
+		[XAQueryFieldAttribute("미체결잔량", "9")]
 		public long ordrem;
 		/// <summary>
 		/// 상태
 		/// </summary>
-		[XAQueryFieldAttribute("상태")]
+		[XAQueryFieldAttribute("상태", "10")]
 		public string status;
 		/// <summary>
 		/// 주문시간
 		/// </summary>
-		[XAQueryFieldAttribute("주문시간")]
+		[XAQueryFieldAttribute("주문시간", "8")]
 		public string ordtime;
 		/// <summary>
 		/// 주문매체
 		/// </summary>
-		[XAQueryFieldAttribute("주문매체")]
+		[XAQueryFieldAttribute("주문매체", "10")]
 		public string ordermtd;
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호")]
+		[XAQueryFieldAttribute("종목번호", "8")]
 		public string expcode;
 		/// <summary>
 		/// 사유코드
 		/// </summary>
-		[XAQueryFieldAttribute("사유코드")]
+		[XAQueryFieldAttribute("사유코드", "3")]
 		public string rtcode;
 		/// <summary>
 		/// 처리순번
 		/// </summary>
-		[XAQueryFieldAttribute("처리순번")]
+		[XAQueryFieldAttribute("처리순번", "10")]
 		public long sysprocseq;
 		/// <summary>
 		/// 호가타입
 		/// </summary>
-		[XAQueryFieldAttribute("호가타입")]
+		[XAQueryFieldAttribute("호가타입", "1")]
 		public char hogatype;
 
 		public static class F
@@ -812,6 +812,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt0434OutBlock),
+			typeof(XQt0434OutBlock1),
+
+		};
 
 	}
 

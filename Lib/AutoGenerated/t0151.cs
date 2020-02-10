@@ -50,32 +50,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자")]
+		[XAQueryFieldAttribute("일자", "8")]
 		public string date;
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호")]
+		[XAQueryFieldAttribute("계좌번호", "11")]
 		public string accno;
 		/// <summary>
 		/// CTS_매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_매매구분")]
+		[XAQueryFieldAttribute("CTS_매매구분", "1")]
 		public char cts_medosu;
 		/// <summary>
 		/// CTS_종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_종목번호")]
+		[XAQueryFieldAttribute("CTS_종목번호", "12")]
 		public string cts_expcode;
 		/// <summary>
 		/// CTS_단가
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_단가")]
+		[XAQueryFieldAttribute("CTS_단가", "9")]
 		public string cts_price;
 		/// <summary>
 		/// CTS_매체
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_매체")]
+		[XAQueryFieldAttribute("CTS_매체", "2")]
 		public string cts_middiv;
 
 		public static class F
@@ -217,117 +217,117 @@ namespace XingAPINet
 		/// <summary>
 		/// 매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도수량")]
+		[XAQueryFieldAttribute("매도수량", "9")]
 		public long mdqty;
 		/// <summary>
 		/// 매도약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("매도약정금액")]
+		[XAQueryFieldAttribute("매도약정금액", "18")]
 		public long mdamt;
 		/// <summary>
 		/// 매도수수료
 		/// </summary>
-		[XAQueryFieldAttribute("매도수수료")]
+		[XAQueryFieldAttribute("매도수수료", "18")]
 		public long mdfee;
 		/// <summary>
 		/// 매도거래세
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래세")]
+		[XAQueryFieldAttribute("매도거래세", "18")]
 		public long mdtax;
 		/// <summary>
 		/// 매도농특세
 		/// </summary>
-		[XAQueryFieldAttribute("매도농특세")]
+		[XAQueryFieldAttribute("매도농특세", "18")]
 		public long mdargtax;
 		/// <summary>
 		/// 매도제비용합
 		/// </summary>
-		[XAQueryFieldAttribute("매도제비용합")]
+		[XAQueryFieldAttribute("매도제비용합", "18")]
 		public long tmdtax;
 		/// <summary>
 		/// 매도정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("매도정산금액")]
+		[XAQueryFieldAttribute("매도정산금액", "18")]
 		public long mdadjamt;
 		/// <summary>
 		/// 매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수수량")]
+		[XAQueryFieldAttribute("매수수량", "9")]
 		public long msqty;
 		/// <summary>
 		/// 매수약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("매수약정금액")]
+		[XAQueryFieldAttribute("매수약정금액", "18")]
 		public long msamt;
 		/// <summary>
 		/// 매수수수료
 		/// </summary>
-		[XAQueryFieldAttribute("매수수수료")]
+		[XAQueryFieldAttribute("매수수수료", "18")]
 		public long msfee;
 		/// <summary>
 		/// 매수제비용합
 		/// </summary>
-		[XAQueryFieldAttribute("매수제비용합")]
+		[XAQueryFieldAttribute("매수제비용합", "18")]
 		public long tmstax;
 		/// <summary>
 		/// 매수정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("매수정산금액")]
+		[XAQueryFieldAttribute("매수정산금액", "18")]
 		public long msadjamt;
 		/// <summary>
 		/// 합계수량
 		/// </summary>
-		[XAQueryFieldAttribute("합계수량")]
+		[XAQueryFieldAttribute("합계수량", "9")]
 		public long tqty;
 		/// <summary>
 		/// 합계약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("합계약정금액")]
+		[XAQueryFieldAttribute("합계약정금액", "18")]
 		public long tamt;
 		/// <summary>
 		/// 합계수수료
 		/// </summary>
-		[XAQueryFieldAttribute("합계수수료")]
+		[XAQueryFieldAttribute("합계수수료", "18")]
 		public long tfee;
 		/// <summary>
 		/// 합계거래세
 		/// </summary>
-		[XAQueryFieldAttribute("합계거래세")]
+		[XAQueryFieldAttribute("합계거래세", "18")]
 		public long tottax;
 		/// <summary>
 		/// 합계농특세
 		/// </summary>
-		[XAQueryFieldAttribute("합계농특세")]
+		[XAQueryFieldAttribute("합계농특세", "18")]
 		public long targtax;
 		/// <summary>
 		/// 합계제비용합
 		/// </summary>
-		[XAQueryFieldAttribute("합계제비용합")]
+		[XAQueryFieldAttribute("합계제비용합", "18")]
 		public long ttax;
 		/// <summary>
 		/// 합계정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("합계정산금액")]
+		[XAQueryFieldAttribute("합계정산금액", "18")]
 		public long tadjamt;
 		/// <summary>
 		/// CTS_매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_매매구분")]
+		[XAQueryFieldAttribute("CTS_매매구분", "1")]
 		public char cts_medosu;
 		/// <summary>
 		/// CTS_종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_종목번호")]
+		[XAQueryFieldAttribute("CTS_종목번호", "12")]
 		public string cts_expcode;
 		/// <summary>
 		/// CTS_단가
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_단가")]
+		[XAQueryFieldAttribute("CTS_단가", "9")]
 		public string cts_price;
 		/// <summary>
 		/// CTS_매체
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_매체")]
+		[XAQueryFieldAttribute("CTS_매체", "2")]
 		public string cts_middiv;
 
 		public static class F
@@ -701,52 +701,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("매매구분")]
+		[XAQueryFieldAttribute("매매구분", "10")]
 		public string medosu;
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호")]
+		[XAQueryFieldAttribute("종목번호", "12")]
 		public string expcode;
 		/// <summary>
 		/// 수량
 		/// </summary>
-		[XAQueryFieldAttribute("수량")]
+		[XAQueryFieldAttribute("수량", "9")]
 		public long qty;
 		/// <summary>
 		/// 단가
 		/// </summary>
-		[XAQueryFieldAttribute("단가")]
+		[XAQueryFieldAttribute("단가", "9")]
 		public long price;
 		/// <summary>
 		/// 약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("약정금액")]
+		[XAQueryFieldAttribute("약정금액", "18")]
 		public long amt;
 		/// <summary>
 		/// 수수료
 		/// </summary>
-		[XAQueryFieldAttribute("수수료")]
+		[XAQueryFieldAttribute("수수료", "18")]
 		public long fee;
 		/// <summary>
 		/// 거래세
 		/// </summary>
-		[XAQueryFieldAttribute("거래세")]
+		[XAQueryFieldAttribute("거래세", "18")]
 		public long tax;
 		/// <summary>
 		/// 농특세
 		/// </summary>
-		[XAQueryFieldAttribute("농특세")]
+		[XAQueryFieldAttribute("농특세", "18")]
 		public long argtax;
 		/// <summary>
 		/// 정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("정산금액")]
+		[XAQueryFieldAttribute("정산금액", "18")]
 		public long adjamt;
 		/// <summary>
 		/// 매체
 		/// </summary>
-		[XAQueryFieldAttribute("매체")]
+		[XAQueryFieldAttribute("매체", "20")]
 		public string middiv;
 
 		public static class F
@@ -1084,6 +1084,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt0151OutBlock),
+			typeof(XQt0151OutBlock1),
+
+		};
 
 	}
 

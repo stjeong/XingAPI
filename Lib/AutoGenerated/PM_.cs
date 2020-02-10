@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분값
 		/// </summary>
-		[XAQueryFieldAttribute("구분값")]
+		[XAQueryFieldAttribute("구분값", "1")]
 		public char gubun;
 
 		public static class F
@@ -137,432 +137,432 @@ namespace XingAPINet
 		/// <summary>
 		/// 수신시간
 		/// </summary>
-		[XAQueryFieldAttribute("수신시간")]
+		[XAQueryFieldAttribute("수신시간", "6")]
 		public string time;
 		/// <summary>
 		/// 차익매도호가 잔량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도호가 잔량")]
+		[XAQueryFieldAttribute("차익매도호가 잔량", "6")]
 		public long cdhrem;
 		/// <summary>
 		/// 차익매수호가 잔량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수호가 잔량")]
+		[XAQueryFieldAttribute("차익매수호가 잔량", "6")]
 		public long cshrem;
 		/// <summary>
 		/// 비차익매도호가 잔량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도호가 잔량")]
+		[XAQueryFieldAttribute("비차익매도호가 잔량", "6")]
 		public long bdhrem;
 		/// <summary>
 		/// 비차익매수호가 잔량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수호가 잔량")]
+		[XAQueryFieldAttribute("비차익매수호가 잔량", "6")]
 		public long bshrem;
 		/// <summary>
 		/// 차익매도호가 수량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도호가 수량")]
+		[XAQueryFieldAttribute("차익매도호가 수량", "6")]
 		public long cdhvolume;
 		/// <summary>
 		/// 차익매수호가 수량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수호가 수량")]
+		[XAQueryFieldAttribute("차익매수호가 수량", "6")]
 		public long cshvolume;
 		/// <summary>
 		/// 비차익매도호가 수량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도호가 수량")]
+		[XAQueryFieldAttribute("비차익매도호가 수량", "6")]
 		public long bdhvolume;
 		/// <summary>
 		/// 비차익매수호가 수량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수호가 수량")]
+		[XAQueryFieldAttribute("비차익매수호가 수량", "6")]
 		public long bshvolume;
 		/// <summary>
 		/// 차익매도위탁체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도위탁체결수량")]
+		[XAQueryFieldAttribute("차익매도위탁체결수량", "6")]
 		public long cdwvolume;
 		/// <summary>
 		/// 차익매도자기체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도자기체결수량")]
+		[XAQueryFieldAttribute("차익매도자기체결수량", "6")]
 		public long cdjvolume;
 		/// <summary>
 		/// 차익매수위탁체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수위탁체결수량")]
+		[XAQueryFieldAttribute("차익매수위탁체결수량", "6")]
 		public long cswvolume;
 		/// <summary>
 		/// 차익매수자기체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수자기체결수량")]
+		[XAQueryFieldAttribute("차익매수자기체결수량", "6")]
 		public long csjvolume;
 		/// <summary>
 		/// 차익위탁순매수 수량
 		/// </summary>
-		[XAQueryFieldAttribute("차익위탁순매수 수량")]
+		[XAQueryFieldAttribute("차익위탁순매수 수량", "6")]
 		public long cwvol;
 		/// <summary>
 		/// 차익자기순매수 수량
 		/// </summary>
-		[XAQueryFieldAttribute("차익자기순매수 수량")]
+		[XAQueryFieldAttribute("차익자기순매수 수량", "6")]
 		public long cjvol;
 		/// <summary>
 		/// 비차익매도위탁체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도위탁체결수량")]
+		[XAQueryFieldAttribute("비차익매도위탁체결수량", "6")]
 		public long bdwvolume;
 		/// <summary>
 		/// 비차익매도자기체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도자기체결수량")]
+		[XAQueryFieldAttribute("비차익매도자기체결수량", "6")]
 		public long bdjvolume;
 		/// <summary>
 		/// 비차익매수위탁체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수위탁체결수량")]
+		[XAQueryFieldAttribute("비차익매수위탁체결수량", "6")]
 		public long bswvolume;
 		/// <summary>
 		/// 비차익매수자기체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수자기체결수량")]
+		[XAQueryFieldAttribute("비차익매수자기체결수량", "6")]
 		public long bsjvolume;
 		/// <summary>
 		/// 비차익위탁순매수 수량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익위탁순매수 수량")]
+		[XAQueryFieldAttribute("비차익위탁순매수 수량", "6")]
 		public long bwvol;
 		/// <summary>
 		/// 비차익자기순매수 수량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익자기순매수 수량")]
+		[XAQueryFieldAttribute("비차익자기순매수 수량", "6")]
 		public long bjvol;
 		/// <summary>
 		/// 전체매도위탁체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도위탁체결수량")]
+		[XAQueryFieldAttribute("전체매도위탁체결수량", "6")]
 		public long dwvolume;
 		/// <summary>
 		/// 전체매수위탁체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수위탁체결수량")]
+		[XAQueryFieldAttribute("전체매수위탁체결수량", "6")]
 		public long swvolume;
 		/// <summary>
 		/// 전체위탁순매수 수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체위탁순매수 수량")]
+		[XAQueryFieldAttribute("전체위탁순매수 수량", "6")]
 		public long wvol;
 		/// <summary>
 		/// 전체매도자기체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도자기체결수량")]
+		[XAQueryFieldAttribute("전체매도자기체결수량", "6")]
 		public long djvolume;
 		/// <summary>
 		/// 전체매수자기체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수자기체결수량")]
+		[XAQueryFieldAttribute("전체매수자기체결수량", "6")]
 		public long sjvolume;
 		/// <summary>
 		/// 전체자기순매수 수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체자기순매수 수량")]
+		[XAQueryFieldAttribute("전체자기순매수 수량", "6")]
 		public long jvol;
 		/// <summary>
 		/// 차익매도위탁체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도위탁체결금액")]
+		[XAQueryFieldAttribute("차익매도위탁체결금액", "8")]
 		public long cdwvalue;
 		/// <summary>
 		/// 차익매도자기체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도자기체결금액")]
+		[XAQueryFieldAttribute("차익매도자기체결금액", "8")]
 		public long cdjvalue;
 		/// <summary>
 		/// 차익매수위탁체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수위탁체결금액")]
+		[XAQueryFieldAttribute("차익매수위탁체결금액", "8")]
 		public long cswvalue;
 		/// <summary>
 		/// 차익매수자기체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수자기체결금액")]
+		[XAQueryFieldAttribute("차익매수자기체결금액", "8")]
 		public long csjvalue;
 		/// <summary>
 		/// 차익위탁순매수 금액
 		/// </summary>
-		[XAQueryFieldAttribute("차익위탁순매수 금액")]
+		[XAQueryFieldAttribute("차익위탁순매수 금액", "8")]
 		public long cwval;
 		/// <summary>
 		/// 차익자기순매수 금액
 		/// </summary>
-		[XAQueryFieldAttribute("차익자기순매수 금액")]
+		[XAQueryFieldAttribute("차익자기순매수 금액", "8")]
 		public long cjval;
 		/// <summary>
 		/// 비차익매도위탁체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도위탁체결금액")]
+		[XAQueryFieldAttribute("비차익매도위탁체결금액", "8")]
 		public long bdwvalue;
 		/// <summary>
 		/// 비차익매도자기체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도자기체결금액")]
+		[XAQueryFieldAttribute("비차익매도자기체결금액", "8")]
 		public long bdjvalue;
 		/// <summary>
 		/// 비차익매수위탁체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수위탁체결금액")]
+		[XAQueryFieldAttribute("비차익매수위탁체결금액", "8")]
 		public long bswvalue;
 		/// <summary>
 		/// 비차익매수자기체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수자기체결금액")]
+		[XAQueryFieldAttribute("비차익매수자기체결금액", "8")]
 		public long bsjvalue;
 		/// <summary>
 		/// 비차익위탁순매수 금액
 		/// </summary>
-		[XAQueryFieldAttribute("비차익위탁순매수 금액")]
+		[XAQueryFieldAttribute("비차익위탁순매수 금액", "8")]
 		public long bwval;
 		/// <summary>
 		/// 비차익자기순매수 금액
 		/// </summary>
-		[XAQueryFieldAttribute("비차익자기순매수 금액")]
+		[XAQueryFieldAttribute("비차익자기순매수 금액", "8")]
 		public long bjval;
 		/// <summary>
 		/// 전체매도위탁체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도위탁체결금액")]
+		[XAQueryFieldAttribute("전체매도위탁체결금액", "8")]
 		public long dwvalue;
 		/// <summary>
 		/// 전체매수위탁체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수위탁체결금액")]
+		[XAQueryFieldAttribute("전체매수위탁체결금액", "8")]
 		public long swvalue;
 		/// <summary>
 		/// 전체위탁순매수 금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체위탁순매수 금액")]
+		[XAQueryFieldAttribute("전체위탁순매수 금액", "8")]
 		public long wval;
 		/// <summary>
 		/// 전체매도자기체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도자기체결금액")]
+		[XAQueryFieldAttribute("전체매도자기체결금액", "8")]
 		public long djvalue;
 		/// <summary>
 		/// 전체매수자기체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수자기체결금액")]
+		[XAQueryFieldAttribute("전체매수자기체결금액", "8")]
 		public long sjvalue;
 		/// <summary>
 		/// 전체자기순매수 금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체자기순매수 금액")]
+		[XAQueryFieldAttribute("전체자기순매수 금액", "8")]
 		public long jval;
 		/// <summary>
 		/// KOSPI200 지수
 		/// </summary>
-		[XAQueryFieldAttribute("KOSPI200 지수")]
+		[XAQueryFieldAttribute("KOSPI200 지수", "6.2")]
 		public float k200jisu;
 		/// <summary>
 		/// KOSPI200 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("KOSPI200 전일대비구분")]
+		[XAQueryFieldAttribute("KOSPI200 전일대비구분", "1")]
 		public char k200sign;
 		/// <summary>
 		/// KOSPI200 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("KOSPI200 전일대비")]
+		[XAQueryFieldAttribute("KOSPI200 전일대비", "6.2")]
 		public float change;
 		/// <summary>
 		/// KOSPI200 베이시스
 		/// </summary>
-		[XAQueryFieldAttribute("KOSPI200 베이시스")]
+		[XAQueryFieldAttribute("KOSPI200 베이시스", "4.2")]
 		public float k200basis;
 		/// <summary>
 		/// 차익매도체결수량합계
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도체결수량합계")]
+		[XAQueryFieldAttribute("차익매도체결수량합계", "6")]
 		public long cdvolume;
 		/// <summary>
 		/// 차익매수체결수량합계
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수체결수량합계")]
+		[XAQueryFieldAttribute("차익매수체결수량합계", "6")]
 		public long csvolume;
 		/// <summary>
 		/// 차익순매수 수량합계
 		/// </summary>
-		[XAQueryFieldAttribute("차익순매수 수량합계")]
+		[XAQueryFieldAttribute("차익순매수 수량합계", "6")]
 		public long cvol;
 		/// <summary>
 		/// 비차익매도체결수량합계
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도체결수량합계")]
+		[XAQueryFieldAttribute("비차익매도체결수량합계", "6")]
 		public long bdvolume;
 		/// <summary>
 		/// 비차익매수체결수량합계
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수체결수량합계")]
+		[XAQueryFieldAttribute("비차익매수체결수량합계", "6")]
 		public long bsvolume;
 		/// <summary>
 		/// 비차익순매수 수량합계
 		/// </summary>
-		[XAQueryFieldAttribute("비차익순매수 수량합계")]
+		[XAQueryFieldAttribute("비차익순매수 수량합계", "6")]
 		public long bvol;
 		/// <summary>
 		/// 전체매도체결수량합계
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도체결수량합계")]
+		[XAQueryFieldAttribute("전체매도체결수량합계", "6")]
 		public long tdvolume;
 		/// <summary>
 		/// 전체매수체결수량합계
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수체결수량합계")]
+		[XAQueryFieldAttribute("전체매수체결수량합계", "6")]
 		public long tsvolume;
 		/// <summary>
 		/// 전체순매수 수량합계
 		/// </summary>
-		[XAQueryFieldAttribute("전체순매수 수량합계")]
+		[XAQueryFieldAttribute("전체순매수 수량합계", "6")]
 		public long tvol;
 		/// <summary>
 		/// 차익매도체결금액합계
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도체결금액합계")]
+		[XAQueryFieldAttribute("차익매도체결금액합계", "8")]
 		public long cdvalue;
 		/// <summary>
 		/// 차익매수체결금액합계
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수체결금액합계")]
+		[XAQueryFieldAttribute("차익매수체결금액합계", "8")]
 		public long csvalue;
 		/// <summary>
 		/// 차익순매수 금액합계
 		/// </summary>
-		[XAQueryFieldAttribute("차익순매수 금액합계")]
+		[XAQueryFieldAttribute("차익순매수 금액합계", "8")]
 		public long cval;
 		/// <summary>
 		/// 비차익매도체결금액합계
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도체결금액합계")]
+		[XAQueryFieldAttribute("비차익매도체결금액합계", "8")]
 		public long bdvalue;
 		/// <summary>
 		/// 비차익매수체결금액합계
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수체결금액합계")]
+		[XAQueryFieldAttribute("비차익매수체결금액합계", "8")]
 		public long bsvalue;
 		/// <summary>
 		/// 비차익순매수 금액합계
 		/// </summary>
-		[XAQueryFieldAttribute("비차익순매수 금액합계")]
+		[XAQueryFieldAttribute("비차익순매수 금액합계", "8")]
 		public long bval;
 		/// <summary>
 		/// 전체매도체결금액합계
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도체결금액합계")]
+		[XAQueryFieldAttribute("전체매도체결금액합계", "8")]
 		public long tdvalue;
 		/// <summary>
 		/// 전체매수체결금액합계
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수체결금액합계")]
+		[XAQueryFieldAttribute("전체매수체결금액합계", "8")]
 		public long tsvalue;
 		/// <summary>
 		/// 전체순매수 금액합계
 		/// </summary>
-		[XAQueryFieldAttribute("전체순매수 금액합계")]
+		[XAQueryFieldAttribute("전체순매수 금액합계", "8")]
 		public long tval;
 		/// <summary>
 		/// 차익매도체결수량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도체결수량직전대비")]
+		[XAQueryFieldAttribute("차익매도체결수량직전대비", "6")]
 		public long p_cdvolcha;
 		/// <summary>
 		/// 차익매수체결수량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수체결수량직전대비")]
+		[XAQueryFieldAttribute("차익매수체결수량직전대비", "6")]
 		public long p_csvolcha;
 		/// <summary>
 		/// 차익순매수 수량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("차익순매수 수량직전대비")]
+		[XAQueryFieldAttribute("차익순매수 수량직전대비", "6")]
 		public long p_cvolcha;
 		/// <summary>
 		/// 비차익매도체결수량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도체결수량직전대비")]
+		[XAQueryFieldAttribute("비차익매도체결수량직전대비", "6")]
 		public long p_bdvolcha;
 		/// <summary>
 		/// 비차익매수체결수량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수체결수량직전대비")]
+		[XAQueryFieldAttribute("비차익매수체결수량직전대비", "6")]
 		public long p_bsvolcha;
 		/// <summary>
 		/// 비차익순매수 수량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("비차익순매수 수량직전대비")]
+		[XAQueryFieldAttribute("비차익순매수 수량직전대비", "6")]
 		public long p_bvolcha;
 		/// <summary>
 		/// 전체매도체결수량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도체결수량직전대비")]
+		[XAQueryFieldAttribute("전체매도체결수량직전대비", "6")]
 		public long p_tdvolcha;
 		/// <summary>
 		/// 전체매수체결수량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수체결수량직전대비")]
+		[XAQueryFieldAttribute("전체매수체결수량직전대비", "6")]
 		public long p_tsvolcha;
 		/// <summary>
 		/// 전체순매수 수량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("전체순매수 수량직전대비")]
+		[XAQueryFieldAttribute("전체순매수 수량직전대비", "6")]
 		public long p_tvolcha;
 		/// <summary>
 		/// 차익매도체결금액직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도체결금액직전대비")]
+		[XAQueryFieldAttribute("차익매도체결금액직전대비", "8")]
 		public long p_cdvalcha;
 		/// <summary>
 		/// 차익매수체결금액직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수체결금액직전대비")]
+		[XAQueryFieldAttribute("차익매수체결금액직전대비", "8")]
 		public long p_csvalcha;
 		/// <summary>
 		/// 차익순매수 금액직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("차익순매수 금액직전대비")]
+		[XAQueryFieldAttribute("차익순매수 금액직전대비", "8")]
 		public long p_cvalcha;
 		/// <summary>
 		/// 비차익매도체결금액직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도체결금액직전대비")]
+		[XAQueryFieldAttribute("비차익매도체결금액직전대비", "8")]
 		public long p_bdvalcha;
 		/// <summary>
 		/// 비차익매수체결금액직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수체결금액직전대비")]
+		[XAQueryFieldAttribute("비차익매수체결금액직전대비", "8")]
 		public long p_bsvalcha;
 		/// <summary>
 		/// 비차익순매수 금액직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("비차익순매수 금액직전대비")]
+		[XAQueryFieldAttribute("비차익순매수 금액직전대비", "8")]
 		public long p_bvalcha;
 		/// <summary>
 		/// 전체매도체결금액직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도체결금액직전대비")]
+		[XAQueryFieldAttribute("전체매도체결금액직전대비", "8")]
 		public long p_tdvalcha;
 		/// <summary>
 		/// 전체매수체결금액직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수체결금액직전대비")]
+		[XAQueryFieldAttribute("전체매수체결금액직전대비", "8")]
 		public long p_tsvalcha;
 		/// <summary>
 		/// 전체순매수 금액직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("전체순매수 금액직전대비")]
+		[XAQueryFieldAttribute("전체순매수 금액직전대비", "8")]
 		public long p_tvalcha;
 		/// <summary>
 		/// 구분값
 		/// </summary>
-		[XAQueryFieldAttribute("구분값")]
+		[XAQueryFieldAttribute("구분값", "1")]
 		public char gubun;
 
 		public static class F
@@ -1716,6 +1716,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRPM_OutBlock),
+
+		};
 
 	}
 

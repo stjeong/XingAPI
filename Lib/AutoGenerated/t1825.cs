@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 검색코드
 		/// </summary>
-		[XAQueryFieldAttribute("검색코드")]
+		[XAQueryFieldAttribute("검색코드", "4")]
 		public string search_cd;
 		/// <summary>
 		/// 구분(0:전체1:코스피2:코스닥)
 		/// </summary>
-		[XAQueryFieldAttribute("구분(0:전체1:코스피2:코스닥)")]
+		[XAQueryFieldAttribute("구분(0:전체1:코스피2:코스닥)", "1")]
 		public char gubun;
 
 		public static class F
@@ -153,7 +153,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 검색종목수
 		/// </summary>
-		[XAQueryFieldAttribute("검색종목수")]
+		[XAQueryFieldAttribute("검색종목수", "4")]
 		public long JongCnt;
 
 		public static class F
@@ -263,47 +263,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명")]
+		[XAQueryFieldAttribute("종목명", "20")]
 		public string hname;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 연속봉수
 		/// </summary>
-		[XAQueryFieldAttribute("연속봉수")]
+		[XAQueryFieldAttribute("연속봉수", "3")]
 		public long signcnt;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "9")]
 		public long close;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "9")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "10")]
 		public long volume;
 		/// <summary>
 		/// 거래량전일대비율
 		/// </summary>
-		[XAQueryFieldAttribute("거래량전일대비율")]
+		[XAQueryFieldAttribute("거래량전일대비율", "6.2")]
 		public float volumerate;
 
 		public static class F
@@ -621,6 +621,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1825OutBlock),
+			typeof(XQt1825OutBlock1),
+
+		};
 
 	}
 

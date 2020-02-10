@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,132 +137,132 @@ namespace XingAPINet
 		/// <summary>
 		/// 체결시간
 		/// </summary>
-		[XAQueryFieldAttribute("체결시간")]
+		[XAQueryFieldAttribute("체결시간", "6")]
 		public string chetime;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float drate;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "8")]
 		public long price;
 		/// <summary>
 		/// 시가시간
 		/// </summary>
-		[XAQueryFieldAttribute("시가시간")]
+		[XAQueryFieldAttribute("시가시간", "6")]
 		public string opentime;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가")]
+		[XAQueryFieldAttribute("시가", "8")]
 		public long open;
 		/// <summary>
 		/// 고가시간
 		/// </summary>
-		[XAQueryFieldAttribute("고가시간")]
+		[XAQueryFieldAttribute("고가시간", "6")]
 		public string hightime;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가")]
+		[XAQueryFieldAttribute("고가", "8")]
 		public long high;
 		/// <summary>
 		/// 저가시간
 		/// </summary>
-		[XAQueryFieldAttribute("저가시간")]
+		[XAQueryFieldAttribute("저가시간", "6")]
 		public string lowtime;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가")]
+		[XAQueryFieldAttribute("저가", "8")]
 		public long low;
 		/// <summary>
 		/// 체결구분
 		/// </summary>
-		[XAQueryFieldAttribute("체결구분")]
+		[XAQueryFieldAttribute("체결구분", "1")]
 		public char cgubun;
 		/// <summary>
 		/// 체결량
 		/// </summary>
-		[XAQueryFieldAttribute("체결량")]
+		[XAQueryFieldAttribute("체결량", "8")]
 		public long cvolume;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 누적거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래대금")]
+		[XAQueryFieldAttribute("누적거래대금", "12")]
 		public long value;
 		/// <summary>
 		/// 매도누적체결량
 		/// </summary>
-		[XAQueryFieldAttribute("매도누적체결량")]
+		[XAQueryFieldAttribute("매도누적체결량", "12")]
 		public long mdvolume;
 		/// <summary>
 		/// 매도누적체결건수
 		/// </summary>
-		[XAQueryFieldAttribute("매도누적체결건수")]
+		[XAQueryFieldAttribute("매도누적체결건수", "8")]
 		public long mdchecnt;
 		/// <summary>
 		/// 매수누적체결량
 		/// </summary>
-		[XAQueryFieldAttribute("매수누적체결량")]
+		[XAQueryFieldAttribute("매수누적체결량", "12")]
 		public long msvolume;
 		/// <summary>
 		/// 매수누적체결건수
 		/// </summary>
-		[XAQueryFieldAttribute("매수누적체결건수")]
+		[XAQueryFieldAttribute("매수누적체결건수", "8")]
 		public long mschecnt;
 		/// <summary>
 		/// 체결강도
 		/// </summary>
-		[XAQueryFieldAttribute("체결강도")]
+		[XAQueryFieldAttribute("체결강도", "9.2")]
 		public float cpower;
 		/// <summary>
 		/// 가중평균가
 		/// </summary>
-		[XAQueryFieldAttribute("가중평균가")]
+		[XAQueryFieldAttribute("가중평균가", "8")]
 		public long w_avrg;
 		/// <summary>
 		/// 매도호가
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가")]
+		[XAQueryFieldAttribute("매도호가", "8")]
 		public long offerho;
 		/// <summary>
 		/// 매수호가
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가")]
+		[XAQueryFieldAttribute("매수호가", "8")]
 		public long bidho;
 		/// <summary>
 		/// 장정보
 		/// </summary>
-		[XAQueryFieldAttribute("장정보")]
+		[XAQueryFieldAttribute("장정보", "2")]
 		public string status;
 		/// <summary>
 		/// 전일동시간대거래량
 		/// </summary>
-		[XAQueryFieldAttribute("전일동시간대거래량")]
+		[XAQueryFieldAttribute("전일동시간대거래량", "12")]
 		public long jnilvolume;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -696,6 +696,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRS3_OutBlock),
+
+		};
 
 	}
 

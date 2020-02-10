@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// DUMMY
 		/// </summary>
-		[XAQueryFieldAttribute("DUMMY")]
+		[XAQueryFieldAttribute("DUMMY", "1")]
 		public char dummy;
 
 		public static class F
@@ -137,12 +137,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 만기월
 		/// </summary>
-		[XAQueryFieldAttribute("만기월")]
+		[XAQueryFieldAttribute("만기월", "6")]
 		public string lastym;
 		/// <summary>
 		/// 만기월명
 		/// </summary>
-		[XAQueryFieldAttribute("만기월명")]
+		[XAQueryFieldAttribute("만기월명", "10")]
 		public string lastnm;
 
 		public static class F
@@ -354,6 +354,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt9907OutBlock1),
+
+		};
 
 	}
 

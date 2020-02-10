@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 조회일자
 		/// </summary>
-		[XAQueryFieldAttribute("조회일자")]
+		[XAQueryFieldAttribute("조회일자", "8")]
 		public string date;
 
 		public static class F
@@ -153,37 +153,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 기준일
 		/// </summary>
-		[XAQueryFieldAttribute("기준일")]
+		[XAQueryFieldAttribute("기준일", "8")]
 		public string recdt;
 		/// <summary>
 		/// 테이블아이디
 		/// </summary>
-		[XAQueryFieldAttribute("테이블아이디")]
+		[XAQueryFieldAttribute("테이블아이디", "6")]
 		public string tableid;
 		/// <summary>
 		/// 업무구분
 		/// </summary>
-		[XAQueryFieldAttribute("업무구분")]
+		[XAQueryFieldAttribute("업무구분", "2")]
 		public string upgu;
 		/// <summary>
 		/// 발행체번호
 		/// </summary>
-		[XAQueryFieldAttribute("발행체번호")]
+		[XAQueryFieldAttribute("발행체번호", "5")]
 		public string custno;
 		/// <summary>
 		/// 발행회사명
 		/// </summary>
-		[XAQueryFieldAttribute("발행회사명")]
+		[XAQueryFieldAttribute("발행회사명", "80")]
 		public string custnm;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 업무명
 		/// </summary>
-		[XAQueryFieldAttribute("업무명")]
+		[XAQueryFieldAttribute("업무명", "20")]
 		public string upnm;
 
 		public static class F
@@ -457,6 +457,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt3202OutBlock),
+
+		};
 
 	}
 

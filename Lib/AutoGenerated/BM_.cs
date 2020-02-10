@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드")]
+		[XAQueryFieldAttribute("업종코드", "3")]
 		public string upcode;
 
 		public static class F
@@ -137,57 +137,57 @@ namespace XingAPINet
 		/// <summary>
 		/// 투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드")]
+		[XAQueryFieldAttribute("투자자코드", "4")]
 		public string tjjcode;
 		/// <summary>
 		/// 수신시간
 		/// </summary>
-		[XAQueryFieldAttribute("수신시간")]
+		[XAQueryFieldAttribute("수신시간", "8")]
 		public string tjjtime;
 		/// <summary>
 		/// 매수 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량")]
+		[XAQueryFieldAttribute("매수 거래량", "8")]
 		public long msvolume;
 		/// <summary>
 		/// 매도 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량")]
+		[XAQueryFieldAttribute("매도 거래량", "8")]
 		public long mdvolume;
 		/// <summary>
 		/// 거래량 순매수
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수")]
+		[XAQueryFieldAttribute("거래량 순매수", "8")]
 		public long msvol;
 		/// <summary>
 		/// 거래량 순매수 직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수 직전대비")]
+		[XAQueryFieldAttribute("거래량 순매수 직전대비", "8")]
 		public long p_msvol;
 		/// <summary>
 		/// 매수 거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금")]
+		[XAQueryFieldAttribute("매수 거래대금", "6")]
 		public long msvalue;
 		/// <summary>
 		/// 매도 거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금")]
+		[XAQueryFieldAttribute("매도 거래대금", "6")]
 		public long mdvalue;
 		/// <summary>
 		/// 거래대금 순매수
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수")]
+		[XAQueryFieldAttribute("거래대금 순매수", "6")]
 		public long msval;
 		/// <summary>
 		/// 거래대금 순매수 직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수 직전대비")]
+		[XAQueryFieldAttribute("거래대금 순매수 직전대비", "6")]
 		public long p_msval;
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드")]
+		[XAQueryFieldAttribute("업종코드", "3")]
 		public string upcode;
 
 		public static class F
@@ -441,6 +441,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRBM_OutBlock),
+
+		};
 
 	}
 

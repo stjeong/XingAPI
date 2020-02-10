@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,152 +137,152 @@ namespace XingAPINet
 		/// <summary>
 		/// 융자신규수량
 		/// </summary>
-		[XAQueryFieldAttribute("융자신규수량")]
+		[XAQueryFieldAttribute("융자신규수량", "8")]
 		public long ynvolume;
 		/// <summary>
 		/// 융자상환수량
 		/// </summary>
-		[XAQueryFieldAttribute("융자상환수량")]
+		[XAQueryFieldAttribute("융자상환수량", "8")]
 		public long ysvolume;
 		/// <summary>
 		/// 융자잔고수량
 		/// </summary>
-		[XAQueryFieldAttribute("융자잔고수량")]
+		[XAQueryFieldAttribute("융자잔고수량", "8")]
 		public long yjvolume;
 		/// <summary>
 		/// 융자수량대비
 		/// </summary>
-		[XAQueryFieldAttribute("융자수량대비")]
+		[XAQueryFieldAttribute("융자수량대비", "8")]
 		public long yvchange;
 		/// <summary>
 		/// 융자공여율
 		/// </summary>
-		[XAQueryFieldAttribute("융자공여율")]
+		[XAQueryFieldAttribute("융자공여율", "9.2")]
 		public float ygrate;
 		/// <summary>
 		/// 융자잔고율
 		/// </summary>
-		[XAQueryFieldAttribute("융자잔고율")]
+		[XAQueryFieldAttribute("융자잔고율", "9.2")]
 		public float yjrate;
 		/// <summary>
 		/// 융자신규금액
 		/// </summary>
-		[XAQueryFieldAttribute("융자신규금액")]
+		[XAQueryFieldAttribute("융자신규금액", "8")]
 		public long ynprice;
 		/// <summary>
 		/// 융자상환금액
 		/// </summary>
-		[XAQueryFieldAttribute("융자상환금액")]
+		[XAQueryFieldAttribute("융자상환금액", "8")]
 		public long ysprice;
 		/// <summary>
 		/// 융자잔고금액
 		/// </summary>
-		[XAQueryFieldAttribute("융자잔고금액")]
+		[XAQueryFieldAttribute("융자잔고금액", "8")]
 		public long yjprice;
 		/// <summary>
 		/// 융자금액대비
 		/// </summary>
-		[XAQueryFieldAttribute("융자금액대비")]
+		[XAQueryFieldAttribute("융자금액대비", "8")]
 		public long yachange;
 		/// <summary>
 		/// 대주신규수량
 		/// </summary>
-		[XAQueryFieldAttribute("대주신규수량")]
+		[XAQueryFieldAttribute("대주신규수량", "8")]
 		public long dnvolume;
 		/// <summary>
 		/// 대주상환수량
 		/// </summary>
-		[XAQueryFieldAttribute("대주상환수량")]
+		[XAQueryFieldAttribute("대주상환수량", "8")]
 		public long dsvolume;
 		/// <summary>
 		/// 대주잔고수량
 		/// </summary>
-		[XAQueryFieldAttribute("대주잔고수량")]
+		[XAQueryFieldAttribute("대주잔고수량", "8")]
 		public long djvolume;
 		/// <summary>
 		/// 대주수량대비
 		/// </summary>
-		[XAQueryFieldAttribute("대주수량대비")]
+		[XAQueryFieldAttribute("대주수량대비", "8")]
 		public long dvchange;
 		/// <summary>
 		/// 대주공여율
 		/// </summary>
-		[XAQueryFieldAttribute("대주공여율")]
+		[XAQueryFieldAttribute("대주공여율", "9.2")]
 		public float dgrate;
 		/// <summary>
 		/// 대주잔고율
 		/// </summary>
-		[XAQueryFieldAttribute("대주잔고율")]
+		[XAQueryFieldAttribute("대주잔고율", "9.2")]
 		public float djrate;
 		/// <summary>
 		/// 대주신규금액
 		/// </summary>
-		[XAQueryFieldAttribute("대주신규금액")]
+		[XAQueryFieldAttribute("대주신규금액", "8")]
 		public long dnprice;
 		/// <summary>
 		/// 대주상환금액
 		/// </summary>
-		[XAQueryFieldAttribute("대주상환금액")]
+		[XAQueryFieldAttribute("대주상환금액", "8")]
 		public long dsprice;
 		/// <summary>
 		/// 대주잔고금액
 		/// </summary>
-		[XAQueryFieldAttribute("대주잔고금액")]
+		[XAQueryFieldAttribute("대주잔고금액", "8")]
 		public long djprice;
 		/// <summary>
 		/// 대주금액대비
 		/// </summary>
-		[XAQueryFieldAttribute("대주금액대비")]
+		[XAQueryFieldAttribute("대주금액대비", "8")]
 		public long dachange;
 		/// <summary>
 		/// 결제일
 		/// </summary>
-		[XAQueryFieldAttribute("결제일")]
+		[XAQueryFieldAttribute("결제일", "8")]
 		public string mmdate;
 		/// <summary>
 		/// 결제일종가
 		/// </summary>
-		[XAQueryFieldAttribute("결제일종가")]
+		[XAQueryFieldAttribute("결제일종가", "8")]
 		public long close;
 		/// <summary>
 		/// 결제일거래량
 		/// </summary>
-		[XAQueryFieldAttribute("결제일거래량")]
+		[XAQueryFieldAttribute("결제일거래량", "10")]
 		public long volume;
 		/// <summary>
 		/// 결제일거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("결제일거래대금")]
+		[XAQueryFieldAttribute("결제일거래대금", "12")]
 		public long value;
 		/// <summary>
 		/// 주가5일증가율
 		/// </summary>
-		[XAQueryFieldAttribute("주가5일증가율")]
+		[XAQueryFieldAttribute("주가5일증가율", "9.2")]
 		public float pr5days;
 		/// <summary>
 		/// 주가20일증가율
 		/// </summary>
-		[XAQueryFieldAttribute("주가20일증가율")]
+		[XAQueryFieldAttribute("주가20일증가율", "9.2")]
 		public float pr20days;
 		/// <summary>
 		/// 융자5일증가율
 		/// </summary>
-		[XAQueryFieldAttribute("융자5일증가율")]
+		[XAQueryFieldAttribute("융자5일증가율", "9.2")]
 		public float yj5days;
 		/// <summary>
 		/// 융자20일증가율
 		/// </summary>
-		[XAQueryFieldAttribute("융자20일증가율")]
+		[XAQueryFieldAttribute("융자20일증가율", "9.2")]
 		public float yj20days;
 		/// <summary>
 		/// 대주5일증가율
 		/// </summary>
-		[XAQueryFieldAttribute("대주5일증가율")]
+		[XAQueryFieldAttribute("대주5일증가율", "9.2")]
 		public float dj5days;
 		/// <summary>
 		/// 대주20일증가율
 		/// </summary>
-		[XAQueryFieldAttribute("대주20일증가율")]
+		[XAQueryFieldAttribute("대주20일증가율", "9.2")]
 		public float dj20days;
 
 		public static class F
@@ -830,6 +830,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1926OutBlock),
+
+		};
 
 	}
 

@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "8")]
 		public string code;
 		/// <summary>
 		/// 건수
 		/// </summary>
-		[XAQueryFieldAttribute("건수")]
+		[XAQueryFieldAttribute("건수", "2")]
 		public string nrec;
 
 		public static class F
@@ -153,22 +153,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 인덱스
 		/// </summary>
-		[XAQueryFieldAttribute("인덱스")]
+		[XAQueryFieldAttribute("인덱스", "1")]
 		public char indx;
 		/// <summary>
 		/// 조건구분
 		/// </summary>
-		[XAQueryFieldAttribute("조건구분")]
+		[XAQueryFieldAttribute("조건구분", "1")]
 		public char gubn;
 		/// <summary>
 		/// 데이타1
 		/// </summary>
-		[XAQueryFieldAttribute("데이타1")]
+		[XAQueryFieldAttribute("데이타1", "1")]
 		public char dat1;
 		/// <summary>
 		/// 데이타2
 		/// </summary>
-		[XAQueryFieldAttribute("데이타2")]
+		[XAQueryFieldAttribute("데이타2", "8")]
 		public string dat2;
 
 		public static class F
@@ -288,7 +288,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 출력건수
 		/// </summary>
-		[XAQueryFieldAttribute("출력건수")]
+		[XAQueryFieldAttribute("출력건수", "2")]
 		public string nrec;
 
 		public static class F
@@ -398,17 +398,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 인덱스
 		/// </summary>
-		[XAQueryFieldAttribute("인덱스")]
+		[XAQueryFieldAttribute("인덱스", "1")]
 		public char indx;
 		/// <summary>
 		/// 조건구분
 		/// </summary>
-		[XAQueryFieldAttribute("조건구분")]
+		[XAQueryFieldAttribute("조건구분", "1")]
 		public char gubn;
 		/// <summary>
 		/// 출력값
 		/// </summary>
-		[XAQueryFieldAttribute("출력값")]
+		[XAQueryFieldAttribute("출력값", "8")]
 		public string vals;
 
 		public static class F
@@ -640,6 +640,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt2106OutBlock),
+			typeof(XQt2106OutBlock1),
+
+		};
 
 	}
 

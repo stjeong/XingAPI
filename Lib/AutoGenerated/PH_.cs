@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,157 +137,157 @@ namespace XingAPINet
 		/// <summary>
 		/// 수신시간
 		/// </summary>
-		[XAQueryFieldAttribute("수신시간")]
+		[XAQueryFieldAttribute("수신시간", "6")]
 		public string time;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public long sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "10")]
 		public long volume;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float drate;
 		/// <summary>
 		/// 차익매도호가 잔량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도호가 잔량")]
+		[XAQueryFieldAttribute("차익매도호가 잔량", "9")]
 		public long cdhrem;
 		/// <summary>
 		/// 차익매수호가 잔량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수호가 잔량")]
+		[XAQueryFieldAttribute("차익매수호가 잔량", "9")]
 		public long cshrem;
 		/// <summary>
 		/// 비차익매도호가 잔량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도호가 잔량")]
+		[XAQueryFieldAttribute("비차익매도호가 잔량", "9")]
 		public long bdhrem;
 		/// <summary>
 		/// 비차익매수호가 잔량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수호가 잔량")]
+		[XAQueryFieldAttribute("비차익매수호가 잔량", "9")]
 		public long bshrem;
 		/// <summary>
 		/// 차익매도호가 수량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매도호가 수량")]
+		[XAQueryFieldAttribute("차익매도호가 수량", "9")]
 		public long cdhvolume;
 		/// <summary>
 		/// 차익매수호가 수량
 		/// </summary>
-		[XAQueryFieldAttribute("차익매수호가 수량")]
+		[XAQueryFieldAttribute("차익매수호가 수량", "9")]
 		public long cshvolume;
 		/// <summary>
 		/// 비차익매도호가 수량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매도호가 수량")]
+		[XAQueryFieldAttribute("비차익매도호가 수량", "9")]
 		public long bdhvolume;
 		/// <summary>
 		/// 비차익매수호가 수량
 		/// </summary>
-		[XAQueryFieldAttribute("비차익매수호가 수량")]
+		[XAQueryFieldAttribute("비차익매수호가 수량", "9")]
 		public long bshvolume;
 		/// <summary>
 		/// 전체매도위탁체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도위탁체결수량")]
+		[XAQueryFieldAttribute("전체매도위탁체결수량", "9")]
 		public long dwcvolume;
 		/// <summary>
 		/// 전체매수위탁체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수위탁체결수량")]
+		[XAQueryFieldAttribute("전체매수위탁체결수량", "9")]
 		public long swcvolume;
 		/// <summary>
 		/// 전체매도자기체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도자기체결수량")]
+		[XAQueryFieldAttribute("전체매도자기체결수량", "9")]
 		public long djcvolume;
 		/// <summary>
 		/// 전체매수자기체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수자기체결수량")]
+		[XAQueryFieldAttribute("전체매수자기체결수량", "9")]
 		public long sjcvolume;
 		/// <summary>
 		/// 전체매도체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도체결수량")]
+		[XAQueryFieldAttribute("전체매도체결수량", "9")]
 		public long tdvolume;
 		/// <summary>
 		/// 전체매수체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수체결수량")]
+		[XAQueryFieldAttribute("전체매수체결수량", "9")]
 		public long tsvolume;
 		/// <summary>
 		/// 전체순매수 수량
 		/// </summary>
-		[XAQueryFieldAttribute("전체순매수 수량")]
+		[XAQueryFieldAttribute("전체순매수 수량", "9")]
 		public long tvol;
 		/// <summary>
 		/// 전체매도위탁체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도위탁체결금액")]
+		[XAQueryFieldAttribute("전체매도위탁체결금액", "12")]
 		public long dwcvalue;
 		/// <summary>
 		/// 전체매수위탁체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수위탁체결금액")]
+		[XAQueryFieldAttribute("전체매수위탁체결금액", "12")]
 		public long swcvalue;
 		/// <summary>
 		/// 전체매도자기체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도자기체결금액")]
+		[XAQueryFieldAttribute("전체매도자기체결금액", "12")]
 		public long djcvalue;
 		/// <summary>
 		/// 전체매수자기체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수자기체결금액")]
+		[XAQueryFieldAttribute("전체매수자기체결금액", "12")]
 		public long sjcvalue;
 		/// <summary>
 		/// 전체매도체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체매도체결금액")]
+		[XAQueryFieldAttribute("전체매도체결금액", "12")]
 		public long tdvalue;
 		/// <summary>
 		/// 전체매수체결금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체매수체결금액")]
+		[XAQueryFieldAttribute("전체매수체결금액", "12")]
 		public long tsvalue;
 		/// <summary>
 		/// 전체순매수 금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체순매수 금액")]
+		[XAQueryFieldAttribute("전체순매수 금액", "12")]
 		public long tval;
 		/// <summary>
 		/// 매도 사전공시수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도 사전공시수량")]
+		[XAQueryFieldAttribute("매도 사전공시수량", "9")]
 		public long pdgvolume;
 		/// <summary>
 		/// 매수 사전공시수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수 사전공시수량")]
+		[XAQueryFieldAttribute("매수 사전공시수량", "9")]
 		public long psgvolume;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 
 		public static class F
@@ -781,6 +781,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRPH_OutBlock),
+
+		};
 
 	}
 

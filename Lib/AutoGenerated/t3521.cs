@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목종류
 		/// </summary>
-		[XAQueryFieldAttribute("종목종류")]
+		[XAQueryFieldAttribute("종목종류", "1")]
 		public char kind;
 		/// <summary>
 		/// SYMBOL
 		/// </summary>
-		[XAQueryFieldAttribute("SYMBOL")]
+		[XAQueryFieldAttribute("SYMBOL", "16")]
 		public string symbol;
 
 		public static class F
@@ -153,37 +153,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 심벌
 		/// </summary>
-		[XAQueryFieldAttribute("심벌")]
+		[XAQueryFieldAttribute("심벌", "16")]
 		public string symbol;
 		/// <summary>
 		/// 지수명
 		/// </summary>
-		[XAQueryFieldAttribute("지수명")]
+		[XAQueryFieldAttribute("지수명", "20")]
 		public string hname;
 		/// <summary>
 		/// 지수
 		/// </summary>
-		[XAQueryFieldAttribute("지수")]
+		[XAQueryFieldAttribute("지수", "12.2")]
 		public float close;
 		/// <summary>
 		/// 대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("대비구분")]
+		[XAQueryFieldAttribute("대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 대비
 		/// </summary>
-		[XAQueryFieldAttribute("대비")]
+		[XAQueryFieldAttribute("대비", "6.2")]
 		public float change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자")]
+		[XAQueryFieldAttribute("일자", "8")]
 		public string date;
 
 		public static class F
@@ -457,6 +457,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt3521OutBlock),
+
+		};
 
 	}
 

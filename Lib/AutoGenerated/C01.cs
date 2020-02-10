@@ -117,142 +117,142 @@ namespace XingAPINet
 		/// <summary>
 		/// 라인일련번호
 		/// </summary>
-		[XAQueryFieldAttribute("라인일련번호")]
+		[XAQueryFieldAttribute("라인일련번호", "10")]
 		public long lineseq;
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호")]
+		[XAQueryFieldAttribute("계좌번호", "11")]
 		public string accno;
 		/// <summary>
 		/// 조작자ID
 		/// </summary>
-		[XAQueryFieldAttribute("조작자ID")]
+		[XAQueryFieldAttribute("조작자ID", "8")]
 		public string user;
 		/// <summary>
 		/// 일련번호
 		/// </summary>
-		[XAQueryFieldAttribute("일련번호")]
+		[XAQueryFieldAttribute("일련번호", "11")]
 		public long seq;
 		/// <summary>
 		/// trcode
 		/// </summary>
-		[XAQueryFieldAttribute("trcode")]
+		[XAQueryFieldAttribute("trcode", "11")]
 		public string trcode;
 		/// <summary>
 		/// 매칭그룹번호
 		/// </summary>
-		[XAQueryFieldAttribute("매칭그룹번호")]
+		[XAQueryFieldAttribute("매칭그룹번호", "2")]
 		public string megrpno;
 		/// <summary>
 		/// 보드ID
 		/// </summary>
-		[XAQueryFieldAttribute("보드ID")]
+		[XAQueryFieldAttribute("보드ID", "2")]
 		public string boardid;
 		/// <summary>
 		/// 회원번호
 		/// </summary>
-		[XAQueryFieldAttribute("회원번호")]
+		[XAQueryFieldAttribute("회원번호", "5")]
 		public string memberno;
 		/// <summary>
 		/// 지점번호
 		/// </summary>
-		[XAQueryFieldAttribute("지점번호")]
+		[XAQueryFieldAttribute("지점번호", "5")]
 		public string bpno;
 		/// <summary>
 		/// 주문번호
 		/// </summary>
-		[XAQueryFieldAttribute("주문번호")]
+		[XAQueryFieldAttribute("주문번호", "10")]
 		public string ordno;
 		/// <summary>
 		/// 원주문번호
 		/// </summary>
-		[XAQueryFieldAttribute("원주문번호")]
+		[XAQueryFieldAttribute("원주문번호", "10")]
 		public string orgordno;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "12")]
 		public string expcode;
 		/// <summary>
 		/// 약정번호
 		/// </summary>
-		[XAQueryFieldAttribute("약정번호")]
+		[XAQueryFieldAttribute("약정번호", "11")]
 		public string yakseq;
 		/// <summary>
 		/// 체결가격
 		/// </summary>
-		[XAQueryFieldAttribute("체결가격")]
+		[XAQueryFieldAttribute("체결가격", "11.2")]
 		public float cheprice;
 		/// <summary>
 		/// 체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("체결수량")]
+		[XAQueryFieldAttribute("체결수량", "10")]
 		public long chevol;
 		/// <summary>
 		/// 세션ID
 		/// </summary>
-		[XAQueryFieldAttribute("세션ID")]
+		[XAQueryFieldAttribute("세션ID", "2")]
 		public string sessionid;
 		/// <summary>
 		/// 체결일자
 		/// </summary>
-		[XAQueryFieldAttribute("체결일자")]
+		[XAQueryFieldAttribute("체결일자", "8")]
 		public string chedate;
 		/// <summary>
 		/// 체결시각
 		/// </summary>
-		[XAQueryFieldAttribute("체결시각")]
+		[XAQueryFieldAttribute("체결시각", "9")]
 		public string chetime;
 		/// <summary>
 		/// 최근월체결가격
 		/// </summary>
-		[XAQueryFieldAttribute("최근월체결가격")]
+		[XAQueryFieldAttribute("최근월체결가격", "11.2")]
 		public float spdprc1;
 		/// <summary>
 		/// 차근월체결가격
 		/// </summary>
-		[XAQueryFieldAttribute("차근월체결가격")]
+		[XAQueryFieldAttribute("차근월체결가격", "11.2")]
 		public float spdprc2;
 		/// <summary>
 		/// 매도수구분
 		/// </summary>
-		[XAQueryFieldAttribute("매도수구분")]
+		[XAQueryFieldAttribute("매도수구분", "1")]
 		public char dosugb;
 		/// <summary>
 		/// 계좌번호1
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호1")]
+		[XAQueryFieldAttribute("계좌번호1", "12")]
 		public string accno1;
 		/// <summary>
 		/// 시장조성호가구분
 		/// </summary>
-		[XAQueryFieldAttribute("시장조성호가구분")]
+		[XAQueryFieldAttribute("시장조성호가구분", "11")]
 		public string sihogagb;
 		/// <summary>
 		/// 위탁사번호
 		/// </summary>
-		[XAQueryFieldAttribute("위탁사번호")]
+		[XAQueryFieldAttribute("위탁사번호", "5")]
 		public string jakino;
 		/// <summary>
 		/// 대용주권계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("대용주권계좌번호")]
+		[XAQueryFieldAttribute("대용주권계좌번호", "12")]
 		public string daeyong;
 		/// <summary>
 		/// mem_filler
 		/// </summary>
-		[XAQueryFieldAttribute("mem_filler")]
+		[XAQueryFieldAttribute("mem_filler", "7")]
 		public string mem_filler;
 		/// <summary>
 		/// mem_accno
 		/// </summary>
-		[XAQueryFieldAttribute("mem_accno")]
+		[XAQueryFieldAttribute("mem_accno", "11")]
 		public string mem_accno;
 		/// <summary>
 		/// mem_filler1
 		/// </summary>
-		[XAQueryFieldAttribute("mem_filler1")]
+		[XAQueryFieldAttribute("mem_filler1", "42")]
 		public string mem_filler1;
 
 		public static class F
@@ -709,6 +709,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRC01OutBlock),
+
+		};
 
 	}
 

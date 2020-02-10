@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 월물
 		/// </summary>
-		[XAQueryFieldAttribute("월물")]
+		[XAQueryFieldAttribute("월물", "6")]
 		public string yyyymm;
 
 		public static class F
@@ -137,32 +137,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 근월물현재가
 		/// </summary>
-		[XAQueryFieldAttribute("근월물현재가")]
+		[XAQueryFieldAttribute("근월물현재가", "6.2")]
 		public float gmprice;
 		/// <summary>
 		/// 근월물전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("근월물전일대비구분")]
+		[XAQueryFieldAttribute("근월물전일대비구분", "1")]
 		public char gmsign;
 		/// <summary>
 		/// 근월물전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("근월물전일대비")]
+		[XAQueryFieldAttribute("근월물전일대비", "6.2")]
 		public float gmchange;
 		/// <summary>
 		/// 근월물등락율
 		/// </summary>
-		[XAQueryFieldAttribute("근월물등락율")]
+		[XAQueryFieldAttribute("근월물등락율", "6.2")]
 		public float gmdiff;
 		/// <summary>
 		/// 근월물거래량
 		/// </summary>
-		[XAQueryFieldAttribute("근월물거래량")]
+		[XAQueryFieldAttribute("근월물거래량", "12")]
 		public long gmvolume;
 		/// <summary>
 		/// 근월물선물코드
 		/// </summary>
-		[XAQueryFieldAttribute("근월물선물코드")]
+		[XAQueryFieldAttribute("근월물선물코드", "8")]
 		public string gmshcode;
 
 		public static class F
@@ -332,97 +332,97 @@ namespace XingAPINet
 		/// <summary>
 		/// 행사가
 		/// </summary>
-		[XAQueryFieldAttribute("행사가")]
+		[XAQueryFieldAttribute("행사가", "6.2")]
 		public float actprice;
 		/// <summary>
 		/// 콜옵션코드
 		/// </summary>
-		[XAQueryFieldAttribute("콜옵션코드")]
+		[XAQueryFieldAttribute("콜옵션코드", "8")]
 		public string optcode;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "6.2")]
 		public float price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "6.2")]
 		public float change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 매도호가
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가")]
+		[XAQueryFieldAttribute("매도호가", "6.2")]
 		public float offerho1;
 		/// <summary>
 		/// 매수호가
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가")]
+		[XAQueryFieldAttribute("매수호가", "6.2")]
 		public float bidho1;
 		/// <summary>
 		/// 체결량
 		/// </summary>
-		[XAQueryFieldAttribute("체결량")]
+		[XAQueryFieldAttribute("체결량", "12")]
 		public long cvolume;
 		/// <summary>
 		/// 내재가치
 		/// </summary>
-		[XAQueryFieldAttribute("내재가치")]
+		[XAQueryFieldAttribute("내재가치", "6.2")]
 		public float impv;
 		/// <summary>
 		/// 시간가치
 		/// </summary>
-		[XAQueryFieldAttribute("시간가치")]
+		[XAQueryFieldAttribute("시간가치", "6.2")]
 		public float timevl;
 		/// <summary>
 		/// 매도잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매도잔량")]
+		[XAQueryFieldAttribute("매도잔량", "12")]
 		public long offerrem1;
 		/// <summary>
 		/// 매수잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매수잔량")]
+		[XAQueryFieldAttribute("매수잔량", "12")]
 		public long bidrem1;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가")]
+		[XAQueryFieldAttribute("시가", "6.2")]
 		public float open;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가")]
+		[XAQueryFieldAttribute("고가", "6.2")]
 		public float high;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가")]
+		[XAQueryFieldAttribute("저가", "6.2")]
 		public float low;
 		/// <summary>
 		/// ATM구분
 		/// </summary>
-		[XAQueryFieldAttribute("ATM구분")]
+		[XAQueryFieldAttribute("ATM구분", "1")]
 		public char atmgubun;
 		/// <summary>
 		/// 지수환산
 		/// </summary>
-		[XAQueryFieldAttribute("지수환산")]
+		[XAQueryFieldAttribute("지수환산", "6.2")]
 		public float jisuconv;
 
 		public static class F
@@ -752,97 +752,97 @@ namespace XingAPINet
 		/// <summary>
 		/// 행사가
 		/// </summary>
-		[XAQueryFieldAttribute("행사가")]
+		[XAQueryFieldAttribute("행사가", "6.2")]
 		public float actprice;
 		/// <summary>
 		/// 풋옵션코드
 		/// </summary>
-		[XAQueryFieldAttribute("풋옵션코드")]
+		[XAQueryFieldAttribute("풋옵션코드", "8")]
 		public string optcode;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "6.2")]
 		public float price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "6.2")]
 		public float change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 매도호가
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가")]
+		[XAQueryFieldAttribute("매도호가", "6.2")]
 		public float offerho1;
 		/// <summary>
 		/// 매수호가
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가")]
+		[XAQueryFieldAttribute("매수호가", "6.2")]
 		public float bidho1;
 		/// <summary>
 		/// 체결량
 		/// </summary>
-		[XAQueryFieldAttribute("체결량")]
+		[XAQueryFieldAttribute("체결량", "12")]
 		public long cvolume;
 		/// <summary>
 		/// 내재가치
 		/// </summary>
-		[XAQueryFieldAttribute("내재가치")]
+		[XAQueryFieldAttribute("내재가치", "6.2")]
 		public float impv;
 		/// <summary>
 		/// 시간가치
 		/// </summary>
-		[XAQueryFieldAttribute("시간가치")]
+		[XAQueryFieldAttribute("시간가치", "6.2")]
 		public float timevl;
 		/// <summary>
 		/// 매도잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매도잔량")]
+		[XAQueryFieldAttribute("매도잔량", "12")]
 		public long offerrem1;
 		/// <summary>
 		/// 매수잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매수잔량")]
+		[XAQueryFieldAttribute("매수잔량", "12")]
 		public long bidrem1;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가")]
+		[XAQueryFieldAttribute("시가", "6.2")]
 		public float open;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가")]
+		[XAQueryFieldAttribute("고가", "6.2")]
 		public float high;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가")]
+		[XAQueryFieldAttribute("저가", "6.2")]
 		public float low;
 		/// <summary>
 		/// ATM구분
 		/// </summary>
-		[XAQueryFieldAttribute("ATM구분")]
+		[XAQueryFieldAttribute("ATM구분", "1")]
 		public char atmgubun;
 		/// <summary>
 		/// 지수환산
 		/// </summary>
-		[XAQueryFieldAttribute("지수환산")]
+		[XAQueryFieldAttribute("지수환산", "6.2")]
 		public float jisuconv;
 
 		public static class F
@@ -1257,6 +1257,13 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt2835OutBlock),
+			typeof(XQt2835OutBlock1),
+			typeof(XQt2835OutBlock2),
+
+		};
 
 	}
 

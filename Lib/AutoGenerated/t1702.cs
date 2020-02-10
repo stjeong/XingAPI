@@ -50,37 +50,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 종료일자
 		/// </summary>
-		[XAQueryFieldAttribute("종료일자")]
+		[XAQueryFieldAttribute("종료일자", "8")]
 		public string todt;
 		/// <summary>
 		/// 금액수량구분(0:금액1:수량2:단가)
 		/// </summary>
-		[XAQueryFieldAttribute("금액수량구분(0:금액1:수량2:단가)")]
+		[XAQueryFieldAttribute("금액수량구분(0:금액1:수량2:단가)", "1")]
 		public char volvalgb;
 		/// <summary>
 		/// 매수매도구분(0:순매수1:매수2:매도)
 		/// </summary>
-		[XAQueryFieldAttribute("매수매도구분(0:순매수1:매수2:매도)")]
+		[XAQueryFieldAttribute("매수매도구분(0:순매수1:매수2:매도)", "1")]
 		public char msmdgb;
 		/// <summary>
 		/// 누적구분(0:일간1:누적)
 		/// </summary>
-		[XAQueryFieldAttribute("누적구분(0:일간1:누적)")]
+		[XAQueryFieldAttribute("누적구분(0:일간1:누적)", "1")]
 		public char cumulgb;
 		/// <summary>
 		/// CTSDATE
 		/// </summary>
-		[XAQueryFieldAttribute("CTSDATE")]
+		[XAQueryFieldAttribute("CTSDATE", "8")]
 		public string cts_date;
 		/// <summary>
 		/// CTSIDX
 		/// </summary>
-		[XAQueryFieldAttribute("CTSIDX")]
+		[XAQueryFieldAttribute("CTSIDX", "4")]
 		public long cts_idx;
 
 		public static class F
@@ -233,12 +233,12 @@ namespace XingAPINet
 		/// <summary>
 		/// CTSIDX
 		/// </summary>
-		[XAQueryFieldAttribute("CTSIDX")]
+		[XAQueryFieldAttribute("CTSIDX", "4")]
 		public long cts_idx;
 		/// <summary>
 		/// CTSDATE
 		/// </summary>
-		[XAQueryFieldAttribute("CTSDATE")]
+		[XAQueryFieldAttribute("CTSDATE", "8")]
 		public string cts_date;
 
 		public static class F
@@ -360,107 +360,107 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자")]
+		[XAQueryFieldAttribute("일자", "8")]
 		public string date;
 		/// <summary>
 		/// 종가
 		/// </summary>
-		[XAQueryFieldAttribute("종가")]
+		[XAQueryFieldAttribute("종가", "8")]
 		public long close;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량")]
+		[XAQueryFieldAttribute("누적거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 사모펀드
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드")]
+		[XAQueryFieldAttribute("사모펀드", "12")]
 		public long amt0000;
 		/// <summary>
 		/// 증권
 		/// </summary>
-		[XAQueryFieldAttribute("증권")]
+		[XAQueryFieldAttribute("증권", "12")]
 		public long amt0001;
 		/// <summary>
 		/// 보험
 		/// </summary>
-		[XAQueryFieldAttribute("보험")]
+		[XAQueryFieldAttribute("보험", "12")]
 		public long amt0002;
 		/// <summary>
 		/// 투신
 		/// </summary>
-		[XAQueryFieldAttribute("투신")]
+		[XAQueryFieldAttribute("투신", "12")]
 		public long amt0003;
 		/// <summary>
 		/// 은행
 		/// </summary>
-		[XAQueryFieldAttribute("은행")]
+		[XAQueryFieldAttribute("은행", "12")]
 		public long amt0004;
 		/// <summary>
 		/// 종금
 		/// </summary>
-		[XAQueryFieldAttribute("종금")]
+		[XAQueryFieldAttribute("종금", "12")]
 		public long amt0005;
 		/// <summary>
 		/// 기금
 		/// </summary>
-		[XAQueryFieldAttribute("기금")]
+		[XAQueryFieldAttribute("기금", "12")]
 		public long amt0006;
 		/// <summary>
 		/// 기타법인
 		/// </summary>
-		[XAQueryFieldAttribute("기타법인")]
+		[XAQueryFieldAttribute("기타법인", "12")]
 		public long amt0007;
 		/// <summary>
 		/// 개인
 		/// </summary>
-		[XAQueryFieldAttribute("개인")]
+		[XAQueryFieldAttribute("개인", "12")]
 		public long amt0008;
 		/// <summary>
 		/// 등록외국인
 		/// </summary>
-		[XAQueryFieldAttribute("등록외국인")]
+		[XAQueryFieldAttribute("등록외국인", "12")]
 		public long amt0009;
 		/// <summary>
 		/// 미등록외국인
 		/// </summary>
-		[XAQueryFieldAttribute("미등록외국인")]
+		[XAQueryFieldAttribute("미등록외국인", "12")]
 		public long amt0010;
 		/// <summary>
 		/// 국가외
 		/// </summary>
-		[XAQueryFieldAttribute("국가외")]
+		[XAQueryFieldAttribute("국가외", "12")]
 		public long amt0011;
 		/// <summary>
 		/// 기관
 		/// </summary>
-		[XAQueryFieldAttribute("기관")]
+		[XAQueryFieldAttribute("기관", "12")]
 		public long amt0018;
 		/// <summary>
 		/// 외인계(등록+미등록)
 		/// </summary>
-		[XAQueryFieldAttribute("외인계(등록+미등록)")]
+		[XAQueryFieldAttribute("외인계(등록+미등록)", "12")]
 		public long amt0088;
 		/// <summary>
 		/// 기타계(기타+국가)
 		/// </summary>
-		[XAQueryFieldAttribute("기타계(기타+국가)")]
+		[XAQueryFieldAttribute("기타계(기타+국가)", "12")]
 		public long amt0099;
 
 		public static class F
@@ -932,6 +932,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1702OutBlock),
+			typeof(XQt1702OutBlock1),
+
+		};
 
 	}
 

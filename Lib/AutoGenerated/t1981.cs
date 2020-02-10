@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 시장구분(0:전체1:코스피2:코스닥)
 		/// </summary>
-		[XAQueryFieldAttribute("시장구분(0:전체1:코스피2:코스닥)")]
+		[XAQueryFieldAttribute("시장구분(0:전체1:코스피2:코스닥)", "1")]
 		public char mkt_gb;
 
 		public static class F
@@ -137,12 +137,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 코스피종목건수
 		/// </summary>
-		[XAQueryFieldAttribute("코스피종목건수")]
+		[XAQueryFieldAttribute("코스피종목건수", "4")]
 		public string ksp_cnt;
 		/// <summary>
 		/// 코스닥종목건수
 		/// </summary>
-		[XAQueryFieldAttribute("코스닥종목건수")]
+		[XAQueryFieldAttribute("코스닥종목건수", "4")]
 		public string ksd_cnt;
 
 		public static class F
@@ -264,52 +264,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드")]
+		[XAQueryFieldAttribute("단축코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 표준코드
 		/// </summary>
-		[XAQueryFieldAttribute("표준코드")]
+		[XAQueryFieldAttribute("표준코드", "12")]
 		public string expcode;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명")]
+		[XAQueryFieldAttribute("종목명", "20")]
 		public string hname;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "12")]
 		public string price;
 		/// <summary>
 		/// 부호
 		/// </summary>
-		[XAQueryFieldAttribute("부호")]
+		[XAQueryFieldAttribute("부호", "1")]
 		public char sign;
 		/// <summary>
 		/// 대비
 		/// </summary>
-		[XAQueryFieldAttribute("대비")]
+		[XAQueryFieldAttribute("대비", "12")]
 		public string change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "5.2")]
 		public float rate;
 		/// <summary>
 		/// 누적거래량(주)
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량(주)")]
+		[XAQueryFieldAttribute("누적거래량(주)", "12")]
 		public string volume;
 		/// <summary>
 		/// 누적거래대금(백만)
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래대금(백만)")]
+		[XAQueryFieldAttribute("누적거래대금(백만)", "12")]
 		public string value;
 		/// <summary>
 		/// 시장구분
 		/// </summary>
-		[XAQueryFieldAttribute("시장구분")]
+		[XAQueryFieldAttribute("시장구분", "1")]
 		public char mkt_gb;
 
 		public static class F
@@ -637,6 +637,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1981OutBlock),
+			typeof(XQt1981OutBlock1),
+
+		};
 
 	}
 

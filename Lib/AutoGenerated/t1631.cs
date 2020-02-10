@@ -50,22 +50,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분")]
+		[XAQueryFieldAttribute("구분", "1")]
 		public char gubun;
 		/// <summary>
 		/// 일자구분
 		/// </summary>
-		[XAQueryFieldAttribute("일자구분")]
+		[XAQueryFieldAttribute("일자구분", "1")]
 		public char dgubun;
 		/// <summary>
 		/// 시작일자
 		/// </summary>
-		[XAQueryFieldAttribute("시작일자")]
+		[XAQueryFieldAttribute("시작일자", "8")]
 		public string sdate;
 		/// <summary>
 		/// 종료일자
 		/// </summary>
-		[XAQueryFieldAttribute("종료일자")]
+		[XAQueryFieldAttribute("종료일자", "8")]
 		public string edate;
 
 		public static class F
@@ -185,42 +185,42 @@ namespace XingAPINet
 		/// <summary>
 		/// 매도차익미체결잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매도차익미체결잔량")]
+		[XAQueryFieldAttribute("매도차익미체결잔량", "8")]
 		public long cdhrem;
 		/// <summary>
 		/// 매도비차익미체결잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매도비차익미체결잔량")]
+		[XAQueryFieldAttribute("매도비차익미체결잔량", "8")]
 		public long bdhrem;
 		/// <summary>
 		/// 매도차익주문수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도차익주문수량")]
+		[XAQueryFieldAttribute("매도차익주문수량", "8")]
 		public long tcdrem;
 		/// <summary>
 		/// 매도비차익주문수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도비차익주문수량")]
+		[XAQueryFieldAttribute("매도비차익주문수량", "8")]
 		public long tbdrem;
 		/// <summary>
 		/// 매수차익미체결잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매수차익미체결잔량")]
+		[XAQueryFieldAttribute("매수차익미체결잔량", "8")]
 		public long cshrem;
 		/// <summary>
 		/// 매수비차익미체결잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매수비차익미체결잔량")]
+		[XAQueryFieldAttribute("매수비차익미체결잔량", "8")]
 		public long bshrem;
 		/// <summary>
 		/// 매수차익주문수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수차익주문수량")]
+		[XAQueryFieldAttribute("매수차익주문수량", "8")]
 		public long tcsrem;
 		/// <summary>
 		/// 매수비차익주문수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수비차익주문수량")]
+		[XAQueryFieldAttribute("매수비차익주문수량", "8")]
 		public long tbsrem;
 
 		public static class F
@@ -414,32 +414,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도수량")]
+		[XAQueryFieldAttribute("매도수량", "8")]
 		public long offervolume;
 		/// <summary>
 		/// 매도금액
 		/// </summary>
-		[XAQueryFieldAttribute("매도금액")]
+		[XAQueryFieldAttribute("매도금액", "12")]
 		public long offervalue;
 		/// <summary>
 		/// 매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수수량")]
+		[XAQueryFieldAttribute("매수수량", "8")]
 		public long bidvolume;
 		/// <summary>
 		/// 매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("매수금액")]
+		[XAQueryFieldAttribute("매수금액", "12")]
 		public long bidvalue;
 		/// <summary>
 		/// 순매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("순매수수량")]
+		[XAQueryFieldAttribute("순매수수량", "8")]
 		public long volume;
 		/// <summary>
 		/// 순매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("순매수금액")]
+		[XAQueryFieldAttribute("순매수금액", "12")]
 		public long value;
 
 		public static class F
@@ -725,6 +725,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1631OutBlock),
+			typeof(XQt1631OutBlock1),
+
+		};
 
 	}
 

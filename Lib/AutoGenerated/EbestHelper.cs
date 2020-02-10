@@ -1122,285 +1122,285 @@ public static class XingTypeList
 
 	public static Type [] All = new Type []
 	{
-			typeof(XRB7_), // ETF호가잔량(B7)
-			typeof(XRBMT), // 시간대별투자자매매추이(BMT)
-			typeof(XRBM_), // 업종별투자자별매매현황(BM)
-			typeof(XRC01), // 선물주문체결
-			typeof(XQCCEAQ01100), // 선물옵션 CME 매매거래현황
-			typeof(XQCCEAQ06000), // 선물옵션 CME 주문체결내역조회
-			typeof(XQCCEAQ10100), // 선물옵션 CME 주문가능 수량/금액 조회
-			typeof(XQCCEAQ50600), // 선물옵션 CME 계좌잔고 및 평가현황
-			typeof(XQCCEAT00100), // CME 정상주문
-			typeof(XQCCEAT00200), // CME 정정주문
-			typeof(XQCCEAT00300), // CME 취소주문
-			typeof(XQCCEBQ10500), // 선물옵션 CME 예탁금증거금조회
-			typeof(XRCD0), // 상품선물실시간상하한가(D0)
-			typeof(XQCDPCQ04700), // 계좌 거래내역
-			typeof(XQCEXAQ21100), // 유렉스 주문체결내역조회
-			typeof(XQCEXAQ21200), // 유렉스 주문가능 수량/금액 조회
-			typeof(XQCEXAQ31100), // 유렉스 야간장잔고및 평가현황
-			typeof(XQCEXAQ31200), // 유렉스 예탁금 및 통합잔고조회
-			typeof(XQCEXAQ44200), // EUREX 야간옵션 기간주문체결조회
-			typeof(XQCEXAT11100), // 유렉스 매수/매도주문
-			typeof(XQCEXAT11200), // 유렉스 정정주문
-			typeof(XQCEXAT11300), // 유렉스 취소주문
-			typeof(XQCFOAQ00600), // 선물옵션 계좌주문체결내역조회
-			typeof(XQCFOAQ10100), // 선물옵션 주문가능수량조회
-			typeof(XQCFOAT00100), // 선물옵션 정상주문
-			typeof(XQCFOAT00200), // 선물옵션 정정주문
-			typeof(XQCFOAT00300), // 선물옵션 취소주문
-			typeof(XQCFOBQ10500), // 선물옵션 계좌예탁금증거금조회
-			typeof(XQCFOBQ10800), // 선물옵션 옵션매도시 주문증거금조회
-			typeof(XQCFOEQ11100), // 선물옵션가정산예탁금상세
-			typeof(XQCFOEQ82600), // 선물옵션 일별 계좌손익내역
-			typeof(XQCFOFQ02400), // 계좌 미결제 약정현황(평균가)
-			typeof(XQCHARTEXCEL), // 챠트엑셀데이터조회
-			typeof(XQCHARTINDEX), // 챠트지표데이터조회
-			typeof(XQCLNAQ00100), // 예탁담보융자가능종목현황조회
-			typeof(XRCM0), // CME접수
-			typeof(XRCM1), // CME체결
-			typeof(XRCM2), // CME확인
-			typeof(XQCSPAQ12200), // 현물계좌예수금 주문가능금액 총평가 조회
-			typeof(XQCSPAQ12300), // BEP단가조회
-			typeof(XQCSPAQ13700), // 현물계좌주문체결내역조회
-			typeof(XQCSPAT00600), // 현물주문
-			typeof(XQCSPAT00700), // 현물정정주문
-			typeof(XQCSPAT00800), // 현물취소주문
-			typeof(XQCSPBQ00200), // 현물계좌증거금률별주문가능수량조회
-			typeof(XRDVI), // 시간외단일가VI발동해제(DVI)
-			typeof(XREC0), // EUREX연계KP200지수옵션선물체결(EC0)
-			typeof(XREH0), // EUREX연계KP200지수옵션선물호가(EH0)
-			typeof(XRESN), // 뉴ELW투자지표민감도(ESN)
-			typeof(XREU0), // EUX접수
-			typeof(XREU1), // EUX체결
-			typeof(XREU2), // EUX확인
-			typeof(XRFC0), // KOSPI200선물체결(C0)
-			typeof(XRFD0), // KOSPI200선물실시간상하한가(D0)
-			typeof(XRFH0), // KOSPI200선물호가(H0)
-			typeof(XQFOCCQ33600), // 주식계좌 기간별수익률 상세
-			typeof(XQFOCCQ33700), // 선물옵션 기간별 계좌 수익률 현황
-			typeof(XRFX0), // KOSPI200선물가격제한폭확대(X0)
-			typeof(XRH01), // 선물주문정정취소
-			typeof(XRH1_), // KOSPI호가잔량(H1)
-			typeof(XRH2_), // KOSPI장전시간외호가잔량(H2)
-			typeof(XRh2_), // ELW장전시간외호가잔량(h2)
-			typeof(XRh3_), // ELW호가잔량(h3)
-			typeof(XRHA_), // KOSDAQ호가잔량(HA)
-			typeof(XRHB_), // KOSDAQ장전시간외호가잔량(HB)
-			typeof(XRI5_), // 코스피ETF종목실시간NAV(I5)
-			typeof(XRIJ_), // 지수(IJ)
-			typeof(XRJC0), // 주식선물체결(JC0)
-			typeof(XRJD0), // 주식선물실시간상하한가(JD0)
-			typeof(XRJH0), // 주식선물호가(JH0)
-			typeof(XRJIF), // 장운영정보(JIF)
-			typeof(XRJX0), // 주식선물가격제한폭확대(JX0)
-			typeof(XRK1_), // KOSPI거래원(K1)
-			typeof(XRk1_), // ELW거래원(k1)
-			typeof(XRK3_), // KOSDAQ체결(K3)
-			typeof(XRKH_), // KOSDAQ프로그램매매종목별(KH)
-			typeof(XRKM_), // KOSDAQ프로그램매매전체집계(KM)
-			typeof(XRKS_), // KOSDAQ우선호가(KS)
-			typeof(XRMK2), // US지수(MK2)
-			typeof(XQMMDAQ91200), // 파생상품증거금율조회
-			typeof(XRNC0), // CME연계KP200지수선물체결(NC0)
-			typeof(XRNH0), // CME연계KP200지수선물호가(NH0)
-			typeof(XRNWS), // 실시간 뉴스 제목 패킷(NWS)
-			typeof(XRO01), // 선물접수
-			typeof(XROC0), // KOSPI200옵션체결(C0)
-			typeof(XROD0), // KOSPI200옵션실시간상하한가(D0)
-			typeof(XROH0), // KOSPI200옵션호가(H0)
-			typeof(XROK_), // KOSDAQ거래원(OK)
-			typeof(XROMG), // KOSPI200옵션민감도(MG)
-			typeof(XROX0), // KOSPI200옵션가격제한폭확대(X0)
-			typeof(XRPH_), // KOSPI프로그램매매종목별(PH)
-			typeof(XRPM_), // KOSPI프로그램매매전체집계(PM)
-			typeof(XRS2_), // KOSPI우선호가(S2)
-			typeof(XRs2_), // ELW우선호가(s2)
-			typeof(XRS3_), // KOSPI체결(S3)
-			typeof(XRs3_), // ELW체결(s3)
-			typeof(XRS4_), // KOSPI기세(S4)
-			typeof(XRs4_), // ELW기세(s4)
-			typeof(XRSC0), // 주식주문접수
-			typeof(XRSC1), // 주식주문체결
-			typeof(XRSC2), // 주식주문정정
-			typeof(XRSC3), // 주식주문취소
-			typeof(XRSC4), // 주식주문거부
-			typeof(XRSHC), // 상/하한가근접진입(SHC)
-			typeof(XRSHD), // 상/하한가근접이탈(SHD)
-			typeof(XRSHI), // 상/하한가진입(SHI)
-			typeof(XRSHO), // 상/하한가이탈(SHO)
-			typeof(XQt0150), // 주식당일매매일지/수수료(t0150)
-			typeof(XQt0151), // 주식당일매매일지/수수료(전일)(t0151)
-			typeof(XQt0167), // 서버시간조회(t0167)
-			typeof(XQt0424), // 주식잔고2(t0424)
-			typeof(XQt0425), // 주식체결/미체결(t0425)
-			typeof(XQt0434), // 선물/옵션체결/미체결(t0434)
-			typeof(XQt0441), // 선물/옵션잔고평가(이동평균)(t0441)
-			typeof(XQt1101), // 주식현재가호가조회(t1101)
-			typeof(XQt1102), // 주식현재가(시세)조회(t1102)
-			typeof(XQt1104), // 주식현재가시세메모(t1104)
-			typeof(XQt1105), // 주식피못/디마크조회(t1105)
-			typeof(XQt1301), // 주식시간대별체결조회(t1301)
-			typeof(XQt1302), // 주식분별주가조회(t1302)
-			typeof(XQt1305), // 기간별주가(t1305)
-			typeof(XQt1308), // 주식시간대별체결조회챠트(t1308)
-			typeof(XQt1310), // 주식당일전일분틱조회(t1310)
-			typeof(XQt1403), // 신규상장종목조회(t1403)
-			typeof(XQt1404), // 관리/불성실/투자유의조회(t1404)
-			typeof(XQt1405), // 투자경고/매매정지/정리매매조회(t1405)
-			typeof(XQt1410), // 초저유동성조회(t1410)
-			typeof(XQt1411), // 증거금율별종목조회(t1411)
-			typeof(XQt1422), // 상/하한(t1422)
-			typeof(XQt1427), // 상/하한가직전(t1427)
-			typeof(XQt1442), // 신고/신저가(t1442)
-			typeof(XQt1444), // 시가총액상위(t1444)
-			typeof(XQt1449), // 가격대별매매비중조회(t1449)
-			typeof(XQt1452), // 거래량상위(t1452)
-			typeof(XQt1463), // 거래대금상위(t1463)
-			typeof(XQt1471), // 시간대별호가잔량추이(t1471)
-			typeof(XQt1475), // 체결강도추이(t1475)
-			typeof(XQt1485), // 예상지수(t1485)
-			typeof(XQt1486), // 시간별예상체결가(t1486)
-			typeof(XQt1488), // 예상체결가등락율상위조회(t1488)
-			typeof(XQt1489), // 예상체결량상위조회(t1489)
-			typeof(XQt1511), // 업종현재가(t1511)
-			typeof(XQt1514), // 업종기간별추이(t1514)
-			typeof(XQt1516), // 업종별종목시세(t1516)
-			typeof(XQt1531), // 테마별종목(t1531)
-			typeof(XQt1532), // 종목별테마(t1532)
-			typeof(XQt1533), // 특이테마(t1533)
-			typeof(XQt1537), // 테마종목별시세조회(t1537)
-			typeof(XQt1601), // 투자자별종합(t1601)
-			typeof(XQt1602), // 시간대별투자자매매추이(t1602)
-			typeof(XQt1603), // 시간대별투자자매매추이상세(t1603)
-			typeof(XQt1615), // 투자자매매종합1(t1615)
-			typeof(XQt1617), // 투자자매매종합2(t1617)
-			typeof(XQt1621), // 업종별분별투자자매매동향(챠트용)
-			typeof(XQt1631), // 프로그램매매종합조회(t1631)
-			typeof(XQt1632), // 시간대별프로그램매매추이(t1632)
-			typeof(XQt1633), // 기간별프로그램매매추이(t1633)
-			typeof(XQt1636), // 종목별프로그램매매동향(t1636)
-			typeof(XQt1637), // 종목별프로그램매매추이(t1637)
-			typeof(XQt1638), // 종목별잔량/사전공시(t1638)
-			typeof(XQt1640), // 프로그램매매종합조회(미니)(t1640)
-			typeof(XQt1662), // 시간대별프로그램매매추이(차트)(t1662)
-			typeof(XQt1664), // 투자자매매종합(챠트)
-			typeof(XQt1665), // 기간별투자자매매추이(챠트)
-			typeof(XQt1701), // 외인기관종목별동향(t1701)
-			typeof(XQt1702), // 외인기관종목별동향(t1702)
-			typeof(XQt1717), // 외인기관종목별동향(t1717)
-			typeof(XQt1752), // 종목별상위회원사(t1752)
-			typeof(XQt1764), // 회원사리스트(t1764)
-			typeof(XQt1771), // 종목별회원사추이(t1771)
-			typeof(XQt1809), // 신호조회(t1809)
-			typeof(XQt1825), // 종목Q클릭검색(씽큐스마트)(t1825)
-			typeof(XQt1826), // 종목Q클릭검색리스트조회(씽큐스마트)(t1826)
-			typeof(XQt1857), // e종목검색(신버전API용)
-			typeof(XQt1866), // 서버저장조건리스트조회(API)(t1866)
-			typeof(XQt1901), // ETF현재가(시세)조회(t1901)
-			typeof(XQt1902), // ETF시간별추이(t1902)
-			typeof(XQt1903), // ETF일별추이(t1903)
-			typeof(XQt1904), // ETF구성종목조회(t1904)
-			typeof(XQt1906), // ETFLP호가(t1906)
-			typeof(XQt1921), // 신용거래동향(t1921)
-			typeof(XQt1926), // 종목별신용정보(t1926)
-			typeof(XQt1927), // 공매도일별추이(t1927)
-			typeof(XQt1941), // 종목별대차거래일간추이(t1941)
-			typeof(XQt1950), // ELW현재가(시세)조회(t1950)
-			typeof(XQt1951), // ELW시간대별체결조회(t1951)
-			typeof(XQt1954), // ELW일별주가(t1954)
-			typeof(XQt1955), // ELW지표검색(t1955)
-			typeof(XQt1956), // ELW현재가(확정지급액)조회(t1956)
-			typeof(XQt1958), // ELW종목비교(t1958)
-			typeof(XQt1959), // LP대상종목정보조회(t1959)
-			typeof(XQt1960), // ELW등락율상위(t1960)
-			typeof(XQt1961), // ELW거래량상위(t1961)
-			typeof(XQt1964), // ELW전광판(t1964)
-			typeof(XQt1966), // ELW거래대금상위(t1966)
-			typeof(XQt1971), // ELW현재가호가조회(t1971)
-			typeof(XQt1972), // ELW현재가(거래원)조회(t1972)
-			typeof(XQt1973), // ELW시간대별예상체결조회(t1973)
-			typeof(XQt1974), // ELW기초자산동일종목(t1974)
-			typeof(XQt1981), // 기초자산리스트조회(t1981)
-			typeof(XQt2101), // 선물/옵션현재가(시세)조회(t2101)
-			typeof(XQt2105), // 선물/옵션현재가호가조회(t2105)
-			typeof(XQt2106), // 선물/옵션현재가시세메모(t2106)
-			typeof(XQt2201), // 선물옵션시간대별체결조회(t2201)
-			typeof(XQt2203), // 기간별주가(t2203)
-			typeof(XQt2209), // 선물옵션틱분별체결조회챠트(t2209)
-			typeof(XQt2210), // 선물옵션시간대별체결조회(단일출력용)
-			typeof(XQt2301), // 옵션전광판(t2301)
-			typeof(XQt2405), // 선물옵션호가잔량비율챠트(t2405)
-			typeof(XQt2421), // 미결제약정추이(t2421)
-			typeof(XQt2541), // 상품선물투자자매매동향(실시간)(t2541)
-			typeof(XQt2545), // 상품선물투자자매매동향(챠트용)
-			typeof(XQt2801), // CME야간선물현재가조회(t2801)
-			typeof(XQt2802), // CME야간선물호가조회(t2802)
-			typeof(XQt2804), // CME야간선물시간대별체결조회(t2804)
-			typeof(XQt2805), // CME야간선물기간별주가(t2805)
-			typeof(XQt2813), // CME야간선물시간대별투자자매매추이(t2813)
-			typeof(XQt2814), // CME야간선물기간별투자자매매추이(챠트)
-			typeof(XQt2816), // CME야간선물투자자별종합(t2816)
-			typeof(XQt2830), // EUREXKOSPI200옵션선물현재가(시세)조회(t2830)
-			typeof(XQt2831), // EUREXKOSPI200옵션선물호가조회(t2831)
-			typeof(XQt2832), // EUREX야간옵션선물시간대별체결조회(t2832)
-			typeof(XQt2833), // EUREX야간옵션선물기간별추이(t2833)
-			typeof(XQt2835), // EUREX옵션선물시세전광판(t2835)
-			typeof(XQt3102), // 뉴스본문(t3102)
-			typeof(XQt3202), // 종목별증시일정(t3202)
-			typeof(XQt3320), // FNG_요약(t3320)
-			typeof(XQt3341), // 재무순위종합(t3341)
-			typeof(XQt3401), // 투자의견(t3401)
-			typeof(XQt3518), // 해외실시간지수(t3518)
-			typeof(XQt3521), // 해외지수조회(API용)(t3521)
-			typeof(XQt4201), // 주식챠트(종합)(t4201)
-			typeof(XQt4203), // 업종챠트(종합)(t4203)
-			typeof(XQt8401), // 주식선물마스터조회(API용)(t8401)
-			typeof(XQt8402), // 주식선물현재가조회(API용)(t8402)
-			typeof(XQt8403), // 주식선물호가조회(API용)(t8403)
-			typeof(XQt8404), // 주식선물시간대별체결조회(API용)(t8404)
-			typeof(XQt8405), // 주식선물기간별주가(API용)(t8405)
-			typeof(XQt8406), // 주식선물틱분별체결조회(API용)(t8406)
-			typeof(XQt8407), // API용주식멀티현재가조회(t8407)
-			typeof(XQt8408), // CME야간선물틱분별체결조회(API용)(t8408)
-			typeof(XQt8409), // CME야간선물미결제약정추이(API용)(t8409)
-			typeof(XQt8411), // 주식챠트(틱/n틱)(t8411)
-			typeof(XQt8412), // 주식챠트(N분)(t8412)
-			typeof(XQt8413), // 주식챠트(일주월)(t8413)
-			typeof(XQt8414), // 선물옵션차트(틱/n틱)(t8414)
-			typeof(XQt8415), // 선물/옵션챠트(N분)(t8415)
-			typeof(XQt8416), // 선물/옵션챠트(일주월)(t8416)
-			typeof(XQt8417), // 업종차트(틱/n틱)(t8417)
-			typeof(XQt8418), // 업종챠트(N분)(t8418)
-			typeof(XQt8419), // 업종챠트(일주월)(t8419)
-			typeof(XQt8424), // 전체업종(t8424)
-			typeof(XQt8425), // 전체테마(t8425)
-			typeof(XQt8426), // 상품선물마스터조회(API용)(t8426)
-			typeof(XQt8427), // 과거데이터시간대별조회(t8427)
-			typeof(XQt8428), // 증시주변자금추이(t8428)
-			typeof(XQt8429), // EUREX야간옵션선물틱분별체결조회챠트(t8429)
-			typeof(XQt8430), // 주식종목조회(t8430)
-			typeof(XQt8431), // ELW종목조회(t8431)
-			typeof(XQt8432), // 지수선물마스터조회API용(t8432)
-			typeof(XQt8433), // 지수옵션마스터조회API용(t8433)
-			typeof(XQt8434), // 선물/옵션멀티현재가조회(t8434)
-			typeof(XQt8435), // 파생종목마스터조회API용(t8435)
-			typeof(XQt8436), // 주식종목조회 API용(t8436)
-			typeof(XQt9905), // 기초자산리스트조회(t9905)
-			typeof(XQt9907), // 만기월조회(t9907)
-			typeof(XQt9942), // ELW마스터조회API용(t9942)
-			typeof(XQt9943), // 지수선물마스터조회API용(t9943)
-			typeof(XQt9944), // 지수옵션마스터조회API용(t9944)
-			typeof(XQt9945), // 주식마스터조회API용-종목명40bytes(t9945)
-			typeof(XRVI_), // VI발동해제(VI_)
-			typeof(XRYC3), // 상품선물예상체결(YC3)
-			typeof(XRYFC), // 지수선물예상체결(YFC)
-			typeof(XRYJC), // 주식선물예상체결(YJC)
-			typeof(XRYJ_), // 예상지수(YJ)
-			typeof(XRYK3), // KOSDAQ예상체결(YK3)
-			typeof(XRYOC), // 지수옵션예상체결(YOC)
-			typeof(XRYS3), // KOSPI예상체결(YS3)
-			typeof(XRYs3), // ELW예상체결(Ys3)
+		typeof(XRB7_), // ETF호가잔량(B7)
+		typeof(XRBMT), // 시간대별투자자매매추이(BMT)
+		typeof(XRBM_), // 업종별투자자별매매현황(BM)
+		typeof(XRC01), // 선물주문체결
+		typeof(XQCCEAQ01100), // 선물옵션 CME 매매거래현황
+		typeof(XQCCEAQ06000), // 선물옵션 CME 주문체결내역조회
+		typeof(XQCCEAQ10100), // 선물옵션 CME 주문가능 수량/금액 조회
+		typeof(XQCCEAQ50600), // 선물옵션 CME 계좌잔고 및 평가현황
+		typeof(XQCCEAT00100), // CME 정상주문
+		typeof(XQCCEAT00200), // CME 정정주문
+		typeof(XQCCEAT00300), // CME 취소주문
+		typeof(XQCCEBQ10500), // 선물옵션 CME 예탁금증거금조회
+		typeof(XRCD0), // 상품선물실시간상하한가(D0)
+		typeof(XQCDPCQ04700), // 계좌 거래내역
+		typeof(XQCEXAQ21100), // 유렉스 주문체결내역조회
+		typeof(XQCEXAQ21200), // 유렉스 주문가능 수량/금액 조회
+		typeof(XQCEXAQ31100), // 유렉스 야간장잔고및 평가현황
+		typeof(XQCEXAQ31200), // 유렉스 예탁금 및 통합잔고조회
+		typeof(XQCEXAQ44200), // EUREX 야간옵션 기간주문체결조회
+		typeof(XQCEXAT11100), // 유렉스 매수/매도주문
+		typeof(XQCEXAT11200), // 유렉스 정정주문
+		typeof(XQCEXAT11300), // 유렉스 취소주문
+		typeof(XQCFOAQ00600), // 선물옵션 계좌주문체결내역조회
+		typeof(XQCFOAQ10100), // 선물옵션 주문가능수량조회
+		typeof(XQCFOAT00100), // 선물옵션 정상주문
+		typeof(XQCFOAT00200), // 선물옵션 정정주문
+		typeof(XQCFOAT00300), // 선물옵션 취소주문
+		typeof(XQCFOBQ10500), // 선물옵션 계좌예탁금증거금조회
+		typeof(XQCFOBQ10800), // 선물옵션 옵션매도시 주문증거금조회
+		typeof(XQCFOEQ11100), // 선물옵션가정산예탁금상세
+		typeof(XQCFOEQ82600), // 선물옵션 일별 계좌손익내역
+		typeof(XQCFOFQ02400), // 계좌 미결제 약정현황(평균가)
+		typeof(XQCHARTEXCEL), // 챠트엑셀데이터조회
+		typeof(XQCHARTINDEX), // 챠트지표데이터조회
+		typeof(XQCLNAQ00100), // 예탁담보융자가능종목현황조회
+		typeof(XRCM0), // CME접수
+		typeof(XRCM1), // CME체결
+		typeof(XRCM2), // CME확인
+		typeof(XQCSPAQ12200), // 현물계좌예수금 주문가능금액 총평가 조회
+		typeof(XQCSPAQ12300), // BEP단가조회
+		typeof(XQCSPAQ13700), // 현물계좌주문체결내역조회
+		typeof(XQCSPAT00600), // 현물주문
+		typeof(XQCSPAT00700), // 현물정정주문
+		typeof(XQCSPAT00800), // 현물취소주문
+		typeof(XQCSPBQ00200), // 현물계좌증거금률별주문가능수량조회
+		typeof(XRDVI), // 시간외단일가VI발동해제(DVI)
+		typeof(XREC0), // EUREX연계KP200지수옵션선물체결(EC0)
+		typeof(XREH0), // EUREX연계KP200지수옵션선물호가(EH0)
+		typeof(XRESN), // 뉴ELW투자지표민감도(ESN)
+		typeof(XREU0), // EUX접수
+		typeof(XREU1), // EUX체결
+		typeof(XREU2), // EUX확인
+		typeof(XRFC0), // KOSPI200선물체결(C0)
+		typeof(XRFD0), // KOSPI200선물실시간상하한가(D0)
+		typeof(XRFH0), // KOSPI200선물호가(H0)
+		typeof(XQFOCCQ33600), // 주식계좌 기간별수익률 상세
+		typeof(XQFOCCQ33700), // 선물옵션 기간별 계좌 수익률 현황
+		typeof(XRFX0), // KOSPI200선물가격제한폭확대(X0)
+		typeof(XRH01), // 선물주문정정취소
+		typeof(XRH1_), // KOSPI호가잔량(H1)
+		typeof(XRH2_), // KOSPI장전시간외호가잔량(H2)
+		typeof(XRh2_), // ELW장전시간외호가잔량(h2)
+		typeof(XRh3_), // ELW호가잔량(h3)
+		typeof(XRHA_), // KOSDAQ호가잔량(HA)
+		typeof(XRHB_), // KOSDAQ장전시간외호가잔량(HB)
+		typeof(XRI5_), // 코스피ETF종목실시간NAV(I5)
+		typeof(XRIJ_), // 지수(IJ)
+		typeof(XRJC0), // 주식선물체결(JC0)
+		typeof(XRJD0), // 주식선물실시간상하한가(JD0)
+		typeof(XRJH0), // 주식선물호가(JH0)
+		typeof(XRJIF), // 장운영정보(JIF)
+		typeof(XRJX0), // 주식선물가격제한폭확대(JX0)
+		typeof(XRK1_), // KOSPI거래원(K1)
+		typeof(XRk1_), // ELW거래원(k1)
+		typeof(XRK3_), // KOSDAQ체결(K3)
+		typeof(XRKH_), // KOSDAQ프로그램매매종목별(KH)
+		typeof(XRKM_), // KOSDAQ프로그램매매전체집계(KM)
+		typeof(XRKS_), // KOSDAQ우선호가(KS)
+		typeof(XRMK2), // US지수(MK2)
+		typeof(XQMMDAQ91200), // 파생상품증거금율조회
+		typeof(XRNC0), // CME연계KP200지수선물체결(NC0)
+		typeof(XRNH0), // CME연계KP200지수선물호가(NH0)
+		typeof(XRNWS), // 실시간 뉴스 제목 패킷(NWS)
+		typeof(XRO01), // 선물접수
+		typeof(XROC0), // KOSPI200옵션체결(C0)
+		typeof(XROD0), // KOSPI200옵션실시간상하한가(D0)
+		typeof(XROH0), // KOSPI200옵션호가(H0)
+		typeof(XROK_), // KOSDAQ거래원(OK)
+		typeof(XROMG), // KOSPI200옵션민감도(MG)
+		typeof(XROX0), // KOSPI200옵션가격제한폭확대(X0)
+		typeof(XRPH_), // KOSPI프로그램매매종목별(PH)
+		typeof(XRPM_), // KOSPI프로그램매매전체집계(PM)
+		typeof(XRS2_), // KOSPI우선호가(S2)
+		typeof(XRs2_), // ELW우선호가(s2)
+		typeof(XRS3_), // KOSPI체결(S3)
+		typeof(XRs3_), // ELW체결(s3)
+		typeof(XRS4_), // KOSPI기세(S4)
+		typeof(XRs4_), // ELW기세(s4)
+		typeof(XRSC0), // 주식주문접수
+		typeof(XRSC1), // 주식주문체결
+		typeof(XRSC2), // 주식주문정정
+		typeof(XRSC3), // 주식주문취소
+		typeof(XRSC4), // 주식주문거부
+		typeof(XRSHC), // 상/하한가근접진입(SHC)
+		typeof(XRSHD), // 상/하한가근접이탈(SHD)
+		typeof(XRSHI), // 상/하한가진입(SHI)
+		typeof(XRSHO), // 상/하한가이탈(SHO)
+		typeof(XQt0150), // 주식당일매매일지/수수료(t0150)
+		typeof(XQt0151), // 주식당일매매일지/수수료(전일)(t0151)
+		typeof(XQt0167), // 서버시간조회(t0167)
+		typeof(XQt0424), // 주식잔고2(t0424)
+		typeof(XQt0425), // 주식체결/미체결(t0425)
+		typeof(XQt0434), // 선물/옵션체결/미체결(t0434)
+		typeof(XQt0441), // 선물/옵션잔고평가(이동평균)(t0441)
+		typeof(XQt1101), // 주식현재가호가조회(t1101)
+		typeof(XQt1102), // 주식현재가(시세)조회(t1102)
+		typeof(XQt1104), // 주식현재가시세메모(t1104)
+		typeof(XQt1105), // 주식피못/디마크조회(t1105)
+		typeof(XQt1301), // 주식시간대별체결조회(t1301)
+		typeof(XQt1302), // 주식분별주가조회(t1302)
+		typeof(XQt1305), // 기간별주가(t1305)
+		typeof(XQt1308), // 주식시간대별체결조회챠트(t1308)
+		typeof(XQt1310), // 주식당일전일분틱조회(t1310)
+		typeof(XQt1403), // 신규상장종목조회(t1403)
+		typeof(XQt1404), // 관리/불성실/투자유의조회(t1404)
+		typeof(XQt1405), // 투자경고/매매정지/정리매매조회(t1405)
+		typeof(XQt1410), // 초저유동성조회(t1410)
+		typeof(XQt1411), // 증거금율별종목조회(t1411)
+		typeof(XQt1422), // 상/하한(t1422)
+		typeof(XQt1427), // 상/하한가직전(t1427)
+		typeof(XQt1442), // 신고/신저가(t1442)
+		typeof(XQt1444), // 시가총액상위(t1444)
+		typeof(XQt1449), // 가격대별매매비중조회(t1449)
+		typeof(XQt1452), // 거래량상위(t1452)
+		typeof(XQt1463), // 거래대금상위(t1463)
+		typeof(XQt1471), // 시간대별호가잔량추이(t1471)
+		typeof(XQt1475), // 체결강도추이(t1475)
+		typeof(XQt1485), // 예상지수(t1485)
+		typeof(XQt1486), // 시간별예상체결가(t1486)
+		typeof(XQt1488), // 예상체결가등락율상위조회(t1488)
+		typeof(XQt1489), // 예상체결량상위조회(t1489)
+		typeof(XQt1511), // 업종현재가(t1511)
+		typeof(XQt1514), // 업종기간별추이(t1514)
+		typeof(XQt1516), // 업종별종목시세(t1516)
+		typeof(XQt1531), // 테마별종목(t1531)
+		typeof(XQt1532), // 종목별테마(t1532)
+		typeof(XQt1533), // 특이테마(t1533)
+		typeof(XQt1537), // 테마종목별시세조회(t1537)
+		typeof(XQt1601), // 투자자별종합(t1601)
+		typeof(XQt1602), // 시간대별투자자매매추이(t1602)
+		typeof(XQt1603), // 시간대별투자자매매추이상세(t1603)
+		typeof(XQt1615), // 투자자매매종합1(t1615)
+		typeof(XQt1617), // 투자자매매종합2(t1617)
+		typeof(XQt1621), // 업종별분별투자자매매동향(챠트용)
+		typeof(XQt1631), // 프로그램매매종합조회(t1631)
+		typeof(XQt1632), // 시간대별프로그램매매추이(t1632)
+		typeof(XQt1633), // 기간별프로그램매매추이(t1633)
+		typeof(XQt1636), // 종목별프로그램매매동향(t1636)
+		typeof(XQt1637), // 종목별프로그램매매추이(t1637)
+		typeof(XQt1638), // 종목별잔량/사전공시(t1638)
+		typeof(XQt1640), // 프로그램매매종합조회(미니)(t1640)
+		typeof(XQt1662), // 시간대별프로그램매매추이(차트)(t1662)
+		typeof(XQt1664), // 투자자매매종합(챠트)
+		typeof(XQt1665), // 기간별투자자매매추이(챠트)
+		typeof(XQt1701), // 외인기관종목별동향(t1701)
+		typeof(XQt1702), // 외인기관종목별동향(t1702)
+		typeof(XQt1717), // 외인기관종목별동향(t1717)
+		typeof(XQt1752), // 종목별상위회원사(t1752)
+		typeof(XQt1764), // 회원사리스트(t1764)
+		typeof(XQt1771), // 종목별회원사추이(t1771)
+		typeof(XQt1809), // 신호조회(t1809)
+		typeof(XQt1825), // 종목Q클릭검색(씽큐스마트)(t1825)
+		typeof(XQt1826), // 종목Q클릭검색리스트조회(씽큐스마트)(t1826)
+		typeof(XQt1857), // e종목검색(신버전API용)
+		typeof(XQt1866), // 서버저장조건리스트조회(API)(t1866)
+		typeof(XQt1901), // ETF현재가(시세)조회(t1901)
+		typeof(XQt1902), // ETF시간별추이(t1902)
+		typeof(XQt1903), // ETF일별추이(t1903)
+		typeof(XQt1904), // ETF구성종목조회(t1904)
+		typeof(XQt1906), // ETFLP호가(t1906)
+		typeof(XQt1921), // 신용거래동향(t1921)
+		typeof(XQt1926), // 종목별신용정보(t1926)
+		typeof(XQt1927), // 공매도일별추이(t1927)
+		typeof(XQt1941), // 종목별대차거래일간추이(t1941)
+		typeof(XQt1950), // ELW현재가(시세)조회(t1950)
+		typeof(XQt1951), // ELW시간대별체결조회(t1951)
+		typeof(XQt1954), // ELW일별주가(t1954)
+		typeof(XQt1955), // ELW지표검색(t1955)
+		typeof(XQt1956), // ELW현재가(확정지급액)조회(t1956)
+		typeof(XQt1958), // ELW종목비교(t1958)
+		typeof(XQt1959), // LP대상종목정보조회(t1959)
+		typeof(XQt1960), // ELW등락율상위(t1960)
+		typeof(XQt1961), // ELW거래량상위(t1961)
+		typeof(XQt1964), // ELW전광판(t1964)
+		typeof(XQt1966), // ELW거래대금상위(t1966)
+		typeof(XQt1971), // ELW현재가호가조회(t1971)
+		typeof(XQt1972), // ELW현재가(거래원)조회(t1972)
+		typeof(XQt1973), // ELW시간대별예상체결조회(t1973)
+		typeof(XQt1974), // ELW기초자산동일종목(t1974)
+		typeof(XQt1981), // 기초자산리스트조회(t1981)
+		typeof(XQt2101), // 선물/옵션현재가(시세)조회(t2101)
+		typeof(XQt2105), // 선물/옵션현재가호가조회(t2105)
+		typeof(XQt2106), // 선물/옵션현재가시세메모(t2106)
+		typeof(XQt2201), // 선물옵션시간대별체결조회(t2201)
+		typeof(XQt2203), // 기간별주가(t2203)
+		typeof(XQt2209), // 선물옵션틱분별체결조회챠트(t2209)
+		typeof(XQt2210), // 선물옵션시간대별체결조회(단일출력용)
+		typeof(XQt2301), // 옵션전광판(t2301)
+		typeof(XQt2405), // 선물옵션호가잔량비율챠트(t2405)
+		typeof(XQt2421), // 미결제약정추이(t2421)
+		typeof(XQt2541), // 상품선물투자자매매동향(실시간)(t2541)
+		typeof(XQt2545), // 상품선물투자자매매동향(챠트용)
+		typeof(XQt2801), // CME야간선물현재가조회(t2801)
+		typeof(XQt2802), // CME야간선물호가조회(t2802)
+		typeof(XQt2804), // CME야간선물시간대별체결조회(t2804)
+		typeof(XQt2805), // CME야간선물기간별주가(t2805)
+		typeof(XQt2813), // CME야간선물시간대별투자자매매추이(t2813)
+		typeof(XQt2814), // CME야간선물기간별투자자매매추이(챠트)
+		typeof(XQt2816), // CME야간선물투자자별종합(t2816)
+		typeof(XQt2830), // EUREXKOSPI200옵션선물현재가(시세)조회(t2830)
+		typeof(XQt2831), // EUREXKOSPI200옵션선물호가조회(t2831)
+		typeof(XQt2832), // EUREX야간옵션선물시간대별체결조회(t2832)
+		typeof(XQt2833), // EUREX야간옵션선물기간별추이(t2833)
+		typeof(XQt2835), // EUREX옵션선물시세전광판(t2835)
+		typeof(XQt3102), // 뉴스본문(t3102)
+		typeof(XQt3202), // 종목별증시일정(t3202)
+		typeof(XQt3320), // FNG_요약(t3320)
+		typeof(XQt3341), // 재무순위종합(t3341)
+		typeof(XQt3401), // 투자의견(t3401)
+		typeof(XQt3518), // 해외실시간지수(t3518)
+		typeof(XQt3521), // 해외지수조회(API용)(t3521)
+		typeof(XQt4201), // 주식챠트(종합)(t4201)
+		typeof(XQt4203), // 업종챠트(종합)(t4203)
+		typeof(XQt8401), // 주식선물마스터조회(API용)(t8401)
+		typeof(XQt8402), // 주식선물현재가조회(API용)(t8402)
+		typeof(XQt8403), // 주식선물호가조회(API용)(t8403)
+		typeof(XQt8404), // 주식선물시간대별체결조회(API용)(t8404)
+		typeof(XQt8405), // 주식선물기간별주가(API용)(t8405)
+		typeof(XQt8406), // 주식선물틱분별체결조회(API용)(t8406)
+		typeof(XQt8407), // API용주식멀티현재가조회(t8407)
+		typeof(XQt8408), // CME야간선물틱분별체결조회(API용)(t8408)
+		typeof(XQt8409), // CME야간선물미결제약정추이(API용)(t8409)
+		typeof(XQt8411), // 주식챠트(틱/n틱)(t8411)
+		typeof(XQt8412), // 주식챠트(N분)(t8412)
+		typeof(XQt8413), // 주식챠트(일주월)(t8413)
+		typeof(XQt8414), // 선물옵션차트(틱/n틱)(t8414)
+		typeof(XQt8415), // 선물/옵션챠트(N분)(t8415)
+		typeof(XQt8416), // 선물/옵션챠트(일주월)(t8416)
+		typeof(XQt8417), // 업종차트(틱/n틱)(t8417)
+		typeof(XQt8418), // 업종챠트(N분)(t8418)
+		typeof(XQt8419), // 업종챠트(일주월)(t8419)
+		typeof(XQt8424), // 전체업종(t8424)
+		typeof(XQt8425), // 전체테마(t8425)
+		typeof(XQt8426), // 상품선물마스터조회(API용)(t8426)
+		typeof(XQt8427), // 과거데이터시간대별조회(t8427)
+		typeof(XQt8428), // 증시주변자금추이(t8428)
+		typeof(XQt8429), // EUREX야간옵션선물틱분별체결조회챠트(t8429)
+		typeof(XQt8430), // 주식종목조회(t8430)
+		typeof(XQt8431), // ELW종목조회(t8431)
+		typeof(XQt8432), // 지수선물마스터조회API용(t8432)
+		typeof(XQt8433), // 지수옵션마스터조회API용(t8433)
+		typeof(XQt8434), // 선물/옵션멀티현재가조회(t8434)
+		typeof(XQt8435), // 파생종목마스터조회API용(t8435)
+		typeof(XQt8436), // 주식종목조회 API용(t8436)
+		typeof(XQt9905), // 기초자산리스트조회(t9905)
+		typeof(XQt9907), // 만기월조회(t9907)
+		typeof(XQt9942), // ELW마스터조회API용(t9942)
+		typeof(XQt9943), // 지수선물마스터조회API용(t9943)
+		typeof(XQt9944), // 지수옵션마스터조회API용(t9944)
+		typeof(XQt9945), // 주식마스터조회API용-종목명40bytes(t9945)
+		typeof(XRVI_), // VI발동해제(VI_)
+		typeof(XRYC3), // 상품선물예상체결(YC3)
+		typeof(XRYFC), // 지수선물예상체결(YFC)
+		typeof(XRYJC), // 주식선물예상체결(YJC)
+		typeof(XRYJ_), // 예상지수(YJ)
+		typeof(XRYK3), // KOSDAQ예상체결(YK3)
+		typeof(XRYOC), // 지수옵션예상체결(YOC)
+		typeof(XRYS3), // KOSPI예상체결(YS3)
+		typeof(XRYs3), // ELW예상체결(Ys3)
 
 	};
 	public const int Count = 279;

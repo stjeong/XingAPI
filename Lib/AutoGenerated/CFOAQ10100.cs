@@ -50,52 +50,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호")]
+		[XAQueryFieldAttribute("계좌번호", "20")]
 		public string AcntNo;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호")]
+		[XAQueryFieldAttribute("비밀번호", "8")]
 		public string Pwd;
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분")]
+		[XAQueryFieldAttribute("조회구분", "1")]
 		public char QryTp;
 		/// <summary>
 		/// 주문금액
 		/// </summary>
-		[XAQueryFieldAttribute("주문금액")]
+		[XAQueryFieldAttribute("주문금액", "16")]
 		public long OrdAmt;
 		/// <summary>
 		/// 비율값
 		/// </summary>
-		[XAQueryFieldAttribute("비율값")]
+		[XAQueryFieldAttribute("비율값", "19.8")]
 		public double RatVal;
 		/// <summary>
 		/// 선물옵션종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션종목번호")]
+		[XAQueryFieldAttribute("선물옵션종목번호", "12")]
 		public string FnoIsuNo;
 		/// <summary>
 		/// 매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("매매구분")]
+		[XAQueryFieldAttribute("매매구분", "1")]
 		public char BnsTpCode;
 		/// <summary>
 		/// 주문가
 		/// </summary>
-		[XAQueryFieldAttribute("주문가")]
+		[XAQueryFieldAttribute("주문가", "13.2")]
 		public double OrdPrc;
 		/// <summary>
 		/// 선물옵션호가유형코드
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션호가유형코드")]
+		[XAQueryFieldAttribute("선물옵션호가유형코드", "2")]
 		public string FnoOrdprcPtnCode;
 
 		public static class F
@@ -281,52 +281,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호")]
+		[XAQueryFieldAttribute("계좌번호", "20")]
 		public string AcntNo;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호")]
+		[XAQueryFieldAttribute("비밀번호", "8")]
 		public string Pwd;
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분")]
+		[XAQueryFieldAttribute("조회구분", "1")]
 		public char QryTp;
 		/// <summary>
 		/// 주문금액
 		/// </summary>
-		[XAQueryFieldAttribute("주문금액")]
+		[XAQueryFieldAttribute("주문금액", "16")]
 		public long OrdAmt;
 		/// <summary>
 		/// 비율값
 		/// </summary>
-		[XAQueryFieldAttribute("비율값")]
+		[XAQueryFieldAttribute("비율값", "19.8")]
 		public double RatVal;
 		/// <summary>
 		/// 선물옵션종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션종목번호")]
+		[XAQueryFieldAttribute("선물옵션종목번호", "12")]
 		public string FnoIsuNo;
 		/// <summary>
 		/// 매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("매매구분")]
+		[XAQueryFieldAttribute("매매구분", "1")]
 		public char BnsTpCode;
 		/// <summary>
 		/// 주문가
 		/// </summary>
-		[XAQueryFieldAttribute("주문가")]
+		[XAQueryFieldAttribute("주문가", "13.2")]
 		public double OrdPrc;
 		/// <summary>
 		/// 선물옵션호가유형코드
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션호가유형코드")]
+		[XAQueryFieldAttribute("선물옵션호가유형코드", "2")]
 		public string FnoOrdprcPtnCode;
 
 		public static class F
@@ -544,57 +544,57 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수")]
+		[XAQueryFieldAttribute("레코드갯수", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 계좌명
 		/// </summary>
-		[XAQueryFieldAttribute("계좌명")]
+		[XAQueryFieldAttribute("계좌명", "40")]
 		public string AcntNm;
 		/// <summary>
 		/// 조회일
 		/// </summary>
-		[XAQueryFieldAttribute("조회일")]
+		[XAQueryFieldAttribute("조회일", "8")]
 		public string QryDt;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "15.2")]
 		public double NowPrc;
 		/// <summary>
 		/// 주문가능수량
 		/// </summary>
-		[XAQueryFieldAttribute("주문가능수량")]
+		[XAQueryFieldAttribute("주문가능수량", "16")]
 		public long OrdAbleQty;
 		/// <summary>
 		/// 신규주문가능수량
 		/// </summary>
-		[XAQueryFieldAttribute("신규주문가능수량")]
+		[XAQueryFieldAttribute("신규주문가능수량", "16")]
 		public long NewOrdAbleQty;
 		/// <summary>
 		/// 청산주문가능수량
 		/// </summary>
-		[XAQueryFieldAttribute("청산주문가능수량")]
+		[XAQueryFieldAttribute("청산주문가능수량", "16")]
 		public long LqdtOrdAbleQty;
 		/// <summary>
 		/// 사용예정증거금액
 		/// </summary>
-		[XAQueryFieldAttribute("사용예정증거금액")]
+		[XAQueryFieldAttribute("사용예정증거금액", "16")]
 		public long UsePreargMgn;
 		/// <summary>
 		/// 사용예정현금증거금액
 		/// </summary>
-		[XAQueryFieldAttribute("사용예정현금증거금액")]
+		[XAQueryFieldAttribute("사용예정현금증거금액", "16")]
 		public long UsePreargMnyMgn;
 		/// <summary>
 		/// 주문가능금액
 		/// </summary>
-		[XAQueryFieldAttribute("주문가능금액")]
+		[XAQueryFieldAttribute("주문가능금액", "16")]
 		public long OrdAbleAmt;
 		/// <summary>
 		/// 현금주문가능금액
 		/// </summary>
-		[XAQueryFieldAttribute("현금주문가능금액")]
+		[XAQueryFieldAttribute("현금주문가능금액", "16")]
 		public long MnyOrdAbleAmt;
 
 		public static class F
@@ -911,6 +911,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQCFOAQ10100OutBlock1),
+			typeof(XQCFOAQ10100OutBlock2),
+
+		};
 
 	}
 

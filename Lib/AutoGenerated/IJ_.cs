@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드")]
+		[XAQueryFieldAttribute("업종코드", "3")]
 		public string upcode;
 
 		public static class F
@@ -137,127 +137,127 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "6")]
 		public string time;
 		/// <summary>
 		/// 지수
 		/// </summary>
-		[XAQueryFieldAttribute("지수")]
+		[XAQueryFieldAttribute("지수", "8.2")]
 		public float jisu;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일비
 		/// </summary>
-		[XAQueryFieldAttribute("전일비")]
+		[XAQueryFieldAttribute("전일비", "8.2")]
 		public float change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float drate;
 		/// <summary>
 		/// 체결량
 		/// </summary>
-		[XAQueryFieldAttribute("체결량")]
+		[XAQueryFieldAttribute("체결량", "8")]
 		public long cvolume;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "8")]
 		public long volume;
 		/// <summary>
 		/// 거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금")]
+		[XAQueryFieldAttribute("거래대금", "8")]
 		public long value;
 		/// <summary>
 		/// 상한종목수
 		/// </summary>
-		[XAQueryFieldAttribute("상한종목수")]
+		[XAQueryFieldAttribute("상한종목수", "4")]
 		public long upjo;
 		/// <summary>
 		/// 상승종목수
 		/// </summary>
-		[XAQueryFieldAttribute("상승종목수")]
+		[XAQueryFieldAttribute("상승종목수", "4")]
 		public long highjo;
 		/// <summary>
 		/// 보합종목수
 		/// </summary>
-		[XAQueryFieldAttribute("보합종목수")]
+		[XAQueryFieldAttribute("보합종목수", "4")]
 		public long unchgjo;
 		/// <summary>
 		/// 하락종목수
 		/// </summary>
-		[XAQueryFieldAttribute("하락종목수")]
+		[XAQueryFieldAttribute("하락종목수", "4")]
 		public long lowjo;
 		/// <summary>
 		/// 하한종목수
 		/// </summary>
-		[XAQueryFieldAttribute("하한종목수")]
+		[XAQueryFieldAttribute("하한종목수", "4")]
 		public long downjo;
 		/// <summary>
 		/// 상승종목비율
 		/// </summary>
-		[XAQueryFieldAttribute("상승종목비율")]
+		[XAQueryFieldAttribute("상승종목비율", "6.2")]
 		public float upjrate;
 		/// <summary>
 		/// 시가지수
 		/// </summary>
-		[XAQueryFieldAttribute("시가지수")]
+		[XAQueryFieldAttribute("시가지수", "8.2")]
 		public float openjisu;
 		/// <summary>
 		/// 시가시간
 		/// </summary>
-		[XAQueryFieldAttribute("시가시간")]
+		[XAQueryFieldAttribute("시가시간", "6")]
 		public string opentime;
 		/// <summary>
 		/// 고가지수
 		/// </summary>
-		[XAQueryFieldAttribute("고가지수")]
+		[XAQueryFieldAttribute("고가지수", "8.2")]
 		public float highjisu;
 		/// <summary>
 		/// 고가시간
 		/// </summary>
-		[XAQueryFieldAttribute("고가시간")]
+		[XAQueryFieldAttribute("고가시간", "6")]
 		public string hightime;
 		/// <summary>
 		/// 저가지수
 		/// </summary>
-		[XAQueryFieldAttribute("저가지수")]
+		[XAQueryFieldAttribute("저가지수", "8.2")]
 		public float lowjisu;
 		/// <summary>
 		/// 저가시간
 		/// </summary>
-		[XAQueryFieldAttribute("저가시간")]
+		[XAQueryFieldAttribute("저가시간", "6")]
 		public string lowtime;
 		/// <summary>
 		/// 외인순매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("외인순매수수량")]
+		[XAQueryFieldAttribute("외인순매수수량", "8")]
 		public long frgsvolume;
 		/// <summary>
 		/// 기관순매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("기관순매수수량")]
+		[XAQueryFieldAttribute("기관순매수수량", "8")]
 		public long orgsvolume;
 		/// <summary>
 		/// 외인순매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("외인순매수금액")]
+		[XAQueryFieldAttribute("외인순매수금액", "10")]
 		public long frgsvalue;
 		/// <summary>
 		/// 기관순매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("기관순매수금액")]
+		[XAQueryFieldAttribute("기관순매수금액", "10")]
 		public long orgsvalue;
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드")]
+		[XAQueryFieldAttribute("업종코드", "3")]
 		public string upcode;
 
 		public static class F
@@ -679,6 +679,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XRIJ_OutBlock),
+
+		};
 
 	}
 

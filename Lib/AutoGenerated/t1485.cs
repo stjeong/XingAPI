@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드")]
+		[XAQueryFieldAttribute("업종코드", "3")]
 		public string upcode;
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분")]
+		[XAQueryFieldAttribute("조회구분", "1")]
 		public char gubun;
 
 		public static class F
@@ -153,52 +153,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 현재지수
 		/// </summary>
-		[XAQueryFieldAttribute("현재지수")]
+		[XAQueryFieldAttribute("현재지수", "10.2")]
 		public float pricejisu;
 		/// <summary>
 		/// 지수전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("지수전일대비구분")]
+		[XAQueryFieldAttribute("지수전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "10.2")]
 		public float change;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "12")]
 		public long volume;
 		/// <summary>
 		/// 상승종목수
 		/// </summary>
-		[XAQueryFieldAttribute("상승종목수")]
+		[XAQueryFieldAttribute("상승종목수", "4")]
 		public long yhighjo;
 		/// <summary>
 		/// 상한종목수
 		/// </summary>
-		[XAQueryFieldAttribute("상한종목수")]
+		[XAQueryFieldAttribute("상한종목수", "4")]
 		public long yupjo;
 		/// <summary>
 		/// 보합종목수
 		/// </summary>
-		[XAQueryFieldAttribute("보합종목수")]
+		[XAQueryFieldAttribute("보합종목수", "4")]
 		public long yunchgjo;
 		/// <summary>
 		/// 하락종목수
 		/// </summary>
-		[XAQueryFieldAttribute("하락종목수")]
+		[XAQueryFieldAttribute("하락종목수", "4")]
 		public long ylowjo;
 		/// <summary>
 		/// 하한종목수
 		/// </summary>
-		[XAQueryFieldAttribute("하한종목수")]
+		[XAQueryFieldAttribute("하한종목수", "4")]
 		public long ydownjo;
 		/// <summary>
 		/// 거래형성수
 		/// </summary>
-		[XAQueryFieldAttribute("거래형성수")]
+		[XAQueryFieldAttribute("거래형성수", "4")]
 		public long ytrajo;
 
 		public static class F
@@ -416,32 +416,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간")]
+		[XAQueryFieldAttribute("시간", "6")]
 		public string chetime;
 		/// <summary>
 		/// 예상지수
 		/// </summary>
-		[XAQueryFieldAttribute("예상지수")]
+		[XAQueryFieldAttribute("예상지수", "10.2")]
 		public float jisu;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "10.2")]
 		public float change;
 		/// <summary>
 		/// 예상체결량
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결량")]
+		[XAQueryFieldAttribute("예상체결량", "12")]
 		public long volume;
 		/// <summary>
 		/// 예상체결량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결량직전대비")]
+		[XAQueryFieldAttribute("예상체결량직전대비", "12")]
 		public long volcha;
 
 		public static class F
@@ -723,6 +723,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1485OutBlock),
+			typeof(XQt1485OutBlock1),
+
+		};
 
 	}
 

@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// id
 		/// </summary>
-		[XAQueryFieldAttribute("id")]
+		[XAQueryFieldAttribute("id", "8")]
 		public string id;
 
 		public static class F
@@ -137,12 +137,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자(YYYYMMDD)
 		/// </summary>
-		[XAQueryFieldAttribute("일자(YYYYMMDD)")]
+		[XAQueryFieldAttribute("일자(YYYYMMDD)", "8")]
 		public string dt;
 		/// <summary>
 		/// 시간(HHMMSSssssss)
 		/// </summary>
-		[XAQueryFieldAttribute("시간(HHMMSSssssss)")]
+		[XAQueryFieldAttribute("시간(HHMMSSssssss)", "12")]
 		public string time;
 
 		public static class F
@@ -354,6 +354,11 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt0167OutBlock),
+
+		};
 
 	}
 

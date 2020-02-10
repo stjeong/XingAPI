@@ -50,262 +50,262 @@ namespace XingAPINet
 		/// <summary>
 		/// 기초자산chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("기초자산chk구분")]
+		[XAQueryFieldAttribute("기초자산chk구분", "1")]
 		public char chkitem;
 		/// <summary>
 		/// 기초자산코드
 		/// </summary>
-		[XAQueryFieldAttribute("기초자산코드")]
+		[XAQueryFieldAttribute("기초자산코드", "12")]
 		public string cbitem;
 		/// <summary>
 		/// 발행사chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("발행사chk구분")]
+		[XAQueryFieldAttribute("발행사chk구분", "1")]
 		public char chkissuer;
 		/// <summary>
 		/// 발행사
 		/// </summary>
-		[XAQueryFieldAttribute("발행사")]
+		[XAQueryFieldAttribute("발행사", "12")]
 		public string cbissuer;
 		/// <summary>
 		/// 권리chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("권리chk구분")]
+		[XAQueryFieldAttribute("권리chk구분", "1")]
 		public char chkcallput;
 		/// <summary>
 		/// 권리(call:01.put:02)
 		/// </summary>
-		[XAQueryFieldAttribute("권리(call:01.put:02)")]
+		[XAQueryFieldAttribute("권리(call:01.put:02)", "2")]
 		public string cbcallput;
 		/// <summary>
 		/// 행사가chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("행사가chk구분")]
+		[XAQueryFieldAttribute("행사가chk구분", "1")]
 		public char chkexec;
 		/// <summary>
 		/// 행사가(>=:1.<=:2)
 		/// </summary>
-		[XAQueryFieldAttribute("행사가(>=:1.<=:2)")]
+		[XAQueryFieldAttribute("행사가(>=:1.<=:2)", "1")]
 		public char cbexec;
 		/// <summary>
 		/// 행사방식chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("행사방식chk구분")]
+		[XAQueryFieldAttribute("행사방식chk구분", "1")]
 		public char chktype;
 		/// <summary>
 		/// 행사방식
 		/// </summary>
-		[XAQueryFieldAttribute("행사방식")]
+		[XAQueryFieldAttribute("행사방식", "2")]
 		public string cbtype;
 		/// <summary>
 		/// 결제방법chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("결제방법chk구분")]
+		[XAQueryFieldAttribute("결제방법chk구분", "1")]
 		public char chksettle;
 		/// <summary>
 		/// 결제방법
 		/// </summary>
-		[XAQueryFieldAttribute("결제방법")]
+		[XAQueryFieldAttribute("결제방법", "2")]
 		public string cbsettle;
 		/// <summary>
 		/// 만기chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("만기chk구분")]
+		[XAQueryFieldAttribute("만기chk구분", "1")]
 		public char chklast;
 		/// <summary>
 		/// 만기월별
 		/// </summary>
-		[XAQueryFieldAttribute("만기월별")]
+		[XAQueryFieldAttribute("만기월별", "6")]
 		public string cblast;
 		/// <summary>
 		/// 행사가격chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("행사가격chk구분")]
+		[XAQueryFieldAttribute("행사가격chk구분", "1")]
 		public char chkelwexec;
 		/// <summary>
 		/// 행사가이상
 		/// </summary>
-		[XAQueryFieldAttribute("행사가이상")]
+		[XAQueryFieldAttribute("행사가이상", "10.2")]
 		public float elwexecs;
 		/// <summary>
 		/// 행사가이하
 		/// </summary>
-		[XAQueryFieldAttribute("행사가이하")]
+		[XAQueryFieldAttribute("행사가이하", "10.2")]
 		public float elwexece;
 		/// <summary>
 		/// 거래량chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("거래량chk구분")]
+		[XAQueryFieldAttribute("거래량chk구분", "1")]
 		public char chkvolume;
 		/// <summary>
 		/// 거래량이상
 		/// </summary>
-		[XAQueryFieldAttribute("거래량이상")]
+		[XAQueryFieldAttribute("거래량이상", "12")]
 		public float volumes;
 		/// <summary>
 		/// 거래량이하
 		/// </summary>
-		[XAQueryFieldAttribute("거래량이하")]
+		[XAQueryFieldAttribute("거래량이하", "12")]
 		public float volumee;
 		/// <summary>
 		/// 등락율chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("등락율chk구분")]
+		[XAQueryFieldAttribute("등락율chk구분", "1")]
 		public char chkrate;
 		/// <summary>
 		/// 등락율이상
 		/// </summary>
-		[XAQueryFieldAttribute("등락율이상")]
+		[XAQueryFieldAttribute("등락율이상", "6.2")]
 		public float rates;
 		/// <summary>
 		/// 등락율이하
 		/// </summary>
-		[XAQueryFieldAttribute("등락율이하")]
+		[XAQueryFieldAttribute("등락율이하", "6.2")]
 		public float ratee;
 		/// <summary>
 		/// 프리미엄chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("프리미엄chk구분")]
+		[XAQueryFieldAttribute("프리미엄chk구분", "1")]
 		public char chkpremium;
 		/// <summary>
 		/// 프리미엄이상
 		/// </summary>
-		[XAQueryFieldAttribute("프리미엄이상")]
+		[XAQueryFieldAttribute("프리미엄이상", "6.2")]
 		public float premiums;
 		/// <summary>
 		/// 프리미엄이하
 		/// </summary>
-		[XAQueryFieldAttribute("프리미엄이하")]
+		[XAQueryFieldAttribute("프리미엄이하", "6.2")]
 		public float premiume;
 		/// <summary>
 		/// 패리티chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("패리티chk구분")]
+		[XAQueryFieldAttribute("패리티chk구분", "1")]
 		public char chkparity;
 		/// <summary>
 		/// 패리티이상
 		/// </summary>
-		[XAQueryFieldAttribute("패리티이상")]
+		[XAQueryFieldAttribute("패리티이상", "6.2")]
 		public float paritys;
 		/// <summary>
 		/// 패리티이하
 		/// </summary>
-		[XAQueryFieldAttribute("패리티이하")]
+		[XAQueryFieldAttribute("패리티이하", "6.2")]
 		public float paritye;
 		/// <summary>
 		/// 손익분기chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("손익분기chk구분")]
+		[XAQueryFieldAttribute("손익분기chk구분", "1")]
 		public char chkberate;
 		/// <summary>
 		/// 손익분기이상
 		/// </summary>
-		[XAQueryFieldAttribute("손익분기이상")]
+		[XAQueryFieldAttribute("손익분기이상", "6.2")]
 		public float berates;
 		/// <summary>
 		/// 손익분기이하
 		/// </summary>
-		[XAQueryFieldAttribute("손익분기이하")]
+		[XAQueryFieldAttribute("손익분기이하", "6.2")]
 		public float beratee;
 		/// <summary>
 		/// 자본지지chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("자본지지chk구분")]
+		[XAQueryFieldAttribute("자본지지chk구분", "1")]
 		public char chkcapt;
 		/// <summary>
 		/// 자본지지이상
 		/// </summary>
-		[XAQueryFieldAttribute("자본지지이상")]
+		[XAQueryFieldAttribute("자본지지이상", "6.2")]
 		public float capts;
 		/// <summary>
 		/// 자본지지이하
 		/// </summary>
-		[XAQueryFieldAttribute("자본지지이하")]
+		[XAQueryFieldAttribute("자본지지이하", "6.2")]
 		public float capte;
 		/// <summary>
 		/// e.기어링chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("e.기어링chk구분")]
+		[XAQueryFieldAttribute("e.기어링chk구분", "1")]
 		public char chkegearing;
 		/// <summary>
 		/// e.기어링이상
 		/// </summary>
-		[XAQueryFieldAttribute("e.기어링이상")]
+		[XAQueryFieldAttribute("e.기어링이상", "6.2")]
 		public float egearings;
 		/// <summary>
 		/// e.기어링이하
 		/// </summary>
-		[XAQueryFieldAttribute("e.기어링이하")]
+		[XAQueryFieldAttribute("e.기어링이하", "6.2")]
 		public float egearinge;
 		/// <summary>
 		/// 기어링chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("기어링chk구분")]
+		[XAQueryFieldAttribute("기어링chk구분", "1")]
 		public char chkgearing;
 		/// <summary>
 		/// 기어링이상
 		/// </summary>
-		[XAQueryFieldAttribute("기어링이상")]
+		[XAQueryFieldAttribute("기어링이상", "6.2")]
 		public float gearings;
 		/// <summary>
 		/// 기어링이하
 		/// </summary>
-		[XAQueryFieldAttribute("기어링이하")]
+		[XAQueryFieldAttribute("기어링이하", "6.2")]
 		public float gearinge;
 		/// <summary>
 		/// 델타chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("델타chk구분")]
+		[XAQueryFieldAttribute("델타chk구분", "1")]
 		public char chkdelta;
 		/// <summary>
 		/// 델타이상
 		/// </summary>
-		[XAQueryFieldAttribute("델타이상")]
+		[XAQueryFieldAttribute("델타이상", "10.6")]
 		public float deltas;
 		/// <summary>
 		/// 델타이하
 		/// </summary>
-		[XAQueryFieldAttribute("델타이하")]
+		[XAQueryFieldAttribute("델타이하", "10.6")]
 		public float deltae;
 		/// <summary>
 		/// 쎄타chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("쎄타chk구분")]
+		[XAQueryFieldAttribute("쎄타chk구분", "1")]
 		public char chktheta;
 		/// <summary>
 		/// 쎄타이상
 		/// </summary>
-		[XAQueryFieldAttribute("쎄타이상")]
+		[XAQueryFieldAttribute("쎄타이상", "10.6")]
 		public float thetas;
 		/// <summary>
 		/// 쎄타이하
 		/// </summary>
-		[XAQueryFieldAttribute("쎄타이하")]
+		[XAQueryFieldAttribute("쎄타이하", "10.6")]
 		public float thetae;
 		/// <summary>
 		/// 최종거래일chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("최종거래일chk구분")]
+		[XAQueryFieldAttribute("최종거래일chk구분", "1")]
 		public char chkduedate;
 		/// <summary>
 		/// 최종거래일이상
 		/// </summary>
-		[XAQueryFieldAttribute("최종거래일이상")]
+		[XAQueryFieldAttribute("최종거래일이상", "8")]
 		public string duedates;
 		/// <summary>
 		/// 최종거래일이하
 		/// </summary>
-		[XAQueryFieldAttribute("최종거래일이하")]
+		[XAQueryFieldAttribute("최종거래일이하", "8")]
 		public string duedatee;
 		/// <summary>
 		/// 조기종료chk구분
 		/// </summary>
-		[XAQueryFieldAttribute("조기종료chk구분")]
+		[XAQueryFieldAttribute("조기종료chk구분", "1")]
 		public char chkkoba;
 		/// <summary>
 		/// 조기종료(0:전체1:조기종료만2:조기종료제외)
 		/// </summary>
-		[XAQueryFieldAttribute("조기종료(0:전체1:조기종료만2:조기종료제외)")]
+		[XAQueryFieldAttribute("조기종료(0:전체1:조기종료만2:조기종료제외)", "1")]
 		public char cbkoba;
 
 		public static class F
@@ -953,7 +953,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목갯수
 		/// </summary>
-		[XAQueryFieldAttribute("종목갯수")]
+		[XAQueryFieldAttribute("종목갯수", "4")]
 		public long cnt;
 
 		public static class F
@@ -1063,132 +1063,132 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명")]
+		[XAQueryFieldAttribute("종목명", "40")]
 		public string hname;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드")]
+		[XAQueryFieldAttribute("종목코드", "6")]
 		public string shcode;
 		/// <summary>
 		/// 발행사
 		/// </summary>
-		[XAQueryFieldAttribute("발행사")]
+		[XAQueryFieldAttribute("발행사", "40")]
 		public string issuernmk;
 		/// <summary>
 		/// 기초자산코드
 		/// </summary>
-		[XAQueryFieldAttribute("기초자산코드")]
+		[XAQueryFieldAttribute("기초자산코드", "12")]
 		public string itemcode;
 		/// <summary>
 		/// 콜/풋구분
 		/// </summary>
-		[XAQueryFieldAttribute("콜/풋구분")]
+		[XAQueryFieldAttribute("콜/풋구분", "2")]
 		public string cpgubun;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가")]
+		[XAQueryFieldAttribute("현재가", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분")]
+		[XAQueryFieldAttribute("전일대비구분", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비")]
+		[XAQueryFieldAttribute("전일대비", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율")]
+		[XAQueryFieldAttribute("등락율", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량")]
+		[XAQueryFieldAttribute("거래량", "12")]
 		public float volume;
 		/// <summary>
 		/// 전일거래량
 		/// </summary>
-		[XAQueryFieldAttribute("전일거래량")]
+		[XAQueryFieldAttribute("전일거래량", "12")]
 		public float jnilvolume;
 		/// <summary>
 		/// 행사가
 		/// </summary>
-		[XAQueryFieldAttribute("행사가")]
+		[XAQueryFieldAttribute("행사가", "10.2")]
 		public float elwexec;
 		/// <summary>
 		/// 기초자산명
 		/// </summary>
-		[XAQueryFieldAttribute("기초자산명")]
+		[XAQueryFieldAttribute("기초자산명", "20")]
 		public string item;
 		/// <summary>
 		/// 기초자산가
 		/// </summary>
-		[XAQueryFieldAttribute("기초자산가")]
+		[XAQueryFieldAttribute("기초자산가", "10.2")]
 		public float bprice;
 		/// <summary>
 		/// 기초전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("기초전일대비구분")]
+		[XAQueryFieldAttribute("기초전일대비구분", "1")]
 		public char bsign;
 		/// <summary>
 		/// 기초전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("기초전일대비")]
+		[XAQueryFieldAttribute("기초전일대비", "10.2")]
 		public float bchange;
 		/// <summary>
 		/// 기초등락율
 		/// </summary>
-		[XAQueryFieldAttribute("기초등락율")]
+		[XAQueryFieldAttribute("기초등락율", "6.2")]
 		public float bdiff;
 		/// <summary>
 		/// 프리미엄
 		/// </summary>
-		[XAQueryFieldAttribute("프리미엄")]
+		[XAQueryFieldAttribute("프리미엄", "6.2")]
 		public float premium;
 		/// <summary>
 		/// 패리티
 		/// </summary>
-		[XAQueryFieldAttribute("패리티")]
+		[XAQueryFieldAttribute("패리티", "6.2")]
 		public float parity;
 		/// <summary>
 		/// 손익분기
 		/// </summary>
-		[XAQueryFieldAttribute("손익분기")]
+		[XAQueryFieldAttribute("손익분기", "6.2")]
 		public float berate;
 		/// <summary>
 		/// 자본지지
 		/// </summary>
-		[XAQueryFieldAttribute("자본지지")]
+		[XAQueryFieldAttribute("자본지지", "6.2")]
 		public float capt;
 		/// <summary>
 		/// e.기어링
 		/// </summary>
-		[XAQueryFieldAttribute("e.기어링")]
+		[XAQueryFieldAttribute("e.기어링", "6.2")]
 		public float egearing;
 		/// <summary>
 		/// 기어링
 		/// </summary>
-		[XAQueryFieldAttribute("기어링")]
+		[XAQueryFieldAttribute("기어링", "6.2")]
 		public float gearing;
 		/// <summary>
 		/// 최종거래일
 		/// </summary>
-		[XAQueryFieldAttribute("최종거래일")]
+		[XAQueryFieldAttribute("최종거래일", "8")]
 		public string lastdate;
 		/// <summary>
 		/// 델타
 		/// </summary>
-		[XAQueryFieldAttribute("델타")]
+		[XAQueryFieldAttribute("델타", "10.6")]
 		public float delta;
 		/// <summary>
 		/// 쎄타
 		/// </summary>
-		[XAQueryFieldAttribute("쎄타")]
+		[XAQueryFieldAttribute("쎄타", "10.6")]
 		public float theta;
 
 		public static class F
@@ -1810,6 +1810,12 @@ namespace XingAPINet
 
 		}
 
+		public static Type [] OutBlockTypes = new Type []
+		{
+			typeof(XQt1955OutBlock),
+			typeof(XQt1955OutBlock1),
+
+		};
 
 	}
 
