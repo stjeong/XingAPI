@@ -969,7 +969,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "t0424", "DevCenterSample\TR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteToSqlite", "DevCenterSample\WriteToSqlite\WriteToSqlite.csproj", "{2C523AF8-A6E3-4091-8E6C-4863AB42B2CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAPINet.Sqlite", "XingAPINet\XingAPINet.Sqlite\XingAPINet.Sqlite.csproj", "{BADC8BAA-8CA0-4C65-B6B2-C93089B61FA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XingAPINet.Sqlite", "XingAPINet.Sqlite\XingAPINet.Sqlite.csproj", "{104000E1-A25E-4416-A1EE-0419DC82A0EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1147,14 +1147,14 @@ Global
 		{2C523AF8-A6E3-4091-8E6C-4863AB42B2CB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2C523AF8-A6E3-4091-8E6C-4863AB42B2CB}.Release|x86.ActiveCfg = Release|Any CPU
 		{2C523AF8-A6E3-4091-8E6C-4863AB42B2CB}.Release|x86.Build.0 = Release|Any CPU
-		{BADC8BAA-8CA0-4C65-B6B2-C93089B61FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BADC8BAA-8CA0-4C65-B6B2-C93089B61FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BADC8BAA-8CA0-4C65-B6B2-C93089B61FA0}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{BADC8BAA-8CA0-4C65-B6B2-C93089B61FA0}.Debug|x86.Build.0 = Debug|Any CPU
-		{BADC8BAA-8CA0-4C65-B6B2-C93089B61FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BADC8BAA-8CA0-4C65-B6B2-C93089B61FA0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BADC8BAA-8CA0-4C65-B6B2-C93089B61FA0}.Release|x86.ActiveCfg = Release|Any CPU
-		{BADC8BAA-8CA0-4C65-B6B2-C93089B61FA0}.Release|x86.Build.0 = Release|Any CPU
+		{104000E1-A25E-4416-A1EE-0419DC82A0EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104000E1-A25E-4416-A1EE-0419DC82A0EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104000E1-A25E-4416-A1EE-0419DC82A0EB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{104000E1-A25E-4416-A1EE-0419DC82A0EB}.Debug|x86.Build.0 = Debug|Any CPU
+		{104000E1-A25E-4416-A1EE-0419DC82A0EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104000E1-A25E-4416-A1EE-0419DC82A0EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{104000E1-A25E-4416-A1EE-0419DC82A0EB}.Release|x86.ActiveCfg = Release|Any CPU
+		{104000E1-A25E-4416-A1EE-0419DC82A0EB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

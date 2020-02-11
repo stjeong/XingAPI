@@ -58,7 +58,6 @@ namespace XingAPINet
         }
     }
 
-
     public partial class SHCodeInfo
     {
         public readonly string Name;

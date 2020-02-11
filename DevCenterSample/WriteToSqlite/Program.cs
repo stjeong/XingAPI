@@ -27,20 +27,10 @@ namespace WriteToSqlite
                     Console.WriteLine(xing.ErrorMessage);
                     return;
                 }
-                
-                WriteTmCode();
-                WriteSHCode();
-            }
-        }
-        private void WriteSHCode()
-        {
-            XQt8430.Get().WriteToDB();
-            // XQt8430.LoadFrom(XQt8430Gubun.코스닥);
-        }
 
-        private void WriteTmCode()
-        {
-            XQt8425.Get().WriteToDB();
+                XQt8430.Get(XQt8430Gubun.전체).WriteToDB();
+                XQt8425.Get().WriteToDB();
+            }
         }
 
         private LoginInfo GetUserInfo(bool useDemoServer)

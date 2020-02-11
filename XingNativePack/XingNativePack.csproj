@@ -2479,4 +2479,8 @@
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>robocopy $(TargetDir) ..\..\..\DevCenterSample\bin /S
+exit 0</PostBuildEvent>
+  </PropertyGroup>
 </Project>
