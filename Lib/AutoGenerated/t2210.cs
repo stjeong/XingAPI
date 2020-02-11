@@ -50,22 +50,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "8")]
+		[XAQueryFieldAttribute("focode", "단축코드", "char", "8")]
 		public string focode;
 		/// <summary>
 		/// 특이거래량
 		/// </summary>
-		[XAQueryFieldAttribute("특이거래량", "12")]
+		[XAQueryFieldAttribute("cvolume", "특이거래량", "long", "12")]
 		public long cvolume;
 		/// <summary>
 		/// 시작시간
 		/// </summary>
-		[XAQueryFieldAttribute("시작시간", "4")]
+		[XAQueryFieldAttribute("stime", "시작시간", "char", "4")]
 		public string stime;
 		/// <summary>
 		/// 종료시간
 		/// </summary>
-		[XAQueryFieldAttribute("종료시간", "4")]
+		[XAQueryFieldAttribute("etime", "종료시간", "char", "4")]
 		public string etime;
 
 		public static class F
@@ -185,22 +185,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 매도체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도체결수량", "8")]
+		[XAQueryFieldAttribute("mdvolume", "매도체결수량", "long", "8")]
 		public long mdvolume;
 		/// <summary>
 		/// 매도체결건수
 		/// </summary>
-		[XAQueryFieldAttribute("매도체결건수", "8")]
+		[XAQueryFieldAttribute("mdchecnt", "매도체결건수", "long", "8")]
 		public long mdchecnt;
 		/// <summary>
 		/// 매수체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수체결수량", "8")]
+		[XAQueryFieldAttribute("msvolume", "매수체결수량", "long", "8")]
 		public long msvolume;
 		/// <summary>
 		/// 매수체결건수
 		/// </summary>
-		[XAQueryFieldAttribute("매수체결건수", "8")]
+		[XAQueryFieldAttribute("mschecnt", "매수체결건수", "long", "8")]
 		public long mschecnt;
 
 		public static class F

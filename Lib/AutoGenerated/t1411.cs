@@ -50,27 +50,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 시장구분
 		/// </summary>
-		[XAQueryFieldAttribute("시장구분", "1")]
+		[XAQueryFieldAttribute("gubun", "시장구분", "char", "1")]
 		public char gubun;
 		/// <summary>
 		/// 위탁신용구분
 		/// </summary>
-		[XAQueryFieldAttribute("위탁신용구분", "1")]
+		[XAQueryFieldAttribute("jongchk", "위탁신용구분", "char", "1")]
 		public char jongchk;
 		/// <summary>
 		/// 증거금율구분
 		/// </summary>
-		[XAQueryFieldAttribute("증거금율구분", "1")]
+		[XAQueryFieldAttribute("jkrate", "증거금율구분", "char", "1")]
 		public char jkrate;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX", "4")]
+		[XAQueryFieldAttribute("idx", "IDX", "long", "4")]
 		public long idx;
 
 		public static class F
@@ -201,17 +201,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 위탁증거금율
 		/// </summary>
-		[XAQueryFieldAttribute("위탁증거금율", "3")]
+		[XAQueryFieldAttribute("jkrate", "위탁증거금율", "long", "3")]
 		public long jkrate;
 		/// <summary>
 		/// 신용증거금율
 		/// </summary>
-		[XAQueryFieldAttribute("신용증거금율", "3")]
+		[XAQueryFieldAttribute("sjkrate", "신용증거금율", "long", "3")]
 		public long sjkrate;
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX", "4")]
+		[XAQueryFieldAttribute("idx", "IDX", "long", "4")]
 		public long idx;
 
 		public static class F
@@ -345,57 +345,57 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명", "20")]
+		[XAQueryFieldAttribute("hname", "종목명", "char", "20")]
 		public string hname;
 		/// <summary>
 		/// 위탁증거금율
 		/// </summary>
-		[XAQueryFieldAttribute("위탁증거금율", "3")]
+		[XAQueryFieldAttribute("jkrate", "위탁증거금율", "long", "3")]
 		public long jkrate;
 		/// <summary>
 		/// 신용증거금율
 		/// </summary>
-		[XAQueryFieldAttribute("신용증거금율", "3")]
+		[XAQueryFieldAttribute("sjkrate", "신용증거금율", "long", "3")]
 		public long sjkrate;
 		/// <summary>
 		/// 대용가
 		/// </summary>
-		[XAQueryFieldAttribute("대용가", "8")]
+		[XAQueryFieldAttribute("subprice", "대용가", "long", "8")]
 		public long subprice;
 		/// <summary>
 		/// 전일종가
 		/// </summary>
-		[XAQueryFieldAttribute("전일종가", "8")]
+		[XAQueryFieldAttribute("recprice", "전일종가", "long", "8")]
 		public long recprice;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "8")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "8")]
+		[XAQueryFieldAttribute("change", "전일대비", "long", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량", "12")]
+		[XAQueryFieldAttribute("volume", "누적거래량", "long", "12")]
 		public long volume;
 
 		public static class F

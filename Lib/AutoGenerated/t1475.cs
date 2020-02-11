@@ -50,37 +50,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 상승하락
 		/// </summary>
-		[XAQueryFieldAttribute("상승하락", "1")]
+		[XAQueryFieldAttribute("vptype", "상승하락", "char", "1")]
 		public char vptype;
 		/// <summary>
 		/// 데이터개수
 		/// </summary>
-		[XAQueryFieldAttribute("데이터개수", "4")]
+		[XAQueryFieldAttribute("datacnt", "데이터개수", "long", "4")]
 		public long datacnt;
 		/// <summary>
 		/// 기준일자
 		/// </summary>
-		[XAQueryFieldAttribute("기준일자", "8")]
+		[XAQueryFieldAttribute("date", "기준일자", "long", "8")]
 		public long date;
 		/// <summary>
 		/// 기준시간
 		/// </summary>
-		[XAQueryFieldAttribute("기준시간", "6")]
+		[XAQueryFieldAttribute("time", "기준시간", "long", "6")]
 		public long time;
 		/// <summary>
 		/// 랭크카운터
 		/// </summary>
-		[XAQueryFieldAttribute("랭크카운터", "3")]
+		[XAQueryFieldAttribute("rankcnt", "랭크카운터", "long", "3")]
 		public long rankcnt;
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분", "1")]
+		[XAQueryFieldAttribute("gubun", "조회구분", "char", "1")]
 		public char gubun;
 
 		public static class F
@@ -233,17 +233,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 기준일자
 		/// </summary>
-		[XAQueryFieldAttribute("기준일자", "8")]
+		[XAQueryFieldAttribute("date", "기준일자", "long", "8")]
 		public long date;
 		/// <summary>
 		/// 기준시간
 		/// </summary>
-		[XAQueryFieldAttribute("기준시간", "6")]
+		[XAQueryFieldAttribute("time", "기준시간", "long", "6")]
 		public long time;
 		/// <summary>
 		/// 랭크카운터
 		/// </summary>
-		[XAQueryFieldAttribute("랭크카운터", "3")]
+		[XAQueryFieldAttribute("rankcnt", "랭크카운터", "long", "3")]
 		public long rankcnt;
 
 		public static class F
@@ -377,52 +377,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자", "10")]
+		[XAQueryFieldAttribute("datetime", "일자", "char", "10")]
 		public string datetime;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "8")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "8")]
+		[XAQueryFieldAttribute("change", "전일대비", "long", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량", "12")]
+		[XAQueryFieldAttribute("volume", "거래량", "long", "12")]
 		public long volume;
 		/// <summary>
 		/// 당일VP
 		/// </summary>
-		[XAQueryFieldAttribute("당일VP", "8.2")]
+		[XAQueryFieldAttribute("todayvp", "당일VP", "float", "8.2")]
 		public float todayvp;
 		/// <summary>
 		/// 5일MAVP
 		/// </summary>
-		[XAQueryFieldAttribute("5일MAVP", "8.2")]
+		[XAQueryFieldAttribute("ma5vp", "5일MAVP", "float", "8.2")]
 		public float ma5vp;
 		/// <summary>
 		/// 20일MAVP
 		/// </summary>
-		[XAQueryFieldAttribute("20일MAVP", "8.2")]
+		[XAQueryFieldAttribute("ma20vp", "20일MAVP", "float", "8.2")]
 		public float ma20vp;
 		/// <summary>
 		/// 60일MAVP
 		/// </summary>
-		[XAQueryFieldAttribute("60일MAVP", "8.2")]
+		[XAQueryFieldAttribute("ma60vp", "60일MAVP", "float", "8.2")]
 		public float ma60vp;
 
 		public static class F

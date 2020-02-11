@@ -50,22 +50,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 시장구분
 		/// </summary>
-		[XAQueryFieldAttribute("시장구분", "1")]
+		[XAQueryFieldAttribute("gubun", "시장구분", "char", "1")]
 		public char gubun;
 		/// <summary>
 		/// 순위구분(1:매출액증가율2:영업이익증가율3:세전계속이익증가율4:부채비율5:유보율6:EPS7:BPS8:ROE9:PERa:PBRb:PEG)
 		/// </summary>
-		[XAQueryFieldAttribute("순위구분(1:매출액증가율2:영업이익증가율3:세전계속이익증가율4:부채비율5:유보율6:EPS7:BPS8:ROE9:PERa:PBRb:PEG)", "1")]
+		[XAQueryFieldAttribute("gubun1", "순위구분(1:매출액증가율2:영업이익증가율3:세전계속이익증가율4:부채비율5:유보율6:EPS7:BPS8:ROE9:PERa:PBRb:PEG)", "char", "1")]
 		public char gubun1;
 		/// <summary>
 		/// 대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("대비구분", "1")]
+		[XAQueryFieldAttribute("gubun2", "대비구분", "char", "1")]
 		public char gubun2;
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX", "4")]
+		[XAQueryFieldAttribute("idx", "IDX", "long", "4")]
 		public long idx;
 
 		public static class F
@@ -185,12 +185,12 @@ namespace XingAPINet
 		/// <summary>
 		/// CNT
 		/// </summary>
-		[XAQueryFieldAttribute("CNT", "4")]
+		[XAQueryFieldAttribute("cnt", "CNT", "long", "4")]
 		public long cnt;
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX", "4")]
+		[XAQueryFieldAttribute("idx", "IDX", "long", "4")]
 		public long idx;
 
 		public static class F
@@ -312,72 +312,72 @@ namespace XingAPINet
 		/// <summary>
 		/// 순위
 		/// </summary>
-		[XAQueryFieldAttribute("순위", "4")]
+		[XAQueryFieldAttribute("rank", "순위", "long", "4")]
 		public long rank;
 		/// <summary>
 		/// 기업명
 		/// </summary>
-		[XAQueryFieldAttribute("기업명", "20")]
+		[XAQueryFieldAttribute("hname", "기업명", "char", "20")]
 		public string hname;
 		/// <summary>
 		/// 매출액증가율
 		/// </summary>
-		[XAQueryFieldAttribute("매출액증가율", "12")]
+		[XAQueryFieldAttribute("salesgrowth", "매출액증가율", "long", "12")]
 		public long salesgrowth;
 		/// <summary>
 		/// 영업이익증가율
 		/// </summary>
-		[XAQueryFieldAttribute("영업이익증가율", "12")]
+		[XAQueryFieldAttribute("operatingincomegrowt", "영업이익증가율", "long", "12")]
 		public long operatingincomegrowt;
 		/// <summary>
 		/// 경상이익증가율
 		/// </summary>
-		[XAQueryFieldAttribute("경상이익증가율", "12")]
+		[XAQueryFieldAttribute("ordinaryincomegrowth", "경상이익증가율", "long", "12")]
 		public long ordinaryincomegrowth;
 		/// <summary>
 		/// 부채비율
 		/// </summary>
-		[XAQueryFieldAttribute("부채비율", "12")]
+		[XAQueryFieldAttribute("liabilitytoequity", "부채비율", "long", "12")]
 		public long liabilitytoequity;
 		/// <summary>
 		/// 유보율
 		/// </summary>
-		[XAQueryFieldAttribute("유보율", "12")]
+		[XAQueryFieldAttribute("enterpriseratio", "유보율", "long", "12")]
 		public long enterpriseratio;
 		/// <summary>
 		/// EPS
 		/// </summary>
-		[XAQueryFieldAttribute("EPS", "12")]
+		[XAQueryFieldAttribute("eps", "EPS", "long", "12")]
 		public long eps;
 		/// <summary>
 		/// BPS
 		/// </summary>
-		[XAQueryFieldAttribute("BPS", "12")]
+		[XAQueryFieldAttribute("bps", "BPS", "long", "12")]
 		public long bps;
 		/// <summary>
 		/// ROE
 		/// </summary>
-		[XAQueryFieldAttribute("ROE", "12")]
+		[XAQueryFieldAttribute("roe", "ROE", "long", "12")]
 		public long roe;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// PER
 		/// </summary>
-		[XAQueryFieldAttribute("PER", "13.2")]
+		[XAQueryFieldAttribute("per", "PER", "float", "13.2")]
 		public float per;
 		/// <summary>
 		/// PBR
 		/// </summary>
-		[XAQueryFieldAttribute("PBR", "13.2")]
+		[XAQueryFieldAttribute("pbr", "PBR", "float", "13.2")]
 		public float pbr;
 		/// <summary>
 		/// PEG
 		/// </summary>
-		[XAQueryFieldAttribute("PEG", "13.2")]
+		[XAQueryFieldAttribute("peg", "PEG", "float", "13.2")]
 		public float peg;
 
 		public static class F

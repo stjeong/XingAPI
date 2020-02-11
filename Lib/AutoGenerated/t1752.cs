@@ -50,27 +50,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 조회날짜1
 		/// </summary>
-		[XAQueryFieldAttribute("조회날짜1", "8")]
+		[XAQueryFieldAttribute("traddate1", "조회날짜1", "char", "8")]
 		public string traddate1;
 		/// <summary>
 		/// 조회날짜2
 		/// </summary>
-		[XAQueryFieldAttribute("조회날짜2", "8")]
+		[XAQueryFieldAttribute("traddate2", "조회날짜2", "char", "8")]
 		public string traddate2;
 		/// <summary>
 		/// 외국계구분
 		/// </summary>
-		[XAQueryFieldAttribute("외국계구분", "1")]
+		[XAQueryFieldAttribute("fwgubun1", "외국계구분", "char", "1")]
 		public char fwgubun1;
 		/// <summary>
 		/// CTSIDX
 		/// </summary>
-		[XAQueryFieldAttribute("CTSIDX", "4")]
+		[XAQueryFieldAttribute("cts_idx", "CTSIDX", "long", "4")]
 		public long cts_idx;
 
 		public static class F
@@ -201,17 +201,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 외국계매도
 		/// </summary>
-		[XAQueryFieldAttribute("외국계매도", "12")]
+		[XAQueryFieldAttribute("fwdvl", "외국계매도", "long", "12")]
 		public long fwdvl;
 		/// <summary>
 		/// 외국계매수
 		/// </summary>
-		[XAQueryFieldAttribute("외국계매수", "12")]
+		[XAQueryFieldAttribute("fwsvl", "외국계매수", "long", "12")]
 		public long fwsvl;
 		/// <summary>
 		/// CTSIDX
 		/// </summary>
-		[XAQueryFieldAttribute("CTSIDX", "4")]
+		[XAQueryFieldAttribute("cts_idx", "CTSIDX", "long", "4")]
 		public long cts_idx;
 
 		public static class F
@@ -345,47 +345,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 회원사
 		/// </summary>
-		[XAQueryFieldAttribute("회원사", "20")]
+		[XAQueryFieldAttribute("tradname", "회원사", "char", "20")]
 		public string tradname;
 		/// <summary>
 		/// 매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도수량", "12")]
+		[XAQueryFieldAttribute("tradmdvol", "매도수량", "long", "12")]
 		public long tradmdvol;
 		/// <summary>
 		/// 매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수수량", "12")]
+		[XAQueryFieldAttribute("tradmsvol", "매수수량", "long", "12")]
 		public long tradmsvol;
 		/// <summary>
 		/// 순매수
 		/// </summary>
-		[XAQueryFieldAttribute("순매수", "12")]
+		[XAQueryFieldAttribute("tradmssvol", "순매수", "long", "12")]
 		public long tradmssvol;
 		/// <summary>
 		/// 창구거래
 		/// </summary>
-		[XAQueryFieldAttribute("창구거래", "12")]
+		[XAQueryFieldAttribute("wintrd", "창구거래", "long", "12")]
 		public long wintrd;
 		/// <summary>
 		/// 비중
 		/// </summary>
-		[XAQueryFieldAttribute("비중", "6.1")]
+		[XAQueryFieldAttribute("winrat", "비중", "float", "6.1")]
 		public float winrat;
 		/// <summary>
 		/// 회원사코드
 		/// </summary>
-		[XAQueryFieldAttribute("회원사코드", "3")]
+		[XAQueryFieldAttribute("tradno", "회원사코드", "char", "3")]
 		public string tradno;
 		/// <summary>
 		/// 외국계여부
 		/// </summary>
-		[XAQueryFieldAttribute("외국계여부", "1")]
+		[XAQueryFieldAttribute("wgubun", "외국계여부", "char", "1")]
 		public char wgubun;
 		/// <summary>
 		/// 순비중
 		/// </summary>
-		[XAQueryFieldAttribute("순비중", "6.1")]
+		[XAQueryFieldAttribute("swinrat", "순비중", "float", "6.1")]
 		public float swinrat;
 
 		public static class F

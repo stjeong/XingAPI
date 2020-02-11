@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드", "3")]
+		[XAQueryFieldAttribute("upcode", "업종코드", "char", "3")]
 		public string upcode;
 
 		public static class F
@@ -137,127 +137,127 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간", "6")]
+		[XAQueryFieldAttribute("time", "시간", "char", "6")]
 		public string time;
 		/// <summary>
 		/// 지수
 		/// </summary>
-		[XAQueryFieldAttribute("지수", "8.2")]
+		[XAQueryFieldAttribute("jisu", "지수", "float", "8.2")]
 		public float jisu;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일비
 		/// </summary>
-		[XAQueryFieldAttribute("전일비", "8.2")]
+		[XAQueryFieldAttribute("change", "전일비", "float", "8.2")]
 		public float change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("drate", "등락율", "float", "6.2")]
 		public float drate;
 		/// <summary>
 		/// 체결량
 		/// </summary>
-		[XAQueryFieldAttribute("체결량", "8")]
+		[XAQueryFieldAttribute("cvolume", "체결량", "long", "8")]
 		public long cvolume;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량", "8")]
+		[XAQueryFieldAttribute("volume", "거래량", "long", "8")]
 		public long volume;
 		/// <summary>
 		/// 거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금", "8")]
+		[XAQueryFieldAttribute("value", "거래대금", "long", "8")]
 		public long value;
 		/// <summary>
 		/// 상한종목수
 		/// </summary>
-		[XAQueryFieldAttribute("상한종목수", "4")]
+		[XAQueryFieldAttribute("upjo", "상한종목수", "long", "4")]
 		public long upjo;
 		/// <summary>
 		/// 상승종목수
 		/// </summary>
-		[XAQueryFieldAttribute("상승종목수", "4")]
+		[XAQueryFieldAttribute("highjo", "상승종목수", "long", "4")]
 		public long highjo;
 		/// <summary>
 		/// 보합종목수
 		/// </summary>
-		[XAQueryFieldAttribute("보합종목수", "4")]
+		[XAQueryFieldAttribute("unchgjo", "보합종목수", "long", "4")]
 		public long unchgjo;
 		/// <summary>
 		/// 하락종목수
 		/// </summary>
-		[XAQueryFieldAttribute("하락종목수", "4")]
+		[XAQueryFieldAttribute("lowjo", "하락종목수", "long", "4")]
 		public long lowjo;
 		/// <summary>
 		/// 하한종목수
 		/// </summary>
-		[XAQueryFieldAttribute("하한종목수", "4")]
+		[XAQueryFieldAttribute("downjo", "하한종목수", "long", "4")]
 		public long downjo;
 		/// <summary>
 		/// 상승종목비율
 		/// </summary>
-		[XAQueryFieldAttribute("상승종목비율", "6.2")]
+		[XAQueryFieldAttribute("upjrate", "상승종목비율", "float", "6.2")]
 		public float upjrate;
 		/// <summary>
 		/// 시가지수
 		/// </summary>
-		[XAQueryFieldAttribute("시가지수", "8.2")]
+		[XAQueryFieldAttribute("openjisu", "시가지수", "float", "8.2")]
 		public float openjisu;
 		/// <summary>
 		/// 시가시간
 		/// </summary>
-		[XAQueryFieldAttribute("시가시간", "6")]
+		[XAQueryFieldAttribute("opentime", "시가시간", "char", "6")]
 		public string opentime;
 		/// <summary>
 		/// 고가지수
 		/// </summary>
-		[XAQueryFieldAttribute("고가지수", "8.2")]
+		[XAQueryFieldAttribute("highjisu", "고가지수", "float", "8.2")]
 		public float highjisu;
 		/// <summary>
 		/// 고가시간
 		/// </summary>
-		[XAQueryFieldAttribute("고가시간", "6")]
+		[XAQueryFieldAttribute("hightime", "고가시간", "char", "6")]
 		public string hightime;
 		/// <summary>
 		/// 저가지수
 		/// </summary>
-		[XAQueryFieldAttribute("저가지수", "8.2")]
+		[XAQueryFieldAttribute("lowjisu", "저가지수", "float", "8.2")]
 		public float lowjisu;
 		/// <summary>
 		/// 저가시간
 		/// </summary>
-		[XAQueryFieldAttribute("저가시간", "6")]
+		[XAQueryFieldAttribute("lowtime", "저가시간", "char", "6")]
 		public string lowtime;
 		/// <summary>
 		/// 외인순매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("외인순매수수량", "8")]
+		[XAQueryFieldAttribute("frgsvolume", "외인순매수수량", "long", "8")]
 		public long frgsvolume;
 		/// <summary>
 		/// 기관순매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("기관순매수수량", "8")]
+		[XAQueryFieldAttribute("orgsvolume", "기관순매수수량", "long", "8")]
 		public long orgsvolume;
 		/// <summary>
 		/// 외인순매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("외인순매수금액", "10")]
+		[XAQueryFieldAttribute("frgsvalue", "외인순매수금액", "long", "10")]
 		public long frgsvalue;
 		/// <summary>
 		/// 기관순매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("기관순매수금액", "10")]
+		[XAQueryFieldAttribute("orgsvalue", "기관순매수금액", "long", "10")]
 		public long orgsvalue;
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드", "3")]
+		[XAQueryFieldAttribute("upcode", "업종코드", "char", "3")]
 		public string upcode;
 
 		public static class F

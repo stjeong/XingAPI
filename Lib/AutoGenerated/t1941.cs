@@ -50,17 +50,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 시작일자
 		/// </summary>
-		[XAQueryFieldAttribute("시작일자", "8")]
+		[XAQueryFieldAttribute("sdate", "시작일자", "char", "8")]
 		public string sdate;
 		/// <summary>
 		/// 종료일자
 		/// </summary>
-		[XAQueryFieldAttribute("종료일자", "8")]
+		[XAQueryFieldAttribute("edate", "종료일자", "char", "8")]
 		public string edate;
 
 		public static class F
@@ -169,62 +169,62 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자", "8")]
+		[XAQueryFieldAttribute("date", "일자", "char", "8")]
 		public string date;
 		/// <summary>
 		/// 종가
 		/// </summary>
-		[XAQueryFieldAttribute("종가", "8")]
+		[XAQueryFieldAttribute("price", "종가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 대비
 		/// </summary>
-		[XAQueryFieldAttribute("대비", "8")]
+		[XAQueryFieldAttribute("change", "대비", "long", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량", "12")]
+		[XAQueryFieldAttribute("volume", "거래량", "long", "12")]
 		public long volume;
 		/// <summary>
 		/// 당일체결
 		/// </summary>
-		[XAQueryFieldAttribute("당일체결", "12")]
+		[XAQueryFieldAttribute("upvolume", "당일체결", "long", "12")]
 		public long upvolume;
 		/// <summary>
 		/// 당일상환
 		/// </summary>
-		[XAQueryFieldAttribute("당일상환", "12")]
+		[XAQueryFieldAttribute("dnvolume", "당일상환", "long", "12")]
 		public long dnvolume;
 		/// <summary>
 		/// 당일잔고
 		/// </summary>
-		[XAQueryFieldAttribute("당일잔고", "12")]
+		[XAQueryFieldAttribute("tovolume", "당일잔고", "long", "12")]
 		public long tovolume;
 		/// <summary>
 		/// 잔고금액
 		/// </summary>
-		[XAQueryFieldAttribute("잔고금액", "12")]
+		[XAQueryFieldAttribute("tovalue", "잔고금액", "long", "12")]
 		public long tovalue;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 대차증감
 		/// </summary>
-		[XAQueryFieldAttribute("대차증감", "12")]
+		[XAQueryFieldAttribute("tovoldif", "대차증감", "long", "12")]
 		public long tovoldif;
 
 		public static class F

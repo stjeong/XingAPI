@@ -50,22 +50,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호", "11")]
+		[XAQueryFieldAttribute("accno", "계좌번호", "char", "11")]
 		public string accno;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호", "8")]
+		[XAQueryFieldAttribute("passwd", "비밀번호", "char", "8")]
 		public string passwd;
 		/// <summary>
 		/// CTS_종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_종목번호", "8")]
+		[XAQueryFieldAttribute("cts_expcode", "CTS_종목번호", "char", "8")]
 		public string cts_expcode;
 		/// <summary>
 		/// CTS_매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_매매구분", "1")]
+		[XAQueryFieldAttribute("cts_medocd", "CTS_매매구분", "char", "1")]
 		public char cts_medocd;
 
 		public static class F
@@ -185,27 +185,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 매매손익합계
 		/// </summary>
-		[XAQueryFieldAttribute("매매손익합계", "18")]
+		[XAQueryFieldAttribute("tdtsunik", "매매손익합계", "long", "18")]
 		public long tdtsunik;
 		/// <summary>
 		/// CTS_종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_종목번호", "8")]
+		[XAQueryFieldAttribute("cts_expcode", "CTS_종목번호", "char", "8")]
 		public string cts_expcode;
 		/// <summary>
 		/// CTS_매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_매매구분", "1")]
+		[XAQueryFieldAttribute("cts_medocd", "CTS_매매구분", "char", "1")]
 		public char cts_medocd;
 		/// <summary>
 		/// 평가금액
 		/// </summary>
-		[XAQueryFieldAttribute("평가금액", "18")]
+		[XAQueryFieldAttribute("tappamt", "평가금액", "long", "18")]
 		public long tappamt;
 		/// <summary>
 		/// 평가손익
 		/// </summary>
-		[XAQueryFieldAttribute("평가손익", "18")]
+		[XAQueryFieldAttribute("tsunik", "평가손익", "long", "18")]
 		public long tsunik;
 
 		public static class F
@@ -363,67 +363,67 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호", "8")]
+		[XAQueryFieldAttribute("expcode", "종목번호", "char", "8")]
 		public string expcode;
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분", "4")]
+		[XAQueryFieldAttribute("medosu", "구분", "char", "4")]
 		public string medosu;
 		/// <summary>
 		/// 잔고수량
 		/// </summary>
-		[XAQueryFieldAttribute("잔고수량", "10")]
+		[XAQueryFieldAttribute("jqty", "잔고수량", "long", "10")]
 		public long jqty;
 		/// <summary>
 		/// 청산가능수량
 		/// </summary>
-		[XAQueryFieldAttribute("청산가능수량", "10")]
+		[XAQueryFieldAttribute("cqty", "청산가능수량", "long", "10")]
 		public long cqty;
 		/// <summary>
 		/// 평균단가
 		/// </summary>
-		[XAQueryFieldAttribute("평균단가", "10.2")]
+		[XAQueryFieldAttribute("pamt", "평균단가", "float", "10.2")]
 		public float pamt;
 		/// <summary>
 		/// 총매입금액
 		/// </summary>
-		[XAQueryFieldAttribute("총매입금액", "18")]
+		[XAQueryFieldAttribute("mamt", "총매입금액", "long", "18")]
 		public long mamt;
 		/// <summary>
 		/// 매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("매매구분", "1")]
+		[XAQueryFieldAttribute("medocd", "매매구분", "char", "1")]
 		public char medocd;
 		/// <summary>
 		/// 매매손익
 		/// </summary>
-		[XAQueryFieldAttribute("매매손익", "18")]
+		[XAQueryFieldAttribute("dtsunik", "매매손익", "long", "18")]
 		public long dtsunik;
 		/// <summary>
 		/// 처리순번
 		/// </summary>
-		[XAQueryFieldAttribute("처리순번", "10")]
+		[XAQueryFieldAttribute("sysprocseq", "처리순번", "long", "10")]
 		public long sysprocseq;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "9.2")]
+		[XAQueryFieldAttribute("price", "현재가", "float", "9.2")]
 		public float price;
 		/// <summary>
 		/// 평가금액
 		/// </summary>
-		[XAQueryFieldAttribute("평가금액", "18")]
+		[XAQueryFieldAttribute("appamt", "평가금액", "long", "18")]
 		public long appamt;
 		/// <summary>
 		/// 평가손익
 		/// </summary>
-		[XAQueryFieldAttribute("평가손익", "18")]
+		[XAQueryFieldAttribute("dtsunik1", "평가손익", "long", "18")]
 		public long dtsunik1;
 		/// <summary>
 		/// 수익율
 		/// </summary>
-		[XAQueryFieldAttribute("수익율", "10.2")]
+		[XAQueryFieldAttribute("sunikrt", "수익율", "float", "10.2")]
 		public float sunikrt;
 
 		public static class F

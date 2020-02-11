@@ -16,9 +16,9 @@ namespace WriteToSqlite
 
         void Main(bool useDemoServer)
         {
-            LoginInfo user = GetUserInfo(useDemoServer);
-
             SqliteExtension.UseSqlite("test.sqlite");
+
+            LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
             {

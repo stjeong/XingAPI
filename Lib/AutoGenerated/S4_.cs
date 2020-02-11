@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,57 +137,57 @@ namespace XingAPINet
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "8")]
+		[XAQueryFieldAttribute("change", "전일대비", "long", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("drate", "등락율", "float", "6.2")]
 		public float drate;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "8")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 시가시간
 		/// </summary>
-		[XAQueryFieldAttribute("시가시간", "6")]
+		[XAQueryFieldAttribute("opentime", "시가시간", "char", "6")]
 		public string opentime;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가", "8")]
+		[XAQueryFieldAttribute("open", "시가", "long", "8")]
 		public long open;
 		/// <summary>
 		/// 고가시간
 		/// </summary>
-		[XAQueryFieldAttribute("고가시간", "6")]
+		[XAQueryFieldAttribute("hightime", "고가시간", "char", "6")]
 		public string hightime;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가", "8")]
+		[XAQueryFieldAttribute("high", "고가", "long", "8")]
 		public long high;
 		/// <summary>
 		/// 저가시간
 		/// </summary>
-		[XAQueryFieldAttribute("저가시간", "6")]
+		[XAQueryFieldAttribute("lowtime", "저가시간", "char", "6")]
 		public string lowtime;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가", "8")]
+		[XAQueryFieldAttribute("low", "저가", "long", "8")]
 		public long low;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 
 		public static class F

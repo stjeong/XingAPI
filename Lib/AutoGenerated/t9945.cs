@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분(KSP:1KSD:2)
 		/// </summary>
-		[XAQueryFieldAttribute("구분(KSP:1KSD:2)", "1")]
+		[XAQueryFieldAttribute("gubun", "구분(KSP:1KSD:2)", "char", "1")]
 		public char gubun;
 
 		public static class F
@@ -137,27 +137,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명", "40")]
+		[XAQueryFieldAttribute("hname", "종목명", "char", "40")]
 		public string hname;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 확장코드
 		/// </summary>
-		[XAQueryFieldAttribute("확장코드", "12")]
+		[XAQueryFieldAttribute("expcode", "확장코드", "char", "12")]
 		public string expcode;
 		/// <summary>
 		/// ETF구분
 		/// </summary>
-		[XAQueryFieldAttribute("ETF구분", "1")]
+		[XAQueryFieldAttribute("etfchk", "ETF구분", "char", "1")]
 		public char etfchk;
 		/// <summary>
 		/// filler
 		/// </summary>
-		[XAQueryFieldAttribute("filler", "5")]
+		[XAQueryFieldAttribute("filler", "filler", "char", "5")]
 		public string filler;
 
 		public static class F

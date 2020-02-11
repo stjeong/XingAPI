@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "8")]
+		[XAQueryFieldAttribute("futcode", "단축코드", "char", "8")]
 		public string futcode;
 
 		public static class F
@@ -137,27 +137,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 접속매매여부
 		/// </summary>
-		[XAQueryFieldAttribute("접속매매여부", "1")]
+		[XAQueryFieldAttribute("gubun", "접속매매여부", "char", "1")]
 		public char gubun;
 		/// <summary>
 		/// 실시간가격제한여부
 		/// </summary>
-		[XAQueryFieldAttribute("실시간가격제한여부", "1")]
+		[XAQueryFieldAttribute("dy_gubun", "실시간가격제한여부", "char", "1")]
 		public char dy_gubun;
 		/// <summary>
 		/// 실시간상한가
 		/// </summary>
-		[XAQueryFieldAttribute("실시간상한가", "10")]
+		[XAQueryFieldAttribute("dy_uplmtprice", "실시간상한가", "long", "10")]
 		public long dy_uplmtprice;
 		/// <summary>
 		/// 실시간하한가
 		/// </summary>
-		[XAQueryFieldAttribute("실시간하한가", "10")]
+		[XAQueryFieldAttribute("dy_dnlmtprice", "실시간하한가", "long", "10")]
 		public long dy_dnlmtprice;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "8")]
+		[XAQueryFieldAttribute("futcode", "단축코드", "char", "8")]
 		public string futcode;
 
 		public static class F

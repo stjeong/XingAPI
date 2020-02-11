@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,57 +137,57 @@ namespace XingAPINet
 		/// <summary>
 		/// 호가시간
 		/// </summary>
-		[XAQueryFieldAttribute("호가시간", "6")]
+		[XAQueryFieldAttribute("hotime", "호가시간", "char", "6")]
 		public string hotime;
 		/// <summary>
 		/// 예상체결가격
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가격", "8")]
+		[XAQueryFieldAttribute("yeprice", "예상체결가격", "long", "8")]
 		public long yeprice;
 		/// <summary>
 		/// 예상체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결수량", "12")]
+		[XAQueryFieldAttribute("yevolume", "예상체결수량", "long", "12")]
 		public long yevolume;
 		/// <summary>
 		/// 예상체결가전일종가대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가전일종가대비구분", "1")]
+		[XAQueryFieldAttribute("jnilysign", "예상체결가전일종가대비구분", "char", "1")]
 		public char jnilysign;
 		/// <summary>
 		/// 예상체결가전일종가대비
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가전일종가대비", "8")]
+		[XAQueryFieldAttribute("preychange", "예상체결가전일종가대비", "long", "8")]
 		public long preychange;
 		/// <summary>
 		/// 예상체결가전일종가등락율
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가전일종가등락율", "6.2")]
+		[XAQueryFieldAttribute("jnilydrate", "예상체결가전일종가등락율", "float", "6.2")]
 		public float jnilydrate;
 		/// <summary>
 		/// 예상매도호가
 		/// </summary>
-		[XAQueryFieldAttribute("예상매도호가", "8")]
+		[XAQueryFieldAttribute("yofferho0", "예상매도호가", "long", "8")]
 		public long yofferho0;
 		/// <summary>
 		/// 예상매수호가
 		/// </summary>
-		[XAQueryFieldAttribute("예상매수호가", "8")]
+		[XAQueryFieldAttribute("ybidho0", "예상매수호가", "long", "8")]
 		public long ybidho0;
 		/// <summary>
 		/// 예상매도호가수량
 		/// </summary>
-		[XAQueryFieldAttribute("예상매도호가수량", "12")]
+		[XAQueryFieldAttribute("yofferrem0", "예상매도호가수량", "long", "12")]
 		public long yofferrem0;
 		/// <summary>
 		/// 예상매수호가수량
 		/// </summary>
-		[XAQueryFieldAttribute("예상매수호가수량", "12")]
+		[XAQueryFieldAttribute("ybidrem0", "예상매수호가수량", "long", "12")]
 		public long ybidrem0;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 
 		public static class F

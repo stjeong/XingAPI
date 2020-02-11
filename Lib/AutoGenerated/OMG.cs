@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 옵션코드
 		/// </summary>
-		[XAQueryFieldAttribute("옵션코드", "8")]
+		[XAQueryFieldAttribute("optcode", "옵션코드", "char", "8")]
 		public string optcode;
 
 		public static class F
@@ -137,87 +137,87 @@ namespace XingAPINet
 		/// <summary>
 		/// 체결시간
 		/// </summary>
-		[XAQueryFieldAttribute("체결시간", "6")]
+		[XAQueryFieldAttribute("chetime", "체결시간", "char", "6")]
 		public string chetime;
 		/// <summary>
 		/// 행사가
 		/// </summary>
-		[XAQueryFieldAttribute("행사가", "6.2")]
+		[XAQueryFieldAttribute("actprice", "행사가", "float", "6.2")]
 		public float actprice;
 		/// <summary>
 		/// KOSPI200지수
 		/// </summary>
-		[XAQueryFieldAttribute("KOSPI200지수", "6.2")]
+		[XAQueryFieldAttribute("k200jisu", "KOSPI200지수", "float", "6.2")]
 		public float k200jisu;
 		/// <summary>
 		/// 선물가격
 		/// </summary>
-		[XAQueryFieldAttribute("선물가격", "6.2")]
+		[XAQueryFieldAttribute("fut200jisu", "선물가격", "float", "6.2")]
 		public float fut200jisu;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "6.2")]
+		[XAQueryFieldAttribute("price", "현재가", "float", "6.2")]
 		public float price;
 		/// <summary>
 		/// 대표내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("대표내재변동성", "6.2")]
+		[XAQueryFieldAttribute("capimpv", "대표내재변동성", "float", "6.2")]
 		public float capimpv;
 		/// <summary>
 		/// 내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("내재변동성", "6.2")]
+		[XAQueryFieldAttribute("impv", "내재변동성", "float", "6.2")]
 		public float impv;
 		/// <summary>
 		/// 델타(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("델타(블랙숄즈)", "7.4")]
+		[XAQueryFieldAttribute("delt", "델타(블랙숄즈)", "float", "7.4")]
 		public float delt;
 		/// <summary>
 		/// 감마(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("감마(블랙숄즈)", "7.4")]
+		[XAQueryFieldAttribute("gama", "감마(블랙숄즈)", "float", "7.4")]
 		public float gama;
 		/// <summary>
 		/// 세타(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("세타(블랙숄즈)", "7.4")]
+		[XAQueryFieldAttribute("ceta", "세타(블랙숄즈)", "float", "7.4")]
 		public float ceta;
 		/// <summary>
 		/// 베가(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("베가(블랙숄즈)", "7.4")]
+		[XAQueryFieldAttribute("vega", "베가(블랙숄즈)", "float", "7.4")]
 		public float vega;
 		/// <summary>
 		/// 로우(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("로우(블랙숄즈)", "7.4")]
+		[XAQueryFieldAttribute("rhox", "로우(블랙숄즈)", "float", "7.4")]
 		public float rhox;
 		/// <summary>
 		/// 이론가(블랙숄즈)
 		/// </summary>
-		[XAQueryFieldAttribute("이론가(블랙숄즈)", "6.2")]
+		[XAQueryFieldAttribute("theoryprice", "이론가(블랙숄즈)", "float", "6.2")]
 		public float theoryprice;
 		/// <summary>
 		/// 전일가내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("전일가내재변동성", "6.2")]
+		[XAQueryFieldAttribute("bimpv", "전일가내재변동성", "float", "6.2")]
 		public float bimpv;
 		/// <summary>
 		/// 매도가내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("매도가내재변동성", "6.2")]
+		[XAQueryFieldAttribute("offerimpv", "매도가내재변동성", "float", "6.2")]
 		public float offerimpv;
 		/// <summary>
 		/// 매수가내재변동성
 		/// </summary>
-		[XAQueryFieldAttribute("매수가내재변동성", "6.2")]
+		[XAQueryFieldAttribute("bidimpv", "매수가내재변동성", "float", "6.2")]
 		public float bidimpv;
 		/// <summary>
 		/// 옵션코드
 		/// </summary>
-		[XAQueryFieldAttribute("옵션코드", "8")]
+		[XAQueryFieldAttribute("optcode", "옵션코드", "char", "8")]
 		public string optcode;
 
 		public static class F

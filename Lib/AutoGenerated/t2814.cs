@@ -50,22 +50,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 수치구분(1:수치2:누적)
 		/// </summary>
-		[XAQueryFieldAttribute("수치구분(1:수치2:누적)", "1")]
+		[XAQueryFieldAttribute("gubun1", "수치구분(1:수치2:누적)", "char", "1")]
 		public char gubun1;
 		/// <summary>
 		/// 단위구분(1:일2:주3:월)
 		/// </summary>
-		[XAQueryFieldAttribute("단위구분(1:일2:주3:월)", "1")]
+		[XAQueryFieldAttribute("gubun2", "단위구분(1:일2:주3:월)", "char", "1")]
 		public char gubun2;
 		/// <summary>
 		/// 시작날짜
 		/// </summary>
-		[XAQueryFieldAttribute("시작날짜", "8")]
+		[XAQueryFieldAttribute("from_date", "시작날짜", "char", "8")]
 		public string from_date;
 		/// <summary>
 		/// 종료날짜
 		/// </summary>
-		[XAQueryFieldAttribute("종료날짜", "8")]
+		[XAQueryFieldAttribute("to_date", "종료날짜", "char", "8")]
 		public string to_date;
 
 		public static class F
@@ -185,12 +185,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 시장코드
 		/// </summary>
-		[XAQueryFieldAttribute("시장코드", "8")]
+		[XAQueryFieldAttribute("mcode", "시장코드", "char", "8")]
 		public string mcode;
 		/// <summary>
 		/// 시장명
 		/// </summary>
-		[XAQueryFieldAttribute("시장명", "20")]
+		[XAQueryFieldAttribute("mname", "시장명", "char", "20")]
 		public string mname;
 
 		public static class F
@@ -312,162 +312,162 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자", "8")]
+		[XAQueryFieldAttribute("date", "일자", "char", "8")]
 		public string date;
 		/// <summary>
 		/// 개인수량
 		/// </summary>
-		[XAQueryFieldAttribute("개인수량", "12")]
+		[XAQueryFieldAttribute("sv_08", "개인수량", "long", "12")]
 		public long sv_08;
 		/// <summary>
 		/// 외인계수량(등록+미등록)
 		/// </summary>
-		[XAQueryFieldAttribute("외인계수량(등록+미등록)", "12")]
+		[XAQueryFieldAttribute("sv_17", "외인계수량(등록+미등록)", "long", "12")]
 		public long sv_17;
 		/// <summary>
 		/// 기관계수량
 		/// </summary>
-		[XAQueryFieldAttribute("기관계수량", "12")]
+		[XAQueryFieldAttribute("sv_18", "기관계수량", "long", "12")]
 		public long sv_18;
 		/// <summary>
 		/// 증권수량
 		/// </summary>
-		[XAQueryFieldAttribute("증권수량", "12")]
+		[XAQueryFieldAttribute("sv_01", "증권수량", "long", "12")]
 		public long sv_01;
 		/// <summary>
 		/// 투신수량
 		/// </summary>
-		[XAQueryFieldAttribute("투신수량", "12")]
+		[XAQueryFieldAttribute("sv_03", "투신수량", "long", "12")]
 		public long sv_03;
 		/// <summary>
 		/// 은행수량
 		/// </summary>
-		[XAQueryFieldAttribute("은행수량", "12")]
+		[XAQueryFieldAttribute("sv_04", "은행수량", "long", "12")]
 		public long sv_04;
 		/// <summary>
 		/// 보험수량
 		/// </summary>
-		[XAQueryFieldAttribute("보험수량", "12")]
+		[XAQueryFieldAttribute("sv_02", "보험수량", "long", "12")]
 		public long sv_02;
 		/// <summary>
 		/// 종금수량
 		/// </summary>
-		[XAQueryFieldAttribute("종금수량", "12")]
+		[XAQueryFieldAttribute("sv_05", "종금수량", "long", "12")]
 		public long sv_05;
 		/// <summary>
 		/// 기금수량
 		/// </summary>
-		[XAQueryFieldAttribute("기금수량", "12")]
+		[XAQueryFieldAttribute("sv_06", "기금수량", "long", "12")]
 		public long sv_06;
 		/// <summary>
 		/// 기타수량
 		/// </summary>
-		[XAQueryFieldAttribute("기타수량", "12")]
+		[XAQueryFieldAttribute("sv_07", "기타수량", "long", "12")]
 		public long sv_07;
 		/// <summary>
 		/// 사모펀드수량
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드수량", "12")]
+		[XAQueryFieldAttribute("sv_00", "사모펀드수량", "long", "12")]
 		public long sv_00;
 		/// <summary>
 		/// 등록외국인수량
 		/// </summary>
-		[XAQueryFieldAttribute("등록외국인수량", "12")]
+		[XAQueryFieldAttribute("sv_09", "등록외국인수량", "long", "12")]
 		public long sv_09;
 		/// <summary>
 		/// 미등록외국인수량
 		/// </summary>
-		[XAQueryFieldAttribute("미등록외국인수량", "12")]
+		[XAQueryFieldAttribute("sv_10", "미등록외국인수량", "long", "12")]
 		public long sv_10;
 		/// <summary>
 		/// 국가수량
 		/// </summary>
-		[XAQueryFieldAttribute("국가수량", "12")]
+		[XAQueryFieldAttribute("sv_11", "국가수량", "long", "12")]
 		public long sv_11;
 		/// <summary>
 		/// 기타계수량(기타+국가)
 		/// </summary>
-		[XAQueryFieldAttribute("기타계수량(기타+국가)", "12")]
+		[XAQueryFieldAttribute("sv_99", "기타계수량(기타+국가)", "long", "12")]
 		public long sv_99;
 		/// <summary>
 		/// 개인금액
 		/// </summary>
-		[XAQueryFieldAttribute("개인금액", "12.0")]
+		[XAQueryFieldAttribute("sa_08", "개인금액", "double", "12.0")]
 		public double sa_08;
 		/// <summary>
 		/// 외인계금액(등록+미등록)
 		/// </summary>
-		[XAQueryFieldAttribute("외인계금액(등록+미등록)", "12.0")]
+		[XAQueryFieldAttribute("sa_17", "외인계금액(등록+미등록)", "double", "12.0")]
 		public double sa_17;
 		/// <summary>
 		/// 기관계금액
 		/// </summary>
-		[XAQueryFieldAttribute("기관계금액", "12.0")]
+		[XAQueryFieldAttribute("sa_18", "기관계금액", "double", "12.0")]
 		public double sa_18;
 		/// <summary>
 		/// 증권금액
 		/// </summary>
-		[XAQueryFieldAttribute("증권금액", "12.0")]
+		[XAQueryFieldAttribute("sa_01", "증권금액", "double", "12.0")]
 		public double sa_01;
 		/// <summary>
 		/// 투신금액
 		/// </summary>
-		[XAQueryFieldAttribute("투신금액", "12.0")]
+		[XAQueryFieldAttribute("sa_03", "투신금액", "double", "12.0")]
 		public double sa_03;
 		/// <summary>
 		/// 은행금액
 		/// </summary>
-		[XAQueryFieldAttribute("은행금액", "12.0")]
+		[XAQueryFieldAttribute("sa_04", "은행금액", "double", "12.0")]
 		public double sa_04;
 		/// <summary>
 		/// 보험금액
 		/// </summary>
-		[XAQueryFieldAttribute("보험금액", "12.0")]
+		[XAQueryFieldAttribute("sa_02", "보험금액", "double", "12.0")]
 		public double sa_02;
 		/// <summary>
 		/// 종금금액
 		/// </summary>
-		[XAQueryFieldAttribute("종금금액", "12.0")]
+		[XAQueryFieldAttribute("sa_05", "종금금액", "double", "12.0")]
 		public double sa_05;
 		/// <summary>
 		/// 기금금액
 		/// </summary>
-		[XAQueryFieldAttribute("기금금액", "12.0")]
+		[XAQueryFieldAttribute("sa_06", "기금금액", "double", "12.0")]
 		public double sa_06;
 		/// <summary>
 		/// 기타금액
 		/// </summary>
-		[XAQueryFieldAttribute("기타금액", "12.0")]
+		[XAQueryFieldAttribute("sa_07", "기타금액", "double", "12.0")]
 		public double sa_07;
 		/// <summary>
 		/// 사모펀드금액
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드금액", "12.0")]
+		[XAQueryFieldAttribute("sa_00", "사모펀드금액", "double", "12.0")]
 		public double sa_00;
 		/// <summary>
 		/// 등록외국인금액
 		/// </summary>
-		[XAQueryFieldAttribute("등록외국인금액", "12.0")]
+		[XAQueryFieldAttribute("sa_09", "등록외국인금액", "double", "12.0")]
 		public double sa_09;
 		/// <summary>
 		/// 미등록외국인금액
 		/// </summary>
-		[XAQueryFieldAttribute("미등록외국인금액", "12.0")]
+		[XAQueryFieldAttribute("sa_10", "미등록외국인금액", "double", "12.0")]
 		public double sa_10;
 		/// <summary>
 		/// 국가금액
 		/// </summary>
-		[XAQueryFieldAttribute("국가금액", "12.0")]
+		[XAQueryFieldAttribute("sa_11", "국가금액", "double", "12.0")]
 		public double sa_11;
 		/// <summary>
 		/// 기타계금액(기타+국가)
 		/// </summary>
-		[XAQueryFieldAttribute("기타계금액(기타+국가)", "12.0")]
+		[XAQueryFieldAttribute("sa_99", "기타계금액(기타+국가)", "double", "12.0")]
 		public double sa_99;
 		/// <summary>
 		/// 시장지수
 		/// </summary>
-		[XAQueryFieldAttribute("시장지수", "7.2")]
+		[XAQueryFieldAttribute("jisu", "시장지수", "float", "7.2")]
 		public float jisu;
 
 		public static class F

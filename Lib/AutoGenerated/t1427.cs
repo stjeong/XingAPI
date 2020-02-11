@@ -50,52 +50,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분", "1")]
+		[XAQueryFieldAttribute("qrygb", "조회구분", "char", "1")]
 		public char qrygb;
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분", "1")]
+		[XAQueryFieldAttribute("gubun", "구분", "char", "1")]
 		public char gubun;
 		/// <summary>
 		/// 상하한가구분
 		/// </summary>
-		[XAQueryFieldAttribute("상하한가구분", "1")]
+		[XAQueryFieldAttribute("signgubun", "상하한가구분", "char", "1")]
 		public char signgubun;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "3")]
+		[XAQueryFieldAttribute("diff", "등락율", "long", "3")]
 		public long diff;
 		/// <summary>
 		/// 대상제외
 		/// </summary>
-		[XAQueryFieldAttribute("대상제외", "12")]
+		[XAQueryFieldAttribute("jc_num", "대상제외", "long", "12")]
 		public long jc_num;
 		/// <summary>
 		/// 시작가격
 		/// </summary>
-		[XAQueryFieldAttribute("시작가격", "8")]
+		[XAQueryFieldAttribute("sprice", "시작가격", "long", "8")]
 		public long sprice;
 		/// <summary>
 		/// 종료가격
 		/// </summary>
-		[XAQueryFieldAttribute("종료가격", "8")]
+		[XAQueryFieldAttribute("eprice", "종료가격", "long", "8")]
 		public long eprice;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량", "12")]
+		[XAQueryFieldAttribute("volume", "거래량", "long", "12")]
 		public long volume;
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX", "4")]
+		[XAQueryFieldAttribute("idx", "IDX", "long", "4")]
 		public long idx;
 		/// <summary>
 		/// 전일상하한제외
 		/// </summary>
-		[XAQueryFieldAttribute("전일상하한제외", "1")]
+		[XAQueryFieldAttribute("jshex", "전일상하한제외", "char", "1")]
 		public char jshex;
 
 		public static class F
@@ -281,12 +281,12 @@ namespace XingAPINet
 		/// <summary>
 		/// CNT
 		/// </summary>
-		[XAQueryFieldAttribute("CNT", "4")]
+		[XAQueryFieldAttribute("cnt", "CNT", "long", "4")]
 		public long cnt;
 		/// <summary>
 		/// IDX
 		/// </summary>
-		[XAQueryFieldAttribute("IDX", "4")]
+		[XAQueryFieldAttribute("idx", "IDX", "long", "4")]
 		public long idx;
 
 		public static class F
@@ -408,87 +408,87 @@ namespace XingAPINet
 		/// <summary>
 		/// 한글명
 		/// </summary>
-		[XAQueryFieldAttribute("한글명", "20")]
+		[XAQueryFieldAttribute("hname", "한글명", "char", "20")]
 		public string hname;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "8")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "8")]
+		[XAQueryFieldAttribute("change", "전일대비", "long", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량", "12")]
+		[XAQueryFieldAttribute("volume", "누적거래량", "long", "12")]
 		public long volume;
 		/// <summary>
 		/// 거래증가율
 		/// </summary>
-		[XAQueryFieldAttribute("거래증가율", "10.2")]
+		[XAQueryFieldAttribute("diff_vol", "거래증가율", "float", "10.2")]
 		public float diff_vol;
 		/// <summary>
 		/// 상한가/하한가
 		/// </summary>
-		[XAQueryFieldAttribute("상한가/하한가", "8")]
+		[XAQueryFieldAttribute("lmtprice", "상한가/하한가", "long", "8")]
 		public long lmtprice;
 		/// <summary>
 		/// 대비율
 		/// </summary>
-		[XAQueryFieldAttribute("대비율", "12.2")]
+		[XAQueryFieldAttribute("rate", "대비율", "float", "12.2")]
 		public float rate;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 전일거래량
 		/// </summary>
-		[XAQueryFieldAttribute("전일거래량", "12")]
+		[XAQueryFieldAttribute("jnilvolume", "전일거래량", "long", "12")]
 		public long jnilvolume;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가", "8")]
+		[XAQueryFieldAttribute("open", "시가", "long", "8")]
 		public long open;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가", "8")]
+		[XAQueryFieldAttribute("high", "고가", "long", "8")]
 		public long high;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가", "8")]
+		[XAQueryFieldAttribute("low", "저가", "long", "8")]
 		public long low;
 		/// <summary>
 		/// 연속
 		/// </summary>
-		[XAQueryFieldAttribute("연속", "8")]
+		[XAQueryFieldAttribute("lmtdaycnt", "연속", "long", "8")]
 		public long lmtdaycnt;
 		/// <summary>
 		/// 거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금", "12")]
+		[XAQueryFieldAttribute("value", "거래대금", "long", "12")]
 		public long value;
 		/// <summary>
 		/// 시가총액
 		/// </summary>
-		[XAQueryFieldAttribute("시가총액", "12")]
+		[XAQueryFieldAttribute("total", "시가총액", "long", "12")]
 		public long total;
 
 		public static class F

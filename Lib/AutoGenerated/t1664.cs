@@ -50,22 +50,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 시장구분
 		/// </summary>
-		[XAQueryFieldAttribute("시장구분", "1")]
+		[XAQueryFieldAttribute("mgubun", "시장구분", "char", "1")]
 		public char mgubun;
 		/// <summary>
 		/// 금액수량구분
 		/// </summary>
-		[XAQueryFieldAttribute("금액수량구분", "1")]
+		[XAQueryFieldAttribute("vagubun", "금액수량구분", "char", "1")]
 		public char vagubun;
 		/// <summary>
 		/// 시간일별구분
 		/// </summary>
-		[XAQueryFieldAttribute("시간일별구분", "1")]
+		[XAQueryFieldAttribute("bdgubun", "시간일별구분", "char", "1")]
 		public char bdgubun;
 		/// <summary>
 		/// 조회건수
 		/// </summary>
-		[XAQueryFieldAttribute("조회건수", "3")]
+		[XAQueryFieldAttribute("cnt", "조회건수", "int", "3")]
 		public int cnt;
 
 		public static class F
@@ -185,77 +185,77 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자시간
 		/// </summary>
-		[XAQueryFieldAttribute("일자시간", "8")]
+		[XAQueryFieldAttribute("dt", "일자시간", "char", "8")]
 		public string dt;
 		/// <summary>
 		/// 증권순매수
 		/// </summary>
-		[XAQueryFieldAttribute("증권순매수", "12.0")]
+		[XAQueryFieldAttribute("tjj01", "증권순매수", "double", "12.0")]
 		public double tjj01;
 		/// <summary>
 		/// 보험순매수
 		/// </summary>
-		[XAQueryFieldAttribute("보험순매수", "12.0")]
+		[XAQueryFieldAttribute("tjj02", "보험순매수", "double", "12.0")]
 		public double tjj02;
 		/// <summary>
 		/// 투신순매수
 		/// </summary>
-		[XAQueryFieldAttribute("투신순매수", "12.0")]
+		[XAQueryFieldAttribute("tjj03", "투신순매수", "double", "12.0")]
 		public double tjj03;
 		/// <summary>
 		/// 은행순매수
 		/// </summary>
-		[XAQueryFieldAttribute("은행순매수", "12.0")]
+		[XAQueryFieldAttribute("tjj04", "은행순매수", "double", "12.0")]
 		public double tjj04;
 		/// <summary>
 		/// 종금순매수
 		/// </summary>
-		[XAQueryFieldAttribute("종금순매수", "12.0")]
+		[XAQueryFieldAttribute("tjj05", "종금순매수", "double", "12.0")]
 		public double tjj05;
 		/// <summary>
 		/// 기금순매수
 		/// </summary>
-		[XAQueryFieldAttribute("기금순매수", "12.0")]
+		[XAQueryFieldAttribute("tjj06", "기금순매수", "double", "12.0")]
 		public double tjj06;
 		/// <summary>
 		/// 기타순매수
 		/// </summary>
-		[XAQueryFieldAttribute("기타순매수", "12.0")]
+		[XAQueryFieldAttribute("tjj07", "기타순매수", "double", "12.0")]
 		public double tjj07;
 		/// <summary>
 		/// 개인순매수
 		/// </summary>
-		[XAQueryFieldAttribute("개인순매수", "12.0")]
+		[XAQueryFieldAttribute("tjj08", "개인순매수", "double", "12.0")]
 		public double tjj08;
 		/// <summary>
 		/// 외국인순매수
 		/// </summary>
-		[XAQueryFieldAttribute("외국인순매수", "12.0")]
+		[XAQueryFieldAttribute("tjj17", "외국인순매수", "double", "12.0")]
 		public double tjj17;
 		/// <summary>
 		/// 기관순매수
 		/// </summary>
-		[XAQueryFieldAttribute("기관순매수", "12.0")]
+		[XAQueryFieldAttribute("tjj18", "기관순매수", "double", "12.0")]
 		public double tjj18;
 		/// <summary>
 		/// 차익순매수
 		/// </summary>
-		[XAQueryFieldAttribute("차익순매수", "12.0")]
+		[XAQueryFieldAttribute("cha", "차익순매수", "double", "12.0")]
 		public double cha;
 		/// <summary>
 		/// 비차익순매수
 		/// </summary>
-		[XAQueryFieldAttribute("비차익순매수", "12.0")]
+		[XAQueryFieldAttribute("bicha", "비차익순매수", "double", "12.0")]
 		public double bicha;
 		/// <summary>
 		/// 종합순매수
 		/// </summary>
-		[XAQueryFieldAttribute("종합순매수", "12.0")]
+		[XAQueryFieldAttribute("totcha", "종합순매수", "double", "12.0")]
 		public double totcha;
 		/// <summary>
 		/// 베이시스
 		/// </summary>
-		[XAQueryFieldAttribute("베이시스", "6.2")]
+		[XAQueryFieldAttribute("basis", "베이시스", "float", "6.2")]
 		public float basis;
 
 		public static class F

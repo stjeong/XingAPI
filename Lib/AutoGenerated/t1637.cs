@@ -50,32 +50,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 수량금액구분(0:수량1:금액)
 		/// </summary>
-		[XAQueryFieldAttribute("수량금액구분(0:수량1:금액)", "1")]
+		[XAQueryFieldAttribute("gubun1", "수량금액구분(0:수량1:금액)", "char", "1")]
 		public char gubun1;
 		/// <summary>
 		/// 시간일별구분(0:시간1:일자)
 		/// </summary>
-		[XAQueryFieldAttribute("시간일별구분(0:시간1:일자)", "1")]
+		[XAQueryFieldAttribute("gubun2", "시간일별구분(0:시간1:일자)", "char", "1")]
 		public char gubun2;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자", "8")]
+		[XAQueryFieldAttribute("date", "일자", "char", "8")]
 		public string date;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간", "6")]
+		[XAQueryFieldAttribute("time", "시간", "char", "6")]
 		public string time;
 		/// <summary>
 		/// IDXCTS(9999:차트)
 		/// </summary>
-		[XAQueryFieldAttribute("IDXCTS(9999:차트)", "4")]
+		[XAQueryFieldAttribute("cts_idx", "IDXCTS(9999:차트)", "long", "4")]
 		public long cts_idx;
 
 		public static class F
@@ -217,7 +217,7 @@ namespace XingAPINet
 		/// <summary>
 		/// IDXCTS
 		/// </summary>
-		[XAQueryFieldAttribute("IDXCTS", "4")]
+		[XAQueryFieldAttribute("cts_idx", "IDXCTS", "long", "4")]
 		public long cts_idx;
 
 		public static class F
@@ -327,72 +327,72 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자", "8")]
+		[XAQueryFieldAttribute("date", "일자", "char", "8")]
 		public string date;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간", "6")]
+		[XAQueryFieldAttribute("time", "시간", "char", "6")]
 		public string time;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "8")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 대비
 		/// </summary>
-		[XAQueryFieldAttribute("대비", "8")]
+		[XAQueryFieldAttribute("change", "대비", "long", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량", "12")]
+		[XAQueryFieldAttribute("volume", "거래량", "long", "12")]
 		public long volume;
 		/// <summary>
 		/// 순매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("순매수금액", "15")]
+		[XAQueryFieldAttribute("svalue", "순매수금액", "long", "15")]
 		public long svalue;
 		/// <summary>
 		/// 매도금액
 		/// </summary>
-		[XAQueryFieldAttribute("매도금액", "15")]
+		[XAQueryFieldAttribute("offervalue", "매도금액", "long", "15")]
 		public long offervalue;
 		/// <summary>
 		/// 매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("매수금액", "15")]
+		[XAQueryFieldAttribute("stksvalue", "매수금액", "long", "15")]
 		public long stksvalue;
 		/// <summary>
 		/// 순매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("순매수수량", "12")]
+		[XAQueryFieldAttribute("svolume", "순매수수량", "long", "12")]
 		public long svolume;
 		/// <summary>
 		/// 매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도수량", "12")]
+		[XAQueryFieldAttribute("offervolume", "매도수량", "long", "12")]
 		public long offervolume;
 		/// <summary>
 		/// 매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수수량", "12")]
+		[XAQueryFieldAttribute("stksvolume", "매수수량", "long", "12")]
 		public long stksvolume;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 
 		public static class F

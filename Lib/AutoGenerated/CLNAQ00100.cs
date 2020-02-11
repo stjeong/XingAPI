@@ -50,32 +50,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분", "1")]
+		[XAQueryFieldAttribute("QryTp", "조회구분", "char", "1")]
 		public char QryTp;
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호", "12")]
+		[XAQueryFieldAttribute("IsuNo", "종목번호", "char", "12")]
 		public string IsuNo;
 		/// <summary>
 		/// 유가증권구분
 		/// </summary>
-		[XAQueryFieldAttribute("유가증권구분", "1")]
+		[XAQueryFieldAttribute("SecTpCode", "유가증권구분", "char", "1")]
 		public char SecTpCode;
 		/// <summary>
 		/// 대출이자등급코드
 		/// </summary>
-		[XAQueryFieldAttribute("대출이자등급코드", "2")]
+		[XAQueryFieldAttribute("LoanIntrstGrdCode", "대출이자등급코드", "char", "2")]
 		public string LoanIntrstGrdCode;
 		/// <summary>
 		/// 대출구분
 		/// </summary>
-		[XAQueryFieldAttribute("대출구분", "1")]
+		[XAQueryFieldAttribute("LoanTp", "대출구분", "char", "1")]
 		public char LoanTp;
 
 		public static class F
@@ -217,32 +217,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분", "1")]
+		[XAQueryFieldAttribute("QryTp", "조회구분", "char", "1")]
 		public char QryTp;
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호", "12")]
+		[XAQueryFieldAttribute("IsuNo", "종목번호", "char", "12")]
 		public string IsuNo;
 		/// <summary>
 		/// 유가증권구분
 		/// </summary>
-		[XAQueryFieldAttribute("유가증권구분", "1")]
+		[XAQueryFieldAttribute("SecTpCode", "유가증권구분", "char", "1")]
 		public char SecTpCode;
 		/// <summary>
 		/// 대출이자등급코드
 		/// </summary>
-		[XAQueryFieldAttribute("대출이자등급코드", "2")]
+		[XAQueryFieldAttribute("LoanIntrstGrdCode", "대출이자등급코드", "char", "2")]
 		public string LoanIntrstGrdCode;
 		/// <summary>
 		/// 대출구분
 		/// </summary>
-		[XAQueryFieldAttribute("대출구분", "1")]
+		[XAQueryFieldAttribute("LoanTp", "대출구분", "char", "1")]
 		public char LoanTp;
 
 		public static class F
@@ -412,107 +412,107 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호", "12")]
+		[XAQueryFieldAttribute("IsuNo", "종목번호", "char", "12")]
 		public string IsuNo;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명", "40")]
+		[XAQueryFieldAttribute("IsuNm", "종목명", "char", "40")]
 		public string IsuNm;
 		/// <summary>
 		/// 액면가
 		/// </summary>
-		[XAQueryFieldAttribute("액면가", "13.2")]
+		[XAQueryFieldAttribute("Parprc", "액면가", "double", "13.2")]
 		public double Parprc;
 		/// <summary>
 		/// 전일종가
 		/// </summary>
-		[XAQueryFieldAttribute("전일종가", "13.2")]
+		[XAQueryFieldAttribute("PrdayCprc", "전일종가", "double", "13.2")]
 		public double PrdayCprc;
 		/// <summary>
 		/// 비율값
 		/// </summary>
-		[XAQueryFieldAttribute("비율값", "19.8")]
+		[XAQueryFieldAttribute("RatVal", "비율값", "double", "19.8")]
 		public double RatVal;
 		/// <summary>
 		/// 대용가
 		/// </summary>
-		[XAQueryFieldAttribute("대용가", "13.2")]
+		[XAQueryFieldAttribute("SubstPrc", "대용가", "double", "13.2")]
 		public double SubstPrc;
 		/// <summary>
 		/// 등록구분
 		/// </summary>
-		[XAQueryFieldAttribute("등록구분", "20")]
+		[XAQueryFieldAttribute("RegTpNm", "등록구분", "char", "20")]
 		public string RegTpNm;
 		/// <summary>
 		/// 현물증거금징수분류명
 		/// </summary>
-		[XAQueryFieldAttribute("현물증거금징수분류명", "40")]
+		[XAQueryFieldAttribute("SpotMgnLevyClssNm", "현물증거금징수분류명", "char", "40")]
 		public string SpotMgnLevyClssNm;
 		/// <summary>
 		/// 거래정지사유
 		/// </summary>
-		[XAQueryFieldAttribute("거래정지사유", "40")]
+		[XAQueryFieldAttribute("FnoTrdStopRsnCnts", "거래정지사유", "char", "40")]
 		public string FnoTrdStopRsnCnts;
 		/// <summary>
 		/// 요주의유형명
 		/// </summary>
-		[XAQueryFieldAttribute("요주의유형명", "40")]
+		[XAQueryFieldAttribute("DgrsPtnNm", "요주의유형명", "char", "40")]
 		public string DgrsPtnNm;
 		/// <summary>
 		/// 사고유형
 		/// </summary>
-		[XAQueryFieldAttribute("사고유형", "40")]
+		[XAQueryFieldAttribute("AcdPtnNm", "사고유형", "char", "40")]
 		public string AcdPtnNm;
 		/// <summary>
 		/// 시장구분
 		/// </summary>
-		[XAQueryFieldAttribute("시장구분", "20")]
+		[XAQueryFieldAttribute("MktTpNm", "시장구분", "char", "20")]
 		public string MktTpNm;
 		/// <summary>
 		/// 한도값
 		/// </summary>
-		[XAQueryFieldAttribute("한도값", "18")]
+		[XAQueryFieldAttribute("LmtVal", "한도값", "long", "18")]
 		public long LmtVal;
 		/// <summary>
 		/// 계좌한도값
 		/// </summary>
-		[XAQueryFieldAttribute("계좌한도값", "18")]
+		[XAQueryFieldAttribute("AcntLmtVal", "계좌한도값", "long", "18")]
 		public long AcntLmtVal;
 		/// <summary>
 		/// 대출등급코드
 		/// </summary>
-		[XAQueryFieldAttribute("대출등급코드", "2")]
+		[XAQueryFieldAttribute("LoanGrdCode", "대출등급코드", "char", "2")]
 		public string LoanGrdCode;
 		/// <summary>
 		/// 대출금액
 		/// </summary>
-		[XAQueryFieldAttribute("대출금액", "16")]
+		[XAQueryFieldAttribute("LoanAmt", "대출금액", "long", "16")]
 		public long LoanAmt;
 		/// <summary>
 		/// 대출가능율
 		/// </summary>
-		[XAQueryFieldAttribute("대출가능율", "26.9")]
+		[XAQueryFieldAttribute("LoanAbleRat", "대출가능율", "double", "26.9")]
 		public double LoanAbleRat;
 		/// <summary>
 		/// 대출이율1
 		/// </summary>
-		[XAQueryFieldAttribute("대출이율1", "14.4")]
+		[XAQueryFieldAttribute("LoanIntrat1", "대출이율1", "double", "14.4")]
 		public double LoanIntrat1;
 		/// <summary>
 		/// 등록자ID
 		/// </summary>
-		[XAQueryFieldAttribute("등록자ID", "16")]
+		[XAQueryFieldAttribute("RegPsnId", "등록자ID", "char", "16")]
 		public string RegPsnId;
 		/// <summary>
 		/// 비율값
 		/// </summary>
-		[XAQueryFieldAttribute("비율값", "19.8")]
+		[XAQueryFieldAttribute("Rat01", "비율값", "double", "19.8")]
 		public double Rat01;
 		/// <summary>
 		/// 비율값
 		/// </summary>
-		[XAQueryFieldAttribute("비율값", "19.8")]
+		[XAQueryFieldAttribute("Rat02", "비율값", "double", "19.8")]
 		public double Rat02;
 
 		public static class F
@@ -866,12 +866,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 대출금합계금액
 		/// </summary>
-		[XAQueryFieldAttribute("대출금합계금액", "16")]
+		[XAQueryFieldAttribute("LrgMnyoutSumAmt", "대출금합계금액", "long", "16")]
 		public long LrgMnyoutSumAmt;
 
 		public static class F

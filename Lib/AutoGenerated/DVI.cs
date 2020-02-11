@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드(KEY)
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드(KEY)", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드(KEY)", "char", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,37 +137,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분(0:해제 1:정적발동 2:동적발동 3:정적&동적)
 		/// </summary>
-		[XAQueryFieldAttribute("구분(0:해제 1:정적발동 2:동적발동 3:정적&동적)", "1")]
+		[XAQueryFieldAttribute("vi_gubun", "구분(0:해제 1:정적발동 2:동적발동 3:정적&동적)", "char", "1")]
 		public char vi_gubun;
 		/// <summary>
 		/// 정적VI발동기준가격
 		/// </summary>
-		[XAQueryFieldAttribute("정적VI발동기준가격", "8")]
+		[XAQueryFieldAttribute("svi_recprice", "정적VI발동기준가격", "long", "8")]
 		public long svi_recprice;
 		/// <summary>
 		/// 동적VI발동기준가격
 		/// </summary>
-		[XAQueryFieldAttribute("동적VI발동기준가격", "8")]
+		[XAQueryFieldAttribute("dvi_recprice", "동적VI발동기준가격", "long", "8")]
 		public long dvi_recprice;
 		/// <summary>
 		/// VI발동가격
 		/// </summary>
-		[XAQueryFieldAttribute("VI발동가격", "8")]
+		[XAQueryFieldAttribute("vi_trgprice", "VI발동가격", "long", "8")]
 		public long vi_trgprice;
 		/// <summary>
 		/// 단축코드(KEY)
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드(KEY)", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드(KEY)", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 참조코드(미사용)
 		/// </summary>
-		[XAQueryFieldAttribute("참조코드(미사용)", "6")]
+		[XAQueryFieldAttribute("ref_shcode", "참조코드(미사용)", "char", "6")]
 		public string ref_shcode;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간", "6")]
+		[XAQueryFieldAttribute("time", "시간", "char", "6")]
 		public string time;
 
 		public static class F

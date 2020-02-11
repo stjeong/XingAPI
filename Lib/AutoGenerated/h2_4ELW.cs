@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,32 +137,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 호가시간
 		/// </summary>
-		[XAQueryFieldAttribute("호가시간", "6")]
+		[XAQueryFieldAttribute("hotime", "호가시간", "char", "6")]
 		public string hotime;
 		/// <summary>
 		/// 시간외매도잔량
 		/// </summary>
-		[XAQueryFieldAttribute("시간외매도잔량", "12")]
+		[XAQueryFieldAttribute("tmofferrem", "시간외매도잔량", "long", "12")]
 		public long tmofferrem;
 		/// <summary>
 		/// 시간외매수잔량
 		/// </summary>
-		[XAQueryFieldAttribute("시간외매수잔량", "12")]
+		[XAQueryFieldAttribute("tmbidrem", "시간외매수잔량", "long", "12")]
 		public long tmbidrem;
 		/// <summary>
 		/// 시간외매도수량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("시간외매도수량직전대비", "12")]
+		[XAQueryFieldAttribute("pretmoffercha", "시간외매도수량직전대비", "long", "12")]
 		public long pretmoffercha;
 		/// <summary>
 		/// 시간외매수수량직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("시간외매수수량직전대비", "12")]
+		[XAQueryFieldAttribute("pretmbidcha", "시간외매수수량직전대비", "long", "12")]
 		public long pretmbidcha;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 
 		public static class F

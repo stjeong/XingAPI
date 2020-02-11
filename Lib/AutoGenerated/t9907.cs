@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// DUMMY
 		/// </summary>
-		[XAQueryFieldAttribute("DUMMY", "1")]
+		[XAQueryFieldAttribute("dummy", "DUMMY", "char", "1")]
 		public char dummy;
 
 		public static class F
@@ -137,12 +137,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 만기월
 		/// </summary>
-		[XAQueryFieldAttribute("만기월", "6")]
+		[XAQueryFieldAttribute("lastym", "만기월", "char", "6")]
 		public string lastym;
 		/// <summary>
 		/// 만기월명
 		/// </summary>
-		[XAQueryFieldAttribute("만기월명", "10")]
+		[XAQueryFieldAttribute("lastnm", "만기월명", "char", "10")]
 		public string lastnm;
 
 		public static class F

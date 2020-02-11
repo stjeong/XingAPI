@@ -50,27 +50,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 시장구분(1:코스피2:코스닥3:선물4:콜옵션5:풋옵션6:주식선물)
 		/// </summary>
-		[XAQueryFieldAttribute("시장구분(1:코스피2:코스닥3:선물4:콜옵션5:풋옵션6:주식선물)", "1")]
+		[XAQueryFieldAttribute("gubun1", "시장구분(1:코스피2:코스닥3:선물4:콜옵션5:풋옵션6:주식선물)", "char", "1")]
 		public char gubun1;
 		/// <summary>
 		/// 수량금액구분(1:수량2:금액)
 		/// </summary>
-		[XAQueryFieldAttribute("수량금액구분(1:수량2:금액)", "1")]
+		[XAQueryFieldAttribute("gubun2", "수량금액구분(1:수량2:금액)", "char", "1")]
 		public char gubun2;
 		/// <summary>
 		/// 일자구분(1:시간대별2:일별)
 		/// </summary>
-		[XAQueryFieldAttribute("일자구분(1:시간대별2:일별)", "1")]
+		[XAQueryFieldAttribute("gubun3", "일자구분(1:시간대별2:일별)", "char", "1")]
 		public char gubun3;
 		/// <summary>
 		/// CTSDATE(연속키값-일자)
 		/// </summary>
-		[XAQueryFieldAttribute("CTSDATE(연속키값-일자)", "8")]
+		[XAQueryFieldAttribute("cts_date", "CTSDATE(연속키값-일자)", "char", "8")]
 		public string cts_date;
 		/// <summary>
 		/// CTSTIME(연속키값-시간)
 		/// </summary>
-		[XAQueryFieldAttribute("CTSTIME(연속키값-시간)", "8")]
+		[XAQueryFieldAttribute("cts_time", "CTSTIME(연속키값-시간)", "char", "8")]
 		public string cts_time;
 
 		public static class F
@@ -201,72 +201,72 @@ namespace XingAPINet
 		/// <summary>
 		/// CTSDATE
 		/// </summary>
-		[XAQueryFieldAttribute("CTSDATE", "8")]
+		[XAQueryFieldAttribute("cts_date", "CTSDATE", "char", "8")]
 		public string cts_date;
 		/// <summary>
 		/// CTSTIME
 		/// </summary>
-		[XAQueryFieldAttribute("CTSTIME", "8")]
+		[XAQueryFieldAttribute("cts_time", "CTSTIME", "char", "8")]
 		public string cts_time;
 		/// <summary>
 		/// 개인매수
 		/// </summary>
-		[XAQueryFieldAttribute("개인매수", "12")]
+		[XAQueryFieldAttribute("ms_08", "개인매수", "long", "12")]
 		public long ms_08;
 		/// <summary>
 		/// 개인매도
 		/// </summary>
-		[XAQueryFieldAttribute("개인매도", "12")]
+		[XAQueryFieldAttribute("md_08", "개인매도", "long", "12")]
 		public long md_08;
 		/// <summary>
 		/// 개인순매수
 		/// </summary>
-		[XAQueryFieldAttribute("개인순매수", "12")]
+		[XAQueryFieldAttribute("sv_08", "개인순매수", "long", "12")]
 		public long sv_08;
 		/// <summary>
 		/// 외국인매수
 		/// </summary>
-		[XAQueryFieldAttribute("외국인매수", "12")]
+		[XAQueryFieldAttribute("ms_17", "외국인매수", "long", "12")]
 		public long ms_17;
 		/// <summary>
 		/// 외국인매도
 		/// </summary>
-		[XAQueryFieldAttribute("외국인매도", "12")]
+		[XAQueryFieldAttribute("md_17", "외국인매도", "long", "12")]
 		public long md_17;
 		/// <summary>
 		/// 외국인순매수
 		/// </summary>
-		[XAQueryFieldAttribute("외국인순매수", "12")]
+		[XAQueryFieldAttribute("sv_17", "외국인순매수", "long", "12")]
 		public long sv_17;
 		/// <summary>
 		/// 기관계매수
 		/// </summary>
-		[XAQueryFieldAttribute("기관계매수", "12")]
+		[XAQueryFieldAttribute("ms_18", "기관계매수", "long", "12")]
 		public long ms_18;
 		/// <summary>
 		/// 기관계매도
 		/// </summary>
-		[XAQueryFieldAttribute("기관계매도", "12")]
+		[XAQueryFieldAttribute("md_18", "기관계매도", "long", "12")]
 		public long md_18;
 		/// <summary>
 		/// 기관계순매수
 		/// </summary>
-		[XAQueryFieldAttribute("기관계순매수", "12")]
+		[XAQueryFieldAttribute("sv_18", "기관계순매수", "long", "12")]
 		public long sv_18;
 		/// <summary>
 		/// 증권매수
 		/// </summary>
-		[XAQueryFieldAttribute("증권매수", "12")]
+		[XAQueryFieldAttribute("ms_01", "증권매수", "long", "12")]
 		public long ms_01;
 		/// <summary>
 		/// 증권매도
 		/// </summary>
-		[XAQueryFieldAttribute("증권매도", "12")]
+		[XAQueryFieldAttribute("md_01", "증권매도", "long", "12")]
 		public long md_01;
 		/// <summary>
 		/// 증권순매수
 		/// </summary>
-		[XAQueryFieldAttribute("증권순매수", "12")]
+		[XAQueryFieldAttribute("sv_01", "증권순매수", "long", "12")]
 		public long sv_01;
 
 		public static class F
@@ -532,32 +532,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜", "8")]
+		[XAQueryFieldAttribute("date", "날짜", "char", "8")]
 		public string date;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간", "8")]
+		[XAQueryFieldAttribute("time", "시간", "char", "8")]
 		public string time;
 		/// <summary>
 		/// 개인
 		/// </summary>
-		[XAQueryFieldAttribute("개인", "12")]
+		[XAQueryFieldAttribute("sv_08", "개인", "long", "12")]
 		public long sv_08;
 		/// <summary>
 		/// 외국인
 		/// </summary>
-		[XAQueryFieldAttribute("외국인", "12")]
+		[XAQueryFieldAttribute("sv_17", "외국인", "long", "12")]
 		public long sv_17;
 		/// <summary>
 		/// 기관계
 		/// </summary>
-		[XAQueryFieldAttribute("기관계", "12")]
+		[XAQueryFieldAttribute("sv_18", "기관계", "long", "12")]
 		public long sv_18;
 		/// <summary>
 		/// 증권
 		/// </summary>
-		[XAQueryFieldAttribute("증권", "12")]
+		[XAQueryFieldAttribute("sv_01", "증권", "long", "12")]
 		public long sv_01;
 
 		public static class F

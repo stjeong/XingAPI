@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,72 +137,72 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간", "8")]
+		[XAQueryFieldAttribute("time", "시간", "char", "8")]
 		public string time;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "8")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "8")]
+		[XAQueryFieldAttribute("change", "전일대비", "long", "8")]
 		public long change;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량", "12")]
+		[XAQueryFieldAttribute("volume", "누적거래량", "float", "12")]
 		public float volume;
 		/// <summary>
 		/// NAV대비
 		/// </summary>
-		[XAQueryFieldAttribute("NAV대비", "9.2")]
+		[XAQueryFieldAttribute("navdiff", "NAV대비", "float", "9.2")]
 		public float navdiff;
 		/// <summary>
 		/// NAV
 		/// </summary>
-		[XAQueryFieldAttribute("NAV", "9.2")]
+		[XAQueryFieldAttribute("nav", "NAV", "float", "9.2")]
 		public float nav;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "9.2")]
+		[XAQueryFieldAttribute("navchange", "전일대비", "float", "9.2")]
 		public float navchange;
 		/// <summary>
 		/// 추적오차
 		/// </summary>
-		[XAQueryFieldAttribute("추적오차", "9.2")]
+		[XAQueryFieldAttribute("crate", "추적오차", "float", "9.2")]
 		public float crate;
 		/// <summary>
 		/// 괴리
 		/// </summary>
-		[XAQueryFieldAttribute("괴리", "9.2")]
+		[XAQueryFieldAttribute("grate", "괴리", "float", "9.2")]
 		public float grate;
 		/// <summary>
 		/// 지수
 		/// </summary>
-		[XAQueryFieldAttribute("지수", "8.2")]
+		[XAQueryFieldAttribute("jisu", "지수", "float", "8.2")]
 		public float jisu;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "8.2")]
+		[XAQueryFieldAttribute("jichange", "전일대비", "float", "8.2")]
 		public float jichange;
 		/// <summary>
 		/// 전일대비율
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비율", "8.2")]
+		[XAQueryFieldAttribute("jirate", "전일대비율", "float", "8.2")]
 		public float jirate;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 
 		public static class F

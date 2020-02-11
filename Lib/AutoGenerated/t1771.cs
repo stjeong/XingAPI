@@ -50,37 +50,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 거래원코드
 		/// </summary>
-		[XAQueryFieldAttribute("거래원코드", "3")]
+		[XAQueryFieldAttribute("tradno", "거래원코드", "char", "3")]
 		public string tradno;
 		/// <summary>
 		/// 구분1
 		/// </summary>
-		[XAQueryFieldAttribute("구분1", "1")]
+		[XAQueryFieldAttribute("gubun1", "구분1", "char", "1")]
 		public char gubun1;
 		/// <summary>
 		/// 거래원날짜1
 		/// </summary>
-		[XAQueryFieldAttribute("거래원날짜1", "8")]
+		[XAQueryFieldAttribute("traddate1", "거래원날짜1", "char", "8")]
 		public string traddate1;
 		/// <summary>
 		/// 거래원날짜2
 		/// </summary>
-		[XAQueryFieldAttribute("거래원날짜2", "8")]
+		[XAQueryFieldAttribute("traddate2", "거래원날짜2", "char", "8")]
 		public string traddate2;
 		/// <summary>
 		/// CTSIDX
 		/// </summary>
-		[XAQueryFieldAttribute("CTSIDX", "4")]
+		[XAQueryFieldAttribute("cts_idx", "CTSIDX", "long", "4")]
 		public long cts_idx;
 		/// <summary>
 		/// 요청건수
 		/// </summary>
-		[XAQueryFieldAttribute("요청건수", "3")]
+		[XAQueryFieldAttribute("cnt", "요청건수", "int", "3")]
 		public int cnt;
 
 		public static class F
@@ -233,7 +233,7 @@ namespace XingAPINet
 		/// <summary>
 		/// CTSIDX
 		/// </summary>
-		[XAQueryFieldAttribute("CTSIDX", "4")]
+		[XAQueryFieldAttribute("cts_idx", "CTSIDX", "long", "4")]
 		public long cts_idx;
 
 		public static class F
@@ -343,77 +343,77 @@ namespace XingAPINet
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜", "8")]
+		[XAQueryFieldAttribute("traddate", "날짜", "char", "8")]
 		public string traddate;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간", "8")]
+		[XAQueryFieldAttribute("tradtime", "시간", "char", "8")]
 		public string tradtime;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "8")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 대비
 		/// </summary>
-		[XAQueryFieldAttribute("대비", "8")]
+		[XAQueryFieldAttribute("change", "대비", "long", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량", "12")]
+		[XAQueryFieldAttribute("volume", "거래량", "long", "12")]
 		public long volume;
 		/// <summary>
 		/// 매도
 		/// </summary>
-		[XAQueryFieldAttribute("매도", "12")]
+		[XAQueryFieldAttribute("tradmdcha", "매도", "long", "12")]
 		public long tradmdcha;
 		/// <summary>
 		/// 매수
 		/// </summary>
-		[XAQueryFieldAttribute("매수", "12")]
+		[XAQueryFieldAttribute("tradmscha", "매수", "long", "12")]
 		public long tradmscha;
 		/// <summary>
 		/// 매도대금
 		/// </summary>
-		[XAQueryFieldAttribute("매도대금", "18")]
+		[XAQueryFieldAttribute("tradmdval", "매도대금", "long", "18")]
 		public long tradmdval;
 		/// <summary>
 		/// 매수대금
 		/// </summary>
-		[XAQueryFieldAttribute("매수대금", "18")]
+		[XAQueryFieldAttribute("tradmsval", "매수대금", "long", "18")]
 		public long tradmsval;
 		/// <summary>
 		/// 순매수
 		/// </summary>
-		[XAQueryFieldAttribute("순매수", "12")]
+		[XAQueryFieldAttribute("tradmsscha", "순매수", "long", "12")]
 		public long tradmsscha;
 		/// <summary>
 		/// 누적순매수
 		/// </summary>
-		[XAQueryFieldAttribute("누적순매수", "12")]
+		[XAQueryFieldAttribute("tradmttvolume", "누적순매수", "long", "12")]
 		public long tradmttvolume;
 		/// <summary>
 		/// 평균단가
 		/// </summary>
-		[XAQueryFieldAttribute("평균단가", "8")]
+		[XAQueryFieldAttribute("tradavg", "평균단가", "long", "8")]
 		public long tradavg;
 		/// <summary>
 		/// 누적평균단가
 		/// </summary>
-		[XAQueryFieldAttribute("누적평균단가", "8")]
+		[XAQueryFieldAttribute("tradmttavg", "누적평균단가", "long", "8")]
 		public long tradmttavg;
 
 		public static class F

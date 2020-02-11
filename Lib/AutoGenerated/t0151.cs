@@ -50,32 +50,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자", "8")]
+		[XAQueryFieldAttribute("date", "일자", "char", "8")]
 		public string date;
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호", "11")]
+		[XAQueryFieldAttribute("accno", "계좌번호", "char", "11")]
 		public string accno;
 		/// <summary>
 		/// CTS_매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_매매구분", "1")]
+		[XAQueryFieldAttribute("cts_medosu", "CTS_매매구분", "char", "1")]
 		public char cts_medosu;
 		/// <summary>
 		/// CTS_종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_종목번호", "12")]
+		[XAQueryFieldAttribute("cts_expcode", "CTS_종목번호", "char", "12")]
 		public string cts_expcode;
 		/// <summary>
 		/// CTS_단가
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_단가", "9")]
+		[XAQueryFieldAttribute("cts_price", "CTS_단가", "char", "9")]
 		public string cts_price;
 		/// <summary>
 		/// CTS_매체
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_매체", "2")]
+		[XAQueryFieldAttribute("cts_middiv", "CTS_매체", "char", "2")]
 		public string cts_middiv;
 
 		public static class F
@@ -217,117 +217,117 @@ namespace XingAPINet
 		/// <summary>
 		/// 매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도수량", "9")]
+		[XAQueryFieldAttribute("mdqty", "매도수량", "long", "9")]
 		public long mdqty;
 		/// <summary>
 		/// 매도약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("매도약정금액", "18")]
+		[XAQueryFieldAttribute("mdamt", "매도약정금액", "long", "18")]
 		public long mdamt;
 		/// <summary>
 		/// 매도수수료
 		/// </summary>
-		[XAQueryFieldAttribute("매도수수료", "18")]
+		[XAQueryFieldAttribute("mdfee", "매도수수료", "long", "18")]
 		public long mdfee;
 		/// <summary>
 		/// 매도거래세
 		/// </summary>
-		[XAQueryFieldAttribute("매도거래세", "18")]
+		[XAQueryFieldAttribute("mdtax", "매도거래세", "long", "18")]
 		public long mdtax;
 		/// <summary>
 		/// 매도농특세
 		/// </summary>
-		[XAQueryFieldAttribute("매도농특세", "18")]
+		[XAQueryFieldAttribute("mdargtax", "매도농특세", "long", "18")]
 		public long mdargtax;
 		/// <summary>
 		/// 매도제비용합
 		/// </summary>
-		[XAQueryFieldAttribute("매도제비용합", "18")]
+		[XAQueryFieldAttribute("tmdtax", "매도제비용합", "long", "18")]
 		public long tmdtax;
 		/// <summary>
 		/// 매도정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("매도정산금액", "18")]
+		[XAQueryFieldAttribute("mdadjamt", "매도정산금액", "long", "18")]
 		public long mdadjamt;
 		/// <summary>
 		/// 매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수수량", "9")]
+		[XAQueryFieldAttribute("msqty", "매수수량", "long", "9")]
 		public long msqty;
 		/// <summary>
 		/// 매수약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("매수약정금액", "18")]
+		[XAQueryFieldAttribute("msamt", "매수약정금액", "long", "18")]
 		public long msamt;
 		/// <summary>
 		/// 매수수수료
 		/// </summary>
-		[XAQueryFieldAttribute("매수수수료", "18")]
+		[XAQueryFieldAttribute("msfee", "매수수수료", "long", "18")]
 		public long msfee;
 		/// <summary>
 		/// 매수제비용합
 		/// </summary>
-		[XAQueryFieldAttribute("매수제비용합", "18")]
+		[XAQueryFieldAttribute("tmstax", "매수제비용합", "long", "18")]
 		public long tmstax;
 		/// <summary>
 		/// 매수정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("매수정산금액", "18")]
+		[XAQueryFieldAttribute("msadjamt", "매수정산금액", "long", "18")]
 		public long msadjamt;
 		/// <summary>
 		/// 합계수량
 		/// </summary>
-		[XAQueryFieldAttribute("합계수량", "9")]
+		[XAQueryFieldAttribute("tqty", "합계수량", "long", "9")]
 		public long tqty;
 		/// <summary>
 		/// 합계약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("합계약정금액", "18")]
+		[XAQueryFieldAttribute("tamt", "합계약정금액", "long", "18")]
 		public long tamt;
 		/// <summary>
 		/// 합계수수료
 		/// </summary>
-		[XAQueryFieldAttribute("합계수수료", "18")]
+		[XAQueryFieldAttribute("tfee", "합계수수료", "long", "18")]
 		public long tfee;
 		/// <summary>
 		/// 합계거래세
 		/// </summary>
-		[XAQueryFieldAttribute("합계거래세", "18")]
+		[XAQueryFieldAttribute("tottax", "합계거래세", "long", "18")]
 		public long tottax;
 		/// <summary>
 		/// 합계농특세
 		/// </summary>
-		[XAQueryFieldAttribute("합계농특세", "18")]
+		[XAQueryFieldAttribute("targtax", "합계농특세", "long", "18")]
 		public long targtax;
 		/// <summary>
 		/// 합계제비용합
 		/// </summary>
-		[XAQueryFieldAttribute("합계제비용합", "18")]
+		[XAQueryFieldAttribute("ttax", "합계제비용합", "long", "18")]
 		public long ttax;
 		/// <summary>
 		/// 합계정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("합계정산금액", "18")]
+		[XAQueryFieldAttribute("tadjamt", "합계정산금액", "long", "18")]
 		public long tadjamt;
 		/// <summary>
 		/// CTS_매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_매매구분", "1")]
+		[XAQueryFieldAttribute("cts_medosu", "CTS_매매구분", "char", "1")]
 		public char cts_medosu;
 		/// <summary>
 		/// CTS_종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_종목번호", "12")]
+		[XAQueryFieldAttribute("cts_expcode", "CTS_종목번호", "char", "12")]
 		public string cts_expcode;
 		/// <summary>
 		/// CTS_단가
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_단가", "9")]
+		[XAQueryFieldAttribute("cts_price", "CTS_단가", "char", "9")]
 		public string cts_price;
 		/// <summary>
 		/// CTS_매체
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_매체", "2")]
+		[XAQueryFieldAttribute("cts_middiv", "CTS_매체", "char", "2")]
 		public string cts_middiv;
 
 		public static class F
@@ -701,52 +701,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("매매구분", "10")]
+		[XAQueryFieldAttribute("medosu", "매매구분", "char", "10")]
 		public string medosu;
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호", "12")]
+		[XAQueryFieldAttribute("expcode", "종목번호", "char", "12")]
 		public string expcode;
 		/// <summary>
 		/// 수량
 		/// </summary>
-		[XAQueryFieldAttribute("수량", "9")]
+		[XAQueryFieldAttribute("qty", "수량", "long", "9")]
 		public long qty;
 		/// <summary>
 		/// 단가
 		/// </summary>
-		[XAQueryFieldAttribute("단가", "9")]
+		[XAQueryFieldAttribute("price", "단가", "long", "9")]
 		public long price;
 		/// <summary>
 		/// 약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("약정금액", "18")]
+		[XAQueryFieldAttribute("amt", "약정금액", "long", "18")]
 		public long amt;
 		/// <summary>
 		/// 수수료
 		/// </summary>
-		[XAQueryFieldAttribute("수수료", "18")]
+		[XAQueryFieldAttribute("fee", "수수료", "long", "18")]
 		public long fee;
 		/// <summary>
 		/// 거래세
 		/// </summary>
-		[XAQueryFieldAttribute("거래세", "18")]
+		[XAQueryFieldAttribute("tax", "거래세", "long", "18")]
 		public long tax;
 		/// <summary>
 		/// 농특세
 		/// </summary>
-		[XAQueryFieldAttribute("농특세", "18")]
+		[XAQueryFieldAttribute("argtax", "농특세", "long", "18")]
 		public long argtax;
 		/// <summary>
 		/// 정산금액
 		/// </summary>
-		[XAQueryFieldAttribute("정산금액", "18")]
+		[XAQueryFieldAttribute("adjamt", "정산금액", "long", "18")]
 		public long adjamt;
 		/// <summary>
 		/// 매체
 		/// </summary>
-		[XAQueryFieldAttribute("매체", "20")]
+		[XAQueryFieldAttribute("middiv", "매체", "char", "20")]
 		public string middiv;
 
 		public static class F

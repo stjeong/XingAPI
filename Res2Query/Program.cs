@@ -456,6 +456,9 @@ namespace Res2Query
 
             AllFields.AppendLine($"{tab}\tpublic static string[] AllFields = new string[]");
             AllFields.AppendLine($"{tab}\t{{");
+
+            Dictionary<string, int> uniqueId = new Dictionary<string, int>();
+
             foreach (string item in blockText.Skip(1))
             {
                 if (string.IsNullOrEmpty(item) == true)
@@ -488,7 +491,7 @@ namespace Res2Query
 
                 {
                     AddXmlHelp(sb, tab + "\t", fieldDesc);
-                    sb.AppendLine($"{tab}\t[XAQueryFieldAttribute(\"{fieldDesc}\", \"{formatOrLen}\")]");
+                    sb.AppendLine($"{tab}\t[XAQueryFieldAttribute(\"{GetUniqueName(uniqueId, name2)}\", \"{fieldDesc}\", \"{fieldType}\", \"{formatOrLen}\")]");
                     sb.AppendLine($"{tab}\tpublic {GetFieldType(fieldType, formatOrLen)} {name2};");
                 }
 
@@ -697,6 +700,21 @@ namespace Res2Query
             sb.AppendLine($"{tab}}}");
 
             return sb.ToString();
+        }
+
+        public static string GetUniqueName(Dictionary<string, int> dict, string name)
+        {
+            string key = name.ToLower();
+
+            if (dict.ContainsKey(key) == false)
+            {
+                dict[key] = 1;
+                return name;
+            }
+
+            dict[key]++;
+
+            return $"{name}_{dict[key]}";
         }
 
         public static string GetFieldToStringExp(string typeName, string fieldName, decimal length)

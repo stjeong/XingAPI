@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "8")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "8")]
 		public string shcode;
 
 		public static class F
@@ -137,37 +137,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 예상체결시간
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결시간", "6")]
+		[XAQueryFieldAttribute("ychetime", "예상체결시간", "char", "6")]
 		public string ychetime;
 		/// <summary>
 		/// 예상체결가격
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가격", "9.2")]
+		[XAQueryFieldAttribute("yeprice", "예상체결가격", "float", "9.2")]
 		public float yeprice;
 		/// <summary>
 		/// 예상체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결수량", "6")]
+		[XAQueryFieldAttribute("yevolume", "예상체결수량", "long", "6")]
 		public long yevolume;
 		/// <summary>
 		/// 예상체결가전일종가대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가전일종가대비구분", "1")]
+		[XAQueryFieldAttribute("jnilysign", "예상체결가전일종가대비구분", "char", "1")]
 		public char jnilysign;
 		/// <summary>
 		/// 예상체결가전일종가대비
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가전일종가대비", "9.2")]
+		[XAQueryFieldAttribute("preychange", "예상체결가전일종가대비", "float", "9.2")]
 		public float preychange;
 		/// <summary>
 		/// 예상체결가전일종가등락율
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가전일종가등락율", "9.2")]
+		[XAQueryFieldAttribute("jnilydrate", "예상체결가전일종가등락율", "float", "9.2")]
 		public float jnilydrate;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "8")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "8")]
 		public string shcode;
 
 		public static class F

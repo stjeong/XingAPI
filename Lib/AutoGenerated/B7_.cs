@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,332 +137,332 @@ namespace XingAPINet
 		/// <summary>
 		/// 호가시간
 		/// </summary>
-		[XAQueryFieldAttribute("호가시간", "6")]
+		[XAQueryFieldAttribute("hotime", "호가시간", "char", "6")]
 		public string hotime;
 		/// <summary>
 		/// LP매도호가수량1
 		/// </summary>
-		[XAQueryFieldAttribute("LP매도호가수량1", "9")]
+		[XAQueryFieldAttribute("lp_offerho1", "LP매도호가수량1", "long", "9")]
 		public long lp_offerho1;
 		/// <summary>
 		/// LP매수호가수량1
 		/// </summary>
-		[XAQueryFieldAttribute("LP매수호가수량1", "9")]
+		[XAQueryFieldAttribute("lp_bidho1", "LP매수호가수량1", "long", "9")]
 		public long lp_bidho1;
 		/// <summary>
 		/// LP매도호가수량2
 		/// </summary>
-		[XAQueryFieldAttribute("LP매도호가수량2", "9")]
+		[XAQueryFieldAttribute("lp_offerho2", "LP매도호가수량2", "long", "9")]
 		public long lp_offerho2;
 		/// <summary>
 		/// LP매수호가수량2
 		/// </summary>
-		[XAQueryFieldAttribute("LP매수호가수량2", "9")]
+		[XAQueryFieldAttribute("lp_bidho2", "LP매수호가수량2", "long", "9")]
 		public long lp_bidho2;
 		/// <summary>
 		/// LP매도호가수량3
 		/// </summary>
-		[XAQueryFieldAttribute("LP매도호가수량3", "9")]
+		[XAQueryFieldAttribute("lp_offerho3", "LP매도호가수량3", "long", "9")]
 		public long lp_offerho3;
 		/// <summary>
 		/// LP매수호가수량3
 		/// </summary>
-		[XAQueryFieldAttribute("LP매수호가수량3", "9")]
+		[XAQueryFieldAttribute("lp_bidho3", "LP매수호가수량3", "long", "9")]
 		public long lp_bidho3;
 		/// <summary>
 		/// LP매도호가수량4
 		/// </summary>
-		[XAQueryFieldAttribute("LP매도호가수량4", "9")]
+		[XAQueryFieldAttribute("lp_offerho4", "LP매도호가수량4", "long", "9")]
 		public long lp_offerho4;
 		/// <summary>
 		/// LP매수호가수량4
 		/// </summary>
-		[XAQueryFieldAttribute("LP매수호가수량4", "9")]
+		[XAQueryFieldAttribute("lp_bidho4", "LP매수호가수량4", "long", "9")]
 		public long lp_bidho4;
 		/// <summary>
 		/// LP매도호가수량5
 		/// </summary>
-		[XAQueryFieldAttribute("LP매도호가수량5", "9")]
+		[XAQueryFieldAttribute("lp_offerho5", "LP매도호가수량5", "long", "9")]
 		public long lp_offerho5;
 		/// <summary>
 		/// LP매수호가수량5
 		/// </summary>
-		[XAQueryFieldAttribute("LP매수호가수량5", "9")]
+		[XAQueryFieldAttribute("lp_bidho5", "LP매수호가수량5", "long", "9")]
 		public long lp_bidho5;
 		/// <summary>
 		/// LP매도호가수량6
 		/// </summary>
-		[XAQueryFieldAttribute("LP매도호가수량6", "9")]
+		[XAQueryFieldAttribute("lp_offerho6", "LP매도호가수량6", "long", "9")]
 		public long lp_offerho6;
 		/// <summary>
 		/// LP매수호가수량6
 		/// </summary>
-		[XAQueryFieldAttribute("LP매수호가수량6", "9")]
+		[XAQueryFieldAttribute("lp_bidho6", "LP매수호가수량6", "long", "9")]
 		public long lp_bidho6;
 		/// <summary>
 		/// LP매도호가수량7
 		/// </summary>
-		[XAQueryFieldAttribute("LP매도호가수량7", "9")]
+		[XAQueryFieldAttribute("lp_offerho7", "LP매도호가수량7", "long", "9")]
 		public long lp_offerho7;
 		/// <summary>
 		/// LP매수호가수량7
 		/// </summary>
-		[XAQueryFieldAttribute("LP매수호가수량7", "9")]
+		[XAQueryFieldAttribute("lp_bidho7", "LP매수호가수량7", "long", "9")]
 		public long lp_bidho7;
 		/// <summary>
 		/// LP매도호가수량8
 		/// </summary>
-		[XAQueryFieldAttribute("LP매도호가수량8", "9")]
+		[XAQueryFieldAttribute("lp_offerho8", "LP매도호가수량8", "long", "9")]
 		public long lp_offerho8;
 		/// <summary>
 		/// LP매수호가수량8
 		/// </summary>
-		[XAQueryFieldAttribute("LP매수호가수량8", "9")]
+		[XAQueryFieldAttribute("lp_bidho8", "LP매수호가수량8", "long", "9")]
 		public long lp_bidho8;
 		/// <summary>
 		/// LP매도호가수량9
 		/// </summary>
-		[XAQueryFieldAttribute("LP매도호가수량9", "9")]
+		[XAQueryFieldAttribute("lp_offerho9", "LP매도호가수량9", "long", "9")]
 		public long lp_offerho9;
 		/// <summary>
 		/// LP매수호가수량9
 		/// </summary>
-		[XAQueryFieldAttribute("LP매수호가수량9", "9")]
+		[XAQueryFieldAttribute("lp_bidho9", "LP매수호가수량9", "long", "9")]
 		public long lp_bidho9;
 		/// <summary>
 		/// LP매도호가수량10
 		/// </summary>
-		[XAQueryFieldAttribute("LP매도호가수량10", "9")]
+		[XAQueryFieldAttribute("lp_offerho10", "LP매도호가수량10", "long", "9")]
 		public long lp_offerho10;
 		/// <summary>
 		/// LP매수호가수량10
 		/// </summary>
-		[XAQueryFieldAttribute("LP매수호가수량10", "9")]
+		[XAQueryFieldAttribute("lp_bidho10", "LP매수호가수량10", "long", "9")]
 		public long lp_bidho10;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 매도호가1
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가1", "7")]
+		[XAQueryFieldAttribute("offerho1", "매도호가1", "long", "7")]
 		public long offerho1;
 		/// <summary>
 		/// 매수호가1
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가1", "7")]
+		[XAQueryFieldAttribute("bidho1", "매수호가1", "long", "7")]
 		public long bidho1;
 		/// <summary>
 		/// 매도호가잔량1
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가잔량1", "9")]
+		[XAQueryFieldAttribute("offerrem1", "매도호가잔량1", "long", "9")]
 		public long offerrem1;
 		/// <summary>
 		/// 매수호가잔량1
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가잔량1", "9")]
+		[XAQueryFieldAttribute("bidrem1", "매수호가잔량1", "long", "9")]
 		public long bidrem1;
 		/// <summary>
 		/// 매도호가2
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가2", "7")]
+		[XAQueryFieldAttribute("offerho2", "매도호가2", "long", "7")]
 		public long offerho2;
 		/// <summary>
 		/// 매수호가2
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가2", "7")]
+		[XAQueryFieldAttribute("bidho2", "매수호가2", "long", "7")]
 		public long bidho2;
 		/// <summary>
 		/// 매도호가잔량2
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가잔량2", "9")]
+		[XAQueryFieldAttribute("offerrem2", "매도호가잔량2", "long", "9")]
 		public long offerrem2;
 		/// <summary>
 		/// 매수호가잔량2
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가잔량2", "9")]
+		[XAQueryFieldAttribute("bidrem2", "매수호가잔량2", "long", "9")]
 		public long bidrem2;
 		/// <summary>
 		/// 매도호가3
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가3", "7")]
+		[XAQueryFieldAttribute("offerho3", "매도호가3", "long", "7")]
 		public long offerho3;
 		/// <summary>
 		/// 매수호가3
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가3", "7")]
+		[XAQueryFieldAttribute("bidho3", "매수호가3", "long", "7")]
 		public long bidho3;
 		/// <summary>
 		/// 매도호가잔량3
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가잔량3", "9")]
+		[XAQueryFieldAttribute("offerrem3", "매도호가잔량3", "long", "9")]
 		public long offerrem3;
 		/// <summary>
 		/// 매수호가잔량3
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가잔량3", "9")]
+		[XAQueryFieldAttribute("bidrem3", "매수호가잔량3", "long", "9")]
 		public long bidrem3;
 		/// <summary>
 		/// 매도호가4
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가4", "7")]
+		[XAQueryFieldAttribute("offerho4", "매도호가4", "long", "7")]
 		public long offerho4;
 		/// <summary>
 		/// 매수호가4
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가4", "7")]
+		[XAQueryFieldAttribute("bidho4", "매수호가4", "long", "7")]
 		public long bidho4;
 		/// <summary>
 		/// 매도호가잔량4
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가잔량4", "9")]
+		[XAQueryFieldAttribute("offerrem4", "매도호가잔량4", "long", "9")]
 		public long offerrem4;
 		/// <summary>
 		/// 매수호가잔량4
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가잔량4", "9")]
+		[XAQueryFieldAttribute("bidrem4", "매수호가잔량4", "long", "9")]
 		public long bidrem4;
 		/// <summary>
 		/// 매도호가5
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가5", "7")]
+		[XAQueryFieldAttribute("offerho5", "매도호가5", "long", "7")]
 		public long offerho5;
 		/// <summary>
 		/// 매수호가5
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가5", "7")]
+		[XAQueryFieldAttribute("bidho5", "매수호가5", "long", "7")]
 		public long bidho5;
 		/// <summary>
 		/// 매도호가잔량5
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가잔량5", "9")]
+		[XAQueryFieldAttribute("offerrem5", "매도호가잔량5", "long", "9")]
 		public long offerrem5;
 		/// <summary>
 		/// 매수호가잔량5
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가잔량5", "9")]
+		[XAQueryFieldAttribute("bidrem5", "매수호가잔량5", "long", "9")]
 		public long bidrem5;
 		/// <summary>
 		/// 매도호가6
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가6", "7")]
+		[XAQueryFieldAttribute("offerho6", "매도호가6", "long", "7")]
 		public long offerho6;
 		/// <summary>
 		/// 매수호가6
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가6", "7")]
+		[XAQueryFieldAttribute("bidho6", "매수호가6", "long", "7")]
 		public long bidho6;
 		/// <summary>
 		/// 매도호가잔량6
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가잔량6", "9")]
+		[XAQueryFieldAttribute("offerrem6", "매도호가잔량6", "long", "9")]
 		public long offerrem6;
 		/// <summary>
 		/// 매수호가잔량6
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가잔량6", "9")]
+		[XAQueryFieldAttribute("bidrem6", "매수호가잔량6", "long", "9")]
 		public long bidrem6;
 		/// <summary>
 		/// 매도호가7
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가7", "7")]
+		[XAQueryFieldAttribute("offerho7", "매도호가7", "long", "7")]
 		public long offerho7;
 		/// <summary>
 		/// 매수호가7
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가7", "7")]
+		[XAQueryFieldAttribute("bidho7", "매수호가7", "long", "7")]
 		public long bidho7;
 		/// <summary>
 		/// 매도호가잔량7
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가잔량7", "9")]
+		[XAQueryFieldAttribute("offerrem7", "매도호가잔량7", "long", "9")]
 		public long offerrem7;
 		/// <summary>
 		/// 매수호가잔량7
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가잔량7", "9")]
+		[XAQueryFieldAttribute("bidrem7", "매수호가잔량7", "long", "9")]
 		public long bidrem7;
 		/// <summary>
 		/// 매도호가8
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가8", "7")]
+		[XAQueryFieldAttribute("offerho8", "매도호가8", "long", "7")]
 		public long offerho8;
 		/// <summary>
 		/// 매수호가8
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가8", "7")]
+		[XAQueryFieldAttribute("bidho8", "매수호가8", "long", "7")]
 		public long bidho8;
 		/// <summary>
 		/// 매도호가잔량8
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가잔량8", "9")]
+		[XAQueryFieldAttribute("offerrem8", "매도호가잔량8", "long", "9")]
 		public long offerrem8;
 		/// <summary>
 		/// 매수호가잔량8
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가잔량8", "9")]
+		[XAQueryFieldAttribute("bidrem8", "매수호가잔량8", "long", "9")]
 		public long bidrem8;
 		/// <summary>
 		/// 매도호가9
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가9", "7")]
+		[XAQueryFieldAttribute("offerho9", "매도호가9", "long", "7")]
 		public long offerho9;
 		/// <summary>
 		/// 매수호가9
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가9", "7")]
+		[XAQueryFieldAttribute("bidho9", "매수호가9", "long", "7")]
 		public long bidho9;
 		/// <summary>
 		/// 매도호가잔량9
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가잔량9", "9")]
+		[XAQueryFieldAttribute("offerrem9", "매도호가잔량9", "long", "9")]
 		public long offerrem9;
 		/// <summary>
 		/// 매수호가잔량9
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가잔량9", "9")]
+		[XAQueryFieldAttribute("bidrem9", "매수호가잔량9", "long", "9")]
 		public long bidrem9;
 		/// <summary>
 		/// 매도호가10
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가10", "7")]
+		[XAQueryFieldAttribute("offerho10", "매도호가10", "long", "7")]
 		public long offerho10;
 		/// <summary>
 		/// 매수호가10
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가10", "7")]
+		[XAQueryFieldAttribute("bidho10", "매수호가10", "long", "7")]
 		public long bidho10;
 		/// <summary>
 		/// 매도호가잔량10
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가잔량10", "9")]
+		[XAQueryFieldAttribute("offerrem10", "매도호가잔량10", "long", "9")]
 		public long offerrem10;
 		/// <summary>
 		/// 매수호가잔량10
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가잔량10", "9")]
+		[XAQueryFieldAttribute("bidrem10", "매수호가잔량10", "long", "9")]
 		public long bidrem10;
 		/// <summary>
 		/// 총매도호가잔량
 		/// </summary>
-		[XAQueryFieldAttribute("총매도호가잔량", "9")]
+		[XAQueryFieldAttribute("totofferrem", "총매도호가잔량", "long", "9")]
 		public long totofferrem;
 		/// <summary>
 		/// 총매수호가잔량
 		/// </summary>
-		[XAQueryFieldAttribute("총매수호가잔량", "9")]
+		[XAQueryFieldAttribute("totbidrem", "총매수호가잔량", "long", "9")]
 		public long totbidrem;
 		/// <summary>
 		/// 동시호가구분
 		/// </summary>
-		[XAQueryFieldAttribute("동시호가구분", "1")]
+		[XAQueryFieldAttribute("donsigubun", "동시호가구분", "char", "1")]
 		public char donsigubun;
 		/// <summary>
 		/// 배분적용구분
 		/// </summary>
-		[XAQueryFieldAttribute("배분적용구분", "1")]
+		[XAQueryFieldAttribute("alloc_gubun", "배분적용구분", "char", "1")]
 		public char alloc_gubun;
 
 		public static class F

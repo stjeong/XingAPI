@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "8")]
+		[XAQueryFieldAttribute("code", "종목코드", "char", "8")]
 		public string code;
 		/// <summary>
 		/// 건수
 		/// </summary>
-		[XAQueryFieldAttribute("건수", "2")]
+		[XAQueryFieldAttribute("nrec", "건수", "char", "2")]
 		public string nrec;
 
 		public static class F
@@ -153,22 +153,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 인덱스
 		/// </summary>
-		[XAQueryFieldAttribute("인덱스", "1")]
+		[XAQueryFieldAttribute("indx", "인덱스", "char", "1")]
 		public char indx;
 		/// <summary>
 		/// 조건구분
 		/// </summary>
-		[XAQueryFieldAttribute("조건구분", "1")]
+		[XAQueryFieldAttribute("gubn", "조건구분", "char", "1")]
 		public char gubn;
 		/// <summary>
 		/// 데이타1
 		/// </summary>
-		[XAQueryFieldAttribute("데이타1", "1")]
+		[XAQueryFieldAttribute("dat1", "데이타1", "char", "1")]
 		public char dat1;
 		/// <summary>
 		/// 데이타2
 		/// </summary>
-		[XAQueryFieldAttribute("데이타2", "8")]
+		[XAQueryFieldAttribute("dat2", "데이타2", "char", "8")]
 		public string dat2;
 
 		public static class F
@@ -288,7 +288,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 출력건수
 		/// </summary>
-		[XAQueryFieldAttribute("출력건수", "2")]
+		[XAQueryFieldAttribute("nrec", "출력건수", "char", "2")]
 		public string nrec;
 
 		public static class F
@@ -398,17 +398,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 인덱스
 		/// </summary>
-		[XAQueryFieldAttribute("인덱스", "1")]
+		[XAQueryFieldAttribute("indx", "인덱스", "char", "1")]
 		public char indx;
 		/// <summary>
 		/// 조건구분
 		/// </summary>
-		[XAQueryFieldAttribute("조건구분", "1")]
+		[XAQueryFieldAttribute("gubn", "조건구분", "char", "1")]
 		public char gubn;
 		/// <summary>
 		/// 출력값
 		/// </summary>
-		[XAQueryFieldAttribute("출력값", "8")]
+		[XAQueryFieldAttribute("vals", "출력값", "char", "8")]
 		public string vals;
 
 		public static class F

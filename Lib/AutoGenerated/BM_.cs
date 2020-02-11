@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드", "3")]
+		[XAQueryFieldAttribute("upcode", "업종코드", "char", "3")]
 		public string upcode;
 
 		public static class F
@@ -137,57 +137,57 @@ namespace XingAPINet
 		/// <summary>
 		/// 투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode", "투자자코드", "char", "4")]
 		public string tjjcode;
 		/// <summary>
 		/// 수신시간
 		/// </summary>
-		[XAQueryFieldAttribute("수신시간", "8")]
+		[XAQueryFieldAttribute("tjjtime", "수신시간", "char", "8")]
 		public string tjjtime;
 		/// <summary>
 		/// 매수 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래량", "8")]
+		[XAQueryFieldAttribute("msvolume", "매수 거래량", "long", "8")]
 		public long msvolume;
 		/// <summary>
 		/// 매도 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래량", "8")]
+		[XAQueryFieldAttribute("mdvolume", "매도 거래량", "long", "8")]
 		public long mdvolume;
 		/// <summary>
 		/// 거래량 순매수
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수", "8")]
+		[XAQueryFieldAttribute("msvol", "거래량 순매수", "long", "8")]
 		public long msvol;
 		/// <summary>
 		/// 거래량 순매수 직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("거래량 순매수 직전대비", "8")]
+		[XAQueryFieldAttribute("p_msvol", "거래량 순매수 직전대비", "long", "8")]
 		public long p_msvol;
 		/// <summary>
 		/// 매수 거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("매수 거래대금", "6")]
+		[XAQueryFieldAttribute("msvalue", "매수 거래대금", "long", "6")]
 		public long msvalue;
 		/// <summary>
 		/// 매도 거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("매도 거래대금", "6")]
+		[XAQueryFieldAttribute("mdvalue", "매도 거래대금", "long", "6")]
 		public long mdvalue;
 		/// <summary>
 		/// 거래대금 순매수
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수", "6")]
+		[XAQueryFieldAttribute("msval", "거래대금 순매수", "long", "6")]
 		public long msval;
 		/// <summary>
 		/// 거래대금 순매수 직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금 순매수 직전대비", "6")]
+		[XAQueryFieldAttribute("p_msval", "거래대금 순매수 직전대비", "long", "6")]
 		public long p_msval;
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드", "3")]
+		[XAQueryFieldAttribute("upcode", "업종코드", "char", "3")]
 		public string upcode;
 
 		public static class F

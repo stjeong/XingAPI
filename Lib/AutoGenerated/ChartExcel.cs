@@ -50,52 +50,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 지표ID
 		/// </summary>
-		[XAQueryFieldAttribute("지표ID", "10")]
+		[XAQueryFieldAttribute("indexid", "지표ID", "long", "10")]
 		public long indexid;
 		/// <summary>
 		/// 지표명
 		/// </summary>
-		[XAQueryFieldAttribute("지표명", "40")]
+		[XAQueryFieldAttribute("indexname", "지표명", "char", "40")]
 		public string indexname;
 		/// <summary>
 		/// 지표조건설정
 		/// </summary>
-		[XAQueryFieldAttribute("지표조건설정", "40")]
+		[XAQueryFieldAttribute("indexparam", "지표조건설정", "char", "40")]
 		public string indexparam;
 		/// <summary>
 		/// 결과데이터 구분
 		/// </summary>
-		[XAQueryFieldAttribute("결과데이터 구분", "1")]
+		[XAQueryFieldAttribute("indexouttype", "결과데이터 구분", "char", "1")]
 		public char indexouttype;
 		/// <summary>
 		/// 시장구분
 		/// </summary>
-		[XAQueryFieldAttribute("시장구분", "1")]
+		[XAQueryFieldAttribute("market", "시장구분", "char", "1")]
 		public char market;
 		/// <summary>
 		/// 주기구분
 		/// </summary>
-		[XAQueryFieldAttribute("주기구분", "1")]
+		[XAQueryFieldAttribute("period", "주기구분", "char", "1")]
 		public char period;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "8")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "8")]
 		public string shcode;
 		/// <summary>
 		/// 결과 지표데이터 엑셀표시 여부
 		/// </summary>
-		[XAQueryFieldAttribute("결과 지표데이터 엑셀표시 여부", "1")]
+		[XAQueryFieldAttribute("isexcelout", "결과 지표데이터 엑셀표시 여부", "char", "1")]
 		public char isexcelout;
 		/// <summary>
 		/// 엑셀데이터 파일명
 		/// </summary>
-		[XAQueryFieldAttribute("엑셀데이터 파일명", "256")]
+		[XAQueryFieldAttribute("excelfilename", "엑셀데이터 파일명", "char", "256")]
 		public string excelfilename;
 		/// <summary>
 		/// 실시간 데이터수신 자동등록 여부
 		/// </summary>
-		[XAQueryFieldAttribute("실시간 데이터수신 자동등록 여부", "1")]
+		[XAQueryFieldAttribute("IsReal", "실시간 데이터수신 자동등록 여부", "char", "1")]
 		public char IsReal;
 
 		public static class F
@@ -281,17 +281,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 지표ID
 		/// </summary>
-		[XAQueryFieldAttribute("지표ID", "10")]
+		[XAQueryFieldAttribute("indexid", "지표ID", "long", "10")]
 		public long indexid;
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("rec_cnt", "레코드갯수", "long", "5")]
 		public long rec_cnt;
 		/// <summary>
 		/// 유효 데이터 컬럼 갯수
 		/// </summary>
-		[XAQueryFieldAttribute("유효 데이터 컬럼 갯수", "2")]
+		[XAQueryFieldAttribute("validdata_cnt", "유효 데이터 컬럼 갯수", "long", "2")]
 		public long validdata_cnt;
 
 		public static class F
@@ -425,67 +425,67 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자", "8")]
+		[XAQueryFieldAttribute("date", "일자", "char", "8")]
 		public string date;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간", "6")]
+		[XAQueryFieldAttribute("time", "시간", "char", "6")]
 		public string time;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가", "10")]
+		[XAQueryFieldAttribute("open", "시가", "float", "10")]
 		public float open;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가", "10")]
+		[XAQueryFieldAttribute("high", "고가", "float", "10")]
 		public float high;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가", "10")]
+		[XAQueryFieldAttribute("low", "저가", "float", "10")]
 		public float low;
 		/// <summary>
 		/// 종가
 		/// </summary>
-		[XAQueryFieldAttribute("종가", "10")]
+		[XAQueryFieldAttribute("close", "종가", "float", "10")]
 		public float close;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량", "12")]
+		[XAQueryFieldAttribute("volume", "거래량", "float", "12")]
 		public float volume;
 		/// <summary>
 		/// 지표값1
 		/// </summary>
-		[XAQueryFieldAttribute("지표값1", "10")]
+		[XAQueryFieldAttribute("value1", "지표값1", "float", "10")]
 		public float value1;
 		/// <summary>
 		/// 지표값2
 		/// </summary>
-		[XAQueryFieldAttribute("지표값2", "10")]
+		[XAQueryFieldAttribute("value2", "지표값2", "float", "10")]
 		public float value2;
 		/// <summary>
 		/// 지표값3
 		/// </summary>
-		[XAQueryFieldAttribute("지표값3", "10")]
+		[XAQueryFieldAttribute("value3", "지표값3", "float", "10")]
 		public float value3;
 		/// <summary>
 		/// 지표값4
 		/// </summary>
-		[XAQueryFieldAttribute("지표값4", "10")]
+		[XAQueryFieldAttribute("value4", "지표값4", "float", "10")]
 		public float value4;
 		/// <summary>
 		/// 지표값5
 		/// </summary>
-		[XAQueryFieldAttribute("지표값5", "10")]
+		[XAQueryFieldAttribute("value5", "지표값5", "float", "10")]
 		public float value5;
 		/// <summary>
 		/// 위치
 		/// </summary>
-		[XAQueryFieldAttribute("위치", "8")]
+		[XAQueryFieldAttribute("pos", "위치", "long", "8")]
 		public long pos;
 
 		public static class F

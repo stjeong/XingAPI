@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분", "2")]
+		[XAQueryFieldAttribute("gubun", "구분", "char", "2")]
 		public string gubun;
 
 		public static class F
@@ -137,67 +137,67 @@ namespace XingAPINet
 		/// <summary>
 		/// 매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도수량", "8")]
+		[XAQueryFieldAttribute("offervolume", "매도수량", "long", "8")]
 		public long offervolume;
 		/// <summary>
 		/// 매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수수량", "8")]
+		[XAQueryFieldAttribute("bidvolume", "매수수량", "long", "8")]
 		public long bidvolume;
 		/// <summary>
 		/// 순매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("순매수수량", "8")]
+		[XAQueryFieldAttribute("volume", "순매수수량", "long", "8")]
 		public long volume;
 		/// <summary>
 		/// 매도증감
 		/// </summary>
-		[XAQueryFieldAttribute("매도증감", "8")]
+		[XAQueryFieldAttribute("offerdiff", "매도증감", "long", "8")]
 		public long offerdiff;
 		/// <summary>
 		/// 매수증감
 		/// </summary>
-		[XAQueryFieldAttribute("매수증감", "8")]
+		[XAQueryFieldAttribute("biddiff", "매수증감", "long", "8")]
 		public long biddiff;
 		/// <summary>
 		/// 순매수증감
 		/// </summary>
-		[XAQueryFieldAttribute("순매수증감", "8")]
+		[XAQueryFieldAttribute("sundiff", "순매수증감", "long", "8")]
 		public long sundiff;
 		/// <summary>
 		/// 베이시스
 		/// </summary>
-		[XAQueryFieldAttribute("베이시스", "6.2")]
+		[XAQueryFieldAttribute("basis", "베이시스", "float", "6.2")]
 		public float basis;
 		/// <summary>
 		/// 매도금액
 		/// </summary>
-		[XAQueryFieldAttribute("매도금액", "12.0")]
+		[XAQueryFieldAttribute("offervalue", "매도금액", "double", "12.0")]
 		public double offervalue;
 		/// <summary>
 		/// 매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("매수금액", "12.0")]
+		[XAQueryFieldAttribute("bidvalue", "매수금액", "double", "12.0")]
 		public double bidvalue;
 		/// <summary>
 		/// 순매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("순매수금액", "12.0")]
+		[XAQueryFieldAttribute("value", "순매수금액", "double", "12.0")]
 		public double value;
 		/// <summary>
 		/// 매도금액증감
 		/// </summary>
-		[XAQueryFieldAttribute("매도금액증감", "12.0")]
+		[XAQueryFieldAttribute("offervaldiff", "매도금액증감", "double", "12.0")]
 		public double offervaldiff;
 		/// <summary>
 		/// 매수금액증감
 		/// </summary>
-		[XAQueryFieldAttribute("매수금액증감", "12.0")]
+		[XAQueryFieldAttribute("bidvaldiff", "매수금액증감", "double", "12.0")]
 		public double bidvaldiff;
 		/// <summary>
 		/// 순매수증감
 		/// </summary>
-		[XAQueryFieldAttribute("순매수증감", "12.0")]
+		[XAQueryFieldAttribute("sunvaldiff", "순매수증감", "double", "12.0")]
 		public double sunvaldiff;
 
 		public static class F

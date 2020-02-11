@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// DUMMY
 		/// </summary>
-		[XAQueryFieldAttribute("DUMMY", "1")]
+		[XAQueryFieldAttribute("dummy", "DUMMY", "char", "1")]
 		public char dummy;
 
 		public static class F
@@ -137,17 +137,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 표준코드
 		/// </summary>
-		[XAQueryFieldAttribute("표준코드", "12")]
+		[XAQueryFieldAttribute("expcode", "표준코드", "char", "12")]
 		public string expcode;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명", "20")]
+		[XAQueryFieldAttribute("hname", "종목명", "char", "20")]
 		public string hname;
 
 		public static class F

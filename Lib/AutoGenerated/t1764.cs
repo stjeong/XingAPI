@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 구분1
 		/// </summary>
-		[XAQueryFieldAttribute("구분1", "1")]
+		[XAQueryFieldAttribute("gubun1", "구분1", "char", "1")]
 		public char gubun1;
 
 		public static class F
@@ -153,17 +153,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 순위
 		/// </summary>
-		[XAQueryFieldAttribute("순위", "4")]
+		[XAQueryFieldAttribute("rank", "순위", "long", "4")]
 		public long rank;
 		/// <summary>
 		/// 거래원번호
 		/// </summary>
-		[XAQueryFieldAttribute("거래원번호", "3")]
+		[XAQueryFieldAttribute("tradno", "거래원번호", "char", "3")]
 		public string tradno;
 		/// <summary>
 		/// 거래원이름
 		/// </summary>
-		[XAQueryFieldAttribute("거래원이름", "20")]
+		[XAQueryFieldAttribute("tradname", "거래원이름", "char", "20")]
 		public string tradname;
 
 		public static class F

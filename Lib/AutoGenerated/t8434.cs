@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 건수
 		/// </summary>
-		[XAQueryFieldAttribute("건수", "3")]
+		[XAQueryFieldAttribute("qrycnt", "건수", "long", "3")]
 		public long qrycnt;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "400")]
+		[XAQueryFieldAttribute("focode", "단축코드", "char", "400")]
 		public string focode;
 
 		public static class F
@@ -153,42 +153,42 @@ namespace XingAPINet
 		/// <summary>
 		/// 한글명
 		/// </summary>
-		[XAQueryFieldAttribute("한글명", "20")]
+		[XAQueryFieldAttribute("hname", "한글명", "char", "20")]
 		public string hname;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "6.2")]
+		[XAQueryFieldAttribute("price", "현재가", "float", "6.2")]
 		public float price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "6.2")]
+		[XAQueryFieldAttribute("change", "전일대비", "float", "6.2")]
 		public float change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량", "12")]
+		[XAQueryFieldAttribute("volume", "누적거래량", "long", "12")]
 		public long volume;
 		/// <summary>
 		/// 체결건수
 		/// </summary>
-		[XAQueryFieldAttribute("체결건수", "8")]
+		[XAQueryFieldAttribute("checnt", "체결건수", "long", "8")]
 		public long checnt;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "8")]
+		[XAQueryFieldAttribute("focode", "단축코드", "char", "8")]
 		public string focode;
 
 		public static class F

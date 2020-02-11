@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 뉴스번호
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스번호", "24")]
+		[XAQueryFieldAttribute("sNewsno", "뉴스번호", "char", "24")]
 		public string sNewsno;
 
 		public static class F
@@ -137,7 +137,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 뉴스종목
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스종목", "6")]
+		[XAQueryFieldAttribute("sJongcode", "뉴스종목", "char", "6")]
 		public string sJongcode;
 
 		public static class F
@@ -251,7 +251,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 뉴스본문
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스본문", "100")]
+		[XAQueryFieldAttribute("sBody", "뉴스본문", "char", "100")]
 		public string sBody;
 
 		public static class F
@@ -365,7 +365,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 뉴스타이틀
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스타이틀", "300")]
+		[XAQueryFieldAttribute("sTitle", "뉴스타이틀", "char", "300")]
 		public string sTitle;
 
 		public static class F

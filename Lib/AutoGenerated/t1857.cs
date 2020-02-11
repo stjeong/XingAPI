@@ -50,17 +50,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 실시간구분(0:조회 1:실시간)
 		/// </summary>
-		[XAQueryFieldAttribute("실시간구분(0:조회 1:실시간)", "1")]
+		[XAQueryFieldAttribute("sRealFlag", "실시간구분(0:조회 1:실시간)", "char", "1")]
 		public char sRealFlag;
 		/// <summary>
 		/// 종목검색구분(F:파일 S:서버)
 		/// </summary>
-		[XAQueryFieldAttribute("종목검색구분(F:파일 S:서버)", "1")]
+		[XAQueryFieldAttribute("sSearchFlag", "종목검색구분(F:파일 S:서버)", "char", "1")]
 		public char sSearchFlag;
 		/// <summary>
 		/// 종목검색입력값
 		/// </summary>
-		[XAQueryFieldAttribute("종목검색입력값", "256")]
+		[XAQueryFieldAttribute("query_index", "종목검색입력값", "char", "256")]
 		public string query_index;
 
 		public static class F
@@ -169,17 +169,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 검색종목수
 		/// </summary>
-		[XAQueryFieldAttribute("검색종목수", "5")]
+		[XAQueryFieldAttribute("result_count", "검색종목수", "long", "5")]
 		public long result_count;
 		/// <summary>
 		/// 포착시간
 		/// </summary>
-		[XAQueryFieldAttribute("포착시간", "6")]
+		[XAQueryFieldAttribute("result_time", "포착시간", "char", "6")]
 		public string result_time;
 		/// <summary>
 		/// 실시간키
 		/// </summary>
-		[XAQueryFieldAttribute("실시간키", "11")]
+		[XAQueryFieldAttribute("AlertNum", "실시간키", "char", "11")]
 		public string AlertNum;
 
 		public static class F
@@ -313,42 +313,42 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "7")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "7")]
 		public string shcode;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명", "40")]
+		[XAQueryFieldAttribute("hname", "종목명", "char", "40")]
 		public string hname;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "9")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "9")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "9")]
+		[XAQueryFieldAttribute("change", "전일대비", "long", "9")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량", "12")]
+		[XAQueryFieldAttribute("volume", "거래량", "long", "12")]
 		public long volume;
 		/// <summary>
 		/// 종목상태(N:진입 R:재진입 O:이탈)
 		/// </summary>
-		[XAQueryFieldAttribute("종목상태(N:진입 R:재진입 O:이탈)", "1")]
+		[XAQueryFieldAttribute("JobFlag", "종목상태(N:진입 R:재진입 O:이탈)", "char", "1")]
 		public char JobFlag;
 
 		public static class F

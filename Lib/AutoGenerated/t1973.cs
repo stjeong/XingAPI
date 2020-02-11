@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 시간CTS
 		/// </summary>
-		[XAQueryFieldAttribute("시간CTS", "8")]
+		[XAQueryFieldAttribute("cts_time", "시간CTS", "char", "8")]
 		public string cts_time;
 
 		public static class F
@@ -153,7 +153,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간CTS
 		/// </summary>
-		[XAQueryFieldAttribute("시간CTS", "8")]
+		[XAQueryFieldAttribute("cts_time", "시간CTS", "char", "8")]
 		public string cts_time;
 
 		public static class F
@@ -263,47 +263,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간", "8")]
+		[XAQueryFieldAttribute("chetime", "시간", "char", "8")]
 		public string chetime;
 		/// <summary>
 		/// 예상체결가격
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결가격", "8")]
+		[XAQueryFieldAttribute("yeprice", "예상체결가격", "long", "8")]
 		public long yeprice;
 		/// <summary>
 		/// 예상체결구분
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결구분", "1")]
+		[XAQueryFieldAttribute("yegubun", "예상체결구분", "char", "1")]
 		public char yegubun;
 		/// <summary>
 		/// 전일종가대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일종가대비구분", "1")]
+		[XAQueryFieldAttribute("jnilysign", "전일종가대비구분", "char", "1")]
 		public char jnilysign;
 		/// <summary>
 		/// 전일종가대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일종가대비", "8")]
+		[XAQueryFieldAttribute("jnilychange", "전일종가대비", "long", "8")]
 		public long jnilychange;
 		/// <summary>
 		/// 예상체결등락율
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결등락율", "6.2")]
+		[XAQueryFieldAttribute("yediff", "예상체결등락율", "float", "6.2")]
 		public float yediff;
 		/// <summary>
 		/// 예상체결량
 		/// </summary>
-		[XAQueryFieldAttribute("예상체결량", "12")]
+		[XAQueryFieldAttribute("yevolume", "예상체결량", "long", "12")]
 		public long yevolume;
 		/// <summary>
 		/// 예상매도체결량
 		/// </summary>
-		[XAQueryFieldAttribute("예상매도체결량", "12")]
+		[XAQueryFieldAttribute("ymdvolume", "예상매도체결량", "long", "12")]
 		public long ymdvolume;
 		/// <summary>
 		/// 예상매수체결량
 		/// </summary>
-		[XAQueryFieldAttribute("예상매수체결량", "12")]
+		[XAQueryFieldAttribute("ymsvolume", "예상매수체결량", "long", "12")]
 		public long ymsvolume;
 
 		public static class F

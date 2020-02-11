@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// Dummy
 		/// </summary>
-		[XAQueryFieldAttribute("Dummy", "1")]
+		[XAQueryFieldAttribute("dummy", "Dummy", "char", "1")]
 		public char dummy;
 
 		public static class F
@@ -137,47 +137,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명", "20")]
+		[XAQueryFieldAttribute("hname", "종목명", "char", "20")]
 		public string hname;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "8")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "8")]
 		public string shcode;
 		/// <summary>
 		/// 확장코드
 		/// </summary>
-		[XAQueryFieldAttribute("확장코드", "12")]
+		[XAQueryFieldAttribute("expcode", "확장코드", "char", "12")]
 		public string expcode;
 		/// <summary>
 		/// 상한가
 		/// </summary>
-		[XAQueryFieldAttribute("상한가", "6.2")]
+		[XAQueryFieldAttribute("hprice", "상한가", "float", "6.2")]
 		public float hprice;
 		/// <summary>
 		/// 하한가
 		/// </summary>
-		[XAQueryFieldAttribute("하한가", "6.2")]
+		[XAQueryFieldAttribute("lprice", "하한가", "float", "6.2")]
 		public float lprice;
 		/// <summary>
 		/// 전일종가
 		/// </summary>
-		[XAQueryFieldAttribute("전일종가", "6.2")]
+		[XAQueryFieldAttribute("jnilclose", "전일종가", "float", "6.2")]
 		public float jnilclose;
 		/// <summary>
 		/// 전일고가
 		/// </summary>
-		[XAQueryFieldAttribute("전일고가", "6.2")]
+		[XAQueryFieldAttribute("jnilhigh", "전일고가", "float", "6.2")]
 		public float jnilhigh;
 		/// <summary>
 		/// 전일저가
 		/// </summary>
-		[XAQueryFieldAttribute("전일저가", "6.2")]
+		[XAQueryFieldAttribute("jnillow", "전일저가", "float", "6.2")]
 		public float jnillow;
 		/// <summary>
 		/// 기준가
 		/// </summary>
-		[XAQueryFieldAttribute("기준가", "6.2")]
+		[XAQueryFieldAttribute("recprice", "기준가", "float", "6.2")]
 		public float recprice;
 
 		public static class F

@@ -50,22 +50,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호", "20")]
+		[XAQueryFieldAttribute("AcntNo", "계좌번호", "char", "20")]
 		public string AcntNo;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호", "8")]
+		[XAQueryFieldAttribute("Pwd", "비밀번호", "char", "8")]
 		public string Pwd;
 		/// <summary>
 		/// 매매일
 		/// </summary>
-		[XAQueryFieldAttribute("매매일", "8")]
+		[XAQueryFieldAttribute("BnsDt", "매매일", "char", "8")]
 		public string BnsDt;
 
 		public static class F
@@ -185,22 +185,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호", "20")]
+		[XAQueryFieldAttribute("AcntNo", "계좌번호", "char", "20")]
 		public string AcntNo;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호", "8")]
+		[XAQueryFieldAttribute("Pwd", "비밀번호", "char", "8")]
 		public string Pwd;
 		/// <summary>
 		/// 매매일
 		/// </summary>
-		[XAQueryFieldAttribute("매매일", "8")]
+		[XAQueryFieldAttribute("BnsDt", "매매일", "char", "8")]
 		public string BnsDt;
 
 		public static class F
@@ -346,497 +346,497 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 계좌명
 		/// </summary>
-		[XAQueryFieldAttribute("계좌명", "40")]
+		[XAQueryFieldAttribute("AcntNm", "계좌명", "char", "40")]
 		public string AcntNm;
 		/// <summary>
 		/// 개장시예탁금총액
 		/// </summary>
-		[XAQueryFieldAttribute("개장시예탁금총액", "16")]
+		[XAQueryFieldAttribute("OpnmkDpsamtTotamt", "개장시예탁금총액", "long", "16")]
 		public long OpnmkDpsamtTotamt;
 		/// <summary>
 		/// 개장시예수금
 		/// </summary>
-		[XAQueryFieldAttribute("개장시예수금", "16")]
+		[XAQueryFieldAttribute("OpnmkDps", "개장시예수금", "long", "16")]
 		public long OpnmkDps;
 		/// <summary>
 		/// 개장시현금미수금
 		/// </summary>
-		[XAQueryFieldAttribute("개장시현금미수금", "16")]
+		[XAQueryFieldAttribute("OpnmkMnyrclAmt", "개장시현금미수금", "long", "16")]
 		public long OpnmkMnyrclAmt;
 		/// <summary>
 		/// 개장시대용금액
 		/// </summary>
-		[XAQueryFieldAttribute("개장시대용금액", "16")]
+		[XAQueryFieldAttribute("OpnmkSubstAmt", "개장시대용금액", "long", "16")]
 		public long OpnmkSubstAmt;
 		/// <summary>
 		/// 총금액
 		/// </summary>
-		[XAQueryFieldAttribute("총금액", "16")]
+		[XAQueryFieldAttribute("TotAmt", "총금액", "long", "16")]
 		public long TotAmt;
 		/// <summary>
 		/// 예수금
 		/// </summary>
-		[XAQueryFieldAttribute("예수금", "16")]
+		[XAQueryFieldAttribute("Dps", "예수금", "long", "16")]
 		public long Dps;
 		/// <summary>
 		/// 현금미수금액
 		/// </summary>
-		[XAQueryFieldAttribute("현금미수금액", "16")]
+		[XAQueryFieldAttribute("MnyrclAmt", "현금미수금액", "long", "16")]
 		public long MnyrclAmt;
 		/// <summary>
 		/// 대용지정금액
 		/// </summary>
-		[XAQueryFieldAttribute("대용지정금액", "16")]
+		[XAQueryFieldAttribute("SubstDsgnAmt", "대용지정금액", "long", "16")]
 		public long SubstDsgnAmt;
 		/// <summary>
 		/// 위탁증거금액
 		/// </summary>
-		[XAQueryFieldAttribute("위탁증거금액", "16")]
+		[XAQueryFieldAttribute("CsgnMgn", "위탁증거금액", "long", "16")]
 		public long CsgnMgn;
 		/// <summary>
 		/// 현금위탁증거금액
 		/// </summary>
-		[XAQueryFieldAttribute("현금위탁증거금액", "16")]
+		[XAQueryFieldAttribute("MnyCsgnMgn", "현금위탁증거금액", "long", "16")]
 		public long MnyCsgnMgn;
 		/// <summary>
 		/// 유지증거금액
 		/// </summary>
-		[XAQueryFieldAttribute("유지증거금액", "16")]
+		[XAQueryFieldAttribute("MaintMgn", "유지증거금액", "long", "16")]
 		public long MaintMgn;
 		/// <summary>
 		/// 현금유지증거금액
 		/// </summary>
-		[XAQueryFieldAttribute("현금유지증거금액", "16")]
+		[XAQueryFieldAttribute("MnyMaintMgn", "현금유지증거금액", "long", "16")]
 		public long MnyMaintMgn;
 		/// <summary>
 		/// 출금가능총액
 		/// </summary>
-		[XAQueryFieldAttribute("출금가능총액", "16")]
+		[XAQueryFieldAttribute("OutAbleAmt", "출금가능총액", "long", "16")]
 		public long OutAbleAmt;
 		/// <summary>
 		/// 출금가능금액
 		/// </summary>
-		[XAQueryFieldAttribute("출금가능금액", "16")]
+		[XAQueryFieldAttribute("MnyoutAbleAmt", "출금가능금액", "long", "16")]
 		public long MnyoutAbleAmt;
 		/// <summary>
 		/// 출금가능대용
 		/// </summary>
-		[XAQueryFieldAttribute("출금가능대용", "16")]
+		[XAQueryFieldAttribute("SubstOutAbleAmt", "출금가능대용", "long", "16")]
 		public long SubstOutAbleAmt;
 		/// <summary>
 		/// 주문가능금액
 		/// </summary>
-		[XAQueryFieldAttribute("주문가능금액", "16")]
+		[XAQueryFieldAttribute("OrdAbleAmt", "주문가능금액", "long", "16")]
 		public long OrdAbleAmt;
 		/// <summary>
 		/// 현금주문가능금액
 		/// </summary>
-		[XAQueryFieldAttribute("현금주문가능금액", "16")]
+		[XAQueryFieldAttribute("MnyOrdAbleAmt", "현금주문가능금액", "long", "16")]
 		public long MnyOrdAbleAmt;
 		/// <summary>
 		/// 추가증거금구분
 		/// </summary>
-		[XAQueryFieldAttribute("추가증거금구분", "1")]
+		[XAQueryFieldAttribute("AddMgnOcrTpCode", "추가증거금구분", "char", "1")]
 		public char AddMgnOcrTpCode;
 		/// <summary>
 		/// 추가증거금액
 		/// </summary>
-		[XAQueryFieldAttribute("추가증거금액", "16")]
+		[XAQueryFieldAttribute("AddMgn", "추가증거금액", "long", "16")]
 		public long AddMgn;
 		/// <summary>
 		/// 현금추가증거금액
 		/// </summary>
-		[XAQueryFieldAttribute("현금추가증거금액", "16")]
+		[XAQueryFieldAttribute("MnyAddMgn", "현금추가증거금액", "long", "16")]
 		public long MnyAddMgn;
 		/// <summary>
 		/// 익일예탁총액
 		/// </summary>
-		[XAQueryFieldAttribute("익일예탁총액", "16")]
+		[XAQueryFieldAttribute("NtdayTotAmt", "익일예탁총액", "long", "16")]
 		public long NtdayTotAmt;
 		/// <summary>
 		/// 익일예탁현금
 		/// </summary>
-		[XAQueryFieldAttribute("익일예탁현금", "16")]
+		[XAQueryFieldAttribute("NtdayDps", "익일예탁현금", "long", "16")]
 		public long NtdayDps;
 		/// <summary>
 		/// 익일미수금
 		/// </summary>
-		[XAQueryFieldAttribute("익일미수금", "16")]
+		[XAQueryFieldAttribute("NtdayMnyrclAmt", "익일미수금", "long", "16")]
 		public long NtdayMnyrclAmt;
 		/// <summary>
 		/// 익일예탁대용
 		/// </summary>
-		[XAQueryFieldAttribute("익일예탁대용", "16")]
+		[XAQueryFieldAttribute("NtdaySubstAmt", "익일예탁대용", "long", "16")]
 		public long NtdaySubstAmt;
 		/// <summary>
 		/// 익일위탁증거금
 		/// </summary>
-		[XAQueryFieldAttribute("익일위탁증거금", "16")]
+		[XAQueryFieldAttribute("NtdayCsgnMgn", "익일위탁증거금", "long", "16")]
 		public long NtdayCsgnMgn;
 		/// <summary>
 		/// 익일위탁증거금현금
 		/// </summary>
-		[XAQueryFieldAttribute("익일위탁증거금현금", "16")]
+		[XAQueryFieldAttribute("NtdayMnyCsgnMgn", "익일위탁증거금현금", "long", "16")]
 		public long NtdayMnyCsgnMgn;
 		/// <summary>
 		/// 익일유지증거금
 		/// </summary>
-		[XAQueryFieldAttribute("익일유지증거금", "16")]
+		[XAQueryFieldAttribute("NtdayMaintMgn", "익일유지증거금", "long", "16")]
 		public long NtdayMaintMgn;
 		/// <summary>
 		/// 익일유지증거금현금
 		/// </summary>
-		[XAQueryFieldAttribute("익일유지증거금현금", "16")]
+		[XAQueryFieldAttribute("NtdayMnyMaintMgn", "익일유지증거금현금", "long", "16")]
 		public long NtdayMnyMaintMgn;
 		/// <summary>
 		/// 익일인출가능금액
 		/// </summary>
-		[XAQueryFieldAttribute("익일인출가능금액", "16")]
+		[XAQueryFieldAttribute("NtdayOutAbleAmt", "익일인출가능금액", "long", "16")]
 		public long NtdayOutAbleAmt;
 		/// <summary>
 		/// 익일인출가능금액
 		/// </summary>
-		[XAQueryFieldAttribute("익일인출가능금액", "16")]
+		[XAQueryFieldAttribute("NtdayMnyoutAbleAmt", "익일인출가능금액", "long", "16")]
 		public long NtdayMnyoutAbleAmt;
 		/// <summary>
 		/// 익일인출가능대용
 		/// </summary>
-		[XAQueryFieldAttribute("익일인출가능대용", "16")]
+		[XAQueryFieldAttribute("NtdaySubstOutAbleAmt", "익일인출가능대용", "long", "16")]
 		public long NtdaySubstOutAbleAmt;
 		/// <summary>
 		/// 익일주문가능금액
 		/// </summary>
-		[XAQueryFieldAttribute("익일주문가능금액", "16")]
+		[XAQueryFieldAttribute("NtdayOrdAbleAmt", "익일주문가능금액", "long", "16")]
 		public long NtdayOrdAbleAmt;
 		/// <summary>
 		/// 익일주문가능현금
 		/// </summary>
-		[XAQueryFieldAttribute("익일주문가능현금", "16")]
+		[XAQueryFieldAttribute("NtdayMnyOrdAbleAmt", "익일주문가능현금", "long", "16")]
 		public long NtdayMnyOrdAbleAmt;
 		/// <summary>
 		/// 익일추가증거금구분
 		/// </summary>
-		[XAQueryFieldAttribute("익일추가증거금구분", "1")]
+		[XAQueryFieldAttribute("NtdayAddMgnTp", "익일추가증거금구분", "char", "1")]
 		public char NtdayAddMgnTp;
 		/// <summary>
 		/// 익일추가증거금
 		/// </summary>
-		[XAQueryFieldAttribute("익일추가증거금", "16")]
+		[XAQueryFieldAttribute("NtdayAddMgn", "익일추가증거금", "long", "16")]
 		public long NtdayAddMgn;
 		/// <summary>
 		/// 익일추가증거금현금
 		/// </summary>
-		[XAQueryFieldAttribute("익일추가증거금현금", "16")]
+		[XAQueryFieldAttribute("NtdayMnyAddMgn", "익일추가증거금현금", "long", "16")]
 		public long NtdayMnyAddMgn;
 		/// <summary>
 		/// 익일결제금액
 		/// </summary>
-		[XAQueryFieldAttribute("익일결제금액", "16")]
+		[XAQueryFieldAttribute("NtdaySettAmt", "익일결제금액", "long", "16")]
 		public long NtdaySettAmt;
 		/// <summary>
 		/// 평가예탁금총액
 		/// </summary>
-		[XAQueryFieldAttribute("평가예탁금총액", "15")]
+		[XAQueryFieldAttribute("EvalDpsamtTotamt", "평가예탁금총액", "long", "15")]
 		public long EvalDpsamtTotamt;
 		/// <summary>
 		/// 현금평가예탁금액
 		/// </summary>
-		[XAQueryFieldAttribute("현금평가예탁금액", "15")]
+		[XAQueryFieldAttribute("MnyEvalDpstgAmt", "현금평가예탁금액", "long", "15")]
 		public long MnyEvalDpstgAmt;
 		/// <summary>
 		/// 예탁금이용료지급예정금액
 		/// </summary>
-		[XAQueryFieldAttribute("예탁금이용료지급예정금액", "16")]
+		[XAQueryFieldAttribute("DpsamtUtlfeeGivPrergAmt", "예탁금이용료지급예정금액", "long", "16")]
 		public long DpsamtUtlfeeGivPrergAmt;
 		/// <summary>
 		/// 세금
 		/// </summary>
-		[XAQueryFieldAttribute("세금", "16")]
+		[XAQueryFieldAttribute("TaxAmt", "세금", "long", "16")]
 		public long TaxAmt;
 		/// <summary>
 		/// 위탁증거금 비율
 		/// </summary>
-		[XAQueryFieldAttribute("위탁증거금 비율", "7.2")]
+		[XAQueryFieldAttribute("CsgnMgnrat", "위탁증거금 비율", "double", "7.2")]
 		public double CsgnMgnrat;
 		/// <summary>
 		/// 위탁증거금현금비율
 		/// </summary>
-		[XAQueryFieldAttribute("위탁증거금현금비율", "7.2")]
+		[XAQueryFieldAttribute("CsgnMnyMgnrat", "위탁증거금현금비율", "double", "7.2")]
 		public double CsgnMnyMgnrat;
 		/// <summary>
 		/// 예탁총액부족금액(위탁증거금기준)
 		/// </summary>
-		[XAQueryFieldAttribute("예탁총액부족금액(위탁증거금기준)", "16")]
+		[XAQueryFieldAttribute("DpstgTotamtLackAmt", "예탁총액부족금액(위탁증거금기준)", "long", "16")]
 		public long DpstgTotamtLackAmt;
 		/// <summary>
 		/// 예탁현금부족금액(위탁증거금기준)
 		/// </summary>
-		[XAQueryFieldAttribute("예탁현금부족금액(위탁증거금기준)", "16")]
+		[XAQueryFieldAttribute("DpstgMnyLackAmt", "예탁현금부족금액(위탁증거금기준)", "long", "16")]
 		public long DpstgMnyLackAmt;
 		/// <summary>
 		/// 실입금액
 		/// </summary>
-		[XAQueryFieldAttribute("실입금액", "16")]
+		[XAQueryFieldAttribute("RealInAmt", "실입금액", "long", "16")]
 		public long RealInAmt;
 		/// <summary>
 		/// 입금액
 		/// </summary>
-		[XAQueryFieldAttribute("입금액", "16")]
+		[XAQueryFieldAttribute("InAmt", "입금액", "long", "16")]
 		public long InAmt;
 		/// <summary>
 		/// 출금액
 		/// </summary>
-		[XAQueryFieldAttribute("출금액", "16")]
+		[XAQueryFieldAttribute("OutAmt", "출금액", "long", "16")]
 		public long OutAmt;
 		/// <summary>
 		/// 선물정산차금
 		/// </summary>
-		[XAQueryFieldAttribute("선물정산차금", "16")]
+		[XAQueryFieldAttribute("FutsAdjstDfamt", "선물정산차금", "long", "16")]
 		public long FutsAdjstDfamt;
 		/// <summary>
 		/// 선물당일차금
 		/// </summary>
-		[XAQueryFieldAttribute("선물당일차금", "16")]
+		[XAQueryFieldAttribute("FutsThdayDfamt", "선물당일차금", "long", "16")]
 		public long FutsThdayDfamt;
 		/// <summary>
 		/// 선물갱신차금
 		/// </summary>
-		[XAQueryFieldAttribute("선물갱신차금", "16")]
+		[XAQueryFieldAttribute("FutsUpdtDfamt", "선물갱신차금", "long", "16")]
 		public long FutsUpdtDfamt;
 		/// <summary>
 		/// 선물최종결제차금
 		/// </summary>
-		[XAQueryFieldAttribute("선물최종결제차금", "16")]
+		[XAQueryFieldAttribute("FutsLastSettDfamt", "선물최종결제차금", "long", "16")]
 		public long FutsLastSettDfamt;
 		/// <summary>
 		/// 옵션결제차금
 		/// </summary>
-		[XAQueryFieldAttribute("옵션결제차금", "16")]
+		[XAQueryFieldAttribute("OptSettDfamt", "옵션결제차금", "long", "16")]
 		public long OptSettDfamt;
 		/// <summary>
 		/// 옵션매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("옵션매수금액", "16")]
+		[XAQueryFieldAttribute("OptBuyAmt", "옵션매수금액", "long", "16")]
 		public long OptBuyAmt;
 		/// <summary>
 		/// 옵션매도금액
 		/// </summary>
-		[XAQueryFieldAttribute("옵션매도금액", "16")]
+		[XAQueryFieldAttribute("OptSellAmt", "옵션매도금액", "long", "16")]
 		public long OptSellAmt;
 		/// <summary>
 		/// 옵션행사차금
 		/// </summary>
-		[XAQueryFieldAttribute("옵션행사차금", "16")]
+		[XAQueryFieldAttribute("OptXrcDfamt", "옵션행사차금", "long", "16")]
 		public long OptXrcDfamt;
 		/// <summary>
 		/// 옵션배정차금
 		/// </summary>
-		[XAQueryFieldAttribute("옵션배정차금", "16")]
+		[XAQueryFieldAttribute("OptAsgnDfamt", "옵션배정차금", "long", "16")]
 		public long OptAsgnDfamt;
 		/// <summary>
 		/// 실물인수도금액
 		/// </summary>
-		[XAQueryFieldAttribute("실물인수도금액", "16")]
+		[XAQueryFieldAttribute("RealGdsUndAmt", "실물인수도금액", "long", "16")]
 		public long RealGdsUndAmt;
 		/// <summary>
 		/// 실물인수도배정대금
 		/// </summary>
-		[XAQueryFieldAttribute("실물인수도배정대금", "16")]
+		[XAQueryFieldAttribute("RealGdsUndAsgnAmt", "실물인수도배정대금", "long", "16")]
 		public long RealGdsUndAsgnAmt;
 		/// <summary>
 		/// 실물인수도행사대금
 		/// </summary>
-		[XAQueryFieldAttribute("실물인수도행사대금", "16")]
+		[XAQueryFieldAttribute("RealGdsUndXrcAmt", "실물인수도행사대금", "long", "16")]
 		public long RealGdsUndXrcAmt;
 		/// <summary>
 		/// 수수료
 		/// </summary>
-		[XAQueryFieldAttribute("수수료", "16")]
+		[XAQueryFieldAttribute("CmsnAmt", "수수료", "long", "16")]
 		public long CmsnAmt;
 		/// <summary>
 		/// 선물수수료
 		/// </summary>
-		[XAQueryFieldAttribute("선물수수료", "16")]
+		[XAQueryFieldAttribute("FutsCmsn", "선물수수료", "long", "16")]
 		public long FutsCmsn;
 		/// <summary>
 		/// 옵션수수료
 		/// </summary>
-		[XAQueryFieldAttribute("옵션수수료", "16")]
+		[XAQueryFieldAttribute("OptCmsn", "옵션수수료", "long", "16")]
 		public long OptCmsn;
 		/// <summary>
 		/// 선물약정수량
 		/// </summary>
-		[XAQueryFieldAttribute("선물약정수량", "16")]
+		[XAQueryFieldAttribute("FutsCtrctQty", "선물약정수량", "long", "16")]
 		public long FutsCtrctQty;
 		/// <summary>
 		/// 선물약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물약정금액", "16")]
+		[XAQueryFieldAttribute("FutsCtrctAmt", "선물약정금액", "long", "16")]
 		public long FutsCtrctAmt;
 		/// <summary>
 		/// 옵션약정수량
 		/// </summary>
-		[XAQueryFieldAttribute("옵션약정수량", "16")]
+		[XAQueryFieldAttribute("OptCtrctQty", "옵션약정수량", "long", "16")]
 		public long OptCtrctQty;
 		/// <summary>
 		/// 옵션약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("옵션약정금액", "16")]
+		[XAQueryFieldAttribute("OptCtrctAmt", "옵션약정금액", "long", "16")]
 		public long OptCtrctAmt;
 		/// <summary>
 		/// 선물미결제수량
 		/// </summary>
-		[XAQueryFieldAttribute("선물미결제수량", "16")]
+		[XAQueryFieldAttribute("FutsUnsttQty", "선물미결제수량", "long", "16")]
 		public long FutsUnsttQty;
 		/// <summary>
 		/// 선물미결제금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물미결제금액", "16")]
+		[XAQueryFieldAttribute("FutsUnsttAmt", "선물미결제금액", "long", "16")]
 		public long FutsUnsttAmt;
 		/// <summary>
 		/// 옵션미결제수량
 		/// </summary>
-		[XAQueryFieldAttribute("옵션미결제수량", "16")]
+		[XAQueryFieldAttribute("OptUnsttQty", "옵션미결제수량", "long", "16")]
 		public long OptUnsttQty;
 		/// <summary>
 		/// 옵션미결제금액
 		/// </summary>
-		[XAQueryFieldAttribute("옵션미결제금액", "16")]
+		[XAQueryFieldAttribute("OptUnsttAmt", "옵션미결제금액", "long", "16")]
 		public long OptUnsttAmt;
 		/// <summary>
 		/// 선물매수미결제수량
 		/// </summary>
-		[XAQueryFieldAttribute("선물매수미결제수량", "16")]
+		[XAQueryFieldAttribute("FutsBuyUnsttQty", "선물매수미결제수량", "long", "16")]
 		public long FutsBuyUnsttQty;
 		/// <summary>
 		/// 선물매수미결제금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물매수미결제금액", "16")]
+		[XAQueryFieldAttribute("FutsBuyUnsttAmt", "선물매수미결제금액", "long", "16")]
 		public long FutsBuyUnsttAmt;
 		/// <summary>
 		/// 선물매도미결제수량
 		/// </summary>
-		[XAQueryFieldAttribute("선물매도미결제수량", "16")]
+		[XAQueryFieldAttribute("FutsSellUnsttQty", "선물매도미결제수량", "long", "16")]
 		public long FutsSellUnsttQty;
 		/// <summary>
 		/// 선물매도미결제금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물매도미결제금액", "16")]
+		[XAQueryFieldAttribute("FutsSellUnsttAmt", "선물매도미결제금액", "long", "16")]
 		public long FutsSellUnsttAmt;
 		/// <summary>
 		/// 옵션매수미결제수량
 		/// </summary>
-		[XAQueryFieldAttribute("옵션매수미결제수량", "16")]
+		[XAQueryFieldAttribute("OptBuyUnsttQty", "옵션매수미결제수량", "long", "16")]
 		public long OptBuyUnsttQty;
 		/// <summary>
 		/// 옵션매수미결제금액
 		/// </summary>
-		[XAQueryFieldAttribute("옵션매수미결제금액", "16")]
+		[XAQueryFieldAttribute("OptBuyUnsttAmt", "옵션매수미결제금액", "long", "16")]
 		public long OptBuyUnsttAmt;
 		/// <summary>
 		/// 옵션매도미결제수량
 		/// </summary>
-		[XAQueryFieldAttribute("옵션매도미결제수량", "16")]
+		[XAQueryFieldAttribute("OptSellUnsttQty", "옵션매도미결제수량", "long", "16")]
 		public long OptSellUnsttQty;
 		/// <summary>
 		/// 옵션매도미결제금액
 		/// </summary>
-		[XAQueryFieldAttribute("옵션매도미결제금액", "16")]
+		[XAQueryFieldAttribute("OptSellUnsttAmt", "옵션매도미결제금액", "long", "16")]
 		public long OptSellUnsttAmt;
 		/// <summary>
 		/// 선물매수약정수량
 		/// </summary>
-		[XAQueryFieldAttribute("선물매수약정수량", "16")]
+		[XAQueryFieldAttribute("FutsBuyctrQty", "선물매수약정수량", "long", "16")]
 		public long FutsBuyctrQty;
 		/// <summary>
 		/// 선물매수약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물매수약정금액", "16")]
+		[XAQueryFieldAttribute("FutsBuyctrAmt", "선물매수약정금액", "long", "16")]
 		public long FutsBuyctrAmt;
 		/// <summary>
 		/// 선물매도약정수량
 		/// </summary>
-		[XAQueryFieldAttribute("선물매도약정수량", "16")]
+		[XAQueryFieldAttribute("FutsSlctrQty", "선물매도약정수량", "long", "16")]
 		public long FutsSlctrQty;
 		/// <summary>
 		/// 선물매도약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물매도약정금액", "16")]
+		[XAQueryFieldAttribute("FutsSlctrAmt", "선물매도약정금액", "long", "16")]
 		public long FutsSlctrAmt;
 		/// <summary>
 		/// 옵션매수약정수량
 		/// </summary>
-		[XAQueryFieldAttribute("옵션매수약정수량", "16")]
+		[XAQueryFieldAttribute("OptBuyctrQty", "옵션매수약정수량", "long", "16")]
 		public long OptBuyctrQty;
 		/// <summary>
 		/// 옵션매수약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("옵션매수약정금액", "16")]
+		[XAQueryFieldAttribute("OptBuyctrAmt", "옵션매수약정금액", "long", "16")]
 		public long OptBuyctrAmt;
 		/// <summary>
 		/// 옵션매도약정수량
 		/// </summary>
-		[XAQueryFieldAttribute("옵션매도약정수량", "16")]
+		[XAQueryFieldAttribute("OptSlctrQty", "옵션매도약정수량", "long", "16")]
 		public long OptSlctrQty;
 		/// <summary>
 		/// 옵션매도약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("옵션매도약정금액", "16")]
+		[XAQueryFieldAttribute("OptSlctrAmt", "옵션매도약정금액", "long", "16")]
 		public long OptSlctrAmt;
 		/// <summary>
 		/// 선물매매손익금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물매매손익금액", "16")]
+		[XAQueryFieldAttribute("FutsBnsplAmt", "선물매매손익금액", "long", "16")]
 		public long FutsBnsplAmt;
 		/// <summary>
 		/// 옵션매매손익금액
 		/// </summary>
-		[XAQueryFieldAttribute("옵션매매손익금액", "16")]
+		[XAQueryFieldAttribute("OptBnsplAmt", "옵션매매손익금액", "long", "16")]
 		public long OptBnsplAmt;
 		/// <summary>
 		/// 선물평가손익금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물평가손익금액", "16")]
+		[XAQueryFieldAttribute("FutsEvalPnlAmt", "선물평가손익금액", "long", "16")]
 		public long FutsEvalPnlAmt;
 		/// <summary>
 		/// 옵션평가손익금액
 		/// </summary>
-		[XAQueryFieldAttribute("옵션평가손익금액", "16")]
+		[XAQueryFieldAttribute("OptEvalPnlAmt", "옵션평가손익금액", "long", "16")]
 		public long OptEvalPnlAmt;
 		/// <summary>
 		/// 선물평가금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물평가금액", "16")]
+		[XAQueryFieldAttribute("FutsEvalAmt", "선물평가금액", "long", "16")]
 		public long FutsEvalAmt;
 		/// <summary>
 		/// 옵션평가금액
 		/// </summary>
-		[XAQueryFieldAttribute("옵션평가금액", "16")]
+		[XAQueryFieldAttribute("OptEvalAmt", "옵션평가금액", "long", "16")]
 		public long OptEvalAmt;
 		/// <summary>
 		/// 장종료후현금입금금액
 		/// </summary>
-		[XAQueryFieldAttribute("장종료후현금입금금액", "16")]
+		[XAQueryFieldAttribute("MktEndAfMnyInAmt", "장종료후현금입금금액", "long", "16")]
 		public long MktEndAfMnyInAmt;
 		/// <summary>
 		/// 장종료후현금출금금액
 		/// </summary>
-		[XAQueryFieldAttribute("장종료후현금출금금액", "16")]
+		[XAQueryFieldAttribute("MktEndAfMnyOutAmt", "장종료후현금출금금액", "long", "16")]
 		public long MktEndAfMnyOutAmt;
 		/// <summary>
 		/// 장종료후대용지정금액
 		/// </summary>
-		[XAQueryFieldAttribute("장종료후대용지정금액", "16")]
+		[XAQueryFieldAttribute("MktEndAfSubstDsgnAmt", "장종료후대용지정금액", "long", "16")]
 		public long MktEndAfSubstDsgnAmt;
 		/// <summary>
 		/// 장종료후대용해지금액
 		/// </summary>
-		[XAQueryFieldAttribute("장종료후대용해지금액", "16")]
+		[XAQueryFieldAttribute("MktEndAfSubstAbndAmt", "장종료후대용해지금액", "long", "16")]
 		public long MktEndAfSubstAbndAmt;
 
 		public static class F

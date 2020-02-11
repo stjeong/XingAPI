@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드", "3")]
+		[XAQueryFieldAttribute("upcode", "업종코드", "char", "3")]
 		public string upcode;
 
 		public static class F
@@ -137,327 +137,327 @@ namespace XingAPINet
 		/// <summary>
 		/// 업종구분
 		/// </summary>
-		[XAQueryFieldAttribute("업종구분", "1")]
+		[XAQueryFieldAttribute("gubun", "업종구분", "char", "1")]
 		public char gubun;
 		/// <summary>
 		/// 업종명
 		/// </summary>
-		[XAQueryFieldAttribute("업종명", "20")]
+		[XAQueryFieldAttribute("hname", "업종명", "char", "20")]
 		public string hname;
 		/// <summary>
 		/// 현재지수
 		/// </summary>
-		[XAQueryFieldAttribute("현재지수", "7.2")]
+		[XAQueryFieldAttribute("pricejisu", "현재지수", "float", "7.2")]
 		public float pricejisu;
 		/// <summary>
 		/// 전일지수
 		/// </summary>
-		[XAQueryFieldAttribute("전일지수", "7.2")]
+		[XAQueryFieldAttribute("jniljisu", "전일지수", "float", "7.2")]
 		public float jniljisu;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "7.2")]
+		[XAQueryFieldAttribute("change", "전일대비", "float", "7.2")]
 		public float change;
 		/// <summary>
 		/// 지수등락율
 		/// </summary>
-		[XAQueryFieldAttribute("지수등락율", "6.2")]
+		[XAQueryFieldAttribute("diffjisu", "지수등락율", "float", "6.2")]
 		public float diffjisu;
 		/// <summary>
 		/// 전일거래량
 		/// </summary>
-		[XAQueryFieldAttribute("전일거래량", "12")]
+		[XAQueryFieldAttribute("jnilvolume", "전일거래량", "long", "12")]
 		public long jnilvolume;
 		/// <summary>
 		/// 당일거래량
 		/// </summary>
-		[XAQueryFieldAttribute("당일거래량", "12")]
+		[XAQueryFieldAttribute("volume", "당일거래량", "long", "12")]
 		public long volume;
 		/// <summary>
 		/// 거래량전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("거래량전일대비", "12")]
+		[XAQueryFieldAttribute("volumechange", "거래량전일대비", "long", "12")]
 		public long volumechange;
 		/// <summary>
 		/// 거래량비율
 		/// </summary>
-		[XAQueryFieldAttribute("거래량비율", "6.2")]
+		[XAQueryFieldAttribute("volumerate", "거래량비율", "float", "6.2")]
 		public float volumerate;
 		/// <summary>
 		/// 전일거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("전일거래대금", "12")]
+		[XAQueryFieldAttribute("jnilvalue", "전일거래대금", "long", "12")]
 		public long jnilvalue;
 		/// <summary>
 		/// 당일거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("당일거래대금", "12")]
+		[XAQueryFieldAttribute("value", "당일거래대금", "long", "12")]
 		public long value;
 		/// <summary>
 		/// 거래대금전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금전일대비", "12")]
+		[XAQueryFieldAttribute("valuechange", "거래대금전일대비", "long", "12")]
 		public long valuechange;
 		/// <summary>
 		/// 거래대금비율
 		/// </summary>
-		[XAQueryFieldAttribute("거래대금비율", "6.2")]
+		[XAQueryFieldAttribute("valuerate", "거래대금비율", "float", "6.2")]
 		public float valuerate;
 		/// <summary>
 		/// 시가지수
 		/// </summary>
-		[XAQueryFieldAttribute("시가지수", "7.2")]
+		[XAQueryFieldAttribute("openjisu", "시가지수", "float", "7.2")]
 		public float openjisu;
 		/// <summary>
 		/// 시가등락율
 		/// </summary>
-		[XAQueryFieldAttribute("시가등락율", "6.2")]
+		[XAQueryFieldAttribute("opendiff", "시가등락율", "float", "6.2")]
 		public float opendiff;
 		/// <summary>
 		/// 시가시간
 		/// </summary>
-		[XAQueryFieldAttribute("시가시간", "6")]
+		[XAQueryFieldAttribute("opentime", "시가시간", "char", "6")]
 		public string opentime;
 		/// <summary>
 		/// 고가지수
 		/// </summary>
-		[XAQueryFieldAttribute("고가지수", "7.2")]
+		[XAQueryFieldAttribute("highjisu", "고가지수", "float", "7.2")]
 		public float highjisu;
 		/// <summary>
 		/// 고가등락율
 		/// </summary>
-		[XAQueryFieldAttribute("고가등락율", "6.2")]
+		[XAQueryFieldAttribute("highdiff", "고가등락율", "float", "6.2")]
 		public float highdiff;
 		/// <summary>
 		/// 고가시간
 		/// </summary>
-		[XAQueryFieldAttribute("고가시간", "6")]
+		[XAQueryFieldAttribute("hightime", "고가시간", "char", "6")]
 		public string hightime;
 		/// <summary>
 		/// 저가지수
 		/// </summary>
-		[XAQueryFieldAttribute("저가지수", "7.2")]
+		[XAQueryFieldAttribute("lowjisu", "저가지수", "float", "7.2")]
 		public float lowjisu;
 		/// <summary>
 		/// 저가등락율
 		/// </summary>
-		[XAQueryFieldAttribute("저가등락율", "6.2")]
+		[XAQueryFieldAttribute("lowdiff", "저가등락율", "float", "6.2")]
 		public float lowdiff;
 		/// <summary>
 		/// 저가시간
 		/// </summary>
-		[XAQueryFieldAttribute("저가시간", "6")]
+		[XAQueryFieldAttribute("lowtime", "저가시간", "char", "6")]
 		public string lowtime;
 		/// <summary>
 		/// 52주최고지수
 		/// </summary>
-		[XAQueryFieldAttribute("52주최고지수", "7.2")]
+		[XAQueryFieldAttribute("whjisu", "52주최고지수", "float", "7.2")]
 		public float whjisu;
 		/// <summary>
 		/// 52주최고현재가대비
 		/// </summary>
-		[XAQueryFieldAttribute("52주최고현재가대비", "7.2")]
+		[XAQueryFieldAttribute("whchange", "52주최고현재가대비", "float", "7.2")]
 		public float whchange;
 		/// <summary>
 		/// 52주최고지수일자
 		/// </summary>
-		[XAQueryFieldAttribute("52주최고지수일자", "8")]
+		[XAQueryFieldAttribute("whjday", "52주최고지수일자", "char", "8")]
 		public string whjday;
 		/// <summary>
 		/// 52주최저지수
 		/// </summary>
-		[XAQueryFieldAttribute("52주최저지수", "7.2")]
+		[XAQueryFieldAttribute("wljisu", "52주최저지수", "float", "7.2")]
 		public float wljisu;
 		/// <summary>
 		/// 52주최저현재가대비
 		/// </summary>
-		[XAQueryFieldAttribute("52주최저현재가대비", "7.2")]
+		[XAQueryFieldAttribute("wlchange", "52주최저현재가대비", "float", "7.2")]
 		public float wlchange;
 		/// <summary>
 		/// 52주최저지수일자
 		/// </summary>
-		[XAQueryFieldAttribute("52주최저지수일자", "8")]
+		[XAQueryFieldAttribute("wljday", "52주최저지수일자", "char", "8")]
 		public string wljday;
 		/// <summary>
 		/// 연중최고지수
 		/// </summary>
-		[XAQueryFieldAttribute("연중최고지수", "7.2")]
+		[XAQueryFieldAttribute("yhjisu", "연중최고지수", "float", "7.2")]
 		public float yhjisu;
 		/// <summary>
 		/// 연중최고현재가대비
 		/// </summary>
-		[XAQueryFieldAttribute("연중최고현재가대비", "7.2")]
+		[XAQueryFieldAttribute("yhchange", "연중최고현재가대비", "float", "7.2")]
 		public float yhchange;
 		/// <summary>
 		/// 연중최고지수일자
 		/// </summary>
-		[XAQueryFieldAttribute("연중최고지수일자", "8")]
+		[XAQueryFieldAttribute("yhjday", "연중최고지수일자", "char", "8")]
 		public string yhjday;
 		/// <summary>
 		/// 연중최저지수
 		/// </summary>
-		[XAQueryFieldAttribute("연중최저지수", "7.2")]
+		[XAQueryFieldAttribute("yljisu", "연중최저지수", "float", "7.2")]
 		public float yljisu;
 		/// <summary>
 		/// 연중최저현재가대비
 		/// </summary>
-		[XAQueryFieldAttribute("연중최저현재가대비", "7.2")]
+		[XAQueryFieldAttribute("ylchange", "연중최저현재가대비", "float", "7.2")]
 		public float ylchange;
 		/// <summary>
 		/// 연중최저지수일자
 		/// </summary>
-		[XAQueryFieldAttribute("연중최저지수일자", "8")]
+		[XAQueryFieldAttribute("yljday", "연중최저지수일자", "char", "8")]
 		public string yljday;
 		/// <summary>
 		/// 첫번째지수코드
 		/// </summary>
-		[XAQueryFieldAttribute("첫번째지수코드", "3")]
+		[XAQueryFieldAttribute("firstjcode", "첫번째지수코드", "char", "3")]
 		public string firstjcode;
 		/// <summary>
 		/// 첫번째지수명
 		/// </summary>
-		[XAQueryFieldAttribute("첫번째지수명", "20")]
+		[XAQueryFieldAttribute("firstjname", "첫번째지수명", "char", "20")]
 		public string firstjname;
 		/// <summary>
 		/// 첫번째지수
 		/// </summary>
-		[XAQueryFieldAttribute("첫번째지수", "7.2")]
+		[XAQueryFieldAttribute("firstjisu", "첫번째지수", "float", "7.2")]
 		public float firstjisu;
 		/// <summary>
 		/// 첫번째대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("첫번째대비구분", "1")]
+		[XAQueryFieldAttribute("firsign", "첫번째대비구분", "char", "1")]
 		public char firsign;
 		/// <summary>
 		/// 첫번째전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("첫번째전일대비", "7.2")]
+		[XAQueryFieldAttribute("firchange", "첫번째전일대비", "float", "7.2")]
 		public float firchange;
 		/// <summary>
 		/// 첫번째등락율
 		/// </summary>
-		[XAQueryFieldAttribute("첫번째등락율", "6.2")]
+		[XAQueryFieldAttribute("firdiff", "첫번째등락율", "float", "6.2")]
 		public float firdiff;
 		/// <summary>
 		/// 두번째지수코드
 		/// </summary>
-		[XAQueryFieldAttribute("두번째지수코드", "3")]
+		[XAQueryFieldAttribute("secondjcode", "두번째지수코드", "char", "3")]
 		public string secondjcode;
 		/// <summary>
 		/// 두번째지수명
 		/// </summary>
-		[XAQueryFieldAttribute("두번째지수명", "20")]
+		[XAQueryFieldAttribute("secondjname", "두번째지수명", "char", "20")]
 		public string secondjname;
 		/// <summary>
 		/// 두번째지수
 		/// </summary>
-		[XAQueryFieldAttribute("두번째지수", "7.2")]
+		[XAQueryFieldAttribute("secondjisu", "두번째지수", "float", "7.2")]
 		public float secondjisu;
 		/// <summary>
 		/// 두번째대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("두번째대비구분", "1")]
+		[XAQueryFieldAttribute("secsign", "두번째대비구분", "char", "1")]
 		public char secsign;
 		/// <summary>
 		/// 두번째전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("두번째전일대비", "7.2")]
+		[XAQueryFieldAttribute("secchange", "두번째전일대비", "float", "7.2")]
 		public float secchange;
 		/// <summary>
 		/// 두번째등락율
 		/// </summary>
-		[XAQueryFieldAttribute("두번째등락율", "6.2")]
+		[XAQueryFieldAttribute("secdiff", "두번째등락율", "float", "6.2")]
 		public float secdiff;
 		/// <summary>
 		/// 세번째지수코드
 		/// </summary>
-		[XAQueryFieldAttribute("세번째지수코드", "3")]
+		[XAQueryFieldAttribute("thirdjcode", "세번째지수코드", "char", "3")]
 		public string thirdjcode;
 		/// <summary>
 		/// 세번째지수명
 		/// </summary>
-		[XAQueryFieldAttribute("세번째지수명", "20")]
+		[XAQueryFieldAttribute("thirdjname", "세번째지수명", "char", "20")]
 		public string thirdjname;
 		/// <summary>
 		/// 세번째지수
 		/// </summary>
-		[XAQueryFieldAttribute("세번째지수", "7.2")]
+		[XAQueryFieldAttribute("thirdjisu", "세번째지수", "float", "7.2")]
 		public float thirdjisu;
 		/// <summary>
 		/// 세번째대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("세번째대비구분", "1")]
+		[XAQueryFieldAttribute("thrsign", "세번째대비구분", "char", "1")]
 		public char thrsign;
 		/// <summary>
 		/// 세번째전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("세번째전일대비", "7.2")]
+		[XAQueryFieldAttribute("thrchange", "세번째전일대비", "float", "7.2")]
 		public float thrchange;
 		/// <summary>
 		/// 세번째등락율
 		/// </summary>
-		[XAQueryFieldAttribute("세번째등락율", "6.2")]
+		[XAQueryFieldAttribute("thrdiff", "세번째등락율", "float", "6.2")]
 		public float thrdiff;
 		/// <summary>
 		/// 네번째지수코드
 		/// </summary>
-		[XAQueryFieldAttribute("네번째지수코드", "3")]
+		[XAQueryFieldAttribute("fourthjcode", "네번째지수코드", "char", "3")]
 		public string fourthjcode;
 		/// <summary>
 		/// 네번째지수명
 		/// </summary>
-		[XAQueryFieldAttribute("네번째지수명", "20")]
+		[XAQueryFieldAttribute("fourthjname", "네번째지수명", "char", "20")]
 		public string fourthjname;
 		/// <summary>
 		/// 네번째지수
 		/// </summary>
-		[XAQueryFieldAttribute("네번째지수", "7.2")]
+		[XAQueryFieldAttribute("fourthjisu", "네번째지수", "float", "7.2")]
 		public float fourthjisu;
 		/// <summary>
 		/// 네번째대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("네번째대비구분", "1")]
+		[XAQueryFieldAttribute("forsign", "네번째대비구분", "char", "1")]
 		public char forsign;
 		/// <summary>
 		/// 네번째전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("네번째전일대비", "7.2")]
+		[XAQueryFieldAttribute("forchange", "네번째전일대비", "float", "7.2")]
 		public float forchange;
 		/// <summary>
 		/// 네번째등락율
 		/// </summary>
-		[XAQueryFieldAttribute("네번째등락율", "6.2")]
+		[XAQueryFieldAttribute("fordiff", "네번째등락율", "float", "6.2")]
 		public float fordiff;
 		/// <summary>
 		/// 상승종목수
 		/// </summary>
-		[XAQueryFieldAttribute("상승종목수", "4")]
+		[XAQueryFieldAttribute("highjo", "상승종목수", "long", "4")]
 		public long highjo;
 		/// <summary>
 		/// 상한종목수
 		/// </summary>
-		[XAQueryFieldAttribute("상한종목수", "4")]
+		[XAQueryFieldAttribute("upjo", "상한종목수", "long", "4")]
 		public long upjo;
 		/// <summary>
 		/// 보합종목수
 		/// </summary>
-		[XAQueryFieldAttribute("보합종목수", "4")]
+		[XAQueryFieldAttribute("unchgjo", "보합종목수", "long", "4")]
 		public long unchgjo;
 		/// <summary>
 		/// 하락종목수
 		/// </summary>
-		[XAQueryFieldAttribute("하락종목수", "4")]
+		[XAQueryFieldAttribute("lowjo", "하락종목수", "long", "4")]
 		public long lowjo;
 		/// <summary>
 		/// 하한종목수
 		/// </summary>
-		[XAQueryFieldAttribute("하한종목수", "4")]
+		[XAQueryFieldAttribute("downjo", "하한종목수", "long", "4")]
 		public long downjo;
 
 		public static class F

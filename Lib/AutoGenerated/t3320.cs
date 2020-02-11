@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "7")]
+		[XAQueryFieldAttribute("gicode", "종목코드", "char", "7")]
 		public string gicode;
 
 		public static class F
@@ -137,107 +137,107 @@ namespace XingAPINet
 		/// <summary>
 		/// 업종구분명
 		/// </summary>
-		[XAQueryFieldAttribute("업종구분명", "20")]
+		[XAQueryFieldAttribute("upgubunnm", "업종구분명", "char", "20")]
 		public string upgubunnm;
 		/// <summary>
 		/// 시장구분
 		/// </summary>
-		[XAQueryFieldAttribute("시장구분", "1")]
+		[XAQueryFieldAttribute("sijangcd", "시장구분", "char", "1")]
 		public char sijangcd;
 		/// <summary>
 		/// 시장구분명
 		/// </summary>
-		[XAQueryFieldAttribute("시장구분명", "10")]
+		[XAQueryFieldAttribute("marketnm", "시장구분명", "char", "10")]
 		public string marketnm;
 		/// <summary>
 		/// 한글기업명
 		/// </summary>
-		[XAQueryFieldAttribute("한글기업명", "100")]
+		[XAQueryFieldAttribute("company", "한글기업명", "char", "100")]
 		public string company;
 		/// <summary>
 		/// 본사주소
 		/// </summary>
-		[XAQueryFieldAttribute("본사주소", "100")]
+		[XAQueryFieldAttribute("baddress", "본사주소", "char", "100")]
 		public string baddress;
 		/// <summary>
 		/// 본사전화번호
 		/// </summary>
-		[XAQueryFieldAttribute("본사전화번호", "20")]
+		[XAQueryFieldAttribute("btelno", "본사전화번호", "char", "20")]
 		public string btelno;
 		/// <summary>
 		/// 최근결산년도
 		/// </summary>
-		[XAQueryFieldAttribute("최근결산년도", "4")]
+		[XAQueryFieldAttribute("gsyyyy", "최근결산년도", "char", "4")]
 		public string gsyyyy;
 		/// <summary>
 		/// 결산월
 		/// </summary>
-		[XAQueryFieldAttribute("결산월", "2")]
+		[XAQueryFieldAttribute("gsmm", "결산월", "char", "2")]
 		public string gsmm;
 		/// <summary>
 		/// 최근결산년월
 		/// </summary>
-		[XAQueryFieldAttribute("최근결산년월", "6")]
+		[XAQueryFieldAttribute("gsym", "최근결산년월", "char", "6")]
 		public string gsym;
 		/// <summary>
 		/// 주당액면가
 		/// </summary>
-		[XAQueryFieldAttribute("주당액면가", "12")]
+		[XAQueryFieldAttribute("lstprice", "주당액면가", "long", "12")]
 		public long lstprice;
 		/// <summary>
 		/// 주식수
 		/// </summary>
-		[XAQueryFieldAttribute("주식수", "12")]
+		[XAQueryFieldAttribute("gstock", "주식수", "long", "12")]
 		public long gstock;
 		/// <summary>
 		/// Homepage
 		/// </summary>
-		[XAQueryFieldAttribute("Homepage", "50")]
+		[XAQueryFieldAttribute("homeurl", "Homepage", "char", "50")]
 		public string homeurl;
 		/// <summary>
 		/// 그룹명
 		/// </summary>
-		[XAQueryFieldAttribute("그룹명", "30")]
+		[XAQueryFieldAttribute("grdnm", "그룹명", "char", "30")]
 		public string grdnm;
 		/// <summary>
 		/// 외국인
 		/// </summary>
-		[XAQueryFieldAttribute("외국인", "6.2")]
+		[XAQueryFieldAttribute("foreignratio", "외국인", "float", "6.2")]
 		public float foreignratio;
 		/// <summary>
 		/// 주담전화
 		/// </summary>
-		[XAQueryFieldAttribute("주담전화", "30")]
+		[XAQueryFieldAttribute("irtel", "주담전화", "char", "30")]
 		public string irtel;
 		/// <summary>
 		/// 자본금
 		/// </summary>
-		[XAQueryFieldAttribute("자본금", "12.0")]
+		[XAQueryFieldAttribute("capital", "자본금", "float", "12.0")]
 		public float capital;
 		/// <summary>
 		/// 시가총액
 		/// </summary>
-		[XAQueryFieldAttribute("시가총액", "12.0")]
+		[XAQueryFieldAttribute("sigavalue", "시가총액", "float", "12.0")]
 		public float sigavalue;
 		/// <summary>
 		/// 배당금
 		/// </summary>
-		[XAQueryFieldAttribute("배당금", "12.0")]
+		[XAQueryFieldAttribute("cashsis", "배당금", "float", "12.0")]
 		public float cashsis;
 		/// <summary>
 		/// 배당수익율
 		/// </summary>
-		[XAQueryFieldAttribute("배당수익율", "13.2")]
+		[XAQueryFieldAttribute("cashrate", "배당수익율", "float", "13.2")]
 		public float cashrate;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "8")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 전일종가
 		/// </summary>
-		[XAQueryFieldAttribute("전일종가", "8")]
+		[XAQueryFieldAttribute("jnilclose", "전일종가", "long", "8")]
 		public long jnilclose;
 
 		public static class F
@@ -587,97 +587,97 @@ namespace XingAPINet
 		/// <summary>
 		/// 기업코드
 		/// </summary>
-		[XAQueryFieldAttribute("기업코드", "7")]
+		[XAQueryFieldAttribute("gicode", "기업코드", "char", "7")]
 		public string gicode;
 		/// <summary>
 		/// 결산년월
 		/// </summary>
-		[XAQueryFieldAttribute("결산년월", "6")]
+		[XAQueryFieldAttribute("gsym", "결산년월", "char", "6")]
 		public string gsym;
 		/// <summary>
 		/// 결산구분
 		/// </summary>
-		[XAQueryFieldAttribute("결산구분", "1")]
+		[XAQueryFieldAttribute("gsgb", "결산구분", "char", "1")]
 		public char gsgb;
 		/// <summary>
 		/// PER
 		/// </summary>
-		[XAQueryFieldAttribute("PER", "13.2")]
+		[XAQueryFieldAttribute("per", "PER", "float", "13.2")]
 		public float per;
 		/// <summary>
 		/// EPS
 		/// </summary>
-		[XAQueryFieldAttribute("EPS", "13.0")]
+		[XAQueryFieldAttribute("eps", "EPS", "float", "13.0")]
 		public float eps;
 		/// <summary>
 		/// PBR
 		/// </summary>
-		[XAQueryFieldAttribute("PBR", "13.2")]
+		[XAQueryFieldAttribute("pbr", "PBR", "float", "13.2")]
 		public float pbr;
 		/// <summary>
 		/// ROA
 		/// </summary>
-		[XAQueryFieldAttribute("ROA", "13.2")]
+		[XAQueryFieldAttribute("roa", "ROA", "float", "13.2")]
 		public float roa;
 		/// <summary>
 		/// ROE
 		/// </summary>
-		[XAQueryFieldAttribute("ROE", "13.2")]
+		[XAQueryFieldAttribute("roe", "ROE", "float", "13.2")]
 		public float roe;
 		/// <summary>
 		/// EBITDA
 		/// </summary>
-		[XAQueryFieldAttribute("EBITDA", "13.2")]
+		[XAQueryFieldAttribute("ebitda", "EBITDA", "float", "13.2")]
 		public float ebitda;
 		/// <summary>
 		/// EVEBITDA
 		/// </summary>
-		[XAQueryFieldAttribute("EVEBITDA", "13.2")]
+		[XAQueryFieldAttribute("evebitda", "EVEBITDA", "float", "13.2")]
 		public float evebitda;
 		/// <summary>
 		/// 액면가
 		/// </summary>
-		[XAQueryFieldAttribute("액면가", "13.2")]
+		[XAQueryFieldAttribute("par", "액면가", "float", "13.2")]
 		public float par;
 		/// <summary>
 		/// SPS
 		/// </summary>
-		[XAQueryFieldAttribute("SPS", "13.2")]
+		[XAQueryFieldAttribute("sps", "SPS", "float", "13.2")]
 		public float sps;
 		/// <summary>
 		/// CPS
 		/// </summary>
-		[XAQueryFieldAttribute("CPS", "13.2")]
+		[XAQueryFieldAttribute("cps", "CPS", "float", "13.2")]
 		public float cps;
 		/// <summary>
 		/// BPS
 		/// </summary>
-		[XAQueryFieldAttribute("BPS", "13.0")]
+		[XAQueryFieldAttribute("bps", "BPS", "float", "13.0")]
 		public float bps;
 		/// <summary>
 		/// T.PER
 		/// </summary>
-		[XAQueryFieldAttribute("T.PER", "13.2")]
+		[XAQueryFieldAttribute("t_per", "T.PER", "float", "13.2")]
 		public float t_per;
 		/// <summary>
 		/// T.EPS
 		/// </summary>
-		[XAQueryFieldAttribute("T.EPS", "13.0")]
+		[XAQueryFieldAttribute("t_eps", "T.EPS", "float", "13.0")]
 		public float t_eps;
 		/// <summary>
 		/// PEG
 		/// </summary>
-		[XAQueryFieldAttribute("PEG", "13.2")]
+		[XAQueryFieldAttribute("peg", "PEG", "float", "13.2")]
 		public float peg;
 		/// <summary>
 		/// T.PEG
 		/// </summary>
-		[XAQueryFieldAttribute("T.PEG", "13.2")]
+		[XAQueryFieldAttribute("t_peg", "T.PEG", "float", "13.2")]
 		public float t_peg;
 		/// <summary>
 		/// 최근분기년도
 		/// </summary>
-		[XAQueryFieldAttribute("최근분기년도", "6")]
+		[XAQueryFieldAttribute("t_gsym", "최근분기년도", "char", "6")]
 		public string t_gsym;
 
 		public static class F

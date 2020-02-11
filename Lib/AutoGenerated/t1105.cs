@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,47 +137,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 피봇
 		/// </summary>
-		[XAQueryFieldAttribute("피봇", "8")]
+		[XAQueryFieldAttribute("pbot", "피봇", "long", "8")]
 		public long pbot;
 		/// <summary>
 		/// 1차저항
 		/// </summary>
-		[XAQueryFieldAttribute("1차저항", "8")]
+		[XAQueryFieldAttribute("offer1", "1차저항", "long", "8")]
 		public long offer1;
 		/// <summary>
 		/// 1차지지
 		/// </summary>
-		[XAQueryFieldAttribute("1차지지", "8")]
+		[XAQueryFieldAttribute("supp1", "1차지지", "long", "8")]
 		public long supp1;
 		/// <summary>
 		/// 2차저항
 		/// </summary>
-		[XAQueryFieldAttribute("2차저항", "8")]
+		[XAQueryFieldAttribute("offer2", "2차저항", "long", "8")]
 		public long offer2;
 		/// <summary>
 		/// 2차지지
 		/// </summary>
-		[XAQueryFieldAttribute("2차지지", "8")]
+		[XAQueryFieldAttribute("supp2", "2차지지", "long", "8")]
 		public long supp2;
 		/// <summary>
 		/// 기준가격
 		/// </summary>
-		[XAQueryFieldAttribute("기준가격", "8")]
+		[XAQueryFieldAttribute("stdprc", "기준가격", "long", "8")]
 		public long stdprc;
 		/// <summary>
 		/// D저항
 		/// </summary>
-		[XAQueryFieldAttribute("D저항", "8")]
+		[XAQueryFieldAttribute("offerd", "D저항", "long", "8")]
 		public long offerd;
 		/// <summary>
 		/// D지지
 		/// </summary>
-		[XAQueryFieldAttribute("D지지", "8")]
+		[XAQueryFieldAttribute("suppd", "D지지", "long", "8")]
 		public long suppd;
 
 		public static class F

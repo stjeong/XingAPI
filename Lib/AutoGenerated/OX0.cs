@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "8")]
+		[XAQueryFieldAttribute("optcode", "단축코드", "char", "8")]
 		public string optcode;
 
 		public static class F
@@ -137,27 +137,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 적용 상한단계
 		/// </summary>
-		[XAQueryFieldAttribute("적용 상한단계", "2")]
+		[XAQueryFieldAttribute("upstep", "적용 상한단계", "char", "2")]
 		public string upstep;
 		/// <summary>
 		/// 적용 하한단계
 		/// </summary>
-		[XAQueryFieldAttribute("적용 하한단계", "2")]
+		[XAQueryFieldAttribute("dnstep", "적용 하한단계", "char", "2")]
 		public string dnstep;
 		/// <summary>
 		/// 적용 상한가
 		/// </summary>
-		[XAQueryFieldAttribute("적용 상한가", "6.2")]
+		[XAQueryFieldAttribute("uplmtprice", "적용 상한가", "float", "6.2")]
 		public float uplmtprice;
 		/// <summary>
 		/// 적용 하한가
 		/// </summary>
-		[XAQueryFieldAttribute("적용 하한가", "6.2")]
+		[XAQueryFieldAttribute("dnlmtprice", "적용 하한가", "float", "6.2")]
 		public float dnlmtprice;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "8")]
+		[XAQueryFieldAttribute("opttcode", "단축코드", "char", "8")]
 		public string opttcode;
 
 		public static class F

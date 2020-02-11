@@ -50,32 +50,32 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "8")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "8")]
 		public string shcode;
 		/// <summary>
 		/// 선물최근월물
 		/// </summary>
-		[XAQueryFieldAttribute("선물최근월물", "1")]
+		[XAQueryFieldAttribute("futcheck", "선물최근월물", "char", "1")]
 		public char futcheck;
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜", "8")]
+		[XAQueryFieldAttribute("date", "날짜", "char", "8")]
 		public string date;
 		/// <summary>
 		/// CTS종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("CTS종목코드", "8")]
+		[XAQueryFieldAttribute("cts_code", "CTS종목코드", "char", "8")]
 		public string cts_code;
 		/// <summary>
 		/// 전종목만기일
 		/// </summary>
-		[XAQueryFieldAttribute("전종목만기일", "8")]
+		[XAQueryFieldAttribute("lastdate", "전종목만기일", "char", "8")]
 		public string lastdate;
 		/// <summary>
 		/// 조회요청건수
 		/// </summary>
-		[XAQueryFieldAttribute("조회요청건수", "3")]
+		[XAQueryFieldAttribute("cnt", "조회요청건수", "int", "3")]
 		public int cnt;
 
 		public static class F
@@ -217,22 +217,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜", "8")]
+		[XAQueryFieldAttribute("date", "날짜", "char", "8")]
 		public string date;
 		/// <summary>
 		/// CTS종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("CTS종목코드", "8")]
+		[XAQueryFieldAttribute("cts_code", "CTS종목코드", "char", "8")]
 		public string cts_code;
 		/// <summary>
 		/// 전종목만기일
 		/// </summary>
-		[XAQueryFieldAttribute("전종목만기일", "8")]
+		[XAQueryFieldAttribute("lastdate", "전종목만기일", "char", "8")]
 		public string lastdate;
 		/// <summary>
 		/// 최근월선물여부
 		/// </summary>
-		[XAQueryFieldAttribute("최근월선물여부", "1")]
+		[XAQueryFieldAttribute("nowfutyn", "최근월선물여부", "char", "1")]
 		public char nowfutyn;
 
 		public static class F
@@ -378,52 +378,52 @@ namespace XingAPINet
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜", "8")]
+		[XAQueryFieldAttribute("date", "날짜", "char", "8")]
 		public string date;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가", "6.2")]
+		[XAQueryFieldAttribute("open", "시가", "float", "6.2")]
 		public float open;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가", "6.2")]
+		[XAQueryFieldAttribute("high", "고가", "float", "6.2")]
 		public float high;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가", "6.2")]
+		[XAQueryFieldAttribute("low", "저가", "float", "6.2")]
 		public float low;
 		/// <summary>
 		/// 종가
 		/// </summary>
-		[XAQueryFieldAttribute("종가", "6.2")]
+		[XAQueryFieldAttribute("close", "종가", "float", "6.2")]
 		public float close;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "6.2")]
+		[XAQueryFieldAttribute("change", "전일대비", "float", "6.2")]
 		public float change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 거래량
 		/// </summary>
-		[XAQueryFieldAttribute("거래량", "12")]
+		[XAQueryFieldAttribute("volume", "거래량", "long", "12")]
 		public long volume;
 		/// <summary>
 		/// 거래증가율
 		/// </summary>
-		[XAQueryFieldAttribute("거래증가율", "10.2")]
+		[XAQueryFieldAttribute("diff_vol", "거래증가율", "float", "10.2")]
 		public float diff_vol;
 
 		public static class F

@@ -50,17 +50,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분", "1")]
+		[XAQueryFieldAttribute("gubun1", "구분", "char", "1")]
 		public char gubun1;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 정렬
 		/// </summary>
-		[XAQueryFieldAttribute("정렬", "1")]
+		[XAQueryFieldAttribute("gubun2", "정렬", "char", "1")]
 		public char gubun2;
 
 		public static class F
@@ -169,72 +169,72 @@ namespace XingAPINet
 		/// <summary>
 		/// 순위
 		/// </summary>
-		[XAQueryFieldAttribute("순위", "4")]
+		[XAQueryFieldAttribute("rank", "순위", "long", "4")]
 		public long rank;
 		/// <summary>
 		/// 한글명
 		/// </summary>
-		[XAQueryFieldAttribute("한글명", "20")]
+		[XAQueryFieldAttribute("hname", "한글명", "char", "20")]
 		public string hname;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "8")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "8")]
+		[XAQueryFieldAttribute("change", "전일대비", "long", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 시총비중
 		/// </summary>
-		[XAQueryFieldAttribute("시총비중", "6.2")]
+		[XAQueryFieldAttribute("sigatotrt", "시총비중", "float", "6.2")]
 		public float sigatotrt;
 		/// <summary>
 		/// 순매수잔량
 		/// </summary>
-		[XAQueryFieldAttribute("순매수잔량", "12")]
+		[XAQueryFieldAttribute("obuyvol", "순매수잔량", "long", "12")]
 		public long obuyvol;
 		/// <summary>
 		/// 매수잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매수잔량", "12")]
+		[XAQueryFieldAttribute("buyrem", "매수잔량", "long", "12")]
 		public long buyrem;
 		/// <summary>
 		/// 매수공시수량
 		/// </summary>
-		[XAQueryFieldAttribute("매수공시수량", "12")]
+		[XAQueryFieldAttribute("psgvolume", "매수공시수량", "long", "12")]
 		public long psgvolume;
 		/// <summary>
 		/// 매도잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매도잔량", "12")]
+		[XAQueryFieldAttribute("sellrem", "매도잔량", "long", "12")]
 		public long sellrem;
 		/// <summary>
 		/// 매도공시수량
 		/// </summary>
-		[XAQueryFieldAttribute("매도공시수량", "12")]
+		[XAQueryFieldAttribute("pdgvolume", "매도공시수량", "long", "12")]
 		public long pdgvolume;
 		/// <summary>
 		/// 시가총액
 		/// </summary>
-		[XAQueryFieldAttribute("시가총액", "20")]
+		[XAQueryFieldAttribute("sigatot", "시가총액", "long", "20")]
 		public long sigatot;
 		/// <summary>
 		/// 종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목코드", "6")]
+		[XAQueryFieldAttribute("shcode", "종목코드", "char", "6")]
 		public string shcode;
 
 		public static class F

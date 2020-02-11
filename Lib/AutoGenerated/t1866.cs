@@ -50,27 +50,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 로그인ID
 		/// </summary>
-		[XAQueryFieldAttribute("로그인ID", "8")]
+		[XAQueryFieldAttribute("user_id", "로그인ID", "char", "8")]
 		public string user_id;
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분", "1")]
+		[XAQueryFieldAttribute("gb", "조회구분", "char", "1")]
 		public char gb;
 		/// <summary>
 		/// 그룹명
 		/// </summary>
-		[XAQueryFieldAttribute("그룹명", "40")]
+		[XAQueryFieldAttribute("group_name", "그룹명", "char", "40")]
 		public string group_name;
 		/// <summary>
 		/// 연속여부
 		/// </summary>
-		[XAQueryFieldAttribute("연속여부", "1")]
+		[XAQueryFieldAttribute("cont", "연속여부", "char", "1")]
 		public char cont;
 		/// <summary>
 		/// 연속키
 		/// </summary>
-		[XAQueryFieldAttribute("연속키", "40")]
+		[XAQueryFieldAttribute("cont_key", "연속키", "char", "40")]
 		public string cont_key;
 
 		public static class F
@@ -201,17 +201,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 저장조건수
 		/// </summary>
-		[XAQueryFieldAttribute("저장조건수", "5")]
+		[XAQueryFieldAttribute("result_count", "저장조건수", "long", "5")]
 		public long result_count;
 		/// <summary>
 		/// 연속여부
 		/// </summary>
-		[XAQueryFieldAttribute("연속여부", "1")]
+		[XAQueryFieldAttribute("cont", "연속여부", "char", "1")]
 		public char cont;
 		/// <summary>
 		/// 연속키
 		/// </summary>
-		[XAQueryFieldAttribute("연속키", "40")]
+		[XAQueryFieldAttribute("cont_key", "연속키", "char", "40")]
 		public string cont_key;
 
 		public static class F
@@ -345,17 +345,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 서버저장인덱스
 		/// </summary>
-		[XAQueryFieldAttribute("서버저장인덱스", "12")]
+		[XAQueryFieldAttribute("query_index", "서버저장인덱스", "char", "12")]
 		public string query_index;
 		/// <summary>
 		/// 그룹명
 		/// </summary>
-		[XAQueryFieldAttribute("그룹명", "40")]
+		[XAQueryFieldAttribute("group_name", "그룹명", "char", "40")]
 		public string group_name;
 		/// <summary>
 		/// 조건저장명
 		/// </summary>
-		[XAQueryFieldAttribute("조건저장명", "40")]
+		[XAQueryFieldAttribute("query_name", "조건저장명", "char", "40")]
 		public string query_name;
 
 		public static class F

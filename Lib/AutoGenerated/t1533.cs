@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 구분
 		/// </summary>
-		[XAQueryFieldAttribute("구분", "1")]
+		[XAQueryFieldAttribute("gubun", "구분", "char", "1")]
 		public char gubun;
 		/// <summary>
 		/// 대비일자
 		/// </summary>
-		[XAQueryFieldAttribute("대비일자", "2")]
+		[XAQueryFieldAttribute("chgdate", "대비일자", "long", "2")]
 		public long chgdate;
 
 		public static class F
@@ -153,47 +153,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 테마명
 		/// </summary>
-		[XAQueryFieldAttribute("테마명", "36")]
+		[XAQueryFieldAttribute("tmname", "테마명", "char", "36")]
 		public string tmname;
 		/// <summary>
 		/// 전체
 		/// </summary>
-		[XAQueryFieldAttribute("전체", "4")]
+		[XAQueryFieldAttribute("totcnt", "전체", "long", "4")]
 		public long totcnt;
 		/// <summary>
 		/// 상승
 		/// </summary>
-		[XAQueryFieldAttribute("상승", "4")]
+		[XAQueryFieldAttribute("upcnt", "상승", "long", "4")]
 		public long upcnt;
 		/// <summary>
 		/// 하락
 		/// </summary>
-		[XAQueryFieldAttribute("하락", "4")]
+		[XAQueryFieldAttribute("dncnt", "하락", "long", "4")]
 		public long dncnt;
 		/// <summary>
 		/// 상승비율
 		/// </summary>
-		[XAQueryFieldAttribute("상승비율", "6.2")]
+		[XAQueryFieldAttribute("uprate", "상승비율", "float", "6.2")]
 		public float uprate;
 		/// <summary>
 		/// 거래증가율
 		/// </summary>
-		[XAQueryFieldAttribute("거래증가율", "10.2")]
+		[XAQueryFieldAttribute("diff_vol", "거래증가율", "float", "10.2")]
 		public float diff_vol;
 		/// <summary>
 		/// 평균등락율
 		/// </summary>
-		[XAQueryFieldAttribute("평균등락율", "6.2")]
+		[XAQueryFieldAttribute("avgdiff", "평균등락율", "float", "6.2")]
 		public float avgdiff;
 		/// <summary>
 		/// 대비등락율
 		/// </summary>
-		[XAQueryFieldAttribute("대비등락율", "6.2")]
+		[XAQueryFieldAttribute("chgdiff", "대비등락율", "float", "6.2")]
 		public float chgdiff;
 		/// <summary>
 		/// 테마코드
 		/// </summary>
-		[XAQueryFieldAttribute("테마코드", "4")]
+		[XAQueryFieldAttribute("tmcode", "테마코드", "char", "4")]
 		public string tmcode;
 
 		public static class F

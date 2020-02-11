@@ -50,17 +50,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 종목대분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목대분류코드", "2")]
+		[XAQueryFieldAttribute("IsuLgclssCode", "종목대분류코드", "char", "2")]
 		public string IsuLgclssCode;
 		/// <summary>
 		/// 종목중분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목중분류코드", "2")]
+		[XAQueryFieldAttribute("IsuMdclssCode", "종목중분류코드", "char", "2")]
 		public string IsuMdclssCode;
 
 		public static class F
@@ -169,17 +169,17 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 종목대분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목대분류코드", "2")]
+		[XAQueryFieldAttribute("IsuLgclssCode", "종목대분류코드", "char", "2")]
 		public string IsuLgclssCode;
 		/// <summary>
 		/// 종목중분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목중분류코드", "2")]
+		[XAQueryFieldAttribute("IsuMdclssCode", "종목중분류코드", "char", "2")]
 		public string IsuMdclssCode;
 
 		public static class F
@@ -313,47 +313,47 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목소분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목소분류코드", "3")]
+		[XAQueryFieldAttribute("IsuSmclssCode", "종목소분류코드", "char", "3")]
 		public string IsuSmclssCode;
 		/// <summary>
 		/// 종목중분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("종목중분류코드", "2")]
+		[XAQueryFieldAttribute("IsuMdclssCode", "종목중분류코드", "char", "2")]
 		public string IsuMdclssCode;
 		/// <summary>
 		/// 종목대중분류명
 		/// </summary>
-		[XAQueryFieldAttribute("종목대중분류명", "40")]
+		[XAQueryFieldAttribute("IsuLrgMdclssNm", "종목대중분류명", "char", "40")]
 		public string IsuLrgMdclssNm;
 		/// <summary>
 		/// 종목대중소분류명
 		/// </summary>
-		[XAQueryFieldAttribute("종목대중소분류명", "40")]
+		[XAQueryFieldAttribute("IsuLrgMidSmclssNm", "종목대중소분류명", "char", "40")]
 		public string IsuLrgMidSmclssNm;
 		/// <summary>
 		/// 단축한글종목명
 		/// </summary>
-		[XAQueryFieldAttribute("단축한글종목명", "40")]
+		[XAQueryFieldAttribute("ShtnHanglIsuNm", "단축한글종목명", "char", "40")]
 		public string ShtnHanglIsuNm;
 		/// <summary>
 		/// 위탁증거금율
 		/// </summary>
-		[XAQueryFieldAttribute("위탁증거금율", "26.9")]
+		[XAQueryFieldAttribute("CsgnMgnrt", "위탁증거금율", "double", "26.9")]
 		public double CsgnMgnrt;
 		/// <summary>
 		/// 유지증거금율
 		/// </summary>
-		[XAQueryFieldAttribute("유지증거금율", "26.9")]
+		[XAQueryFieldAttribute("MaintMgnrt", "유지증거금율", "double", "26.9")]
 		public double MaintMgnrt;
 		/// <summary>
 		/// 현금증거금율
 		/// </summary>
-		[XAQueryFieldAttribute("현금증거금율", "26.9")]
+		[XAQueryFieldAttribute("MnyMgnrt", "현금증거금율", "double", "26.9")]
 		public double MnyMgnrt;
 		/// <summary>
 		/// 잔여일수
 		/// </summary>
-		[XAQueryFieldAttribute("잔여일수", "6")]
+		[XAQueryFieldAttribute("RmndDays", "잔여일수", "long", "6")]
 		public long RmndDays;
 
 		public static class F

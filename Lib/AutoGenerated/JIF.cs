@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 장구분
 		/// </summary>
-		[XAQueryFieldAttribute("장구분", "1")]
+		[XAQueryFieldAttribute("jangubun", "장구분", "char", "1")]
 		public char jangubun;
 
 		public static class F
@@ -137,12 +137,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 장구분
 		/// </summary>
-		[XAQueryFieldAttribute("장구분", "1")]
+		[XAQueryFieldAttribute("jangubun", "장구분", "char", "1")]
 		public char jangubun;
 		/// <summary>
 		/// 장상태
 		/// </summary>
-		[XAQueryFieldAttribute("장상태", "2")]
+		[XAQueryFieldAttribute("jstatus", "장상태", "char", "2")]
 		public string jstatus;
 
 		public static class F

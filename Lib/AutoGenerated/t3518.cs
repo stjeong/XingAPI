@@ -50,37 +50,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목종류
 		/// </summary>
-		[XAQueryFieldAttribute("종목종류", "1")]
+		[XAQueryFieldAttribute("kind", "종목종류", "char", "1")]
 		public char kind;
 		/// <summary>
 		/// SYMBOL
 		/// </summary>
-		[XAQueryFieldAttribute("SYMBOL", "16")]
+		[XAQueryFieldAttribute("symbol", "SYMBOL", "char", "16")]
 		public string symbol;
 		/// <summary>
 		/// 입력건수
 		/// </summary>
-		[XAQueryFieldAttribute("입력건수", "4")]
+		[XAQueryFieldAttribute("cnt", "입력건수", "long", "4")]
 		public long cnt;
 		/// <summary>
 		/// 조회구분
 		/// </summary>
-		[XAQueryFieldAttribute("조회구분", "1")]
+		[XAQueryFieldAttribute("jgbn", "조회구분", "char", "1")]
 		public char jgbn;
 		/// <summary>
 		/// N분
 		/// </summary>
-		[XAQueryFieldAttribute("N분", "3")]
+		[XAQueryFieldAttribute("nmin", "N분", "long", "3")]
 		public long nmin;
 		/// <summary>
 		/// CTS_DATE
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_DATE", "8")]
+		[XAQueryFieldAttribute("cts_date", "CTS_DATE", "char", "8")]
 		public string cts_date;
 		/// <summary>
 		/// CTS_TIME
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_TIME", "6")]
+		[XAQueryFieldAttribute("cts_time", "CTS_TIME", "char", "6")]
 		public string cts_time;
 
 		public static class F
@@ -233,12 +233,12 @@ namespace XingAPINet
 		/// <summary>
 		/// CTS_DATE
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_DATE", "8")]
+		[XAQueryFieldAttribute("cts_date", "CTS_DATE", "char", "8")]
 		public string cts_date;
 		/// <summary>
 		/// CTS_TIME
 		/// </summary>
-		[XAQueryFieldAttribute("CTS_TIME", "6")]
+		[XAQueryFieldAttribute("cts_time", "CTS_TIME", "char", "6")]
 		public string cts_time;
 
 		public static class F
@@ -360,97 +360,97 @@ namespace XingAPINet
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자", "8")]
+		[XAQueryFieldAttribute("date", "일자", "char", "8")]
 		public string date;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간", "8")]
+		[XAQueryFieldAttribute("time", "시간", "char", "8")]
 		public string time;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가", "9.4")]
+		[XAQueryFieldAttribute("open", "시가", "double", "9.4")]
 		public double open;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가", "9.4")]
+		[XAQueryFieldAttribute("high", "고가", "double", "9.4")]
 		public double high;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가", "9.4")]
+		[XAQueryFieldAttribute("low", "저가", "double", "9.4")]
 		public double low;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "9.4")]
+		[XAQueryFieldAttribute("price", "현재가", "double", "9.4")]
 		public double price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "9.4")]
+		[XAQueryFieldAttribute("change", "전일대비", "double", "9.4")]
 		public double change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "9.4")]
+		[XAQueryFieldAttribute("uprate", "등락율", "double", "9.4")]
 		public double uprate;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량", "12.0")]
+		[XAQueryFieldAttribute("volume", "누적거래량", "double", "12.0")]
 		public double volume;
 		/// <summary>
 		/// 매수호가
 		/// </summary>
-		[XAQueryFieldAttribute("매수호가", "9.4")]
+		[XAQueryFieldAttribute("bidho", "매수호가", "double", "9.4")]
 		public double bidho;
 		/// <summary>
 		/// 매도호가
 		/// </summary>
-		[XAQueryFieldAttribute("매도호가", "9.4")]
+		[XAQueryFieldAttribute("offerho", "매도호가", "double", "9.4")]
 		public double offerho;
 		/// <summary>
 		/// 매수잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매수잔량", "12.0")]
+		[XAQueryFieldAttribute("bidrem", "매수잔량", "double", "12.0")]
 		public double bidrem;
 		/// <summary>
 		/// 매도잔량
 		/// </summary>
-		[XAQueryFieldAttribute("매도잔량", "12.0")]
+		[XAQueryFieldAttribute("offerrem", "매도잔량", "double", "12.0")]
 		public double offerrem;
 		/// <summary>
 		/// 종목종류
 		/// </summary>
-		[XAQueryFieldAttribute("종목종류", "1")]
+		[XAQueryFieldAttribute("kind", "종목종류", "char", "1")]
 		public char kind;
 		/// <summary>
 		/// SYMBOL
 		/// </summary>
-		[XAQueryFieldAttribute("SYMBOL", "16")]
+		[XAQueryFieldAttribute("symbol", "SYMBOL", "char", "16")]
 		public string symbol;
 		/// <summary>
 		/// EXID
 		/// </summary>
-		[XAQueryFieldAttribute("EXID", "4")]
+		[XAQueryFieldAttribute("exid", "EXID", "char", "4")]
 		public string exid;
 		/// <summary>
 		/// 한국일자
 		/// </summary>
-		[XAQueryFieldAttribute("한국일자", "8")]
+		[XAQueryFieldAttribute("kodate", "한국일자", "char", "8")]
 		public string kodate;
 		/// <summary>
 		/// 한국시간
 		/// </summary>
-		[XAQueryFieldAttribute("한국시간", "8")]
+		[XAQueryFieldAttribute("kotime", "한국시간", "char", "8")]
 		public string kotime;
 
 		public static class F

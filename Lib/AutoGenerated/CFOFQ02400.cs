@@ -50,27 +50,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호", "20")]
+		[XAQueryFieldAttribute("AcntNo", "계좌번호", "char", "20")]
 		public string AcntNo;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호", "8")]
+		[XAQueryFieldAttribute("Pwd", "비밀번호", "char", "8")]
 		public string Pwd;
 		/// <summary>
 		/// 등록시장코드
 		/// </summary>
-		[XAQueryFieldAttribute("등록시장코드", "2")]
+		[XAQueryFieldAttribute("RegMktCode", "등록시장코드", "char", "2")]
 		public string RegMktCode;
 		/// <summary>
 		/// 매수일자
 		/// </summary>
-		[XAQueryFieldAttribute("매수일자", "8")]
+		[XAQueryFieldAttribute("BuyDt", "매수일자", "char", "8")]
 		public string BuyDt;
 
 		public static class F
@@ -201,27 +201,27 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 계좌번호
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호", "20")]
+		[XAQueryFieldAttribute("AcntNo", "계좌번호", "char", "20")]
 		public string AcntNo;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호", "8")]
+		[XAQueryFieldAttribute("Pwd", "비밀번호", "char", "8")]
 		public string Pwd;
 		/// <summary>
 		/// 등록시장코드
 		/// </summary>
-		[XAQueryFieldAttribute("등록시장코드", "2")]
+		[XAQueryFieldAttribute("RegMktCode", "등록시장코드", "char", "2")]
 		public string RegMktCode;
 		/// <summary>
 		/// 매수일자
 		/// </summary>
-		[XAQueryFieldAttribute("매수일자", "8")]
+		[XAQueryFieldAttribute("BuyDt", "매수일자", "char", "8")]
 		public string BuyDt;
 
 		public static class F
@@ -379,102 +379,102 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 계좌명
 		/// </summary>
-		[XAQueryFieldAttribute("계좌명", "40")]
+		[XAQueryFieldAttribute("AcntNm", "계좌명", "char", "40")]
 		public string AcntNm;
 		/// <summary>
 		/// 선물약정수량
 		/// </summary>
-		[XAQueryFieldAttribute("선물약정수량", "16")]
+		[XAQueryFieldAttribute("FutsCtrctQty", "선물약정수량", "long", "16")]
 		public long FutsCtrctQty;
 		/// <summary>
 		/// 옵션약정수량
 		/// </summary>
-		[XAQueryFieldAttribute("옵션약정수량", "16")]
+		[XAQueryFieldAttribute("OptCtrctQty", "옵션약정수량", "long", "16")]
 		public long OptCtrctQty;
 		/// <summary>
 		/// 약정수량
 		/// </summary>
-		[XAQueryFieldAttribute("약정수량", "16")]
+		[XAQueryFieldAttribute("CtrctQty", "약정수량", "long", "16")]
 		public long CtrctQty;
 		/// <summary>
 		/// 선물약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물약정금액", "16")]
+		[XAQueryFieldAttribute("FutsCtrctAmt", "선물약정금액", "long", "16")]
 		public long FutsCtrctAmt;
 		/// <summary>
 		/// 선물매수약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물매수약정금액", "16")]
+		[XAQueryFieldAttribute("FutsBuyctrAmt", "선물매수약정금액", "long", "16")]
 		public long FutsBuyctrAmt;
 		/// <summary>
 		/// 선물매도약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("선물매도약정금액", "16")]
+		[XAQueryFieldAttribute("FutsSlctrAmt", "선물매도약정금액", "long", "16")]
 		public long FutsSlctrAmt;
 		/// <summary>
 		/// 콜옵션약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("콜옵션약정금액", "16")]
+		[XAQueryFieldAttribute("CalloptCtrctAmt", "콜옵션약정금액", "long", "16")]
 		public long CalloptCtrctAmt;
 		/// <summary>
 		/// 콜매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("콜매수금액", "16")]
+		[XAQueryFieldAttribute("CallBuyAmt", "콜매수금액", "long", "16")]
 		public long CallBuyAmt;
 		/// <summary>
 		/// 콜매도금액
 		/// </summary>
-		[XAQueryFieldAttribute("콜매도금액", "16")]
+		[XAQueryFieldAttribute("CallSellAmt", "콜매도금액", "long", "16")]
 		public long CallSellAmt;
 		/// <summary>
 		/// 풋옵션약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("풋옵션약정금액", "16")]
+		[XAQueryFieldAttribute("PutoptCtrctAmt", "풋옵션약정금액", "long", "16")]
 		public long PutoptCtrctAmt;
 		/// <summary>
 		/// 풋매수금액
 		/// </summary>
-		[XAQueryFieldAttribute("풋매수금액", "16")]
+		[XAQueryFieldAttribute("PutBuyAmt", "풋매수금액", "long", "16")]
 		public long PutBuyAmt;
 		/// <summary>
 		/// 풋매도금액
 		/// </summary>
-		[XAQueryFieldAttribute("풋매도금액", "16")]
+		[XAQueryFieldAttribute("PutSellAmt", "풋매도금액", "long", "16")]
 		public long PutSellAmt;
 		/// <summary>
 		/// 전체약정금액
 		/// </summary>
-		[XAQueryFieldAttribute("전체약정금액", "16")]
+		[XAQueryFieldAttribute("AllCtrctAmt", "전체약정금액", "long", "16")]
 		public long AllCtrctAmt;
 		/// <summary>
 		/// 매수약정누계금액
 		/// </summary>
-		[XAQueryFieldAttribute("매수약정누계금액", "16")]
+		[XAQueryFieldAttribute("BuyctrAsmAmt", "매수약정누계금액", "long", "16")]
 		public long BuyctrAsmAmt;
 		/// <summary>
 		/// 매도약정누계금액
 		/// </summary>
-		[XAQueryFieldAttribute("매도약정누계금액", "16")]
+		[XAQueryFieldAttribute("SlctrAsmAmt", "매도약정누계금액", "long", "16")]
 		public long SlctrAsmAmt;
 		/// <summary>
 		/// 선물손익합계
 		/// </summary>
-		[XAQueryFieldAttribute("선물손익합계", "16")]
+		[XAQueryFieldAttribute("FutsPnlSum", "선물손익합계", "long", "16")]
 		public long FutsPnlSum;
 		/// <summary>
 		/// 옵션손익합계
 		/// </summary>
-		[XAQueryFieldAttribute("옵션손익합계", "16")]
+		[XAQueryFieldAttribute("OptPnlSum", "옵션손익합계", "long", "16")]
 		public long OptPnlSum;
 		/// <summary>
 		/// 전체손익합계
 		/// </summary>
-		[XAQueryFieldAttribute("전체손익합계", "16")]
+		[XAQueryFieldAttribute("AllPnlSum", "전체손익합계", "long", "16")]
 		public long AllPnlSum;
 
 		public static class F
@@ -812,67 +812,67 @@ namespace XingAPINet
 		/// <summary>
 		/// 선물옵션품목구분
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션품목구분", "1")]
+		[XAQueryFieldAttribute("FnoClssCode", "선물옵션품목구분", "char", "1")]
 		public char FnoClssCode;
 		/// <summary>
 		/// 선물매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("선물매도수량", "16")]
+		[XAQueryFieldAttribute("FutsSellQty", "선물매도수량", "long", "16")]
 		public long FutsSellQty;
 		/// <summary>
 		/// 선물매도손익
 		/// </summary>
-		[XAQueryFieldAttribute("선물매도손익", "16")]
+		[XAQueryFieldAttribute("FutsSellPnl", "선물매도손익", "long", "16")]
 		public long FutsSellPnl;
 		/// <summary>
 		/// 선물매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("선물매수수량", "16")]
+		[XAQueryFieldAttribute("FutsBuyQty", "선물매수수량", "long", "16")]
 		public long FutsBuyQty;
 		/// <summary>
 		/// 선물매수손익
 		/// </summary>
-		[XAQueryFieldAttribute("선물매수손익", "16")]
+		[XAQueryFieldAttribute("FutsBuyPnl", "선물매수손익", "long", "16")]
 		public long FutsBuyPnl;
 		/// <summary>
 		/// 콜매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("콜매도수량", "16")]
+		[XAQueryFieldAttribute("CallSellQty", "콜매도수량", "long", "16")]
 		public long CallSellQty;
 		/// <summary>
 		/// 콜매도손익
 		/// </summary>
-		[XAQueryFieldAttribute("콜매도손익", "16")]
+		[XAQueryFieldAttribute("CallSellPnl", "콜매도손익", "long", "16")]
 		public long CallSellPnl;
 		/// <summary>
 		/// 콜매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("콜매수수량", "16")]
+		[XAQueryFieldAttribute("CallBuyQty", "콜매수수량", "long", "16")]
 		public long CallBuyQty;
 		/// <summary>
 		/// 콜매수손익
 		/// </summary>
-		[XAQueryFieldAttribute("콜매수손익", "16")]
+		[XAQueryFieldAttribute("CallBuyPnl", "콜매수손익", "long", "16")]
 		public long CallBuyPnl;
 		/// <summary>
 		/// 풋매도수량
 		/// </summary>
-		[XAQueryFieldAttribute("풋매도수량", "16")]
+		[XAQueryFieldAttribute("PutSellQty", "풋매도수량", "long", "16")]
 		public long PutSellQty;
 		/// <summary>
 		/// 풋매도손익
 		/// </summary>
-		[XAQueryFieldAttribute("풋매도손익", "16")]
+		[XAQueryFieldAttribute("PutSellPnl", "풋매도손익", "long", "16")]
 		public long PutSellPnl;
 		/// <summary>
 		/// 풋매수수량
 		/// </summary>
-		[XAQueryFieldAttribute("풋매수수량", "16")]
+		[XAQueryFieldAttribute("PutBuyQty", "풋매수수량", "long", "16")]
 		public long PutBuyQty;
 		/// <summary>
 		/// 풋매수손익
 		/// </summary>
-		[XAQueryFieldAttribute("풋매수손익", "16")]
+		[XAQueryFieldAttribute("PutBuyPnl", "풋매수손익", "long", "16")]
 		public long PutBuyPnl;
 
 		public static class F
@@ -1130,62 +1130,62 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("종목번호", "12")]
+		[XAQueryFieldAttribute("IsuNo", "종목번호", "char", "12")]
 		public string IsuNo;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명", "40")]
+		[XAQueryFieldAttribute("IsuNm", "종목명", "char", "40")]
 		public string IsuNm;
 		/// <summary>
 		/// 매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("매매구분", "1")]
+		[XAQueryFieldAttribute("BnsTpCode", "매매구분", "char", "1")]
 		public char BnsTpCode;
 		/// <summary>
 		/// 매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("매매구분", "10")]
+		[XAQueryFieldAttribute("BnsTpNm", "매매구분", "char", "10")]
 		public string BnsTpNm;
 		/// <summary>
 		/// 잔고수량
 		/// </summary>
-		[XAQueryFieldAttribute("잔고수량", "16")]
+		[XAQueryFieldAttribute("BalQty", "잔고수량", "long", "16")]
 		public long BalQty;
 		/// <summary>
 		/// 평균가
 		/// </summary>
-		[XAQueryFieldAttribute("평균가", "19.8")]
+		[XAQueryFieldAttribute("FnoAvrPrc", "평균가", "double", "19.8")]
 		public double FnoAvrPrc;
 		/// <summary>
 		/// 당초금액
 		/// </summary>
-		[XAQueryFieldAttribute("당초금액", "16")]
+		[XAQueryFieldAttribute("BgnAmt", "당초금액", "long", "16")]
 		public long BgnAmt;
 		/// <summary>
 		/// 당일청산수량
 		/// </summary>
-		[XAQueryFieldAttribute("당일청산수량", "16")]
+		[XAQueryFieldAttribute("ThdayLqdtQty", "당일청산수량", "long", "16")]
 		public long ThdayLqdtQty;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "13.2")]
+		[XAQueryFieldAttribute("Curprc", "현재가", "double", "13.2")]
 		public double Curprc;
 		/// <summary>
 		/// 평가금액
 		/// </summary>
-		[XAQueryFieldAttribute("평가금액", "16")]
+		[XAQueryFieldAttribute("EvalAmt", "평가금액", "long", "16")]
 		public long EvalAmt;
 		/// <summary>
 		/// 평가손익금액
 		/// </summary>
-		[XAQueryFieldAttribute("평가손익금액", "16")]
+		[XAQueryFieldAttribute("EvalPnlAmt", "평가손익금액", "long", "16")]
 		public long EvalPnlAmt;
 		/// <summary>
 		/// 평가수익률
 		/// </summary>
-		[XAQueryFieldAttribute("평가수익률", "12.6")]
+		[XAQueryFieldAttribute("EvalErnrat", "평가수익률", "double", "12.6")]
 		public double EvalErnrat;
 
 		public static class F

@@ -50,67 +50,67 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 선택입력구분
 		/// </summary>
-		[XAQueryFieldAttribute("선택입력구분", "1")]
+		[XAQueryFieldAttribute("ChoicInptTpCode", "선택입력구분", "char", "1")]
 		public char ChoicInptTpCode;
 		/// <summary>
 		/// 지점번호
 		/// </summary>
-		[XAQueryFieldAttribute("지점번호", "20")]
+		[XAQueryFieldAttribute("AcntNo", "지점번호", "char", "20")]
 		public string AcntNo;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호", "8")]
+		[XAQueryFieldAttribute("Pwd", "비밀번호", "char", "8")]
 		public string Pwd;
 		/// <summary>
 		/// 조회시작일
 		/// </summary>
-		[XAQueryFieldAttribute("조회시작일", "8")]
+		[XAQueryFieldAttribute("QrySrtDt", "조회시작일", "char", "8")]
 		public string QrySrtDt;
 		/// <summary>
 		/// 조회종료일
 		/// </summary>
-		[XAQueryFieldAttribute("조회종료일", "8")]
+		[XAQueryFieldAttribute("QryEndDt", "조회종료일", "char", "8")]
 		public string QryEndDt;
 		/// <summary>
 		/// 선물옵션분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션분류코드", "2")]
+		[XAQueryFieldAttribute("FnoClssCode", "선물옵션분류코드", "char", "2")]
 		public string FnoClssCode;
 		/// <summary>
 		/// 상품군코드
 		/// </summary>
-		[XAQueryFieldAttribute("상품군코드", "2")]
+		[XAQueryFieldAttribute("PrdgrpCode", "상품군코드", "char", "2")]
 		public string PrdgrpCode;
 		/// <summary>
 		/// 체결구분
 		/// </summary>
-		[XAQueryFieldAttribute("체결구분", "1")]
+		[XAQueryFieldAttribute("PrdtExecTpCode", "체결구분", "char", "1")]
 		public char PrdtExecTpCode;
 		/// <summary>
 		/// 선물옵션거래유형코드
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션거래유형코드", "2")]
+		[XAQueryFieldAttribute("FnoTrdPtnCode", "선물옵션거래유형코드", "char", "2")]
 		public string FnoTrdPtnCode;
 		/// <summary>
 		/// 시작주문번호2
 		/// </summary>
-		[XAQueryFieldAttribute("시작주문번호2", "10")]
+		[XAQueryFieldAttribute("SrtOrdNo2", "시작주문번호2", "long", "10")]
 		public long SrtOrdNo2;
 		/// <summary>
 		/// 종료번호
 		/// </summary>
-		[XAQueryFieldAttribute("종료번호", "10")]
+		[XAQueryFieldAttribute("EndNo", "종료번호", "long", "10")]
 		public long EndNo;
 		/// <summary>
 		/// 정렬순서구분
 		/// </summary>
-		[XAQueryFieldAttribute("정렬순서구분", "1")]
+		[XAQueryFieldAttribute("StnlnSeqTp", "정렬순서구분", "char", "1")]
 		public char StnlnSeqTp;
 
 		public static class F
@@ -329,67 +329,67 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 선택입력구분
 		/// </summary>
-		[XAQueryFieldAttribute("선택입력구분", "1")]
+		[XAQueryFieldAttribute("ChoicInptTpCode", "선택입력구분", "char", "1")]
 		public char ChoicInptTpCode;
 		/// <summary>
 		/// 지점번호
 		/// </summary>
-		[XAQueryFieldAttribute("지점번호", "20")]
+		[XAQueryFieldAttribute("AcntNo", "지점번호", "char", "20")]
 		public string AcntNo;
 		/// <summary>
 		/// 비밀번호
 		/// </summary>
-		[XAQueryFieldAttribute("비밀번호", "8")]
+		[XAQueryFieldAttribute("Pwd", "비밀번호", "char", "8")]
 		public string Pwd;
 		/// <summary>
 		/// 조회시작일
 		/// </summary>
-		[XAQueryFieldAttribute("조회시작일", "8")]
+		[XAQueryFieldAttribute("QrySrtDt", "조회시작일", "char", "8")]
 		public string QrySrtDt;
 		/// <summary>
 		/// 조회종료일
 		/// </summary>
-		[XAQueryFieldAttribute("조회종료일", "8")]
+		[XAQueryFieldAttribute("QryEndDt", "조회종료일", "char", "8")]
 		public string QryEndDt;
 		/// <summary>
 		/// 선물옵션분류코드
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션분류코드", "2")]
+		[XAQueryFieldAttribute("FnoClssCode", "선물옵션분류코드", "char", "2")]
 		public string FnoClssCode;
 		/// <summary>
 		/// 상품군코드
 		/// </summary>
-		[XAQueryFieldAttribute("상품군코드", "2")]
+		[XAQueryFieldAttribute("PrdgrpCode", "상품군코드", "char", "2")]
 		public string PrdgrpCode;
 		/// <summary>
 		/// 체결구분
 		/// </summary>
-		[XAQueryFieldAttribute("체결구분", "1")]
+		[XAQueryFieldAttribute("PrdtExecTpCode", "체결구분", "char", "1")]
 		public char PrdtExecTpCode;
 		/// <summary>
 		/// 선물옵션거래유형코드
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션거래유형코드", "2")]
+		[XAQueryFieldAttribute("FnoTrdPtnCode", "선물옵션거래유형코드", "char", "2")]
 		public string FnoTrdPtnCode;
 		/// <summary>
 		/// 시작주문번호2
 		/// </summary>
-		[XAQueryFieldAttribute("시작주문번호2", "10")]
+		[XAQueryFieldAttribute("SrtOrdNo2", "시작주문번호2", "long", "10")]
 		public long SrtOrdNo2;
 		/// <summary>
 		/// 종료번호
 		/// </summary>
-		[XAQueryFieldAttribute("종료번호", "10")]
+		[XAQueryFieldAttribute("EndNo", "종료번호", "long", "10")]
 		public long EndNo;
 		/// <summary>
 		/// 정렬순서구분
 		/// </summary>
-		[XAQueryFieldAttribute("정렬순서구분", "1")]
+		[XAQueryFieldAttribute("StnlnSeqTp", "정렬순서구분", "char", "1")]
 		public char StnlnSeqTp;
 
 		public static class F
@@ -643,22 +643,22 @@ namespace XingAPINet
 		/// <summary>
 		/// 레코드갯수
 		/// </summary>
-		[XAQueryFieldAttribute("레코드갯수", "5")]
+		[XAQueryFieldAttribute("RecCnt", "레코드갯수", "long", "5")]
 		public long RecCnt;
 		/// <summary>
 		/// 계좌명
 		/// </summary>
-		[XAQueryFieldAttribute("계좌명", "40")]
+		[XAQueryFieldAttribute("AcntNm", "계좌명", "char", "40")]
 		public string AcntNm;
 		/// <summary>
 		/// 선물주문수량
 		/// </summary>
-		[XAQueryFieldAttribute("선물주문수량", "16")]
+		[XAQueryFieldAttribute("FutsOrdQty", "선물주문수량", "long", "16")]
 		public long FutsOrdQty;
 		/// <summary>
 		/// 선물체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("선물체결수량", "16")]
+		[XAQueryFieldAttribute("FutsExecQty", "선물체결수량", "long", "16")]
 		public long FutsExecQty;
 
 		public static class F
@@ -804,147 +804,147 @@ namespace XingAPINet
 		/// <summary>
 		/// 계좌번호1
 		/// </summary>
-		[XAQueryFieldAttribute("계좌번호1", "20")]
+		[XAQueryFieldAttribute("AcntNo1", "계좌번호1", "char", "20")]
 		public string AcntNo1;
 		/// <summary>
 		/// 주문일
 		/// </summary>
-		[XAQueryFieldAttribute("주문일", "8")]
+		[XAQueryFieldAttribute("OrdDt", "주문일", "char", "8")]
 		public string OrdDt;
 		/// <summary>
 		/// 주문번호
 		/// </summary>
-		[XAQueryFieldAttribute("주문번호", "10")]
+		[XAQueryFieldAttribute("OrdNo", "주문번호", "long", "10")]
 		public long OrdNo;
 		/// <summary>
 		/// 원주문번호
 		/// </summary>
-		[XAQueryFieldAttribute("원주문번호", "10")]
+		[XAQueryFieldAttribute("OrgOrdNo", "원주문번호", "long", "10")]
 		public long OrgOrdNo;
 		/// <summary>
 		/// 주문시각
 		/// </summary>
-		[XAQueryFieldAttribute("주문시각", "9")]
+		[XAQueryFieldAttribute("OrdTime", "주문시각", "char", "9")]
 		public string OrdTime;
 		/// <summary>
 		/// 선물옵션종목번호
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션종목번호", "12")]
+		[XAQueryFieldAttribute("FnoIsuNo", "선물옵션종목번호", "char", "12")]
 		public string FnoIsuNo;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명", "40")]
+		[XAQueryFieldAttribute("IsuNm", "종목명", "char", "40")]
 		public string IsuNm;
 		/// <summary>
 		/// 매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("매매구분", "10")]
+		[XAQueryFieldAttribute("BnsTpNm", "매매구분", "char", "10")]
 		public string BnsTpNm;
 		/// <summary>
 		/// 매매구분
 		/// </summary>
-		[XAQueryFieldAttribute("매매구분", "1")]
+		[XAQueryFieldAttribute("BnsTpCode", "매매구분", "char", "1")]
 		public char BnsTpCode;
 		/// <summary>
 		/// 정정취소구분명
 		/// </summary>
-		[XAQueryFieldAttribute("정정취소구분명", "10")]
+		[XAQueryFieldAttribute("MrcTpNm", "정정취소구분명", "char", "10")]
 		public string MrcTpNm;
 		/// <summary>
 		/// 선물옵션호가유형코드
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션호가유형코드", "2")]
+		[XAQueryFieldAttribute("FnoOrdprcPtnCode", "선물옵션호가유형코드", "char", "2")]
 		public string FnoOrdprcPtnCode;
 		/// <summary>
 		/// 선물옵션호가유형명
 		/// </summary>
-		[XAQueryFieldAttribute("선물옵션호가유형명", "40")]
+		[XAQueryFieldAttribute("FnoOrdprcPtnNm", "선물옵션호가유형명", "char", "40")]
 		public string FnoOrdprcPtnNm;
 		/// <summary>
 		/// 주문가
 		/// </summary>
-		[XAQueryFieldAttribute("주문가", "13.2")]
+		[XAQueryFieldAttribute("OrdPrc", "주문가", "double", "13.2")]
 		public double OrdPrc;
 		/// <summary>
 		/// 주문수량
 		/// </summary>
-		[XAQueryFieldAttribute("주문수량", "16")]
+		[XAQueryFieldAttribute("OrdQty", "주문수량", "long", "16")]
 		public long OrdQty;
 		/// <summary>
 		/// 주문구분명
 		/// </summary>
-		[XAQueryFieldAttribute("주문구분명", "10")]
+		[XAQueryFieldAttribute("OrdTpNm", "주문구분명", "char", "10")]
 		public string OrdTpNm;
 		/// <summary>
 		/// 체결구분명
 		/// </summary>
-		[XAQueryFieldAttribute("체결구분명", "10")]
+		[XAQueryFieldAttribute("ExecTpNm", "체결구분명", "char", "10")]
 		public string ExecTpNm;
 		/// <summary>
 		/// 체결가
 		/// </summary>
-		[XAQueryFieldAttribute("체결가", "13.2")]
+		[XAQueryFieldAttribute("ExecPrc", "체결가", "double", "13.2")]
 		public double ExecPrc;
 		/// <summary>
 		/// 체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("체결수량", "16")]
+		[XAQueryFieldAttribute("ExecQty", "체결수량", "long", "16")]
 		public long ExecQty;
 		/// <summary>
 		/// 약정시각
 		/// </summary>
-		[XAQueryFieldAttribute("약정시각", "9")]
+		[XAQueryFieldAttribute("CtrctTime", "약정시각", "char", "9")]
 		public string CtrctTime;
 		/// <summary>
 		/// 약정번호
 		/// </summary>
-		[XAQueryFieldAttribute("약정번호", "10")]
+		[XAQueryFieldAttribute("CtrctNo", "약정번호", "long", "10")]
 		public long CtrctNo;
 		/// <summary>
 		/// 체결번호
 		/// </summary>
-		[XAQueryFieldAttribute("체결번호", "10")]
+		[XAQueryFieldAttribute("ExecNo", "체결번호", "long", "10")]
 		public long ExecNo;
 		/// <summary>
 		/// 매매손익금액
 		/// </summary>
-		[XAQueryFieldAttribute("매매손익금액", "16")]
+		[XAQueryFieldAttribute("BnsplAmt", "매매손익금액", "long", "16")]
 		public long BnsplAmt;
 		/// <summary>
 		/// 미체결수량
 		/// </summary>
-		[XAQueryFieldAttribute("미체결수량", "16")]
+		[XAQueryFieldAttribute("UnercQty", "미체결수량", "long", "16")]
 		public long UnercQty;
 		/// <summary>
 		/// 사용자ID
 		/// </summary>
-		[XAQueryFieldAttribute("사용자ID", "16")]
+		[XAQueryFieldAttribute("UserId", "사용자ID", "char", "16")]
 		public string UserId;
 		/// <summary>
 		/// 통신매체코드
 		/// </summary>
-		[XAQueryFieldAttribute("통신매체코드", "2")]
+		[XAQueryFieldAttribute("CommdaCode", "통신매체코드", "char", "2")]
 		public string CommdaCode;
 		/// <summary>
 		/// 통신매체코드명
 		/// </summary>
-		[XAQueryFieldAttribute("통신매체코드명", "40")]
+		[XAQueryFieldAttribute("CommdaCodeNm", "통신매체코드명", "char", "40")]
 		public string CommdaCodeNm;
 		/// <summary>
 		/// IP주소
 		/// </summary>
-		[XAQueryFieldAttribute("IP주소", "16")]
+		[XAQueryFieldAttribute("IpAddr", "IP주소", "char", "16")]
 		public string IpAddr;
 		/// <summary>
 		/// 거래유형구분
 		/// </summary>
-		[XAQueryFieldAttribute("거래유형구분", "20")]
+		[XAQueryFieldAttribute("TrdPtnTpNm", "거래유형구분", "char", "20")]
 		public string TrdPtnTpNm;
 		/// <summary>
 		/// 그룹ID
 		/// </summary>
-		[XAQueryFieldAttribute("그룹ID", "20")]
+		[XAQueryFieldAttribute("GrpId", "그룹ID", "char", "20")]
 		public string GrpId;
 
 		public static class F

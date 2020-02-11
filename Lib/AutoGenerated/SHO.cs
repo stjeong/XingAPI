@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 상/하한구분
 		/// </summary>
-		[XAQueryFieldAttribute("상/하한구분", "1")]
+		[XAQueryFieldAttribute("updnlmtgubun", "상/하한구분", "char", "1")]
 		public char updnlmtgubun;
 
 		public static class F
@@ -137,97 +137,97 @@ namespace XingAPINet
 		/// <summary>
 		/// 거래소/코스닥구분
 		/// </summary>
-		[XAQueryFieldAttribute("거래소/코스닥구분", "1")]
+		[XAQueryFieldAttribute("sijanggubun", "거래소/코스닥구분", "char", "1")]
 		public char sijanggubun;
 		/// <summary>
 		/// 종목명
 		/// </summary>
-		[XAQueryFieldAttribute("종목명", "20")]
+		[XAQueryFieldAttribute("hname", "종목명", "char", "20")]
 		public string hname;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "8")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "8")]
+		[XAQueryFieldAttribute("change", "전일대비", "long", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("drate", "등락율", "float", "6.2")]
 		public float drate;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량", "12")]
+		[XAQueryFieldAttribute("volume", "누적거래량", "long", "12")]
 		public long volume;
 		/// <summary>
 		/// 거래증가율
 		/// </summary>
-		[XAQueryFieldAttribute("거래증가율", "12.2")]
+		[XAQueryFieldAttribute("volincrate", "거래증가율", "float", "12.2")]
 		public float volincrate;
 		/// <summary>
 		/// 상/하한가
 		/// </summary>
-		[XAQueryFieldAttribute("상/하한가", "8")]
+		[XAQueryFieldAttribute("updnlmtprice", "상/하한가", "long", "8")]
 		public long updnlmtprice;
 		/// <summary>
 		/// 상/하한가대비
 		/// </summary>
-		[XAQueryFieldAttribute("상/하한가대비", "8")]
+		[XAQueryFieldAttribute("updnlmtchange", "상/하한가대비", "long", "8")]
 		public long updnlmtchange;
 		/// <summary>
 		/// 상/하한가대비율
 		/// </summary>
-		[XAQueryFieldAttribute("상/하한가대비율", "6.2")]
+		[XAQueryFieldAttribute("updnlmtdrate", "상/하한가대비율", "float", "6.2")]
 		public float updnlmtdrate;
 		/// <summary>
 		/// 전일거래량
 		/// </summary>
-		[XAQueryFieldAttribute("전일거래량", "12")]
+		[XAQueryFieldAttribute("jnilvolume", "전일거래량", "long", "12")]
 		public long jnilvolume;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 관리구분
 		/// </summary>
-		[XAQueryFieldAttribute("관리구분", "1")]
+		[XAQueryFieldAttribute("gwangubun", "관리구분", "char", "1")]
 		public char gwangubun;
 		/// <summary>
 		/// 이상급등구분
 		/// </summary>
-		[XAQueryFieldAttribute("이상급등구분", "1")]
+		[XAQueryFieldAttribute("undergubun", "이상급등구분", "char", "1")]
 		public char undergubun;
 		/// <summary>
 		/// 투자유의구분
 		/// </summary>
-		[XAQueryFieldAttribute("투자유의구분", "1")]
+		[XAQueryFieldAttribute("tgubun", "투자유의구분", "char", "1")]
 		public char tgubun;
 		/// <summary>
 		/// 우선주구분
 		/// </summary>
-		[XAQueryFieldAttribute("우선주구분", "1")]
+		[XAQueryFieldAttribute("wgubun", "우선주구분", "char", "1")]
 		public char wgubun;
 		/// <summary>
 		/// 불성실구분
 		/// </summary>
-		[XAQueryFieldAttribute("불성실구분", "1")]
+		[XAQueryFieldAttribute("dishonest", "불성실구분", "char", "1")]
 		public char dishonest;
 		/// <summary>
 		/// 증거금률
 		/// </summary>
-		[XAQueryFieldAttribute("증거금률", "1")]
+		[XAQueryFieldAttribute("jkrate", "증거금률", "char", "1")]
 		public char jkrate;
 
 		public static class F

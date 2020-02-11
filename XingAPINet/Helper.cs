@@ -150,9 +150,17 @@ namespace XingAPINet
         readonly decimal _lengthOrFormat;
         public decimal LengthOrFormat => _lengthOrFormat;
 
-        public XAQueryFieldAttribute(string fieldDesc, string lengthOrFormat)
+        readonly string _fieldType;
+        public string FieldType => _fieldType;
+
+        readonly string _uniqueName;
+        public string UniqueName => _uniqueName;
+
+        public XAQueryFieldAttribute(string uniqueName, string fieldDesc, string fieldType, string lengthOrFormat)
         {
+            _uniqueName = uniqueName;
             _fieldDesc = fieldDesc;
+            _fieldType = fieldType;
             _lengthOrFormat = decimal.Parse(lengthOrFormat);
         }
     }

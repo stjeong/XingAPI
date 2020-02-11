@@ -50,12 +50,12 @@ namespace XingAPINet
 		/// <summary>
 		/// 종목종류
 		/// </summary>
-		[XAQueryFieldAttribute("종목종류", "1")]
+		[XAQueryFieldAttribute("kind", "종목종류", "char", "1")]
 		public char kind;
 		/// <summary>
 		/// SYMBOL
 		/// </summary>
-		[XAQueryFieldAttribute("SYMBOL", "16")]
+		[XAQueryFieldAttribute("symbol", "SYMBOL", "char", "16")]
 		public string symbol;
 
 		public static class F
@@ -153,37 +153,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 심벌
 		/// </summary>
-		[XAQueryFieldAttribute("심벌", "16")]
+		[XAQueryFieldAttribute("symbol", "심벌", "char", "16")]
 		public string symbol;
 		/// <summary>
 		/// 지수명
 		/// </summary>
-		[XAQueryFieldAttribute("지수명", "20")]
+		[XAQueryFieldAttribute("hname", "지수명", "char", "20")]
 		public string hname;
 		/// <summary>
 		/// 지수
 		/// </summary>
-		[XAQueryFieldAttribute("지수", "12.2")]
+		[XAQueryFieldAttribute("close", "지수", "float", "12.2")]
 		public float close;
 		/// <summary>
 		/// 대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 대비
 		/// </summary>
-		[XAQueryFieldAttribute("대비", "6.2")]
+		[XAQueryFieldAttribute("change", "대비", "float", "6.2")]
 		public float change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 일자
 		/// </summary>
-		[XAQueryFieldAttribute("일자", "8")]
+		[XAQueryFieldAttribute("date", "일자", "char", "8")]
 		public string date;
 
 		public static class F

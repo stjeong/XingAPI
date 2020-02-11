@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 
 		public static class F
@@ -137,637 +137,637 @@ namespace XingAPINet
 		/// <summary>
 		/// 한글명
 		/// </summary>
-		[XAQueryFieldAttribute("한글명", "20")]
+		[XAQueryFieldAttribute("hname", "한글명", "char", "20")]
 		public string hname;
 		/// <summary>
 		/// 현재가
 		/// </summary>
-		[XAQueryFieldAttribute("현재가", "8")]
+		[XAQueryFieldAttribute("price", "현재가", "long", "8")]
 		public long price;
 		/// <summary>
 		/// 전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비구분", "1")]
+		[XAQueryFieldAttribute("sign", "전일대비구분", "char", "1")]
 		public char sign;
 		/// <summary>
 		/// 전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일대비", "8")]
+		[XAQueryFieldAttribute("change", "전일대비", "long", "8")]
 		public long change;
 		/// <summary>
 		/// 등락율
 		/// </summary>
-		[XAQueryFieldAttribute("등락율", "6.2")]
+		[XAQueryFieldAttribute("diff", "등락율", "float", "6.2")]
 		public float diff;
 		/// <summary>
 		/// 누적거래량
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래량", "12")]
+		[XAQueryFieldAttribute("volume", "누적거래량", "float", "12")]
 		public float volume;
 		/// <summary>
 		/// 기준가
 		/// </summary>
-		[XAQueryFieldAttribute("기준가", "8")]
+		[XAQueryFieldAttribute("recprice", "기준가", "long", "8")]
 		public long recprice;
 		/// <summary>
 		/// 가중평균
 		/// </summary>
-		[XAQueryFieldAttribute("가중평균", "8")]
+		[XAQueryFieldAttribute("avg", "가중평균", "long", "8")]
 		public long avg;
 		/// <summary>
 		/// 상한가
 		/// </summary>
-		[XAQueryFieldAttribute("상한가", "8")]
+		[XAQueryFieldAttribute("uplmtprice", "상한가", "long", "8")]
 		public long uplmtprice;
 		/// <summary>
 		/// 하한가
 		/// </summary>
-		[XAQueryFieldAttribute("하한가", "8")]
+		[XAQueryFieldAttribute("dnlmtprice", "하한가", "long", "8")]
 		public long dnlmtprice;
 		/// <summary>
 		/// 전일거래량
 		/// </summary>
-		[XAQueryFieldAttribute("전일거래량", "12")]
+		[XAQueryFieldAttribute("jnilvolume", "전일거래량", "float", "12")]
 		public float jnilvolume;
 		/// <summary>
 		/// 거래량차
 		/// </summary>
-		[XAQueryFieldAttribute("거래량차", "12")]
+		[XAQueryFieldAttribute("volumediff", "거래량차", "long", "12")]
 		public long volumediff;
 		/// <summary>
 		/// 시가
 		/// </summary>
-		[XAQueryFieldAttribute("시가", "8")]
+		[XAQueryFieldAttribute("open", "시가", "long", "8")]
 		public long open;
 		/// <summary>
 		/// 시가시간
 		/// </summary>
-		[XAQueryFieldAttribute("시가시간", "6")]
+		[XAQueryFieldAttribute("opentime", "시가시간", "char", "6")]
 		public string opentime;
 		/// <summary>
 		/// 고가
 		/// </summary>
-		[XAQueryFieldAttribute("고가", "8")]
+		[XAQueryFieldAttribute("high", "고가", "long", "8")]
 		public long high;
 		/// <summary>
 		/// 고가시간
 		/// </summary>
-		[XAQueryFieldAttribute("고가시간", "6")]
+		[XAQueryFieldAttribute("hightime", "고가시간", "char", "6")]
 		public string hightime;
 		/// <summary>
 		/// 저가
 		/// </summary>
-		[XAQueryFieldAttribute("저가", "8")]
+		[XAQueryFieldAttribute("low", "저가", "long", "8")]
 		public long low;
 		/// <summary>
 		/// 저가시간
 		/// </summary>
-		[XAQueryFieldAttribute("저가시간", "6")]
+		[XAQueryFieldAttribute("lowtime", "저가시간", "char", "6")]
 		public string lowtime;
 		/// <summary>
 		/// 52최고가
 		/// </summary>
-		[XAQueryFieldAttribute("52최고가", "8")]
+		[XAQueryFieldAttribute("high52w", "52최고가", "long", "8")]
 		public long high52w;
 		/// <summary>
 		/// 52최고가일
 		/// </summary>
-		[XAQueryFieldAttribute("52최고가일", "8")]
+		[XAQueryFieldAttribute("high52wdate", "52최고가일", "char", "8")]
 		public string high52wdate;
 		/// <summary>
 		/// 52최저가
 		/// </summary>
-		[XAQueryFieldAttribute("52최저가", "8")]
+		[XAQueryFieldAttribute("low52w", "52최저가", "long", "8")]
 		public long low52w;
 		/// <summary>
 		/// 52최저가일
 		/// </summary>
-		[XAQueryFieldAttribute("52최저가일", "8")]
+		[XAQueryFieldAttribute("low52wdate", "52최저가일", "char", "8")]
 		public string low52wdate;
 		/// <summary>
 		/// 소진율
 		/// </summary>
-		[XAQueryFieldAttribute("소진율", "6.2")]
+		[XAQueryFieldAttribute("exhratio", "소진율", "float", "6.2")]
 		public float exhratio;
 		/// <summary>
 		/// 외국인보유수량
 		/// </summary>
-		[XAQueryFieldAttribute("외국인보유수량", "12")]
+		[XAQueryFieldAttribute("flmtvol", "외국인보유수량", "float", "12")]
 		public float flmtvol;
 		/// <summary>
 		/// PER
 		/// </summary>
-		[XAQueryFieldAttribute("PER", "6.2")]
+		[XAQueryFieldAttribute("per", "PER", "float", "6.2")]
 		public float per;
 		/// <summary>
 		/// 상장주식수(천)
 		/// </summary>
-		[XAQueryFieldAttribute("상장주식수(천)", "12")]
+		[XAQueryFieldAttribute("listing", "상장주식수(천)", "long", "12")]
 		public long listing;
 		/// <summary>
 		/// 증거금율
 		/// </summary>
-		[XAQueryFieldAttribute("증거금율", "8")]
+		[XAQueryFieldAttribute("jkrate", "증거금율", "long", "8")]
 		public long jkrate;
 		/// <summary>
 		/// 회전율
 		/// </summary>
-		[XAQueryFieldAttribute("회전율", "6.2")]
+		[XAQueryFieldAttribute("vol", "회전율", "float", "6.2")]
 		public float vol;
 		/// <summary>
 		/// 단축코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축코드", "6")]
+		[XAQueryFieldAttribute("shcode", "단축코드", "char", "6")]
 		public string shcode;
 		/// <summary>
 		/// 누적거래대금
 		/// </summary>
-		[XAQueryFieldAttribute("누적거래대금", "12")]
+		[XAQueryFieldAttribute("value", "누적거래대금", "long", "12")]
 		public long value;
 		/// <summary>
 		/// 연중최고가
 		/// </summary>
-		[XAQueryFieldAttribute("연중최고가", "8")]
+		[XAQueryFieldAttribute("highyear", "연중최고가", "long", "8")]
 		public long highyear;
 		/// <summary>
 		/// 연중최고일자
 		/// </summary>
-		[XAQueryFieldAttribute("연중최고일자", "8")]
+		[XAQueryFieldAttribute("highyeardate", "연중최고일자", "char", "8")]
 		public string highyeardate;
 		/// <summary>
 		/// 연중최저가
 		/// </summary>
-		[XAQueryFieldAttribute("연중최저가", "8")]
+		[XAQueryFieldAttribute("lowyear", "연중최저가", "long", "8")]
 		public long lowyear;
 		/// <summary>
 		/// 연중최저일자
 		/// </summary>
-		[XAQueryFieldAttribute("연중최저일자", "8")]
+		[XAQueryFieldAttribute("lowyeardate", "연중최저일자", "char", "8")]
 		public string lowyeardate;
 		/// <summary>
 		/// 업종명
 		/// </summary>
-		[XAQueryFieldAttribute("업종명", "20")]
+		[XAQueryFieldAttribute("upname", "업종명", "char", "20")]
 		public string upname;
 		/// <summary>
 		/// 업종코드
 		/// </summary>
-		[XAQueryFieldAttribute("업종코드", "3")]
+		[XAQueryFieldAttribute("upcode", "업종코드", "char", "3")]
 		public string upcode;
 		/// <summary>
 		/// 업종현재가
 		/// </summary>
-		[XAQueryFieldAttribute("업종현재가", "7.2")]
+		[XAQueryFieldAttribute("upprice", "업종현재가", "float", "7.2")]
 		public float upprice;
 		/// <summary>
 		/// 업종전일비구분
 		/// </summary>
-		[XAQueryFieldAttribute("업종전일비구분", "1")]
+		[XAQueryFieldAttribute("upsign", "업종전일비구분", "char", "1")]
 		public char upsign;
 		/// <summary>
 		/// 업종전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("업종전일대비", "6.2")]
+		[XAQueryFieldAttribute("upchange", "업종전일대비", "float", "6.2")]
 		public float upchange;
 		/// <summary>
 		/// 업종등락율
 		/// </summary>
-		[XAQueryFieldAttribute("업종등락율", "6.2")]
+		[XAQueryFieldAttribute("updiff", "업종등락율", "float", "6.2")]
 		public float updiff;
 		/// <summary>
 		/// 선물최근월물명
 		/// </summary>
-		[XAQueryFieldAttribute("선물최근월물명", "20")]
+		[XAQueryFieldAttribute("futname", "선물최근월물명", "char", "20")]
 		public string futname;
 		/// <summary>
 		/// 선물최근월물코드
 		/// </summary>
-		[XAQueryFieldAttribute("선물최근월물코드", "8")]
+		[XAQueryFieldAttribute("futcode", "선물최근월물코드", "char", "8")]
 		public string futcode;
 		/// <summary>
 		/// 선물현재가
 		/// </summary>
-		[XAQueryFieldAttribute("선물현재가", "6.2")]
+		[XAQueryFieldAttribute("futprice", "선물현재가", "float", "6.2")]
 		public float futprice;
 		/// <summary>
 		/// 선물전일비구분
 		/// </summary>
-		[XAQueryFieldAttribute("선물전일비구분", "1")]
+		[XAQueryFieldAttribute("futsign", "선물전일비구분", "char", "1")]
 		public char futsign;
 		/// <summary>
 		/// 선물전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("선물전일대비", "6.2")]
+		[XAQueryFieldAttribute("futchange", "선물전일대비", "float", "6.2")]
 		public float futchange;
 		/// <summary>
 		/// 선물등락율
 		/// </summary>
-		[XAQueryFieldAttribute("선물등락율", "6.2")]
+		[XAQueryFieldAttribute("futdiff", "선물등락율", "float", "6.2")]
 		public float futdiff;
 		/// <summary>
 		/// NAV
 		/// </summary>
-		[XAQueryFieldAttribute("NAV", "8.2")]
+		[XAQueryFieldAttribute("nav", "NAV", "float", "8.2")]
 		public float nav;
 		/// <summary>
 		/// NAV전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("NAV전일대비구분", "1")]
+		[XAQueryFieldAttribute("navsign", "NAV전일대비구분", "char", "1")]
 		public char navsign;
 		/// <summary>
 		/// NAV전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("NAV전일대비", "8.2")]
+		[XAQueryFieldAttribute("navchange", "NAV전일대비", "float", "8.2")]
 		public float navchange;
 		/// <summary>
 		/// NAV등락율
 		/// </summary>
-		[XAQueryFieldAttribute("NAV등락율", "6.2")]
+		[XAQueryFieldAttribute("navdiff", "NAV등락율", "float", "6.2")]
 		public float navdiff;
 		/// <summary>
 		/// 추적오차율
 		/// </summary>
-		[XAQueryFieldAttribute("추적오차율", "6.2")]
+		[XAQueryFieldAttribute("cocrate", "추적오차율", "float", "6.2")]
 		public float cocrate;
 		/// <summary>
 		/// 괴리율
 		/// </summary>
-		[XAQueryFieldAttribute("괴리율", "6.2")]
+		[XAQueryFieldAttribute("kasis", "괴리율", "float", "6.2")]
 		public float kasis;
 		/// <summary>
 		/// 대용가
 		/// </summary>
-		[XAQueryFieldAttribute("대용가", "10")]
+		[XAQueryFieldAttribute("subprice", "대용가", "long", "10")]
 		public long subprice;
 		/// <summary>
 		/// 매도증권사코드1
 		/// </summary>
-		[XAQueryFieldAttribute("매도증권사코드1", "6")]
+		[XAQueryFieldAttribute("offerno1", "매도증권사코드1", "char", "6")]
 		public string offerno1;
 		/// <summary>
 		/// 매수증권사코드1
 		/// </summary>
-		[XAQueryFieldAttribute("매수증권사코드1", "6")]
+		[XAQueryFieldAttribute("bidno1", "매수증권사코드1", "char", "6")]
 		public string bidno1;
 		/// <summary>
 		/// 총매도수량1
 		/// </summary>
-		[XAQueryFieldAttribute("총매도수량1", "8")]
+		[XAQueryFieldAttribute("dvol1", "총매도수량1", "long", "8")]
 		public long dvol1;
 		/// <summary>
 		/// 총매수수량1
 		/// </summary>
-		[XAQueryFieldAttribute("총매수수량1", "8")]
+		[XAQueryFieldAttribute("svol1", "총매수수량1", "long", "8")]
 		public long svol1;
 		/// <summary>
 		/// 매도증감1
 		/// </summary>
-		[XAQueryFieldAttribute("매도증감1", "8")]
+		[XAQueryFieldAttribute("dcha1", "매도증감1", "long", "8")]
 		public long dcha1;
 		/// <summary>
 		/// 매수증감1
 		/// </summary>
-		[XAQueryFieldAttribute("매수증감1", "8")]
+		[XAQueryFieldAttribute("scha1", "매수증감1", "long", "8")]
 		public long scha1;
 		/// <summary>
 		/// 매도비율1
 		/// </summary>
-		[XAQueryFieldAttribute("매도비율1", "6.2")]
+		[XAQueryFieldAttribute("ddiff1", "매도비율1", "float", "6.2")]
 		public float ddiff1;
 		/// <summary>
 		/// 매수비율1
 		/// </summary>
-		[XAQueryFieldAttribute("매수비율1", "6.2")]
+		[XAQueryFieldAttribute("sdiff1", "매수비율1", "float", "6.2")]
 		public float sdiff1;
 		/// <summary>
 		/// 매도증권사코드2
 		/// </summary>
-		[XAQueryFieldAttribute("매도증권사코드2", "6")]
+		[XAQueryFieldAttribute("offerno2", "매도증권사코드2", "char", "6")]
 		public string offerno2;
 		/// <summary>
 		/// 매수증권사코드2
 		/// </summary>
-		[XAQueryFieldAttribute("매수증권사코드2", "6")]
+		[XAQueryFieldAttribute("bidno2", "매수증권사코드2", "char", "6")]
 		public string bidno2;
 		/// <summary>
 		/// 총매도수량2
 		/// </summary>
-		[XAQueryFieldAttribute("총매도수량2", "8")]
+		[XAQueryFieldAttribute("dvol2", "총매도수량2", "long", "8")]
 		public long dvol2;
 		/// <summary>
 		/// 총매수수량2
 		/// </summary>
-		[XAQueryFieldAttribute("총매수수량2", "8")]
+		[XAQueryFieldAttribute("svol2", "총매수수량2", "long", "8")]
 		public long svol2;
 		/// <summary>
 		/// 매도증감2
 		/// </summary>
-		[XAQueryFieldAttribute("매도증감2", "8")]
+		[XAQueryFieldAttribute("dcha2", "매도증감2", "long", "8")]
 		public long dcha2;
 		/// <summary>
 		/// 매수증감2
 		/// </summary>
-		[XAQueryFieldAttribute("매수증감2", "8")]
+		[XAQueryFieldAttribute("scha2", "매수증감2", "long", "8")]
 		public long scha2;
 		/// <summary>
 		/// 매도비율2
 		/// </summary>
-		[XAQueryFieldAttribute("매도비율2", "6.2")]
+		[XAQueryFieldAttribute("ddiff2", "매도비율2", "float", "6.2")]
 		public float ddiff2;
 		/// <summary>
 		/// 매수비율2
 		/// </summary>
-		[XAQueryFieldAttribute("매수비율2", "6.2")]
+		[XAQueryFieldAttribute("sdiff2", "매수비율2", "float", "6.2")]
 		public float sdiff2;
 		/// <summary>
 		/// 매도증권사코드3
 		/// </summary>
-		[XAQueryFieldAttribute("매도증권사코드3", "6")]
+		[XAQueryFieldAttribute("offerno3", "매도증권사코드3", "char", "6")]
 		public string offerno3;
 		/// <summary>
 		/// 매수증권사코드3
 		/// </summary>
-		[XAQueryFieldAttribute("매수증권사코드3", "6")]
+		[XAQueryFieldAttribute("bidno3", "매수증권사코드3", "char", "6")]
 		public string bidno3;
 		/// <summary>
 		/// 총매도수량3
 		/// </summary>
-		[XAQueryFieldAttribute("총매도수량3", "8")]
+		[XAQueryFieldAttribute("dvol3", "총매도수량3", "long", "8")]
 		public long dvol3;
 		/// <summary>
 		/// 총매수수량3
 		/// </summary>
-		[XAQueryFieldAttribute("총매수수량3", "8")]
+		[XAQueryFieldAttribute("svol3", "총매수수량3", "long", "8")]
 		public long svol3;
 		/// <summary>
 		/// 매도증감3
 		/// </summary>
-		[XAQueryFieldAttribute("매도증감3", "8")]
+		[XAQueryFieldAttribute("dcha3", "매도증감3", "long", "8")]
 		public long dcha3;
 		/// <summary>
 		/// 매수증감3
 		/// </summary>
-		[XAQueryFieldAttribute("매수증감3", "8")]
+		[XAQueryFieldAttribute("scha3", "매수증감3", "long", "8")]
 		public long scha3;
 		/// <summary>
 		/// 매도비율3
 		/// </summary>
-		[XAQueryFieldAttribute("매도비율3", "6.2")]
+		[XAQueryFieldAttribute("ddiff3", "매도비율3", "float", "6.2")]
 		public float ddiff3;
 		/// <summary>
 		/// 매수비율3
 		/// </summary>
-		[XAQueryFieldAttribute("매수비율3", "6.2")]
+		[XAQueryFieldAttribute("sdiff3", "매수비율3", "float", "6.2")]
 		public float sdiff3;
 		/// <summary>
 		/// 매도증권사코드4
 		/// </summary>
-		[XAQueryFieldAttribute("매도증권사코드4", "6")]
+		[XAQueryFieldAttribute("offerno4", "매도증권사코드4", "char", "6")]
 		public string offerno4;
 		/// <summary>
 		/// 매수증권사코드4
 		/// </summary>
-		[XAQueryFieldAttribute("매수증권사코드4", "6")]
+		[XAQueryFieldAttribute("bidno4", "매수증권사코드4", "char", "6")]
 		public string bidno4;
 		/// <summary>
 		/// 총매도수량4
 		/// </summary>
-		[XAQueryFieldAttribute("총매도수량4", "8")]
+		[XAQueryFieldAttribute("dvol4", "총매도수량4", "long", "8")]
 		public long dvol4;
 		/// <summary>
 		/// 총매수수량4
 		/// </summary>
-		[XAQueryFieldAttribute("총매수수량4", "8")]
+		[XAQueryFieldAttribute("svol4", "총매수수량4", "long", "8")]
 		public long svol4;
 		/// <summary>
 		/// 매도증감4
 		/// </summary>
-		[XAQueryFieldAttribute("매도증감4", "8")]
+		[XAQueryFieldAttribute("dcha4", "매도증감4", "long", "8")]
 		public long dcha4;
 		/// <summary>
 		/// 매수증감4
 		/// </summary>
-		[XAQueryFieldAttribute("매수증감4", "8")]
+		[XAQueryFieldAttribute("scha4", "매수증감4", "long", "8")]
 		public long scha4;
 		/// <summary>
 		/// 매도비율4
 		/// </summary>
-		[XAQueryFieldAttribute("매도비율4", "6.2")]
+		[XAQueryFieldAttribute("ddiff4", "매도비율4", "float", "6.2")]
 		public float ddiff4;
 		/// <summary>
 		/// 매수비율4
 		/// </summary>
-		[XAQueryFieldAttribute("매수비율4", "6.2")]
+		[XAQueryFieldAttribute("sdiff4", "매수비율4", "float", "6.2")]
 		public float sdiff4;
 		/// <summary>
 		/// 매도증권사코드5
 		/// </summary>
-		[XAQueryFieldAttribute("매도증권사코드5", "6")]
+		[XAQueryFieldAttribute("offerno5", "매도증권사코드5", "char", "6")]
 		public string offerno5;
 		/// <summary>
 		/// 매수증권사코드5
 		/// </summary>
-		[XAQueryFieldAttribute("매수증권사코드5", "6")]
+		[XAQueryFieldAttribute("bidno5", "매수증권사코드5", "char", "6")]
 		public string bidno5;
 		/// <summary>
 		/// 총매도수량5
 		/// </summary>
-		[XAQueryFieldAttribute("총매도수량5", "8")]
+		[XAQueryFieldAttribute("dvol5", "총매도수량5", "long", "8")]
 		public long dvol5;
 		/// <summary>
 		/// 총매수수량5
 		/// </summary>
-		[XAQueryFieldAttribute("총매수수량5", "8")]
+		[XAQueryFieldAttribute("svol5", "총매수수량5", "long", "8")]
 		public long svol5;
 		/// <summary>
 		/// 매도증감5
 		/// </summary>
-		[XAQueryFieldAttribute("매도증감5", "8")]
+		[XAQueryFieldAttribute("dcha5", "매도증감5", "long", "8")]
 		public long dcha5;
 		/// <summary>
 		/// 매수증감5
 		/// </summary>
-		[XAQueryFieldAttribute("매수증감5", "8")]
+		[XAQueryFieldAttribute("scha5", "매수증감5", "long", "8")]
 		public long scha5;
 		/// <summary>
 		/// 매도비율5
 		/// </summary>
-		[XAQueryFieldAttribute("매도비율5", "6.2")]
+		[XAQueryFieldAttribute("ddiff5", "매도비율5", "float", "6.2")]
 		public float ddiff5;
 		/// <summary>
 		/// 매수비율5
 		/// </summary>
-		[XAQueryFieldAttribute("매수비율5", "6.2")]
+		[XAQueryFieldAttribute("sdiff5", "매수비율5", "float", "6.2")]
 		public float sdiff5;
 		/// <summary>
 		/// 외국계매도합계수량
 		/// </summary>
-		[XAQueryFieldAttribute("외국계매도합계수량", "12")]
+		[XAQueryFieldAttribute("fwdvl", "외국계매도합계수량", "long", "12")]
 		public long fwdvl;
 		/// <summary>
 		/// 외국계매도직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("외국계매도직전대비", "12")]
+		[XAQueryFieldAttribute("ftradmdcha", "외국계매도직전대비", "long", "12")]
 		public long ftradmdcha;
 		/// <summary>
 		/// 외국계매도비율
 		/// </summary>
-		[XAQueryFieldAttribute("외국계매도비율", "6.2")]
+		[XAQueryFieldAttribute("ftradmddiff", "외국계매도비율", "float", "6.2")]
 		public float ftradmddiff;
 		/// <summary>
 		/// 외국계매수합계수량
 		/// </summary>
-		[XAQueryFieldAttribute("외국계매수합계수량", "12")]
+		[XAQueryFieldAttribute("fwsvl", "외국계매수합계수량", "long", "12")]
 		public long fwsvl;
 		/// <summary>
 		/// 외국계매수직전대비
 		/// </summary>
-		[XAQueryFieldAttribute("외국계매수직전대비", "12")]
+		[XAQueryFieldAttribute("ftradmscha", "외국계매수직전대비", "long", "12")]
 		public long ftradmscha;
 		/// <summary>
 		/// 외국계매수비율
 		/// </summary>
-		[XAQueryFieldAttribute("외국계매수비율", "6.2")]
+		[XAQueryFieldAttribute("ftradmsdiff", "외국계매수비율", "float", "6.2")]
 		public float ftradmsdiff;
 		/// <summary>
 		/// 참고지수명
 		/// </summary>
-		[XAQueryFieldAttribute("참고지수명", "20")]
+		[XAQueryFieldAttribute("upname2", "참고지수명", "char", "20")]
 		public string upname2;
 		/// <summary>
 		/// 참고지수코드
 		/// </summary>
-		[XAQueryFieldAttribute("참고지수코드", "3")]
+		[XAQueryFieldAttribute("upcode2", "참고지수코드", "char", "3")]
 		public string upcode2;
 		/// <summary>
 		/// 참고지수현재가
 		/// </summary>
-		[XAQueryFieldAttribute("참고지수현재가", "7.2")]
+		[XAQueryFieldAttribute("upprice2", "참고지수현재가", "float", "7.2")]
 		public float upprice2;
 		/// <summary>
 		/// 전일NAV
 		/// </summary>
-		[XAQueryFieldAttribute("전일NAV", "8.2")]
+		[XAQueryFieldAttribute("jnilnav", "전일NAV", "float", "8.2")]
 		public float jnilnav;
 		/// <summary>
 		/// 전일NAV전일대비구분
 		/// </summary>
-		[XAQueryFieldAttribute("전일NAV전일대비구분", "1")]
+		[XAQueryFieldAttribute("jnilnavsign", "전일NAV전일대비구분", "char", "1")]
 		public char jnilnavsign;
 		/// <summary>
 		/// 전일NAV전일대비
 		/// </summary>
-		[XAQueryFieldAttribute("전일NAV전일대비", "8.2")]
+		[XAQueryFieldAttribute("jnilnavchange", "전일NAV전일대비", "float", "8.2")]
 		public float jnilnavchange;
 		/// <summary>
 		/// 전일NAV등락율
 		/// </summary>
-		[XAQueryFieldAttribute("전일NAV등락율", "6.2")]
+		[XAQueryFieldAttribute("jnilnavdiff", "전일NAV등락율", "float", "6.2")]
 		public float jnilnavdiff;
 		/// <summary>
 		/// 순자산총액(억원)
 		/// </summary>
-		[XAQueryFieldAttribute("순자산총액(억원)", "12")]
+		[XAQueryFieldAttribute("etftotcap", "순자산총액(억원)", "long", "12")]
 		public long etftotcap;
 		/// <summary>
 		/// 스프레드
 		/// </summary>
-		[XAQueryFieldAttribute("스프레드", "6.2")]
+		[XAQueryFieldAttribute("spread", "스프레드", "float", "6.2")]
 		public float spread;
 		/// <summary>
 		/// 레버리지
 		/// </summary>
-		[XAQueryFieldAttribute("레버리지", "2")]
+		[XAQueryFieldAttribute("leverage", "레버리지", "long", "2")]
 		public long leverage;
 		/// <summary>
 		/// 과세구분
 		/// </summary>
-		[XAQueryFieldAttribute("과세구분", "1")]
+		[XAQueryFieldAttribute("taxgubun", "과세구분", "char", "1")]
 		public char taxgubun;
 		/// <summary>
 		/// 운용사
 		/// </summary>
-		[XAQueryFieldAttribute("운용사", "20")]
+		[XAQueryFieldAttribute("opcom_nmk", "운용사", "char", "20")]
 		public string opcom_nmk;
 		/// <summary>
 		/// LP1
 		/// </summary>
-		[XAQueryFieldAttribute("LP1", "20")]
+		[XAQueryFieldAttribute("lp_nm1", "LP1", "char", "20")]
 		public string lp_nm1;
 		/// <summary>
 		/// LP2
 		/// </summary>
-		[XAQueryFieldAttribute("LP2", "20")]
+		[XAQueryFieldAttribute("lp_nm2", "LP2", "char", "20")]
 		public string lp_nm2;
 		/// <summary>
 		/// LP3
 		/// </summary>
-		[XAQueryFieldAttribute("LP3", "20")]
+		[XAQueryFieldAttribute("lp_nm3", "LP3", "char", "20")]
 		public string lp_nm3;
 		/// <summary>
 		/// LP4
 		/// </summary>
-		[XAQueryFieldAttribute("LP4", "20")]
+		[XAQueryFieldAttribute("lp_nm4", "LP4", "char", "20")]
 		public string lp_nm4;
 		/// <summary>
 		/// LP5
 		/// </summary>
-		[XAQueryFieldAttribute("LP5", "20")]
+		[XAQueryFieldAttribute("lp_nm5", "LP5", "char", "20")]
 		public string lp_nm5;
 		/// <summary>
 		/// 복제방법
 		/// </summary>
-		[XAQueryFieldAttribute("복제방법", "10")]
+		[XAQueryFieldAttribute("etf_cp", "복제방법", "char", "10")]
 		public string etf_cp;
 		/// <summary>
 		/// 상품유형
 		/// </summary>
-		[XAQueryFieldAttribute("상품유형", "10")]
+		[XAQueryFieldAttribute("etf_kind", "상품유형", "char", "10")]
 		public string etf_kind;
 		/// <summary>
 		/// VI발동해제
 		/// </summary>
-		[XAQueryFieldAttribute("VI발동해제", "10")]
+		[XAQueryFieldAttribute("vi_gubun", "VI발동해제", "char", "10")]
 		public string vi_gubun;
 		/// <summary>
 		/// ETN상품분류
 		/// </summary>
-		[XAQueryFieldAttribute("ETN상품분류", "20")]
+		[XAQueryFieldAttribute("etn_kind_cd", "ETN상품분류", "char", "20")]
 		public string etn_kind_cd;
 		/// <summary>
 		/// ETN만기일
 		/// </summary>
-		[XAQueryFieldAttribute("ETN만기일", "8")]
+		[XAQueryFieldAttribute("lastymd", "ETN만기일", "char", "8")]
 		public string lastymd;
 		/// <summary>
 		/// ETN지급일
 		/// </summary>
-		[XAQueryFieldAttribute("ETN지급일", "8")]
+		[XAQueryFieldAttribute("payday", "ETN지급일", "char", "8")]
 		public string payday;
 		/// <summary>
 		/// ETN최종거래일
 		/// </summary>
-		[XAQueryFieldAttribute("ETN최종거래일", "8")]
+		[XAQueryFieldAttribute("lastdate", "ETN최종거래일", "char", "8")]
 		public string lastdate;
 		/// <summary>
 		/// ETN발행시장참가자
 		/// </summary>
-		[XAQueryFieldAttribute("ETN발행시장참가자", "20")]
+		[XAQueryFieldAttribute("issuernmk", "ETN발행시장참가자", "char", "20")]
 		public string issuernmk;
 		/// <summary>
 		/// ETN만기상환가격결정시작일
 		/// </summary>
-		[XAQueryFieldAttribute("ETN만기상환가격결정시작일", "8")]
+		[XAQueryFieldAttribute("last_sdate", "ETN만기상환가격결정시작일", "char", "8")]
 		public string last_sdate;
 		/// <summary>
 		/// ETN만기상환가격결정종료일
 		/// </summary>
-		[XAQueryFieldAttribute("ETN만기상환가격결정종료일", "8")]
+		[XAQueryFieldAttribute("last_edate", "ETN만기상환가격결정종료일", "char", "8")]
 		public string last_edate;
 		/// <summary>
 		/// ETNLP보유수량
 		/// </summary>
-		[XAQueryFieldAttribute("ETNLP보유수량", "12")]
+		[XAQueryFieldAttribute("lp_holdvol", "ETNLP보유수량", "char", "12")]
 		public string lp_holdvol;
 
 		public static class F

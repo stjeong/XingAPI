@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// Dummy
 		/// </summary>
-		[XAQueryFieldAttribute("Dummy", "1")]
+		[XAQueryFieldAttribute("dummy", "Dummy", "char", "1")]
 		public char dummy;
 
 		public static class F
@@ -137,302 +137,302 @@ namespace XingAPINet
 		/// <summary>
 		/// 개인투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("개인투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_08", "개인투자자코드", "char", "4")]
 		public string tjjcode_08;
 		/// <summary>
 		/// 개인매수
 		/// </summary>
-		[XAQueryFieldAttribute("개인매수", "12")]
+		[XAQueryFieldAttribute("ms_08", "개인매수", "long", "12")]
 		public long ms_08;
 		/// <summary>
 		/// 개인매도
 		/// </summary>
-		[XAQueryFieldAttribute("개인매도", "12")]
+		[XAQueryFieldAttribute("md_08", "개인매도", "long", "12")]
 		public long md_08;
 		/// <summary>
 		/// 개인증감
 		/// </summary>
-		[XAQueryFieldAttribute("개인증감", "12")]
+		[XAQueryFieldAttribute("rate_08", "개인증감", "long", "12")]
 		public long rate_08;
 		/// <summary>
 		/// 개인순매수
 		/// </summary>
-		[XAQueryFieldAttribute("개인순매수", "12")]
+		[XAQueryFieldAttribute("svolume_08", "개인순매수", "long", "12")]
 		public long svolume_08;
 		/// <summary>
 		/// 외국인투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("외국인투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_17", "외국인투자자코드", "char", "4")]
 		public string tjjcode_17;
 		/// <summary>
 		/// 외국인매수
 		/// </summary>
-		[XAQueryFieldAttribute("외국인매수", "12")]
+		[XAQueryFieldAttribute("ms_17", "외국인매수", "long", "12")]
 		public long ms_17;
 		/// <summary>
 		/// 외국인매도
 		/// </summary>
-		[XAQueryFieldAttribute("외국인매도", "12")]
+		[XAQueryFieldAttribute("md_17", "외국인매도", "long", "12")]
 		public long md_17;
 		/// <summary>
 		/// 외국인증감
 		/// </summary>
-		[XAQueryFieldAttribute("외국인증감", "12")]
+		[XAQueryFieldAttribute("rate_17", "외국인증감", "long", "12")]
 		public long rate_17;
 		/// <summary>
 		/// 외국인순매수
 		/// </summary>
-		[XAQueryFieldAttribute("외국인순매수", "12")]
+		[XAQueryFieldAttribute("svolume_17", "외국인순매수", "long", "12")]
 		public long svolume_17;
 		/// <summary>
 		/// 기관계투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("기관계투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_18", "기관계투자자코드", "char", "4")]
 		public string tjjcode_18;
 		/// <summary>
 		/// 기관계매수
 		/// </summary>
-		[XAQueryFieldAttribute("기관계매수", "12")]
+		[XAQueryFieldAttribute("ms_18", "기관계매수", "long", "12")]
 		public long ms_18;
 		/// <summary>
 		/// 기관계매도
 		/// </summary>
-		[XAQueryFieldAttribute("기관계매도", "12")]
+		[XAQueryFieldAttribute("md_18", "기관계매도", "long", "12")]
 		public long md_18;
 		/// <summary>
 		/// 기관계증감
 		/// </summary>
-		[XAQueryFieldAttribute("기관계증감", "12")]
+		[XAQueryFieldAttribute("rate_18", "기관계증감", "long", "12")]
 		public long rate_18;
 		/// <summary>
 		/// 기관계순매수
 		/// </summary>
-		[XAQueryFieldAttribute("기관계순매수", "12")]
+		[XAQueryFieldAttribute("svolume_18", "기관계순매수", "long", "12")]
 		public long svolume_18;
 		/// <summary>
 		/// 증권투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("증권투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_01", "증권투자자코드", "char", "4")]
 		public string tjjcode_01;
 		/// <summary>
 		/// 증권매수
 		/// </summary>
-		[XAQueryFieldAttribute("증권매수", "12")]
+		[XAQueryFieldAttribute("ms_01", "증권매수", "long", "12")]
 		public long ms_01;
 		/// <summary>
 		/// 증권매도
 		/// </summary>
-		[XAQueryFieldAttribute("증권매도", "12")]
+		[XAQueryFieldAttribute("md_01", "증권매도", "long", "12")]
 		public long md_01;
 		/// <summary>
 		/// 증권증감
 		/// </summary>
-		[XAQueryFieldAttribute("증권증감", "12")]
+		[XAQueryFieldAttribute("rate_01", "증권증감", "long", "12")]
 		public long rate_01;
 		/// <summary>
 		/// 증권순매수
 		/// </summary>
-		[XAQueryFieldAttribute("증권순매수", "12")]
+		[XAQueryFieldAttribute("svolume_01", "증권순매수", "long", "12")]
 		public long svolume_01;
 		/// <summary>
 		/// 투신투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("투신투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_03", "투신투자자코드", "char", "4")]
 		public string tjjcode_03;
 		/// <summary>
 		/// 투신매수
 		/// </summary>
-		[XAQueryFieldAttribute("투신매수", "12")]
+		[XAQueryFieldAttribute("ms_03", "투신매수", "long", "12")]
 		public long ms_03;
 		/// <summary>
 		/// 투신매도
 		/// </summary>
-		[XAQueryFieldAttribute("투신매도", "12")]
+		[XAQueryFieldAttribute("md_03", "투신매도", "long", "12")]
 		public long md_03;
 		/// <summary>
 		/// 투신증감
 		/// </summary>
-		[XAQueryFieldAttribute("투신증감", "12")]
+		[XAQueryFieldAttribute("rate_03", "투신증감", "long", "12")]
 		public long rate_03;
 		/// <summary>
 		/// 투신순매수
 		/// </summary>
-		[XAQueryFieldAttribute("투신순매수", "12")]
+		[XAQueryFieldAttribute("svolume_03", "투신순매수", "long", "12")]
 		public long svolume_03;
 		/// <summary>
 		/// 은행투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("은행투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_04", "은행투자자코드", "char", "4")]
 		public string tjjcode_04;
 		/// <summary>
 		/// 은행매수
 		/// </summary>
-		[XAQueryFieldAttribute("은행매수", "12")]
+		[XAQueryFieldAttribute("ms_04", "은행매수", "long", "12")]
 		public long ms_04;
 		/// <summary>
 		/// 은행매도
 		/// </summary>
-		[XAQueryFieldAttribute("은행매도", "12")]
+		[XAQueryFieldAttribute("md_04", "은행매도", "long", "12")]
 		public long md_04;
 		/// <summary>
 		/// 은행증감
 		/// </summary>
-		[XAQueryFieldAttribute("은행증감", "12")]
+		[XAQueryFieldAttribute("rate_04", "은행증감", "long", "12")]
 		public long rate_04;
 		/// <summary>
 		/// 은행순매수
 		/// </summary>
-		[XAQueryFieldAttribute("은행순매수", "12")]
+		[XAQueryFieldAttribute("svolume_04", "은행순매수", "long", "12")]
 		public long svolume_04;
 		/// <summary>
 		/// 보험투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("보험투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_02", "보험투자자코드", "char", "4")]
 		public string tjjcode_02;
 		/// <summary>
 		/// 보험매수
 		/// </summary>
-		[XAQueryFieldAttribute("보험매수", "12")]
+		[XAQueryFieldAttribute("ms_02", "보험매수", "long", "12")]
 		public long ms_02;
 		/// <summary>
 		/// 보험매도
 		/// </summary>
-		[XAQueryFieldAttribute("보험매도", "12")]
+		[XAQueryFieldAttribute("md_02", "보험매도", "long", "12")]
 		public long md_02;
 		/// <summary>
 		/// 보험증감
 		/// </summary>
-		[XAQueryFieldAttribute("보험증감", "12")]
+		[XAQueryFieldAttribute("rate_02", "보험증감", "long", "12")]
 		public long rate_02;
 		/// <summary>
 		/// 보험순매수
 		/// </summary>
-		[XAQueryFieldAttribute("보험순매수", "12")]
+		[XAQueryFieldAttribute("svolume_02", "보험순매수", "long", "12")]
 		public long svolume_02;
 		/// <summary>
 		/// 종금투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("종금투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_05", "종금투자자코드", "char", "4")]
 		public string tjjcode_05;
 		/// <summary>
 		/// 종금매수
 		/// </summary>
-		[XAQueryFieldAttribute("종금매수", "12")]
+		[XAQueryFieldAttribute("ms_05", "종금매수", "long", "12")]
 		public long ms_05;
 		/// <summary>
 		/// 종금매도
 		/// </summary>
-		[XAQueryFieldAttribute("종금매도", "12")]
+		[XAQueryFieldAttribute("md_05", "종금매도", "long", "12")]
 		public long md_05;
 		/// <summary>
 		/// 종금증감
 		/// </summary>
-		[XAQueryFieldAttribute("종금증감", "12")]
+		[XAQueryFieldAttribute("rate_05", "종금증감", "long", "12")]
 		public long rate_05;
 		/// <summary>
 		/// 종금순매수
 		/// </summary>
-		[XAQueryFieldAttribute("종금순매수", "12")]
+		[XAQueryFieldAttribute("svolume_05", "종금순매수", "long", "12")]
 		public long svolume_05;
 		/// <summary>
 		/// 기금투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("기금투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_06", "기금투자자코드", "char", "4")]
 		public string tjjcode_06;
 		/// <summary>
 		/// 기금매수
 		/// </summary>
-		[XAQueryFieldAttribute("기금매수", "12")]
+		[XAQueryFieldAttribute("ms_06", "기금매수", "long", "12")]
 		public long ms_06;
 		/// <summary>
 		/// 기금매도
 		/// </summary>
-		[XAQueryFieldAttribute("기금매도", "12")]
+		[XAQueryFieldAttribute("md_06", "기금매도", "long", "12")]
 		public long md_06;
 		/// <summary>
 		/// 기금증감
 		/// </summary>
-		[XAQueryFieldAttribute("기금증감", "12")]
+		[XAQueryFieldAttribute("rate_06", "기금증감", "long", "12")]
 		public long rate_06;
 		/// <summary>
 		/// 기금순매수
 		/// </summary>
-		[XAQueryFieldAttribute("기금순매수", "12")]
+		[XAQueryFieldAttribute("svolume_06", "기금순매수", "long", "12")]
 		public long svolume_06;
 		/// <summary>
 		/// 국가투자코드
 		/// </summary>
-		[XAQueryFieldAttribute("국가투자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_11", "국가투자코드", "char", "4")]
 		public string tjjcode_11;
 		/// <summary>
 		/// 국가매수
 		/// </summary>
-		[XAQueryFieldAttribute("국가매수", "12")]
+		[XAQueryFieldAttribute("ms_11", "국가매수", "long", "12")]
 		public long ms_11;
 		/// <summary>
 		/// 국가매도
 		/// </summary>
-		[XAQueryFieldAttribute("국가매도", "12")]
+		[XAQueryFieldAttribute("md_11", "국가매도", "long", "12")]
 		public long md_11;
 		/// <summary>
 		/// 국가증감
 		/// </summary>
-		[XAQueryFieldAttribute("국가증감", "12")]
+		[XAQueryFieldAttribute("rate_11", "국가증감", "long", "12")]
 		public long rate_11;
 		/// <summary>
 		/// 국가순매수
 		/// </summary>
-		[XAQueryFieldAttribute("국가순매수", "12")]
+		[XAQueryFieldAttribute("svolume_11", "국가순매수", "long", "12")]
 		public long svolume_11;
 		/// <summary>
 		/// 기타투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("기타투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_07", "기타투자자코드", "char", "4")]
 		public string tjjcode_07;
 		/// <summary>
 		/// 기타매수
 		/// </summary>
-		[XAQueryFieldAttribute("기타매수", "12")]
+		[XAQueryFieldAttribute("ms_07", "기타매수", "long", "12")]
 		public long ms_07;
 		/// <summary>
 		/// 기타매도
 		/// </summary>
-		[XAQueryFieldAttribute("기타매도", "12")]
+		[XAQueryFieldAttribute("md_07", "기타매도", "long", "12")]
 		public long md_07;
 		/// <summary>
 		/// 기타증감
 		/// </summary>
-		[XAQueryFieldAttribute("기타증감", "12")]
+		[XAQueryFieldAttribute("rate_07", "기타증감", "long", "12")]
 		public long rate_07;
 		/// <summary>
 		/// 기타순매수
 		/// </summary>
-		[XAQueryFieldAttribute("기타순매수", "12")]
+		[XAQueryFieldAttribute("svolume_07", "기타순매수", "long", "12")]
 		public long svolume_07;
 		/// <summary>
 		/// 사모펀드투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_00", "사모펀드투자자코드", "char", "4")]
 		public string tjjcode_00;
 		/// <summary>
 		/// 사모펀드매수
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드매수", "12")]
+		[XAQueryFieldAttribute("ms_00", "사모펀드매수", "long", "12")]
 		public long ms_00;
 		/// <summary>
 		/// 사모펀드매도
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드매도", "12")]
+		[XAQueryFieldAttribute("md_00", "사모펀드매도", "long", "12")]
 		public long md_00;
 		/// <summary>
 		/// 사모펀드증감
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드증감", "12")]
+		[XAQueryFieldAttribute("rate_00", "사모펀드증감", "long", "12")]
 		public long rate_00;
 		/// <summary>
 		/// 사모펀드순매수
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드순매수", "12")]
+		[XAQueryFieldAttribute("svolume_00", "사모펀드순매수", "long", "12")]
 		public long svolume_00;
 
 		public static class F
@@ -1250,302 +1250,302 @@ namespace XingAPINet
 		/// <summary>
 		/// 개인투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("개인투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_08", "개인투자자코드", "char", "4")]
 		public string tjjcode_08;
 		/// <summary>
 		/// 개인매수
 		/// </summary>
-		[XAQueryFieldAttribute("개인매수", "12")]
+		[XAQueryFieldAttribute("ms_08", "개인매수", "long", "12")]
 		public long ms_08;
 		/// <summary>
 		/// 개인매도
 		/// </summary>
-		[XAQueryFieldAttribute("개인매도", "12")]
+		[XAQueryFieldAttribute("md_08", "개인매도", "long", "12")]
 		public long md_08;
 		/// <summary>
 		/// 개인증감
 		/// </summary>
-		[XAQueryFieldAttribute("개인증감", "12")]
+		[XAQueryFieldAttribute("rate_08", "개인증감", "long", "12")]
 		public long rate_08;
 		/// <summary>
 		/// 개인순매수
 		/// </summary>
-		[XAQueryFieldAttribute("개인순매수", "12")]
+		[XAQueryFieldAttribute("svolume_08", "개인순매수", "long", "12")]
 		public long svolume_08;
 		/// <summary>
 		/// 외국인투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("외국인투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_17", "외국인투자자코드", "char", "4")]
 		public string tjjcode_17;
 		/// <summary>
 		/// 외국인매수
 		/// </summary>
-		[XAQueryFieldAttribute("외국인매수", "12")]
+		[XAQueryFieldAttribute("ms_17", "외국인매수", "long", "12")]
 		public long ms_17;
 		/// <summary>
 		/// 외국인매도
 		/// </summary>
-		[XAQueryFieldAttribute("외국인매도", "12")]
+		[XAQueryFieldAttribute("md_17", "외국인매도", "long", "12")]
 		public long md_17;
 		/// <summary>
 		/// 외국인증감
 		/// </summary>
-		[XAQueryFieldAttribute("외국인증감", "12")]
+		[XAQueryFieldAttribute("rate_17", "외국인증감", "long", "12")]
 		public long rate_17;
 		/// <summary>
 		/// 외국인순매수
 		/// </summary>
-		[XAQueryFieldAttribute("외국인순매수", "12")]
+		[XAQueryFieldAttribute("svolume_17", "외국인순매수", "long", "12")]
 		public long svolume_17;
 		/// <summary>
 		/// 기관계투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("기관계투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_18", "기관계투자자코드", "char", "4")]
 		public string tjjcode_18;
 		/// <summary>
 		/// 기관계매수
 		/// </summary>
-		[XAQueryFieldAttribute("기관계매수", "12")]
+		[XAQueryFieldAttribute("ms_18", "기관계매수", "long", "12")]
 		public long ms_18;
 		/// <summary>
 		/// 기관계매도
 		/// </summary>
-		[XAQueryFieldAttribute("기관계매도", "12")]
+		[XAQueryFieldAttribute("md_18", "기관계매도", "long", "12")]
 		public long md_18;
 		/// <summary>
 		/// 기관계증감
 		/// </summary>
-		[XAQueryFieldAttribute("기관계증감", "12")]
+		[XAQueryFieldAttribute("rate_18", "기관계증감", "long", "12")]
 		public long rate_18;
 		/// <summary>
 		/// 기관계순매수
 		/// </summary>
-		[XAQueryFieldAttribute("기관계순매수", "12")]
+		[XAQueryFieldAttribute("svolume_18", "기관계순매수", "long", "12")]
 		public long svolume_18;
 		/// <summary>
 		/// 증권투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("증권투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_01", "증권투자자코드", "char", "4")]
 		public string tjjcode_01;
 		/// <summary>
 		/// 증권매수
 		/// </summary>
-		[XAQueryFieldAttribute("증권매수", "12")]
+		[XAQueryFieldAttribute("ms_01", "증권매수", "long", "12")]
 		public long ms_01;
 		/// <summary>
 		/// 증권매도
 		/// </summary>
-		[XAQueryFieldAttribute("증권매도", "12")]
+		[XAQueryFieldAttribute("md_01", "증권매도", "long", "12")]
 		public long md_01;
 		/// <summary>
 		/// 증권증감
 		/// </summary>
-		[XAQueryFieldAttribute("증권증감", "12")]
+		[XAQueryFieldAttribute("rate_01", "증권증감", "long", "12")]
 		public long rate_01;
 		/// <summary>
 		/// 증권순매수
 		/// </summary>
-		[XAQueryFieldAttribute("증권순매수", "12")]
+		[XAQueryFieldAttribute("svolume_01", "증권순매수", "long", "12")]
 		public long svolume_01;
 		/// <summary>
 		/// 투신투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("투신투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_03", "투신투자자코드", "char", "4")]
 		public string tjjcode_03;
 		/// <summary>
 		/// 투신매수
 		/// </summary>
-		[XAQueryFieldAttribute("투신매수", "12")]
+		[XAQueryFieldAttribute("ms_03", "투신매수", "long", "12")]
 		public long ms_03;
 		/// <summary>
 		/// 투신매도
 		/// </summary>
-		[XAQueryFieldAttribute("투신매도", "12")]
+		[XAQueryFieldAttribute("md_03", "투신매도", "long", "12")]
 		public long md_03;
 		/// <summary>
 		/// 투신증감
 		/// </summary>
-		[XAQueryFieldAttribute("투신증감", "12")]
+		[XAQueryFieldAttribute("rate_03", "투신증감", "long", "12")]
 		public long rate_03;
 		/// <summary>
 		/// 투신순매수
 		/// </summary>
-		[XAQueryFieldAttribute("투신순매수", "12")]
+		[XAQueryFieldAttribute("svolume_03", "투신순매수", "long", "12")]
 		public long svolume_03;
 		/// <summary>
 		/// 은행투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("은행투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_04", "은행투자자코드", "char", "4")]
 		public string tjjcode_04;
 		/// <summary>
 		/// 은행매수
 		/// </summary>
-		[XAQueryFieldAttribute("은행매수", "12")]
+		[XAQueryFieldAttribute("ms_04", "은행매수", "long", "12")]
 		public long ms_04;
 		/// <summary>
 		/// 은행매도
 		/// </summary>
-		[XAQueryFieldAttribute("은행매도", "12")]
+		[XAQueryFieldAttribute("md_04", "은행매도", "long", "12")]
 		public long md_04;
 		/// <summary>
 		/// 은행증감
 		/// </summary>
-		[XAQueryFieldAttribute("은행증감", "12")]
+		[XAQueryFieldAttribute("rate_04", "은행증감", "long", "12")]
 		public long rate_04;
 		/// <summary>
 		/// 은행순매수
 		/// </summary>
-		[XAQueryFieldAttribute("은행순매수", "12")]
+		[XAQueryFieldAttribute("svolume_04", "은행순매수", "long", "12")]
 		public long svolume_04;
 		/// <summary>
 		/// 보험투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("보험투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_02", "보험투자자코드", "char", "4")]
 		public string tjjcode_02;
 		/// <summary>
 		/// 보험매수
 		/// </summary>
-		[XAQueryFieldAttribute("보험매수", "12")]
+		[XAQueryFieldAttribute("ms_02", "보험매수", "long", "12")]
 		public long ms_02;
 		/// <summary>
 		/// 보험매도
 		/// </summary>
-		[XAQueryFieldAttribute("보험매도", "12")]
+		[XAQueryFieldAttribute("md_02", "보험매도", "long", "12")]
 		public long md_02;
 		/// <summary>
 		/// 보험증감
 		/// </summary>
-		[XAQueryFieldAttribute("보험증감", "12")]
+		[XAQueryFieldAttribute("rate_02", "보험증감", "long", "12")]
 		public long rate_02;
 		/// <summary>
 		/// 보험순매수
 		/// </summary>
-		[XAQueryFieldAttribute("보험순매수", "12")]
+		[XAQueryFieldAttribute("svolume_02", "보험순매수", "long", "12")]
 		public long svolume_02;
 		/// <summary>
 		/// 종금투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("종금투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_05", "종금투자자코드", "char", "4")]
 		public string tjjcode_05;
 		/// <summary>
 		/// 종금매수
 		/// </summary>
-		[XAQueryFieldAttribute("종금매수", "12")]
+		[XAQueryFieldAttribute("ms_05", "종금매수", "long", "12")]
 		public long ms_05;
 		/// <summary>
 		/// 종금매도
 		/// </summary>
-		[XAQueryFieldAttribute("종금매도", "12")]
+		[XAQueryFieldAttribute("md_05", "종금매도", "long", "12")]
 		public long md_05;
 		/// <summary>
 		/// 종금증감
 		/// </summary>
-		[XAQueryFieldAttribute("종금증감", "12")]
+		[XAQueryFieldAttribute("rate_05", "종금증감", "long", "12")]
 		public long rate_05;
 		/// <summary>
 		/// 종금순매수
 		/// </summary>
-		[XAQueryFieldAttribute("종금순매수", "12")]
+		[XAQueryFieldAttribute("svolume_05", "종금순매수", "long", "12")]
 		public long svolume_05;
 		/// <summary>
 		/// 기금투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("기금투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_06", "기금투자자코드", "char", "4")]
 		public string tjjcode_06;
 		/// <summary>
 		/// 기금매수
 		/// </summary>
-		[XAQueryFieldAttribute("기금매수", "12")]
+		[XAQueryFieldAttribute("ms_06", "기금매수", "long", "12")]
 		public long ms_06;
 		/// <summary>
 		/// 기금매도
 		/// </summary>
-		[XAQueryFieldAttribute("기금매도", "12")]
+		[XAQueryFieldAttribute("md_06", "기금매도", "long", "12")]
 		public long md_06;
 		/// <summary>
 		/// 기금증감
 		/// </summary>
-		[XAQueryFieldAttribute("기금증감", "12")]
+		[XAQueryFieldAttribute("rate_06", "기금증감", "long", "12")]
 		public long rate_06;
 		/// <summary>
 		/// 기금순매수
 		/// </summary>
-		[XAQueryFieldAttribute("기금순매수", "12")]
+		[XAQueryFieldAttribute("svolume_06", "기금순매수", "long", "12")]
 		public long svolume_06;
 		/// <summary>
 		/// 국가투자코드
 		/// </summary>
-		[XAQueryFieldAttribute("국가투자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_11", "국가투자코드", "char", "4")]
 		public string tjjcode_11;
 		/// <summary>
 		/// 국가매수
 		/// </summary>
-		[XAQueryFieldAttribute("국가매수", "12")]
+		[XAQueryFieldAttribute("ms_11", "국가매수", "long", "12")]
 		public long ms_11;
 		/// <summary>
 		/// 국가매도
 		/// </summary>
-		[XAQueryFieldAttribute("국가매도", "12")]
+		[XAQueryFieldAttribute("md_11", "국가매도", "long", "12")]
 		public long md_11;
 		/// <summary>
 		/// 국가증감
 		/// </summary>
-		[XAQueryFieldAttribute("국가증감", "12")]
+		[XAQueryFieldAttribute("rate_11", "국가증감", "long", "12")]
 		public long rate_11;
 		/// <summary>
 		/// 국가순매수
 		/// </summary>
-		[XAQueryFieldAttribute("국가순매수", "12")]
+		[XAQueryFieldAttribute("svolume_11", "국가순매수", "long", "12")]
 		public long svolume_11;
 		/// <summary>
 		/// 기타투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("기타투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_07", "기타투자자코드", "char", "4")]
 		public string tjjcode_07;
 		/// <summary>
 		/// 기타매수
 		/// </summary>
-		[XAQueryFieldAttribute("기타매수", "12")]
+		[XAQueryFieldAttribute("ms_07", "기타매수", "long", "12")]
 		public long ms_07;
 		/// <summary>
 		/// 기타매도
 		/// </summary>
-		[XAQueryFieldAttribute("기타매도", "12")]
+		[XAQueryFieldAttribute("md_07", "기타매도", "long", "12")]
 		public long md_07;
 		/// <summary>
 		/// 기타증감
 		/// </summary>
-		[XAQueryFieldAttribute("기타증감", "12")]
+		[XAQueryFieldAttribute("rate_07", "기타증감", "long", "12")]
 		public long rate_07;
 		/// <summary>
 		/// 기타순매수
 		/// </summary>
-		[XAQueryFieldAttribute("기타순매수", "12")]
+		[XAQueryFieldAttribute("svolume_07", "기타순매수", "long", "12")]
 		public long svolume_07;
 		/// <summary>
 		/// 사모펀드투자자코드
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드투자자코드", "4")]
+		[XAQueryFieldAttribute("tjjcode_00", "사모펀드투자자코드", "char", "4")]
 		public string tjjcode_00;
 		/// <summary>
 		/// 사모펀드매수
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드매수", "12")]
+		[XAQueryFieldAttribute("ms_00", "사모펀드매수", "long", "12")]
 		public long ms_00;
 		/// <summary>
 		/// 사모펀드매도
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드매도", "12")]
+		[XAQueryFieldAttribute("md_00", "사모펀드매도", "long", "12")]
 		public long md_00;
 		/// <summary>
 		/// 사모펀드증감
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드증감", "12")]
+		[XAQueryFieldAttribute("rate_00", "사모펀드증감", "long", "12")]
 		public long rate_00;
 		/// <summary>
 		/// 사모펀드순매수
 		/// </summary>
-		[XAQueryFieldAttribute("사모펀드순매수", "12")]
+		[XAQueryFieldAttribute("svolume_00", "사모펀드순매수", "long", "12")]
 		public long svolume_00;
 
 		public static class F

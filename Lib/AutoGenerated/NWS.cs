@@ -50,7 +50,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 뉴스코드
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스코드", "6")]
+		[XAQueryFieldAttribute("nwcode", "뉴스코드", "char", "6")]
 		public string nwcode;
 
 		public static class F
@@ -137,37 +137,37 @@ namespace XingAPINet
 		/// <summary>
 		/// 날짜
 		/// </summary>
-		[XAQueryFieldAttribute("날짜", "8")]
+		[XAQueryFieldAttribute("date", "날짜", "char", "8")]
 		public string date;
 		/// <summary>
 		/// 시간
 		/// </summary>
-		[XAQueryFieldAttribute("시간", "6")]
+		[XAQueryFieldAttribute("time", "시간", "char", "6")]
 		public string time;
 		/// <summary>
 		/// 뉴스구분자
 		/// </summary>
-		[XAQueryFieldAttribute("뉴스구분자", "2")]
+		[XAQueryFieldAttribute("id", "뉴스구분자", "char", "2")]
 		public string id;
 		/// <summary>
 		/// 키값
 		/// </summary>
-		[XAQueryFieldAttribute("키값", "24")]
+		[XAQueryFieldAttribute("realkey", "키값", "char", "24")]
 		public string realkey;
 		/// <summary>
 		/// 제목
 		/// </summary>
-		[XAQueryFieldAttribute("제목", "300")]
+		[XAQueryFieldAttribute("title", "제목", "char", "300")]
 		public string title;
 		/// <summary>
 		/// 단축종목코드
 		/// </summary>
-		[XAQueryFieldAttribute("단축종목코드", "240")]
+		[XAQueryFieldAttribute("code", "단축종목코드", "char", "240")]
 		public string code;
 		/// <summary>
 		/// BODY길이
 		/// </summary>
-		[XAQueryFieldAttribute("BODY길이", "8")]
+		[XAQueryFieldAttribute("bodysize", "BODY길이", "long", "8")]
 		public long bodysize;
 
 		public static class F
