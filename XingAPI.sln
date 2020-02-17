@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8BC2DF5C-DF1
 		Lib\Login.ini = Lib\Login.ini
 		Lib\mfc110.dll = Lib\mfc110.dll
 		Lib\mfc42.dll = Lib\mfc42.dll
+		Lib\Microsoft.Data.Sqlite.dll = Lib\Microsoft.Data.Sqlite.dll
+		Lib\Microsoft.Win32.Primitives.dll = Lib\Microsoft.Win32.Primitives.dll
 		Lib\msvcp110.dll = Lib\msvcp110.dll
 		Lib\msvcp60.dll = Lib\msvcp60.dll
 		Lib\msvcr110.dll = Lib\msvcr110.dll
@@ -38,6 +40,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8BC2DF5C-DF1
 		Lib\SKCommIC.dll = Lib\SKCommIC.dll
 		Lib\SKCommIF.dll = Lib\SKCommIF.dll
 		Lib\SKCommSC.dll = Lib\SKCommSC.dll
+		Lib\SQLitePCLRaw.batteries_v2.dll = Lib\SQLitePCLRaw.batteries_v2.dll
+		Lib\SQLitePCLRaw.core.dll = Lib\SQLitePCLRaw.core.dll
+		Lib\SQLitePCLRaw.nativelibrary.dll = Lib\SQLitePCLRaw.nativelibrary.dll
+		Lib\SQLitePCLRaw.provider.dynamic_cdecl.dll = Lib\SQLitePCLRaw.provider.dynamic_cdecl.dll
 		Lib\unreg.bat = Lib\unreg.bat
 		Lib\XA_Common.dll = Lib\XA_Common.dll
 		Lib\XA_DataSet.dll = Lib\XA_DataSet.dll
@@ -971,6 +977,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteToSqlite", "DevCenterS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XingAPINet.Sqlite", "XingAPINet.Sqlite\XingAPINet.Sqlite.csproj", "{104000E1-A25E-4416-A1EE-0419DC82A0EB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "runtimes", "runtimes", "{838D0559-4215-4EA2-94C5-38A6A6E8AC5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "win-x86", "win-x86", "{D7A9E38E-2CC6-414B-A430-7F9AA718862E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "native", "native", "{59BA2141-1AD2-45D4-8816-FE0379E3C040}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\runtimes\win-x86\native\e_sqlite3.dll = Lib\runtimes\win-x86\native\e_sqlite3.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1183,6 +1198,9 @@ Global
 		{4874064B-234E-4DD7-A371-9B6A12F984B2} = {9875BF81-812A-4FAF-9C63-9DA4E2E9CA7B}
 		{B7C56353-7A3F-4BE3-AF09-3EE34C696FF7} = {9875BF81-812A-4FAF-9C63-9DA4E2E9CA7B}
 		{2C523AF8-A6E3-4091-8E6C-4863AB42B2CB} = {0A7A858F-06A2-4F72-8260-96EB34ACAB75}
+		{838D0559-4215-4EA2-94C5-38A6A6E8AC5E} = {8BC2DF5C-DF15-4F6B-8C28-CF14CA3BFBE6}
+		{D7A9E38E-2CC6-414B-A430-7F9AA718862E} = {838D0559-4215-4EA2-94C5-38A6A6E8AC5E}
+		{59BA2141-1AD2-45D4-8816-FE0379E3C040} = {D7A9E38E-2CC6-414B-A430-7F9AA718862E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F332E45C-879C-4509-B47C-90E7F3D47657}
