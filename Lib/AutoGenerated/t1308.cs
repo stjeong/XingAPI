@@ -624,6 +624,23 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1308OutBlock1[] ReadFromDB(/* string shcode = default,string starttime = default,string endtime = default,string bun_term = default */)
+		{
+			using (XQt1308 instance = new XQt1308())
+			{
+
+				QueryOption qo = new QueryOption("XQt1308OutBlock1");
+				// if (shcode != default) qo.Add("shcode", shcode);
+				// if (starttime != default) qo.Add("starttime", starttime);
+				// if (endtime != default) qo.Add("endtime", endtime);
+				// if (bun_term != default) qo.Add("bun_term", bun_term);
+
+
+				var outBlock = instance.SelectMany<XQt1308OutBlock1>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1308InBlock block)
 		{
 			if (block.VerifyData() == false)

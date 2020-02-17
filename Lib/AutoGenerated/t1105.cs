@@ -454,6 +454,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1105OutBlock ReadFromDB(/* string shcode = default */)
+		{
+			using (XQt1105 instance = new XQt1105())
+			{
+
+				QueryOption qo = new QueryOption("XQt1105OutBlock");
+				// if (shcode != default) qo.Add("shcode", shcode);
+
+
+				var outBlock = instance.Select<XQt1105OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1105InBlock block)
 		{
 			if (block.VerifyData() == false)

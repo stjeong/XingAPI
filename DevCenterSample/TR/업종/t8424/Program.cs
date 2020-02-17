@@ -11,18 +11,29 @@ namespace t8424
         static void Main(string[] args)
         {
             bool useDemoServer = true;
+            bool loadFromDB = false;
+
             Program pg = new Program();
 
-            if (args.Length == 1 && args[0] == "hts")
+            if (args.Length == 1)
             {
-                useDemoServer = false;
+                if (args[0] == "hts")
+                {
+                    useDemoServer = false;
+                }
+                else if (args[0] == "db")
+                {
+                    loadFromDB = true;
+                }
             }
 
-            pg.Main(useDemoServer);
+            pg.Main(useDemoServer, loadFromDB);
         }
 
-        void Main(bool useDemoServer)
+        void Main(bool useDemoServer, bool loadFromDB)
         {
+            SqliteExtension.UseSqlite("test.sqlite");
+
             LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
@@ -33,13 +44,23 @@ namespace t8424
                     return;
                 }
 
-                if (useDemoServer)
+                if (loadFromDB == true)
+                {
+                    var items = XQt8424.ReadFromDB();
+                    foreach (var item in items)
+                    {
+                        item.Dump(Console.Out, DumpOutputType.Inline);
+                    }
+                }
+                else if (useDemoServer)
                 {
                     var items = XQt8424.Get('2');
                     foreach (var item in items)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline);
                     }
+
+                    items.WriteToDB(replace: true);
                 }
                 else
                 {

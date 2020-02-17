@@ -900,6 +900,22 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQAllOutBlocks ReadFromDB(/* string shcode = default,string todt = default,char volvalgb = default,char msmdgb = default,char cumulgb = default,string cts_date = default,long cts_idx = default */)
+		{
+			using (XQt1702 instance = new XQt1702())
+			{
+
+				XQAllOutBlocks results = new XQAllOutBlocks();
+
+				QueryOption qo = new QueryOption("XQt1702OutBlock");
+				results.OutBlock = instance.Select<XQt1702OutBlock>(qo);
+
+				qo = new QueryOption("XQt1702OutBlock1");
+				results.OutBlock1 = instance.SelectMany<XQt1702OutBlock1>(qo);
+				return results;
+			}
+		}
+
 		public bool SetBlock(XQt1702InBlock block)
 		{
 			if (block.VerifyData() == false)

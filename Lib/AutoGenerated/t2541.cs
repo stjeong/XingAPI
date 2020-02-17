@@ -1818,6 +1818,22 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQAllOutBlocks ReadFromDB(/* string eitem = default,char market = default,string upcode = default,char gubun1 = default,char gubun2 = default,string cts_time = default,long cts_idx = default,int cnt = default */)
+		{
+			using (XQt2541 instance = new XQt2541())
+			{
+
+				XQAllOutBlocks results = new XQAllOutBlocks();
+
+				QueryOption qo = new QueryOption("XQt2541OutBlock");
+				results.OutBlock = instance.Select<XQt2541OutBlock>(qo);
+
+				qo = new QueryOption("XQt2541OutBlock1");
+				results.OutBlock1 = instance.SelectMany<XQt2541OutBlock1>(qo);
+				return results;
+			}
+		}
+
 		public bool SetBlock(XQt2541InBlock block)
 		{
 			if (block.VerifyData() == false)

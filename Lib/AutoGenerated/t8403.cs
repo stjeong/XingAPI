@@ -1559,6 +1559,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt8403OutBlock ReadFromDB(/* string shcode = default */)
+		{
+			using (XQt8403 instance = new XQt8403())
+			{
+
+				QueryOption qo = new QueryOption("XQt8403OutBlock");
+				// if (shcode != default) qo.Add("shcode", shcode);
+
+
+				var outBlock = instance.Select<XQt8403OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt8403InBlock block)
 		{
 			if (block.VerifyData() == false)

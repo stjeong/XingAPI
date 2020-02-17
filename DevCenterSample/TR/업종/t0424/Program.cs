@@ -11,18 +11,28 @@ namespace t0424
         static void Main(string[] args)
         {
             bool useDemoServer = true;
-            Program pg = new Program();
+            bool loadFromDB = false;
 
-            if (args.Length == 1 && args[0] == "hts")
+            Program pg = new Program();
+            if (args.Length == 1)
             {
-                useDemoServer = false;
+                if (args[0] == "hts")
+                {
+                    useDemoServer = false;
+                }
+                else if (args[0] == "db")
+                {
+                    loadFromDB = true;
+                }
             }
 
-            pg.Main(useDemoServer);
+            pg.Main(useDemoServer, loadFromDB);
         }
 
-        void Main(bool useDemoServer)
+        void Main(bool useDemoServer, bool loadFromDB)
         {
+            SqliteExtension.UseSqlite("test.sqlite");
+
             LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
@@ -33,7 +43,23 @@ namespace t0424
                     return;
                 }
 
-                if (useDemoServer)
+                if (loadFromDB == true)
+                {
+                    foreach (string account in xing.GetAccounts())
+                    {
+                        Console.WriteLine($"[Account = {account}]");
+                        var multiBlock = XQt0424.ReadFromDB();
+
+                        multiBlock.OutBlock?.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+
+                        Console.WriteLine($"# of items: {multiBlock.OutBlock1?.Length}");
+                        foreach (var item in multiBlock.OutBlock1 ?? Enumerable.Empty<XQt0424OutBlock1>())
+                        {
+                            item.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+                        }
+                    }
+                }
+                else if (useDemoServer)
                 {
                     foreach (string account in xing.GetAccounts())
                     {
@@ -41,12 +67,15 @@ namespace t0424
                         var multiBlock = XQt0424.Get(account);
 
                         multiBlock.OutBlock?.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+                        multiBlock.OutBlock?.WriteToDB(replace: true);
 
                         Console.WriteLine($"# of items: {multiBlock.OutBlock1.Length}");
                         foreach (var item in multiBlock.OutBlock1)
                         {
                             item.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
                         }
+
+                        multiBlock.OutBlock1.WriteToDB(replace: true);
                     }
                 }
                 else

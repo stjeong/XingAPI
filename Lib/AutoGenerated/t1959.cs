@@ -607,6 +607,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1959OutBlock1[] ReadFromDB(/* string shcode = default */)
+		{
+			using (XQt1959 instance = new XQt1959())
+			{
+
+				QueryOption qo = new QueryOption("XQt1959OutBlock1");
+				// if (shcode != default) qo.Add("shcode", shcode);
+
+
+				var outBlock = instance.SelectMany<XQt1959OutBlock1>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1959InBlock block)
 		{
 			if (block.VerifyData() == false)

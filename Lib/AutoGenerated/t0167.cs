@@ -335,6 +335,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt0167OutBlock ReadFromDB(/* string id = default */)
+		{
+			using (XQt0167 instance = new XQt0167())
+			{
+
+				QueryOption qo = new QueryOption("XQt0167OutBlock");
+				// if (id != default) qo.Add("id", id);
+
+
+				var outBlock = instance.Select<XQt0167OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt0167InBlock block)
 		{
 			if (block.VerifyData() == false)

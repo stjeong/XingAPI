@@ -200,6 +200,7 @@ namespace Res2Query
             if (blockFieldSetList.Count >= 2 && isRealType == false)
             {
                 sbClass.AppendLine(WriteSimpleGetMethod(blockFieldSetList, tab, classPrefix, typeName));
+                sbClass.AppendLine(WriteReadFromDBMethod(blockFieldSetList, tab, classPrefix, typeName));
             }
 
             StringBuilder sbBlock = new StringBuilder();
@@ -254,6 +255,106 @@ namespace Res2Query
             return sbClass.ToString();
         }
 
+        private static string WriteReadFromDBMethod(Dictionary<string, BlockInfo> blockFieldSetList, string tab, string classPrefix, string typeName)
+        {
+            if (blockFieldSetList.Count == 2)
+            {
+                var inBlock = blockFieldSetList.First();
+                var outBlock = blockFieldSetList.Skip(1).First();
+
+                if (inBlock.Value.BlockType == BlockType.input && outBlock.Value.BlockType == BlockType.output)
+                {
+                    return OutblockReadFromDB(inBlock, outBlock, tab, classPrefix, typeName);
+                }
+            }
+            else if (blockFieldSetList.Count == 3)
+            {
+                var inBlock = blockFieldSetList.First();
+                var outBlock = blockFieldSetList.Skip(1).First();
+                var outBlocks = blockFieldSetList.Skip(2).First();
+
+                if (inBlock.Value.BlockType == BlockType.input &&
+                    (outBlock.Value.BlockType == BlockType.output && outBlock.Value.HasOccurs == false) &&
+                    (outBlocks.Value.BlockType == BlockType.output && outBlocks.Value.HasOccurs == true))
+                {
+                    return OutblocksReadFromDB(inBlock, outBlock, outBlocks, tab, classPrefix, typeName);
+                }
+            }
+
+            return "";
+        }
+
+        private static string OutblockReadFromDB(KeyValuePair<string, BlockInfo> inBlock, KeyValuePair<string, BlockInfo> outBlock, string tab, string classPrefix, string typeName)
+        {
+            StringBuilder sbGet = new StringBuilder();
+
+            string arrayPostfix = (outBlock.Value.HasOccurs == true) ? "[]" : "";
+
+            sbGet.AppendLine($"{tab}\tpublic static {classPrefix}{outBlock.Key}{arrayPostfix} ReadFromDB(/* {inBlock.Value.GetParams} */)");
+            sbGet.AppendLine($"{tab}\t{{");
+
+            sbGet.AppendLine($"{tab}\t\tusing ({classPrefix}{typeName} instance = new {classPrefix}{typeName}())");
+            sbGet.AppendLine($"{tab}\t\t{{");
+            sbGet.AppendLine();
+            sbGet.AppendLine($"{tab}\t\t\tQueryOption qo = new QueryOption(\"{classPrefix}{outBlock.Key}\");");
+            sbGet.AppendLine($"{inBlock.Value.QueryOptionList}");
+            sbGet.AppendLine();
+
+            string many = (outBlock.Value.HasOccurs == true) ? "Many" : "";
+
+            sbGet.AppendLine($"{tab}\t\t\tvar outBlock = instance.Select{many}<{classPrefix}{outBlock.Key}>(qo);");
+            sbGet.AppendLine($"{tab}\t\t\treturn outBlock;");
+
+            sbGet.AppendLine($"{tab}\t\t}}");
+            sbGet.AppendLine($"{tab}\t}}");
+
+            return sbGet.ToString();
+        }
+
+
+        private static string OutblocksReadFromDB(KeyValuePair<string, BlockInfo> inBlock,
+            KeyValuePair<string, BlockInfo> outBlock,
+            KeyValuePair<string, BlockInfo> outBlocks, string tab, string classPrefix, string typeName)
+        {
+            StringBuilder sbGet = new StringBuilder();
+            string multipleOutblockTypeName = $"{classPrefix}AllOutBlocks";
+
+            sbGet.AppendLine($"{tab}\tpublic static {multipleOutblockTypeName} ReadFromDB(/* {inBlock.Value.GetParams} */)");
+            sbGet.AppendLine($"{tab}\t{{");
+
+            sbGet.AppendLine($"{tab}\t\tusing ({classPrefix}{typeName} instance = new {classPrefix}{typeName}())");
+            sbGet.AppendLine($"{tab}\t\t{{");
+            sbGet.AppendLine();
+
+            sbGet.AppendLine($"{tab}\t\t\t{multipleOutblockTypeName} results = new {multipleOutblockTypeName}();");
+            sbGet.AppendLine();
+
+            sbGet.AppendLine($"{tab}\t\t\tQueryOption qo = new QueryOption(\"{classPrefix}{outBlock.Key}\");");
+
+            sbGet.AppendLine($"{tab}\t\t\tresults.{RemoveBlockClode(outBlock.Key)} = instance.Select<{classPrefix}{outBlock.Key}>(qo);");
+            sbGet.AppendLine();
+
+            sbGet.AppendLine($"{tab}\t\t\tqo = new QueryOption(\"{classPrefix}{outBlocks.Key}\");");
+            sbGet.AppendLine($"{tab}\t\t\tresults.{RemoveBlockClode(outBlocks.Key)} = instance.SelectMany<{classPrefix}{outBlocks.Key}>(qo);");
+            sbGet.AppendLine($"{tab}\t\t\treturn results;");
+
+            sbGet.AppendLine($"{tab}\t\t}}");
+            sbGet.AppendLine($"{tab}\t}}");
+
+            return sbGet.ToString();
+
+            string RemoveBlockClode(string blockName)
+            {
+                int pos = blockName.IndexOf("Out");
+                if (pos == -1)
+                {
+                    return blockName;
+                }
+
+                return blockName.Substring(pos);
+            }
+        }
+
         private static string WriteSimpleGetMethod(Dictionary<string, BlockInfo> blockFieldSetList, string tab, string classPrefix, string typeName)
         {
             if (blockFieldSetList.Count == 2)
@@ -282,6 +383,8 @@ namespace Res2Query
 
             return "";
         }
+
+
 
         private static string WriteInblockAndOutblock(KeyValuePair<string, BlockInfo> inBlock, KeyValuePair<string, BlockInfo> outBlock, string tab, string classPrefix, string typeName)
         {
@@ -449,6 +552,7 @@ namespace Res2Query
             StringBuilder AllFields = new StringBuilder();
             StringBuilder getParams = new StringBuilder();
             StringBuilder getParamsSetFieldData = new StringBuilder();
+            StringBuilder queryOptionList = new StringBuilder();
 
             fieldList.AppendLine();
             fieldList.AppendLine($"{tab}\tpublic static class F");
@@ -520,6 +624,7 @@ namespace Res2Query
 
                 getParams.Append($"{GetFieldType(fieldType, formatOrLen)} {name2} = default,");
                 getParamsSetFieldData.AppendLine($"{tab}\t\t\tinstance.SetFieldData({classPrefix}{typeName}.BlockName, {classPrefix}{typeName}.F.{name2}, 0, {name2}{SetFieldToStringExp(fieldType, formatOrLen)}); // {fieldType} {formatOrLen}");
+                queryOptionList.AppendLine($"{tab}\t\t\t// if ({name2} != default) qo.Add(\"{name2}\", {name2});");
             }
 
             fieldList.AppendLine($"{tab}\t}}");
@@ -528,7 +633,7 @@ namespace Res2Query
             sb.AppendLine(fieldList.ToString());
             sb.AppendLine(AllFields.ToString());
 
-            blockFieldSetList[typeName] = new BlockInfo(typeCode, setFields.ToString(), getParams.ToString().Trim(','), getParamsSetFieldData.ToString(), hasOccurs);
+            blockFieldSetList[typeName] = new BlockInfo(typeCode, setFields.ToString(), getParams.ToString().Trim(','), getParamsSetFieldData.ToString(), queryOptionList.ToString(), hasOccurs);
 
             // public Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
             {

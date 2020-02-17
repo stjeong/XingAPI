@@ -471,6 +471,21 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1533OutBlock[] ReadFromDB(/* char gubun = default,long chgdate = default */)
+		{
+			using (XQt1533 instance = new XQt1533())
+			{
+
+				QueryOption qo = new QueryOption("XQt1533OutBlock");
+				// if (gubun != default) qo.Add("gubun", gubun);
+				// if (chgdate != default) qo.Add("chgdate", chgdate);
+
+
+				var outBlock = instance.SelectMany<XQt1533OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1533InBlock block)
 		{
 			if (block.VerifyData() == false)

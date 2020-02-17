@@ -692,6 +692,21 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt8407OutBlock1[] ReadFromDB(/* long nrec = default,string shcode = default */)
+		{
+			using (XQt8407 instance = new XQt8407())
+			{
+
+				QueryOption qo = new QueryOption("XQt8407OutBlock1");
+				// if (nrec != default) qo.Add("nrec", nrec);
+				// if (shcode != default) qo.Add("shcode", shcode);
+
+
+				var outBlock = instance.SelectMany<XQt8407OutBlock1>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt8407InBlock block)
 		{
 			if (block.VerifyData() == false)

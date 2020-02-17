@@ -352,6 +352,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt9944OutBlock[] ReadFromDB(/* char dummy = default */)
+		{
+			using (XQt9944 instance = new XQt9944())
+			{
+
+				QueryOption qo = new QueryOption("XQt9944OutBlock");
+				// if (dummy != default) qo.Add("dummy", dummy);
+
+
+				var outBlock = instance.SelectMany<XQt9944OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt9944InBlock block)
 		{
 			if (block.VerifyData() == false)

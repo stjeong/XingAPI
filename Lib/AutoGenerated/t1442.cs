@@ -747,6 +747,22 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQAllOutBlocks ReadFromDB(/* char gubun = default,char type1 = default,char type2 = default,char type3 = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default */)
+		{
+			using (XQt1442 instance = new XQt1442())
+			{
+
+				XQAllOutBlocks results = new XQAllOutBlocks();
+
+				QueryOption qo = new QueryOption("XQt1442OutBlock");
+				results.OutBlock = instance.Select<XQt1442OutBlock>(qo);
+
+				qo = new QueryOption("XQt1442OutBlock1");
+				results.OutBlock1 = instance.SelectMany<XQt1442OutBlock1>(qo);
+				return results;
+			}
+		}
+
 		public bool SetBlock(XQt1442InBlock block)
 		{
 			if (block.VerifyData() == false)

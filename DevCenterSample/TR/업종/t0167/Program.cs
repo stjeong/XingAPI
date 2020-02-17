@@ -11,18 +11,29 @@ namespace t0167
         static void Main(string[] args)
         {
             bool useDemoServer = true;
+            bool loadFromDB = false;
+
             Program pg = new Program();
 
-            if (args.Length == 1 && args[0] == "hts")
+            if (args.Length == 1)
             {
-                useDemoServer = false;
+                if (args[0] == "hts")
+                {
+                    useDemoServer = false;
+                }
+                else if (args[0] == "db")
+                {
+                    loadFromDB = true;
+                }
             }
 
-            pg.Main(useDemoServer);
+            pg.Main(useDemoServer, loadFromDB);
         }
 
-        void Main(bool useDemoServer)
+        void Main(bool useDemoServer, bool loadFromDB)
         {
+            SqliteExtension.UseSqlite("test.sqlite");
+
             LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
@@ -33,13 +44,18 @@ namespace t0167
                     return;
                 }
 
-                if (useDemoServer)
+                if (loadFromDB == true)
+                {
+                    XQt0167OutBlock outBlock = XQt0167.ReadFromDB();
+                    outBlock?.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+                }
+                else if (useDemoServer)
                 {
                     XQt0167OutBlock outBlock = XQt0167.Get();
                     Console.WriteLine(XQt0167OutBlock.F.dt + " == " + outBlock.dt);
                     Console.WriteLine(XQt0167OutBlock.F.time + " == " + outBlock.time);
 
-                    // outBlock?.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+                    outBlock.WriteToDB(replace: true);
                 }
                 else
                 {

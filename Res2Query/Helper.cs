@@ -16,14 +16,16 @@ namespace Res2Query
         public readonly string SetFieldData;
         public readonly string GetParams;
         public readonly string GetParamsSetFieldData;
+        public readonly string QueryOptionList;
 
-        public BlockInfo(string typeCode, string setFieldData, string getParams, string getParamsSetFieldData, bool hasOccurs)
+        public BlockInfo(string typeCode, string setFieldData, string getParams, string getParamsSetFieldData, string queryOptionList, bool hasOccurs)
         {
             _blockType = typeCode;
             SetFieldData = setFieldData;
             _hasOccurs = hasOccurs;
             GetParams = getParams;
             GetParamsSetFieldData = getParamsSetFieldData;
+            QueryOptionList = queryOptionList;
         }
     }
 

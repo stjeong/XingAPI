@@ -1406,6 +1406,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1511OutBlock ReadFromDB(/* string upcode = default */)
+		{
+			using (XQt1511 instance = new XQt1511())
+			{
+
+				QueryOption qo = new QueryOption("XQt1511OutBlock");
+				// if (upcode != default) qo.Add("upcode", upcode);
+
+
+				var outBlock = instance.Select<XQt1511OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1511InBlock block)
 		{
 			if (block.VerifyData() == false)

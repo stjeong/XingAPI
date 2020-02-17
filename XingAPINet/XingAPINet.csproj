@@ -23,7 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>CA1034;IDE0028;IDE0017;IDE1006;CA1822;CA1031;CA1052</NoWarn>
+    <NoWarn>CA1034;IDE0028;IDE0017;IDE1006;CA1822;CA1031;CA1052;CA1819</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,7 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>CA1034;IDE0028;IDE0017;IDE1006;CA1822;CA1031;CA1052</NoWarn>
+    <NoWarn>CA1034;IDE0028;IDE0017;IDE1006;CA1822;CA1031;CA1052;CA1819</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />

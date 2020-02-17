@@ -696,6 +696,22 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQAllOutBlocks ReadFromDB(/* char gubun = default,string styymm = default,string enyymm = default,long idx = default */)
+		{
+			using (XQt1403 instance = new XQt1403())
+			{
+
+				XQAllOutBlocks results = new XQAllOutBlocks();
+
+				QueryOption qo = new QueryOption("XQt1403OutBlock");
+				results.OutBlock = instance.Select<XQt1403OutBlock>(qo);
+
+				qo = new QueryOption("XQt1403OutBlock1");
+				results.OutBlock1 = instance.SelectMany<XQt1403OutBlock1>(qo);
+				return results;
+			}
+		}
+
 		public bool SetBlock(XQt1403InBlock block)
 		{
 			if (block.VerifyData() == false)

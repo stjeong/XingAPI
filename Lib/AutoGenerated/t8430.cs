@@ -471,6 +471,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt8430OutBlock[] ReadFromDB(/* char gubun = default */)
+		{
+			using (XQt8430 instance = new XQt8430())
+			{
+
+				QueryOption qo = new QueryOption("XQt8430OutBlock");
+				// if (gubun != default) qo.Add("gubun", gubun);
+
+
+				var outBlock = instance.SelectMany<XQt8430OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt8430InBlock block)
 		{
 			if (block.VerifyData() == false)

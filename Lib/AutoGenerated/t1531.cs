@@ -369,6 +369,21 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1531OutBlock[] ReadFromDB(/* string tmname = default,string tmcode = default */)
+		{
+			using (XQt1531 instance = new XQt1531())
+			{
+
+				QueryOption qo = new QueryOption("XQt1531OutBlock");
+				// if (tmname != default) qo.Add("tmname", tmname);
+				// if (tmcode != default) qo.Add("tmcode", tmcode);
+
+
+				var outBlock = instance.SelectMany<XQt1531OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1531InBlock block)
 		{
 			if (block.VerifyData() == false)

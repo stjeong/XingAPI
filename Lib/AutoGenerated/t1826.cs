@@ -335,6 +335,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1826OutBlock[] ReadFromDB(/* char search_gb = default */)
+		{
+			using (XQt1826 instance = new XQt1826())
+			{
+
+				QueryOption qo = new QueryOption("XQt1826OutBlock");
+				// if (search_gb != default) qo.Add("search_gb", search_gb);
+
+
+				var outBlock = instance.SelectMany<XQt1826OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1826InBlock block)
 		{
 			if (block.VerifyData() == false)

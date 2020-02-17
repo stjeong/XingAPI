@@ -369,6 +369,21 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1764OutBlock[] ReadFromDB(/* string shcode = default,char gubun1 = default */)
+		{
+			using (XQt1764 instance = new XQt1764())
+			{
+
+				QueryOption qo = new QueryOption("XQt1764OutBlock");
+				// if (shcode != default) qo.Add("shcode", shcode);
+				// if (gubun1 != default) qo.Add("gubun1", gubun1);
+
+
+				var outBlock = instance.SelectMany<XQt1764OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1764InBlock block)
 		{
 			if (block.VerifyData() == false)

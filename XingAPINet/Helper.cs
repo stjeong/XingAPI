@@ -176,7 +176,7 @@ namespace XingAPINet
         readonly string _fieldType;
         public string FieldType => _fieldType;
 
-        readonly string _fieldValue;
+        string _fieldValue;
         public string FieldValue => _fieldValue;
 
         readonly string _fieldFormattedValue;
@@ -185,10 +185,15 @@ namespace XingAPINet
         public XAQueryFieldInfo(string fieldType, object fieldValue, string fieldFormattedValue, string fieldDesc, decimal lengthOrFormat)
         {
             _fieldType = fieldType;
-            _fieldValue = fieldValue.ToString();
+            _fieldValue = fieldValue?.ToString();
             _fieldFormattedValue = fieldFormattedValue;
             _fieldDesc = fieldDesc;
             _lengthOrFormat = lengthOrFormat;
+        }
+
+        public void SetValue(object objValue)
+        {
+            _fieldValue = objValue.ToString();
         }
     }
 

@@ -1100,6 +1100,30 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1964OutBlock1[] ReadFromDB(/* string item = default,string issuercd = default,string lastmonth = default,char elwopt = default,char atmgubun = default,string elwtype = default,string settletype = default,char elwexecgubun = default,string fromrat = default,string torat = default,string volume = default */)
+		{
+			using (XQt1964 instance = new XQt1964())
+			{
+
+				QueryOption qo = new QueryOption("XQt1964OutBlock1");
+				// if (item != default) qo.Add("item", item);
+				// if (issuercd != default) qo.Add("issuercd", issuercd);
+				// if (lastmonth != default) qo.Add("lastmonth", lastmonth);
+				// if (elwopt != default) qo.Add("elwopt", elwopt);
+				// if (atmgubun != default) qo.Add("atmgubun", atmgubun);
+				// if (elwtype != default) qo.Add("elwtype", elwtype);
+				// if (settletype != default) qo.Add("settletype", settletype);
+				// if (elwexecgubun != default) qo.Add("elwexecgubun", elwexecgubun);
+				// if (fromrat != default) qo.Add("fromrat", fromrat);
+				// if (torat != default) qo.Add("torat", torat);
+				// if (volume != default) qo.Add("volume", volume);
+
+
+				var outBlock = instance.SelectMany<XQt1964OutBlock1>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1964InBlock block)
 		{
 			if (block.VerifyData() == false)

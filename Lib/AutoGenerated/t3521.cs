@@ -437,6 +437,21 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt3521OutBlock ReadFromDB(/* char kind = default,string symbol = default */)
+		{
+			using (XQt3521 instance = new XQt3521())
+			{
+
+				QueryOption qo = new QueryOption("XQt3521OutBlock");
+				// if (kind != default) qo.Add("kind", kind);
+				// if (symbol != default) qo.Add("symbol", symbol);
+
+
+				var outBlock = instance.Select<XQt3521OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt3521InBlock block)
 		{
 			if (block.VerifyData() == false)

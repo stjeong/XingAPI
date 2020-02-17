@@ -352,6 +352,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1532OutBlock[] ReadFromDB(/* string shcode = default */)
+		{
+			using (XQt1532 instance = new XQt1532())
+			{
+
+				QueryOption qo = new QueryOption("XQt1532OutBlock");
+				// if (shcode != default) qo.Add("shcode", shcode);
+
+
+				var outBlock = instance.SelectMany<XQt1532OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1532InBlock block)
 		{
 			if (block.VerifyData() == false)

@@ -712,6 +712,7 @@ namespace XingAPINet
 
 
 
+
 		public bool SetBlock(XQCEXAT11300InBlock1 block)
 		{
 			if (block.VerifyData() == false)

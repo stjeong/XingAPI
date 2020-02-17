@@ -1055,6 +1055,7 @@ namespace XingAPINet
 
 
 
+
 		public bool SetBlock(XQt3320InBlock block)
 		{
 			if (block.VerifyData() == false)

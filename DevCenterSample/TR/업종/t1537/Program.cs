@@ -11,18 +11,29 @@ namespace t1537
         static void Main(string[] args)
         {
             bool useDemoServer = true;
+            bool loadFromDB = false;
+
             Program pg = new Program();
 
-            if (args.Length == 1 && args[0] == "hts")
+            if (args.Length == 1)
             {
-                useDemoServer = false;
+                if (args[0] == "hts")
+                {
+                    useDemoServer = false;
+                }
+                else if (args[0] == "db")
+                {
+                    loadFromDB = true;
+                }
             }
 
-            pg.Main(useDemoServer);
+            pg.Main(useDemoServer, loadFromDB);
         }
 
-        void Main(bool useDemoServer)
+        void Main(bool useDemoServer, bool loadFromDB)
         {
+            SqliteExtension.UseSqlite("test.sqlite");
+
             LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
@@ -33,9 +44,9 @@ namespace t1537
                     return;
                 }
 
-                if (useDemoServer)
+                if (loadFromDB == true)
                 {
-                    var multiBlock = XQt1537.Get(Stock.TMCODE.테마파크);
+                    var multiBlock = XQt1537.ReadFromDB();
 
                     if (multiBlock.OutBlock.IsValidData == false)
                     {
@@ -43,11 +54,30 @@ namespace t1537
                     }
 
                     multiBlock.OutBlock.Dump(Console.Out, DumpOutputType.Inline80Cols);
-                    
+
                     foreach (var item in multiBlock.OutBlock1)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline);
                     }
+                }
+                else if (useDemoServer)
+                {
+                    var multiBlock = XQt1537.Get(Stock.TMCODE.테마파크);
+
+                    if (multiBlock.OutBlock?.IsValidData != true)
+                    {
+                        return;
+                    }
+
+                    multiBlock.OutBlock.Dump(Console.Out, DumpOutputType.Inline80Cols);
+                    multiBlock.OutBlock.WriteToDB(replace: true);
+
+                    foreach (var item in multiBlock.OutBlock1)
+                    {
+                        item.Dump(Console.Out, DumpOutputType.Inline);
+                    }
+
+                    multiBlock.OutBlock1.WriteToDB(replace: true);
                 }
                 else
                 {

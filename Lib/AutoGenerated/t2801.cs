@@ -964,6 +964,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt2801OutBlock ReadFromDB(/* string focode = default */)
+		{
+			using (XQt2801 instance = new XQt2801())
+			{
+
+				QueryOption qo = new QueryOption("XQt2801OutBlock");
+				// if (focode != default) qo.Add("focode", focode);
+
+
+				var outBlock = instance.Select<XQt2801OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt2801InBlock block)
 		{
 			if (block.VerifyData() == false)

@@ -1223,6 +1223,22 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQAllOutBlocks ReadFromDB(/* string upcode = default,int nmin = default,int cnt = default,char bgubun = default */)
+		{
+			using (XQt1621 instance = new XQt1621())
+			{
+
+				XQAllOutBlocks results = new XQAllOutBlocks();
+
+				QueryOption qo = new QueryOption("XQt1621OutBlock");
+				results.OutBlock = instance.Select<XQt1621OutBlock>(qo);
+
+				qo = new QueryOption("XQt1621OutBlock1");
+				results.OutBlock1 = instance.SelectMany<XQt1621OutBlock1>(qo);
+				return results;
+			}
+		}
+
 		public bool SetBlock(XQt1621InBlock block)
 		{
 			if (block.VerifyData() == false)

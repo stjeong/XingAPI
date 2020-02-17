@@ -1733,6 +1733,22 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQAllOutBlocks ReadFromDB(/* char chkitem = default,string cbitem = default,char chkissuer = default,string cbissuer = default,char chkcallput = default,string cbcallput = default,char chkexec = default,char cbexec = default,char chktype = default,string cbtype = default,char chksettle = default,string cbsettle = default,char chklast = default,string cblast = default,char chkelwexec = default,float elwexecs = default,float elwexece = default,char chkvolume = default,float volumes = default,float volumee = default,char chkrate = default,float rates = default,float ratee = default,char chkpremium = default,float premiums = default,float premiume = default,char chkparity = default,float paritys = default,float paritye = default,char chkberate = default,float berates = default,float beratee = default,char chkcapt = default,float capts = default,float capte = default,char chkegearing = default,float egearings = default,float egearinge = default,char chkgearing = default,float gearings = default,float gearinge = default,char chkdelta = default,float deltas = default,float deltae = default,char chktheta = default,float thetas = default,float thetae = default,char chkduedate = default,string duedates = default,string duedatee = default,char chkkoba = default,char cbkoba = default */)
+		{
+			using (XQt1955 instance = new XQt1955())
+			{
+
+				XQAllOutBlocks results = new XQAllOutBlocks();
+
+				QueryOption qo = new QueryOption("XQt1955OutBlock");
+				results.OutBlock = instance.Select<XQt1955OutBlock>(qo);
+
+				qo = new QueryOption("XQt1955OutBlock1");
+				results.OutBlock1 = instance.SelectMany<XQt1955OutBlock1>(qo);
+				return results;
+			}
+		}
+
 		public bool SetBlock(XQt1955InBlock block)
 		{
 			if (block.VerifyData() == false)

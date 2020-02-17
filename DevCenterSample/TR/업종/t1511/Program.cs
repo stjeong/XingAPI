@@ -11,18 +11,29 @@ namespace t1511
         static void Main(string[] args)
         {
             bool useDemoServer = true;
+            bool loadFromDB = false;
+
             Program pg = new Program();
 
-            if (args.Length == 1 && args[0] == "hts")
+            if (args.Length == 1)
             {
-                useDemoServer = false;
+                if (args[0] == "hts")
+                {
+                    useDemoServer = false;
+                }
+                else if (args[0] == "db")
+                {
+                    loadFromDB = true;
+                }
             }
 
-            pg.Main(useDemoServer);
+            pg.Main(useDemoServer, loadFromDB);
         }
 
-        void Main(bool useDemoServer)
+        void Main(bool useDemoServer, bool loadFromDB)
         {
+            SqliteExtension.UseSqlite("test.sqlite");
+
             LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
@@ -33,10 +44,16 @@ namespace t1511
                     return;
                 }
 
-                if (useDemoServer)
+                if (loadFromDB == true)
+                {
+                    var outBlock = XQt1511.ReadFromDB();
+                    outBlock?.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+                }
+                else if (useDemoServer)
                 {
                     var outBlock = XQt1511.Get(XQt1511.Upcode.코스피200);
                     outBlock?.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+                    outBlock?.WriteToDB(replace: true);
                 }
                 else
                 {

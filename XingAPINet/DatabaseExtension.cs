@@ -64,20 +64,20 @@ namespace XingAPINet
             }
         }
 
-        public static void WriteToDB(this XingBlock block)
-        {
-            using (var connection = GetConnection())
-            {
-                block.WriteToDB(connection);
-            }
-        }
+        //public static void WriteToDB(this XingBlock block)
+        //{
+        //    using (var connection = GetConnection())
+        //    {
+        //        block.WriteToDB(connection);
+        //    }
+        //}
 
-        public static void WriteToDB(this XingBlock block, IDbConnection connection)
-        {
-            block.WriteToDB(connection, null);
-        }
+        //public static void WriteToDB(this XingBlock block, IDbConnection connection)
+        //{
+        //    block.WriteToDB(connection, null);
+        //}
 
-        public static void WriteToDB(this XingBlock block, IDbConnection connection, IDbTransaction tx)
+        public static void InsertToDB(this XingBlock block, IDbConnection connection, IDbTransaction tx)
         {
             using (IDbCommand cmd = connection.CreateCommand())
             {
@@ -145,6 +145,31 @@ namespace XingAPINet
             return default;
         }
 
+        public static void WriteToDB(this XingBlock block, bool replace = true)
+        {
+            if (_databaseExtension == null || block == null)
+            {
+                return;
+            }
+
+            if (replace == true)
+            {
+                DatabaseExtension.GetDropTableCommand(block).Run();
+                DatabaseExtension.GetCreateTableCommand(block).Run();
+            }
+
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+
+                using (IDbTransaction tx = connection.BeginTransaction())
+                {
+                    block.InsertToDB(connection, tx);
+                    tx.Commit();
+                }
+            }
+        }
+
         public static void WriteToDB(this XingBlock[] blocks, bool replace = true)
         {
             if (_databaseExtension == null)
@@ -169,16 +194,150 @@ namespace XingAPINet
 
                 using (IDbTransaction tx = connection.BeginTransaction())
                 {
-                    connection.Open();
-
                     foreach (XingBlock block in blocks)
                     {
-                        block.WriteToDB(connection, tx);
+                        block.InsertToDB(connection, tx);
                     }
 
                     tx.Commit();
                 }
             }
+        }
+
+        public static T Select<T>(this XingQuery query, QueryOption qo) where T : XingBlock, new()
+        {
+            if (_databaseExtension == null || query == null)
+            {
+                return default;
+            }
+
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+
+                IDbCommand cmd = connection.CreateCommand();
+                cmd.CommandText = $"SELECT * FROM {qo.TableName} {qo.WhereCondition()}";
+
+                IDataReader dr = null;
+
+                try
+                {
+                    dr = cmd.ExecuteReader();
+                }
+                catch (Exception)
+                {
+                    return default;
+                }
+
+                while (dr.Read())
+                {
+                    T instance = new T();
+
+                    var fields = instance.GetFieldsInfo();
+                    foreach (string key in fields.Keys)
+                    {
+                        object objValue = dr[key];
+                        XAQueryFieldInfo xfi = fields[key];
+
+                        xfi.SetValue(objValue);
+                        instance.SetFieldValue(key, xfi);
+                    }
+                    return instance;
+                }
+            }
+
+            return default;
+        }
+
+        public static T[] SelectMany<T>(this XingQuery query, QueryOption qo) where T : XingBlock, new()
+        {
+            if (_databaseExtension == null || query == null)
+            {
+                return default;
+            }
+
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+
+                IDbCommand cmd = connection.CreateCommand();
+                cmd.CommandText = $"SELECT * FROM {qo.TableName} {qo.WhereCondition()}";
+
+                IDataReader dr = null;
+
+                try
+                {
+                    dr = cmd.ExecuteReader();
+                }
+                catch (Exception)
+                {
+                    return default;
+                }
+
+                List<T> list = new List<T>();
+
+                while (dr.Read())
+                {
+                    T instance = new T();
+
+                    var fields = instance.GetFieldsInfo();
+                    foreach (string key in fields.Keys)
+                    {
+                        object objValue = dr[key];
+                        XAQueryFieldInfo xfi = fields[key];
+
+                        xfi.SetValue(objValue);
+                        instance.SetFieldValue(key, xfi);
+                    }
+
+                    list.Add(instance);
+                }
+
+                return list.ToArray();
+            }
+        }
+    }
+
+    public class QueryOption
+    {
+        readonly string _tableName;
+        public string TableName => _tableName;
+
+        readonly Dictionary<string, object> _dict = new Dictionary<string, object>();
+
+        public QueryOption(string tableName)
+        {
+            _tableName = tableName;
+        }
+
+        public void Add(string name, object value)
+        {
+            _dict[name] = value;
+        }
+
+        public string WhereCondition()
+        {
+            StringBuilder sb = new StringBuilder();
+            int count = _dict.Keys.Count;
+
+            int index = 0;
+
+            if (count != 0)
+            {
+                sb.Append(" WHERE ");
+
+                foreach (string key in _dict.Keys)
+                {
+                    sb.Append($"{key} = {_dict[key]}");
+
+                    if (index != count - 1)
+                    {
+                        sb.Append(" AND ");
+                    }
+                }
+            }
+
+            return sb.ToString();
         }
 
     }

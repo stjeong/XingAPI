@@ -815,6 +815,22 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQAllOutBlocks ReadFromDB(/* long RecCnt = default,string PrdgrpClssCode = default,string ClssGrpCode = default,string BaseYear = default,char FstmmTpCode = default */)
+		{
+			using (XQCFOBQ10800 instance = new XQCFOBQ10800())
+			{
+
+				XQAllOutBlocks results = new XQAllOutBlocks();
+
+				QueryOption qo = new QueryOption("XQCFOBQ10800OutBlock1");
+				results.OutBlock1 = instance.Select<XQCFOBQ10800OutBlock1>(qo);
+
+				qo = new QueryOption("XQCFOBQ10800OutBlock2");
+				results.OutBlock2 = instance.SelectMany<XQCFOBQ10800OutBlock2>(qo);
+				return results;
+			}
+		}
+
 		public bool SetBlock(XQCFOBQ10800InBlock1 block)
 		{
 			if (block.VerifyData() == false)

@@ -573,6 +573,22 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1638OutBlock[] ReadFromDB(/* char gubun1 = default,string shcode = default,char gubun2 = default */)
+		{
+			using (XQt1638 instance = new XQt1638())
+			{
+
+				QueryOption qo = new QueryOption("XQt1638OutBlock");
+				// if (gubun1 != default) qo.Add("gubun1", gubun1);
+				// if (shcode != default) qo.Add("shcode", shcode);
+				// if (gubun2 != default) qo.Add("gubun2", gubun2);
+
+
+				var outBlock = instance.SelectMany<XQt1638OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1638InBlock block)
 		{
 			if (block.VerifyData() == false)

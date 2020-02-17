@@ -811,6 +811,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1926OutBlock ReadFromDB(/* string shcode = default */)
+		{
+			using (XQt1926 instance = new XQt1926())
+			{
+
+				QueryOption qo = new QueryOption("XQt1926OutBlock");
+				// if (shcode != default) qo.Add("shcode", shcode);
+
+
+				var outBlock = instance.Select<XQt1926OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1926InBlock block)
 		{
 			if (block.VerifyData() == false)

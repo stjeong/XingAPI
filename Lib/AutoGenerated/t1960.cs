@@ -900,6 +900,22 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQAllOutBlocks ReadFromDB(/* char gubun = default,string ggubun = default,string itemcode = default,string lastdate = default,string exgubun = default,long sprice = default,long eprice = default,long volume = default,long sjanday = default,long ejanday = default,long idx = default */)
+		{
+			using (XQt1960 instance = new XQt1960())
+			{
+
+				XQAllOutBlocks results = new XQAllOutBlocks();
+
+				QueryOption qo = new QueryOption("XQt1960OutBlock");
+				results.OutBlock = instance.Select<XQt1960OutBlock>(qo);
+
+				qo = new QueryOption("XQt1960OutBlock1");
+				results.OutBlock1 = instance.SelectMany<XQt1960OutBlock1>(qo);
+				return results;
+			}
+		}
+
 		public bool SetBlock(XQt1960InBlock block)
 		{
 			if (block.VerifyData() == false)

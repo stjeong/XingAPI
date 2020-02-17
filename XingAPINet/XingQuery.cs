@@ -13,7 +13,7 @@ namespace XingAPINet
     {
         protected XAQueryClass _xaQuery;
         bool _disposed;
-        EventWaitHandle _ewh_RecvSync = new EventWaitHandle(false, EventResetMode.ManualReset);
+        readonly EventWaitHandle _ewh_RecvSync = new EventWaitHandle(false, EventResetMode.ManualReset);
 
         XAQueryResult _queryResult;
         public XAQueryResult QueryResult => _queryResult;

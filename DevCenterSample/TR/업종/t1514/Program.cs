@@ -11,18 +11,29 @@ namespace t1514
         static void Main(string[] args)
         {
             bool useDemoServer = true;
+            bool loadFromDB = false;
+
             Program pg = new Program();
 
-            if (args.Length == 1 && args[0] == "hts")
+            if (args.Length == 1)
             {
-                useDemoServer = false;
+                if (args[0] == "hts")
+                {
+                    useDemoServer = false;
+                }
+                else if (args[0] == "db")
+                {
+                    loadFromDB = true;
+                }
             }
 
-            pg.Main(useDemoServer);
+            pg.Main(useDemoServer, loadFromDB);
         }
 
-        void Main(bool useDemoServer)
+        void Main(bool useDemoServer, bool loadFromDB)
         {
+            SqliteExtension.UseSqlite("test.sqlite");
+
             LoginInfo user = GetUserInfo(useDemoServer);
 
             using (XingClient xing = new XingClient(useDemoServer))
@@ -36,7 +47,24 @@ namespace t1514
                 int pageSize = 10;
                 int totalSize = 30;
 
-                if (useDemoServer)
+                if (loadFromDB == true)
+                {
+                    var multiBlock = XQt1514.ReadFromDB();
+
+                    if (multiBlock.OutBlock.IsValidData == false)
+                    {
+                        return;
+                    }
+
+                    multiBlock.OutBlock.Dump(Console.Out, DumpOutputType.Inline80Cols);
+
+                    Console.WriteLine($"# of items: {multiBlock.OutBlock1.Length}");
+                    foreach (var item in multiBlock.OutBlock1)
+                    {
+                        item.Dump(Console.Out, DumpOutputType.Inline80Cols);
+                    }
+                } 
+                else if (useDemoServer)
                 {
                     var multiBlock = XQt1514.Get("301", gubun2: XQt1514.Gubun2.일, cnt: totalSize);
 
@@ -46,12 +74,15 @@ namespace t1514
                     }
 
                     multiBlock.OutBlock.Dump(Console.Out, DumpOutputType.Inline80Cols);
-                    
+                    multiBlock.OutBlock.WriteToDB(replace: true);
+
                     Console.WriteLine($"# of items: {multiBlock.OutBlock1.Length}");
                     foreach (var item in multiBlock.OutBlock1)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline80Cols);
                     }
+
+                    multiBlock.OutBlock1.WriteToDB(replace: true);
                 }
                 else
                 {

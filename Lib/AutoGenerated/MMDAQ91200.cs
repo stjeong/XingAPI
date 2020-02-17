@@ -645,6 +645,22 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQAllOutBlocks ReadFromDB(/* long RecCnt = default,string IsuLgclssCode = default,string IsuMdclssCode = default */)
+		{
+			using (XQMMDAQ91200 instance = new XQMMDAQ91200())
+			{
+
+				XQAllOutBlocks results = new XQAllOutBlocks();
+
+				QueryOption qo = new QueryOption("XQMMDAQ91200OutBlock1");
+				results.OutBlock1 = instance.Select<XQMMDAQ91200OutBlock1>(qo);
+
+				qo = new QueryOption("XQMMDAQ91200OutBlock2");
+				results.OutBlock2 = instance.SelectMany<XQMMDAQ91200OutBlock2>(qo);
+				return results;
+			}
+		}
+
 		public bool SetBlock(XQMMDAQ91200InBlock1 block)
 		{
 			if (block.VerifyData() == false)

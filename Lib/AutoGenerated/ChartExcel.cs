@@ -832,6 +832,22 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQAllOutBlocks ReadFromDB(/* long indexid = default,string indexname = default,string indexparam = default,char indexouttype = default,char market = default,char period = default,string shcode = default,char isexcelout = default,string excelfilename = default,char IsReal = default */)
+		{
+			using (XQCHARTEXCEL instance = new XQCHARTEXCEL())
+			{
+
+				XQAllOutBlocks results = new XQAllOutBlocks();
+
+				QueryOption qo = new QueryOption("XQChartExcelOutBlock");
+				results.OutBlock = instance.Select<XQChartExcelOutBlock>(qo);
+
+				qo = new QueryOption("XQChartExcelOutBlock1");
+				results.OutBlock1 = instance.SelectMany<XQChartExcelOutBlock1>(qo);
+				return results;
+			}
+		}
+
 		public bool SetBlock(XQChartExcelInBlock block)
 		{
 			if (block.VerifyData() == false)

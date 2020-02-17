@@ -598,6 +598,7 @@ namespace XingAPINet
 
 
 
+
 		public bool SetBlock(XQt1104InBlock block)
 		{
 			if (block.VerifyData() == false)

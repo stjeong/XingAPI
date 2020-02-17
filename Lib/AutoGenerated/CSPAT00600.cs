@@ -1267,6 +1267,7 @@ namespace XingAPINet
 
 
 
+
 		public bool SetBlock(XQCSPAT00600InBlock1 block)
 		{
 			if (block.VerifyData() == false)

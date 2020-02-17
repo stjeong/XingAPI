@@ -960,6 +960,7 @@ namespace XingAPINet
 
 
 
+
 		public bool SetBlock(XQFOCCQ33600InBlock1 block)
 		{
 			if (block.VerifyData() == false)

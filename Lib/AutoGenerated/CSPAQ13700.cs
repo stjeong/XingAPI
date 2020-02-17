@@ -1533,6 +1533,7 @@ namespace XingAPINet
 
 
 
+
 		public bool SetBlock(XQCSPAQ13700InBlock1 block)
 		{
 			if (block.VerifyData() == false)

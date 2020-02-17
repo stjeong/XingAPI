@@ -522,6 +522,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1640OutBlock ReadFromDB(/* string gubun = default */)
+		{
+			using (XQt1640 instance = new XQt1640())
+			{
+
+				QueryOption qo = new QueryOption("XQt1640OutBlock");
+				// if (gubun != default) qo.Add("gubun", gubun);
+
+
+				var outBlock = instance.Select<XQt1640OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1640InBlock block)
 		{
 			if (block.VerifyData() == false)

@@ -2103,6 +2103,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt1906OutBlock ReadFromDB(/* string shcode = default */)
+		{
+			using (XQt1906 instance = new XQt1906())
+			{
+
+				QueryOption qo = new QueryOption("XQt1906OutBlock");
+				// if (shcode != default) qo.Add("shcode", shcode);
+
+
+				var outBlock = instance.Select<XQt1906OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt1906InBlock block)
 		{
 			if (block.VerifyData() == false)

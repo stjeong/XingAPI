@@ -1474,6 +1474,20 @@ namespace XingAPINet
 			}
 		}
 
+		public static XQt2101OutBlock ReadFromDB(/* string focode = default */)
+		{
+			using (XQt2101 instance = new XQt2101())
+			{
+
+				QueryOption qo = new QueryOption("XQt2101OutBlock");
+				// if (focode != default) qo.Add("focode", focode);
+
+
+				var outBlock = instance.Select<XQt2101OutBlock>(qo);
+				return outBlock;
+			}
+		}
+
 		public bool SetBlock(XQt2101InBlock block)
 		{
 			if (block.VerifyData() == false)
