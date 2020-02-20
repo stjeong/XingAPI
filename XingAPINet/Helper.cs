@@ -238,6 +238,11 @@ namespace XingAPINet
                 // throw new InvalidDataFormatException(fieldName, text);
             }
 
+            if (text == "-")
+            {
+                return 0;
+            }
+
             if (int.TryParse(text, out int parsedResult) == true)
             {
                 return parsedResult;
@@ -252,6 +257,11 @@ namespace XingAPINet
             {
                 return 0;
                 // throw new InvalidDataFormatException(fieldName, text);
+            }
+
+            if (text == "-")
+            {
+                return 0;
             }
 
             if (long.TryParse(text, out long parsedResult) == true)
@@ -270,6 +280,11 @@ namespace XingAPINet
                 // throw new InvalidDataFormatException(fieldName, text);
             }
 
+            if (text == "-")
+            {
+                return 0.0f;
+            }
+
             if (float.TryParse(text, out float parsedResult) == true)
             {
                 return parsedResult;
@@ -282,7 +297,13 @@ namespace XingAPINet
         {
             if (string.IsNullOrEmpty(text) == true)
             {
-                throw new InvalidDataFormatException(fieldName, text);
+                return 0.0f;
+                // throw new InvalidDataFormatException(fieldName, text);
+            }
+
+            if (text == "-")
+            {
+                return 0.0f;
             }
 
             if (double.TryParse(text, out double parsedResult) == true)

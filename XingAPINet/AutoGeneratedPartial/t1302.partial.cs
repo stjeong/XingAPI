@@ -17,5 +17,14 @@ namespace XingAPINet
             public const char _30분 = '5';
             public const char _60분 = '6';
         }
+
+        public static class SignCode
+        {
+            public const char 상한 = '1';
+            public const char 상승 = '2';
+            public const char 보합 = '3';
+            public const char 하한 = '4';
+            public const char 하락 = '5';
+        }
     }
 }
