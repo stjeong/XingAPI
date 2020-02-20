@@ -471,12 +471,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt8430OutBlock[] ReadFromDB(/* char gubun = default */)
+		public static XQt8430OutBlock[] ReadFromDB(string tableNamePostfix = null /*, char gubun = default */)
 		{
 			using (XQt8430 instance = new XQt8430())
 			{
 
-				QueryOption qo = new QueryOption("XQt8430OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt8430OutBlock" : $"XQt8430OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (gubun != default) qo.Add("gubun", gubun);
 
 

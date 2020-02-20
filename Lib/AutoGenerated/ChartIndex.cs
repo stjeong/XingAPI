@@ -883,17 +883,19 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQAllOutBlocks ReadFromDB(/* long indexid = default,string indexname = default,string indexparam = default,char market = default,char period = default,string shcode = default,long qrycnt = default,long ncnt = default,string sdate = default,string edate = default,char Isamend = default,char Isgab = default,char IsReal = default */)
+		public static XQAllOutBlocks ReadFromDB(string tableNamePostfix = null /*, long indexid = default,string indexname = default,string indexparam = default,char market = default,char period = default,string shcode = default,long qrycnt = default,long ncnt = default,string sdate = default,string edate = default,char Isamend = default,char Isgab = default,char IsReal = default */)
 		{
 			using (XQCHARTINDEX instance = new XQCHARTINDEX())
 			{
 
 				XQAllOutBlocks results = new XQAllOutBlocks();
 
-				QueryOption qo = new QueryOption("XQChartIndexOutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQChartIndexOutBlock" : $"XQChartIndexOutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				results.OutBlock = instance.Select<XQChartIndexOutBlock>(qo);
 
-				qo = new QueryOption("XQChartIndexOutBlock1");
+				tableName = (tableNamePostfix == null) ? "XQChartIndexOutBlock1" : $"XQChartIndexOutBlock1_{tableNamePostfix}";
+				qo = new QueryOption(tableName);
 				results.OutBlock1 = instance.SelectMany<XQChartIndexOutBlock1>(qo);
 				return results;
 			}

@@ -32,12 +32,39 @@ namespace XingAPINet
             return _xaQuery.GetBlockCount(blockName);
         }
 
-        public int Request(bool bNext = false)
+        DateTime _lastQueryTime = DateTime.MinValue;
+
+        // default: 1 query per 500ms
+        long _queryPerTimeInMillis = 500;
+        public long QueryPerTime { get => _queryPerTimeInMillis; set => _queryPerTimeInMillis = value; }
+
+        bool _nextCall = false;
+
+        /// <summary>
+        /// 연속 조회 시 true로 설정, 만약 기본 값 null을 설정하면 XQ[tNNNN] 객체 생성 후 최초 호출인 경우 false, 이후로는 true를 자동으로 지정
+        /// </summary>
+        /// <param name="bNext">true == 연속 조회, false == 단일 조회</param>
+        /// <returns></returns>
+        public int Request(bool? bNext = null)
         {
             _ewh_RecvSync.Reset();
             _queryResult = null;
 
-            int result = _xaQuery.Request(bNext);
+            if (bNext != null)
+            {
+                _nextCall = bNext.Value;
+            }
+
+            TimeSpan diff = DateTime.Now - _lastQueryTime;
+            long gapTime = _queryPerTimeInMillis - (long)diff.TotalMilliseconds;
+            if (gapTime > 0)
+            {
+                Thread.Sleep(Math.Min((int)_queryPerTimeInMillis, (int)gapTime));
+            }
+
+            int result = _xaQuery.Request(_nextCall);
+            _nextCall = true;
+            _lastQueryTime = DateTime.Now;
 
             if (result >= 0)
             {

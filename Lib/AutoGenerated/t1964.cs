@@ -1100,12 +1100,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt1964OutBlock1[] ReadFromDB(/* string item = default,string issuercd = default,string lastmonth = default,char elwopt = default,char atmgubun = default,string elwtype = default,string settletype = default,char elwexecgubun = default,string fromrat = default,string torat = default,string volume = default */)
+		public static XQt1964OutBlock1[] ReadFromDB(string tableNamePostfix = null /*, string item = default,string issuercd = default,string lastmonth = default,char elwopt = default,char atmgubun = default,string elwtype = default,string settletype = default,char elwexecgubun = default,string fromrat = default,string torat = default,string volume = default */)
 		{
 			using (XQt1964 instance = new XQt1964())
 			{
 
-				QueryOption qo = new QueryOption("XQt1964OutBlock1");
+				string tableName = (tableNamePostfix == null) ? "XQt1964OutBlock1" : $"XQt1964OutBlock1_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (item != default) qo.Add("item", item);
 				// if (issuercd != default) qo.Add("issuercd", issuercd);
 				// if (lastmonth != default) qo.Add("lastmonth", lastmonth);

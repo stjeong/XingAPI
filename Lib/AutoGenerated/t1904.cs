@@ -1325,17 +1325,19 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQAllOutBlocks ReadFromDB(/* string shcode = default,string date = default,char sgb = default */)
+		public static XQAllOutBlocks ReadFromDB(string tableNamePostfix = null /*, string shcode = default,string date = default,char sgb = default */)
 		{
 			using (XQt1904 instance = new XQt1904())
 			{
 
 				XQAllOutBlocks results = new XQAllOutBlocks();
 
-				QueryOption qo = new QueryOption("XQt1904OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt1904OutBlock" : $"XQt1904OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				results.OutBlock = instance.Select<XQt1904OutBlock>(qo);
 
-				qo = new QueryOption("XQt1904OutBlock1");
+				tableName = (tableNamePostfix == null) ? "XQt1904OutBlock1" : $"XQt1904OutBlock1_{tableNamePostfix}";
+				qo = new QueryOption(tableName);
 				results.OutBlock1 = instance.SelectMany<XQt1904OutBlock1>(qo);
 				return results;
 			}

@@ -437,12 +437,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt3521OutBlock ReadFromDB(/* char kind = default,string symbol = default */)
+		public static XQt3521OutBlock ReadFromDB(string tableNamePostfix = null /*, char kind = default,string symbol = default */)
 		{
 			using (XQt3521 instance = new XQt3521())
 			{
 
-				QueryOption qo = new QueryOption("XQt3521OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt3521OutBlock" : $"XQt3521OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (kind != default) qo.Add("kind", kind);
 				// if (symbol != default) qo.Add("symbol", symbol);
 

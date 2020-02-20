@@ -95,15 +95,14 @@ namespace t1514
                             gubun2 = XQt1514.Gubun2.월,
                         };
 
-                        query.SetBlock(inBlock);
-
-                        bool nextPage = false;
-
                         while (totalSize > 0)
                         {
-                            if (query.Request(nextPage) < 0)
+                            query.SetBlock(inBlock);
+
+                            if (query.Request() < 0)
                             {
                                 Console.WriteLine("Failed to send request");
+                                break;
                             }
 
                             var outBlock = query.GetBlock();
@@ -114,6 +113,7 @@ namespace t1514
                             else
                             {
                                 Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                                break;
                             }
 
                             foreach (var item in query.GetBlock1s())
@@ -123,9 +123,6 @@ namespace t1514
                             }
 
                             inBlock.CopyValueFromBlock(outBlock);
-                            query.SetBlock(inBlock);
-
-                            nextPage = true;
                         }
                     }
                 }

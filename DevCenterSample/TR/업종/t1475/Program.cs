@@ -92,15 +92,13 @@ namespace t1475
                             datacnt = pageSize,
                         };
 
-                        query.SetBlock(inBlock);
-
-                        bool nextPage = false;
-
                         while (totalSize > 0)
                         {
-                            if (query.Request(nextPage) < 0)
+                            query.SetBlock(inBlock);
+                            if (query.Request() < 0)
                             {
                                 Console.WriteLine("Failed to send request");
+                                break;
                             }
 
                             XQt1475OutBlock outBlock = query.GetBlock();
@@ -111,6 +109,7 @@ namespace t1475
                             else
                             {
                                 Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                                break;
                             }
 
                             foreach (var item in query.GetBlock1s())
@@ -120,9 +119,6 @@ namespace t1475
                             }
 
                             inBlock.CopyValueFromBlock(outBlock);
-                            query.SetBlock(inBlock);
-
-                            nextPage = true;
                         }
                     }
                 }

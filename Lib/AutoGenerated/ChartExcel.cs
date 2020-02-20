@@ -832,17 +832,19 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQAllOutBlocks ReadFromDB(/* long indexid = default,string indexname = default,string indexparam = default,char indexouttype = default,char market = default,char period = default,string shcode = default,char isexcelout = default,string excelfilename = default,char IsReal = default */)
+		public static XQAllOutBlocks ReadFromDB(string tableNamePostfix = null /*, long indexid = default,string indexname = default,string indexparam = default,char indexouttype = default,char market = default,char period = default,string shcode = default,char isexcelout = default,string excelfilename = default,char IsReal = default */)
 		{
 			using (XQCHARTEXCEL instance = new XQCHARTEXCEL())
 			{
 
 				XQAllOutBlocks results = new XQAllOutBlocks();
 
-				QueryOption qo = new QueryOption("XQChartExcelOutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQChartExcelOutBlock" : $"XQChartExcelOutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				results.OutBlock = instance.Select<XQChartExcelOutBlock>(qo);
 
-				qo = new QueryOption("XQChartExcelOutBlock1");
+				tableName = (tableNamePostfix == null) ? "XQChartExcelOutBlock1" : $"XQChartExcelOutBlock1_{tableNamePostfix}";
+				qo = new QueryOption(tableName);
 				results.OutBlock1 = instance.SelectMany<XQChartExcelOutBlock1>(qo);
 				return results;
 			}

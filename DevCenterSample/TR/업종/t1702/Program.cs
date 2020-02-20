@@ -97,15 +97,14 @@ namespace t1702
                             msmdgb = XQt1702.MsmdgbCode.순매수
                         };
 
-                        query.SetBlock(inBlock);
-
-                        bool nextPage = false;
-
                         while (totalSize > 0)
                         {
-                            if (query.Request(nextPage) < 0)
+                            query.SetBlock(inBlock);
+
+                            if (query.Request() < 0)
                             {
                                 Console.WriteLine("Failed to send request");
+                                break;
                             }
 
                             var outBlock = query.GetBlock();
@@ -116,6 +115,7 @@ namespace t1702
                             else
                             {
                                 Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                                break;
                             }
 
                             foreach (var item in query.GetBlock1s())
@@ -125,9 +125,6 @@ namespace t1702
                             }
 
                             inBlock.CopyValueFromBlock(outBlock);
-                            query.SetBlock(inBlock);
-
-                            nextPage = true;
                         }
                     }
                 }

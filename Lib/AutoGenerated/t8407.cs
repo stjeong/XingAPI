@@ -692,12 +692,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt8407OutBlock1[] ReadFromDB(/* long nrec = default,string shcode = default */)
+		public static XQt8407OutBlock1[] ReadFromDB(string tableNamePostfix = null /*, long nrec = default,string shcode = default */)
 		{
 			using (XQt8407 instance = new XQt8407())
 			{
 
-				QueryOption qo = new QueryOption("XQt8407OutBlock1");
+				string tableName = (tableNamePostfix == null) ? "XQt8407OutBlock1" : $"XQt8407OutBlock1_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (nrec != default) qo.Add("nrec", nrec);
 				// if (shcode != default) qo.Add("shcode", shcode);
 

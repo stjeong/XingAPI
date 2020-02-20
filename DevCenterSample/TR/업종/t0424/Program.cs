@@ -96,7 +96,7 @@ namespace t0424
                                 return;
                             }
 
-                            if (query.Request() < 0)
+                            if (query.Request(false) < 0)
                             {
                                 Console.WriteLine("Failed to send request");
                                 return;

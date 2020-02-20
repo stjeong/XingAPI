@@ -437,12 +437,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt3202OutBlock[] ReadFromDB(/* string shcode = default,string date = default */)
+		public static XQt3202OutBlock[] ReadFromDB(string tableNamePostfix = null /*, string shcode = default,string date = default */)
 		{
 			using (XQt3202 instance = new XQt3202())
 			{
 
-				QueryOption qo = new QueryOption("XQt3202OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt3202OutBlock" : $"XQt3202OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (shcode != default) qo.Add("shcode", shcode);
 				// if (date != default) qo.Add("date", date);
 

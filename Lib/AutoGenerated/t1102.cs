@@ -3004,12 +3004,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt1102OutBlock ReadFromDB(/* string shcode = default */)
+		public static XQt1102OutBlock ReadFromDB(string tableNamePostfix = null /*, string shcode = default */)
 		{
 			using (XQt1102 instance = new XQt1102())
 			{
 
-				QueryOption qo = new QueryOption("XQt1102OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt1102OutBlock" : $"XQt1102OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (shcode != default) qo.Add("shcode", shcode);
 
 

@@ -39,21 +39,25 @@ namespace XingAPINet
             throw new NotSupportedException($"{type} for Sqlite");
         }
 
-        public override IDbCommand GetDropTableCommand(XingBlock block)
+        public override IDbCommand GetDropTableCommand(XingBlock block, string tableNamePostfix)
         {
             Type type = block.GetType();
 
-            string sql = $"Drop Table IF EXISTS {type.Name}";
+            string tableName = (tableNamePostfix == null) ? type.Name : $"{type.Name}_{tableNamePostfix}";
+
+            string sql = $"Drop Table IF EXISTS {tableName}";
             IDbCommand cmd = XingClient.DBProviderFactory.CreateCommand();
             cmd.CommandText = sql;
             return cmd;
         }
 
-        public override IDbCommand GetCreateTableCommand(Type outblockType)
+        public override IDbCommand GetCreateTableCommand(Type outblockType, string tableNamePostfix)
         {
             StringBuilder fieldList = new StringBuilder();
             string[] keyFields = null;
             List<string> candidateKeys = new List<string>();
+
+            string tableName = (tableNamePostfix == null) ? outblockType.Name : $"{outblockType.Name}_{tableNamePostfix}";
 
             foreach (FieldInfo field in outblockType.GetFields())
             {
@@ -72,7 +76,7 @@ namespace XingAPINet
                 fieldList.Append($"{fieldInfo.UniqueName} {GetDatabaseTypeDesc(fieldInfo.FieldType, fieldInfo.LengthOrFormat)},");
             }
 
-            string sql = $"Create Table IF NOT EXISTS {outblockType.Name}({fieldList.ToString().TrimEnd(',')})";
+            string sql = $"Create Table IF NOT EXISTS {tableName}({fieldList.ToString().TrimEnd(',')})";
 
             if (keyFields != null)
             {
@@ -82,7 +86,7 @@ namespace XingAPINet
 
             foreach (string indexField in candidateKeys)
             {
-                sql += $"; Create INDEX IF NOT EXISTS idx_{indexField} on {outblockType.Name}({indexField})";
+                sql += $"; Create INDEX IF NOT EXISTS idx_{indexField} on {tableName}({indexField})";
             }
 
             IDbCommand cmd = XingClient.DBProviderFactory.CreateCommand();

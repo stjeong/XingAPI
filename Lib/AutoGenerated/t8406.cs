@@ -692,12 +692,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt8406OutBlock1[] ReadFromDB(/* string focode = default,char cgubun = default,int bgubun = default,int cnt = default */)
+		public static XQt8406OutBlock1[] ReadFromDB(string tableNamePostfix = null /*, string focode = default,char cgubun = default,int bgubun = default,int cnt = default */)
 		{
 			using (XQt8406 instance = new XQt8406())
 			{
 
-				QueryOption qo = new QueryOption("XQt8406OutBlock1");
+				string tableName = (tableNamePostfix == null) ? "XQt8406OutBlock1" : $"XQt8406OutBlock1_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (focode != default) qo.Add("focode", focode);
 				// if (cgubun != default) qo.Add("cgubun", cgubun);
 				// if (bgubun != default) qo.Add("bgubun", bgubun);
