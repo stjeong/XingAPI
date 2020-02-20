@@ -10,14 +10,14 @@ namespace XingAPINet
     public abstract class DatabaseExtension
     {
         public abstract string GetDatabaseTypeDesc(string type, decimal fieldLen);
-        public abstract IDbCommand GetDropTableCommand(XingBlock block);
+        public abstract IDbCommand GetDropTableCommand(XingBlock block, string tableNamePostfix);
 
-        public virtual IDbCommand GetCreateTableCommand(XingBlock block)
+        public virtual IDbCommand GetCreateTableCommand(XingBlock block, string tableNamePostfix)
         {
-            return GetCreateTableCommand(block.GetType());
+            return GetCreateTableCommand(block.GetType(), tableNamePostfix);
         }
 
-        public abstract IDbCommand GetCreateTableCommand(Type outblockType);
+        public abstract IDbCommand GetCreateTableCommand(Type outblockType, string tableNamePostfix);
     }
 
     public static class DatabaseExtensionHelper
@@ -52,7 +52,7 @@ namespace XingAPINet
 
                         foreach (Type outBlock in outBlocks)
                         {
-                            IDbCommand cmd = DatabaseExtension.GetCreateTableCommand(outBlock);
+                            IDbCommand cmd = DatabaseExtension.GetCreateTableCommand(outBlock, null);
                             cmd.Connection = connection;
                             cmd.Transaction = tx;
                             cmd.ExecuteNonQuery();
@@ -77,7 +77,7 @@ namespace XingAPINet
         //    block.WriteToDB(connection, null);
         //}
 
-        public static void InsertToDB(this XingBlock block, IDbConnection connection, IDbTransaction tx)
+        public static void InsertToDB(this XingBlock block, IDbConnection connection, IDbTransaction tx, string tableNamePostfix = null)
         {
             using (IDbCommand cmd = connection.CreateCommand())
             {
@@ -106,7 +106,9 @@ namespace XingAPINet
                 string fieldList = string.Join(",", fields);
                 string fieldVariables = string.Join(",", fields.Select((elem) => $"@{elem}"));
 
-                string sql = $"INSERT INTO {blockType.Name}({fieldList}) VALUES({fieldVariables})";
+                string tableName = (tableNamePostfix == null) ? blockType.Name : $"{blockType.Name}_{tableNamePostfix}";
+
+                string sql = $"INSERT INTO {tableName}({fieldList}) VALUES({fieldVariables})";
                 cmd.CommandText = sql;
 
                 cmd.ExecuteNonQuery();
@@ -145,7 +147,7 @@ namespace XingAPINet
             return default;
         }
 
-        public static void WriteToDB(this XingBlock block, bool replace = true)
+        public static void WriteToDB(this XingBlock block, bool replace = true, string tableNamePostfix = null)
         {
             if (_databaseExtension == null || block == null)
             {
@@ -154,8 +156,8 @@ namespace XingAPINet
 
             if (replace == true)
             {
-                DatabaseExtension.GetDropTableCommand(block).Run();
-                DatabaseExtension.GetCreateTableCommand(block).Run();
+                DatabaseExtension.GetDropTableCommand(block, tableNamePostfix).Run();
+                DatabaseExtension.GetCreateTableCommand(block, tableNamePostfix).Run();
             }
 
             using (var connection = GetConnection())
@@ -164,13 +166,13 @@ namespace XingAPINet
 
                 using (IDbTransaction tx = connection.BeginTransaction())
                 {
-                    block.InsertToDB(connection, tx);
+                    block.InsertToDB(connection, tx, tableNamePostfix);
                     tx.Commit();
                 }
             }
         }
 
-        public static void WriteToDB(this XingBlock[] blocks, bool replace = true)
+        public static void WriteToDB(this XingBlock[] blocks, bool replace = true, string tableNamePostfix = null)
         {
             if (_databaseExtension == null)
             {
@@ -184,8 +186,8 @@ namespace XingAPINet
 
             if (replace == true)
             {
-                DatabaseExtension.GetDropTableCommand(blocks[0]).Run();
-                DatabaseExtension.GetCreateTableCommand(blocks[0]).Run();
+                DatabaseExtension.GetDropTableCommand(blocks[0], tableNamePostfix).Run();
+                DatabaseExtension.GetCreateTableCommand(blocks[0], tableNamePostfix).Run();
             }
 
             using (var connection = GetConnection())
@@ -196,7 +198,7 @@ namespace XingAPINet
                 {
                     foreach (XingBlock block in blocks)
                     {
-                        block.InsertToDB(connection, tx);
+                        block.InsertToDB(connection, tx, tableNamePostfix);
                     }
 
                     tx.Commit();

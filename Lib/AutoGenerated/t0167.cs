@@ -335,12 +335,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt0167OutBlock ReadFromDB(/* string id = default */)
+		public static XQt0167OutBlock ReadFromDB(string tableNamePostfix = null /*, string id = default */)
 		{
 			using (XQt0167 instance = new XQt0167())
 			{
 
-				QueryOption qo = new QueryOption("XQt0167OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt0167OutBlock" : $"XQt0167OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (id != default) qo.Add("id", id);
 
 

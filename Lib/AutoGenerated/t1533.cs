@@ -471,12 +471,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt1533OutBlock[] ReadFromDB(/* char gubun = default,long chgdate = default */)
+		public static XQt1533OutBlock[] ReadFromDB(string tableNamePostfix = null /*, char gubun = default,long chgdate = default */)
 		{
 			using (XQt1533 instance = new XQt1533())
 			{
 
-				QueryOption qo = new QueryOption("XQt1533OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt1533OutBlock" : $"XQt1533OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (gubun != default) qo.Add("gubun", gubun);
 				// if (chgdate != default) qo.Add("chgdate", chgdate);
 

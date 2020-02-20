@@ -539,12 +539,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt1941OutBlock1[] ReadFromDB(/* string shcode = default,string sdate = default,string edate = default */)
+		public static XQt1941OutBlock1[] ReadFromDB(string tableNamePostfix = null /*, string shcode = default,string sdate = default,string edate = default */)
 		{
 			using (XQt1941 instance = new XQt1941())
 			{
 
-				QueryOption qo = new QueryOption("XQt1941OutBlock1");
+				string tableName = (tableNamePostfix == null) ? "XQt1941OutBlock1" : $"XQt1941OutBlock1_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (shcode != default) qo.Add("shcode", shcode);
 				// if (sdate != default) qo.Add("sdate", sdate);
 				// if (edate != default) qo.Add("edate", edate);

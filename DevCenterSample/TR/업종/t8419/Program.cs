@@ -115,9 +115,6 @@ namespace t8419
                         {
                             item.Dump(Console.Out, DumpOutputType.Inline80Cols);
                         }
-
-                        inBlock.CopyValueFromBlock(outBlock);
-                        query.SetBlock(inBlock);
                     }
                 }
             }

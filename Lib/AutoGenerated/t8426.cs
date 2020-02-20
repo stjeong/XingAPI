@@ -352,12 +352,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt8426OutBlock[] ReadFromDB(/* char dummy = default */)
+		public static XQt8426OutBlock[] ReadFromDB(string tableNamePostfix = null /*, char dummy = default */)
 		{
 			using (XQt8426 instance = new XQt8426())
 			{
 
-				QueryOption qo = new QueryOption("XQt8426OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt8426OutBlock" : $"XQt8426OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (dummy != default) qo.Add("dummy", dummy);
 
 

@@ -369,12 +369,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt1764OutBlock[] ReadFromDB(/* string shcode = default,char gubun1 = default */)
+		public static XQt1764OutBlock[] ReadFromDB(string tableNamePostfix = null /*, string shcode = default,char gubun1 = default */)
 		{
 			using (XQt1764 instance = new XQt1764())
 			{
 
-				QueryOption qo = new QueryOption("XQt1764OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt1764OutBlock" : $"XQt1764OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (shcode != default) qo.Add("shcode", shcode);
 				// if (gubun1 != default) qo.Add("gubun1", gubun1);
 

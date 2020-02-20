@@ -369,12 +369,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt1531OutBlock[] ReadFromDB(/* string tmname = default,string tmcode = default */)
+		public static XQt1531OutBlock[] ReadFromDB(string tableNamePostfix = null /*, string tmname = default,string tmcode = default */)
 		{
 			using (XQt1531 instance = new XQt1531())
 			{
 
-				QueryOption qo = new QueryOption("XQt1531OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt1531OutBlock" : $"XQt1531OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (tmname != default) qo.Add("tmname", tmname);
 				// if (tmcode != default) qo.Add("tmcode", tmcode);
 

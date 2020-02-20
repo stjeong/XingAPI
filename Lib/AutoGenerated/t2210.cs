@@ -420,12 +420,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt2210OutBlock ReadFromDB(/* string focode = default,long cvolume = default,string stime = default,string etime = default */)
+		public static XQt2210OutBlock ReadFromDB(string tableNamePostfix = null /*, string focode = default,long cvolume = default,string stime = default,string etime = default */)
 		{
 			using (XQt2210 instance = new XQt2210())
 			{
 
-				QueryOption qo = new QueryOption("XQt2210OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt2210OutBlock" : $"XQt2210OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (focode != default) qo.Add("focode", focode);
 				// if (cvolume != default) qo.Add("cvolume", cvolume);
 				// if (stime != default) qo.Add("stime", stime);

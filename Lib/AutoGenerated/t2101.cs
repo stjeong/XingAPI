@@ -1474,12 +1474,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt2101OutBlock ReadFromDB(/* string focode = default */)
+		public static XQt2101OutBlock ReadFromDB(string tableNamePostfix = null /*, string focode = default */)
 		{
 			using (XQt2101 instance = new XQt2101())
 			{
 
-				QueryOption qo = new QueryOption("XQt2101OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt2101OutBlock" : $"XQt2101OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (focode != default) qo.Add("focode", focode);
 
 

@@ -290,13 +290,16 @@ namespace Res2Query
 
             string arrayPostfix = (outBlock.Value.HasOccurs == true) ? "[]" : "";
 
-            sbGet.AppendLine($"{tab}\tpublic static {classPrefix}{outBlock.Key}{arrayPostfix} ReadFromDB(/* {inBlock.Value.GetParams} */)");
+            sbGet.AppendLine($"{tab}\tpublic static {classPrefix}{outBlock.Key}{arrayPostfix} ReadFromDB(string tableNamePostfix = null /*, {inBlock.Value.GetParams} */)");
             sbGet.AppendLine($"{tab}\t{{");
 
             sbGet.AppendLine($"{tab}\t\tusing ({classPrefix}{typeName} instance = new {classPrefix}{typeName}())");
             sbGet.AppendLine($"{tab}\t\t{{");
             sbGet.AppendLine();
-            sbGet.AppendLine($"{tab}\t\t\tQueryOption qo = new QueryOption(\"{classPrefix}{outBlock.Key}\");");
+            
+            sbGet.AppendLine($"{tab}\t\t\tstring tableName = (tableNamePostfix == null) ? \"{classPrefix}{outBlock.Key}\" : $\"{classPrefix}{outBlock.Key}_{{tableNamePostfix}}\";");
+
+            sbGet.AppendLine($"{tab}\t\t\tQueryOption qo = new QueryOption(tableName);");
             sbGet.AppendLine($"{inBlock.Value.QueryOptionList}");
             sbGet.AppendLine();
 
@@ -319,7 +322,7 @@ namespace Res2Query
             StringBuilder sbGet = new StringBuilder();
             string multipleOutblockTypeName = $"{classPrefix}AllOutBlocks";
 
-            sbGet.AppendLine($"{tab}\tpublic static {multipleOutblockTypeName} ReadFromDB(/* {inBlock.Value.GetParams} */)");
+            sbGet.AppendLine($"{tab}\tpublic static {multipleOutblockTypeName} ReadFromDB(string tableNamePostfix = null /*, {inBlock.Value.GetParams} */)");
             sbGet.AppendLine($"{tab}\t{{");
 
             sbGet.AppendLine($"{tab}\t\tusing ({classPrefix}{typeName} instance = new {classPrefix}{typeName}())");
@@ -329,12 +332,16 @@ namespace Res2Query
             sbGet.AppendLine($"{tab}\t\t\t{multipleOutblockTypeName} results = new {multipleOutblockTypeName}();");
             sbGet.AppendLine();
 
-            sbGet.AppendLine($"{tab}\t\t\tQueryOption qo = new QueryOption(\"{classPrefix}{outBlock.Key}\");");
+            sbGet.AppendLine($"{tab}\t\t\tstring tableName = (tableNamePostfix == null) ? \"{classPrefix}{outBlock.Key}\" : $\"{classPrefix}{outBlock.Key}_{{tableNamePostfix}}\";");
+
+            sbGet.AppendLine($"{tab}\t\t\tQueryOption qo = new QueryOption(tableName);");
 
             sbGet.AppendLine($"{tab}\t\t\tresults.{RemoveBlockClode(outBlock.Key)} = instance.Select<{classPrefix}{outBlock.Key}>(qo);");
             sbGet.AppendLine();
 
-            sbGet.AppendLine($"{tab}\t\t\tqo = new QueryOption(\"{classPrefix}{outBlocks.Key}\");");
+            sbGet.AppendLine($"{tab}\t\t\ttableName = (tableNamePostfix == null) ? \"{classPrefix}{outBlocks.Key}\" : $\"{classPrefix}{outBlocks.Key}_{{tableNamePostfix}}\";");
+
+            sbGet.AppendLine($"{tab}\t\t\tqo = new QueryOption(tableName);");
             sbGet.AppendLine($"{tab}\t\t\tresults.{RemoveBlockClode(outBlocks.Key)} = instance.SelectMany<{classPrefix}{outBlocks.Key}>(qo);");
             sbGet.AppendLine($"{tab}\t\t\treturn results;");
 

@@ -335,12 +335,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt1826OutBlock[] ReadFromDB(/* char search_gb = default */)
+		public static XQt1826OutBlock[] ReadFromDB(string tableNamePostfix = null /*, char search_gb = default */)
 		{
 			using (XQt1826 instance = new XQt1826())
 			{
 
-				QueryOption qo = new QueryOption("XQt1826OutBlock");
+				string tableName = (tableNamePostfix == null) ? "XQt1826OutBlock" : $"XQt1826OutBlock_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (search_gb != default) qo.Add("search_gb", search_gb);
 
 

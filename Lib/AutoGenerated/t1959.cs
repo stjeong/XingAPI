@@ -607,12 +607,13 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt1959OutBlock1[] ReadFromDB(/* string shcode = default */)
+		public static XQt1959OutBlock1[] ReadFromDB(string tableNamePostfix = null /*, string shcode = default */)
 		{
 			using (XQt1959 instance = new XQt1959())
 			{
 
-				QueryOption qo = new QueryOption("XQt1959OutBlock1");
+				string tableName = (tableNamePostfix == null) ? "XQt1959OutBlock1" : $"XQt1959OutBlock1_{tableNamePostfix}";
+				QueryOption qo = new QueryOption(tableName);
 				// if (shcode != default) qo.Add("shcode", shcode);
 
 
