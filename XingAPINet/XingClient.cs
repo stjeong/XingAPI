@@ -58,6 +58,39 @@ namespace XingAPINet
             _useDemoServer = useDemoServer;
         }
 
+        public string GetFirstAccount()
+        {
+            foreach (string accnt in GetAccounts())
+            {
+                var multiBlock = XQt0424.Get(accnt);
+
+                if (multiBlock.OutBlock.sunamt != 0 || multiBlock.OutBlock.sunamt1 != 0)
+                {
+                    return accnt;
+                }
+            }
+
+            return "";
+        }
+
+        public string GetExpCode(string shcode)
+        {
+            foreach (var item in XQt8430.Get(gubun: XQt8430Gubun.전체))
+            {
+                if (item.shcode == shcode)
+                {
+                    return item.expcode;
+                }
+            }
+
+            return "";
+        }
+
+        public long GetCurrentPrice(string shcode)
+        {
+            return XQt1102.Get(shcode).price;
+        }
+
         public event EventHandler<LoginEventArgs> Login;
 
         bool _disposed;

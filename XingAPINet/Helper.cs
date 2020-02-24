@@ -214,6 +214,11 @@ namespace XingAPINet
             _code = messageCode;
             _message = message;
         }
+
+        public override string ToString()
+        {
+            return $"IsSystemError = {IsSystemError}, Code = {Code}, Message = {Message}";
+        }
     }
 
     public static class ExtensionMethods
