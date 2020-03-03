@@ -22,14 +22,14 @@ namespace XingAPINet
         public XingReal(string resFileCode)
         {
             _xaReal = new XARealClass();
+            _xaReal.ResFileName = $".\\Res\\{resFileCode}.res";
             _xaReal.ReceiveRealData += _xaReal_ReceiveRealData;
             _xaReal.RecieveLinkData += _xaReal_RecieveLinkData;
-            _xaReal.ResFileName = $".\\Res\\{resFileCode}.res";
         }
 
         private void _xaReal_RecieveLinkData(string szLinkName, string szData, string szFiller)
         {
-            Debug.WriteLine($"{szLinkName}, {szData}, {szFiller}");
+            Trace.WriteLine($"{szLinkName}, {szData}, {szFiller}");
         }
 
         public bool WaitForData(int milliseconds = 1000)
@@ -55,7 +55,7 @@ namespace XingAPINet
 
         private void _xaReal_ReceiveRealData(string szTrCode)
         {
-            Debug.WriteLine("RealData: " + szTrCode);
+            Trace.WriteLine("RealData: " + szTrCode);
             _ewh_ReadSync.Set();
             DataArrived?.Invoke(this, new RealDataArgs(szTrCode));
         }
@@ -66,10 +66,21 @@ namespace XingAPINet
             _xaReal.AdviseRealData();
         }
 
+        public void AdviseWithShcode(string shcode)
+        {
+            _xaReal.SetFieldData("InBlock", "shcode", shcode);
+            _xaReal.AdviseRealData();
+        }
+
         public void Unadvise()
         {
             _advise = false;
             _xaReal.UnadviseRealData();
+        }
+
+        public void UnadviseWithShcode(string shcode)
+        {
+            _xaReal.UnadviseRealDataWithKey(shcode);
         }
 
         public void SetFieldData(string blockName, string fieldName, string value)

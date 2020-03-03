@@ -79,17 +79,93 @@ namespace ConsoleApp1
                     }
                 }
 
-                // 실시간 데이터를 조회
-                using (XRS2_ real = new XRS2_())
-                {
-                    //XRS3_InBlock inBlock = new XRS3_InBlock { shcode = shcode };
-                    //if (real.SetFields(inBlock) == false)
-                    //{
-                    //    Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
-                    //    return;
-                    //}
+                //using (XRSC1 real = new XRSC1()) // 실시간 주식 주문 체결
+                //{
+                //    real.Advise();
 
-                    real.SetFieldData(XRS2_InBlock.BlockName, XRS2_InBlock.F.shcode, Stock.SHCODE.KOSDAQ.이베스트투자증권);
+                //    while (_exitProcess == false)
+                //    {
+                //        if (real.WaitForData(1000) == false)
+                //        {
+                //            Console.Write(".");
+                //            continue;
+                //        }
+
+                //        var outBlock = real.GetBlock();
+                //        if (outBlock.IsValidData == true)
+                //        {
+                //            outBlock.Dump(Console.Out, DumpOutputType.FormattedKeyValue);
+                //        }
+                //        else
+                //        {
+                //            Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                //        }
+                //    }
+                //}
+
+                // 실시간 데이터를 조회
+                //using (XRS2_ real = new XRS2_()) // 실시간 KOSPI 체결
+                //{
+                //    //XRS3_InBlock inBlock = new XRS3_InBlock { shcode = shcode };
+                //    //if (real.SetFields(inBlock) == false)
+                //    //{
+                //    //    Console.WriteLine("Failed to verify data: " + inBlock.BlockName);
+                //    //    return;
+                //    //}
+
+                //    // real.SetFieldData(XRS2_InBlock.BlockName, XRS2_InBlock.F.shcode, Stock.SHCODE.KOSPI.KODEX_200);
+                //    // real.Advise();
+                //    real.AdviseWithShcode(Stock.SHCODE.KOSPI.KODEX_200);
+
+                //    while (_exitProcess == false)
+                //    {
+                //        if (real.WaitForData(1000) == false)
+                //        {
+                //            Console.Write(".");
+                //            continue;
+                //        }
+
+                //        XRS2_OutBlock outBlock = real.GetBlock();
+                //        if (outBlock.IsValidData == true)
+                //        {
+                //            // outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
+                //            Console.WriteLine(outBlock.bidho);
+                //        }
+                //        else
+                //        {
+                //            Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                //        }
+                //    }
+                //}
+
+                //using (XRS3_ real = new XRS3_()) // 실시간 KOSPI 우선 호가
+                //{
+                //    real.SetFieldData(XRS3_InBlock.BlockName, XRS3_InBlock.F.shcode, Stock.SHCODE.KOSPI.KODEX_200);
+                //    real.Advise();
+
+                //    while (_exitProcess == false)
+                //    {
+                //        if (real.WaitForData(1000) == false)
+                //        {
+                //            Console.Write(".");
+                //            continue;
+                //        }
+
+                //        var outBlock = real.GetBlock();
+                //        if (outBlock.IsValidData == true)
+                //        {
+                //            outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
+                //        }
+                //        else
+                //        {
+                //            Console.WriteLine($"Invalid: {outBlock.InvalidReason}");
+                //        }
+                //    }
+                //}
+
+                using (XRKS_ real = new XRKS_()) // 실시간 KOSDAQ 우선 호가
+                {
+                    real.SetFieldData(XRS3_InBlock.BlockName, XRS3_InBlock.F.shcode, Stock.SHCODE.KOSDAQ.이베스트투자증권);
                     real.Advise();
 
                     while (_exitProcess == false)
@@ -100,11 +176,10 @@ namespace ConsoleApp1
                             continue;
                         }
 
-                        XRS2_OutBlock outBlock = real.GetBlock();
+                        var outBlock = real.GetBlock();
                         if (outBlock.IsValidData == true)
                         {
-                            // outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
-                            Console.WriteLine(outBlock.bidho);
+                            outBlock.Dump(Console.Out, DumpOutputType.KeyValue);
                         }
                         else
                         {
@@ -112,6 +187,7 @@ namespace ConsoleApp1
                         }
                     }
                 }
+
             }
         }
 

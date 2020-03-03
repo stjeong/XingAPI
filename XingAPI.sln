@@ -933,6 +933,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TR", "TR", "{9875BF81-812A-4FAF-9C63-9DA4E2E9CA7B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Real", "Real", "{5D675DB7-302B-40E5-B981-AABA70D1F823}"
+	ProjectSection(SolutionItems) = preProject
+		DevCenterSample\Real\s3_real.xlsm = DevCenterSample\Real\s3_real.xlsm
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "t8424", "DevCenterSample\TR\업종\t8424\t8424.csproj", "{70A82FB8-DB73-44A2-BB85-7DFE851337C1}"
 EndProject

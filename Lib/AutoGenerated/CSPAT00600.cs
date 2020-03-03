@@ -711,10 +711,7 @@ namespace XingAPINet
 				block.InptPwd = query.GetFieldData(block.GetBlockName(), "InptPwd", 0).TrimEnd('?'); // char 8
 				block.IsuNo = query.GetFieldData(block.GetBlockName(), "IsuNo", 0).TrimEnd('?'); // char 12
 				block.OrdQty = query.GetFieldData(block.GetBlockName(), "OrdQty", 0).ParseLong("OrdQty"); // long 16
-
-				string orgOrdPrc = query.GetFieldData(block.GetBlockName(), "OrdPrc", 0);
-				block.OrdPrc = orgOrdPrc.ParseDouble("OrdPrc"); // double 13.2
-
+				block.OrdPrc = query.GetFieldData(block.GetBlockName(), "OrdPrc", 0).ParseDouble("OrdPrc"); // double 13.2
 				block.BnsTpCode = query.GetFieldData(block.GetBlockName(), "BnsTpCode", 0).FirstOrDefault(); // char 1
 				block.OrdprcPtnCode = query.GetFieldData(block.GetBlockName(), "OrdprcPtnCode", 0).TrimEnd('?'); // char 2
 				block.PrgmOrdprcPtnCode = query.GetFieldData(block.GetBlockName(), "PrgmOrdprcPtnCode", 0).TrimEnd('?'); // char 2
