@@ -118,17 +118,17 @@ namespace XingAPINet
 		/// </summary>
 		public const string _blockName = "t1533OutBlock";
 		/// <summary>
-		/// 출력
+		/// 기본출력
 		/// </summary>
-		public const string _blockDesc = "출력";
+		public const string _blockDesc = "기본출력";
 		/// <summary>
 		/// output
 		/// </summary>
 		public const string _blockType = "output";
 		/// <summary>
-		/// true
+		/// false
 		/// </summary>
-		public const bool _hasOccurs = true;
+		public const bool _hasOccurs = false;
 		/// <summary>
 		/// t1533OutBlock
 		/// </summary>
@@ -138,7 +138,117 @@ namespace XingAPINet
 		/// </summary>
 		public static string BlockName => _blockName;
 		/// <summary>
-		/// 출력
+		/// 기본출력
+		/// </summary>
+		public string BlockDesc => _blockDesc;
+		/// <summary>
+		/// output
+		/// </summary>
+		public string BlockType => _blockType;
+		/// <summary>
+		/// false
+		/// </summary>
+		public bool HasOccurs => _hasOccurs;
+
+		/// <summary>
+		/// 일자
+		/// </summary>
+		[XAQueryFieldAttribute("bdate", "일자", "char", "8")]
+		public string bdate;
+
+		public static class F
+		{
+			/// <summary>
+			/// 일자
+			/// </summary>
+			public const string bdate = "bdate";
+		}
+
+		public static string[] AllFields = new string[]
+		{
+			F.bdate,
+		};
+
+
+		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
+		{
+			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
+			dict["bdate"] = new XAQueryFieldInfo("char", bdate, bdate, "일자", (decimal)8);
+
+			return dict;
+		}
+
+		public override void SetFieldValue(string fieldName, XAQueryFieldInfo fieldInfo)
+		{
+			switch (fieldName)
+			{
+				case "bdate":
+					this.bdate = fieldInfo.FieldValue.TrimEnd('?');
+				break;
+
+
+			}
+		}
+
+		public static XQt1533OutBlock FromQuery(XQt1533 query)
+		{
+			XQt1533OutBlock block = new XQt1533OutBlock();
+			block.IsValidData = true;
+			block.InvalidReason = "";
+			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
+			{
+				block.IsValidData = false;
+				block.InvalidReason = query.ReceiveMessage;
+				return block;
+			}
+			try
+			{
+				block.bdate = query.GetFieldData(block.GetBlockName(), "bdate", 0).TrimEnd('?'); // char 8
+
+			} catch (InvalidDataFormatException e) {
+				block.IsValidData = false;
+				block.InvalidReason = $"FieldName == {e.DataFieldName}, FieldData == \"{e.DataValue}\"";
+			}
+			return block;
+
+		}
+
+		public bool VerifyData()
+		{
+			if (bdate?.Length > 8) return false; // char 8
+
+			return true;
+		}
+	}
+
+	public partial class XQt1533OutBlock1 : XingBlock
+	{
+		/// <summary>
+		/// t1533OutBlock1
+		/// </summary>
+		public const string _blockName = "t1533OutBlock1";
+		/// <summary>
+		/// 출력1
+		/// </summary>
+		public const string _blockDesc = "출력1";
+		/// <summary>
+		/// output
+		/// </summary>
+		public const string _blockType = "output";
+		/// <summary>
+		/// true
+		/// </summary>
+		public const bool _hasOccurs = true;
+		/// <summary>
+		/// t1533OutBlock1
+		/// </summary>
+		public override string GetBlockName() => _blockName;
+		/// <summary>
+		/// t1533OutBlock1
+		/// </summary>
+		public static string BlockName => _blockName;
+		/// <summary>
+		/// 출력1
 		/// </summary>
 		public string BlockDesc => _blockDesc;
 		/// <summary>
@@ -310,17 +420,17 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQt1533OutBlock[] ListFromQuery(XQt1533 query)
+		public static XQt1533OutBlock1[] ListFromQuery(XQt1533 query)
 		{
-			int count = query.GetBlockCount(XQt1533OutBlock.BlockName);
-			List<XQt1533OutBlock> list = new List<XQt1533OutBlock>();
+			int count = query.GetBlockCount(XQt1533OutBlock1.BlockName);
+			List<XQt1533OutBlock1> list = new List<XQt1533OutBlock1>();
 			if (query.QueryResult != null && query.QueryResult.IsSystemError == true)
 			{
 				return list.ToArray();
 			}
 			for (int i = 0; i < count; i ++)
 			{
-				XQt1533OutBlock block = new XQt1533OutBlock();
+				XQt1533OutBlock1 block = new XQt1533OutBlock1();
 				block.IsValidData = true;
 				block.InvalidReason = "";
 				try
@@ -454,7 +564,13 @@ namespace XingAPINet
 		public XQt1533() : base("t1533") { }
 
 
-		public static XQt1533OutBlock[] Get(char gubun = default,long chgdate = default)
+		public class XQAllOutBlocks
+		{
+			public XQt1533OutBlock OutBlock { get; internal set; }
+			public XQt1533OutBlock1[] OutBlock1 { get; internal set; }
+		}
+
+		public static XQAllOutBlocks Get(char gubun = default,long chgdate = default)
 		{
 			using (XQt1533 instance = new XQt1533())
 			{
@@ -466,24 +582,33 @@ namespace XingAPINet
 					return null;
 				}
 
-				var outBlock = instance.GetBlocks();
-				return outBlock;
+				XQAllOutBlocks results = new XQAllOutBlocks();
+				results.OutBlock = instance.GetBlock();
+				if (results.OutBlock.IsValidData == false)
+				{
+					return null;
+				}
+
+				results.OutBlock1 = instance.GetBlock1s();
+				return results;
 			}
 		}
 
-		public static XQt1533OutBlock[] ReadFromDB(string tableNamePostfix = null /*, char gubun = default,long chgdate = default */)
+		public static XQAllOutBlocks ReadFromDB(string tableNamePostfix = null /*, char gubun = default,long chgdate = default */)
 		{
 			using (XQt1533 instance = new XQt1533())
 			{
 
+				XQAllOutBlocks results = new XQAllOutBlocks();
+
 				string tableName = (tableNamePostfix == null) ? "XQt1533OutBlock" : $"XQt1533OutBlock_{tableNamePostfix}";
 				QueryOption qo = new QueryOption(tableName);
-				// if (gubun != default) qo.Add("gubun", gubun);
-				// if (chgdate != default) qo.Add("chgdate", chgdate);
+				results.OutBlock = instance.Select<XQt1533OutBlock>(qo);
 
-
-				var outBlock = instance.SelectMany<XQt1533OutBlock>(qo);
-				return outBlock;
+				tableName = (tableNamePostfix == null) ? "XQt1533OutBlock1" : $"XQt1533OutBlock1_{tableNamePostfix}";
+				qo = new QueryOption(tableName);
+				results.OutBlock1 = instance.SelectMany<XQt1533OutBlock1>(qo);
+				return results;
 			}
 		}
 
@@ -500,9 +625,16 @@ namespace XingAPINet
 			return true;
 		}
 
-		public XQt1533OutBlock[] GetBlocks()
+		public XQt1533OutBlock GetBlock()
 		{
-			XQt1533OutBlock[] instance = XQt1533OutBlock.ListFromQuery(this);
+			XQt1533OutBlock instance = XQt1533OutBlock.FromQuery(this);
+			return instance;
+
+		}
+
+		public XQt1533OutBlock1[] GetBlock1s()
+		{
+			XQt1533OutBlock1[] instance = XQt1533OutBlock1.ListFromQuery(this);
 			return instance;
 
 		}
@@ -510,6 +642,7 @@ namespace XingAPINet
 		public static Type [] OutBlockTypes = new Type []
 		{
 			typeof(XQt1533OutBlock),
+			typeof(XQt1533OutBlock1),
 
 		};
 

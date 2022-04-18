@@ -73,10 +73,10 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("FnoOrdprcPtnCode", "선물옵션호가유형코드", "char", "2")]
 		public string FnoOrdprcPtnCode;
 		/// <summary>
-		/// 주문가격
+		/// 선물옵션주문가격
 		/// </summary>
-		[XAQueryFieldAttribute("OrdPrc", "주문가격", "double", "15.2")]
-		public double OrdPrc;
+		[XAQueryFieldAttribute("FnoOrdPrc", "선물옵션주문가격", "double", "27.8")]
+		public double FnoOrdPrc;
 		/// <summary>
 		/// 주문수량
 		/// </summary>
@@ -106,9 +106,9 @@ namespace XingAPINet
 			/// </summary>
 			public const string FnoOrdprcPtnCode = "FnoOrdprcPtnCode";
 			/// <summary>
-			/// 주문가격
+			/// 선물옵션주문가격
 			/// </summary>
-			public const string OrdPrc = "OrdPrc";
+			public const string FnoOrdPrc = "FnoOrdPrc";
 			/// <summary>
 			/// 주문수량
 			/// </summary>
@@ -122,7 +122,7 @@ namespace XingAPINet
 			F.FnoIsuNo,
 			F.BnsTpCode,
 			F.FnoOrdprcPtnCode,
-			F.OrdPrc,
+			F.FnoOrdPrc,
 			F.OrdQty,
 		};
 
@@ -135,7 +135,7 @@ namespace XingAPINet
 			dict["FnoIsuNo"] = new XAQueryFieldInfo("char", FnoIsuNo, FnoIsuNo, "선물옵션종목번호", (decimal)12);
 			dict["BnsTpCode"] = new XAQueryFieldInfo("char", BnsTpCode, BnsTpCode.ToString(), "매매구분", (decimal)1);
 			dict["FnoOrdprcPtnCode"] = new XAQueryFieldInfo("char", FnoOrdprcPtnCode, FnoOrdprcPtnCode, "선물옵션호가유형코드", (decimal)2);
-			dict["OrdPrc"] = new XAQueryFieldInfo("double", OrdPrc, OrdPrc.ToString("000000000000000.00"), "주문가격", (decimal)15.2);
+			dict["FnoOrdPrc"] = new XAQueryFieldInfo("double", FnoOrdPrc, FnoOrdPrc.ToString("000000000000000000000000000.00000000"), "선물옵션주문가격", (decimal)27.8);
 			dict["OrdQty"] = new XAQueryFieldInfo("long", OrdQty, OrdQty.ToString("d16"), "주문수량", (decimal)16);
 
 			return dict;
@@ -165,8 +165,8 @@ namespace XingAPINet
 					this.FnoOrdprcPtnCode = fieldInfo.FieldValue.TrimEnd('?');
 				break;
 
-				case "OrdPrc":
-					this.OrdPrc = fieldInfo.FieldValue.ParseDouble("OrdPrc");
+				case "FnoOrdPrc":
+					this.FnoOrdPrc = fieldInfo.FieldValue.ParseDouble("FnoOrdPrc");
 				break;
 
 				case "OrdQty":
@@ -184,7 +184,7 @@ namespace XingAPINet
 			if (FnoIsuNo?.Length > 12) return false; // char 12
 			// BnsTpCode char 1
 			if (FnoOrdprcPtnCode?.Length > 2) return false; // char 2
-			// OrdPrc double 15.2
+			// FnoOrdPrc double 27.8
 			if (OrdQty.ToString().Length > 16) return false; // long 16
 
 			return true;
@@ -276,10 +276,10 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("FnoTrdPtnCode", "선물옵션거래유형코드", "char", "2")]
 		public string FnoTrdPtnCode;
 		/// <summary>
-		/// 주문가격
+		/// 선물옵션주문가격
 		/// </summary>
-		[XAQueryFieldAttribute("OrdPrc", "주문가격", "double", "15.2")]
-		public double OrdPrc;
+		[XAQueryFieldAttribute("FnoOrdPrc", "선물옵션주문가격", "double", "27.8")]
+		public double FnoOrdPrc;
 		/// <summary>
 		/// 주문수량
 		/// </summary>
@@ -385,9 +385,9 @@ namespace XingAPINet
 			/// </summary>
 			public const string FnoTrdPtnCode = "FnoTrdPtnCode";
 			/// <summary>
-			/// 주문가격
+			/// 선물옵션주문가격
 			/// </summary>
-			public const string OrdPrc = "OrdPrc";
+			public const string FnoOrdPrc = "FnoOrdPrc";
 			/// <summary>
 			/// 주문수량
 			/// </summary>
@@ -453,7 +453,7 @@ namespace XingAPINet
 			F.FnoOrdPtnCode,
 			F.FnoOrdprcPtnCode,
 			F.FnoTrdPtnCode,
-			F.OrdPrc,
+			F.FnoOrdPrc,
 			F.OrdQty,
 			F.CommdaCode,
 			F.DscusBnsCmpltTime,
@@ -482,7 +482,7 @@ namespace XingAPINet
 			dict["FnoOrdPtnCode"] = new XAQueryFieldInfo("char", FnoOrdPtnCode, FnoOrdPtnCode, "선물옵션주문유형코드", (decimal)2);
 			dict["FnoOrdprcPtnCode"] = new XAQueryFieldInfo("char", FnoOrdprcPtnCode, FnoOrdprcPtnCode, "선물옵션호가유형코드", (decimal)2);
 			dict["FnoTrdPtnCode"] = new XAQueryFieldInfo("char", FnoTrdPtnCode, FnoTrdPtnCode, "선물옵션거래유형코드", (decimal)2);
-			dict["OrdPrc"] = new XAQueryFieldInfo("double", OrdPrc, OrdPrc.ToString("000000000000000.00"), "주문가격", (decimal)15.2);
+			dict["FnoOrdPrc"] = new XAQueryFieldInfo("double", FnoOrdPrc, FnoOrdPrc.ToString("000000000000000000000000000.00000000"), "선물옵션주문가격", (decimal)27.8);
 			dict["OrdQty"] = new XAQueryFieldInfo("long", OrdQty, OrdQty.ToString("d16"), "주문수량", (decimal)16);
 			dict["CommdaCode"] = new XAQueryFieldInfo("char", CommdaCode, CommdaCode, "통신매체코드", (decimal)2);
 			dict["DscusBnsCmpltTime"] = new XAQueryFieldInfo("char", DscusBnsCmpltTime, DscusBnsCmpltTime, "협의매매완료시각", (decimal)9);
@@ -540,8 +540,8 @@ namespace XingAPINet
 					this.FnoTrdPtnCode = fieldInfo.FieldValue.TrimEnd('?');
 				break;
 
-				case "OrdPrc":
-					this.OrdPrc = fieldInfo.FieldValue.ParseDouble("OrdPrc");
+				case "FnoOrdPrc":
+					this.FnoOrdPrc = fieldInfo.FieldValue.ParseDouble("FnoOrdPrc");
 				break;
 
 				case "OrdQty":
@@ -622,7 +622,7 @@ namespace XingAPINet
 				block.FnoOrdPtnCode = query.GetFieldData(block.GetBlockName(), "FnoOrdPtnCode", 0).TrimEnd('?'); // char 2
 				block.FnoOrdprcPtnCode = query.GetFieldData(block.GetBlockName(), "FnoOrdprcPtnCode", 0).TrimEnd('?'); // char 2
 				block.FnoTrdPtnCode = query.GetFieldData(block.GetBlockName(), "FnoTrdPtnCode", 0).TrimEnd('?'); // char 2
-				block.OrdPrc = query.GetFieldData(block.GetBlockName(), "OrdPrc", 0).ParseDouble("OrdPrc"); // double 15.2
+				block.FnoOrdPrc = query.GetFieldData(block.GetBlockName(), "FnoOrdPrc", 0).ParseDouble("FnoOrdPrc"); // double 27.8
 				block.OrdQty = query.GetFieldData(block.GetBlockName(), "OrdQty", 0).ParseLong("OrdQty"); // long 16
 				block.CommdaCode = query.GetFieldData(block.GetBlockName(), "CommdaCode", 0).TrimEnd('?'); // char 2
 				block.DscusBnsCmpltTime = query.GetFieldData(block.GetBlockName(), "DscusBnsCmpltTime", 0).TrimEnd('?'); // char 9
@@ -656,7 +656,7 @@ namespace XingAPINet
 			if (FnoOrdPtnCode?.Length > 2) return false; // char 2
 			if (FnoOrdprcPtnCode?.Length > 2) return false; // char 2
 			if (FnoTrdPtnCode?.Length > 2) return false; // char 2
-			// OrdPrc double 15.2
+			// FnoOrdPrc double 27.8
 			if (OrdQty.ToString().Length > 16) return false; // long 16
 			if (CommdaCode?.Length > 2) return false; // char 2
 			if (DscusBnsCmpltTime?.Length > 9) return false; // char 9
@@ -960,13 +960,13 @@ namespace XingAPINet
 		/// </summary>
 		public const string _headType = "B";
 		/// <summary>
-		/// 이인희
+		/// 원종혁
 		/// </summary>
-		public const string _creator = "이인희";
+		public const string _creator = "원종혁";
 		/// <summary>
-		/// 2012/03/12 13:31:10
+		/// 2022/02/16 14:20:59
 		/// </summary>
-		public const string _createdDate = "2012/03/12 13:31:10";
+		public const string _createdDate = "2022/02/16 14:20:59";
 		/// <summary>
 		/// false
 		/// </summary>
@@ -1001,11 +1001,11 @@ namespace XingAPINet
 		/// </summary>
 		public string HeadType => _headType;
 		/// <summary>
-		/// 이인희
+		/// 원종혁
 		/// </summary>
 		public string Creator => _creator;
 		/// <summary>
-		/// 2012/03/12 13:31:10
+		/// 2022/02/16 14:20:59
 		/// </summary>
 		public string CreatedDate => _createdDate;
 		/// <summary>
@@ -1045,7 +1045,7 @@ namespace XingAPINet
 			_xaQuery.SetFieldData(block.GetBlockName(), "FnoIsuNo", 0, block.FnoIsuNo); // char 12
 			_xaQuery.SetFieldData(block.GetBlockName(), "BnsTpCode", 0, block.BnsTpCode.ToString()); // char 1
 			_xaQuery.SetFieldData(block.GetBlockName(), "FnoOrdprcPtnCode", 0, block.FnoOrdprcPtnCode); // char 2
-			_xaQuery.SetFieldData(block.GetBlockName(), "OrdPrc", 0, block.OrdPrc.ToString("000000000000000.00")); // double 15.2
+			_xaQuery.SetFieldData(block.GetBlockName(), "FnoOrdPrc", 0, block.FnoOrdPrc.ToString("000000000000000000000000000.00000000")); // double 27.8
 			_xaQuery.SetFieldData(block.GetBlockName(), "OrdQty", 0, block.OrdQty.ToString("d16")); // long 16
 
 			return true;

@@ -32,8 +32,8 @@ BEGIN_FUNCTION_MAP
 		CME야간선물전일대비,cmechange,cmechange,float,6.2;
 		CME야간선물등락율,cmediff,cmediff,float,6.2;
 		CME야간선물종목코드,cmefocode,cmefocode,char,8;
-		정규장상한가,uplmtprice,uplmtprice,float,6.2;
-		정규장하한가,dnlmtprice,dnlmtprice,float,6.2;
+		정규장적용상한가,uplmtprice,uplmtprice,float,6.2;
+		정규장적용하한가,dnlmtprice,dnlmtprice,float,6.2;
 		단축코드,focode,focode,char,8;
 		예상체결가,yeprice,yeprice,float,6.2;
 		전일대비구분,ysign,ysign,char,1;
@@ -42,6 +42,8 @@ BEGIN_FUNCTION_MAP
 		단일가호가여부,danhochk,danhochk,char,1;
 		전일거래량,jnilvolume,jnilvolume,long,12;
 		전일거래대금,jnilvalue,jnilvalue,long,12;
+		정규장3단계상한가,uplmtprice_3rd,uplmtprice_3rd,float,6.2;
+		정규장3단계하한가,dnlmtprice_3rd,dnlmtprice_3rd,float,6.2;
 	end
 	END_DATA_MAP
 END_FUNCTION_MAP

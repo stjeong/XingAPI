@@ -25,10 +25,10 @@ BEGIN_FUNCTION_MAP
 		전일대비,change,change,long,8;
 		등락율,diff,diff,float,6.2;
 		누적거래량,volume,volume,long,12;
-		매도잔량,offerrem,offerrem,long,8;
+		매도잔량,offerrem,offerrem,long,12;
 		매도호가,offerho,offerho,long,8;
 		매수호가,bidho,bidho,long,8;
-		매수잔량,bidrem,bidrem,long,8;
+		매수잔량,bidrem,bidrem,long,12;
 		연속일수,cnt,cnt,long,4;
 		종목코드,shcode,shcode,char,6;
 		증거금율,jkrate,jkrate,char,3;

@@ -124,7 +124,7 @@ BEGIN_FUNCTION_MAP
 		LP4,lp_nm4,lp_nm4,char,20;
 		LP5,lp_nm5,lp_nm5,char,20;
 		복제방법,etf_cp,etf_cp,char,10;
-		상품유형,etf_kind,etf_kind,char,10;
+		상품유형(Filler),etf_kind,etf_kind,char,10;
 		VI발동해제,vi_gubun,vi_gubun,char,10;
 		ETN상품분류,etn_kind_cd,etn_kind_cd,char,20;
 		ETN만기일,lastymd,lastymd,char,8;
@@ -134,6 +134,12 @@ BEGIN_FUNCTION_MAP
 		ETN만기상환가격결정시작일,last_sdate,last_sdate,char,8;
 		ETN만기상환가격결정종료일,last_edate,last_edate,char,8;
 		ETNLP보유수량,lp_holdvol,lp_holdvol,char,12;
+		상장일,listdate,listdate,char,8;
+		ETP상품구분코드,etp_gb,etp_gb,char,1;/*1:ETF(투자회사형)2:ETF(수익증권형)3:ETN4:손실제한ETN*/
+		ETN조기상환가능여부,etn_elback_yn,etn_elback_yn,char,1;/*ETN조기상환가능여부Y/N2017.03.27*/
+		최종결제,settletype,settletype,char,2;/*01:현금02:실물03:현금+실물*/
+		지수자산분류코드(대분류),idx_asset_class1,idx_asset_class1,char,2;
+		ETF/ETN투자유의,ty_text,ty_text,char,8;
 	end
 	END_DATA_MAP
 END_FUNCTION_MAP

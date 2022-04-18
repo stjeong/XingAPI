@@ -92,6 +92,11 @@ namespace XingAPINet
 		/// </summary>
 		[XAQueryFieldAttribute("idx", "IDX", "long", "4")]
 		public long idx;
+		/// <summary>
+		/// 대상제외2
+		/// </summary>
+		[XAQueryFieldAttribute("jc_num2", "대상제외2", "long", "12")]
+		public long jc_num2;
 
 		public static class F
 		{
@@ -131,6 +136,10 @@ namespace XingAPINet
 			/// IDX
 			/// </summary>
 			public const string idx = "idx";
+			/// <summary>
+			/// 대상제외2
+			/// </summary>
+			public const string jc_num2 = "jc_num2";
 		}
 
 		public static string[] AllFields = new string[]
@@ -144,6 +153,7 @@ namespace XingAPINet
 			F.eprice,
 			F.volume,
 			F.idx,
+			F.jc_num2,
 		};
 
 
@@ -159,6 +169,7 @@ namespace XingAPINet
 			dict["eprice"] = new XAQueryFieldInfo("long", eprice, eprice.ToString("d8"), "종료가격", (decimal)8);
 			dict["volume"] = new XAQueryFieldInfo("long", volume, volume.ToString("d12"), "거래량", (decimal)12);
 			dict["idx"] = new XAQueryFieldInfo("long", idx, idx.ToString("d4"), "IDX", (decimal)4);
+			dict["jc_num2"] = new XAQueryFieldInfo("long", jc_num2, jc_num2.ToString("d12"), "대상제외2", (decimal)12);
 
 			return dict;
 		}
@@ -203,6 +214,10 @@ namespace XingAPINet
 					this.idx = fieldInfo.FieldValue.ParseLong("idx");
 				break;
 
+				case "jc_num2":
+					this.jc_num2 = fieldInfo.FieldValue.ParseLong("jc_num2");
+				break;
+
 
 			}
 		}
@@ -218,6 +233,7 @@ namespace XingAPINet
 			if (eprice.ToString().Length > 8) return false; // long 8
 			if (volume.ToString().Length > 12) return false; // long 12
 			if (idx.ToString().Length > 4) return false; // long 4
+			if (jc_num2.ToString().Length > 12) return false; // long 12
 
 			return true;
 		}
@@ -716,7 +732,7 @@ namespace XingAPINet
 			public XQt1442OutBlock1[] OutBlock1 { get; internal set; }
 		}
 
-		public static XQAllOutBlocks Get(char gubun = default,char type1 = default,char type2 = default,char type3 = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default)
+		public static XQAllOutBlocks Get(char gubun = default,char type1 = default,char type2 = default,char type3 = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default,long jc_num2 = default)
 		{
 			using (XQt1442 instance = new XQt1442())
 			{
@@ -729,6 +745,7 @@ namespace XingAPINet
 				instance.SetFieldData(XQt1442InBlock.BlockName, XQt1442InBlock.F.eprice, 0, eprice.ToString("d8")); // long 8
 				instance.SetFieldData(XQt1442InBlock.BlockName, XQt1442InBlock.F.volume, 0, volume.ToString("d12")); // long 12
 				instance.SetFieldData(XQt1442InBlock.BlockName, XQt1442InBlock.F.idx, 0, idx.ToString("d4")); // long 4
+				instance.SetFieldData(XQt1442InBlock.BlockName, XQt1442InBlock.F.jc_num2, 0, jc_num2.ToString("d12")); // long 12
 
 				if (instance.Request() < 0)
 				{
@@ -747,7 +764,7 @@ namespace XingAPINet
 			}
 		}
 
-		public static XQAllOutBlocks ReadFromDB(string tableNamePostfix = null /*, char gubun = default,char type1 = default,char type2 = default,char type3 = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default */)
+		public static XQAllOutBlocks ReadFromDB(string tableNamePostfix = null /*, char gubun = default,char type1 = default,char type2 = default,char type3 = default,long jc_num = default,long sprice = default,long eprice = default,long volume = default,long idx = default,long jc_num2 = default */)
 		{
 			using (XQt1442 instance = new XQt1442())
 			{
@@ -781,6 +798,7 @@ namespace XingAPINet
 			_xaQuery.SetFieldData(block.GetBlockName(), "eprice", 0, block.eprice.ToString("d8")); // long 8
 			_xaQuery.SetFieldData(block.GetBlockName(), "volume", 0, block.volume.ToString("d12")); // long 12
 			_xaQuery.SetFieldData(block.GetBlockName(), "idx", 0, block.idx.ToString("d4")); // long 4
+			_xaQuery.SetFieldData(block.GetBlockName(), "jc_num2", 0, block.jc_num2.ToString("d12")); // long 12
 
 			return true;
 		}

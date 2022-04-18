@@ -1,0 +1,115 @@
+####################################################################################
+## INISAFE Net Configuration File
+## remark: - recommand set absoulte path.
+##		   - you can use system environment valiable on path. ex)$HOME, $ORACLE_HOME, etc...
+####################################################################################
+
+
+####################################################################################
+[COMMON]
+## License file path
+## FILE LICENSE
+CM_LICENSE_PATH=C:\Ebest\xingAPI\sys\default.lic
+
+## CERT LICENSE
+#CM_LICENSE_PATH=../keys/118.219.55.139.cer
+
+## Data Encoding flag
+# 0000: no encoding
+# 0001: BASE64 encoding
+# 0010: URL encoding
+# 0011: BASE64+URL encoding
+CM_ENCODING_FLAG=0011
+
+CM_PADDING_FLAG=Y
+
+## cipher-name
+CM_CRYPTO_ALG=SEED-CBC
+
+## hash algorithm
+## use session key hash.(kefix)
+## use plain data hash.(handshake)
+CM_KEY_HASH_ALG=SHA1
+
+## Log output format (FILE(default) | STDOUT)
+CM_LOG_OUT_TYPE=FILE
+
+## The path of log file (recommend absolute path)
+CM_LOG_PATH=C:\Ebest\xingAPI\log
+
+
+## OFF(default) | FATAL | ERROR | INFO | DEBUG
+CM_LOG_LEVEL=DEBUG
+
+## Linefeed insert flag when base64_encoding (0:no, 1: insert(default))
+CM_BASE64_LF_FLAG=0
+
+## (비)검증대상 암호 알고리즘 사용 여부 flag 
+## (1: 검증대상 알고리즘만 사용(default), 0: 비검증대상 알고리즘도 사용)
+CM_USE_PROVEN_ALGORITHM=0
+
+## crypto 모듈 검증 여부 flag - v7.2.0.4이상
+## (1: 검증(default), 0 검증안함)
+CM_CRYPTO_MODULE_VERIFY=0
+
+## HSM 연동 관련 정보 설정
+# Use HSM Mode ( 0: no use 1: Paccel )
+CM_UseHSMMode=0
+CM_HSM_BACKUP_MODE=1
+
+####################################################################################
+
+####################################################################################
+[HANDSHAKE]		  ## use this fields with [I_SIGN_VFY|SERVER_INT_CTX|CLIENT_INT_CTX]
+
+## Server Certificate Path : Server 설정 
+HS_SERVER_CERT_PATH=C:\Ebest\xingAPI\sys\sample_cert.der
+#HS_SERVER_CERT_PATH=../eBest/xingapi/sys/sample_cert.der
+
+## My Private Key Path : Client(v5101)/Server 설정
+HS_SERVER_PRIVATEKEY_PATH=C:\Ebest\xingAPI\sys\sample_priv.key
+#HS_SERVER_PRIVATEKEY_PATH=../xingapi/sys/sample_priv.key
+
+## Password of My Private Key : Client(v5101)/Server 설정
+HS_SERVER_PRIVATEKEY_PWD="yEIxVF58v07Wu9ie3aR0ahTE/Z5dJb75l3XN1Jst8/E="
+
+## Handshake Message Encoding Flag  : Client/Server 설정
+# 0000: no encoding
+# 0001: BASE64 encoding
+# 0010: URL encoding
+# 0011: BASE64+URL encoding	(default)
+HS_MSG_ENCODING_FLAG=0011
+
+## issuerdn list for cert verify : 4001(필수)/5001(사용시) 설정
+HS_CHECK_ISSUER_DN=
+
+## Check expired cert (Y/N, default N): 4001(필수)/5001(사용시) 설정
+## CPV설정이 없을 경우
+HS_CHECK_EXPIRE_CERT=N
+
+# Request for server cert type (CERT|KEY) : Client(v5101) 설정 
+HS_SCERT_TYPE_REQ=CERT
+
+## Request for client cert  : Server(v5001) 설정
+## 서버가 클라이언트에 인증서를 요청하여 검증. (Default 'Y')
+## 핸드쉐이크 버전 5001에만 해당.
+HS_REQ_CLIENT_CERT=N
+
+## random padding size (ex. 10)  : Server(v5001,v5101) 설정
+## 핸드쉐이크 버전 5001에만 해당.
+HS_PAD_LEN=8
+
+## integrity check : Client(v5001) 설정
+## CM_KEY_HASH_ALG 의 설정 알고리즘을 사용.
+## 핸드쉐이크 버전 5001에만 해당.
+HS_CHECK_INTEGRITY=Y
+
+## 통신 상대 인증서 소유자 식별
+#HS_COMPARE_YOUR_CERT_FOR_AUTH=Y
+
+## 통신 상대 인증서 소유자 식별 
+## 전송된 인증서와 아래 설정된 인증서가 같은지 비교.
+#HS_YOUR_CERT_PATH_FOR_AUTH=$INISAFENET_HOME/keys/sample_cert.der
+
+
+####################################################################################

@@ -239,6 +239,21 @@ namespace XingAPINet
 		/// </summary>
 		[XAQueryFieldAttribute("jnilclose", "전일종가", "long", "8")]
 		public long jnilclose;
+		/// <summary>
+		/// 위험고지구분1_정리매매
+		/// </summary>
+		[XAQueryFieldAttribute("notice1", "위험고지구분1_정리매매", "char", "1")]
+		public char notice1;
+		/// <summary>
+		/// 위험고지구분2_투자위험
+		/// </summary>
+		[XAQueryFieldAttribute("notice2", "위험고지구분2_투자위험", "char", "1")]
+		public char notice2;
+		/// <summary>
+		/// 위험고지구분3_단기과열
+		/// </summary>
+		[XAQueryFieldAttribute("notice3", "위험고지구분3_단기과열", "char", "1")]
+		public char notice3;
 
 		public static class F
 		{
@@ -326,6 +341,18 @@ namespace XingAPINet
 			/// 전일종가
 			/// </summary>
 			public const string jnilclose = "jnilclose";
+			/// <summary>
+			/// 위험고지구분1_정리매매
+			/// </summary>
+			public const string notice1 = "notice1";
+			/// <summary>
+			/// 위험고지구분2_투자위험
+			/// </summary>
+			public const string notice2 = "notice2";
+			/// <summary>
+			/// 위험고지구분3_단기과열
+			/// </summary>
+			public const string notice3 = "notice3";
 		}
 
 		public static string[] AllFields = new string[]
@@ -351,6 +378,9 @@ namespace XingAPINet
 			F.cashrate,
 			F.price,
 			F.jnilclose,
+			F.notice1,
+			F.notice2,
+			F.notice3,
 		};
 
 
@@ -378,6 +408,9 @@ namespace XingAPINet
 			dict["cashrate"] = new XAQueryFieldInfo("float", cashrate, cashrate.ToString("0000000000000.00"), "배당수익율", (decimal)13.2);
 			dict["price"] = new XAQueryFieldInfo("long", price, price.ToString("d8"), "현재가", (decimal)8);
 			dict["jnilclose"] = new XAQueryFieldInfo("long", jnilclose, jnilclose.ToString("d8"), "전일종가", (decimal)8);
+			dict["notice1"] = new XAQueryFieldInfo("char", notice1, notice1.ToString(), "위험고지구분1_정리매매", (decimal)1);
+			dict["notice2"] = new XAQueryFieldInfo("char", notice2, notice2.ToString(), "위험고지구분2_투자위험", (decimal)1);
+			dict["notice3"] = new XAQueryFieldInfo("char", notice3, notice3.ToString(), "위험고지구분3_단기과열", (decimal)1);
 
 			return dict;
 		}
@@ -470,6 +503,18 @@ namespace XingAPINet
 					this.jnilclose = fieldInfo.FieldValue.ParseLong("jnilclose");
 				break;
 
+				case "notice1":
+					this.notice1 = fieldInfo.FieldValue.FirstOrDefault();
+				break;
+
+				case "notice2":
+					this.notice2 = fieldInfo.FieldValue.FirstOrDefault();
+				break;
+
+				case "notice3":
+					this.notice3 = fieldInfo.FieldValue.FirstOrDefault();
+				break;
+
 
 			}
 		}
@@ -508,6 +553,9 @@ namespace XingAPINet
 				block.cashrate = query.GetFieldData(block.GetBlockName(), "cashrate", 0).ParseFloat("cashrate"); // float 13.2
 				block.price = query.GetFieldData(block.GetBlockName(), "price", 0).ParseLong("price"); // long 8
 				block.jnilclose = query.GetFieldData(block.GetBlockName(), "jnilclose", 0).ParseLong("jnilclose"); // long 8
+				block.notice1 = query.GetFieldData(block.GetBlockName(), "notice1", 0).FirstOrDefault(); // char 1
+				block.notice2 = query.GetFieldData(block.GetBlockName(), "notice2", 0).FirstOrDefault(); // char 1
+				block.notice3 = query.GetFieldData(block.GetBlockName(), "notice3", 0).FirstOrDefault(); // char 1
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -540,6 +588,9 @@ namespace XingAPINet
 			// cashrate float 13.2
 			if (price.ToString().Length > 8) return false; // long 8
 			if (jnilclose.ToString().Length > 8) return false; // long 8
+			// notice1 char 1
+			// notice2 char 1
+			// notice3 char 1
 
 			return true;
 		}

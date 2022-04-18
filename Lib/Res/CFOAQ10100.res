@@ -1,5 +1,5 @@
 BEGIN_FUNCTION_MAP
-	.Func,선물옵션 주문가능수량조회,CFOAQ10100,SERVICE=CFOAQ10100,headtype=B,CREATOR=정명기,CREDATE=2011/11/18 15:04:59;
+	.Func,선물옵션 주문가능수량조회,CFOAQ10100,SERVICE=CFOAQ10100,headtype=B,CREATOR=원종혁,CREDATE=2022/02/16 14:27:58;
 	BEGIN_DATA_MAP
 	CFOAQ10100InBlock1,In(*EMPTY*),input;
 	begin
@@ -11,7 +11,7 @@ BEGIN_FUNCTION_MAP
 		비율값, RatVal, RatVal, double, 19.8;
 		선물옵션종목번호, FnoIsuNo, FnoIsuNo, char, 12;
 		매매구분, BnsTpCode, BnsTpCode, char, 1;
-		주문가, OrdPrc, OrdPrc, double, 13.2;
+		선물옵션주문가격, FnoOrdPrc, FnoOrdPrc, double, 27.8;
 		선물옵션호가유형코드, FnoOrdprcPtnCode, FnoOrdprcPtnCode, char, 2;
 	end
 	CFOAQ10100OutBlock1,In(*EMPTY*),output;
@@ -24,7 +24,7 @@ BEGIN_FUNCTION_MAP
 		비율값, RatVal, RatVal, double, 19.8;
 		선물옵션종목번호, FnoIsuNo, FnoIsuNo, char, 12;
 		매매구분, BnsTpCode, BnsTpCode, char, 1;
-		주문가, OrdPrc, OrdPrc, double, 13.2;
+		선물옵션주문가격, FnoOrdPrc, FnoOrdPrc, double, 27.8;
 		선물옵션호가유형코드, FnoOrdprcPtnCode, FnoOrdprcPtnCode, char, 2;
 	end
 	CFOAQ10100OutBlock2,Out(*EMPTY*),output;
@@ -32,7 +32,7 @@ BEGIN_FUNCTION_MAP
 		레코드갯수, RecCnt, RecCnt, long, 5
 		계좌명, AcntNm, AcntNm, char, 40;
 		조회일, QryDt, QryDt, char, 8;
-		현재가, NowPrc, NowPrc, double, 15.2;
+		선물옵션현재가, FnoNowPrc, FnoNowPrc, double, 27.8;
 		주문가능수량, OrdAbleQty, OrdAbleQty, long, 16;
 		신규주문가능수량, NewOrdAbleQty, NewOrdAbleQty, long, 16;
 		청산주문가능수량, LqdtOrdAbleQty, LqdtOrdAbleQty, long, 16;

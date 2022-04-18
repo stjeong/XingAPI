@@ -720,9 +720,9 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("etf_cp", "복제방법", "char", "10")]
 		public string etf_cp;
 		/// <summary>
-		/// 상품유형
+		/// 상품유형(Filler)
 		/// </summary>
-		[XAQueryFieldAttribute("etf_kind", "상품유형", "char", "10")]
+		[XAQueryFieldAttribute("etf_kind", "상품유형(Filler)", "char", "10")]
 		public string etf_kind;
 		/// <summary>
 		/// VI발동해제
@@ -769,6 +769,36 @@ namespace XingAPINet
 		/// </summary>
 		[XAQueryFieldAttribute("lp_holdvol", "ETNLP보유수량", "char", "12")]
 		public string lp_holdvol;
+		/// <summary>
+		/// 상장일
+		/// </summary>
+		[XAQueryFieldAttribute("listdate", "상장일", "char", "8")]
+		public string listdate;
+		/// <summary>
+		/// ETP상품구분코드
+		/// </summary>
+		[XAQueryFieldAttribute("etp_gb", "ETP상품구분코드", "char", "1")]
+		public char etp_gb;
+		/// <summary>
+		/// ETN조기상환가능여부
+		/// </summary>
+		[XAQueryFieldAttribute("etn_elback_yn", "ETN조기상환가능여부", "char", "1")]
+		public char etn_elback_yn;
+		/// <summary>
+		/// 최종결제
+		/// </summary>
+		[XAQueryFieldAttribute("settletype", "최종결제", "char", "2")]
+		public string settletype;
+		/// <summary>
+		/// 지수자산분류코드(대분류)
+		/// </summary>
+		[XAQueryFieldAttribute("idx_asset_class1", "지수자산분류코드(대분류)", "char", "2")]
+		public string idx_asset_class1;
+		/// <summary>
+		/// ETF/ETN투자유의
+		/// </summary>
+		[XAQueryFieldAttribute("ty_text", "ETF/ETN투자유의", "char", "8")]
+		public string ty_text;
 
 		public static class F
 		{
@@ -1241,7 +1271,7 @@ namespace XingAPINet
 			/// </summary>
 			public const string etf_cp = "etf_cp";
 			/// <summary>
-			/// 상품유형
+			/// 상품유형(Filler)
 			/// </summary>
 			public const string etf_kind = "etf_kind";
 			/// <summary>
@@ -1280,6 +1310,30 @@ namespace XingAPINet
 			/// ETNLP보유수량
 			/// </summary>
 			public const string lp_holdvol = "lp_holdvol";
+			/// <summary>
+			/// 상장일
+			/// </summary>
+			public const string listdate = "listdate";
+			/// <summary>
+			/// ETP상품구분코드
+			/// </summary>
+			public const string etp_gb = "etp_gb";
+			/// <summary>
+			/// ETN조기상환가능여부
+			/// </summary>
+			public const string etn_elback_yn = "etn_elback_yn";
+			/// <summary>
+			/// 최종결제
+			/// </summary>
+			public const string settletype = "settletype";
+			/// <summary>
+			/// 지수자산분류코드(대분류)
+			/// </summary>
+			public const string idx_asset_class1 = "idx_asset_class1";
+			/// <summary>
+			/// ETF/ETN투자유의
+			/// </summary>
+			public const string ty_text = "ty_text";
 		}
 
 		public static string[] AllFields = new string[]
@@ -1411,6 +1465,12 @@ namespace XingAPINet
 			F.last_sdate,
 			F.last_edate,
 			F.lp_holdvol,
+			F.listdate,
+			F.etp_gb,
+			F.etn_elback_yn,
+			F.settletype,
+			F.idx_asset_class1,
+			F.ty_text,
 		};
 
 
@@ -1534,7 +1594,7 @@ namespace XingAPINet
 			dict["lp_nm4"] = new XAQueryFieldInfo("char", lp_nm4, lp_nm4, "LP4", (decimal)20);
 			dict["lp_nm5"] = new XAQueryFieldInfo("char", lp_nm5, lp_nm5, "LP5", (decimal)20);
 			dict["etf_cp"] = new XAQueryFieldInfo("char", etf_cp, etf_cp, "복제방법", (decimal)10);
-			dict["etf_kind"] = new XAQueryFieldInfo("char", etf_kind, etf_kind, "상품유형", (decimal)10);
+			dict["etf_kind"] = new XAQueryFieldInfo("char", etf_kind, etf_kind, "상품유형(Filler)", (decimal)10);
 			dict["vi_gubun"] = new XAQueryFieldInfo("char", vi_gubun, vi_gubun, "VI발동해제", (decimal)10);
 			dict["etn_kind_cd"] = new XAQueryFieldInfo("char", etn_kind_cd, etn_kind_cd, "ETN상품분류", (decimal)20);
 			dict["lastymd"] = new XAQueryFieldInfo("char", lastymd, lastymd, "ETN만기일", (decimal)8);
@@ -1544,6 +1604,12 @@ namespace XingAPINet
 			dict["last_sdate"] = new XAQueryFieldInfo("char", last_sdate, last_sdate, "ETN만기상환가격결정시작일", (decimal)8);
 			dict["last_edate"] = new XAQueryFieldInfo("char", last_edate, last_edate, "ETN만기상환가격결정종료일", (decimal)8);
 			dict["lp_holdvol"] = new XAQueryFieldInfo("char", lp_holdvol, lp_holdvol, "ETNLP보유수량", (decimal)12);
+			dict["listdate"] = new XAQueryFieldInfo("char", listdate, listdate, "상장일", (decimal)8);
+			dict["etp_gb"] = new XAQueryFieldInfo("char", etp_gb, etp_gb.ToString(), "ETP상품구분코드", (decimal)1);
+			dict["etn_elback_yn"] = new XAQueryFieldInfo("char", etn_elback_yn, etn_elback_yn.ToString(), "ETN조기상환가능여부", (decimal)1);
+			dict["settletype"] = new XAQueryFieldInfo("char", settletype, settletype, "최종결제", (decimal)2);
+			dict["idx_asset_class1"] = new XAQueryFieldInfo("char", idx_asset_class1, idx_asset_class1, "지수자산분류코드(대분류)", (decimal)2);
+			dict["ty_text"] = new XAQueryFieldInfo("char", ty_text, ty_text, "ETF/ETN투자유의", (decimal)8);
 
 			return dict;
 		}
@@ -2060,6 +2126,30 @@ namespace XingAPINet
 					this.lp_holdvol = fieldInfo.FieldValue.TrimEnd('?');
 				break;
 
+				case "listdate":
+					this.listdate = fieldInfo.FieldValue.TrimEnd('?');
+				break;
+
+				case "etp_gb":
+					this.etp_gb = fieldInfo.FieldValue.FirstOrDefault();
+				break;
+
+				case "etn_elback_yn":
+					this.etn_elback_yn = fieldInfo.FieldValue.FirstOrDefault();
+				break;
+
+				case "settletype":
+					this.settletype = fieldInfo.FieldValue.TrimEnd('?');
+				break;
+
+				case "idx_asset_class1":
+					this.idx_asset_class1 = fieldInfo.FieldValue.TrimEnd('?');
+				break;
+
+				case "ty_text":
+					this.ty_text = fieldInfo.FieldValue.TrimEnd('?');
+				break;
+
 
 			}
 		}
@@ -2204,6 +2294,12 @@ namespace XingAPINet
 				block.last_sdate = query.GetFieldData(block.GetBlockName(), "last_sdate", 0).TrimEnd('?'); // char 8
 				block.last_edate = query.GetFieldData(block.GetBlockName(), "last_edate", 0).TrimEnd('?'); // char 8
 				block.lp_holdvol = query.GetFieldData(block.GetBlockName(), "lp_holdvol", 0).TrimEnd('?'); // char 12
+				block.listdate = query.GetFieldData(block.GetBlockName(), "listdate", 0).TrimEnd('?'); // char 8
+				block.etp_gb = query.GetFieldData(block.GetBlockName(), "etp_gb", 0).FirstOrDefault(); // char 1
+				block.etn_elback_yn = query.GetFieldData(block.GetBlockName(), "etn_elback_yn", 0).FirstOrDefault(); // char 1
+				block.settletype = query.GetFieldData(block.GetBlockName(), "settletype", 0).TrimEnd('?'); // char 2
+				block.idx_asset_class1 = query.GetFieldData(block.GetBlockName(), "idx_asset_class1", 0).TrimEnd('?'); // char 2
+				block.ty_text = query.GetFieldData(block.GetBlockName(), "ty_text", 0).TrimEnd('?'); // char 8
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -2342,6 +2438,12 @@ namespace XingAPINet
 			if (last_sdate?.Length > 8) return false; // char 8
 			if (last_edate?.Length > 8) return false; // char 8
 			if (lp_holdvol?.Length > 12) return false; // char 12
+			if (listdate?.Length > 8) return false; // char 8
+			// etp_gb char 1
+			// etn_elback_yn char 1
+			if (settletype?.Length > 2) return false; // char 2
+			if (idx_asset_class1?.Length > 2) return false; // char 2
+			if (ty_text?.Length > 8) return false; // char 8
 
 			return true;
 		}

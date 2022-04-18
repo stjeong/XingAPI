@@ -352,6 +352,26 @@ namespace XingAPINet
 		/// </summary>
 		[XAQueryFieldAttribute("gm_vo_sum", "누적공매도수량", "long", "12")]
 		public long gm_vo_sum;
+		/// <summary>
+		/// 업틱룰적용공매도수량
+		/// </summary>
+		[XAQueryFieldAttribute("gm_vo1", "업틱룰적용공매도수량", "long", "12")]
+		public long gm_vo1;
+		/// <summary>
+		/// 업틱룰적용공매도대금
+		/// </summary>
+		[XAQueryFieldAttribute("gm_va1", "업틱룰적용공매도대금", "long", "12")]
+		public long gm_va1;
+		/// <summary>
+		/// 업틱룰예외공매도수량
+		/// </summary>
+		[XAQueryFieldAttribute("gm_vo2", "업틱룰예외공매도수량", "long", "12")]
+		public long gm_vo2;
+		/// <summary>
+		/// 업틱룰예외공매도대금
+		/// </summary>
+		[XAQueryFieldAttribute("gm_va2", "업틱룰예외공매도대금", "long", "12")]
+		public long gm_va2;
 
 		public static class F
 		{
@@ -403,6 +423,22 @@ namespace XingAPINet
 			/// 누적공매도수량
 			/// </summary>
 			public const string gm_vo_sum = "gm_vo_sum";
+			/// <summary>
+			/// 업틱룰적용공매도수량
+			/// </summary>
+			public const string gm_vo1 = "gm_vo1";
+			/// <summary>
+			/// 업틱룰적용공매도대금
+			/// </summary>
+			public const string gm_va1 = "gm_va1";
+			/// <summary>
+			/// 업틱룰예외공매도수량
+			/// </summary>
+			public const string gm_vo2 = "gm_vo2";
+			/// <summary>
+			/// 업틱룰예외공매도대금
+			/// </summary>
+			public const string gm_va2 = "gm_va2";
 		}
 
 		public static string[] AllFields = new string[]
@@ -419,6 +455,10 @@ namespace XingAPINet
 			F.gm_per,
 			F.gm_avg,
 			F.gm_vo_sum,
+			F.gm_vo1,
+			F.gm_va1,
+			F.gm_vo2,
+			F.gm_va2,
 		};
 
 
@@ -437,6 +477,10 @@ namespace XingAPINet
 			dict["gm_per"] = new XAQueryFieldInfo("float", gm_per, gm_per.ToString("000000.00"), "공매도거래비중", (decimal)6.2);
 			dict["gm_avg"] = new XAQueryFieldInfo("long", gm_avg, gm_avg.ToString("d12"), "평균공매도단가", (decimal)12);
 			dict["gm_vo_sum"] = new XAQueryFieldInfo("long", gm_vo_sum, gm_vo_sum.ToString("d12"), "누적공매도수량", (decimal)12);
+			dict["gm_vo1"] = new XAQueryFieldInfo("long", gm_vo1, gm_vo1.ToString("d12"), "업틱룰적용공매도수량", (decimal)12);
+			dict["gm_va1"] = new XAQueryFieldInfo("long", gm_va1, gm_va1.ToString("d12"), "업틱룰적용공매도대금", (decimal)12);
+			dict["gm_vo2"] = new XAQueryFieldInfo("long", gm_vo2, gm_vo2.ToString("d12"), "업틱룰예외공매도수량", (decimal)12);
+			dict["gm_va2"] = new XAQueryFieldInfo("long", gm_va2, gm_va2.ToString("d12"), "업틱룰예외공매도대금", (decimal)12);
 
 			return dict;
 		}
@@ -493,6 +537,22 @@ namespace XingAPINet
 					this.gm_vo_sum = fieldInfo.FieldValue.ParseLong("gm_vo_sum");
 				break;
 
+				case "gm_vo1":
+					this.gm_vo1 = fieldInfo.FieldValue.ParseLong("gm_vo1");
+				break;
+
+				case "gm_va1":
+					this.gm_va1 = fieldInfo.FieldValue.ParseLong("gm_va1");
+				break;
+
+				case "gm_vo2":
+					this.gm_vo2 = fieldInfo.FieldValue.ParseLong("gm_vo2");
+				break;
+
+				case "gm_va2":
+					this.gm_va2 = fieldInfo.FieldValue.ParseLong("gm_va2");
+				break;
+
 
 			}
 		}
@@ -524,6 +584,10 @@ namespace XingAPINet
 					block.gm_per = query.GetFieldData(block.GetBlockName(), "gm_per", i).ParseFloat("gm_per"); // float 6.2
 					block.gm_avg = query.GetFieldData(block.GetBlockName(), "gm_avg", i).ParseLong("gm_avg"); // long 12
 					block.gm_vo_sum = query.GetFieldData(block.GetBlockName(), "gm_vo_sum", i).ParseLong("gm_vo_sum"); // long 12
+					block.gm_vo1 = query.GetFieldData(block.GetBlockName(), "gm_vo1", i).ParseLong("gm_vo1"); // long 12
+					block.gm_va1 = query.GetFieldData(block.GetBlockName(), "gm_va1", i).ParseLong("gm_va1"); // long 12
+					block.gm_vo2 = query.GetFieldData(block.GetBlockName(), "gm_vo2", i).ParseLong("gm_vo2"); // long 12
+					block.gm_va2 = query.GetFieldData(block.GetBlockName(), "gm_va2", i).ParseLong("gm_va2"); // long 12
 
 				} catch (InvalidDataFormatException e) {
 					block.IsValidData = false;
@@ -549,6 +613,10 @@ namespace XingAPINet
 			// gm_per float 6.2
 			if (gm_avg.ToString().Length > 12) return false; // long 12
 			if (gm_vo_sum.ToString().Length > 12) return false; // long 12
+			if (gm_vo1.ToString().Length > 12) return false; // long 12
+			if (gm_va1.ToString().Length > 12) return false; // long 12
+			if (gm_vo2.ToString().Length > 12) return false; // long 12
+			if (gm_va2.ToString().Length > 12) return false; // long 12
 
 			return true;
 		}

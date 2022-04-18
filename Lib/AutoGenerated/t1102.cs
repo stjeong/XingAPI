@@ -929,6 +929,11 @@ namespace XingAPINet
 		/// </summary>
 		[XAQueryFieldAttribute("lend_text", "대차불가표시", "char", "8")]
 		public string lend_text;
+		/// <summary>
+		/// ETF/ETN투자유의
+		/// </summary>
+		[XAQueryFieldAttribute("ty_text", "ETF/ETN투자유의", "char", "8")]
+		public string ty_text;
 
 		public static class F
 		{
@@ -1568,6 +1573,10 @@ namespace XingAPINet
 			/// 대차불가표시
 			/// </summary>
 			public const string lend_text = "lend_text";
+			/// <summary>
+			/// ETF/ETN투자유의
+			/// </summary>
+			public const string ty_text = "ty_text";
 		}
 
 		public static string[] AllFields = new string[]
@@ -1731,6 +1740,7 @@ namespace XingAPINet
 			F.low_lqdt_gu,
 			F.abnormal_rise_gu,
 			F.lend_text,
+			F.ty_text,
 		};
 
 
@@ -1896,6 +1906,7 @@ namespace XingAPINet
 			dict["low_lqdt_gu"] = new XAQueryFieldInfo("char", low_lqdt_gu, low_lqdt_gu.ToString(), "저유동성종목여부", (decimal)1);
 			dict["abnormal_rise_gu"] = new XAQueryFieldInfo("char", abnormal_rise_gu, abnormal_rise_gu.ToString(), "이상급등종목여부", (decimal)1);
 			dict["lend_text"] = new XAQueryFieldInfo("char", lend_text, lend_text, "대차불가표시", (decimal)8);
+			dict["ty_text"] = new XAQueryFieldInfo("char", ty_text, ty_text, "ETF/ETN투자유의", (decimal)8);
 
 			return dict;
 		}
@@ -2540,6 +2551,10 @@ namespace XingAPINet
 					this.lend_text = fieldInfo.FieldValue.TrimEnd('?');
 				break;
 
+				case "ty_text":
+					this.ty_text = fieldInfo.FieldValue.TrimEnd('?');
+				break;
+
 
 			}
 		}
@@ -2716,6 +2731,7 @@ namespace XingAPINet
 				block.low_lqdt_gu = query.GetFieldData(block.GetBlockName(), "low_lqdt_gu", 0).FirstOrDefault(); // char 1
 				block.abnormal_rise_gu = query.GetFieldData(block.GetBlockName(), "abnormal_rise_gu", 0).FirstOrDefault(); // char 1
 				block.lend_text = query.GetFieldData(block.GetBlockName(), "lend_text", 0).TrimEnd('?'); // char 8
+				block.ty_text = query.GetFieldData(block.GetBlockName(), "ty_text", 0).TrimEnd('?'); // char 8
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -2886,6 +2902,7 @@ namespace XingAPINet
 			// low_lqdt_gu char 1
 			// abnormal_rise_gu char 1
 			if (lend_text?.Length > 8) return false; // char 8
+			if (ty_text?.Length > 8) return false; // char 8
 
 			return true;
 		}

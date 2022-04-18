@@ -28,6 +28,9 @@ BEGIN_FUNCTION_MAP
 		배당수익율,cashrate,cashrate,float,13.2;
 		현재가,price,price,long,8;
 		전일종가,jnilclose,jnilclose,long,8;
+		위험고지구분1_정리매매,notice1,notice1,char,1;
+		위험고지구분2_투자위험,notice2,notice2,char,1;
+		위험고지구분3_단기과열,notice3,notice3,char,1;
 	end
 	t3320OutBlock1,기업재무정보,output;
 	begin

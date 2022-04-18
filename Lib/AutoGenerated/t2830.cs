@@ -260,14 +260,14 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("cmefocode", "CME야간선물종목코드", "char", "8")]
 		public string cmefocode;
 		/// <summary>
-		/// 정규장상한가
+		/// 정규장적용상한가
 		/// </summary>
-		[XAQueryFieldAttribute("uplmtprice", "정규장상한가", "float", "6.2")]
+		[XAQueryFieldAttribute("uplmtprice", "정규장적용상한가", "float", "6.2")]
 		public float uplmtprice;
 		/// <summary>
-		/// 정규장하한가
+		/// 정규장적용하한가
 		/// </summary>
-		[XAQueryFieldAttribute("dnlmtprice", "정규장하한가", "float", "6.2")]
+		[XAQueryFieldAttribute("dnlmtprice", "정규장적용하한가", "float", "6.2")]
 		public float dnlmtprice;
 		/// <summary>
 		/// 단축코드
@@ -309,6 +309,16 @@ namespace XingAPINet
 		/// </summary>
 		[XAQueryFieldAttribute("jnilvalue", "전일거래대금", "long", "12")]
 		public long jnilvalue;
+		/// <summary>
+		/// 정규장3단계상한가
+		/// </summary>
+		[XAQueryFieldAttribute("uplmtprice_3rd", "정규장3단계상한가", "float", "6.2")]
+		public float uplmtprice_3rd;
+		/// <summary>
+		/// 정규장3단계하한가
+		/// </summary>
+		[XAQueryFieldAttribute("dnlmtprice_3rd", "정규장3단계하한가", "float", "6.2")]
+		public float dnlmtprice_3rd;
 
 		public static class F
 		{
@@ -413,11 +423,11 @@ namespace XingAPINet
 			/// </summary>
 			public const string cmefocode = "cmefocode";
 			/// <summary>
-			/// 정규장상한가
+			/// 정규장적용상한가
 			/// </summary>
 			public const string uplmtprice = "uplmtprice";
 			/// <summary>
-			/// 정규장하한가
+			/// 정규장적용하한가
 			/// </summary>
 			public const string dnlmtprice = "dnlmtprice";
 			/// <summary>
@@ -452,6 +462,14 @@ namespace XingAPINet
 			/// 전일거래대금
 			/// </summary>
 			public const string jnilvalue = "jnilvalue";
+			/// <summary>
+			/// 정규장3단계상한가
+			/// </summary>
+			public const string uplmtprice_3rd = "uplmtprice_3rd";
+			/// <summary>
+			/// 정규장3단계하한가
+			/// </summary>
+			public const string dnlmtprice_3rd = "dnlmtprice_3rd";
 		}
 
 		public static string[] AllFields = new string[]
@@ -491,6 +509,8 @@ namespace XingAPINet
 			F.danhochk,
 			F.jnilvolume,
 			F.jnilvalue,
+			F.uplmtprice_3rd,
+			F.dnlmtprice_3rd,
 		};
 
 
@@ -522,8 +542,8 @@ namespace XingAPINet
 			dict["cmechange"] = new XAQueryFieldInfo("float", cmechange, cmechange.ToString("000000.00"), "CME야간선물전일대비", (decimal)6.2);
 			dict["cmediff"] = new XAQueryFieldInfo("float", cmediff, cmediff.ToString("000000.00"), "CME야간선물등락율", (decimal)6.2);
 			dict["cmefocode"] = new XAQueryFieldInfo("char", cmefocode, cmefocode, "CME야간선물종목코드", (decimal)8);
-			dict["uplmtprice"] = new XAQueryFieldInfo("float", uplmtprice, uplmtprice.ToString("000000.00"), "정규장상한가", (decimal)6.2);
-			dict["dnlmtprice"] = new XAQueryFieldInfo("float", dnlmtprice, dnlmtprice.ToString("000000.00"), "정규장하한가", (decimal)6.2);
+			dict["uplmtprice"] = new XAQueryFieldInfo("float", uplmtprice, uplmtprice.ToString("000000.00"), "정규장적용상한가", (decimal)6.2);
+			dict["dnlmtprice"] = new XAQueryFieldInfo("float", dnlmtprice, dnlmtprice.ToString("000000.00"), "정규장적용하한가", (decimal)6.2);
 			dict["focode"] = new XAQueryFieldInfo("char", focode, focode, "단축코드", (decimal)8);
 			dict["yeprice"] = new XAQueryFieldInfo("float", yeprice, yeprice.ToString("000000.00"), "예상체결가", (decimal)6.2);
 			dict["ysign"] = new XAQueryFieldInfo("char", ysign, ysign.ToString(), "전일대비구분", (decimal)1);
@@ -532,6 +552,8 @@ namespace XingAPINet
 			dict["danhochk"] = new XAQueryFieldInfo("char", danhochk, danhochk.ToString(), "단일가호가여부", (decimal)1);
 			dict["jnilvolume"] = new XAQueryFieldInfo("long", jnilvolume, jnilvolume.ToString("d12"), "전일거래량", (decimal)12);
 			dict["jnilvalue"] = new XAQueryFieldInfo("long", jnilvalue, jnilvalue.ToString("d12"), "전일거래대금", (decimal)12);
+			dict["uplmtprice_3rd"] = new XAQueryFieldInfo("float", uplmtprice_3rd, uplmtprice_3rd.ToString("000000.00"), "정규장3단계상한가", (decimal)6.2);
+			dict["dnlmtprice_3rd"] = new XAQueryFieldInfo("float", dnlmtprice_3rd, dnlmtprice_3rd.ToString("000000.00"), "정규장3단계하한가", (decimal)6.2);
 
 			return dict;
 		}
@@ -680,6 +702,14 @@ namespace XingAPINet
 					this.jnilvalue = fieldInfo.FieldValue.ParseLong("jnilvalue");
 				break;
 
+				case "uplmtprice_3rd":
+					this.uplmtprice_3rd = fieldInfo.FieldValue.ParseFloat("uplmtprice_3rd");
+				break;
+
+				case "dnlmtprice_3rd":
+					this.dnlmtprice_3rd = fieldInfo.FieldValue.ParseFloat("dnlmtprice_3rd");
+				break;
+
 
 			}
 		}
@@ -732,6 +762,8 @@ namespace XingAPINet
 				block.danhochk = query.GetFieldData(block.GetBlockName(), "danhochk", 0).FirstOrDefault(); // char 1
 				block.jnilvolume = query.GetFieldData(block.GetBlockName(), "jnilvolume", 0).ParseLong("jnilvolume"); // long 12
 				block.jnilvalue = query.GetFieldData(block.GetBlockName(), "jnilvalue", 0).ParseLong("jnilvalue"); // long 12
+				block.uplmtprice_3rd = query.GetFieldData(block.GetBlockName(), "uplmtprice_3rd", 0).ParseFloat("uplmtprice_3rd"); // float 6.2
+				block.dnlmtprice_3rd = query.GetFieldData(block.GetBlockName(), "dnlmtprice_3rd", 0).ParseFloat("dnlmtprice_3rd"); // float 6.2
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -778,6 +810,8 @@ namespace XingAPINet
 			// danhochk char 1
 			if (jnilvolume.ToString().Length > 12) return false; // long 12
 			if (jnilvalue.ToString().Length > 12) return false; // long 12
+			// uplmtprice_3rd float 6.2
+			// dnlmtprice_3rd float 6.2
 
 			return true;
 		}

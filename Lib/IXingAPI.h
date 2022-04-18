@@ -151,6 +151,9 @@ public:
 
 	inline	void	SetNotifyFlag			( BOOL bNotifyFlag );	// 긴급메시지, 서버접속 단절통지 등의 통보 설정 (지원 예정)
 
+	inline	void	SetProgramOrder			( BOOL bProgramOrder);				// 프로그램매매 설정
+	inline	BOOL	GetProgramOrder			();									// 프로그램매매 설정여부 확인
+
 	//------------------------------------------------------------------------------
 	// 부가 서비스 TR 조회
 	//     반환값       - Request() 함수와 이용 방식 동일
@@ -464,6 +467,9 @@ protected:
 
 	typedef int		( __stdcall *FP_DECOMPRESS				) ( LPCTSTR, LPCTSTR, int );
 	typedef BOOL	( __stdcall *FP_ISCHARTLIB				) ( );
+	
+	typedef void	(__stdcall *FP_SETPROGRAMORDER			) ( BOOL );
+	typedef BOOL	(__stdcall *FP_GETPROGRAMORDER			) ( );
 
 	FP_CONNECT					m_fpConnect;
 	FP_ISCONNECTED				m_fpIsConnected;
@@ -517,6 +523,9 @@ protected:
 
 	FP_DECOMPRESS				m_fpDecompress;
 	FP_ISCHARTLIB				m_fpIsChartLib;
+
+	FP_SETPROGRAMORDER			m_fpSetProgramOrder;
+	FP_GETPROGRAMORDER			m_fpGetProgramOrder;
 };
 
 BOOL IXingAPI::Init(LPCTSTR szPath)
@@ -1042,6 +1051,30 @@ BOOL IXingAPI::IsChartLib()
 	ASSERT( m_fpIsChartLib );
 	if( NULL == m_fpIsChartLib ) return FALSE;
 	return m_fpIsChartLib();
+}
+
+void IXingAPI::SetProgramOrder( BOOL bProgramOrder )
+{
+	ASSERT( m_hModule );
+	if( NULL == m_hModule		) return;
+
+	if( NULL == m_fpSetProgramOrder ) m_fpSetProgramOrder = (FP_SETPROGRAMORDER)GetProcAddress( m_hModule, "ETK_SetProgramOrder" );
+	ASSERT( m_fpSetProgramOrder );
+	if( NULL == m_fpSetProgramOrder ) return;
+	
+	m_fpSetProgramOrder( bProgramOrder );
+}
+
+BOOL IXingAPI::GetProgramOrder()
+{
+	ASSERT( m_hModule );
+	if( NULL == m_hModule		) return FALSE;
+
+	if( NULL == m_fpGetProgramOrder ) m_fpGetProgramOrder = (FP_GETPROGRAMORDER)GetProcAddress( m_hModule, "ETK_GetProgramOrder" );
+	ASSERT( m_fpGetProgramOrder );
+	if( NULL == m_fpGetProgramOrder ) return FALSE;
+	
+	return m_fpGetProgramOrder();
 }
 
 #pragma pack( pop )

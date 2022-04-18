@@ -47,7 +47,7 @@ namespace t1533
                 if (loadFromDB == true)
                 {
                     var items = XQt1533.ReadFromDB();
-                    foreach (var item in items)
+                    foreach (var item in items.OutBlock1)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline80Cols);
                     }
@@ -55,12 +55,12 @@ namespace t1533
                 else if (useDemoServer)
                 {
                     var items = XQt1533.Get(XQt1533Gubun.상승율상위);
-                    foreach (var item in items)
+                    foreach (var item in items.OutBlock1)
                     {
                         item.Dump(Console.Out, DumpOutputType.Inline80Cols);
                     }
 
-                    items.WriteToDB(replace: true);
+                    items.OutBlock1.WriteToDB(replace: true);
                 }
                 else
                 {
@@ -73,7 +73,7 @@ namespace t1533
                             Console.WriteLine("Failed to send request");
                         }
 
-                        XQt1533OutBlock[] outBlocks = query.GetBlocks();
+                        XQt1533OutBlock1[] outBlocks = query.GetBlock1s();
                         foreach (var item in outBlocks)
                         {
                             if (item.IsValidData == true)

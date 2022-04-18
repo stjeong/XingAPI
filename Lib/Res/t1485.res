@@ -27,6 +27,7 @@ BEGIN_FUNCTION_MAP
 		전일대비,change,change,float,10.2;
 		예상체결량,volume,volume,long,12;
 		예상체결량직전대비,volcha,volcha,long,12;
+		예상등락율,diff,diff,float,6.2;
 	end
 	END_DATA_MAP
 END_FUNCTION_MAP

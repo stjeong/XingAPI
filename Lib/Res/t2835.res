@@ -3,7 +3,8 @@ BEGIN_FUNCTION_MAP
 	BEGIN_DATA_MAP
 	t2835InBlock,기본입력,input;
 	begin
-		월물,yyyymm,yyyymm,char,6;
+		월물(혹은주물WN),yyyymm,yyyymm,char,6;
+		구분(G:원지수W:위클리),gubun,gubun,char,1;
 	end
 	t2835OutBlock,출력,output;
 	begin

@@ -6,7 +6,11 @@ BEGIN_FUNCTION_MAP
 		구분,gubun,gubun,char,1;
 		대비일자,chgdate,chgdate,long,2;
 	end
-	t1533OutBlock,출력,output,occurs;
+	t1533OutBlock,기본출력,output;
+	begin
+		일자,bdate,bdate,char,8;
+	end
+	t1533OutBlock1,출력1,output,occurs;
 	begin
 		테마명,tmname,tmname,char,36;
 		전체,totcnt,totcnt,long,4;

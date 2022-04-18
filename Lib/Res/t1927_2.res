@@ -26,6 +26,10 @@ BEGIN_FUNCTION_MAP
 		공매도거래비중,gm_per,gm_per,float,6.2;
 		평균공매도단가,gm_avg,gm_avg,long,12;
 		누적공매도수량,gm_vo_sum,gm_vo_sum,long,12;
+		업틱룰적용공매도수량,gm_vo1,gm_vo1,long,12;
+		업틱룰적용공매도대금,gm_va1,gm_va1,long,12;
+		업틱룰예외공매도수량,gm_vo2,gm_vo2,long,12;
+		업틱룰예외공매도대금,gm_va2,gm_va2,long,12;
 	end
 	END_DATA_MAP
 END_FUNCTION_MAP

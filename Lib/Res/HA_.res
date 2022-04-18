@@ -53,7 +53,7 @@ BEGIN_FUNCTION_MAP
         동시호가구분,	    donsigubun,	    donsigubun,		char,	1;
 		단축코드,			shcode,			shcode,			char,	6;
 		배분적용구분,		alloc_gubun,	alloc_gubun,	char,	1;
+		누적거래량,			volume,			volume,			long,	12;
     end
     END_DATA_MAP
 END_FUNCTION_MAP
-HA_

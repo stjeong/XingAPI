@@ -48,29 +48,40 @@ namespace XingAPINet
 		public bool HasOccurs => _hasOccurs;
 
 		/// <summary>
-		/// 월물
+		/// 월물(혹은주물WN)
 		/// </summary>
-		[XAQueryFieldAttribute("yyyymm", "월물", "char", "6")]
+		[XAQueryFieldAttribute("yyyymm", "월물(혹은주물WN)", "char", "6")]
 		public string yyyymm;
+		/// <summary>
+		/// 구분(G:원지수W:위클리)
+		/// </summary>
+		[XAQueryFieldAttribute("gubun", "구분(G:원지수W:위클리)", "char", "1")]
+		public char gubun;
 
 		public static class F
 		{
 			/// <summary>
-			/// 월물
+			/// 월물(혹은주물WN)
 			/// </summary>
 			public const string yyyymm = "yyyymm";
+			/// <summary>
+			/// 구분(G:원지수W:위클리)
+			/// </summary>
+			public const string gubun = "gubun";
 		}
 
 		public static string[] AllFields = new string[]
 		{
 			F.yyyymm,
+			F.gubun,
 		};
 
 
 		public override Dictionary<string, XAQueryFieldInfo> GetFieldsInfo()
 		{
 			Dictionary<string, XAQueryFieldInfo> dict = new Dictionary<string, XAQueryFieldInfo>();
-			dict["yyyymm"] = new XAQueryFieldInfo("char", yyyymm, yyyymm, "월물", (decimal)6);
+			dict["yyyymm"] = new XAQueryFieldInfo("char", yyyymm, yyyymm, "월물(혹은주물WN)", (decimal)6);
+			dict["gubun"] = new XAQueryFieldInfo("char", gubun, gubun.ToString(), "구분(G:원지수W:위클리)", (decimal)1);
 
 			return dict;
 		}
@@ -83,6 +94,10 @@ namespace XingAPINet
 					this.yyyymm = fieldInfo.FieldValue.TrimEnd('?');
 				break;
 
+				case "gubun":
+					this.gubun = fieldInfo.FieldValue.FirstOrDefault();
+				break;
+
 
 			}
 		}
@@ -90,6 +105,7 @@ namespace XingAPINet
 		public bool VerifyData()
 		{
 			if (yyyymm?.Length > 6) return false; // char 6
+			// gubun char 1
 
 			return true;
 		}
@@ -1233,6 +1249,7 @@ namespace XingAPINet
 			}
 
 			_xaQuery.SetFieldData(block.GetBlockName(), "yyyymm", 0, block.yyyymm); // char 6
+			_xaQuery.SetFieldData(block.GetBlockName(), "gubun", 0, block.gubun.ToString()); // char 1
 
 			return true;
 		}

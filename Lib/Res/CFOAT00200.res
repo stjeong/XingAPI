@@ -8,7 +8,7 @@ BEGIN_FUNCTION_MAP
 		선물옵션종목번호, FnoIsuNo, FnoIsuNo, char, 12;
 		원주문번호, OrgOrdNo, OrgOrdNo, long, 10;
 		선물옵션호가유형코드, FnoOrdprcPtnCode, FnoOrdprcPtnCode, char, 2;
-		주문가격, OrdPrc, OrdPrc, double, 15.2;
+		선물옵션주문가격, FnoOrdPrc, FnoOrdPrc, double, 27.8;
 		정정수량, MdfyQty, MdfyQty, long, 16;
 	end
 	CFOAT00200OutBlock1,In(*EMPTY*),output;
@@ -21,7 +21,7 @@ BEGIN_FUNCTION_MAP
 		선물옵션주문유형코드, FnoOrdPtnCode, FnoOrdPtnCode, char, 2;
 		원주문번호, OrgOrdNo, OrgOrdNo, long, 10;
 		선물옵션호가유형코드, FnoOrdprcPtnCode, FnoOrdprcPtnCode, char, 2;
-		주문가격, OrdPrc, OrdPrc, double, 15.2;
+		선물옵션주문가격, FnoOrdPrc, FnoOrdPrc, double, 27.8;
 		정정수량, MdfyQty, MdfyQty, long, 16;
 		통신매체코드, CommdaCode, CommdaCode, char, 2;
 		협의매매완료시각, DscusBnsCmpltTime, DscusBnsCmpltTime, char, 9;

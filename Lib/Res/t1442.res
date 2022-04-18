@@ -12,6 +12,7 @@ BEGIN_FUNCTION_MAP
 		종료가격,eprice,eprice,long,8;
 		거래량,volume,volume,long,12;
 		IDX,idx,idx,long,4;
+		대상제외2,jc_num2,jc_num2,long,12;
 	end
 	t1442OutBlock,출력,output;
 	begin

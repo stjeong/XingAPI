@@ -156,6 +156,10 @@ public static class XingTypeList
 	/// </summary>
 	public const string CM2 = "CM2";
 	/// <summary>
+	/// 계좌별신용한도조회
+	/// </summary>
+	public const string CSPAQ00600 = "CSPAQ00600";
+	/// <summary>
 	/// 현물계좌예수금 주문가능금액 총평가 조회
 	/// </summary>
 	public const string CSPAQ12200 = "CSPAQ12200";
@@ -167,6 +171,10 @@ public static class XingTypeList
 	/// 현물계좌주문체결내역조회
 	/// </summary>
 	public const string CSPAQ13700 = "CSPAQ13700";
+	/// <summary>
+	/// 현물계좌예수금 주문가능금액 총평가2
+	/// </summary>
+	public const string CSPAQ22200 = "CSPAQ22200";
 	/// <summary>
 	/// 현물주문
 	/// </summary>
@@ -183,6 +191,26 @@ public static class XingTypeList
 	/// 현물계좌증거금률별주문가능수량조회
 	/// </summary>
 	public const string CSPBQ00200 = "CSPBQ00200";
+	/// <summary>
+	/// 현물정보 USD 실시간(CUR)
+	/// </summary>
+	public const string CUR = "CUR";
+	/// <summary>
+	/// KOSPI시간외단일가호가잔량(DH1)
+	/// </summary>
+	public const string DH1 = "DH1";
+	/// <summary>
+	/// KOSDAQ시간외단일가호가잔량(DHA)
+	/// </summary>
+	public const string DHA = "DHA";
+	/// <summary>
+	/// KOSDAQ시간외단일가체결(DK3)
+	/// </summary>
+	public const string DK3 = "DK3";
+	/// <summary>
+	/// KOSPI시간외단일가체결(DS3)
+	/// </summary>
+	public const string DS3 = "DS3";
 	/// <summary>
 	/// 시간외단일가VI발동해제(DVI)
 	/// </summary>
@@ -1060,6 +1088,10 @@ public static class XingTypeList
 	/// </summary>
 	public const string t8436 = "t8436";
 	/// <summary>
+	/// CME/EUREX마스터조회(API용)(t8437)
+	/// </summary>
+	public const string t8437 = "t8437";
+	/// <summary>
 	/// 기초자산리스트조회(t9905)
 	/// </summary>
 	public const string t9905 = "t9905";
@@ -1160,13 +1192,20 @@ public static class XingTypeList
 		typeof(XRCM0), // CME접수
 		typeof(XRCM1), // CME체결
 		typeof(XRCM2), // CME확인
+		typeof(XQCSPAQ00600), // 계좌별신용한도조회
 		typeof(XQCSPAQ12200), // 현물계좌예수금 주문가능금액 총평가 조회
 		typeof(XQCSPAQ12300), // BEP단가조회
 		typeof(XQCSPAQ13700), // 현물계좌주문체결내역조회
+		typeof(XQCSPAQ22200), // 현물계좌예수금 주문가능금액 총평가2
 		typeof(XQCSPAT00600), // 현물주문
 		typeof(XQCSPAT00700), // 현물정정주문
 		typeof(XQCSPAT00800), // 현물취소주문
 		typeof(XQCSPBQ00200), // 현물계좌증거금률별주문가능수량조회
+		typeof(XRCUR), // 현물정보 USD 실시간(CUR)
+		typeof(XRDH1), // KOSPI시간외단일가호가잔량(DH1)
+		typeof(XRDHA), // KOSDAQ시간외단일가호가잔량(DHA)
+		typeof(XRDK3), // KOSDAQ시간외단일가체결(DK3)
+		typeof(XRDS3), // KOSPI시간외단일가체결(DS3)
 		typeof(XRDVI), // 시간외단일가VI발동해제(DVI)
 		typeof(XREC0), // EUREX연계KP200지수옵션선물체결(EC0)
 		typeof(XREH0), // EUREX연계KP200지수옵션선물호가(EH0)
@@ -1386,6 +1425,7 @@ public static class XingTypeList
 		typeof(XQt8434), // 선물/옵션멀티현재가조회(t8434)
 		typeof(XQt8435), // 파생종목마스터조회API용(t8435)
 		typeof(XQt8436), // 주식종목조회 API용(t8436)
+		typeof(XQt8437), // CME/EUREX마스터조회(API용)(t8437)
 		typeof(XQt9905), // 기초자산리스트조회(t9905)
 		typeof(XQt9907), // 만기월조회(t9907)
 		typeof(XQt9942), // ELW마스터조회API용(t9942)
@@ -1403,5 +1443,5 @@ public static class XingTypeList
 		typeof(XRYs3), // ELW예상체결(Ys3)
 
 	};
-	public const int Count = 279;
+	public const int Count = 287;
 }

@@ -16,7 +16,7 @@ namespace XingAPINet
 
     public partial class XQt1533
     {
-        public static XQt1533OutBlock[] Get(XQt1533Gubun gubun = XQt1533Gubun.상승율상위, long chgdate = default)
+        public static XQAllOutBlocks Get(XQt1533Gubun gubun = XQt1533Gubun.상승율상위, long chgdate = default)
         {
             return Get((char)gubun, chgdate);
         }

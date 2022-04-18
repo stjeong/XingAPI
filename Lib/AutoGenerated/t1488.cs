@@ -405,7 +405,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 매도잔량
 		/// </summary>
-		[XAQueryFieldAttribute("offerrem", "매도잔량", "long", "8")]
+		[XAQueryFieldAttribute("offerrem", "매도잔량", "long", "12")]
 		public long offerrem;
 		/// <summary>
 		/// 매도호가
@@ -420,7 +420,7 @@ namespace XingAPINet
 		/// <summary>
 		/// 매수잔량
 		/// </summary>
-		[XAQueryFieldAttribute("bidrem", "매수잔량", "long", "8")]
+		[XAQueryFieldAttribute("bidrem", "매수잔량", "long", "12")]
 		public long bidrem;
 		/// <summary>
 		/// 연속일수
@@ -531,10 +531,10 @@ namespace XingAPINet
 			dict["change"] = new XAQueryFieldInfo("long", change, change.ToString("d8"), "전일대비", (decimal)8);
 			dict["diff"] = new XAQueryFieldInfo("float", diff, diff.ToString("000000.00"), "등락율", (decimal)6.2);
 			dict["volume"] = new XAQueryFieldInfo("long", volume, volume.ToString("d12"), "누적거래량", (decimal)12);
-			dict["offerrem"] = new XAQueryFieldInfo("long", offerrem, offerrem.ToString("d8"), "매도잔량", (decimal)8);
+			dict["offerrem"] = new XAQueryFieldInfo("long", offerrem, offerrem.ToString("d12"), "매도잔량", (decimal)12);
 			dict["offerho"] = new XAQueryFieldInfo("long", offerho, offerho.ToString("d8"), "매도호가", (decimal)8);
 			dict["bidho"] = new XAQueryFieldInfo("long", bidho, bidho.ToString("d8"), "매수호가", (decimal)8);
-			dict["bidrem"] = new XAQueryFieldInfo("long", bidrem, bidrem.ToString("d8"), "매수잔량", (decimal)8);
+			dict["bidrem"] = new XAQueryFieldInfo("long", bidrem, bidrem.ToString("d12"), "매수잔량", (decimal)12);
 			dict["cnt"] = new XAQueryFieldInfo("long", cnt, cnt.ToString("d4"), "연속일수", (decimal)4);
 			dict["shcode"] = new XAQueryFieldInfo("char", shcode, shcode, "종목코드", (decimal)6);
 			dict["jkrate"] = new XAQueryFieldInfo("char", jkrate, jkrate, "증거금율", (decimal)3);
@@ -628,10 +628,10 @@ namespace XingAPINet
 					block.change = query.GetFieldData(block.GetBlockName(), "change", i).ParseLong("change"); // long 8
 					block.diff = query.GetFieldData(block.GetBlockName(), "diff", i).ParseFloat("diff"); // float 6.2
 					block.volume = query.GetFieldData(block.GetBlockName(), "volume", i).ParseLong("volume"); // long 12
-					block.offerrem = query.GetFieldData(block.GetBlockName(), "offerrem", i).ParseLong("offerrem"); // long 8
+					block.offerrem = query.GetFieldData(block.GetBlockName(), "offerrem", i).ParseLong("offerrem"); // long 12
 					block.offerho = query.GetFieldData(block.GetBlockName(), "offerho", i).ParseLong("offerho"); // long 8
 					block.bidho = query.GetFieldData(block.GetBlockName(), "bidho", i).ParseLong("bidho"); // long 8
-					block.bidrem = query.GetFieldData(block.GetBlockName(), "bidrem", i).ParseLong("bidrem"); // long 8
+					block.bidrem = query.GetFieldData(block.GetBlockName(), "bidrem", i).ParseLong("bidrem"); // long 12
 					block.cnt = query.GetFieldData(block.GetBlockName(), "cnt", i).ParseLong("cnt"); // long 4
 					block.shcode = query.GetFieldData(block.GetBlockName(), "shcode", i).TrimEnd('?'); // char 6
 					block.jkrate = query.GetFieldData(block.GetBlockName(), "jkrate", i).TrimEnd('?'); // char 3
@@ -655,10 +655,10 @@ namespace XingAPINet
 			if (change.ToString().Length > 8) return false; // long 8
 			// diff float 6.2
 			if (volume.ToString().Length > 12) return false; // long 12
-			if (offerrem.ToString().Length > 8) return false; // long 8
+			if (offerrem.ToString().Length > 12) return false; // long 12
 			if (offerho.ToString().Length > 8) return false; // long 8
 			if (bidho.ToString().Length > 8) return false; // long 8
-			if (bidrem.ToString().Length > 8) return false; // long 8
+			if (bidrem.ToString().Length > 12) return false; // long 12
 			if (cnt.ToString().Length > 4) return false; // long 4
 			if (shcode?.Length > 6) return false; // char 6
 			if (jkrate?.Length > 3) return false; // char 3

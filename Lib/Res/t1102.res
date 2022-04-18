@@ -166,6 +166,7 @@ BEGIN_FUNCTION_MAP
 		저유동성종목여부,low_lqdt_gu,low_lqdt_gu,char,1;
 		이상급등종목여부,abnormal_rise_gu,abnormal_rise_gu,char,1;
 		대차불가표시,lend_text,lend_text,char,8;
+		ETF/ETN투자유의,ty_text,ty_text,char,8;
 	end
 	END_DATA_MAP
 END_FUNCTION_MAP

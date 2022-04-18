@@ -364,6 +364,11 @@ namespace XingAPINet
 		/// </summary>
 		[XAQueryFieldAttribute("alloc_gubun", "배분적용구분", "char", "1")]
 		public char alloc_gubun;
+		/// <summary>
+		/// 누적거래량
+		/// </summary>
+		[XAQueryFieldAttribute("volume", "누적거래량", "long", "12")]
+		public long volume;
 
 		public static class F
 		{
@@ -551,6 +556,10 @@ namespace XingAPINet
 			/// 배분적용구분
 			/// </summary>
 			public const string alloc_gubun = "alloc_gubun";
+			/// <summary>
+			/// 누적거래량
+			/// </summary>
+			public const string volume = "volume";
 		}
 
 		public static string[] AllFields = new string[]
@@ -601,6 +610,7 @@ namespace XingAPINet
 			F.donsigubun,
 			F.shcode,
 			F.alloc_gubun,
+			F.volume,
 		};
 
 
@@ -653,6 +663,7 @@ namespace XingAPINet
 			dict["donsigubun"] = new XAQueryFieldInfo("char", donsigubun, donsigubun.ToString(), "동시호가구분", (decimal)1);
 			dict["shcode"] = new XAQueryFieldInfo("char", shcode, shcode, "단축코드", (decimal)6);
 			dict["alloc_gubun"] = new XAQueryFieldInfo("char", alloc_gubun, alloc_gubun.ToString(), "배분적용구분", (decimal)1);
+			dict["volume"] = new XAQueryFieldInfo("long", volume, volume.ToString("d12"), "누적거래량", (decimal)12);
 
 			return dict;
 		}
@@ -845,6 +856,10 @@ namespace XingAPINet
 					this.alloc_gubun = fieldInfo.FieldValue.FirstOrDefault();
 				break;
 
+				case "volume":
+					this.volume = fieldInfo.FieldValue.ParseLong("volume");
+				break;
+
 
 			}
 		}
@@ -902,6 +917,7 @@ namespace XingAPINet
 				block.donsigubun = query.GetFieldData(block.GetBlockName(), "donsigubun").FirstOrDefault(); // char 1
 				block.shcode = query.GetFieldData(block.GetBlockName(), "shcode").TrimEnd('?'); // char 6
 				block.alloc_gubun = query.GetFieldData(block.GetBlockName(), "alloc_gubun").FirstOrDefault(); // char 1
+				block.volume = query.GetFieldData(block.GetBlockName(), "volume").ParseLong("volume"); // long 12
 
 			} catch (InvalidDataFormatException e) {
 				block.IsValidData = false;
@@ -959,6 +975,7 @@ namespace XingAPINet
 			// donsigubun char 1
 			if (shcode?.Length > 6) return false; // char 6
 			// alloc_gubun char 1
+			if (volume.ToString().Length > 12) return false; // long 12
 
 			return true;
 		}

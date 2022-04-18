@@ -443,6 +443,11 @@ namespace XingAPINet
 		/// </summary>
 		[XAQueryFieldAttribute("volcha", "예상체결량직전대비", "long", "12")]
 		public long volcha;
+		/// <summary>
+		/// 예상등락율
+		/// </summary>
+		[XAQueryFieldAttribute("diff", "예상등락율", "float", "6.2")]
+		public float diff;
 
 		public static class F
 		{
@@ -470,6 +475,10 @@ namespace XingAPINet
 			/// 예상체결량직전대비
 			/// </summary>
 			public const string volcha = "volcha";
+			/// <summary>
+			/// 예상등락율
+			/// </summary>
+			public const string diff = "diff";
 		}
 
 		public static string[] AllFields = new string[]
@@ -480,6 +489,7 @@ namespace XingAPINet
 			F.change,
 			F.volume,
 			F.volcha,
+			F.diff,
 		};
 
 
@@ -492,6 +502,7 @@ namespace XingAPINet
 			dict["change"] = new XAQueryFieldInfo("float", change, change.ToString("0000000000.00"), "전일대비", (decimal)10.2);
 			dict["volume"] = new XAQueryFieldInfo("long", volume, volume.ToString("d12"), "예상체결량", (decimal)12);
 			dict["volcha"] = new XAQueryFieldInfo("long", volcha, volcha.ToString("d12"), "예상체결량직전대비", (decimal)12);
+			dict["diff"] = new XAQueryFieldInfo("float", diff, diff.ToString("000000.00"), "예상등락율", (decimal)6.2);
 
 			return dict;
 		}
@@ -524,6 +535,10 @@ namespace XingAPINet
 					this.volcha = fieldInfo.FieldValue.ParseLong("volcha");
 				break;
 
+				case "diff":
+					this.diff = fieldInfo.FieldValue.ParseFloat("diff");
+				break;
+
 
 			}
 		}
@@ -549,6 +564,7 @@ namespace XingAPINet
 					block.change = query.GetFieldData(block.GetBlockName(), "change", i).ParseFloat("change"); // float 10.2
 					block.volume = query.GetFieldData(block.GetBlockName(), "volume", i).ParseLong("volume"); // long 12
 					block.volcha = query.GetFieldData(block.GetBlockName(), "volcha", i).ParseLong("volcha"); // long 12
+					block.diff = query.GetFieldData(block.GetBlockName(), "diff", i).ParseFloat("diff"); // float 6.2
 
 				} catch (InvalidDataFormatException e) {
 					block.IsValidData = false;
@@ -568,6 +584,7 @@ namespace XingAPINet
 			// change float 10.2
 			if (volume.ToString().Length > 12) return false; // long 12
 			if (volcha.ToString().Length > 12) return false; // long 12
+			// diff float 6.2
 
 			return true;
 		}
