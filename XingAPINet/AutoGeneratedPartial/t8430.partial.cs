@@ -74,5 +74,10 @@ namespace XingAPINet
             IsETF = isEtf;
             IsETN = name.IndexOf("ETN") != -1;
         }
+
+        public override string ToString()
+        {
+            return $"[{SHCode}] {Name}, IsETF={IsETF}";
+        }
     }
 }
