@@ -66,12 +66,12 @@ namespace StockCodeGen
                 sb.AppendLine($"{tab}\tpublic partial class KOSDAQ");
                 sb.AppendLine($"{tab}\t{{");
 
-                var items = XQt8430.GetKOSDAQ(true);
+                var items = XQt8430.GetKOSDAQ(false);
                 Dictionary<string, int> names = new Dictionary<string, int>();
 
                 foreach (var item in items)
                 {
-                    sb.AppendLine($"{tab}\t\tpublic const string {ToVariableName(item.Name, names)} = \"{item.SHCode}\"; // {item.Name} {item.ExpCode}");
+                    sb.AppendLine($"{tab}\t\tpublic const string {ToVariableName(item.Name, names)} = \"{item.SHCode}\"; // {item.Name} {item.ExpCode} {((item.IsETF == true) ? "ETF" : "")} {((item.IsETN == true) ? "ETN" : "")}");
                     totalCode++;
                 }
                 sb.AppendLine($"{tab}\t}}");
@@ -83,12 +83,12 @@ namespace StockCodeGen
                 sb.AppendLine($"{tab}\tpublic partial class KOSPI");
                 sb.AppendLine($"{tab}\t{{");
 
-                var items = XQt8430.GetKOSPI(true);
+                var items = XQt8430.GetKOSPI(false);
                 Dictionary<string, int> names = new Dictionary<string, int>();
 
                 foreach (var item in items)
                 {
-                    sb.AppendLine($"{tab}\t\tpublic const string {ToVariableName(item.Name, names)} = \"{item.SHCode}\"; // {item.Name} {item.ExpCode}");
+                    sb.AppendLine($"{tab}\t\tpublic const string {ToVariableName(item.Name, names)} = \"{item.SHCode}\"; // {item.Name} {item.ExpCode} {((item.IsETF == true) ? "ETF" : "")} {((item.IsETN == true) ? "ETN" : "")}");
                     totalCode++;
                 }
                 sb.AppendLine($"{tab}\t}}");

@@ -14,15 +14,15 @@ namespace XingAPINet
 
     partial class XQt8430
     {
-        public static SHCodeInfo[] GetKOSPI(bool excludeETN = true)
+        public static SHCodeInfo[] GetKOSPI(bool exclude_ETN_ETF = true)
         {
             List<SHCodeInfo> list = new List<SHCodeInfo>();
 
             foreach (var item in Get(XQt8430Gubun.코스피))
             {
-                SHCodeInfo code = new SHCodeInfo(item.hname, item.shcode, item.expcode, item.etfgubun == '1');
-                
-                if (code.IsETN == true && excludeETN == true)
+                SHCodeInfo code = new SHCodeInfo(item.hname, item.shcode, item.expcode, item.etfgubun == '1', item.etfgubun == '2');
+
+                if (code.IsETN == true || code.IsETF == true)
                 {
                     continue;
                 }
@@ -33,15 +33,15 @@ namespace XingAPINet
             return list.ToArray();
         }
 
-        public static SHCodeInfo[] GetKOSDAQ(bool excludeETN = true)
+        public static SHCodeInfo[] GetKOSDAQ(bool exclude_ETN_ETF = true)
         {
             List<SHCodeInfo> list = new List<SHCodeInfo>();
 
             foreach (var item in Get(XQt8430Gubun.코스닥))
             {
-                SHCodeInfo code = new SHCodeInfo(item.hname, item.shcode, item.expcode, item.etfgubun == '1');
+                SHCodeInfo code = new SHCodeInfo(item.hname, item.shcode, item.expcode, item.etfgubun == '1', item.etfgubun == '2');
 
-                if (code.IsETN == true && excludeETN == true)
+                if (code.IsETN == true || code.IsETF == true)
                 {
                     continue;
                 }
@@ -66,18 +66,18 @@ namespace XingAPINet
         public readonly bool IsETF;
         public readonly bool IsETN;
 
-        public SHCodeInfo(string name, string shcode, string expcode, bool isEtf)
+        public SHCodeInfo(string name, string shcode, string expcode, bool isETF, bool isETN)
         {
             Name = name;
             SHCode = shcode;
             ExpCode = expcode;
-            IsETF = isEtf;
-            IsETN = name.IndexOf("ETN") != -1;
+            IsETF = isETF;
+            IsETN = isETN;
         }
 
         public override string ToString()
         {
-            return $"[{SHCode}] {Name}, IsETF={IsETF}";
+            return $"[{SHCode}] {Name}, IsETF/ETN={IsETF || IsETN}";
         }
     }
 }
