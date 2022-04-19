@@ -52,12 +52,6 @@ namespace cspaq12200 // 현물계좌 예수금/주문가능금액/총평가 조�
                     return;
                 }
 
-                string inptpwd = null;
-                if (useDemoServer == true)
-                {
-                    inptpwd = "0000";
-                }
-
                 if (useDemoServer)
                 {
                     using (XQCSPAQ12200 query = new XQCSPAQ12200())

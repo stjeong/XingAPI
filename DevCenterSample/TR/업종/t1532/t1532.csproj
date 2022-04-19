@@ -37,6 +37,9 @@
   <PropertyGroup>
     <ApplicationManifest>..\..\..\..\ConsoleApp1\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
