@@ -3,7 +3,7 @@
     <metadata>
         <id>XingAPINet</id>
         <title>C# port for eBEST XingAPI</title>
-        <version>1.1.3</version>
+        <version>1.1.4</version>
         <authors>SeongTae Jeong</authors>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>C# Wrapper classes for eBEST XING API.</description>
