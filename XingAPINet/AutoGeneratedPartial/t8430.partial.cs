@@ -20,7 +20,7 @@ namespace XingAPINet
 
             foreach (var item in Get(XQt8430Gubun.코스피))
             {
-                SHCodeInfo code = new SHCodeInfo(item.hname, item.shcode, item.expcode, item.etfgubun == '1', item.etfgubun == '2');
+                SHCodeInfo code = new SHCodeInfo(item);
 
                 if (code.IsETN == true || code.IsETF == true)
                 {
@@ -39,7 +39,7 @@ namespace XingAPINet
 
             foreach (var item in Get(XQt8430Gubun.코스닥))
             {
-                SHCodeInfo code = new SHCodeInfo(item.hname, item.shcode, item.expcode, item.etfgubun == '1', item.etfgubun == '2');
+                SHCodeInfo code = new SHCodeInfo(item);
 
                 if (code.IsETN == true || code.IsETF == true)
                 {
@@ -58,21 +58,17 @@ namespace XingAPINet
         }
     }
 
-    public partial class SHCodeInfo
+    public partial class SHCodeInfo : XQt8430OutBlock
     {
-        public readonly string Name;
-        public readonly string SHCode;
-        public readonly string ExpCode;
-        public readonly bool IsETF;
-        public readonly bool IsETN;
+        public string Name => this.hname;
+        public string SHCode => this.shcode;
+        public string ExpCode => this.expcode;
+        public bool IsETF => this.gubun == '1';
+        public bool IsETN => this.gubun == '2';
 
-        public SHCodeInfo(string name, string shcode, string expcode, bool isETF, bool isETN)
+        public SHCodeInfo(XQt8430OutBlock block)
         {
-            Name = name;
-            SHCode = shcode;
-            ExpCode = expcode;
-            IsETF = isETF;
-            IsETN = isETN;
+            block.CopyTo(this);
         }
 
         public override string ToString()
