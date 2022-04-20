@@ -189,6 +189,18 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCSPAQ12300InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.BalCreTp = this.BalCreTp;
+			block.CmsnAppTpCode = this.CmsnAppTpCode;
+			block.D2balBaseQryTp = this.D2balBaseQryTp;
+			block.UprcTpCode = this.UprcTpCode;
+
+		}
 	}
 
 	public partial class XQCSPAQ12300OutBlock1 : XingBlock
@@ -400,6 +412,18 @@ namespace XingAPINet
 			// UprcTpCode char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQCSPAQ12300OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.BalCreTp = this.BalCreTp;
+			block.CmsnAppTpCode = this.CmsnAppTpCode;
+			block.D2balBaseQryTp = this.D2balBaseQryTp;
+			block.UprcTpCode = this.UprcTpCode;
+
 		}
 	}
 
@@ -1667,6 +1691,80 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCSPAQ12300OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.BrnNm = this.BrnNm;
+			block.AcntNm = this.AcntNm;
+			block.MnyOrdAbleAmt = this.MnyOrdAbleAmt;
+			block.MnyoutAbleAmt = this.MnyoutAbleAmt;
+			block.SeOrdAbleAmt = this.SeOrdAbleAmt;
+			block.KdqOrdAbleAmt = this.KdqOrdAbleAmt;
+			block.HtsOrdAbleAmt = this.HtsOrdAbleAmt;
+			block.MgnRat100pctOrdAbleAmt = this.MgnRat100pctOrdAbleAmt;
+			block.BalEvalAmt = this.BalEvalAmt;
+			block.PchsAmt = this.PchsAmt;
+			block.RcvblAmt = this.RcvblAmt;
+			block.PnlRat = this.PnlRat;
+			block.InvstOrgAmt = this.InvstOrgAmt;
+			block.InvstPlAmt = this.InvstPlAmt;
+			block.CrdtPldgOrdAmt = this.CrdtPldgOrdAmt;
+			block.Dps = this.Dps;
+			block.D1Dps = this.D1Dps;
+			block.D2Dps = this.D2Dps;
+			block.OrdDt = this.OrdDt;
+			block.MnyMgn = this.MnyMgn;
+			block.SubstMgn = this.SubstMgn;
+			block.SubstAmt = this.SubstAmt;
+			block.PrdayBuyExecAmt = this.PrdayBuyExecAmt;
+			block.PrdaySellExecAmt = this.PrdaySellExecAmt;
+			block.CrdayBuyExecAmt = this.CrdayBuyExecAmt;
+			block.CrdaySellExecAmt = this.CrdaySellExecAmt;
+			block.EvalPnlSum = this.EvalPnlSum;
+			block.DpsastTotamt = this.DpsastTotamt;
+			block.Evrprc = this.Evrprc;
+			block.RuseAmt = this.RuseAmt;
+			block.EtclndAmt = this.EtclndAmt;
+			block.PrcAdjstAmt = this.PrcAdjstAmt;
+			block.D1CmsnAmt = this.D1CmsnAmt;
+			block.D2CmsnAmt = this.D2CmsnAmt;
+			block.D1EvrTax = this.D1EvrTax;
+			block.D2EvrTax = this.D2EvrTax;
+			block.D1SettPrergAmt = this.D1SettPrergAmt;
+			block.D2SettPrergAmt = this.D2SettPrergAmt;
+			block.PrdayKseMnyMgn = this.PrdayKseMnyMgn;
+			block.PrdayKseSubstMgn = this.PrdayKseSubstMgn;
+			block.PrdayKseCrdtMnyMgn = this.PrdayKseCrdtMnyMgn;
+			block.PrdayKseCrdtSubstMgn = this.PrdayKseCrdtSubstMgn;
+			block.CrdayKseMnyMgn = this.CrdayKseMnyMgn;
+			block.CrdayKseSubstMgn = this.CrdayKseSubstMgn;
+			block.CrdayKseCrdtMnyMgn = this.CrdayKseCrdtMnyMgn;
+			block.CrdayKseCrdtSubstMgn = this.CrdayKseCrdtSubstMgn;
+			block.PrdayKdqMnyMgn = this.PrdayKdqMnyMgn;
+			block.PrdayKdqSubstMgn = this.PrdayKdqSubstMgn;
+			block.PrdayKdqCrdtMnyMgn = this.PrdayKdqCrdtMnyMgn;
+			block.PrdayKdqCrdtSubstMgn = this.PrdayKdqCrdtSubstMgn;
+			block.CrdayKdqMnyMgn = this.CrdayKdqMnyMgn;
+			block.CrdayKdqSubstMgn = this.CrdayKdqSubstMgn;
+			block.CrdayKdqCrdtMnyMgn = this.CrdayKdqCrdtMnyMgn;
+			block.CrdayKdqCrdtSubstMgn = this.CrdayKdqCrdtSubstMgn;
+			block.PrdayFrbrdMnyMgn = this.PrdayFrbrdMnyMgn;
+			block.PrdayFrbrdSubstMgn = this.PrdayFrbrdSubstMgn;
+			block.CrdayFrbrdMnyMgn = this.CrdayFrbrdMnyMgn;
+			block.CrdayFrbrdSubstMgn = this.CrdayFrbrdSubstMgn;
+			block.PrdayCrbmkMnyMgn = this.PrdayCrbmkMnyMgn;
+			block.PrdayCrbmkSubstMgn = this.PrdayCrbmkSubstMgn;
+			block.CrdayCrbmkMnyMgn = this.CrdayCrbmkMnyMgn;
+			block.CrdayCrbmkSubstMgn = this.CrdayCrbmkSubstMgn;
+			block.DpspdgQty = this.DpspdgQty;
+			block.BuyAdjstAmtD2 = this.BuyAdjstAmtD2;
+			block.SellAdjstAmtD2 = this.SellAdjstAmtD2;
+			block.RepayRqrdAmtD1 = this.RepayRqrdAmtD1;
+			block.RepayRqrdAmtD2 = this.RepayRqrdAmtD2;
+			block.LoanAmt = this.LoanAmt;
+
+		}
 	}
 
 	public partial class XQCSPAQ12300OutBlock3 : XingBlock
@@ -2477,6 +2575,53 @@ namespace XingAPINet
 			if (DpspdgLoanQty.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCSPAQ12300OutBlock3 block)
+		{
+			block.IsuNo = this.IsuNo;
+			block.IsuNm = this.IsuNm;
+			block.SecBalPtnCode = this.SecBalPtnCode;
+			block.SecBalPtnNm = this.SecBalPtnNm;
+			block.BalQty = this.BalQty;
+			block.BnsBaseBalQty = this.BnsBaseBalQty;
+			block.CrdayBuyExecQty = this.CrdayBuyExecQty;
+			block.CrdaySellExecQty = this.CrdaySellExecQty;
+			block.SellPrc = this.SellPrc;
+			block.BuyPrc = this.BuyPrc;
+			block.SellPnlAmt = this.SellPnlAmt;
+			block.PnlRat = this.PnlRat;
+			block.NowPrc = this.NowPrc;
+			block.CrdtAmt = this.CrdtAmt;
+			block.DueDt = this.DueDt;
+			block.PrdaySellExecPrc = this.PrdaySellExecPrc;
+			block.PrdaySellQty = this.PrdaySellQty;
+			block.PrdayBuyExecPrc = this.PrdayBuyExecPrc;
+			block.PrdayBuyQty = this.PrdayBuyQty;
+			block.LoanDt = this.LoanDt;
+			block.AvrUprc = this.AvrUprc;
+			block.SellAbleQty = this.SellAbleQty;
+			block.SellOrdQty = this.SellOrdQty;
+			block.CrdayBuyExecAmt = this.CrdayBuyExecAmt;
+			block.CrdaySellExecAmt = this.CrdaySellExecAmt;
+			block.PrdayBuyExecAmt = this.PrdayBuyExecAmt;
+			block.PrdaySellExecAmt = this.PrdaySellExecAmt;
+			block.BalEvalAmt = this.BalEvalAmt;
+			block.EvalPnl = this.EvalPnl;
+			block.MnyOrdAbleAmt = this.MnyOrdAbleAmt;
+			block.OrdAbleAmt = this.OrdAbleAmt;
+			block.SellUnercQty = this.SellUnercQty;
+			block.SellUnsttQty = this.SellUnsttQty;
+			block.BuyUnercQty = this.BuyUnercQty;
+			block.BuyUnsttQty = this.BuyUnsttQty;
+			block.UnsttQty = this.UnsttQty;
+			block.UnercQty = this.UnercQty;
+			block.PrdayCprc = this.PrdayCprc;
+			block.PchsAmt = this.PchsAmt;
+			block.RegMktCode = this.RegMktCode;
+			block.LoanDtlClssCode = this.LoanDtlClssCode;
+			block.DpspdgLoanQty = this.DpspdgLoanQty;
+
 		}
 	}
 

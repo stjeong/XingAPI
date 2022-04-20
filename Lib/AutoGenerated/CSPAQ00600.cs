@@ -189,6 +189,18 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCSPAQ00600InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.InptPwd = this.InptPwd;
+			block.LoanDtlClssCode = this.LoanDtlClssCode;
+			block.IsuNo = this.IsuNo;
+			block.OrdPrc = this.OrdPrc;
+			block.CommdaCode = this.CommdaCode;
+
+		}
 	}
 
 	public partial class XQCSPAQ00600OutBlock1 : XingBlock
@@ -400,6 +412,18 @@ namespace XingAPINet
 			if (CommdaCode?.Length > 2) return false; // char 2
 
 			return true;
+		}
+
+		public void CopyTo(XQCSPAQ00600OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.InptPwd = this.InptPwd;
+			block.LoanDtlClssCode = this.LoanDtlClssCode;
+			block.IsuNo = this.IsuNo;
+			block.OrdPrc = this.OrdPrc;
+			block.CommdaCode = this.CommdaCode;
+
 		}
 	}
 
@@ -1054,6 +1078,44 @@ namespace XingAPINet
 			if (RcvblUablOrdAbleQty.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCSPAQ00600OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.OrdPrc = this.OrdPrc;
+			block.SloanLmtAmt = this.SloanLmtAmt;
+			block.SloanAmtSum = this.SloanAmtSum;
+			block.SloanNewAmt = this.SloanNewAmt;
+			block.SloanRfundAmt = this.SloanRfundAmt;
+			block.MktcplMloanLmtAmt = this.MktcplMloanLmtAmt;
+			block.MktcplMloanAmtSum = this.MktcplMloanAmtSum;
+			block.MktcplMloanNewAmt = this.MktcplMloanNewAmt;
+			block.MktcplMloanRfundAmt = this.MktcplMloanRfundAmt;
+			block.SfaccMloanLmtAmt = this.SfaccMloanLmtAmt;
+			block.SfaccMloanAmtSum = this.SfaccMloanAmtSum;
+			block.SfaccMloanNewAmt = this.SfaccMloanNewAmt;
+			block.SfaccMloanRfundAmt = this.SfaccMloanRfundAmt;
+			block.BrnMktcplMloanLmtAmt = this.BrnMktcplMloanLmtAmt;
+			block.BrnMktcplMloanNewAmt = this.BrnMktcplMloanNewAmt;
+			block.BrnMktcplMloanRfundAmt = this.BrnMktcplMloanRfundAmt;
+			block.BrnMktcplMloanUseAmt = this.BrnMktcplMloanUseAmt;
+			block.BrnSfaccMloanLmtAmt = this.BrnSfaccMloanLmtAmt;
+			block.BrnSfaccMloanNewAmt = this.BrnSfaccMloanNewAmt;
+			block.BrnSfaccMloanRfundAmt = this.BrnSfaccMloanRfundAmt;
+			block.BrnSfaccMloanUseAmt = this.BrnSfaccMloanUseAmt;
+			block.FirmMloanLmtMgmtYn = this.FirmMloanLmtMgmtYn;
+			block.FirmCrdtIsuRestrcTp = this.FirmCrdtIsuRestrcTp;
+			block.PldgMaintRat = this.PldgMaintRat;
+			block.FirmNm = this.FirmNm;
+			block.PldgRat = this.PldgRat;
+			block.DpsastSum = this.DpsastSum;
+			block.LmtChgAbleAmt = this.LmtChgAbleAmt;
+			block.OrdAbleAmt = this.OrdAbleAmt;
+			block.OrdAbleQty = this.OrdAbleQty;
+			block.RcvblUablOrdAbleQty = this.RcvblUablOrdAbleQty;
+
 		}
 	}
 

@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRPM_InBlock block)
+		{
+			block.gubun = this.gubun;
+
+		}
 	}
 
 	public partial class XRPM_OutBlock : XingBlock
@@ -1641,6 +1647,97 @@ namespace XingAPINet
 			// gubun char 1
 
 			return true;
+		}
+
+		public void CopyTo(XRPM_OutBlock block)
+		{
+			block.time = this.time;
+			block.cdhrem = this.cdhrem;
+			block.cshrem = this.cshrem;
+			block.bdhrem = this.bdhrem;
+			block.bshrem = this.bshrem;
+			block.cdhvolume = this.cdhvolume;
+			block.cshvolume = this.cshvolume;
+			block.bdhvolume = this.bdhvolume;
+			block.bshvolume = this.bshvolume;
+			block.cdwvolume = this.cdwvolume;
+			block.cdjvolume = this.cdjvolume;
+			block.cswvolume = this.cswvolume;
+			block.csjvolume = this.csjvolume;
+			block.cwvol = this.cwvol;
+			block.cjvol = this.cjvol;
+			block.bdwvolume = this.bdwvolume;
+			block.bdjvolume = this.bdjvolume;
+			block.bswvolume = this.bswvolume;
+			block.bsjvolume = this.bsjvolume;
+			block.bwvol = this.bwvol;
+			block.bjvol = this.bjvol;
+			block.dwvolume = this.dwvolume;
+			block.swvolume = this.swvolume;
+			block.wvol = this.wvol;
+			block.djvolume = this.djvolume;
+			block.sjvolume = this.sjvolume;
+			block.jvol = this.jvol;
+			block.cdwvalue = this.cdwvalue;
+			block.cdjvalue = this.cdjvalue;
+			block.cswvalue = this.cswvalue;
+			block.csjvalue = this.csjvalue;
+			block.cwval = this.cwval;
+			block.cjval = this.cjval;
+			block.bdwvalue = this.bdwvalue;
+			block.bdjvalue = this.bdjvalue;
+			block.bswvalue = this.bswvalue;
+			block.bsjvalue = this.bsjvalue;
+			block.bwval = this.bwval;
+			block.bjval = this.bjval;
+			block.dwvalue = this.dwvalue;
+			block.swvalue = this.swvalue;
+			block.wval = this.wval;
+			block.djvalue = this.djvalue;
+			block.sjvalue = this.sjvalue;
+			block.jval = this.jval;
+			block.k200jisu = this.k200jisu;
+			block.k200sign = this.k200sign;
+			block.change = this.change;
+			block.k200basis = this.k200basis;
+			block.cdvolume = this.cdvolume;
+			block.csvolume = this.csvolume;
+			block.cvol = this.cvol;
+			block.bdvolume = this.bdvolume;
+			block.bsvolume = this.bsvolume;
+			block.bvol = this.bvol;
+			block.tdvolume = this.tdvolume;
+			block.tsvolume = this.tsvolume;
+			block.tvol = this.tvol;
+			block.cdvalue = this.cdvalue;
+			block.csvalue = this.csvalue;
+			block.cval = this.cval;
+			block.bdvalue = this.bdvalue;
+			block.bsvalue = this.bsvalue;
+			block.bval = this.bval;
+			block.tdvalue = this.tdvalue;
+			block.tsvalue = this.tsvalue;
+			block.tval = this.tval;
+			block.p_cdvolcha = this.p_cdvolcha;
+			block.p_csvolcha = this.p_csvolcha;
+			block.p_cvolcha = this.p_cvolcha;
+			block.p_bdvolcha = this.p_bdvolcha;
+			block.p_bsvolcha = this.p_bsvolcha;
+			block.p_bvolcha = this.p_bvolcha;
+			block.p_tdvolcha = this.p_tdvolcha;
+			block.p_tsvolcha = this.p_tsvolcha;
+			block.p_tvolcha = this.p_tvolcha;
+			block.p_cdvalcha = this.p_cdvalcha;
+			block.p_csvalcha = this.p_csvalcha;
+			block.p_cvalcha = this.p_cvalcha;
+			block.p_bdvalcha = this.p_bdvalcha;
+			block.p_bsvalcha = this.p_bsvalcha;
+			block.p_bvalcha = this.p_bvalcha;
+			block.p_tdvalcha = this.p_tdvalcha;
+			block.p_tsvalcha = this.p_tsvalcha;
+			block.p_tvalcha = this.p_tvalcha;
+			block.gubun = this.gubun;
+
 		}
 	}
 

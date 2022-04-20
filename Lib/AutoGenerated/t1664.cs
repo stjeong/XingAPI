@@ -141,6 +141,15 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1664InBlock block)
+		{
+			block.mgubun = this.mgubun;
+			block.vagubun = this.vagubun;
+			block.bdgubun = this.bdgubun;
+			block.cnt = this.cnt;
+
+		}
 	}
 
 	public partial class XQt1664OutBlock1 : XingBlock
@@ -492,6 +501,26 @@ namespace XingAPINet
 			// basis float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1664OutBlock1 block)
+		{
+			block.dt = this.dt;
+			block.tjj01 = this.tjj01;
+			block.tjj02 = this.tjj02;
+			block.tjj03 = this.tjj03;
+			block.tjj04 = this.tjj04;
+			block.tjj05 = this.tjj05;
+			block.tjj06 = this.tjj06;
+			block.tjj07 = this.tjj07;
+			block.tjj08 = this.tjj08;
+			block.tjj17 = this.tjj17;
+			block.tjj18 = this.tjj18;
+			block.cha = this.cha;
+			block.bicha = this.bicha;
+			block.totcha = this.totcha;
+			block.basis = this.basis;
+
 		}
 	}
 

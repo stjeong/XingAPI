@@ -189,6 +189,18 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt0424InBlock block)
+		{
+			block.accno = this.accno;
+			block.passwd = this.passwd;
+			block.prcgb = this.prcgb;
+			block.chegb = this.chegb;
+			block.dangb = this.dangb;
+			block.charge = this.charge;
+			block.cts_expcode = this.cts_expcode;
+
+		}
 	}
 
 	public partial class XQt0424OutBlock : XingBlock
@@ -400,6 +412,18 @@ namespace XingAPINet
 			if (tdtsunik.ToString().Length > 18) return false; // long 18
 
 			return true;
+		}
+
+		public void CopyTo(XQt0424OutBlock block)
+		{
+			block.sunamt = this.sunamt;
+			block.dtsunik = this.dtsunik;
+			block.mamt = this.mamt;
+			block.sunamt1 = this.sunamt1;
+			block.cts_expcode = this.cts_expcode;
+			block.tappamt = this.tappamt;
+			block.tdtsunik = this.tdtsunik;
+
 		}
 	}
 
@@ -990,6 +1014,40 @@ namespace XingAPINet
 			if (sininter.ToString().Length > 10) return false; // long 10
 
 			return true;
+		}
+
+		public void CopyTo(XQt0424OutBlock1 block)
+		{
+			block.expcode = this.expcode;
+			block.jangb = this.jangb;
+			block.janqty = this.janqty;
+			block.mdposqt = this.mdposqt;
+			block.pamt = this.pamt;
+			block.mamt = this.mamt;
+			block.sinamt = this.sinamt;
+			block.lastdt = this.lastdt;
+			block.msat = this.msat;
+			block.mpms = this.mpms;
+			block.mdat = this.mdat;
+			block.mpmd = this.mpmd;
+			block.jsat = this.jsat;
+			block.jpms = this.jpms;
+			block.jdat = this.jdat;
+			block.jpmd = this.jpmd;
+			block.sysprocseq = this.sysprocseq;
+			block.loandt = this.loandt;
+			block.hname = this.hname;
+			block.marketgb = this.marketgb;
+			block.jonggb = this.jonggb;
+			block.janrt = this.janrt;
+			block.price = this.price;
+			block.appamt = this.appamt;
+			block.dtsunik = this.dtsunik;
+			block.sunikrt = this.sunikrt;
+			block.fee = this.fee;
+			block.tax = this.tax;
+			block.sininter = this.sininter;
+
 		}
 	}
 

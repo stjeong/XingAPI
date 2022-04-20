@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1974InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt1974OutBlock : XingBlock
@@ -202,6 +208,12 @@ namespace XingAPINet
 			if (cnt.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1974OutBlock block)
+		{
+			block.cnt = this.cnt;
+
 		}
 	}
 
@@ -435,6 +447,19 @@ namespace XingAPINet
 			// volume float 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1974OutBlock1 block)
+		{
+			block.shcode = this.shcode;
+			block.hname = this.hname;
+			block.cpgubun = this.cpgubun;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+
 		}
 	}
 

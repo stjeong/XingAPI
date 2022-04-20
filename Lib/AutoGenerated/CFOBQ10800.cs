@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCFOBQ10800InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.PrdgrpClssCode = this.PrdgrpClssCode;
+			block.ClssGrpCode = this.ClssGrpCode;
+			block.BaseYear = this.BaseYear;
+			block.FstmmTpCode = this.FstmmTpCode;
+
+		}
 	}
 
 	public partial class XQCFOBQ10800OutBlock1 : XingBlock
@@ -334,6 +344,16 @@ namespace XingAPINet
 			// FstmmTpCode char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQCFOBQ10800OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.PrdgrpClssCode = this.PrdgrpClssCode;
+			block.ClssGrpCode = this.ClssGrpCode;
+			block.BaseYear = this.BaseYear;
+			block.FstmmTpCode = this.FstmmTpCode;
+
 		}
 	}
 
@@ -686,6 +706,26 @@ namespace XingAPINet
 			if (OrdMgn2.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCFOBQ10800OutBlock2 block)
+		{
+			block.ElwXrcPrc = this.ElwXrcPrc;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.HanglIsuNm1 = this.HanglIsuNm1;
+			block.TpNm1 = this.TpNm1;
+			block.UpOptRegulThrprc = this.UpOptRegulThrprc;
+			block.Thrprc1 = this.Thrprc1;
+			block.BasePrc1 = this.BasePrc1;
+			block.OrdMgn1 = this.OrdMgn1;
+			block.FnoIsuNo0 = this.FnoIsuNo0;
+			block.HanglIsuNm2 = this.HanglIsuNm2;
+			block.TpNm2 = this.TpNm2;
+			block.DownOptRegulThrprc = this.DownOptRegulThrprc;
+			block.Thrprc2 = this.Thrprc2;
+			block.BasePrc2 = this.BasePrc2;
+			block.OrdMgn2 = this.OrdMgn2;
+
 		}
 	}
 

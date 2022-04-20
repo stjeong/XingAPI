@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRH1_InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRH1_OutBlock : XingBlock
@@ -978,6 +984,58 @@ namespace XingAPINet
 			if (volume.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XRH1_OutBlock block)
+		{
+			block.hotime = this.hotime;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.offerrem1 = this.offerrem1;
+			block.bidrem1 = this.bidrem1;
+			block.offerho2 = this.offerho2;
+			block.bidho2 = this.bidho2;
+			block.offerrem2 = this.offerrem2;
+			block.bidrem2 = this.bidrem2;
+			block.offerho3 = this.offerho3;
+			block.bidho3 = this.bidho3;
+			block.offerrem3 = this.offerrem3;
+			block.bidrem3 = this.bidrem3;
+			block.offerho4 = this.offerho4;
+			block.bidho4 = this.bidho4;
+			block.offerrem4 = this.offerrem4;
+			block.bidrem4 = this.bidrem4;
+			block.offerho5 = this.offerho5;
+			block.bidho5 = this.bidho5;
+			block.offerrem5 = this.offerrem5;
+			block.bidrem5 = this.bidrem5;
+			block.offerho6 = this.offerho6;
+			block.bidho6 = this.bidho6;
+			block.offerrem6 = this.offerrem6;
+			block.bidrem6 = this.bidrem6;
+			block.offerho7 = this.offerho7;
+			block.bidho7 = this.bidho7;
+			block.offerrem7 = this.offerrem7;
+			block.bidrem7 = this.bidrem7;
+			block.offerho8 = this.offerho8;
+			block.bidho8 = this.bidho8;
+			block.offerrem8 = this.offerrem8;
+			block.bidrem8 = this.bidrem8;
+			block.offerho9 = this.offerho9;
+			block.bidho9 = this.bidho9;
+			block.offerrem9 = this.offerrem9;
+			block.bidrem9 = this.bidrem9;
+			block.offerho10 = this.offerho10;
+			block.bidho10 = this.bidho10;
+			block.offerrem10 = this.offerrem10;
+			block.bidrem10 = this.bidrem10;
+			block.totofferrem = this.totofferrem;
+			block.totbidrem = this.totbidrem;
+			block.donsigubun = this.donsigubun;
+			block.shcode = this.shcode;
+			block.alloc_gubun = this.alloc_gubun;
+			block.volume = this.volume;
+
 		}
 	}
 

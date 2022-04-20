@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCCEAQ01100InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+
+		}
 	}
 
 	public partial class XQCCEAQ01100OutBlock1 : XingBlock
@@ -368,6 +379,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCCEAQ01100OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+
+		}
 	}
 
 	public partial class XQCCEAQ01100OutBlock2 : XingBlock
@@ -545,6 +567,16 @@ namespace XingAPINet
 			if (CmsnAmtSumAmt.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCCEAQ01100OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.BnsplAmt = this.BnsplAmt;
+			block.FnoCtrctAmt = this.FnoCtrctAmt;
+			block.CmsnAmtSumAmt = this.CmsnAmtSumAmt;
+
 		}
 	}
 
@@ -931,6 +963,28 @@ namespace XingAPINet
 			if (CommdaCodeNm?.Length > 40) return false; // char 40
 
 			return true;
+		}
+
+		public void CopyTo(XQCCEAQ01100OutBlock3 block)
+		{
+			block.BnsDt = this.BnsDt;
+			block.OrdNo = this.OrdNo;
+			block.CtrctNo = this.CtrctNo;
+			block.ExecNo = this.ExecNo;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.IsuNm = this.IsuNm;
+			block.BnsTpCode = this.BnsTpCode;
+			block.BnsTpNm = this.BnsTpNm;
+			block.BgnCtrctIdxExecPrc = this.BgnCtrctIdxExecPrc;
+			block.BgnAmt = this.BgnAmt;
+			block.CtrctQty = this.CtrctQty;
+			block.ExecPrc = this.ExecPrc;
+			block.CtrctAmt = this.CtrctAmt;
+			block.CmsnAmt = this.CmsnAmt;
+			block.BnsplAmt = this.BnsplAmt;
+			block.CmsnAddupCode = this.CmsnAddupCode;
+			block.CommdaCodeNm = this.CommdaCodeNm;
+
 		}
 	}
 

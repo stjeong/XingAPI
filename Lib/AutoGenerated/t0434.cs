@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt0434InBlock block)
+		{
+			block.accno = this.accno;
+			block.passwd = this.passwd;
+			block.expcode = this.expcode;
+			block.chegb = this.chegb;
+			block.sortgb = this.sortgb;
+			block.cts_ordno = this.cts_ordno;
+
+		}
 	}
 
 	public partial class XQt0434OutBlock : XingBlock
@@ -282,6 +293,12 @@ namespace XingAPINet
 			if (cts_ordno?.Length > 7) return false; // char 7
 
 			return true;
+		}
+
+		public void CopyTo(XQt0434OutBlock block)
+		{
+			block.cts_ordno = this.cts_ordno;
+
 		}
 	}
 
@@ -651,6 +668,27 @@ namespace XingAPINet
 			// hogatype char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQt0434OutBlock1 block)
+		{
+			block.ordno = this.ordno;
+			block.orgordno = this.orgordno;
+			block.medosu = this.medosu;
+			block.ordgb = this.ordgb;
+			block.qty = this.qty;
+			block.price = this.price;
+			block.cheqty = this.cheqty;
+			block.cheprice = this.cheprice;
+			block.ordrem = this.ordrem;
+			block.status = this.status;
+			block.ordtime = this.ordtime;
+			block.ordermtd = this.ordermtd;
+			block.expcode = this.expcode;
+			block.rtcode = this.rtcode;
+			block.sysprocseq = this.sysprocseq;
+			block.hogatype = this.hogatype;
+
 		}
 	}
 

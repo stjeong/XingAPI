@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt0151InBlock block)
+		{
+			block.date = this.date;
+			block.accno = this.accno;
+			block.cts_medosu = this.cts_medosu;
+			block.cts_expcode = this.cts_expcode;
+			block.cts_price = this.cts_price;
+			block.cts_middiv = this.cts_middiv;
+
+		}
 	}
 
 	public partial class XQt0151OutBlock : XingBlock
@@ -657,6 +668,34 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt0151OutBlock block)
+		{
+			block.mdqty = this.mdqty;
+			block.mdamt = this.mdamt;
+			block.mdfee = this.mdfee;
+			block.mdtax = this.mdtax;
+			block.mdargtax = this.mdargtax;
+			block.tmdtax = this.tmdtax;
+			block.mdadjamt = this.mdadjamt;
+			block.msqty = this.msqty;
+			block.msamt = this.msamt;
+			block.msfee = this.msfee;
+			block.tmstax = this.tmstax;
+			block.msadjamt = this.msadjamt;
+			block.tqty = this.tqty;
+			block.tamt = this.tamt;
+			block.tfee = this.tfee;
+			block.tottax = this.tottax;
+			block.targtax = this.targtax;
+			block.ttax = this.ttax;
+			block.tadjamt = this.tadjamt;
+			block.cts_medosu = this.cts_medosu;
+			block.cts_expcode = this.cts_expcode;
+			block.cts_price = this.cts_price;
+			block.cts_middiv = this.cts_middiv;
+
+		}
 	}
 
 	public partial class XQt0151OutBlock1 : XingBlock
@@ -923,6 +962,21 @@ namespace XingAPINet
 			if (middiv?.Length > 20) return false; // char 20
 
 			return true;
+		}
+
+		public void CopyTo(XQt0151OutBlock1 block)
+		{
+			block.medosu = this.medosu;
+			block.expcode = this.expcode;
+			block.qty = this.qty;
+			block.price = this.price;
+			block.amt = this.amt;
+			block.fee = this.fee;
+			block.tax = this.tax;
+			block.argtax = this.argtax;
+			block.adjamt = this.adjamt;
+			block.middiv = this.middiv;
+
 		}
 	}
 

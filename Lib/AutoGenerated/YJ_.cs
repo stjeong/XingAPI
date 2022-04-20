@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRYJ_InBlock block)
+		{
+			block.upcode = this.upcode;
+
+		}
 	}
 
 	public partial class XRYJ_OutBlock : XingBlock
@@ -332,6 +338,20 @@ namespace XingAPINet
 			if (upcode?.Length > 3) return false; // char 3
 
 			return true;
+		}
+
+		public void CopyTo(XRYJ_OutBlock block)
+		{
+			block.time = this.time;
+			block.jisu = this.jisu;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.drate = this.drate;
+			block.cvolume = this.cvolume;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.upcode = this.upcode;
+
 		}
 	}
 

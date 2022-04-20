@@ -189,6 +189,18 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCCEAT00100InBlock1 block)
+		{
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.BnsTpCode = this.BnsTpCode;
+			block.FnoOrdprcPtnCode = this.FnoOrdprcPtnCode;
+			block.OrdPrc = this.OrdPrc;
+			block.OrdQty = this.OrdQty;
+
+		}
 	}
 
 	public partial class XQCCEAT00100OutBlock1 : XingBlock
@@ -673,6 +685,34 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCCEAT00100OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.OrdMktCode = this.OrdMktCode;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.BnsTpCode = this.BnsTpCode;
+			block.FnoOrdPtnCode = this.FnoOrdPtnCode;
+			block.FnoOrdprcPtnCode = this.FnoOrdprcPtnCode;
+			block.FnoTrdPtnCode = this.FnoTrdPtnCode;
+			block.OrdPrc = this.OrdPrc;
+			block.OrdQty = this.OrdQty;
+			block.CommdaCode = this.CommdaCode;
+			block.DscusBnsCmpltTime = this.DscusBnsCmpltTime;
+			block.GrpId = this.GrpId;
+			block.OrdSeqno = this.OrdSeqno;
+			block.PtflNo = this.PtflNo;
+			block.BskNo = this.BskNo;
+			block.TrchNo = this.TrchNo;
+			block.ItemNo = this.ItemNo;
+			block.OpDrtnNo = this.OpDrtnNo;
+			block.MgempNo = this.MgempNo;
+			block.FundId = this.FundId;
+			block.FundOrdNo = this.FundOrdNo;
+
+		}
 	}
 
 	public partial class XQCCEAT00100OutBlock2 : XingBlock
@@ -935,6 +975,21 @@ namespace XingAPINet
 			if (OrdAbleQty.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCCEAT00100OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.OrdNo = this.OrdNo;
+			block.BrnNm = this.BrnNm;
+			block.AcntNm = this.AcntNm;
+			block.IsuNm = this.IsuNm;
+			block.OrdAbleAmt = this.OrdAbleAmt;
+			block.MnyOrdAbleAmt = this.MnyOrdAbleAmt;
+			block.OrdMgn = this.OrdMgn;
+			block.MnyOrdMgn = this.MnyOrdMgn;
+			block.OrdAbleQty = this.OrdAbleQty;
+
 		}
 	}
 

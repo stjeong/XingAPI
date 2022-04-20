@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt3102InBlock block)
+		{
+			block.sNewsno = this.sNewsno;
+
+		}
 	}
 
 	public partial class XQt3102OutBlock : XingBlock
@@ -206,6 +212,12 @@ namespace XingAPINet
 			if (sJongcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XQt3102OutBlock block)
+		{
+			block.sJongcode = this.sJongcode;
+
 		}
 	}
 
@@ -321,6 +333,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt3102OutBlock1 block)
+		{
+			block.sBody = this.sBody;
+
+		}
 	}
 
 	public partial class XQt3102OutBlock2 : XingBlock
@@ -430,6 +448,12 @@ namespace XingAPINet
 			if (sTitle?.Length > 300) return false; // char 300
 
 			return true;
+		}
+
+		public void CopyTo(XQt3102OutBlock2 block)
+		{
+			block.sTitle = this.sTitle;
+
 		}
 	}
 

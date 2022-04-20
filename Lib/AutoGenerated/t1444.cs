@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1444InBlock block)
+		{
+			block.upcode = this.upcode;
+			block.idx = this.idx;
+
+		}
 	}
 
 	public partial class XQt1444OutBlock : XingBlock
@@ -218,6 +225,12 @@ namespace XingAPINet
 			if (idx.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1444OutBlock block)
+		{
+			block.idx = this.idx;
+
 		}
 	}
 
@@ -502,6 +515,22 @@ namespace XingAPINet
 			// for_rate float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1444OutBlock1 block)
+		{
+			block.shcode = this.shcode;
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.vol_rate = this.vol_rate;
+			block.total = this.total;
+			block.rate = this.rate;
+			block.for_rate = this.for_rate;
+
 		}
 	}
 

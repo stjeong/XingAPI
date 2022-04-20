@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRFX0InBlock block)
+		{
+			block.futcode = this.futcode;
+
+		}
 	}
 
 	public partial class XRFX0OutBlock : XingBlock
@@ -264,6 +270,16 @@ namespace XingAPINet
 			if (futcode?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XRFX0OutBlock block)
+		{
+			block.upstep = this.upstep;
+			block.dnstep = this.dnstep;
+			block.uplmtprice = this.uplmtprice;
+			block.dnlmtprice = this.dnlmtprice;
+			block.futcode = this.futcode;
+
 		}
 	}
 

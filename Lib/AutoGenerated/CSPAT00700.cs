@@ -205,6 +205,19 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCSPAT00700InBlock1 block)
+		{
+			block.OrgOrdNo = this.OrgOrdNo;
+			block.AcntNo = this.AcntNo;
+			block.InptPwd = this.InptPwd;
+			block.IsuNo = this.IsuNo;
+			block.OrdQty = this.OrdQty;
+			block.OrdprcPtnCode = this.OrdprcPtnCode;
+			block.OrdCndiTpCode = this.OrdCndiTpCode;
+			block.OrdPrc = this.OrdPrc;
+
+		}
 	}
 
 	public partial class XQCSPAT00700OutBlock1 : XingBlock
@@ -586,6 +599,28 @@ namespace XingAPINet
 			if (ItemNo.ToString().Length > 10) return false; // long 10
 
 			return true;
+		}
+
+		public void CopyTo(XQCSPAT00700OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.OrgOrdNo = this.OrgOrdNo;
+			block.AcntNo = this.AcntNo;
+			block.InptPwd = this.InptPwd;
+			block.IsuNo = this.IsuNo;
+			block.OrdQty = this.OrdQty;
+			block.OrdprcPtnCode = this.OrdprcPtnCode;
+			block.OrdCndiTpCode = this.OrdCndiTpCode;
+			block.OrdPrc = this.OrdPrc;
+			block.CommdaCode = this.CommdaCode;
+			block.StrtgCode = this.StrtgCode;
+			block.GrpId = this.GrpId;
+			block.OrdSeqNo = this.OrdSeqNo;
+			block.PtflNo = this.PtflNo;
+			block.BskNo = this.BskNo;
+			block.TrchNo = this.TrchNo;
+			block.ItemNo = this.ItemNo;
+
 		}
 	}
 
@@ -1104,6 +1139,36 @@ namespace XingAPINet
 			if (IsuNm?.Length > 40) return false; // char 40
 
 			return true;
+		}
+
+		public void CopyTo(XQCSPAT00700OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.OrdNo = this.OrdNo;
+			block.PrntOrdNo = this.PrntOrdNo;
+			block.OrdTime = this.OrdTime;
+			block.OrdMktCode = this.OrdMktCode;
+			block.OrdPtnCode = this.OrdPtnCode;
+			block.ShtnIsuNo = this.ShtnIsuNo;
+			block.PrgmOrdprcPtnCode = this.PrgmOrdprcPtnCode;
+			block.StslOrdprcTpCode = this.StslOrdprcTpCode;
+			block.StslAbleYn = this.StslAbleYn;
+			block.MgntrnCode = this.MgntrnCode;
+			block.LoanDt = this.LoanDt;
+			block.CvrgOrdTp = this.CvrgOrdTp;
+			block.LpYn = this.LpYn;
+			block.MgempNo = this.MgempNo;
+			block.OrdAmt = this.OrdAmt;
+			block.BnsTpCode = this.BnsTpCode;
+			block.SpareOrdNo = this.SpareOrdNo;
+			block.CvrgSeqno = this.CvrgSeqno;
+			block.RsvOrdNo = this.RsvOrdNo;
+			block.MnyOrdAmt = this.MnyOrdAmt;
+			block.SubstOrdAmt = this.SubstOrdAmt;
+			block.RuseOrdAmt = this.RuseOrdAmt;
+			block.AcntNm = this.AcntNm;
+			block.IsuNm = this.IsuNm;
+
 		}
 	}
 

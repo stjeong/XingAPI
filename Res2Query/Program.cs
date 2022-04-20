@@ -809,9 +809,39 @@ namespace Res2Query
                 sb.AppendLine($"{tab}\t}}");
             }
 
+
+            // public void CopyTo(...);
+            {
+                sb.AppendLine();
+
+                sb.AppendLine($"{tab}\tpublic void CopyTo({classPrefix}{typeName} block)");
+                sb.AppendLine($"{tab}\t{{");
+                foreach (string item in blockText.Skip(1))
+                {
+                    if (string.IsNullOrEmpty(item) == true)
+                    {
+                        continue;
+                    }
+
+                    string[] items = item.Split(',', ';');
+                    string name2 = items[2].Trim();
+                    sb.AppendLine($"{tab}\t\tblock.{name2} = this.{name2};");
+                }
+
+                sb.AppendLine();
+                sb.AppendLine($"{tab}\t}}");
+            }
+
             sb.AppendLine($"{tab}}}");
 
             return sb.ToString();
+        }
+
+        private static string EncodeXml(string fieldDesc)
+        {
+            fieldDesc = fieldDesc.Replace("&", "&amp;");
+            fieldDesc = fieldDesc.Replace(">", "&gt;");
+            return fieldDesc.Replace("<", "&lt;");
         }
 
         public static string GetUniqueName(Dictionary<string, int> dict, string name)
@@ -1118,7 +1148,7 @@ namespace Res2Query
         public static void AddXmlHelp(StringBuilder sb, string tab, string value)
         {
             sb.AppendLine($"{tab}/// <summary>");
-            sb.AppendLine($"{tab}/// {value}");
+            sb.AppendLine($"{tab}/// {EncodeXml(value)}");
             sb.AppendLine($"{tab}/// </summary>");
         }
     }

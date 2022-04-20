@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCEXAQ21100InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.ChoicInptTpCode = this.ChoicInptTpCode;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.PrdtExecTpCode = this.PrdtExecTpCode;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+
+		}
 	}
 
 	public partial class XQCEXAQ21100OutBlock1 : XingBlock
@@ -368,6 +379,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCEXAQ21100OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.ChoicInptTpCode = this.ChoicInptTpCode;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.PrdtExecTpCode = this.PrdtExecTpCode;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+
+		}
 	}
 
 	public partial class XQCEXAQ21100OutBlock2 : XingBlock
@@ -528,6 +550,15 @@ namespace XingAPINet
 			if (ExecQty.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCEXAQ21100OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.OrdQty = this.OrdQty;
+			block.ExecQty = this.ExecQty;
+
 		}
 	}
 
@@ -982,6 +1013,32 @@ namespace XingAPINet
 			if (CommdaNm?.Length > 40) return false; // char 40
 
 			return true;
+		}
+
+		public void CopyTo(XQCEXAQ21100OutBlock3 block)
+		{
+			block.AcntNo1 = this.AcntNo1;
+			block.OrdDt = this.OrdDt;
+			block.OrdNo = this.OrdNo;
+			block.OrgOrdNo = this.OrgOrdNo;
+			block.OrdTime = this.OrdTime;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.IsuNm = this.IsuNm;
+			block.BnsTpNm = this.BnsTpNm;
+			block.BnsTpCode = this.BnsTpCode;
+			block.MrcTpNm = this.MrcTpNm;
+			block.ErxPrcCndiTpCode = this.ErxPrcCndiTpCode;
+			block.FnoOrdprcPtnNm = this.FnoOrdprcPtnNm;
+			block.OrdCndiPrc = this.OrdCndiPrc;
+			block.OrdPrc = this.OrdPrc;
+			block.OrdQty = this.OrdQty;
+			block.OrdTpNm = this.OrdTpNm;
+			block.ExecPrc = this.ExecPrc;
+			block.ExecQty = this.ExecQty;
+			block.UnercQty = this.UnercQty;
+			block.CommdaCode = this.CommdaCode;
+			block.CommdaNm = this.CommdaNm;
+
 		}
 	}
 

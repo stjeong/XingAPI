@@ -285,6 +285,24 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCCEAQ06000InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.ChoicInptTpCode = this.ChoicInptTpCode;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.FnoClssCode = this.FnoClssCode;
+			block.PrdgrpCode = this.PrdgrpCode;
+			block.PrdtExecTpCode = this.PrdtExecTpCode;
+			block.FnoTrdPtnCode = this.FnoTrdPtnCode;
+			block.SrtOrdNo2 = this.SrtOrdNo2;
+			block.EndNo = this.EndNo;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+
+		}
 	}
 
 	public partial class XQCCEAQ06000OutBlock1 : XingBlock
@@ -599,6 +617,24 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCCEAQ06000OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.ChoicInptTpCode = this.ChoicInptTpCode;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.FnoClssCode = this.FnoClssCode;
+			block.PrdgrpCode = this.PrdgrpCode;
+			block.PrdtExecTpCode = this.PrdtExecTpCode;
+			block.FnoTrdPtnCode = this.FnoTrdPtnCode;
+			block.SrtOrdNo2 = this.SrtOrdNo2;
+			block.EndNo = this.EndNo;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+
+		}
 	}
 
 	public partial class XQCCEAQ06000OutBlock2 : XingBlock
@@ -759,6 +795,15 @@ namespace XingAPINet
 			if (FutsExecQty.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCCEAQ06000OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.FutsOrdQty = this.FutsOrdQty;
+			block.FutsExecQty = this.FutsExecQty;
+
 		}
 	}
 
@@ -1349,6 +1394,40 @@ namespace XingAPINet
 			if (GrpId?.Length > 20) return false; // char 20
 
 			return true;
+		}
+
+		public void CopyTo(XQCCEAQ06000OutBlock3 block)
+		{
+			block.AcntNo1 = this.AcntNo1;
+			block.OrdDt = this.OrdDt;
+			block.OrdNo = this.OrdNo;
+			block.OrgOrdNo = this.OrgOrdNo;
+			block.OrdTime = this.OrdTime;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.IsuNm = this.IsuNm;
+			block.BnsTpNm = this.BnsTpNm;
+			block.BnsTpCode = this.BnsTpCode;
+			block.MrcTpNm = this.MrcTpNm;
+			block.FnoOrdprcPtnCode = this.FnoOrdprcPtnCode;
+			block.FnoOrdprcPtnNm = this.FnoOrdprcPtnNm;
+			block.OrdPrc = this.OrdPrc;
+			block.OrdQty = this.OrdQty;
+			block.OrdTpNm = this.OrdTpNm;
+			block.ExecTpNm = this.ExecTpNm;
+			block.ExecPrc = this.ExecPrc;
+			block.ExecQty = this.ExecQty;
+			block.CtrctTime = this.CtrctTime;
+			block.CtrctNo = this.CtrctNo;
+			block.ExecNo = this.ExecNo;
+			block.BnsplAmt = this.BnsplAmt;
+			block.UnercQty = this.UnercQty;
+			block.UserId = this.UserId;
+			block.CommdaCode = this.CommdaCode;
+			block.CommdaCodeNm = this.CommdaCodeNm;
+			block.IpAddr = this.IpAddr;
+			block.TrdPtnTpNm = this.TrdPtnTpNm;
+			block.GrpId = this.GrpId;
+
 		}
 	}
 

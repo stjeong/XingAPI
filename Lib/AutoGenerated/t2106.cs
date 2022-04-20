@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2106InBlock block)
+		{
+			block.code = this.code;
+			block.nrec = this.nrec;
+
+		}
 	}
 
 	public partial class XQt2106InBlock1 : XingBlock
@@ -244,6 +251,15 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2106InBlock1 block)
+		{
+			block.indx = this.indx;
+			block.gubn = this.gubn;
+			block.dat1 = this.dat1;
+			block.dat2 = this.dat2;
+
+		}
 	}
 
 	public partial class XQt2106OutBlock : XingBlock
@@ -353,6 +369,12 @@ namespace XingAPINet
 			if (nrec?.Length > 2) return false; // char 2
 
 			return true;
+		}
+
+		public void CopyTo(XQt2106OutBlock block)
+		{
+			block.nrec = this.nrec;
+
 		}
 	}
 
@@ -501,6 +523,14 @@ namespace XingAPINet
 			if (vals?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt2106OutBlock1 block)
+		{
+			block.indx = this.indx;
+			block.gubn = this.gubn;
+			block.vals = this.vals;
+
 		}
 	}
 

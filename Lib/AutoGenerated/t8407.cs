@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8407InBlock block)
+		{
+			block.nrec = this.nrec;
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt8407OutBlock1 : XingBlock
@@ -579,6 +586,33 @@ namespace XingAPINet
 			if (dnlmtprice.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt8407OutBlock1 block)
+		{
+			block.shcode = this.shcode;
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.offerho = this.offerho;
+			block.bidho = this.bidho;
+			block.cvolume = this.cvolume;
+			block.chdegree = this.chdegree;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.value = this.value;
+			block.offerrem = this.offerrem;
+			block.bidrem = this.bidrem;
+			block.totofferrem = this.totofferrem;
+			block.totbidrem = this.totbidrem;
+			block.jnilclose = this.jnilclose;
+			block.uplmtprice = this.uplmtprice;
+			block.dnlmtprice = this.dnlmtprice;
+
 		}
 	}
 

@@ -189,6 +189,18 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt0425InBlock block)
+		{
+			block.accno = this.accno;
+			block.passwd = this.passwd;
+			block.expcode = this.expcode;
+			block.chegb = this.chegb;
+			block.medosu = this.medosu;
+			block.sortgb = this.sortgb;
+			block.cts_ordno = this.cts_ordno;
+
+		}
 	}
 
 	public partial class XQt0425OutBlock : XingBlock
@@ -434,6 +446,20 @@ namespace XingAPINet
 			if (cts_ordno?.Length > 10) return false; // char 10
 
 			return true;
+		}
+
+		public void CopyTo(XQt0425OutBlock block)
+		{
+			block.tqty = this.tqty;
+			block.tcheqty = this.tcheqty;
+			block.tordrem = this.tordrem;
+			block.cmss = this.cmss;
+			block.tamt = this.tamt;
+			block.tmdamt = this.tmdamt;
+			block.tmsamt = this.tmsamt;
+			block.tax = this.tax;
+			block.cts_ordno = this.cts_ordno;
+
 		}
 	}
 
@@ -871,6 +897,31 @@ namespace XingAPINet
 			if (loandt?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt0425OutBlock1 block)
+		{
+			block.ordno = this.ordno;
+			block.expcode = this.expcode;
+			block.medosu = this.medosu;
+			block.qty = this.qty;
+			block.price = this.price;
+			block.cheqty = this.cheqty;
+			block.cheprice = this.cheprice;
+			block.ordrem = this.ordrem;
+			block.cfmqty = this.cfmqty;
+			block.status = this.status;
+			block.orgordno = this.orgordno;
+			block.ordgb = this.ordgb;
+			block.ordtime = this.ordtime;
+			block.ordermtd = this.ordermtd;
+			block.sysprocseq = this.sysprocseq;
+			block.hogagb = this.hogagb;
+			block.price1 = this.price1;
+			block.orggb = this.orggb;
+			block.singb = this.singb;
+			block.loandt = this.loandt;
+
 		}
 	}
 

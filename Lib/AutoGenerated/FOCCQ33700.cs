@@ -221,6 +221,20 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQFOCCQ33700InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.QryTp = this.QryTp;
+			block.BaseAmtTp = this.BaseAmtTp;
+			block.QryTermTp = this.QryTermTp;
+			block.PnlCalcTpCode = this.PnlCalcTpCode;
+
+		}
 	}
 
 	public partial class XQFOCCQ33700OutBlock1 : XingBlock
@@ -466,6 +480,20 @@ namespace XingAPINet
 			// PnlCalcTpCode char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQFOCCQ33700OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.QryTp = this.QryTp;
+			block.BaseAmtTp = this.BaseAmtTp;
+			block.QryTermTp = this.QryTermTp;
+			block.PnlCalcTpCode = this.PnlCalcTpCode;
+
 		}
 	}
 
@@ -746,6 +774,22 @@ namespace XingAPINet
 			// ErnRat double 12.6
 
 			return true;
+		}
+
+		public void CopyTo(XQFOCCQ33700OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.InAmt = this.InAmt;
+			block.OutAmt = this.OutAmt;
+			block.FnoCtrctAmt = this.FnoCtrctAmt;
+			block.InvstPramtAvrbalAmt = this.InvstPramtAvrbalAmt;
+			block.FutsAdjstDfamt = this.FutsAdjstDfamt;
+			block.OptBsnPnlAmt = this.OptBsnPnlAmt;
+			block.OptEvalPnlAmt = this.OptEvalPnlAmt;
+			block.InvstPlAmt = this.InvstPlAmt;
+			block.ErnRat = this.ErnRat;
+
 		}
 	}
 
@@ -1064,6 +1108,24 @@ namespace XingAPINet
 			if (OptEvalPnlAmt.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQFOCCQ33700OutBlock3 block)
+		{
+			block.TrdDt = this.TrdDt;
+			block.FdDpsastAmt = this.FdDpsastAmt;
+			block.EotDpsastAmt = this.EotDpsastAmt;
+			block.InAmt = this.InAmt;
+			block.OutAmt = this.OutAmt;
+			block.InvstAvrbalPramt = this.InvstAvrbalPramt;
+			block.InvstPlAmt = this.InvstPlAmt;
+			block.Ernrat = this.Ernrat;
+			block.FnoCtrctAmt = this.FnoCtrctAmt;
+			block.Trnrat = this.Trnrat;
+			block.FutsAdjstDfamt = this.FutsAdjstDfamt;
+			block.OptBsnPnlAmt = this.OptBsnPnlAmt;
+			block.OptEvalPnlAmt = this.OptEvalPnlAmt;
+
 		}
 	}
 

@@ -141,6 +141,15 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1927InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.date = this.date;
+			block.sdate = this.sdate;
+			block.edate = this.edate;
+
+		}
 	}
 
 	public partial class XQt1927OutBlock : XingBlock
@@ -250,6 +259,12 @@ namespace XingAPINet
 			if (date?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt1927OutBlock block)
+		{
+			block.date = this.date;
+
 		}
 	}
 
@@ -619,6 +634,27 @@ namespace XingAPINet
 			if (gm_va2.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1927OutBlock1 block)
+		{
+			block.date = this.date;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.gm_vo = this.gm_vo;
+			block.gm_va = this.gm_va;
+			block.gm_per = this.gm_per;
+			block.gm_avg = this.gm_avg;
+			block.gm_vo_sum = this.gm_vo_sum;
+			block.gm_vo1 = this.gm_vo1;
+			block.gm_va1 = this.gm_va1;
+			block.gm_vo2 = this.gm_vo2;
+			block.gm_va2 = this.gm_va2;
+
 		}
 	}
 

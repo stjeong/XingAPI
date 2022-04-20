@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8409InBlock block)
+		{
+			block.focode = this.focode;
+			block.bdgubun = this.bdgubun;
+			block.nmin = this.nmin;
+			block.tcgubun = this.tcgubun;
+			block.cnt = this.cnt;
+
+		}
 	}
 
 	public partial class XQt8409OutBlock : XingBlock
@@ -368,6 +378,18 @@ namespace XingAPINet
 			if (openyak.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt8409OutBlock block)
+		{
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.cvolume = this.cvolume;
+			block.volume = this.volume;
+			block.openyak = this.openyak;
+
 		}
 	}
 
@@ -635,6 +657,21 @@ namespace XingAPINet
 			if (openupdn.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt8409OutBlock1 block)
+		{
+			block.dt = this.dt;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.close = this.close;
+			block.openopenyak = this.openopenyak;
+			block.highopenyak = this.highopenyak;
+			block.lowopenyak = this.lowopenyak;
+			block.closeopenyak = this.closeopenyak;
+			block.openupdn = this.openupdn;
+
 		}
 	}
 

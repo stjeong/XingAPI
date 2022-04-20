@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2801InBlock block)
+		{
+			block.focode = this.focode;
+
+		}
 	}
 
 	public partial class XQt2801OutBlock : XingBlock
@@ -848,6 +854,50 @@ namespace XingAPINet
 			if (jnilvalue.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt2801OutBlock block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.jnilclose = this.jnilclose;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.mgjv = this.mgjv;
+			block.mgjvdiff = this.mgjvdiff;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.uplmtprice = this.uplmtprice;
+			block.dnlmtprice = this.dnlmtprice;
+			block.high52w = this.high52w;
+			block.low52w = this.low52w;
+			block.basis = this.basis;
+			block.recprice = this.recprice;
+			block.theoryprice = this.theoryprice;
+			block.glyl = this.glyl;
+			block.cbhprice = this.cbhprice;
+			block.cblprice = this.cblprice;
+			block.lastmonth = this.lastmonth;
+			block.jandatecnt = this.jandatecnt;
+			block.pricejisu = this.pricejisu;
+			block.jisusign = this.jisusign;
+			block.jisuchange = this.jisuchange;
+			block.jisudiff = this.jisudiff;
+			block.kospijisu = this.kospijisu;
+			block.kospisign = this.kospisign;
+			block.kospichange = this.kospichange;
+			block.kospidiff = this.kospidiff;
+			block.listhprice = this.listhprice;
+			block.listlprice = this.listlprice;
+			block.sbasis = this.sbasis;
+			block.ibasis = this.ibasis;
+			block.jnilvolume = this.jnilvolume;
+			block.jnilvalue = this.jnilvalue;
+
 		}
 	}
 

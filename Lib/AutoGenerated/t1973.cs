@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1973InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.cts_time = this.cts_time;
+
+		}
 	}
 
 	public partial class XQt1973OutBlock : XingBlock
@@ -218,6 +225,12 @@ namespace XingAPINet
 			if (cts_time?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt1973OutBlock block)
+		{
+			block.cts_time = this.cts_time;
+
 		}
 	}
 
@@ -468,6 +481,20 @@ namespace XingAPINet
 			if (ymsvolume.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1973OutBlock1 block)
+		{
+			block.chetime = this.chetime;
+			block.yeprice = this.yeprice;
+			block.yegubun = this.yegubun;
+			block.jnilysign = this.jnilysign;
+			block.jnilychange = this.jnilychange;
+			block.yediff = this.yediff;
+			block.yevolume = this.yevolume;
+			block.ymdvolume = this.ymdvolume;
+			block.ymsvolume = this.ymsvolume;
+
 		}
 	}
 

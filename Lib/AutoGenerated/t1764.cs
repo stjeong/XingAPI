@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1764InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.gubun1 = this.gubun1;
+
+		}
 	}
 
 	public partial class XQt1764OutBlock : XingBlock
@@ -256,6 +263,14 @@ namespace XingAPINet
 			if (tradname?.Length > 20) return false; // char 20
 
 			return true;
+		}
+
+		public void CopyTo(XQt1764OutBlock block)
+		{
+			block.rank = this.rank;
+			block.tradno = this.tradno;
+			block.tradname = this.tradname;
+
 		}
 	}
 

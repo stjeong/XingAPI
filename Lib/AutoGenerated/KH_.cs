@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRKH_InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRKH_OutBlock : XingBlock
@@ -706,6 +712,42 @@ namespace XingAPINet
 			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XRKH_OutBlock block)
+		{
+			block.time = this.time;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.volume = this.volume;
+			block.drate = this.drate;
+			block.cdhrem = this.cdhrem;
+			block.cshrem = this.cshrem;
+			block.bdhrem = this.bdhrem;
+			block.bshrem = this.bshrem;
+			block.cdhvolume = this.cdhvolume;
+			block.cshvolume = this.cshvolume;
+			block.bdhvolume = this.bdhvolume;
+			block.bshvolume = this.bshvolume;
+			block.dwcvolume = this.dwcvolume;
+			block.swcvolume = this.swcvolume;
+			block.djcvolume = this.djcvolume;
+			block.sjcvolume = this.sjcvolume;
+			block.tdvolume = this.tdvolume;
+			block.tsvolume = this.tsvolume;
+			block.tvol = this.tvol;
+			block.dwcvalue = this.dwcvalue;
+			block.swcvalue = this.swcvalue;
+			block.djcvalue = this.djcvalue;
+			block.sjcvalue = this.sjcvalue;
+			block.tdvalue = this.tdvalue;
+			block.tsvalue = this.tsvalue;
+			block.tval = this.tval;
+			block.pdgvolume = this.pdgvolume;
+			block.psgvolume = this.psgvolume;
+			block.shcode = this.shcode;
+
 		}
 	}
 

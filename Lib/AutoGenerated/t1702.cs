@@ -189,6 +189,18 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1702InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.todt = this.todt;
+			block.volvalgb = this.volvalgb;
+			block.msmdgb = this.msmdgb;
+			block.cumulgb = this.cumulgb;
+			block.cts_date = this.cts_date;
+			block.cts_idx = this.cts_idx;
+
+		}
 	}
 
 	public partial class XQt1702OutBlock : XingBlock
@@ -315,6 +327,13 @@ namespace XingAPINet
 			if (cts_date?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt1702OutBlock block)
+		{
+			block.cts_idx = this.cts_idx;
+			block.cts_date = this.cts_date;
+
 		}
 	}
 
@@ -769,6 +788,32 @@ namespace XingAPINet
 			if (amt0099.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1702OutBlock1 block)
+		{
+			block.date = this.date;
+			block.close = this.close;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.amt0000 = this.amt0000;
+			block.amt0001 = this.amt0001;
+			block.amt0002 = this.amt0002;
+			block.amt0003 = this.amt0003;
+			block.amt0004 = this.amt0004;
+			block.amt0005 = this.amt0005;
+			block.amt0006 = this.amt0006;
+			block.amt0007 = this.amt0007;
+			block.amt0008 = this.amt0008;
+			block.amt0009 = this.amt0009;
+			block.amt0010 = this.amt0010;
+			block.amt0011 = this.amt0011;
+			block.amt0018 = this.amt0018;
+			block.amt0088 = this.amt0088;
+			block.amt0099 = this.amt0099;
+
 		}
 	}
 

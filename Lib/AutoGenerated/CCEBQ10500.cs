@@ -125,6 +125,14 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCCEBQ10500InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+
+		}
 	}
 
 	public partial class XQCCEBQ10500OutBlock1 : XingBlock
@@ -268,6 +276,14 @@ namespace XingAPINet
 			if (Pwd?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQCCEBQ10500OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+
 		}
 	}
 
@@ -770,6 +786,35 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCCEBQ10500OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.DpsamtTotamt = this.DpsamtTotamt;
+			block.Dps = this.Dps;
+			block.SubstAmt = this.SubstAmt;
+			block.FilupDpsamtTotamt = this.FilupDpsamtTotamt;
+			block.FilupDps = this.FilupDps;
+			block.FutsPnlAmt = this.FutsPnlAmt;
+			block.WthdwAbleAmt = this.WthdwAbleAmt;
+			block.PsnOutAbleCurAmt = this.PsnOutAbleCurAmt;
+			block.PsnOutAbleSubstAmt = this.PsnOutAbleSubstAmt;
+			block.Mgn = this.Mgn;
+			block.MnyMgn = this.MnyMgn;
+			block.OrdAbleAmt = this.OrdAbleAmt;
+			block.MnyOrdAbleAmt = this.MnyOrdAbleAmt;
+			block.AddMgn = this.AddMgn;
+			block.MnyAddMgn = this.MnyAddMgn;
+			block.AmtPrdayChckInAmt = this.AmtPrdayChckInAmt;
+			block.FnoPrdaySubstSellAmt = this.FnoPrdaySubstSellAmt;
+			block.FnoCrdaySubstSellAmt = this.FnoCrdaySubstSellAmt;
+			block.FnoPrdayFdamt = this.FnoPrdayFdamt;
+			block.FnoCrdayFdamt = this.FnoCrdayFdamt;
+			block.FcurrSubstAmt = this.FcurrSubstAmt;
+			block.FnoAcntAfmgnNm = this.FnoAcntAfmgnNm;
+
+		}
 	}
 
 	public partial class XQCCEBQ10500OutBlock3 : XingBlock
@@ -1172,6 +1217,29 @@ namespace XingAPINet
 			if (MgnRdctAmt.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCCEBQ10500OutBlock3 block)
+		{
+			block.PdGrpCodeNm = this.PdGrpCodeNm;
+			block.NetRiskMgn = this.NetRiskMgn;
+			block.PrcMgn = this.PrcMgn;
+			block.SprdMgn = this.SprdMgn;
+			block.PrcFlctMgn = this.PrcFlctMgn;
+			block.MinMgn = this.MinMgn;
+			block.OrdMgn = this.OrdMgn;
+			block.OptNetBuyAmt = this.OptNetBuyAmt;
+			block.CsgnMgn = this.CsgnMgn;
+			block.MaintMgn = this.MaintMgn;
+			block.FutsBuyExecAmt = this.FutsBuyExecAmt;
+			block.FutsSellExecAmt = this.FutsSellExecAmt;
+			block.OptBuyExecAmt = this.OptBuyExecAmt;
+			block.OptSellExecAmt = this.OptSellExecAmt;
+			block.FutsPnlAmt = this.FutsPnlAmt;
+			block.TotRiskCsgnMgn = this.TotRiskCsgnMgn;
+			block.UndCsgnMgn = this.UndCsgnMgn;
+			block.MgnRdctAmt = this.MgnRdctAmt;
+
 		}
 	}
 

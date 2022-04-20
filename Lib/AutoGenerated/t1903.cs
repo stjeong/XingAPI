@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1903InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.date = this.date;
+
+		}
 	}
 
 	public partial class XQt1903OutBlock : XingBlock
@@ -252,6 +259,14 @@ namespace XingAPINet
 			if (upname?.Length > 20) return false; // char 20
 
 			return true;
+		}
+
+		public void CopyTo(XQt1903OutBlock block)
+		{
+			block.date = this.date;
+			block.hname = this.hname;
+			block.upname = this.upname;
+
 		}
 	}
 
@@ -570,6 +585,24 @@ namespace XingAPINet
 			// jirate float 8.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1903OutBlock1 block)
+		{
+			block.date = this.date;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.volume = this.volume;
+			block.navdiff = this.navdiff;
+			block.nav = this.nav;
+			block.navchange = this.navchange;
+			block.crate = this.crate;
+			block.grate = this.grate;
+			block.jisu = this.jisu;
+			block.jichange = this.jichange;
+			block.jirate = this.jirate;
+
 		}
 	}
 

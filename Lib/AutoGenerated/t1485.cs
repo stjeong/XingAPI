@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1485InBlock block)
+		{
+			block.upcode = this.upcode;
+			block.gubun = this.gubun;
+
+		}
 	}
 
 	public partial class XQt1485OutBlock : XingBlock
@@ -372,6 +379,21 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1485OutBlock block)
+		{
+			block.pricejisu = this.pricejisu;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.volume = this.volume;
+			block.yhighjo = this.yhighjo;
+			block.yupjo = this.yupjo;
+			block.yunchgjo = this.yunchgjo;
+			block.ylowjo = this.ylowjo;
+			block.ydownjo = this.ydownjo;
+			block.ytrajo = this.ytrajo;
+
+		}
 	}
 
 	public partial class XQt1485OutBlock1 : XingBlock
@@ -587,6 +609,18 @@ namespace XingAPINet
 			// diff float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1485OutBlock1 block)
+		{
+			block.chetime = this.chetime;
+			block.jisu = this.jisu;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.volume = this.volume;
+			block.volcha = this.volcha;
+			block.diff = this.diff;
+
 		}
 	}
 

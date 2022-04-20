@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8431InBlock block)
+		{
+			block.dummy = this.dummy;
+
+		}
 	}
 
 	public partial class XQt8431OutBlock : XingBlock
@@ -308,6 +314,18 @@ namespace XingAPINet
 			if (recprice.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt8431OutBlock block)
+		{
+			block.hname = this.hname;
+			block.shcode = this.shcode;
+			block.expcode = this.expcode;
+			block.uplmtprice = this.uplmtprice;
+			block.dnlmtprice = this.dnlmtprice;
+			block.jnilclose = this.jnilclose;
+			block.recprice = this.recprice;
+
 		}
 	}
 

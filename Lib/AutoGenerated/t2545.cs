@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2545InBlock block)
+		{
+			block.eitem = this.eitem;
+			block.sgubun = this.sgubun;
+			block.upcode = this.upcode;
+			block.nmin = this.nmin;
+			block.cnt = this.cnt;
+			block.bgubun = this.bgubun;
+
+		}
 	}
 
 	public partial class XQt2545OutBlock : XingBlock
@@ -537,6 +548,27 @@ namespace XingAPINet
 			if (jisunm?.Length > 20) return false; // char 20
 
 			return true;
+		}
+
+		public void CopyTo(XQt2545OutBlock block)
+		{
+			block.eitem = this.eitem;
+			block.sgubun = this.sgubun;
+			block.indcode = this.indcode;
+			block.forcode = this.forcode;
+			block.syscode = this.syscode;
+			block.stocode = this.stocode;
+			block.invcode = this.invcode;
+			block.bancode = this.bancode;
+			block.inscode = this.inscode;
+			block.fincode = this.fincode;
+			block.moncode = this.moncode;
+			block.etccode = this.etccode;
+			block.natcode = this.natcode;
+			block.pefcode = this.pefcode;
+			block.jisucd = this.jisucd;
+			block.jisunm = this.jisunm;
+
 		}
 	}
 
@@ -1161,6 +1193,42 @@ namespace XingAPINet
 			// upvalue double 12.0
 
 			return true;
+		}
+
+		public void CopyTo(XQt2545OutBlock1 block)
+		{
+			block.date = this.date;
+			block.time = this.time;
+			block.datetime = this.datetime;
+			block.indmsvol = this.indmsvol;
+			block.indmsamt = this.indmsamt;
+			block.formsvol = this.formsvol;
+			block.formsamt = this.formsamt;
+			block.sysmsvol = this.sysmsvol;
+			block.sysmsamt = this.sysmsamt;
+			block.stomsvol = this.stomsvol;
+			block.stomsamt = this.stomsamt;
+			block.invmsvol = this.invmsvol;
+			block.invmsamt = this.invmsamt;
+			block.banmsvol = this.banmsvol;
+			block.banmsamt = this.banmsamt;
+			block.insmsvol = this.insmsvol;
+			block.insmsamt = this.insmsamt;
+			block.finmsvol = this.finmsvol;
+			block.finmsamt = this.finmsamt;
+			block.monmsvol = this.monmsvol;
+			block.monmsamt = this.monmsamt;
+			block.etcmsvol = this.etcmsvol;
+			block.etcmsamt = this.etcmsamt;
+			block.natmsvol = this.natmsvol;
+			block.natmsamt = this.natmsamt;
+			block.pefmsvol = this.pefmsvol;
+			block.pefmsamt = this.pefmsamt;
+			block.upclose = this.upclose;
+			block.upcvolume = this.upcvolume;
+			block.upvolume = this.upvolume;
+			block.upvalue = this.upvalue;
+
 		}
 	}
 

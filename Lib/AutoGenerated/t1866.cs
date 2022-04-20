@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1866InBlock block)
+		{
+			block.user_id = this.user_id;
+			block.gb = this.gb;
+			block.group_name = this.group_name;
+			block.cont = this.cont;
+			block.cont_key = this.cont_key;
+
+		}
 	}
 
 	public partial class XQt1866OutBlock : XingBlock
@@ -300,6 +310,14 @@ namespace XingAPINet
 			if (cont_key?.Length > 40) return false; // char 40
 
 			return true;
+		}
+
+		public void CopyTo(XQt1866OutBlock block)
+		{
+			block.result_count = this.result_count;
+			block.cont = this.cont;
+			block.cont_key = this.cont_key;
+
 		}
 	}
 
@@ -448,6 +466,14 @@ namespace XingAPINet
 			if (query_name?.Length > 40) return false; // char 40
 
 			return true;
+		}
+
+		public void CopyTo(XQt1866OutBlock1 block)
+		{
+			block.query_index = this.query_index;
+			block.group_name = this.group_name;
+			block.query_name = this.query_name;
+
 		}
 	}
 

@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCEXAQ31200InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.InptPwd = this.InptPwd;
+			block.BalEvalTp = this.BalEvalTp;
+			block.FutsPrcEvalTp = this.FutsPrcEvalTp;
+
+		}
 	}
 
 	public partial class XQCEXAQ31200OutBlock1 : XingBlock
@@ -334,6 +344,16 @@ namespace XingAPINet
 			// FutsPrcEvalTp char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQCEXAQ31200OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.InptPwd = this.InptPwd;
+			block.BalEvalTp = this.BalEvalTp;
+			block.FutsPrcEvalTp = this.FutsPrcEvalTp;
+
 		}
 	}
 
@@ -887,6 +907,38 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCEXAQ31200OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.AcntNm = this.AcntNm;
+			block.EvalDpsamtTotamt = this.EvalDpsamtTotamt;
+			block.MnyEvalDpstgAmt = this.MnyEvalDpstgAmt;
+			block.DpsamtTotamt = this.DpsamtTotamt;
+			block.DpstgMny = this.DpstgMny;
+			block.PsnOutAbleTotAmt = this.PsnOutAbleTotAmt;
+			block.PsnOutAbleCurAmt = this.PsnOutAbleCurAmt;
+			block.OrdAbleTotAmt = this.OrdAbleTotAmt;
+			block.MnyOrdAbleAmt = this.MnyOrdAbleAmt;
+			block.CsgnMgnTotamt = this.CsgnMgnTotamt;
+			block.MnyCsgnMgn = this.MnyCsgnMgn;
+			block.AddMgnTotamt = this.AddMgnTotamt;
+			block.MnyAddMgn = this.MnyAddMgn;
+			block.CmsnAmt = this.CmsnAmt;
+			block.FutsEvalPnlAmt = this.FutsEvalPnlAmt;
+			block.OptEvalPnlAmt = this.OptEvalPnlAmt;
+			block.OptEvalAmt = this.OptEvalAmt;
+			block.OptBnsplAmt = this.OptBnsplAmt;
+			block.FutsAdjstDfamt = this.FutsAdjstDfamt;
+			block.TotPnlAmt = this.TotPnlAmt;
+			block.NetPnlAmt = this.NetPnlAmt;
+			block.TotEvalAmt = this.TotEvalAmt;
+			block.MnyinAmt = this.MnyinAmt;
+			block.MnyoutAmt = this.MnyoutAmt;
+			block.FutsCmsnAmt = this.FutsCmsnAmt;
+
+		}
 	}
 
 	public partial class XQCEXAQ31200OutBlock3 : XingBlock
@@ -1187,6 +1239,23 @@ namespace XingAPINet
 			if (LqdtAbleQty.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCEXAQ31200OutBlock3 block)
+		{
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.IsuNm = this.IsuNm;
+			block.BnsTpCode = this.BnsTpCode;
+			block.BnsTpNm = this.BnsTpNm;
+			block.UnsttQty = this.UnsttQty;
+			block.FnoAvrPrc = this.FnoAvrPrc;
+			block.NowPrc = this.NowPrc;
+			block.CmpPrc = this.CmpPrc;
+			block.EvalPnl = this.EvalPnl;
+			block.PnlRat = this.PnlRat;
+			block.EvalAmt = this.EvalAmt;
+			block.LqdtAbleQty = this.LqdtAbleQty;
+
 		}
 	}
 

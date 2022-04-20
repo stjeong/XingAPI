@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt9907InBlock block)
+		{
+			block.dummy = this.dummy;
+
+		}
 	}
 
 	public partial class XQt9907OutBlock1 : XingBlock
@@ -223,6 +229,13 @@ namespace XingAPINet
 			if (lastnm?.Length > 10) return false; // char 10
 
 			return true;
+		}
+
+		public void CopyTo(XQt9907OutBlock1 block)
+		{
+			block.lastym = this.lastym;
+			block.lastnm = this.lastnm;
+
 		}
 	}
 

@@ -205,6 +205,19 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCFOEQ82600InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.QryTp = this.QryTp;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+			block.FnoBalEvalTpCode = this.FnoBalEvalTpCode;
+
+		}
 	}
 
 	public partial class XQCFOEQ82600OutBlock1 : XingBlock
@@ -434,6 +447,19 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCFOEQ82600OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.QryTp = this.QryTp;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+			block.FnoBalEvalTpCode = this.FnoBalEvalTpCode;
+
+		}
 	}
 
 	public partial class XQCFOEQ82600OutBlock2 : XingBlock
@@ -662,6 +688,19 @@ namespace XingAPINet
 			if (AcntNm?.Length > 40) return false; // char 40
 
 			return true;
+		}
+
+		public void CopyTo(XQCFOEQ82600OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.FutsAdjstDfamt = this.FutsAdjstDfamt;
+			block.OptBnsplAmt = this.OptBnsplAmt;
+			block.FnoCmsnAmt = this.FnoCmsnAmt;
+			block.PnlSumAmt = this.PnlSumAmt;
+			block.MnyinSumAmt = this.MnyinSumAmt;
+			block.MnyoutSumAmt = this.MnyoutSumAmt;
+			block.AcntNm = this.AcntNm;
+
 		}
 	}
 
@@ -1099,6 +1138,31 @@ namespace XingAPINet
 			if (Amt2.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCFOEQ82600OutBlock3 block)
+		{
+			block.QryDt = this.QryDt;
+			block.DpstgTotamt = this.DpstgTotamt;
+			block.DpstgMny = this.DpstgMny;
+			block.FnoMgn = this.FnoMgn;
+			block.FutsPnlAmt = this.FutsPnlAmt;
+			block.OptBsnPnlAmt = this.OptBsnPnlAmt;
+			block.OptEvalPnlAmt = this.OptEvalPnlAmt;
+			block.CmsnAmt = this.CmsnAmt;
+			block.SumAmt1 = this.SumAmt1;
+			block.SumAmt2 = this.SumAmt2;
+			block.PnlSumAmt = this.PnlSumAmt;
+			block.FutsBuyAmt = this.FutsBuyAmt;
+			block.FutsSellAmt = this.FutsSellAmt;
+			block.OptBuyAmt = this.OptBuyAmt;
+			block.OptSellAmt = this.OptSellAmt;
+			block.InAmt = this.InAmt;
+			block.OutAmt = this.OutAmt;
+			block.EvalAmt = this.EvalAmt;
+			block.AddupEvalAmt = this.AddupEvalAmt;
+			block.Amt2 = this.Amt2;
+
 		}
 	}
 

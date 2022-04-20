@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2805InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.futcheck = this.futcheck;
+			block.date = this.date;
+			block.cts_code = this.cts_code;
+			block.lastdate = this.lastdate;
+			block.cnt = this.cnt;
+
+		}
 	}
 
 	public partial class XQt2805OutBlock : XingBlock
@@ -333,6 +344,15 @@ namespace XingAPINet
 			// nowfutyn char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQt2805OutBlock block)
+		{
+			block.date = this.date;
+			block.cts_code = this.cts_code;
+			block.lastdate = this.lastdate;
+			block.nowfutyn = this.nowfutyn;
+
 		}
 	}
 
@@ -651,6 +671,24 @@ namespace XingAPINet
 			// value float 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt2805OutBlock1 block)
+		{
+			block.date = this.date;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.close = this.close;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.diff_vol = this.diff_vol;
+			block.openyak = this.openyak;
+			block.openyakupdn = this.openyakupdn;
+			block.value = this.value;
+
 		}
 	}
 

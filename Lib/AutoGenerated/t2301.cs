@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2301InBlock block)
+		{
+			block.yyyymm = this.yyyymm;
+			block.gubun = this.gubun;
+
+		}
 	}
 
 	public partial class XQt2301OutBlock : XingBlock
@@ -371,6 +378,21 @@ namespace XingAPINet
 			if (gmshcode?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt2301OutBlock block)
+		{
+			block.histimpv = this.histimpv;
+			block.jandatecnt = this.jandatecnt;
+			block.cimpv = this.cimpv;
+			block.pimpv = this.pimpv;
+			block.gmprice = this.gmprice;
+			block.gmsign = this.gmsign;
+			block.gmchange = this.gmchange;
+			block.gmdiff = this.gmdiff;
+			block.gmvolume = this.gmvolume;
+			block.gmshcode = this.gmshcode;
+
 		}
 	}
 
@@ -1013,6 +1035,43 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2301OutBlock1 block)
+		{
+			block.actprice = this.actprice;
+			block.optcode = this.optcode;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.iv = this.iv;
+			block.mgjv = this.mgjv;
+			block.mgjvupdn = this.mgjvupdn;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.cvolume = this.cvolume;
+			block.delt = this.delt;
+			block.gama = this.gama;
+			block.vega = this.vega;
+			block.ceta = this.ceta;
+			block.rhox = this.rhox;
+			block.theoryprice = this.theoryprice;
+			block.impv = this.impv;
+			block.timevl = this.timevl;
+			block.jvolume = this.jvolume;
+			block.parpl = this.parpl;
+			block.jngo = this.jngo;
+			block.offerrem1 = this.offerrem1;
+			block.bidrem1 = this.bidrem1;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.atmgubun = this.atmgubun;
+			block.jisuconv = this.jisuconv;
+			block.value = this.value;
+
+		}
 	}
 
 	public partial class XQt2301OutBlock2 : XingBlock
@@ -1653,6 +1712,43 @@ namespace XingAPINet
 			// value float 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt2301OutBlock2 block)
+		{
+			block.actprice = this.actprice;
+			block.optcode = this.optcode;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.iv = this.iv;
+			block.mgjv = this.mgjv;
+			block.mgjvupdn = this.mgjvupdn;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.cvolume = this.cvolume;
+			block.delt = this.delt;
+			block.gama = this.gama;
+			block.vega = this.vega;
+			block.ceta = this.ceta;
+			block.rhox = this.rhox;
+			block.theoryprice = this.theoryprice;
+			block.impv = this.impv;
+			block.timevl = this.timevl;
+			block.jvolume = this.jvolume;
+			block.parpl = this.parpl;
+			block.jngo = this.jngo;
+			block.offerrem1 = this.offerrem1;
+			block.bidrem1 = this.bidrem1;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.atmgubun = this.atmgubun;
+			block.jisuconv = this.jisuconv;
+			block.value = this.value;
+
 		}
 	}
 

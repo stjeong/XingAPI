@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt3521InBlock block)
+		{
+			block.kind = this.kind;
+			block.symbol = this.symbol;
+
+		}
 	}
 
 	public partial class XQt3521OutBlock : XingBlock
@@ -320,6 +327,18 @@ namespace XingAPINet
 			if (date?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt3521OutBlock block)
+		{
+			block.symbol = this.symbol;
+			block.hname = this.hname;
+			block.close = this.close;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.date = this.date;
+
 		}
 	}
 

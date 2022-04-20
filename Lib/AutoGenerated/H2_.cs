@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRH2_InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRH2_OutBlock : XingBlock
@@ -281,6 +287,17 @@ namespace XingAPINet
 			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XRH2_OutBlock block)
+		{
+			block.hotime = this.hotime;
+			block.tmofferrem = this.tmofferrem;
+			block.tmbidrem = this.tmbidrem;
+			block.pretmoffercha = this.pretmoffercha;
+			block.pretmbidcha = this.pretmbidcha;
+			block.shcode = this.shcode;
+
 		}
 	}
 

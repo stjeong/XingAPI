@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRCURInBlock block)
+		{
+			block.base_id = this.base_id;
+
+		}
 	}
 
 	public partial class XRCUROutBlock : XingBlock
@@ -383,6 +389,23 @@ namespace XingAPINet
 			if (base_id?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XRCUROutBlock block)
+		{
+			block.time = this.time;
+			block.offer = this.offer;
+			block.bid = this.bid;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.drate = this.drate;
+			block.ctime = this.ctime;
+			block.base_id = this.base_id;
+
 		}
 	}
 

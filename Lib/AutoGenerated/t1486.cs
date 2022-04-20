@@ -125,6 +125,14 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1486InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.cts_time = this.cts_time;
+			block.cnt = this.cnt;
+
+		}
 	}
 
 	public partial class XQt1486OutBlock : XingBlock
@@ -234,6 +242,12 @@ namespace XingAPINet
 			if (cts_time?.Length > 10) return false; // char 10
 
 			return true;
+		}
+
+		public void CopyTo(XQt1486OutBlock block)
+		{
+			block.cts_time = this.cts_time;
+
 		}
 	}
 
@@ -501,6 +515,21 @@ namespace XingAPINet
 			if (bidrem1.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1486OutBlock1 block)
+		{
+			block.chetime = this.chetime;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.cvolume = this.cvolume;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.offerrem1 = this.offerrem1;
+			block.bidrem1 = this.bidrem1;
+
 		}
 	}
 

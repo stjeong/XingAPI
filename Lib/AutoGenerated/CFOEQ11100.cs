@@ -141,6 +141,15 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCFOEQ11100InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.BnsDt = this.BnsDt;
+
+		}
 	}
 
 	public partial class XQCFOEQ11100OutBlock1 : XingBlock
@@ -301,6 +310,15 @@ namespace XingAPINet
 			if (BnsDt?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQCFOEQ11100OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.BnsDt = this.BnsDt;
+
 		}
 	}
 
@@ -2077,6 +2095,110 @@ namespace XingAPINet
 			if (MktEndAfSubstAbndAmt.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCFOEQ11100OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.OpnmkDpsamtTotamt = this.OpnmkDpsamtTotamt;
+			block.OpnmkDps = this.OpnmkDps;
+			block.OpnmkMnyrclAmt = this.OpnmkMnyrclAmt;
+			block.OpnmkSubstAmt = this.OpnmkSubstAmt;
+			block.TotAmt = this.TotAmt;
+			block.Dps = this.Dps;
+			block.MnyrclAmt = this.MnyrclAmt;
+			block.SubstDsgnAmt = this.SubstDsgnAmt;
+			block.CsgnMgn = this.CsgnMgn;
+			block.MnyCsgnMgn = this.MnyCsgnMgn;
+			block.MaintMgn = this.MaintMgn;
+			block.MnyMaintMgn = this.MnyMaintMgn;
+			block.OutAbleAmt = this.OutAbleAmt;
+			block.MnyoutAbleAmt = this.MnyoutAbleAmt;
+			block.SubstOutAbleAmt = this.SubstOutAbleAmt;
+			block.OrdAbleAmt = this.OrdAbleAmt;
+			block.MnyOrdAbleAmt = this.MnyOrdAbleAmt;
+			block.AddMgnOcrTpCode = this.AddMgnOcrTpCode;
+			block.AddMgn = this.AddMgn;
+			block.MnyAddMgn = this.MnyAddMgn;
+			block.NtdayTotAmt = this.NtdayTotAmt;
+			block.NtdayDps = this.NtdayDps;
+			block.NtdayMnyrclAmt = this.NtdayMnyrclAmt;
+			block.NtdaySubstAmt = this.NtdaySubstAmt;
+			block.NtdayCsgnMgn = this.NtdayCsgnMgn;
+			block.NtdayMnyCsgnMgn = this.NtdayMnyCsgnMgn;
+			block.NtdayMaintMgn = this.NtdayMaintMgn;
+			block.NtdayMnyMaintMgn = this.NtdayMnyMaintMgn;
+			block.NtdayOutAbleAmt = this.NtdayOutAbleAmt;
+			block.NtdayMnyoutAbleAmt = this.NtdayMnyoutAbleAmt;
+			block.NtdaySubstOutAbleAmt = this.NtdaySubstOutAbleAmt;
+			block.NtdayOrdAbleAmt = this.NtdayOrdAbleAmt;
+			block.NtdayMnyOrdAbleAmt = this.NtdayMnyOrdAbleAmt;
+			block.NtdayAddMgnTp = this.NtdayAddMgnTp;
+			block.NtdayAddMgn = this.NtdayAddMgn;
+			block.NtdayMnyAddMgn = this.NtdayMnyAddMgn;
+			block.NtdaySettAmt = this.NtdaySettAmt;
+			block.EvalDpsamtTotamt = this.EvalDpsamtTotamt;
+			block.MnyEvalDpstgAmt = this.MnyEvalDpstgAmt;
+			block.DpsamtUtlfeeGivPrergAmt = this.DpsamtUtlfeeGivPrergAmt;
+			block.TaxAmt = this.TaxAmt;
+			block.CsgnMgnrat = this.CsgnMgnrat;
+			block.CsgnMnyMgnrat = this.CsgnMnyMgnrat;
+			block.DpstgTotamtLackAmt = this.DpstgTotamtLackAmt;
+			block.DpstgMnyLackAmt = this.DpstgMnyLackAmt;
+			block.RealInAmt = this.RealInAmt;
+			block.InAmt = this.InAmt;
+			block.OutAmt = this.OutAmt;
+			block.FutsAdjstDfamt = this.FutsAdjstDfamt;
+			block.FutsThdayDfamt = this.FutsThdayDfamt;
+			block.FutsUpdtDfamt = this.FutsUpdtDfamt;
+			block.FutsLastSettDfamt = this.FutsLastSettDfamt;
+			block.OptSettDfamt = this.OptSettDfamt;
+			block.OptBuyAmt = this.OptBuyAmt;
+			block.OptSellAmt = this.OptSellAmt;
+			block.OptXrcDfamt = this.OptXrcDfamt;
+			block.OptAsgnDfamt = this.OptAsgnDfamt;
+			block.RealGdsUndAmt = this.RealGdsUndAmt;
+			block.RealGdsUndAsgnAmt = this.RealGdsUndAsgnAmt;
+			block.RealGdsUndXrcAmt = this.RealGdsUndXrcAmt;
+			block.CmsnAmt = this.CmsnAmt;
+			block.FutsCmsn = this.FutsCmsn;
+			block.OptCmsn = this.OptCmsn;
+			block.FutsCtrctQty = this.FutsCtrctQty;
+			block.FutsCtrctAmt = this.FutsCtrctAmt;
+			block.OptCtrctQty = this.OptCtrctQty;
+			block.OptCtrctAmt = this.OptCtrctAmt;
+			block.FutsUnsttQty = this.FutsUnsttQty;
+			block.FutsUnsttAmt = this.FutsUnsttAmt;
+			block.OptUnsttQty = this.OptUnsttQty;
+			block.OptUnsttAmt = this.OptUnsttAmt;
+			block.FutsBuyUnsttQty = this.FutsBuyUnsttQty;
+			block.FutsBuyUnsttAmt = this.FutsBuyUnsttAmt;
+			block.FutsSellUnsttQty = this.FutsSellUnsttQty;
+			block.FutsSellUnsttAmt = this.FutsSellUnsttAmt;
+			block.OptBuyUnsttQty = this.OptBuyUnsttQty;
+			block.OptBuyUnsttAmt = this.OptBuyUnsttAmt;
+			block.OptSellUnsttQty = this.OptSellUnsttQty;
+			block.OptSellUnsttAmt = this.OptSellUnsttAmt;
+			block.FutsBuyctrQty = this.FutsBuyctrQty;
+			block.FutsBuyctrAmt = this.FutsBuyctrAmt;
+			block.FutsSlctrQty = this.FutsSlctrQty;
+			block.FutsSlctrAmt = this.FutsSlctrAmt;
+			block.OptBuyctrQty = this.OptBuyctrQty;
+			block.OptBuyctrAmt = this.OptBuyctrAmt;
+			block.OptSlctrQty = this.OptSlctrQty;
+			block.OptSlctrAmt = this.OptSlctrAmt;
+			block.FutsBnsplAmt = this.FutsBnsplAmt;
+			block.OptBnsplAmt = this.OptBnsplAmt;
+			block.FutsEvalPnlAmt = this.FutsEvalPnlAmt;
+			block.OptEvalPnlAmt = this.OptEvalPnlAmt;
+			block.FutsEvalAmt = this.FutsEvalAmt;
+			block.OptEvalAmt = this.OptEvalAmt;
+			block.MktEndAfMnyInAmt = this.MktEndAfMnyInAmt;
+			block.MktEndAfMnyOutAmt = this.MktEndAfMnyOutAmt;
+			block.MktEndAfSubstDsgnAmt = this.MktEndAfSubstDsgnAmt;
+			block.MktEndAfSubstAbndAmt = this.MktEndAfSubstAbndAmt;
+
 		}
 	}
 

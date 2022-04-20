@@ -125,6 +125,14 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1954InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.date = this.date;
+			block.cnt = this.cnt;
+
+		}
 	}
 
 	public partial class XQt1954OutBlock : XingBlock
@@ -285,6 +293,15 @@ namespace XingAPINet
 			if (bjcode?.Length > 3) return false; // char 3
 
 			return true;
+		}
+
+		public void CopyTo(XQt1954OutBlock block)
+		{
+			block.date = this.date;
+			block.bsjgubun = this.bsjgubun;
+			block.bscode = this.bscode;
+			block.bjcode = this.bjcode;
+
 		}
 	}
 
@@ -773,6 +790,34 @@ namespace XingAPINet
 			// mness char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQt1954OutBlock1 block)
+		{
+			block.date = this.date;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.close = this.close;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.bsprice = this.bsprice;
+			block.bjprice = this.bjprice;
+			block.bsign = this.bsign;
+			block.bschange = this.bschange;
+			block.bjchange = this.bjchange;
+			block.bdiff = this.bdiff;
+			block.bvolume = this.bvolume;
+			block.parity = this.parity;
+			block.egearing = this.egearing;
+			block.premium = this.premium;
+			block.berate = this.berate;
+			block.capt = this.capt;
+			block.gearing = this.gearing;
+			block.mness = this.mness;
+
 		}
 	}
 

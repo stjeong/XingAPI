@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRBMTInBlock block)
+		{
+			block.upcode = this.upcode;
+
+		}
 	}
 
 	public partial class XRBMTOutBlock : XingBlock
@@ -1641,6 +1647,97 @@ namespace XingAPINet
 			if (msval0.ToString().Length > 6) return false; // long 6
 
 			return true;
+		}
+
+		public void CopyTo(XRBMTOutBlock block)
+		{
+			block.tjjtime = this.tjjtime;
+			block.tjjcode1 = this.tjjcode1;
+			block.msvolume1 = this.msvolume1;
+			block.mdvolume1 = this.mdvolume1;
+			block.msvol1 = this.msvol1;
+			block.msvalue1 = this.msvalue1;
+			block.mdvalue1 = this.mdvalue1;
+			block.msval1 = this.msval1;
+			block.tjjcode2 = this.tjjcode2;
+			block.msvolume2 = this.msvolume2;
+			block.mdvolume2 = this.mdvolume2;
+			block.msvol2 = this.msvol2;
+			block.msvalue2 = this.msvalue2;
+			block.mdvalue2 = this.mdvalue2;
+			block.msval2 = this.msval2;
+			block.tjjcode3 = this.tjjcode3;
+			block.msvolume3 = this.msvolume3;
+			block.mdvolume3 = this.mdvolume3;
+			block.msvol3 = this.msvol3;
+			block.msvalue3 = this.msvalue3;
+			block.mdvalue3 = this.mdvalue3;
+			block.msval3 = this.msval3;
+			block.tjjcode4 = this.tjjcode4;
+			block.msvolume4 = this.msvolume4;
+			block.mdvolume4 = this.mdvolume4;
+			block.msvol4 = this.msvol4;
+			block.msvalue4 = this.msvalue4;
+			block.mdvalue4 = this.mdvalue4;
+			block.msval4 = this.msval4;
+			block.tjjcode5 = this.tjjcode5;
+			block.msvolume5 = this.msvolume5;
+			block.mdvolume5 = this.mdvolume5;
+			block.msvol5 = this.msvol5;
+			block.msvalue5 = this.msvalue5;
+			block.mdvalue5 = this.mdvalue5;
+			block.msval5 = this.msval5;
+			block.tjjcode6 = this.tjjcode6;
+			block.msvolume6 = this.msvolume6;
+			block.mdvolume6 = this.mdvolume6;
+			block.msvol6 = this.msvol6;
+			block.msvalue6 = this.msvalue6;
+			block.mdvalue6 = this.mdvalue6;
+			block.msval6 = this.msval6;
+			block.tjjcode7 = this.tjjcode7;
+			block.msvolume7 = this.msvolume7;
+			block.mdvolume7 = this.mdvolume7;
+			block.msvol7 = this.msvol7;
+			block.msvalue7 = this.msvalue7;
+			block.mdvalue7 = this.mdvalue7;
+			block.msval7 = this.msval7;
+			block.tjjcode8 = this.tjjcode8;
+			block.msvolume8 = this.msvolume8;
+			block.mdvolume8 = this.mdvolume8;
+			block.msvol8 = this.msvol8;
+			block.msvalue8 = this.msvalue8;
+			block.mdvalue8 = this.mdvalue8;
+			block.msval8 = this.msval8;
+			block.tjjcode9 = this.tjjcode9;
+			block.msvolume9 = this.msvolume9;
+			block.mdvolume9 = this.mdvolume9;
+			block.msvol9 = this.msvol9;
+			block.msvalue9 = this.msvalue9;
+			block.mdvalue9 = this.mdvalue9;
+			block.msval9 = this.msval9;
+			block.tjjcode10 = this.tjjcode10;
+			block.msvolume10 = this.msvolume10;
+			block.mdvolume10 = this.mdvolume10;
+			block.msvol10 = this.msvol10;
+			block.msvalue10 = this.msvalue10;
+			block.mdvalue10 = this.mdvalue10;
+			block.msval10 = this.msval10;
+			block.tjjcode11 = this.tjjcode11;
+			block.msvolume11 = this.msvolume11;
+			block.mdvolume11 = this.mdvolume11;
+			block.msvol11 = this.msvol11;
+			block.msvalue11 = this.msvalue11;
+			block.mdvalue11 = this.mdvalue11;
+			block.msval11 = this.msval11;
+			block.upcode = this.upcode;
+			block.tjjcode0 = this.tjjcode0;
+			block.msvolume0 = this.msvolume0;
+			block.mdvolume0 = this.mdvolume0;
+			block.msvol0 = this.msvol0;
+			block.msvalue0 = this.msvalue0;
+			block.mdvalue0 = this.mdvalue0;
+			block.msval0 = this.msval0;
+
 		}
 	}
 

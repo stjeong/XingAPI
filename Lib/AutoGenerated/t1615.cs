@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1615InBlock block)
+		{
+			block.gubun1 = this.gubun1;
+			block.gubun2 = this.gubun2;
+
+		}
 	}
 
 	public partial class XQt1615OutBlock : XingBlock
@@ -304,6 +311,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1615OutBlock block)
+		{
+			block.dwvolume = this.dwvolume;
+			block.dwvalue = this.dwvalue;
+			block.djvolume = this.djvolume;
+			block.djvalue = this.djvalue;
+			block.sum_volume = this.sum_volume;
+			block.sum_value = this.sum_value;
+
+		}
 	}
 
 	public partial class XQt1615OutBlock1 : XingBlock
@@ -485,6 +503,16 @@ namespace XingAPINet
 			if (sv_07.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1615OutBlock1 block)
+		{
+			block.hname = this.hname;
+			block.sv_08 = this.sv_08;
+			block.sv_17 = this.sv_17;
+			block.sv_18 = this.sv_18;
+			block.sv_07 = this.sv_07;
+
 		}
 	}
 

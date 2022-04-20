@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1537InBlock block)
+		{
+			block.tmcode = this.tmcode;
+
+		}
 	}
 
 	public partial class XQt1537OutBlock : XingBlock
@@ -253,6 +259,15 @@ namespace XingAPINet
 			if (tmname?.Length > 36) return false; // char 36
 
 			return true;
+		}
+
+		public void CopyTo(XQt1537OutBlock block)
+		{
+			block.upcnt = this.upcnt;
+			block.tmcnt = this.tmcnt;
+			block.uprate = this.uprate;
+			block.tmname = this.tmname;
+
 		}
 	}
 
@@ -588,6 +603,25 @@ namespace XingAPINet
 			if (marketcap.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1537OutBlock1 block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.jniltime = this.jniltime;
+			block.shcode = this.shcode;
+			block.yeprice = this.yeprice;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.value = this.value;
+			block.marketcap = this.marketcap;
+
 		}
 	}
 

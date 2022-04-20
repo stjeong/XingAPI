@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1972InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt1972OutBlock : XingBlock
@@ -1018,6 +1024,60 @@ namespace XingAPINet
 			// fwsdiff float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1972OutBlock block)
+		{
+			block.hname = this.hname;
+			block.expcode = this.expcode;
+			block.shcode = this.shcode;
+			block.offerno1 = this.offerno1;
+			block.bidno1 = this.bidno1;
+			block.dvol1 = this.dvol1;
+			block.svol1 = this.svol1;
+			block.dcha1 = this.dcha1;
+			block.scha1 = this.scha1;
+			block.ddiff1 = this.ddiff1;
+			block.sdiff1 = this.sdiff1;
+			block.offerno2 = this.offerno2;
+			block.bidno2 = this.bidno2;
+			block.dvol2 = this.dvol2;
+			block.svol2 = this.svol2;
+			block.dcha2 = this.dcha2;
+			block.scha2 = this.scha2;
+			block.ddiff2 = this.ddiff2;
+			block.sdiff2 = this.sdiff2;
+			block.offerno3 = this.offerno3;
+			block.bidno3 = this.bidno3;
+			block.dvol3 = this.dvol3;
+			block.svol3 = this.svol3;
+			block.dcha3 = this.dcha3;
+			block.scha3 = this.scha3;
+			block.ddiff3 = this.ddiff3;
+			block.sdiff3 = this.sdiff3;
+			block.offerno4 = this.offerno4;
+			block.bidno4 = this.bidno4;
+			block.dvol4 = this.dvol4;
+			block.svol4 = this.svol4;
+			block.dcha4 = this.dcha4;
+			block.scha4 = this.scha4;
+			block.ddiff4 = this.ddiff4;
+			block.sdiff4 = this.sdiff4;
+			block.offerno5 = this.offerno5;
+			block.bidno5 = this.bidno5;
+			block.dvol5 = this.dvol5;
+			block.svol5 = this.svol5;
+			block.dcha5 = this.dcha5;
+			block.scha5 = this.scha5;
+			block.ddiff5 = this.ddiff5;
+			block.sdiff5 = this.sdiff5;
+			block.fwdvl = this.fwdvl;
+			block.fwsvl = this.fwsvl;
+			block.ftradmdcha = this.ftradmdcha;
+			block.ftradmscha = this.ftradmscha;
+			block.fwddiff = this.fwddiff;
+			block.fwsdiff = this.fwsdiff;
+
 		}
 	}
 

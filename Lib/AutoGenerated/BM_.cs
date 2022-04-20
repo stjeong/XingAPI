@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRBM_InBlock block)
+		{
+			block.upcode = this.upcode;
+
+		}
 	}
 
 	public partial class XRBM_OutBlock : XingBlock
@@ -366,6 +372,22 @@ namespace XingAPINet
 			if (upcode?.Length > 3) return false; // char 3
 
 			return true;
+		}
+
+		public void CopyTo(XRBM_OutBlock block)
+		{
+			block.tjjcode = this.tjjcode;
+			block.tjjtime = this.tjjtime;
+			block.msvolume = this.msvolume;
+			block.mdvolume = this.mdvolume;
+			block.msvol = this.msvol;
+			block.p_msvol = this.p_msvol;
+			block.msvalue = this.msvalue;
+			block.mdvalue = this.mdvalue;
+			block.msval = this.msval;
+			block.p_msval = this.p_msval;
+			block.upcode = this.upcode;
+
 		}
 	}
 

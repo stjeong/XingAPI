@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1511InBlock block)
+		{
+			block.upcode = this.upcode;
+
+		}
 	}
 
 	public partial class XQt1511OutBlock : XingBlock
@@ -1290,6 +1296,76 @@ namespace XingAPINet
 			if (downjo.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1511OutBlock block)
+		{
+			block.gubun = this.gubun;
+			block.hname = this.hname;
+			block.pricejisu = this.pricejisu;
+			block.jniljisu = this.jniljisu;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diffjisu = this.diffjisu;
+			block.jnilvolume = this.jnilvolume;
+			block.volume = this.volume;
+			block.volumechange = this.volumechange;
+			block.volumerate = this.volumerate;
+			block.jnilvalue = this.jnilvalue;
+			block.value = this.value;
+			block.valuechange = this.valuechange;
+			block.valuerate = this.valuerate;
+			block.openjisu = this.openjisu;
+			block.opendiff = this.opendiff;
+			block.opentime = this.opentime;
+			block.highjisu = this.highjisu;
+			block.highdiff = this.highdiff;
+			block.hightime = this.hightime;
+			block.lowjisu = this.lowjisu;
+			block.lowdiff = this.lowdiff;
+			block.lowtime = this.lowtime;
+			block.whjisu = this.whjisu;
+			block.whchange = this.whchange;
+			block.whjday = this.whjday;
+			block.wljisu = this.wljisu;
+			block.wlchange = this.wlchange;
+			block.wljday = this.wljday;
+			block.yhjisu = this.yhjisu;
+			block.yhchange = this.yhchange;
+			block.yhjday = this.yhjday;
+			block.yljisu = this.yljisu;
+			block.ylchange = this.ylchange;
+			block.yljday = this.yljday;
+			block.firstjcode = this.firstjcode;
+			block.firstjname = this.firstjname;
+			block.firstjisu = this.firstjisu;
+			block.firsign = this.firsign;
+			block.firchange = this.firchange;
+			block.firdiff = this.firdiff;
+			block.secondjcode = this.secondjcode;
+			block.secondjname = this.secondjname;
+			block.secondjisu = this.secondjisu;
+			block.secsign = this.secsign;
+			block.secchange = this.secchange;
+			block.secdiff = this.secdiff;
+			block.thirdjcode = this.thirdjcode;
+			block.thirdjname = this.thirdjname;
+			block.thirdjisu = this.thirdjisu;
+			block.thrsign = this.thrsign;
+			block.thrchange = this.thrchange;
+			block.thrdiff = this.thrdiff;
+			block.fourthjcode = this.fourthjcode;
+			block.fourthjname = this.fourthjname;
+			block.fourthjisu = this.fourthjisu;
+			block.forsign = this.forsign;
+			block.forchange = this.forchange;
+			block.fordiff = this.fordiff;
+			block.highjo = this.highjo;
+			block.upjo = this.upjo;
+			block.unchgjo = this.unchgjo;
+			block.lowjo = this.lowjo;
+			block.downjo = this.downjo;
+
 		}
 	}
 

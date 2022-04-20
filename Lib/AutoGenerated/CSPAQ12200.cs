@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCSPAQ12200InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.MgmtBrnNo = this.MgmtBrnNo;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.BalCreTp = this.BalCreTp;
+
+		}
 	}
 
 	public partial class XQCSPAQ12200OutBlock1 : XingBlock
@@ -334,6 +344,16 @@ namespace XingAPINet
 			// BalCreTp char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQCSPAQ12200OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.MgmtBrnNo = this.MgmtBrnNo;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.BalCreTp = this.BalCreTp;
+
 		}
 	}
 
@@ -1413,6 +1433,69 @@ namespace XingAPINet
 			if (DpslRestrcAmt.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCSPAQ12200OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.BrnNm = this.BrnNm;
+			block.AcntNm = this.AcntNm;
+			block.MnyOrdAbleAmt = this.MnyOrdAbleAmt;
+			block.MnyoutAbleAmt = this.MnyoutAbleAmt;
+			block.SeOrdAbleAmt = this.SeOrdAbleAmt;
+			block.KdqOrdAbleAmt = this.KdqOrdAbleAmt;
+			block.BalEvalAmt = this.BalEvalAmt;
+			block.RcvblAmt = this.RcvblAmt;
+			block.DpsastTotamt = this.DpsastTotamt;
+			block.PnlRat = this.PnlRat;
+			block.InvstOrgAmt = this.InvstOrgAmt;
+			block.InvstPlAmt = this.InvstPlAmt;
+			block.CrdtPldgOrdAmt = this.CrdtPldgOrdAmt;
+			block.Dps = this.Dps;
+			block.SubstAmt = this.SubstAmt;
+			block.D1Dps = this.D1Dps;
+			block.D2Dps = this.D2Dps;
+			block.MnyrclAmt = this.MnyrclAmt;
+			block.MgnMny = this.MgnMny;
+			block.MgnSubst = this.MgnSubst;
+			block.ChckAmt = this.ChckAmt;
+			block.SubstOrdAbleAmt = this.SubstOrdAbleAmt;
+			block.MgnRat100pctOrdAbleAmt = this.MgnRat100pctOrdAbleAmt;
+			block.MgnRat35ordAbleAmt = this.MgnRat35ordAbleAmt;
+			block.MgnRat50ordAbleAmt = this.MgnRat50ordAbleAmt;
+			block.PrdaySellAdjstAmt = this.PrdaySellAdjstAmt;
+			block.PrdayBuyAdjstAmt = this.PrdayBuyAdjstAmt;
+			block.CrdaySellAdjstAmt = this.CrdaySellAdjstAmt;
+			block.CrdayBuyAdjstAmt = this.CrdayBuyAdjstAmt;
+			block.D1ovdRepayRqrdAmt = this.D1ovdRepayRqrdAmt;
+			block.D2ovdRepayRqrdAmt = this.D2ovdRepayRqrdAmt;
+			block.D1PrsmptWthdwAbleAmt = this.D1PrsmptWthdwAbleAmt;
+			block.D2PrsmptWthdwAbleAmt = this.D2PrsmptWthdwAbleAmt;
+			block.DpspdgLoanAmt = this.DpspdgLoanAmt;
+			block.Imreq = this.Imreq;
+			block.MloanAmt = this.MloanAmt;
+			block.ChgAfPldgRat = this.ChgAfPldgRat;
+			block.OrgPldgAmt = this.OrgPldgAmt;
+			block.SubPldgAmt = this.SubPldgAmt;
+			block.RqrdPldgAmt = this.RqrdPldgAmt;
+			block.OrgPdlckAmt = this.OrgPdlckAmt;
+			block.PdlckAmt = this.PdlckAmt;
+			block.AddPldgMny = this.AddPldgMny;
+			block.D1OrdAbleAmt = this.D1OrdAbleAmt;
+			block.CrdtIntdltAmt = this.CrdtIntdltAmt;
+			block.EtclndAmt = this.EtclndAmt;
+			block.NtdayPrsmptCvrgAmt = this.NtdayPrsmptCvrgAmt;
+			block.OrgPldgSumAmt = this.OrgPldgSumAmt;
+			block.CrdtOrdAbleAmt = this.CrdtOrdAbleAmt;
+			block.SubPldgSumAmt = this.SubPldgSumAmt;
+			block.CrdtPldgAmtMny = this.CrdtPldgAmtMny;
+			block.CrdtPldgSubstAmt = this.CrdtPldgSubstAmt;
+			block.AddCrdtPldgMny = this.AddCrdtPldgMny;
+			block.CrdtPldgRuseAmt = this.CrdtPldgRuseAmt;
+			block.AddCrdtPldgSubst = this.AddCrdtPldgSubst;
+			block.CslLoanAmtdt1 = this.CslLoanAmtdt1;
+			block.DpslRestrcAmt = this.DpslRestrcAmt;
+
 		}
 	}
 

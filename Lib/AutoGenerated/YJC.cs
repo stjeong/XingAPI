@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRYJCInBlock block)
+		{
+			block.futcode = this.futcode;
+
+		}
 	}
 
 	public partial class XRYJCOutBlock : XingBlock
@@ -281,6 +287,17 @@ namespace XingAPINet
 			if (futcode?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XRYJCOutBlock block)
+		{
+			block.ychetime = this.ychetime;
+			block.yeprice = this.yeprice;
+			block.jnilysign = this.jnilysign;
+			block.preychange = this.preychange;
+			block.jnilydrate = this.jnilydrate;
+			block.futcode = this.futcode;
+
 		}
 	}
 

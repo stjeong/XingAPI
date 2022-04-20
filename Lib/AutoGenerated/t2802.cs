@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2802InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt2802OutBlock : XingBlock
@@ -933,6 +939,55 @@ namespace XingAPINet
 			if (shcode?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt2802OutBlock block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.stimeqrt = this.stimeqrt;
+			block.jnilclose = this.jnilclose;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.offerrem1 = this.offerrem1;
+			block.bidrem1 = this.bidrem1;
+			block.dcnt1 = this.dcnt1;
+			block.scnt1 = this.scnt1;
+			block.offerho2 = this.offerho2;
+			block.bidho2 = this.bidho2;
+			block.offerrem2 = this.offerrem2;
+			block.bidrem2 = this.bidrem2;
+			block.dcnt2 = this.dcnt2;
+			block.scnt2 = this.scnt2;
+			block.offerho3 = this.offerho3;
+			block.bidho3 = this.bidho3;
+			block.offerrem3 = this.offerrem3;
+			block.bidrem3 = this.bidrem3;
+			block.dcnt3 = this.dcnt3;
+			block.scnt3 = this.scnt3;
+			block.offerho4 = this.offerho4;
+			block.bidho4 = this.bidho4;
+			block.offerrem4 = this.offerrem4;
+			block.bidrem4 = this.bidrem4;
+			block.dcnt4 = this.dcnt4;
+			block.scnt4 = this.scnt4;
+			block.offerho5 = this.offerho5;
+			block.bidho5 = this.bidho5;
+			block.offerrem5 = this.offerrem5;
+			block.bidrem5 = this.bidrem5;
+			block.dcnt5 = this.dcnt5;
+			block.scnt5 = this.scnt5;
+			block.dvol = this.dvol;
+			block.svol = this.svol;
+			block.toffernum = this.toffernum;
+			block.tbidnum = this.tbidnum;
+			block.time = this.time;
+			block.shcode = this.shcode;
+
 		}
 	}
 

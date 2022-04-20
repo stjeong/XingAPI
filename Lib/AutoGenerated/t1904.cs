@@ -125,6 +125,14 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1904InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.date = this.date;
+			block.sgb = this.sgb;
+
+		}
 	}
 
 	public partial class XQt1904OutBlock : XingBlock
@@ -847,6 +855,48 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1904OutBlock block)
+		{
+			block.chk_tday = this.chk_tday;
+			block.date = this.date;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.nav = this.nav;
+			block.navsign = this.navsign;
+			block.navchange = this.navchange;
+			block.navdiff = this.navdiff;
+			block.jnilnav = this.jnilnav;
+			block.jnilnavsign = this.jnilnavsign;
+			block.jnilnavchange = this.jnilnavchange;
+			block.jnilnavdiff = this.jnilnavdiff;
+			block.upname = this.upname;
+			block.upcode = this.upcode;
+			block.upprice = this.upprice;
+			block.upsign = this.upsign;
+			block.upchange = this.upchange;
+			block.updiff = this.updiff;
+			block.futname = this.futname;
+			block.futcode = this.futcode;
+			block.futprice = this.futprice;
+			block.futsign = this.futsign;
+			block.futchange = this.futchange;
+			block.futdiff = this.futdiff;
+			block.upname2 = this.upname2;
+			block.upcode2 = this.upcode2;
+			block.upprice2 = this.upprice2;
+			block.etftotcap = this.etftotcap;
+			block.etfnum = this.etfnum;
+			block.etfcunum = this.etfcunum;
+			block.cash = this.cash;
+			block.opcom_nmk = this.opcom_nmk;
+			block.tot_pval = this.tot_pval;
+			block.tot_sigatval = this.tot_sigatval;
+
+		}
 	}
 
 	public partial class XQt1904OutBlock1 : XingBlock
@@ -1198,6 +1248,26 @@ namespace XingAPINet
 			// diff2 float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1904OutBlock1 block)
+		{
+			block.shcode = this.shcode;
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.icux = this.icux;
+			block.parprice = this.parprice;
+			block.pvalue = this.pvalue;
+			block.sigatvalue = this.sigatvalue;
+			block.profitdate = this.profitdate;
+			block.weight = this.weight;
+			block.diff2 = this.diff2;
+
 		}
 	}
 

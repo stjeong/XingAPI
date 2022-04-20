@@ -125,6 +125,14 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1857InBlock block)
+		{
+			block.sRealFlag = this.sRealFlag;
+			block.sSearchFlag = this.sSearchFlag;
+			block.query_index = this.query_index;
+
+		}
 	}
 
 	public partial class XQt1857OutBlock : XingBlock
@@ -268,6 +276,14 @@ namespace XingAPINet
 			if (AlertNum?.Length > 11) return false; // char 11
 
 			return true;
+		}
+
+		public void CopyTo(XQt1857OutBlock block)
+		{
+			block.result_count = this.result_count;
+			block.result_time = this.result_time;
+			block.AlertNum = this.AlertNum;
+
 		}
 	}
 
@@ -501,6 +517,19 @@ namespace XingAPINet
 			// JobFlag char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQt1857OutBlock1 block)
+		{
+			block.shcode = this.shcode;
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.JobFlag = this.JobFlag;
+
 		}
 	}
 

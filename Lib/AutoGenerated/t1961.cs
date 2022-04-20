@@ -253,6 +253,22 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1961InBlock block)
+		{
+			block.gubun = this.gubun;
+			block.ggubun = this.ggubun;
+			block.itemcode = this.itemcode;
+			block.lastdate = this.lastdate;
+			block.exgubun = this.exgubun;
+			block.sprice = this.sprice;
+			block.eprice = this.eprice;
+			block.volume = this.volume;
+			block.sjanday = this.sjanday;
+			block.ejanday = this.ejanday;
+			block.idx = this.idx;
+
+		}
 	}
 
 	public partial class XQt1961OutBlock : XingBlock
@@ -362,6 +378,12 @@ namespace XingAPINet
 			if (idx.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1961OutBlock block)
+		{
+			block.idx = this.idx;
+
 		}
 	}
 
@@ -765,6 +787,29 @@ namespace XingAPINet
 			if (elwshcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XQt1961OutBlock1 block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.jnilvolume = this.jnilvolume;
+			block.elwexec = this.elwexec;
+			block.convrate = this.convrate;
+			block.lastdate = this.lastdate;
+			block.itemcode = this.itemcode;
+			block.itemshcode = this.itemshcode;
+			block.itemname = this.itemname;
+			block.itemprice = this.itemprice;
+			block.itemsign = this.itemsign;
+			block.itemchange = this.itemchange;
+			block.itemdiff = this.itemdiff;
+			block.elwshcode = this.elwshcode;
+
 		}
 	}
 

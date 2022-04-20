@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8428InBlock block)
+		{
+			block.fdate = this.fdate;
+			block.tdate = this.tdate;
+			block.gubun = this.gubun;
+			block.key_date = this.key_date;
+			block.upcode = this.upcode;
+			block.cnt = this.cnt;
+
+		}
 	}
 
 	public partial class XQt8428OutBlock : XingBlock
@@ -299,6 +310,13 @@ namespace XingAPINet
 			if (idx.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt8428OutBlock block)
+		{
+			block.date = this.date;
+			block.idx = this.idx;
+
 		}
 	}
 
@@ -702,6 +720,29 @@ namespace XingAPINet
 			if (mmfmoney.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt8428OutBlock1 block)
+		{
+			block.date = this.date;
+			block.jisu = this.jisu;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.custmoney = this.custmoney;
+			block.yecha = this.yecha;
+			block.vol = this.vol;
+			block.outmoney = this.outmoney;
+			block.trjango = this.trjango;
+			block.futymoney = this.futymoney;
+			block.stkmoney = this.stkmoney;
+			block.mstkmoney = this.mstkmoney;
+			block.mbndmoney = this.mbndmoney;
+			block.bndmoney = this.bndmoney;
+			block.bndsmoney = this.bndsmoney;
+			block.mmfmoney = this.mmfmoney;
+
 		}
 	}
 

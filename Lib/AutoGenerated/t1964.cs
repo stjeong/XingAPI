@@ -253,6 +253,22 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1964InBlock block)
+		{
+			block.item = this.item;
+			block.issuercd = this.issuercd;
+			block.lastmonth = this.lastmonth;
+			block.elwopt = this.elwopt;
+			block.atmgubun = this.atmgubun;
+			block.elwtype = this.elwtype;
+			block.settletype = this.settletype;
+			block.elwexecgubun = this.elwexecgubun;
+			block.fromrat = this.fromrat;
+			block.torat = this.torat;
+			block.volume = this.volume;
+
+		}
 	}
 
 	public partial class XQt1964OutBlock1 : XingBlock
@@ -978,6 +994,48 @@ namespace XingAPINet
 			// theta float 10.6
 
 			return true;
+		}
+
+		public void CopyTo(XQt1964OutBlock1 block)
+		{
+			block.shcode = this.shcode;
+			block.hname = this.hname;
+			block.item1 = this.item1;
+			block.itemnm = this.itemnm;
+			block.issuernmk = this.issuernmk;
+			block.elwopt = this.elwopt;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.elwexec = this.elwexec;
+			block.jandatecnt = this.jandatecnt;
+			block.convrate = this.convrate;
+			block.lastdate = this.lastdate;
+			block.mmsdate = this.mmsdate;
+			block.payday = this.payday;
+			block.listing = this.listing;
+			block.atmgbnm = this.atmgbnm;
+			block.parity = this.parity;
+			block.preminum = this.preminum;
+			block.spread = this.spread;
+			block.berate = this.berate;
+			block.capt = this.capt;
+			block.gearing = this.gearing;
+			block.egearing = this.egearing;
+			block.itemprice = this.itemprice;
+			block.itemsign = this.itemsign;
+			block.itemchange = this.itemchange;
+			block.itemdiff = this.itemdiff;
+			block.itemvolume = this.itemvolume;
+			block.jnilvolume = this.jnilvolume;
+			block.theoryprice = this.theoryprice;
+			block.lp_rate = this.lp_rate;
+			block.impv = this.impv;
+			block.delta = this.delta;
+			block.theta = this.theta;
+
 		}
 	}
 

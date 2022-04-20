@@ -73,6 +73,11 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRSC1InBlock block)
+		{
+
+		}
 	}
 
 	public partial class XRSC1OutBlock : XingBlock
@@ -2369,6 +2374,141 @@ namespace XingAPINet
 			if (ruseableamt.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XRSC1OutBlock block)
+		{
+			block.lineseq = this.lineseq;
+			block.accno = this.accno;
+			block.user = this.user;
+			block.len = this.len;
+			block.gubun = this.gubun;
+			block.compress = this.compress;
+			block.encrypt = this.encrypt;
+			block.offset = this.offset;
+			block.trcode = this.trcode;
+			block.compid = this.compid;
+			block.userid = this.userid;
+			block.media = this.media;
+			block.ifid = this.ifid;
+			block.seq = this.seq;
+			block.trid = this.trid;
+			block.pubip = this.pubip;
+			block.prvip = this.prvip;
+			block.pcbpno = this.pcbpno;
+			block.bpno = this.bpno;
+			block.termno = this.termno;
+			block.lang = this.lang;
+			block.proctm = this.proctm;
+			block.msgcode = this.msgcode;
+			block.outgu = this.outgu;
+			block.compreq = this.compreq;
+			block.funckey = this.funckey;
+			block.reqcnt = this.reqcnt;
+			block.filler = this.filler;
+			block.cont = this.cont;
+			block.contkey = this.contkey;
+			block.varlen = this.varlen;
+			block.varhdlen = this.varhdlen;
+			block.varmsglen = this.varmsglen;
+			block.trsrc = this.trsrc;
+			block.eventid = this.eventid;
+			block.ifinfo = this.ifinfo;
+			block.filler1 = this.filler1;
+			block.ordxctptncode = this.ordxctptncode;
+			block.ordmktcode = this.ordmktcode;
+			block.ordptncode = this.ordptncode;
+			block.mgmtbrnno = this.mgmtbrnno;
+			block.accno1 = this.accno1;
+			block.accno2 = this.accno2;
+			block.acntnm = this.acntnm;
+			block.Isuno = this.Isuno;
+			block.Isunm = this.Isunm;
+			block.ordno = this.ordno;
+			block.orgordno = this.orgordno;
+			block.execno = this.execno;
+			block.ordqty = this.ordqty;
+			block.ordprc = this.ordprc;
+			block.execqty = this.execqty;
+			block.execprc = this.execprc;
+			block.mdfycnfqty = this.mdfycnfqty;
+			block.mdfycnfprc = this.mdfycnfprc;
+			block.canccnfqty = this.canccnfqty;
+			block.rjtqty = this.rjtqty;
+			block.ordtrxptncode = this.ordtrxptncode;
+			block.mtiordseqno = this.mtiordseqno;
+			block.ordcndi = this.ordcndi;
+			block.ordprcptncode = this.ordprcptncode;
+			block.nsavtrdqty = this.nsavtrdqty;
+			block.shtnIsuno = this.shtnIsuno;
+			block.opdrtnno = this.opdrtnno;
+			block.cvrgordtp = this.cvrgordtp;
+			block.unercqty = this.unercqty;
+			block.orgordunercqty = this.orgordunercqty;
+			block.orgordmdfyqty = this.orgordmdfyqty;
+			block.orgordcancqty = this.orgordcancqty;
+			block.ordavrexecprc = this.ordavrexecprc;
+			block.ordamt = this.ordamt;
+			block.stdIsuno = this.stdIsuno;
+			block.bfstdIsuno = this.bfstdIsuno;
+			block.bnstp = this.bnstp;
+			block.ordtrdptncode = this.ordtrdptncode;
+			block.mgntrncode = this.mgntrncode;
+			block.adduptp = this.adduptp;
+			block.commdacode = this.commdacode;
+			block.Loandt = this.Loandt;
+			block.mbrnmbrno = this.mbrnmbrno;
+			block.ordacntno = this.ordacntno;
+			block.agrgbrnno = this.agrgbrnno;
+			block.mgempno = this.mgempno;
+			block.futsLnkbrnno = this.futsLnkbrnno;
+			block.futsLnkacntno = this.futsLnkacntno;
+			block.futsmkttp = this.futsmkttp;
+			block.regmktcode = this.regmktcode;
+			block.mnymgnrat = this.mnymgnrat;
+			block.substmgnrat = this.substmgnrat;
+			block.mnyexecamt = this.mnyexecamt;
+			block.ubstexecamt = this.ubstexecamt;
+			block.cmsnamtexecamt = this.cmsnamtexecamt;
+			block.crdtpldgexecamt = this.crdtpldgexecamt;
+			block.crdtexecamt = this.crdtexecamt;
+			block.prdayruseexecval = this.prdayruseexecval;
+			block.crdayruseexecval = this.crdayruseexecval;
+			block.spotexecqty = this.spotexecqty;
+			block.stslexecqty = this.stslexecqty;
+			block.strtgcode = this.strtgcode;
+			block.grpId = this.grpId;
+			block.ordseqno = this.ordseqno;
+			block.ptflno = this.ptflno;
+			block.bskno = this.bskno;
+			block.trchno = this.trchno;
+			block.itemno = this.itemno;
+			block.orduserId = this.orduserId;
+			block.brwmgmtYn = this.brwmgmtYn;
+			block.frgrunqno = this.frgrunqno;
+			block.trtzxLevytp = this.trtzxLevytp;
+			block.lptp = this.lptp;
+			block.exectime = this.exectime;
+			block.rcptexectime = this.rcptexectime;
+			block.rmndLoanamt = this.rmndLoanamt;
+			block.secbalqty = this.secbalqty;
+			block.spotordableqty = this.spotordableqty;
+			block.ordableruseqty = this.ordableruseqty;
+			block.flctqty = this.flctqty;
+			block.secbalqtyd2 = this.secbalqtyd2;
+			block.sellableqty = this.sellableqty;
+			block.unercsellordqty = this.unercsellordqty;
+			block.avrpchsprc = this.avrpchsprc;
+			block.pchsant = this.pchsant;
+			block.deposit = this.deposit;
+			block.substamt = this.substamt;
+			block.csgnmnymgn = this.csgnmnymgn;
+			block.csgnsubstmgn = this.csgnsubstmgn;
+			block.crdtpldgruseamt = this.crdtpldgruseamt;
+			block.ordablemny = this.ordablemny;
+			block.ordablesubstamt = this.ordablesubstamt;
+			block.ruseableamt = this.ruseableamt;
+
 		}
 	}
 

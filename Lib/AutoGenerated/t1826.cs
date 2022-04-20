@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1826InBlock block)
+		{
+			block.search_gb = this.search_gb;
+
+		}
 	}
 
 	public partial class XQt1826OutBlock : XingBlock
@@ -223,6 +229,13 @@ namespace XingAPINet
 			if (search_nm?.Length > 40) return false; // char 40
 
 			return true;
+		}
+
+		public void CopyTo(XQt1826OutBlock block)
+		{
+			block.search_cd = this.search_cd;
+			block.search_nm = this.search_nm;
+
 		}
 	}
 

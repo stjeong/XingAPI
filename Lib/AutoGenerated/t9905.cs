@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt9905InBlock block)
+		{
+			block.dummy = this.dummy;
+
+		}
 	}
 
 	public partial class XQt9905OutBlock1 : XingBlock
@@ -240,6 +246,14 @@ namespace XingAPINet
 			if (hname?.Length > 20) return false; // char 20
 
 			return true;
+		}
+
+		public void CopyTo(XQt9905OutBlock1 block)
+		{
+			block.shcode = this.shcode;
+			block.expcode = this.expcode;
+			block.hname = this.hname;
+
 		}
 	}
 

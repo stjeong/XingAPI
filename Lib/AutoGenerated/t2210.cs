@@ -141,6 +141,15 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2210InBlock block)
+		{
+			block.focode = this.focode;
+			block.cvolume = this.cvolume;
+			block.stime = this.stime;
+			block.etime = this.etime;
+
+		}
 	}
 
 	public partial class XQt2210OutBlock : XingBlock
@@ -301,6 +310,15 @@ namespace XingAPINet
 			if (mschecnt.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt2210OutBlock block)
+		{
+			block.mdvolume = this.mdvolume;
+			block.mdchecnt = this.mdchecnt;
+			block.msvolume = this.msvolume;
+			block.mschecnt = this.mschecnt;
+
 		}
 	}
 

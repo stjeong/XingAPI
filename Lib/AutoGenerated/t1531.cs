@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1531InBlock block)
+		{
+			block.tmname = this.tmname;
+			block.tmcode = this.tmcode;
+
+		}
 	}
 
 	public partial class XQt1531OutBlock : XingBlock
@@ -256,6 +263,14 @@ namespace XingAPINet
 			if (tmcode?.Length > 4) return false; // char 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1531OutBlock block)
+		{
+			block.tmname = this.tmname;
+			block.avgdiff = this.avgdiff;
+			block.tmcode = this.tmcode;
+
 		}
 	}
 

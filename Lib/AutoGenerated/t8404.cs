@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8404InBlock block)
+		{
+			block.focode = this.focode;
+			block.cvolume = this.cvolume;
+			block.stime = this.stime;
+			block.etime = this.etime;
+			block.cts_time = this.cts_time;
+
+		}
 	}
 
 	public partial class XQt8404OutBlock : XingBlock
@@ -266,6 +276,12 @@ namespace XingAPINet
 			if (cts_time?.Length > 10) return false; // char 10
 
 			return true;
+		}
+
+		public void CopyTo(XQt8404OutBlock block)
+		{
+			block.cts_time = this.cts_time;
+
 		}
 	}
 
@@ -737,6 +753,33 @@ namespace XingAPINet
 			if (s_mschecnt.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt8404OutBlock1 block)
+		{
+			block.chetime = this.chetime;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.cvolume = this.cvolume;
+			block.chdegree = this.chdegree;
+			block.offerho = this.offerho;
+			block.bidho = this.bidho;
+			block.volume = this.volume;
+			block.openyak = this.openyak;
+			block.jnilopenupdn = this.jnilopenupdn;
+			block.ibasis = this.ibasis;
+			block.sbasis = this.sbasis;
+			block.kasis = this.kasis;
+			block.value = this.value;
+			block.j_openupdn = this.j_openupdn;
+			block.n_msvolume = this.n_msvolume;
+			block.n_mdvolume = this.n_mdvolume;
+			block.s_msvolume = this.s_msvolume;
+			block.n_mschecnt = this.n_mschecnt;
+			block.n_mdchecnt = this.n_mdchecnt;
+			block.s_mschecnt = this.s_mschecnt;
+
 		}
 	}
 

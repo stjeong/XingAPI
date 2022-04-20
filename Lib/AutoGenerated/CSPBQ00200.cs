@@ -189,6 +189,18 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCSPBQ00200InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.BnsTpCode = this.BnsTpCode;
+			block.AcntNo = this.AcntNo;
+			block.InptPwd = this.InptPwd;
+			block.IsuNo = this.IsuNo;
+			block.OrdPrc = this.OrdPrc;
+			block.RegCommdaCode = this.RegCommdaCode;
+
+		}
 	}
 
 	public partial class XQCSPBQ00200OutBlock1 : XingBlock
@@ -400,6 +412,18 @@ namespace XingAPINet
 			if (RegCommdaCode?.Length > 2) return false; // char 2
 
 			return true;
+		}
+
+		public void CopyTo(XQCSPBQ00200OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.BnsTpCode = this.BnsTpCode;
+			block.AcntNo = this.AcntNo;
+			block.InptPwd = this.InptPwd;
+			block.IsuNo = this.IsuNo;
+			block.OrdPrc = this.OrdPrc;
+			block.RegCommdaCode = this.RegCommdaCode;
+
 		}
 	}
 
@@ -1207,6 +1231,53 @@ namespace XingAPINet
 			if (OrdAbleAmt.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCSPBQ00200OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.IsuNm = this.IsuNm;
+			block.Dps = this.Dps;
+			block.SubstAmt = this.SubstAmt;
+			block.CrdtPldgRuseAmt = this.CrdtPldgRuseAmt;
+			block.MnyOrdAbleAmt = this.MnyOrdAbleAmt;
+			block.SubstOrdAbleAmt = this.SubstOrdAbleAmt;
+			block.MnyMgn = this.MnyMgn;
+			block.SubstMgn = this.SubstMgn;
+			block.SeOrdAbleAmt = this.SeOrdAbleAmt;
+			block.KdqOrdAbleAmt = this.KdqOrdAbleAmt;
+			block.PrsmptDpsD1 = this.PrsmptDpsD1;
+			block.PrsmptDpsD2 = this.PrsmptDpsD2;
+			block.MnyoutAbleAmt = this.MnyoutAbleAmt;
+			block.RcvblAmt = this.RcvblAmt;
+			block.CmsnRat = this.CmsnRat;
+			block.AddLevyAmt = this.AddLevyAmt;
+			block.RuseObjAmt = this.RuseObjAmt;
+			block.MnyRuseObjAmt = this.MnyRuseObjAmt;
+			block.FirmMgnRat = this.FirmMgnRat;
+			block.SubstRuseObjAmt = this.SubstRuseObjAmt;
+			block.IsuMgnRat = this.IsuMgnRat;
+			block.AcntMgnRat = this.AcntMgnRat;
+			block.TrdMgnrt = this.TrdMgnrt;
+			block.Cmsn = this.Cmsn;
+			block.MgnRat20pctOrdAbleAmt = this.MgnRat20pctOrdAbleAmt;
+			block.MgnRat20OrdAbleQty = this.MgnRat20OrdAbleQty;
+			block.MgnRat30pctOrdAbleAmt = this.MgnRat30pctOrdAbleAmt;
+			block.MgnRat30OrdAbleQty = this.MgnRat30OrdAbleQty;
+			block.MgnRat40pctOrdAbleAmt = this.MgnRat40pctOrdAbleAmt;
+			block.MgnRat40OrdAbleQty = this.MgnRat40OrdAbleQty;
+			block.MgnRat100pctOrdAbleAmt = this.MgnRat100pctOrdAbleAmt;
+			block.MgnRat100OrdAbleQty = this.MgnRat100OrdAbleQty;
+			block.MgnRat100MnyOrdAbleAmt = this.MgnRat100MnyOrdAbleAmt;
+			block.MgnRat100MnyOrdAbleQty = this.MgnRat100MnyOrdAbleQty;
+			block.MgnRat20pctRuseAbleAmt = this.MgnRat20pctRuseAbleAmt;
+			block.MgnRat30pctRuseAbleAmt = this.MgnRat30pctRuseAbleAmt;
+			block.MgnRat40pctRuseAbleAmt = this.MgnRat40pctRuseAbleAmt;
+			block.MgnRat100pctRuseAbleAmt = this.MgnRat100pctRuseAbleAmt;
+			block.OrdAbleQty = this.OrdAbleQty;
+			block.OrdAbleAmt = this.OrdAbleAmt;
+
 		}
 	}
 

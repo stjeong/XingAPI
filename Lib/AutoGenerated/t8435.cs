@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8435InBlock block)
+		{
+			block.gubun = this.gubun;
+
+		}
 	}
 
 	public partial class XQt8435OutBlock : XingBlock
@@ -342,6 +348,20 @@ namespace XingAPINet
 			// recprice float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt8435OutBlock block)
+		{
+			block.hname = this.hname;
+			block.shcode = this.shcode;
+			block.expcode = this.expcode;
+			block.uplmtprice = this.uplmtprice;
+			block.dnlmtprice = this.dnlmtprice;
+			block.jnilclose = this.jnilclose;
+			block.jnilhigh = this.jnilhigh;
+			block.jnillow = this.jnillow;
+			block.recprice = this.recprice;
+
 		}
 	}
 

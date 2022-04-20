@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1101InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt1101OutBlock : XingBlock
@@ -1647,6 +1653,97 @@ namespace XingAPINet
 			if (low.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt1101OutBlock block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.jnilclose = this.jnilclose;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.offerrem1 = this.offerrem1;
+			block.bidrem1 = this.bidrem1;
+			block.preoffercha1 = this.preoffercha1;
+			block.prebidcha1 = this.prebidcha1;
+			block.offerho2 = this.offerho2;
+			block.bidho2 = this.bidho2;
+			block.offerrem2 = this.offerrem2;
+			block.bidrem2 = this.bidrem2;
+			block.preoffercha2 = this.preoffercha2;
+			block.prebidcha2 = this.prebidcha2;
+			block.offerho3 = this.offerho3;
+			block.bidho3 = this.bidho3;
+			block.offerrem3 = this.offerrem3;
+			block.bidrem3 = this.bidrem3;
+			block.preoffercha3 = this.preoffercha3;
+			block.prebidcha3 = this.prebidcha3;
+			block.offerho4 = this.offerho4;
+			block.bidho4 = this.bidho4;
+			block.offerrem4 = this.offerrem4;
+			block.bidrem4 = this.bidrem4;
+			block.preoffercha4 = this.preoffercha4;
+			block.prebidcha4 = this.prebidcha4;
+			block.offerho5 = this.offerho5;
+			block.bidho5 = this.bidho5;
+			block.offerrem5 = this.offerrem5;
+			block.bidrem5 = this.bidrem5;
+			block.preoffercha5 = this.preoffercha5;
+			block.prebidcha5 = this.prebidcha5;
+			block.offerho6 = this.offerho6;
+			block.bidho6 = this.bidho6;
+			block.offerrem6 = this.offerrem6;
+			block.bidrem6 = this.bidrem6;
+			block.preoffercha6 = this.preoffercha6;
+			block.prebidcha6 = this.prebidcha6;
+			block.offerho7 = this.offerho7;
+			block.bidho7 = this.bidho7;
+			block.offerrem7 = this.offerrem7;
+			block.bidrem7 = this.bidrem7;
+			block.preoffercha7 = this.preoffercha7;
+			block.prebidcha7 = this.prebidcha7;
+			block.offerho8 = this.offerho8;
+			block.bidho8 = this.bidho8;
+			block.offerrem8 = this.offerrem8;
+			block.bidrem8 = this.bidrem8;
+			block.preoffercha8 = this.preoffercha8;
+			block.prebidcha8 = this.prebidcha8;
+			block.offerho9 = this.offerho9;
+			block.bidho9 = this.bidho9;
+			block.offerrem9 = this.offerrem9;
+			block.bidrem9 = this.bidrem9;
+			block.preoffercha9 = this.preoffercha9;
+			block.prebidcha9 = this.prebidcha9;
+			block.offerho10 = this.offerho10;
+			block.bidho10 = this.bidho10;
+			block.offerrem10 = this.offerrem10;
+			block.bidrem10 = this.bidrem10;
+			block.preoffercha10 = this.preoffercha10;
+			block.prebidcha10 = this.prebidcha10;
+			block.offer = this.offer;
+			block.bid = this.bid;
+			block.preoffercha = this.preoffercha;
+			block.prebidcha = this.prebidcha;
+			block.hotime = this.hotime;
+			block.yeprice = this.yeprice;
+			block.yevolume = this.yevolume;
+			block.yesign = this.yesign;
+			block.yechange = this.yechange;
+			block.yediff = this.yediff;
+			block.tmoffer = this.tmoffer;
+			block.tmbid = this.tmbid;
+			block.ho_status = this.ho_status;
+			block.shcode = this.shcode;
+			block.uplmtprice = this.uplmtprice;
+			block.dnlmtprice = this.dnlmtprice;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+
 		}
 	}
 

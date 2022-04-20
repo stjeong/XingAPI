@@ -125,6 +125,14 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1941InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.sdate = this.sdate;
+			block.edate = this.edate;
+
+		}
 	}
 
 	public partial class XQt1941OutBlock1 : XingBlock
@@ -425,6 +433,23 @@ namespace XingAPINet
 			if (tovoldif.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1941OutBlock1 block)
+		{
+			block.date = this.date;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.upvolume = this.upvolume;
+			block.dnvolume = this.dnvolume;
+			block.tovolume = this.tovolume;
+			block.tovalue = this.tovalue;
+			block.shcode = this.shcode;
+			block.tovoldif = this.tovoldif;
+
 		}
 	}
 

@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1105InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt1105OutBlock : XingBlock
@@ -338,6 +344,20 @@ namespace XingAPINet
 			if (suppd.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt1105OutBlock block)
+		{
+			block.shcode = this.shcode;
+			block.pbot = this.pbot;
+			block.offer1 = this.offer1;
+			block.supp1 = this.supp1;
+			block.offer2 = this.offer2;
+			block.supp2 = this.supp2;
+			block.stdprc = this.stdprc;
+			block.offerd = this.offerd;
+			block.suppd = this.suppd;
+
 		}
 	}
 

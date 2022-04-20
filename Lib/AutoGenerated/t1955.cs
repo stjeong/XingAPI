@@ -83,7 +83,7 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("chkexec", "행사가chk구분", "char", "1")]
 		public char chkexec;
 		/// <summary>
-		/// 행사가(>=:1.<=:2)
+		/// 행사가(&gt;=:1.&lt;=:2)
 		/// </summary>
 		[XAQueryFieldAttribute("cbexec", "행사가(>=:1.<=:2)", "char", "1")]
 		public char cbexec;
@@ -339,7 +339,7 @@ namespace XingAPINet
 			/// </summary>
 			public const string chkexec = "chkexec";
 			/// <summary>
-			/// 행사가(>=:1.<=:2)
+			/// 행사가(&gt;=:1.&lt;=:2)
 			/// </summary>
 			public const string cbexec = "cbexec";
 			/// <summary>
@@ -909,6 +909,63 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1955InBlock block)
+		{
+			block.chkitem = this.chkitem;
+			block.cbitem = this.cbitem;
+			block.chkissuer = this.chkissuer;
+			block.cbissuer = this.cbissuer;
+			block.chkcallput = this.chkcallput;
+			block.cbcallput = this.cbcallput;
+			block.chkexec = this.chkexec;
+			block.cbexec = this.cbexec;
+			block.chktype = this.chktype;
+			block.cbtype = this.cbtype;
+			block.chksettle = this.chksettle;
+			block.cbsettle = this.cbsettle;
+			block.chklast = this.chklast;
+			block.cblast = this.cblast;
+			block.chkelwexec = this.chkelwexec;
+			block.elwexecs = this.elwexecs;
+			block.elwexece = this.elwexece;
+			block.chkvolume = this.chkvolume;
+			block.volumes = this.volumes;
+			block.volumee = this.volumee;
+			block.chkrate = this.chkrate;
+			block.rates = this.rates;
+			block.ratee = this.ratee;
+			block.chkpremium = this.chkpremium;
+			block.premiums = this.premiums;
+			block.premiume = this.premiume;
+			block.chkparity = this.chkparity;
+			block.paritys = this.paritys;
+			block.paritye = this.paritye;
+			block.chkberate = this.chkberate;
+			block.berates = this.berates;
+			block.beratee = this.beratee;
+			block.chkcapt = this.chkcapt;
+			block.capts = this.capts;
+			block.capte = this.capte;
+			block.chkegearing = this.chkegearing;
+			block.egearings = this.egearings;
+			block.egearinge = this.egearinge;
+			block.chkgearing = this.chkgearing;
+			block.gearings = this.gearings;
+			block.gearinge = this.gearinge;
+			block.chkdelta = this.chkdelta;
+			block.deltas = this.deltas;
+			block.deltae = this.deltae;
+			block.chktheta = this.chktheta;
+			block.thetas = this.thetas;
+			block.thetae = this.thetae;
+			block.chkduedate = this.chkduedate;
+			block.duedates = this.duedates;
+			block.duedatee = this.duedatee;
+			block.chkkoba = this.chkkoba;
+			block.cbkoba = this.cbkoba;
+
+		}
 	}
 
 	public partial class XQt1955OutBlock : XingBlock
@@ -1018,6 +1075,12 @@ namespace XingAPINet
 			if (cnt.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1955OutBlock block)
+		{
+			block.cnt = this.cnt;
+
 		}
 	}
 
@@ -1557,6 +1620,37 @@ namespace XingAPINet
 			// theta float 10.6
 
 			return true;
+		}
+
+		public void CopyTo(XQt1955OutBlock1 block)
+		{
+			block.hname = this.hname;
+			block.shcode = this.shcode;
+			block.issuernmk = this.issuernmk;
+			block.itemcode = this.itemcode;
+			block.cpgubun = this.cpgubun;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.jnilvolume = this.jnilvolume;
+			block.elwexec = this.elwexec;
+			block.item = this.item;
+			block.bprice = this.bprice;
+			block.bsign = this.bsign;
+			block.bchange = this.bchange;
+			block.bdiff = this.bdiff;
+			block.premium = this.premium;
+			block.parity = this.parity;
+			block.berate = this.berate;
+			block.capt = this.capt;
+			block.egearing = this.egearing;
+			block.gearing = this.gearing;
+			block.lastdate = this.lastdate;
+			block.delta = this.delta;
+			block.theta = this.theta;
+
 		}
 	}
 

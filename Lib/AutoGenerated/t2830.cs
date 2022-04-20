@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2830InBlock block)
+		{
+			block.focode = this.focode;
+
+		}
 	}
 
 	public partial class XQt2830OutBlock : XingBlock
@@ -814,6 +820,48 @@ namespace XingAPINet
 			// dnlmtprice_3rd float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt2830OutBlock block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.jnilclose = this.jnilclose;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.recprice = this.recprice;
+			block.theoryprice = this.theoryprice;
+			block.actprice = this.actprice;
+			block.impv = this.impv;
+			block.timevl = this.timevl;
+			block.kospijisu = this.kospijisu;
+			block.kospisign = this.kospisign;
+			block.kospichange = this.kospichange;
+			block.kospidiff = this.kospidiff;
+			block.cmeprice = this.cmeprice;
+			block.cmesign = this.cmesign;
+			block.cmechange = this.cmechange;
+			block.cmediff = this.cmediff;
+			block.cmefocode = this.cmefocode;
+			block.uplmtprice = this.uplmtprice;
+			block.dnlmtprice = this.dnlmtprice;
+			block.focode = this.focode;
+			block.yeprice = this.yeprice;
+			block.ysign = this.ysign;
+			block.ychange = this.ychange;
+			block.ydiff = this.ydiff;
+			block.danhochk = this.danhochk;
+			block.jnilvolume = this.jnilvolume;
+			block.jnilvalue = this.jnilvalue;
+			block.uplmtprice_3rd = this.uplmtprice_3rd;
+			block.dnlmtprice_3rd = this.dnlmtprice_3rd;
+
 		}
 	}
 

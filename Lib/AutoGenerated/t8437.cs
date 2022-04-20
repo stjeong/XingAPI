@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8437InBlock block)
+		{
+			block.gubun = this.gubun;
+
+		}
 	}
 
 	public partial class XQt8437OutBlock : XingBlock
@@ -274,6 +280,16 @@ namespace XingAPINet
 			// atmgb char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQt8437OutBlock block)
+		{
+			block.hname = this.hname;
+			block.shcode = this.shcode;
+			block.expcode = this.expcode;
+			block.tradeunit = this.tradeunit;
+			block.atmgb = this.atmgb;
+
 		}
 	}
 

@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRSHCInBlock block)
+		{
+			block.updnlmtgubun = this.updnlmtgubun;
+
+		}
 	}
 
 	public partial class XRSHCOutBlock : XingBlock
@@ -502,6 +508,30 @@ namespace XingAPINet
 			if (updnlmtdaycnt.ToString().Length > 3) return false; // long 3
 
 			return true;
+		}
+
+		public void CopyTo(XRSHCOutBlock block)
+		{
+			block.sijanggubun = this.sijanggubun;
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.drate = this.drate;
+			block.volume = this.volume;
+			block.volincrate = this.volincrate;
+			block.updnlmtprice = this.updnlmtprice;
+			block.updnlmtdrate = this.updnlmtdrate;
+			block.jnilvolume = this.jnilvolume;
+			block.shcode = this.shcode;
+			block.gwangubun = this.gwangubun;
+			block.undergubun = this.undergubun;
+			block.tgubun = this.tgubun;
+			block.wgubun = this.wgubun;
+			block.dishonest = this.dishonest;
+			block.jkrate = this.jkrate;
+			block.updnlmtdaycnt = this.updnlmtdaycnt;
+
 		}
 	}
 

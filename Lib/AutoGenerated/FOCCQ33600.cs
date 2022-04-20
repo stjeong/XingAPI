@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQFOCCQ33600InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.TermTp = this.TermTp;
+
+		}
 	}
 
 	public partial class XQFOCCQ33600OutBlock1 : XingBlock
@@ -367,6 +378,17 @@ namespace XingAPINet
 			// TermTp char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQFOCCQ33600OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.TermTp = this.TermTp;
+
 		}
 	}
 
@@ -596,6 +618,19 @@ namespace XingAPINet
 			// InvstErnrat double 9.2
 
 			return true;
+		}
+
+		public void CopyTo(XQFOCCQ33600OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.BnsctrAmt = this.BnsctrAmt;
+			block.MnyinAmt = this.MnyinAmt;
+			block.MnyoutAmt = this.MnyoutAmt;
+			block.InvstAvrbalPramt = this.InvstAvrbalPramt;
+			block.InvstPlAmt = this.InvstPlAmt;
+			block.InvstErnrat = this.InvstErnrat;
+
 		}
 	}
 
@@ -863,6 +898,21 @@ namespace XingAPINet
 			// Idx double 13.2
 
 			return true;
+		}
+
+		public void CopyTo(XQFOCCQ33600OutBlock3 block)
+		{
+			block.BaseDt = this.BaseDt;
+			block.FdEvalAmt = this.FdEvalAmt;
+			block.EotEvalAmt = this.EotEvalAmt;
+			block.InvstAvrbalPramt = this.InvstAvrbalPramt;
+			block.BnsctrAmt = this.BnsctrAmt;
+			block.MnyinSecinAmt = this.MnyinSecinAmt;
+			block.MnyoutSecoutAmt = this.MnyoutSecoutAmt;
+			block.EvalPnlAmt = this.EvalPnlAmt;
+			block.TermErnrat = this.TermErnrat;
+			block.Idx = this.Idx;
+
 		}
 	}
 

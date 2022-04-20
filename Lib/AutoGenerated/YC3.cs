@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRYC3InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRYC3OutBlock : XingBlock
@@ -298,6 +304,18 @@ namespace XingAPINet
 			if (shcode?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XRYC3OutBlock block)
+		{
+			block.ychetime = this.ychetime;
+			block.yeprice = this.yeprice;
+			block.yevolume = this.yevolume;
+			block.jnilysign = this.jnilysign;
+			block.preychange = this.preychange;
+			block.jnilydrate = this.jnilydrate;
+			block.shcode = this.shcode;
+
 		}
 	}
 

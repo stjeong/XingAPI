@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2813InBlock block)
+		{
+			block.gubun1 = this.gubun1;
+			block.gubun2 = this.gubun2;
+			block.cts_time = this.cts_time;
+			block.cts_idx = this.cts_idx;
+			block.cnt = this.cnt;
+			block.gubun3 = this.gubun3;
+
+		}
 	}
 
 	public partial class XQt2813OutBlock : XingBlock
@@ -1303,6 +1314,72 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2813OutBlock block)
+		{
+			block.cts_time = this.cts_time;
+			block.tjjcode_08 = this.tjjcode_08;
+			block.ms_08 = this.ms_08;
+			block.md_08 = this.md_08;
+			block.rate_08 = this.rate_08;
+			block.svolume_08 = this.svolume_08;
+			block.tjjcode_17 = this.tjjcode_17;
+			block.ms_17 = this.ms_17;
+			block.md_17 = this.md_17;
+			block.rate_17 = this.rate_17;
+			block.svolume_17 = this.svolume_17;
+			block.tjjcode_18 = this.tjjcode_18;
+			block.ms_18 = this.ms_18;
+			block.md_18 = this.md_18;
+			block.rate_18 = this.rate_18;
+			block.svolume_18 = this.svolume_18;
+			block.tjjcode_01 = this.tjjcode_01;
+			block.ms_01 = this.ms_01;
+			block.md_01 = this.md_01;
+			block.rate_01 = this.rate_01;
+			block.svolume_01 = this.svolume_01;
+			block.tjjcode_03 = this.tjjcode_03;
+			block.ms_03 = this.ms_03;
+			block.md_03 = this.md_03;
+			block.rate_03 = this.rate_03;
+			block.svolume_03 = this.svolume_03;
+			block.tjjcode_04 = this.tjjcode_04;
+			block.ms_04 = this.ms_04;
+			block.md_04 = this.md_04;
+			block.rate_04 = this.rate_04;
+			block.svolume_04 = this.svolume_04;
+			block.tjjcode_02 = this.tjjcode_02;
+			block.ms_02 = this.ms_02;
+			block.md_02 = this.md_02;
+			block.rate_02 = this.rate_02;
+			block.svolume_02 = this.svolume_02;
+			block.tjjcode_05 = this.tjjcode_05;
+			block.ms_05 = this.ms_05;
+			block.md_05 = this.md_05;
+			block.rate_05 = this.rate_05;
+			block.svolume_05 = this.svolume_05;
+			block.tjjcode_06 = this.tjjcode_06;
+			block.ms_06 = this.ms_06;
+			block.md_06 = this.md_06;
+			block.rate_06 = this.rate_06;
+			block.svolume_06 = this.svolume_06;
+			block.tjjcode_07 = this.tjjcode_07;
+			block.ms_07 = this.ms_07;
+			block.md_07 = this.md_07;
+			block.rate_07 = this.rate_07;
+			block.svolume_07 = this.svolume_07;
+			block.tjjcode_11 = this.tjjcode_11;
+			block.ms_11 = this.ms_11;
+			block.md_11 = this.md_11;
+			block.rate_11 = this.rate_11;
+			block.svolume_11 = this.svolume_11;
+			block.tjjcode_00 = this.tjjcode_00;
+			block.ms_00 = this.ms_00;
+			block.md_00 = this.md_00;
+			block.rate_00 = this.rate_00;
+			block.svolume_00 = this.svolume_00;
+
+		}
 	}
 
 	public partial class XQt2813OutBlock1 : XingBlock
@@ -1620,6 +1697,24 @@ namespace XingAPINet
 			if (sv_00.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt2813OutBlock1 block)
+		{
+			block.time = this.time;
+			block.sv_08 = this.sv_08;
+			block.sv_17 = this.sv_17;
+			block.sv_18 = this.sv_18;
+			block.sv_01 = this.sv_01;
+			block.sv_03 = this.sv_03;
+			block.sv_04 = this.sv_04;
+			block.sv_02 = this.sv_02;
+			block.sv_05 = this.sv_05;
+			block.sv_06 = this.sv_06;
+			block.sv_07 = this.sv_07;
+			block.sv_11 = this.sv_11;
+			block.sv_00 = this.sv_00;
+
 		}
 	}
 

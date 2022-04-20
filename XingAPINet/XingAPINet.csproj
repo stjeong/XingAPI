@@ -23,7 +23,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>CA1034;IDE0028;IDE0017;IDE1006;CA1822;CA1031;CA1052;CA1819</NoWarn>
+    <NoWarn>CA1034;IDE0028;IDE0017;IDE1006;CA1822;CA1031;CA1052;CA1819;CS1591</NoWarn>
+    <DocumentationFile>bin\Debug\XingAPINet.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>CA1034;IDE0028;IDE0017;IDE1006;CA1822;CA1031;CA1052;CA1819</NoWarn>
+    <DocumentationFile>bin\Release\XingAPINet.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />

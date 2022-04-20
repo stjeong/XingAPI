@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1102InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt1102OutBlock : XingBlock
@@ -2905,6 +2911,171 @@ namespace XingAPINet
 			if (ty_text?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt1102OutBlock block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.recprice = this.recprice;
+			block.avg = this.avg;
+			block.uplmtprice = this.uplmtprice;
+			block.dnlmtprice = this.dnlmtprice;
+			block.jnilvolume = this.jnilvolume;
+			block.volumediff = this.volumediff;
+			block.open = this.open;
+			block.opentime = this.opentime;
+			block.high = this.high;
+			block.hightime = this.hightime;
+			block.low = this.low;
+			block.lowtime = this.lowtime;
+			block.high52w = this.high52w;
+			block.high52wdate = this.high52wdate;
+			block.low52w = this.low52w;
+			block.low52wdate = this.low52wdate;
+			block.exhratio = this.exhratio;
+			block.per = this.per;
+			block.pbrx = this.pbrx;
+			block.listing = this.listing;
+			block.jkrate = this.jkrate;
+			block.memedan = this.memedan;
+			block.offernocd1 = this.offernocd1;
+			block.bidnocd1 = this.bidnocd1;
+			block.offerno1 = this.offerno1;
+			block.bidno1 = this.bidno1;
+			block.dvol1 = this.dvol1;
+			block.svol1 = this.svol1;
+			block.dcha1 = this.dcha1;
+			block.scha1 = this.scha1;
+			block.ddiff1 = this.ddiff1;
+			block.sdiff1 = this.sdiff1;
+			block.offernocd2 = this.offernocd2;
+			block.bidnocd2 = this.bidnocd2;
+			block.offerno2 = this.offerno2;
+			block.bidno2 = this.bidno2;
+			block.dvol2 = this.dvol2;
+			block.svol2 = this.svol2;
+			block.dcha2 = this.dcha2;
+			block.scha2 = this.scha2;
+			block.ddiff2 = this.ddiff2;
+			block.sdiff2 = this.sdiff2;
+			block.offernocd3 = this.offernocd3;
+			block.bidnocd3 = this.bidnocd3;
+			block.offerno3 = this.offerno3;
+			block.bidno3 = this.bidno3;
+			block.dvol3 = this.dvol3;
+			block.svol3 = this.svol3;
+			block.dcha3 = this.dcha3;
+			block.scha3 = this.scha3;
+			block.ddiff3 = this.ddiff3;
+			block.sdiff3 = this.sdiff3;
+			block.offernocd4 = this.offernocd4;
+			block.bidnocd4 = this.bidnocd4;
+			block.offerno4 = this.offerno4;
+			block.bidno4 = this.bidno4;
+			block.dvol4 = this.dvol4;
+			block.svol4 = this.svol4;
+			block.dcha4 = this.dcha4;
+			block.scha4 = this.scha4;
+			block.ddiff4 = this.ddiff4;
+			block.sdiff4 = this.sdiff4;
+			block.offernocd5 = this.offernocd5;
+			block.bidnocd5 = this.bidnocd5;
+			block.offerno5 = this.offerno5;
+			block.bidno5 = this.bidno5;
+			block.dvol5 = this.dvol5;
+			block.svol5 = this.svol5;
+			block.dcha5 = this.dcha5;
+			block.scha5 = this.scha5;
+			block.ddiff5 = this.ddiff5;
+			block.sdiff5 = this.sdiff5;
+			block.fwdvl = this.fwdvl;
+			block.ftradmdcha = this.ftradmdcha;
+			block.ftradmddiff = this.ftradmddiff;
+			block.fwsvl = this.fwsvl;
+			block.ftradmscha = this.ftradmscha;
+			block.ftradmsdiff = this.ftradmsdiff;
+			block.vol = this.vol;
+			block.shcode = this.shcode;
+			block.value = this.value;
+			block.jvolume = this.jvolume;
+			block.highyear = this.highyear;
+			block.highyeardate = this.highyeardate;
+			block.lowyear = this.lowyear;
+			block.lowyeardate = this.lowyeardate;
+			block.target = this.target;
+			block.capital = this.capital;
+			block.abscnt = this.abscnt;
+			block.parprice = this.parprice;
+			block.gsmm = this.gsmm;
+			block.subprice = this.subprice;
+			block.total = this.total;
+			block.listdate = this.listdate;
+			block.name = this.name;
+			block.bfsales = this.bfsales;
+			block.bfoperatingincome = this.bfoperatingincome;
+			block.bfordinaryincome = this.bfordinaryincome;
+			block.bfnetincome = this.bfnetincome;
+			block.bfeps = this.bfeps;
+			block.name2 = this.name2;
+			block.bfsales2 = this.bfsales2;
+			block.bfoperatingincome2 = this.bfoperatingincome2;
+			block.bfordinaryincome2 = this.bfordinaryincome2;
+			block.bfnetincome2 = this.bfnetincome2;
+			block.bfeps2 = this.bfeps2;
+			block.salert = this.salert;
+			block.opert = this.opert;
+			block.ordrt = this.ordrt;
+			block.netrt = this.netrt;
+			block.epsrt = this.epsrt;
+			block.info1 = this.info1;
+			block.info2 = this.info2;
+			block.info3 = this.info3;
+			block.info4 = this.info4;
+			block.janginfo = this.janginfo;
+			block.t_per = this.t_per;
+			block.tonghwa = this.tonghwa;
+			block.dval1 = this.dval1;
+			block.sval1 = this.sval1;
+			block.dval2 = this.dval2;
+			block.sval2 = this.sval2;
+			block.dval3 = this.dval3;
+			block.sval3 = this.sval3;
+			block.dval4 = this.dval4;
+			block.sval4 = this.sval4;
+			block.dval5 = this.dval5;
+			block.sval5 = this.sval5;
+			block.davg1 = this.davg1;
+			block.savg1 = this.savg1;
+			block.davg2 = this.davg2;
+			block.savg2 = this.savg2;
+			block.davg3 = this.davg3;
+			block.savg3 = this.savg3;
+			block.davg4 = this.davg4;
+			block.savg4 = this.savg4;
+			block.davg5 = this.davg5;
+			block.savg5 = this.savg5;
+			block.ftradmdval = this.ftradmdval;
+			block.ftradmsval = this.ftradmsval;
+			block.ftradmdavg = this.ftradmdavg;
+			block.ftradmsavg = this.ftradmsavg;
+			block.info5 = this.info5;
+			block.spac_gubun = this.spac_gubun;
+			block.issueprice = this.issueprice;
+			block.alloc_gubun = this.alloc_gubun;
+			block.alloc_text = this.alloc_text;
+			block.shterm_text = this.shterm_text;
+			block.svi_uplmtprice = this.svi_uplmtprice;
+			block.svi_dnlmtprice = this.svi_dnlmtprice;
+			block.low_lqdt_gu = this.low_lqdt_gu;
+			block.abnormal_rise_gu = this.abnormal_rise_gu;
+			block.lend_text = this.lend_text;
+			block.ty_text = this.ty_text;
+
 		}
 	}
 

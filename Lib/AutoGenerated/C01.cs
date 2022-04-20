@@ -73,6 +73,11 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRC01InBlock block)
+		{
+
+		}
 	}
 
 	public partial class XRC01OutBlock : XingBlock
@@ -635,6 +640,39 @@ namespace XingAPINet
 			if (mem_filler1?.Length > 42) return false; // char 42
 
 			return true;
+		}
+
+		public void CopyTo(XRC01OutBlock block)
+		{
+			block.lineseq = this.lineseq;
+			block.accno = this.accno;
+			block.user = this.user;
+			block.seq = this.seq;
+			block.trcode = this.trcode;
+			block.megrpno = this.megrpno;
+			block.boardid = this.boardid;
+			block.memberno = this.memberno;
+			block.bpno = this.bpno;
+			block.ordno = this.ordno;
+			block.orgordno = this.orgordno;
+			block.expcode = this.expcode;
+			block.yakseq = this.yakseq;
+			block.cheprice = this.cheprice;
+			block.chevol = this.chevol;
+			block.sessionid = this.sessionid;
+			block.chedate = this.chedate;
+			block.chetime = this.chetime;
+			block.spdprc1 = this.spdprc1;
+			block.spdprc2 = this.spdprc2;
+			block.dosugb = this.dosugb;
+			block.accno1 = this.accno1;
+			block.sihogagb = this.sihogagb;
+			block.jakino = this.jakino;
+			block.daeyong = this.daeyong;
+			block.mem_filler = this.mem_filler;
+			block.mem_accno = this.mem_accno;
+			block.mem_filler1 = this.mem_filler1;
+
 		}
 	}
 

@@ -189,6 +189,18 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt3518InBlock block)
+		{
+			block.kind = this.kind;
+			block.symbol = this.symbol;
+			block.cnt = this.cnt;
+			block.jgbn = this.jgbn;
+			block.nmin = this.nmin;
+			block.cts_date = this.cts_date;
+			block.cts_time = this.cts_time;
+
+		}
 	}
 
 	public partial class XQt3518OutBlock : XingBlock
@@ -315,6 +327,13 @@ namespace XingAPINet
 			if (cts_time?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XQt3518OutBlock block)
+		{
+			block.cts_date = this.cts_date;
+			block.cts_time = this.cts_time;
+
 		}
 	}
 
@@ -735,6 +754,30 @@ namespace XingAPINet
 			if (kotime?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt3518OutBlock1 block)
+		{
+			block.date = this.date;
+			block.time = this.time;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.uprate = this.uprate;
+			block.volume = this.volume;
+			block.bidho = this.bidho;
+			block.offerho = this.offerho;
+			block.bidrem = this.bidrem;
+			block.offerrem = this.offerrem;
+			block.kind = this.kind;
+			block.symbol = this.symbol;
+			block.exid = this.exid;
+			block.kodate = this.kodate;
+			block.kotime = this.kotime;
+
 		}
 	}
 

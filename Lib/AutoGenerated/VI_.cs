@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRVI_InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRVI_OutBlock : XingBlock
@@ -135,7 +141,7 @@ namespace XingAPINet
 		public bool HasOccurs => _hasOccurs;
 
 		/// <summary>
-		/// 구분(0:해제 1:정적발동 2:동적발동 3:정적&동적)
+		/// 구분(0:해제 1:정적발동 2:동적발동 3:정적&amp;동적)
 		/// </summary>
 		[XAQueryFieldAttribute("vi_gubun", "구분(0:해제 1:정적발동 2:동적발동 3:정적&동적)", "char", "1")]
 		public char vi_gubun;
@@ -173,7 +179,7 @@ namespace XingAPINet
 		public static class F
 		{
 			/// <summary>
-			/// 구분(0:해제 1:정적발동 2:동적발동 3:정적&동적)
+			/// 구분(0:해제 1:정적발동 2:동적발동 3:정적&amp;동적)
 			/// </summary>
 			public const string vi_gubun = "vi_gubun";
 			/// <summary>
@@ -298,6 +304,18 @@ namespace XingAPINet
 			if (time?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XRVI_OutBlock block)
+		{
+			block.vi_gubun = this.vi_gubun;
+			block.svi_recprice = this.svi_recprice;
+			block.dvi_recprice = this.dvi_recprice;
+			block.vi_trgprice = this.vi_trgprice;
+			block.shcode = this.shcode;
+			block.ref_shcode = this.ref_shcode;
+			block.time = this.time;
+
 		}
 	}
 

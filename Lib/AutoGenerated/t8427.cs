@@ -237,6 +237,21 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8427InBlock block)
+		{
+			block.fo_gbn = this.fo_gbn;
+			block.yyyy = this.yyyy;
+			block.mm = this.mm;
+			block.cp_gbn = this.cp_gbn;
+			block.actprice = this.actprice;
+			block.focode = this.focode;
+			block.dt_gbn = this.dt_gbn;
+			block.min_term = this.min_term;
+			block.date = this.date;
+			block.time = this.time;
+
+		}
 	}
 
 	public partial class XQt8427OutBlock : XingBlock
@@ -380,6 +395,14 @@ namespace XingAPINet
 			if (time?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XQt8427OutBlock block)
+		{
+			block.focode = this.focode;
+			block.date = this.date;
+			block.time = this.time;
+
 		}
 	}
 
@@ -715,6 +738,25 @@ namespace XingAPINet
 			// value float 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt8427OutBlock1 block)
+		{
+			block.date = this.date;
+			block.time = this.time;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.close = this.close;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.diff_vol = this.diff_vol;
+			block.openyak = this.openyak;
+			block.openyakupdn = this.openyakupdn;
+			block.value = this.value;
+
 		}
 	}
 

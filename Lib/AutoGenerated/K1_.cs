@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRK1_InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRK1_OutBlock : XingBlock
@@ -1556,6 +1562,92 @@ namespace XingAPINet
 			if (ftradmsavg.ToString().Length > 7) return false; // long 7
 
 			return true;
+		}
+
+		public void CopyTo(XRK1_OutBlock block)
+		{
+			block.offerno1 = this.offerno1;
+			block.bidno1 = this.bidno1;
+			block.offertrad1 = this.offertrad1;
+			block.bidtrad1 = this.bidtrad1;
+			block.tradmdvol1 = this.tradmdvol1;
+			block.tradmsvol1 = this.tradmsvol1;
+			block.tradmdrate1 = this.tradmdrate1;
+			block.tradmsrate1 = this.tradmsrate1;
+			block.tradmdcha1 = this.tradmdcha1;
+			block.tradmscha1 = this.tradmscha1;
+			block.offerno2 = this.offerno2;
+			block.bidno2 = this.bidno2;
+			block.offertrad2 = this.offertrad2;
+			block.bidtrad2 = this.bidtrad2;
+			block.tradmdvol2 = this.tradmdvol2;
+			block.tradmsvol2 = this.tradmsvol2;
+			block.tradmdrate2 = this.tradmdrate2;
+			block.tradmsrate2 = this.tradmsrate2;
+			block.tradmdcha2 = this.tradmdcha2;
+			block.tradmscha2 = this.tradmscha2;
+			block.offerno3 = this.offerno3;
+			block.bidno3 = this.bidno3;
+			block.offertrad3 = this.offertrad3;
+			block.bidtrad3 = this.bidtrad3;
+			block.tradmdvol3 = this.tradmdvol3;
+			block.tradmsvol3 = this.tradmsvol3;
+			block.tradmdrate3 = this.tradmdrate3;
+			block.tradmsrate3 = this.tradmsrate3;
+			block.tradmdcha3 = this.tradmdcha3;
+			block.tradmscha3 = this.tradmscha3;
+			block.offerno4 = this.offerno4;
+			block.bidno4 = this.bidno4;
+			block.offertrad4 = this.offertrad4;
+			block.bidtrad4 = this.bidtrad4;
+			block.tradmdvol4 = this.tradmdvol4;
+			block.tradmsvol4 = this.tradmsvol4;
+			block.tradmdrate4 = this.tradmdrate4;
+			block.tradmsrate4 = this.tradmsrate4;
+			block.tradmdcha4 = this.tradmdcha4;
+			block.tradmscha4 = this.tradmscha4;
+			block.offerno5 = this.offerno5;
+			block.bidno5 = this.bidno5;
+			block.offertrad5 = this.offertrad5;
+			block.bidtrad5 = this.bidtrad5;
+			block.tradmdvol5 = this.tradmdvol5;
+			block.tradmsvol5 = this.tradmsvol5;
+			block.tradmdrate5 = this.tradmdrate5;
+			block.tradmsrate5 = this.tradmsrate5;
+			block.tradmdcha5 = this.tradmdcha5;
+			block.tradmscha5 = this.tradmscha5;
+			block.ftradmdvol = this.ftradmdvol;
+			block.ftradmsvol = this.ftradmsvol;
+			block.ftradmdrate = this.ftradmdrate;
+			block.ftradmsrate = this.ftradmsrate;
+			block.ftradmdcha = this.ftradmdcha;
+			block.ftradmscha = this.ftradmscha;
+			block.shcode = this.shcode;
+			block.tradmdval1 = this.tradmdval1;
+			block.tradmsval1 = this.tradmsval1;
+			block.tradmdavg1 = this.tradmdavg1;
+			block.tradmsavg1 = this.tradmsavg1;
+			block.tradmdval2 = this.tradmdval2;
+			block.tradmsval2 = this.tradmsval2;
+			block.tradmdavg2 = this.tradmdavg2;
+			block.tradmsavg2 = this.tradmsavg2;
+			block.tradmdval3 = this.tradmdval3;
+			block.tradmsval3 = this.tradmsval3;
+			block.tradmdavg3 = this.tradmdavg3;
+			block.tradmsavg3 = this.tradmsavg3;
+			block.tradmdval4 = this.tradmdval4;
+			block.tradmsval4 = this.tradmsval4;
+			block.tradmdavg4 = this.tradmdavg4;
+			block.tradmsavg4 = this.tradmsavg4;
+			block.tradmdval5 = this.tradmdval5;
+			block.tradmsval5 = this.tradmsval5;
+			block.tradmdavg5 = this.tradmdavg5;
+			block.tradmsavg5 = this.tradmsavg5;
+			block.ftradmdval = this.ftradmdval;
+			block.ftradmsval = this.ftradmsval;
+			block.ftradmdavg = this.ftradmdavg;
+			block.ftradmsavg = this.ftradmsavg;
+
 		}
 	}
 

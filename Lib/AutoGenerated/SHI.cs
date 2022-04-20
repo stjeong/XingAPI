@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRSHIInBlock block)
+		{
+			block.updnlmtgubun = this.updnlmtgubun;
+
+		}
 	}
 
 	public partial class XRSHIOutBlock : XingBlock
@@ -519,6 +525,31 @@ namespace XingAPINet
 			// jkrate char 1
 
 			return true;
+		}
+
+		public void CopyTo(XRSHIOutBlock block)
+		{
+			block.sijanggubun = this.sijanggubun;
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.drate = this.drate;
+			block.volume = this.volume;
+			block.volincrate = this.volincrate;
+			block.totofferrem = this.totofferrem;
+			block.totbidrem = this.totbidrem;
+			block.updnlmtstime = this.updnlmtstime;
+			block.updnlmtdaycnt = this.updnlmtdaycnt;
+			block.jnilvolume = this.jnilvolume;
+			block.shcode = this.shcode;
+			block.gwangubun = this.gwangubun;
+			block.undergubun = this.undergubun;
+			block.tgubun = this.tgubun;
+			block.wgubun = this.wgubun;
+			block.dishonest = this.dishonest;
+			block.jkrate = this.jkrate;
+
 		}
 	}
 

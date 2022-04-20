@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRMK2InBlock block)
+		{
+			block.symbol = this.symbol;
+
+		}
 	}
 
 	public partial class XRMK2OutBlock : XingBlock
@@ -485,6 +491,29 @@ namespace XingAPINet
 			// cvolume float 8.0
 
 			return true;
+		}
+
+		public void CopyTo(XRMK2OutBlock block)
+		{
+			block.date = this.date;
+			block.time = this.time;
+			block.kodate = this.kodate;
+			block.kotime = this.kotime;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.uprate = this.uprate;
+			block.bidho = this.bidho;
+			block.bidrem = this.bidrem;
+			block.offerho = this.offerho;
+			block.offerrem = this.offerrem;
+			block.volume = this.volume;
+			block.xsymbol = this.xsymbol;
+			block.cvolume = this.cvolume;
+
 		}
 	}
 

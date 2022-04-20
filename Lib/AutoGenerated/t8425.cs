@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8425InBlock block)
+		{
+			block.dummy = this.dummy;
+
+		}
 	}
 
 	public partial class XQt8425OutBlock : XingBlock
@@ -223,6 +229,13 @@ namespace XingAPINet
 			if (tmcode?.Length > 4) return false; // char 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt8425OutBlock block)
+		{
+			block.tmname = this.tmname;
+			block.tmcode = this.tmcode;
+
 		}
 	}
 

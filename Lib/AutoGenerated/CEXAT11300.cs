@@ -141,6 +141,15 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCEXAT11300InBlock1 block)
+		{
+			block.OrgOrdNo = this.OrgOrdNo;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.FnoIsuNo = this.FnoIsuNo;
+
+		}
 	}
 
 	public partial class XQCEXAT11300OutBlock1 : XingBlock
@@ -352,6 +361,18 @@ namespace XingAPINet
 			if (CommdaCode?.Length > 2) return false; // char 2
 
 			return true;
+		}
+
+		public void CopyTo(XQCEXAT11300OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.OrgOrdNo = this.OrgOrdNo;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.CancQty = this.CancQty;
+			block.CommdaCode = this.CommdaCode;
+
 		}
 	}
 
@@ -615,6 +636,21 @@ namespace XingAPINet
 			if (OrdAbleQty.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCEXAT11300OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.OrdNo = this.OrdNo;
+			block.BrnNm = this.BrnNm;
+			block.AcntNm = this.AcntNm;
+			block.IsuNm = this.IsuNm;
+			block.OrdAbleAmt = this.OrdAbleAmt;
+			block.MnyOrdAbleAmt = this.MnyOrdAbleAmt;
+			block.OrdMgn = this.OrdMgn;
+			block.MnyOrdMgn = this.MnyOrdMgn;
+			block.OrdAbleQty = this.OrdAbleQty;
+
 		}
 	}
 

@@ -237,6 +237,21 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCDPCQ04700InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.QryTp = this.QryTp;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.SrtNo = this.SrtNo;
+			block.PdptnCode = this.PdptnCode;
+			block.IsuLgclssCode = this.IsuLgclssCode;
+			block.IsuNo = this.IsuNo;
+
+		}
 	}
 
 	public partial class XQCDPCQ04700OutBlock1 : XingBlock
@@ -500,6 +515,21 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCDPCQ04700OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.QryTp = this.QryTp;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.SrtNo = this.SrtNo;
+			block.PdptnCode = this.PdptnCode;
+			block.IsuLgclssCode = this.IsuLgclssCode;
+			block.IsuNo = this.IsuNo;
+
+		}
 	}
 
 	public partial class XQCDPCQ04700OutBlock2 : XingBlock
@@ -626,6 +656,13 @@ namespace XingAPINet
 			if (AcntNm?.Length > 40) return false; // char 40
 
 			return true;
+		}
+
+		public void CopyTo(XQCDPCQ04700OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+
 		}
 	}
 
@@ -2050,6 +2087,89 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCDPCQ04700OutBlock3 block)
+		{
+			block.AcntNo = this.AcntNo;
+			block.TrdDt = this.TrdDt;
+			block.TrdNo = this.TrdNo;
+			block.TpCodeNm = this.TpCodeNm;
+			block.SmryNo = this.SmryNo;
+			block.SmryNm = this.SmryNm;
+			block.CancTpNm = this.CancTpNm;
+			block.TrdQty = this.TrdQty;
+			block.Trtax = this.Trtax;
+			block.FcurrAdjstAmt = this.FcurrAdjstAmt;
+			block.AdjstAmt = this.AdjstAmt;
+			block.OvdSum = this.OvdSum;
+			block.DpsBfbalAmt = this.DpsBfbalAmt;
+			block.SellPldgRfundAmt = this.SellPldgRfundAmt;
+			block.DpspdgLoanBfbalAmt = this.DpspdgLoanBfbalAmt;
+			block.TrdmdaNm = this.TrdmdaNm;
+			block.OrgTrdNo = this.OrgTrdNo;
+			block.IsuNm = this.IsuNm;
+			block.TrdUprc = this.TrdUprc;
+			block.CmsnAmt = this.CmsnAmt;
+			block.FcurrCmsnAmt = this.FcurrCmsnAmt;
+			block.RfundDiffAmt = this.RfundDiffAmt;
+			block.RepayAmtSum = this.RepayAmtSum;
+			block.SecCrbalQty = this.SecCrbalQty;
+			block.CslLoanRfundIntrstAmt = this.CslLoanRfundIntrstAmt;
+			block.DpspdgLoanCrbalAmt = this.DpspdgLoanCrbalAmt;
+			block.TrxTime = this.TrxTime;
+			block.Inouno = this.Inouno;
+			block.IsuNo = this.IsuNo;
+			block.TrdAmt = this.TrdAmt;
+			block.ChckAmt = this.ChckAmt;
+			block.TaxSumAmt = this.TaxSumAmt;
+			block.FcurrTaxSumAmt = this.FcurrTaxSumAmt;
+			block.IntrstUtlfee = this.IntrstUtlfee;
+			block.MnyDvdAmt = this.MnyDvdAmt;
+			block.RcvblOcrAmt = this.RcvblOcrAmt;
+			block.TrxBrnNo = this.TrxBrnNo;
+			block.TrxBrnNm = this.TrxBrnNm;
+			block.DpspdgLoanAmt = this.DpspdgLoanAmt;
+			block.DpspdgLoanRfundAmt = this.DpspdgLoanRfundAmt;
+			block.BasePrc = this.BasePrc;
+			block.DpsCrbalAmt = this.DpsCrbalAmt;
+			block.BoaAmt = this.BoaAmt;
+			block.MnyoutAbleAmt = this.MnyoutAbleAmt;
+			block.BcrLoanOcrAmt = this.BcrLoanOcrAmt;
+			block.BcrLoanBfbalAmt = this.BcrLoanBfbalAmt;
+			block.BnsBasePrc = this.BnsBasePrc;
+			block.TaxchrBasePrc = this.TaxchrBasePrc;
+			block.TrdUnit = this.TrdUnit;
+			block.BalUnit = this.BalUnit;
+			block.EvrTax = this.EvrTax;
+			block.EvalAmt = this.EvalAmt;
+			block.BcrLoanRfundAmt = this.BcrLoanRfundAmt;
+			block.BcrLoanCrbalAmt = this.BcrLoanCrbalAmt;
+			block.AddMgnOcrTotamt = this.AddMgnOcrTotamt;
+			block.AddMnyMgnOcrAmt = this.AddMnyMgnOcrAmt;
+			block.AddMgnDfryTotamt = this.AddMgnDfryTotamt;
+			block.AddMnyMgnDfryAmt = this.AddMnyMgnDfryAmt;
+			block.BnsplAmt = this.BnsplAmt;
+			block.Ictax = this.Ictax;
+			block.Ihtax = this.Ihtax;
+			block.LoanDt = this.LoanDt;
+			block.CrcyCode = this.CrcyCode;
+			block.FcurrAmt = this.FcurrAmt;
+			block.FcurrTrdAmt = this.FcurrTrdAmt;
+			block.FcurrDps = this.FcurrDps;
+			block.FcurrDpsBfbalAmt = this.FcurrDpsBfbalAmt;
+			block.OppAcntNm = this.OppAcntNm;
+			block.OppAcntNo = this.OppAcntNo;
+			block.LoanRfundAmt = this.LoanRfundAmt;
+			block.LoanIntrstAmt = this.LoanIntrstAmt;
+			block.AskpsnNm = this.AskpsnNm;
+			block.OrdDt = this.OrdDt;
+			block.TrdXchrat = this.TrdXchrat;
+			block.RdctCmsn = this.RdctCmsn;
+			block.FcurrStmpTx = this.FcurrStmpTx;
+			block.FcurrElecfnTrtax = this.FcurrElecfnTrtax;
+			block.FcstckTrtax = this.FcstckTrtax;
+
+		}
 	}
 
 	public partial class XQCDPCQ04700OutBlock4 : XingBlock
@@ -2210,6 +2330,15 @@ namespace XingAPINet
 			if (CmsnAmtSumAmt.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCDPCQ04700OutBlock4 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.PnlSumAmt = this.PnlSumAmt;
+			block.CtrctAsm = this.CtrctAsm;
+			block.CmsnAmtSumAmt = this.CmsnAmtSumAmt;
+
 		}
 	}
 
@@ -2592,6 +2721,28 @@ namespace XingAPINet
 			// FcurrBuyAdjstAmt double 25.4
 
 			return true;
+		}
+
+		public void CopyTo(XQCDPCQ04700OutBlock5 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.MnyinAmt = this.MnyinAmt;
+			block.SecinAmt = this.SecinAmt;
+			block.MnyoutAmt = this.MnyoutAmt;
+			block.SecoutAmt = this.SecoutAmt;
+			block.DiffAmt = this.DiffAmt;
+			block.DiffAmt0 = this.DiffAmt0;
+			block.SellQty = this.SellQty;
+			block.SellAmt = this.SellAmt;
+			block.SellCmsn = this.SellCmsn;
+			block.EvrTax = this.EvrTax;
+			block.FcurrSellAdjstAmt = this.FcurrSellAdjstAmt;
+			block.BuyQty = this.BuyQty;
+			block.BuyAmt = this.BuyAmt;
+			block.BuyCmsn = this.BuyCmsn;
+			block.ExecTax = this.ExecTax;
+			block.FcurrBuyAdjstAmt = this.FcurrBuyAdjstAmt;
+
 		}
 	}
 

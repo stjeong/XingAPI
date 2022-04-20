@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRDK3InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRDK3OutBlock : XingBlock
@@ -587,6 +593,35 @@ namespace XingAPINet
 			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XRDK3OutBlock block)
+		{
+			block.dan_chetime = this.dan_chetime;
+			block.dan_sign = this.dan_sign;
+			block.dan_change = this.dan_change;
+			block.dan_drate = this.dan_drate;
+			block.dan_price = this.dan_price;
+			block.dan_opentime = this.dan_opentime;
+			block.dan_open = this.dan_open;
+			block.dan_hightime = this.dan_hightime;
+			block.dan_high = this.dan_high;
+			block.dan_lowtime = this.dan_lowtime;
+			block.dan_low = this.dan_low;
+			block.dan_cgubun = this.dan_cgubun;
+			block.dan_cvolume = this.dan_cvolume;
+			block.dan_volume = this.dan_volume;
+			block.dan_value = this.dan_value;
+			block.dan_mdvolume = this.dan_mdvolume;
+			block.dan_mdchecnt = this.dan_mdchecnt;
+			block.dan_msvolume = this.dan_msvolume;
+			block.dan_mschecnt = this.dan_mschecnt;
+			block.dan_prevolume = this.dan_prevolume;
+			block.dan_precvolume = this.dan_precvolume;
+			block.dan_cpower = this.dan_cpower;
+			block.dan_status = this.dan_status;
+			block.shcode = this.shcode;
+
 		}
 	}
 

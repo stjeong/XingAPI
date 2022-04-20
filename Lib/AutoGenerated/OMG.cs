@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XROMGInBlock block)
+		{
+			block.optcode = this.optcode;
+
+		}
 	}
 
 	public partial class XROMGOutBlock : XingBlock
@@ -468,6 +474,28 @@ namespace XingAPINet
 			if (optcode?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XROMGOutBlock block)
+		{
+			block.chetime = this.chetime;
+			block.actprice = this.actprice;
+			block.k200jisu = this.k200jisu;
+			block.fut200jisu = this.fut200jisu;
+			block.price = this.price;
+			block.capimpv = this.capimpv;
+			block.impv = this.impv;
+			block.delt = this.delt;
+			block.gama = this.gama;
+			block.ceta = this.ceta;
+			block.vega = this.vega;
+			block.rhox = this.rhox;
+			block.theoryprice = this.theoryprice;
+			block.bimpv = this.bimpv;
+			block.offerimpv = this.offerimpv;
+			block.bidimpv = this.bidimpv;
+			block.optcode = this.optcode;
+
 		}
 	}
 

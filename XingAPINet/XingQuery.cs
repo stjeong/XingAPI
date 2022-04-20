@@ -62,9 +62,9 @@ namespace XingAPINet
                 Thread.Sleep(Math.Min((int)_queryPerTimeInMillis, (int)gapTime));
             }
 
+            _lastQueryTime = DateTime.Now;
             int result = _xaQuery.Request(_nextCall);
             _nextCall = true;
-            _lastQueryTime = DateTime.Now;
 
             if (result >= 0)
             {

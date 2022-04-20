@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1752InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.traddate1 = this.traddate1;
+			block.traddate2 = this.traddate2;
+			block.fwgubun1 = this.fwgubun1;
+			block.cts_idx = this.cts_idx;
+
+		}
 	}
 
 	public partial class XQt1752OutBlock : XingBlock
@@ -300,6 +310,14 @@ namespace XingAPINet
 			if (cts_idx.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1752OutBlock block)
+		{
+			block.fwdvl = this.fwdvl;
+			block.fwsvl = this.fwsvl;
+			block.cts_idx = this.cts_idx;
+
 		}
 	}
 
@@ -550,6 +568,20 @@ namespace XingAPINet
 			// swinrat float 6.1
 
 			return true;
+		}
+
+		public void CopyTo(XQt1752OutBlock1 block)
+		{
+			block.tradname = this.tradname;
+			block.tradmdvol = this.tradmdvol;
+			block.tradmsvol = this.tradmsvol;
+			block.tradmssvol = this.tradmssvol;
+			block.wintrd = this.wintrd;
+			block.winrat = this.winrat;
+			block.tradno = this.tradno;
+			block.wgubun = this.wgubun;
+			block.swinrat = this.swinrat;
+
 		}
 	}
 

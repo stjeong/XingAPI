@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRDH1InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRDH1OutBlock : XingBlock
@@ -927,6 +933,55 @@ namespace XingAPINet
 			if (volume.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XRDH1OutBlock block)
+		{
+			block.dan_hotime = this.dan_hotime;
+			block.dan_hstatus = this.dan_hstatus;
+			block.dan_offerho1 = this.dan_offerho1;
+			block.dan_bidho1 = this.dan_bidho1;
+			block.dan_offerrem1 = this.dan_offerrem1;
+			block.dan_bidrem1 = this.dan_bidrem1;
+			block.dan_preoffercha1 = this.dan_preoffercha1;
+			block.dan_prebidcha1 = this.dan_prebidcha1;
+			block.dan_offerho2 = this.dan_offerho2;
+			block.dan_bidho2 = this.dan_bidho2;
+			block.dan_offerrem2 = this.dan_offerrem2;
+			block.dan_bidrem2 = this.dan_bidrem2;
+			block.dan_preoffercha2 = this.dan_preoffercha2;
+			block.dan_prebidcha2 = this.dan_prebidcha2;
+			block.dan_offerho3 = this.dan_offerho3;
+			block.dan_bidho3 = this.dan_bidho3;
+			block.dan_offerrem3 = this.dan_offerrem3;
+			block.dan_bidrem3 = this.dan_bidrem3;
+			block.dan_preoffercha3 = this.dan_preoffercha3;
+			block.dan_prebidcha3 = this.dan_prebidcha3;
+			block.dan_offerho4 = this.dan_offerho4;
+			block.dan_bidho4 = this.dan_bidho4;
+			block.dan_offerrem4 = this.dan_offerrem4;
+			block.dan_bidrem4 = this.dan_bidrem4;
+			block.dan_preoffercha4 = this.dan_preoffercha4;
+			block.dan_prebidcha4 = this.dan_prebidcha4;
+			block.dan_offerho5 = this.dan_offerho5;
+			block.dan_bidho5 = this.dan_bidho5;
+			block.dan_offerrem5 = this.dan_offerrem5;
+			block.dan_bidrem5 = this.dan_bidrem5;
+			block.dan_preoffercha5 = this.dan_preoffercha5;
+			block.dan_prebidcha5 = this.dan_prebidcha5;
+			block.dan_totofferrem = this.dan_totofferrem;
+			block.dan_totbidrem = this.dan_totbidrem;
+			block.dan_preoffercha = this.dan_preoffercha;
+			block.dan_prebidcha = this.dan_prebidcha;
+			block.dan_yeprice = this.dan_yeprice;
+			block.dan_yevolume = this.dan_yevolume;
+			block.dan_preysign = this.dan_preysign;
+			block.dan_preychange = this.dan_preychange;
+			block.dan_jnilysign = this.dan_jnilysign;
+			block.dan_jnilychange = this.dan_jnilychange;
+			block.shcode = this.shcode;
+			block.volume = this.volume;
+
 		}
 	}
 

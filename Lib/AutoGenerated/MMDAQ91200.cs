@@ -125,6 +125,14 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQMMDAQ91200InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.IsuLgclssCode = this.IsuLgclssCode;
+			block.IsuMdclssCode = this.IsuMdclssCode;
+
+		}
 	}
 
 	public partial class XQMMDAQ91200OutBlock1 : XingBlock
@@ -268,6 +276,14 @@ namespace XingAPINet
 			if (IsuMdclssCode?.Length > 2) return false; // char 2
 
 			return true;
+		}
+
+		public void CopyTo(XQMMDAQ91200OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.IsuLgclssCode = this.IsuLgclssCode;
+			block.IsuMdclssCode = this.IsuMdclssCode;
+
 		}
 	}
 
@@ -518,6 +534,20 @@ namespace XingAPINet
 			if (RmndDays.ToString().Length > 6) return false; // long 6
 
 			return true;
+		}
+
+		public void CopyTo(XQMMDAQ91200OutBlock2 block)
+		{
+			block.IsuSmclssCode = this.IsuSmclssCode;
+			block.IsuMdclssCode = this.IsuMdclssCode;
+			block.IsuLrgMdclssNm = this.IsuLrgMdclssNm;
+			block.IsuLrgMidSmclssNm = this.IsuLrgMidSmclssNm;
+			block.ShtnHanglIsuNm = this.ShtnHanglIsuNm;
+			block.CsgnMgnrt = this.CsgnMgnrt;
+			block.MaintMgnrt = this.MaintMgnrt;
+			block.MnyMgnrt = this.MnyMgnrt;
+			block.RmndDays = this.RmndDays;
+
 		}
 	}
 

@@ -141,6 +141,15 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8406InBlock block)
+		{
+			block.focode = this.focode;
+			block.cgubun = this.cgubun;
+			block.bgubun = this.bgubun;
+			block.cnt = this.cnt;
+
+		}
 	}
 
 	public partial class XQt8406OutBlock1 : XingBlock
@@ -577,6 +586,31 @@ namespace XingAPINet
 			// chdegcnt float 8.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt8406OutBlock1 block)
+		{
+			block.chetime = this.chetime;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.openyak = this.openyak;
+			block.openupdn = this.openupdn;
+			block.cvolume = this.cvolume;
+			block.s_mschecnt = this.s_mschecnt;
+			block.s_mdchecnt = this.s_mdchecnt;
+			block.ss_mschecnt = this.ss_mschecnt;
+			block.s_mschevol = this.s_mschevol;
+			block.s_mdchevol = this.s_mdchevol;
+			block.ss_mschevol = this.ss_mschevol;
+			block.chdegvol = this.chdegvol;
+			block.chdegcnt = this.chdegcnt;
+
 		}
 	}
 

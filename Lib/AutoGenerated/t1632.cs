@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1632InBlock block)
+		{
+			block.gubun = this.gubun;
+			block.gubun1 = this.gubun1;
+			block.gubun2 = this.gubun2;
+			block.gubun3 = this.gubun3;
+			block.date = this.date;
+			block.time = this.time;
+
+		}
 	}
 
 	public partial class XQt1632OutBlock : XingBlock
@@ -316,6 +327,14 @@ namespace XingAPINet
 			if (idx.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1632OutBlock block)
+		{
+			block.date = this.date;
+			block.time = this.time;
+			block.idx = this.idx;
+
 		}
 	}
 
@@ -651,6 +670,25 @@ namespace XingAPINet
 			if (bcha2.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1632OutBlock1 block)
+		{
+			block.time = this.time;
+			block.k200jisu = this.k200jisu;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.k200basis = this.k200basis;
+			block.tot3 = this.tot3;
+			block.tot1 = this.tot1;
+			block.tot2 = this.tot2;
+			block.cha3 = this.cha3;
+			block.cha1 = this.cha1;
+			block.cha2 = this.cha2;
+			block.bcha3 = this.bcha3;
+			block.bcha1 = this.bcha1;
+			block.bcha2 = this.bcha2;
+
 		}
 	}
 

@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1532InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt1532OutBlock : XingBlock
@@ -240,6 +246,14 @@ namespace XingAPINet
 			if (tmcode?.Length > 4) return false; // char 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1532OutBlock block)
+		{
+			block.tmname = this.tmname;
+			block.avgdiff = this.avgdiff;
+			block.tmcode = this.tmcode;
+
 		}
 	}
 

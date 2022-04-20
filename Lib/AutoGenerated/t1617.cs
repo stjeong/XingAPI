@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1617InBlock block)
+		{
+			block.gubun1 = this.gubun1;
+			block.gubun2 = this.gubun2;
+			block.gubun3 = this.gubun3;
+			block.cts_date = this.cts_date;
+			block.cts_time = this.cts_time;
+
+		}
 	}
 
 	public partial class XQt1617OutBlock : XingBlock
@@ -488,6 +498,25 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1617OutBlock block)
+		{
+			block.cts_date = this.cts_date;
+			block.cts_time = this.cts_time;
+			block.ms_08 = this.ms_08;
+			block.md_08 = this.md_08;
+			block.sv_08 = this.sv_08;
+			block.ms_17 = this.ms_17;
+			block.md_17 = this.md_17;
+			block.sv_17 = this.sv_17;
+			block.ms_18 = this.ms_18;
+			block.md_18 = this.md_18;
+			block.sv_18 = this.sv_18;
+			block.ms_01 = this.ms_01;
+			block.md_01 = this.md_01;
+			block.sv_01 = this.sv_01;
+
+		}
 	}
 
 	public partial class XQt1617OutBlock1 : XingBlock
@@ -686,6 +715,17 @@ namespace XingAPINet
 			if (sv_01.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1617OutBlock1 block)
+		{
+			block.date = this.date;
+			block.time = this.time;
+			block.sv_08 = this.sv_08;
+			block.sv_17 = this.sv_17;
+			block.sv_18 = this.sv_18;
+			block.sv_01 = this.sv_01;
+
 		}
 	}
 

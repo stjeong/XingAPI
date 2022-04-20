@@ -189,6 +189,18 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1771InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.tradno = this.tradno;
+			block.gubun1 = this.gubun1;
+			block.traddate1 = this.traddate1;
+			block.traddate2 = this.traddate2;
+			block.cts_idx = this.cts_idx;
+			block.cnt = this.cnt;
+
+		}
 	}
 
 	public partial class XQt1771OutBlock : XingBlock
@@ -298,6 +310,12 @@ namespace XingAPINet
 			if (cts_idx.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1771OutBlock block)
+		{
+			block.cts_idx = this.cts_idx;
+
 		}
 	}
 
@@ -650,6 +668,26 @@ namespace XingAPINet
 			if (tradmttavg.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt1771OutBlock2 block)
+		{
+			block.traddate = this.traddate;
+			block.tradtime = this.tradtime;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.tradmdcha = this.tradmdcha;
+			block.tradmscha = this.tradmscha;
+			block.tradmdval = this.tradmdval;
+			block.tradmsval = this.tradmsval;
+			block.tradmsscha = this.tradmsscha;
+			block.tradmttvolume = this.tradmttvolume;
+			block.tradavg = this.tradavg;
+			block.tradmttavg = this.tradmttavg;
+
 		}
 	}
 

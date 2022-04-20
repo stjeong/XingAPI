@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1981InBlock block)
+		{
+			block.mkt_gb = this.mkt_gb;
+
+		}
 	}
 
 	public partial class XQt1981OutBlock : XingBlock
@@ -219,6 +225,13 @@ namespace XingAPINet
 			if (ksd_cnt?.Length > 4) return false; // char 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1981OutBlock block)
+		{
+			block.ksp_cnt = this.ksp_cnt;
+			block.ksd_cnt = this.ksd_cnt;
+
 		}
 	}
 
@@ -486,6 +499,21 @@ namespace XingAPINet
 			// mkt_gb char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQt1981OutBlock1 block)
+		{
+			block.shcode = this.shcode;
+			block.expcode = this.expcode;
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.rate = this.rate;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.mkt_gb = this.mkt_gb;
+
 		}
 	}
 

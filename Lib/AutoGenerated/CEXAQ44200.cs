@@ -237,6 +237,21 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCEXAQ44200InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.ChoicInptTpCode = this.ChoicInptTpCode;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.PrdtExecTpCode = this.PrdtExecTpCode;
+			block.FnoTrdPtnCode = this.FnoTrdPtnCode;
+			block.SrtOrdNo2 = this.SrtOrdNo2;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+
+		}
 	}
 
 	public partial class XQCEXAQ44200OutBlock1 : XingBlock
@@ -500,6 +515,21 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCEXAQ44200OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.ChoicInptTpCode = this.ChoicInptTpCode;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.PrdtExecTpCode = this.PrdtExecTpCode;
+			block.FnoTrdPtnCode = this.FnoTrdPtnCode;
+			block.SrtOrdNo2 = this.SrtOrdNo2;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+
+		}
 	}
 
 	public partial class XQCEXAQ44200OutBlock2 : XingBlock
@@ -677,6 +707,16 @@ namespace XingAPINet
 			// ExecPrc double 15.2
 
 			return true;
+		}
+
+		public void CopyTo(XQCEXAQ44200OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.OrdQty = this.OrdQty;
+			block.ExecQty = this.ExecQty;
+			block.UnercQty = this.UnercQty;
+			block.ExecPrc = this.ExecPrc;
+
 		}
 	}
 
@@ -1318,6 +1358,43 @@ namespace XingAPINet
 			if (ExchRcptTime?.Length > 30) return false; // char 30
 
 			return true;
+		}
+
+		public void CopyTo(XQCEXAQ44200OutBlock3 block)
+		{
+			block.AcntNo1 = this.AcntNo1;
+			block.AcntNm = this.AcntNm;
+			block.OrdDt = this.OrdDt;
+			block.OrdNo = this.OrdNo;
+			block.OrgOrdNo = this.OrgOrdNo;
+			block.OrdTime = this.OrdTime;
+			block.IsuNo = this.IsuNo;
+			block.IsuNm = this.IsuNm;
+			block.BnsTpNm = this.BnsTpNm;
+			block.BnsTpCode = this.BnsTpCode;
+			block.ErxOrdprcTpCode = this.ErxOrdprcTpCode;
+			block.MrcTpNm = this.MrcTpNm;
+			block.ErxPrcCndiTpCode = this.ErxPrcCndiTpCode;
+			block.CodeNm = this.CodeNm;
+			block.OrdPrc = this.OrdPrc;
+			block.OrdQty = this.OrdQty;
+			block.FnoRjtRsnCode = this.FnoRjtRsnCode;
+			block.OrdTpNm = this.OrdTpNm;
+			block.ExecTpNm = this.ExecTpNm;
+			block.ExecPrc = this.ExecPrc;
+			block.ExecQty = this.ExecQty;
+			block.ExecTime = this.ExecTime;
+			block.ExecNo = this.ExecNo;
+			block.UnercQty = this.UnercQty;
+			block.UserId = this.UserId;
+			block.CommdaCode = this.CommdaCode;
+			block.CommdaCodeNm = this.CommdaCodeNm;
+			block.IpAddr = this.IpAddr;
+			block.TrdPtnTpNm = this.TrdPtnTpNm;
+			block.ErxOrdStatCode = this.ErxOrdStatCode;
+			block.CodeNm0 = this.CodeNm0;
+			block.ExchRcptTime = this.ExchRcptTime;
+
 		}
 	}
 

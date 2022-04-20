@@ -141,6 +141,15 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2814InBlock block)
+		{
+			block.gubun1 = this.gubun1;
+			block.gubun2 = this.gubun2;
+			block.from_date = this.from_date;
+			block.to_date = this.to_date;
+
+		}
 	}
 
 	public partial class XQt2814OutBlock : XingBlock
@@ -267,6 +276,13 @@ namespace XingAPINet
 			if (mname?.Length > 20) return false; // char 20
 
 			return true;
+		}
+
+		public void CopyTo(XQt2814OutBlock block)
+		{
+			block.mcode = this.mcode;
+			block.mname = this.mname;
+
 		}
 	}
 
@@ -908,6 +924,43 @@ namespace XingAPINet
 			// jisu float 7.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt2814OutBlock1 block)
+		{
+			block.date = this.date;
+			block.sv_08 = this.sv_08;
+			block.sv_17 = this.sv_17;
+			block.sv_18 = this.sv_18;
+			block.sv_01 = this.sv_01;
+			block.sv_03 = this.sv_03;
+			block.sv_04 = this.sv_04;
+			block.sv_02 = this.sv_02;
+			block.sv_05 = this.sv_05;
+			block.sv_06 = this.sv_06;
+			block.sv_07 = this.sv_07;
+			block.sv_00 = this.sv_00;
+			block.sv_09 = this.sv_09;
+			block.sv_10 = this.sv_10;
+			block.sv_11 = this.sv_11;
+			block.sv_99 = this.sv_99;
+			block.sa_08 = this.sa_08;
+			block.sa_17 = this.sa_17;
+			block.sa_18 = this.sa_18;
+			block.sa_01 = this.sa_01;
+			block.sa_03 = this.sa_03;
+			block.sa_04 = this.sa_04;
+			block.sa_02 = this.sa_02;
+			block.sa_05 = this.sa_05;
+			block.sa_06 = this.sa_06;
+			block.sa_07 = this.sa_07;
+			block.sa_00 = this.sa_00;
+			block.sa_09 = this.sa_09;
+			block.sa_10 = this.sa_10;
+			block.sa_11 = this.sa_11;
+			block.sa_99 = this.sa_99;
+			block.jisu = this.jisu;
+
 		}
 	}
 

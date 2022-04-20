@@ -221,6 +221,20 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1488InBlock block)
+		{
+			block.gubun = this.gubun;
+			block.sign = this.sign;
+			block.jgubun = this.jgubun;
+			block.jongchk = this.jongchk;
+			block.idx = this.idx;
+			block.volume = this.volume;
+			block.yesprice = this.yesprice;
+			block.yeeprice = this.yeeprice;
+			block.yevolume = this.yevolume;
+
+		}
 	}
 
 	public partial class XQt1488OutBlock : XingBlock
@@ -330,6 +344,12 @@ namespace XingAPINet
 			if (idx.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1488OutBlock block)
+		{
+			block.idx = this.idx;
+
 		}
 	}
 
@@ -665,6 +685,25 @@ namespace XingAPINet
 			if (jnilvolume.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1488OutBlock1 block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.offerrem = this.offerrem;
+			block.offerho = this.offerho;
+			block.bidho = this.bidho;
+			block.bidrem = this.bidrem;
+			block.cnt = this.cnt;
+			block.shcode = this.shcode;
+			block.jkrate = this.jkrate;
+			block.jnilvolume = this.jnilvolume;
+
 		}
 	}
 

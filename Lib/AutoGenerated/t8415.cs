@@ -63,7 +63,7 @@ namespace XingAPINet
 		[XAQueryFieldAttribute("qrycnt", "요청건수(최대-압축:2000비압축:500)", "long", "4")]
 		public long qrycnt;
 		/// <summary>
-		/// 조회영업일수(0:미사용1>=사용)
+		/// 조회영업일수(0:미사용1&gt;=사용)
 		/// </summary>
 		[XAQueryFieldAttribute("nday", "조회영업일수(0:미사용1>=사용)", "char", "1")]
 		public char nday;
@@ -118,7 +118,7 @@ namespace XingAPINet
 			/// </summary>
 			public const string qrycnt = "qrycnt";
 			/// <summary>
-			/// 조회영업일수(0:미사용1>=사용)
+			/// 조회영업일수(0:미사용1&gt;=사용)
 			/// </summary>
 			public const string nday = "nday";
 			/// <summary>
@@ -252,6 +252,22 @@ namespace XingAPINet
 			// comp_yn char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQt8415InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.ncnt = this.ncnt;
+			block.qrycnt = this.qrycnt;
+			block.nday = this.nday;
+			block.sdate = this.sdate;
+			block.stime = this.stime;
+			block.edate = this.edate;
+			block.etime = this.etime;
+			block.cts_date = this.cts_date;
+			block.cts_time = this.cts_time;
+			block.comp_yn = this.comp_yn;
+
 		}
 	}
 
@@ -652,6 +668,29 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8415OutBlock block)
+		{
+			block.shcode = this.shcode;
+			block.jisiga = this.jisiga;
+			block.jihigh = this.jihigh;
+			block.jilow = this.jilow;
+			block.jiclose = this.jiclose;
+			block.jivolume = this.jivolume;
+			block.disiga = this.disiga;
+			block.dihigh = this.dihigh;
+			block.dilow = this.dilow;
+			block.diclose = this.diclose;
+			block.highend = this.highend;
+			block.lowend = this.lowend;
+			block.cts_date = this.cts_date;
+			block.cts_time = this.cts_time;
+			block.s_time = this.s_time;
+			block.e_time = this.e_time;
+			block.dshmin = this.dshmin;
+			block.rec_count = this.rec_count;
+
+		}
 	}
 
 	public partial class XQt8415OutBlock1 : XingBlock
@@ -901,6 +940,20 @@ namespace XingAPINet
 			if (openyak.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt8415OutBlock1 block)
+		{
+			block.date = this.date;
+			block.time = this.time;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.close = this.close;
+			block.jdiff_vol = this.jdiff_vol;
+			block.value = this.value;
+			block.openyak = this.openyak;
+
 		}
 	}
 

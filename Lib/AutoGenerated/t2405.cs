@@ -189,6 +189,18 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2405InBlock block)
+		{
+			block.focode = this.focode;
+			block.bgubun = this.bgubun;
+			block.nmin = this.nmin;
+			block.etime = this.etime;
+			block.hgubun = this.hgubun;
+			block.cnt = this.cnt;
+			block.cts_time = this.cts_time;
+
+		}
 	}
 
 	public partial class XQt2405OutBlock : XingBlock
@@ -366,6 +378,16 @@ namespace XingAPINet
 			if (cts_time?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XQt2405OutBlock block)
+		{
+			block.mdvolume = this.mdvolume;
+			block.mdchecnt = this.mdchecnt;
+			block.msvolume = this.msvolume;
+			block.mschecnt = this.mschecnt;
+			block.cts_time = this.cts_time;
+
 		}
 	}
 
@@ -803,6 +825,31 @@ namespace XingAPINet
 			if (date?.Length > 8) return false; // date 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt2405OutBlock1 block)
+		{
+			block.time = this.time;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.volume = this.volume;
+			block.cvolume = this.cvolume;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.offerrem = this.offerrem;
+			block.bidrem = this.bidrem;
+			block.offercnt = this.offercnt;
+			block.bidcnt = this.bidcnt;
+			block.c_offerrem = this.c_offerrem;
+			block.c_bidrem = this.c_bidrem;
+			block.c_offercnt = this.c_offercnt;
+			block.c_bidcnt = this.c_bidcnt;
+			block.r_bidrem = this.r_bidrem;
+			block.r_bidcnt = this.r_bidcnt;
+			block.r_sign = this.r_sign;
+			block.date = this.date;
+
 		}
 	}
 

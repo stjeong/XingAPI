@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRIJ_InBlock block)
+		{
+			block.upcode = this.upcode;
+
+		}
 	}
 
 	public partial class XRIJ_OutBlock : XingBlock
@@ -604,6 +610,36 @@ namespace XingAPINet
 			if (upcode?.Length > 3) return false; // char 3
 
 			return true;
+		}
+
+		public void CopyTo(XRIJ_OutBlock block)
+		{
+			block.time = this.time;
+			block.jisu = this.jisu;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.drate = this.drate;
+			block.cvolume = this.cvolume;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.upjo = this.upjo;
+			block.highjo = this.highjo;
+			block.unchgjo = this.unchgjo;
+			block.lowjo = this.lowjo;
+			block.downjo = this.downjo;
+			block.upjrate = this.upjrate;
+			block.openjisu = this.openjisu;
+			block.opentime = this.opentime;
+			block.highjisu = this.highjisu;
+			block.hightime = this.hightime;
+			block.lowjisu = this.lowjisu;
+			block.lowtime = this.lowtime;
+			block.frgsvolume = this.frgsvolume;
+			block.orgsvolume = this.orgsvolume;
+			block.frgsvalue = this.frgsvalue;
+			block.orgsvalue = this.orgsvalue;
+			block.upcode = this.upcode;
+
 		}
 	}
 

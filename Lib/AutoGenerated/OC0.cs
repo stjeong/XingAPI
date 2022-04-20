@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XROC0InBlock block)
+		{
+			block.optcode = this.optcode;
+
+		}
 	}
 
 	public partial class XROC0OutBlock : XingBlock
@@ -672,6 +678,40 @@ namespace XingAPINet
 			if (optcode?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XROC0OutBlock block)
+		{
+			block.chetime = this.chetime;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.drate = this.drate;
+			block.price = this.price;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.cgubun = this.cgubun;
+			block.cvolume = this.cvolume;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.mdvolume = this.mdvolume;
+			block.mdchecnt = this.mdchecnt;
+			block.msvolume = this.msvolume;
+			block.mschecnt = this.mschecnt;
+			block.cpower = this.cpower;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.openyak = this.openyak;
+			block.k200jisu = this.k200jisu;
+			block.eqva = this.eqva;
+			block.theoryprice = this.theoryprice;
+			block.impv = this.impv;
+			block.openyakcha = this.openyakcha;
+			block.timevalue = this.timevalue;
+			block.jgubun = this.jgubun;
+			block.jnilvolume = this.jnilvolume;
+			block.optcode = this.optcode;
+
 		}
 	}
 

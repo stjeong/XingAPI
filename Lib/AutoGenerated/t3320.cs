@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt3320InBlock block)
+		{
+			block.gicode = this.gicode;
+
+		}
 	}
 
 	public partial class XQt3320OutBlock : XingBlock
@@ -594,6 +600,35 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt3320OutBlock block)
+		{
+			block.upgubunnm = this.upgubunnm;
+			block.sijangcd = this.sijangcd;
+			block.marketnm = this.marketnm;
+			block.company = this.company;
+			block.baddress = this.baddress;
+			block.btelno = this.btelno;
+			block.gsyyyy = this.gsyyyy;
+			block.gsmm = this.gsmm;
+			block.gsym = this.gsym;
+			block.lstprice = this.lstprice;
+			block.gstock = this.gstock;
+			block.homeurl = this.homeurl;
+			block.grdnm = this.grdnm;
+			block.foreignratio = this.foreignratio;
+			block.irtel = this.irtel;
+			block.capital = this.capital;
+			block.sigavalue = this.sigavalue;
+			block.cashsis = this.cashsis;
+			block.cashrate = this.cashrate;
+			block.price = this.price;
+			block.jnilclose = this.jnilclose;
+			block.notice1 = this.notice1;
+			block.notice2 = this.notice2;
+			block.notice3 = this.notice3;
+
+		}
 	}
 
 	public partial class XQt3320OutBlock1 : XingBlock
@@ -1009,6 +1044,30 @@ namespace XingAPINet
 			if (t_gsym?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XQt3320OutBlock1 block)
+		{
+			block.gicode = this.gicode;
+			block.gsym = this.gsym;
+			block.gsgb = this.gsgb;
+			block.per = this.per;
+			block.eps = this.eps;
+			block.pbr = this.pbr;
+			block.roa = this.roa;
+			block.roe = this.roe;
+			block.ebitda = this.ebitda;
+			block.evebitda = this.evebitda;
+			block.par = this.par;
+			block.sps = this.sps;
+			block.cps = this.cps;
+			block.bps = this.bps;
+			block.t_per = this.t_per;
+			block.t_eps = this.t_eps;
+			block.peg = this.peg;
+			block.t_peg = this.t_peg;
+			block.t_gsym = this.t_gsym;
+
 		}
 	}
 

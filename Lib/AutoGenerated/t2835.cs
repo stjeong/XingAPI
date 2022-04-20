@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2835InBlock block)
+		{
+			block.yyyymm = this.yyyymm;
+			block.gubun = this.gubun;
+
+		}
 	}
 
 	public partial class XQt2835OutBlock : XingBlock
@@ -303,6 +310,17 @@ namespace XingAPINet
 			if (gmshcode?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt2835OutBlock block)
+		{
+			block.gmprice = this.gmprice;
+			block.gmsign = this.gmsign;
+			block.gmchange = this.gmchange;
+			block.gmdiff = this.gmdiff;
+			block.gmvolume = this.gmvolume;
+			block.gmshcode = this.gmshcode;
+
 		}
 	}
 
@@ -724,6 +742,30 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2835OutBlock1 block)
+		{
+			block.actprice = this.actprice;
+			block.optcode = this.optcode;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.cvolume = this.cvolume;
+			block.impv = this.impv;
+			block.timevl = this.timevl;
+			block.offerrem1 = this.offerrem1;
+			block.bidrem1 = this.bidrem1;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.atmgubun = this.atmgubun;
+			block.jisuconv = this.jisuconv;
+
+		}
 	}
 
 	public partial class XQt2835OutBlock2 : XingBlock
@@ -1143,6 +1185,30 @@ namespace XingAPINet
 			// jisuconv float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt2835OutBlock2 block)
+		{
+			block.actprice = this.actprice;
+			block.optcode = this.optcode;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.cvolume = this.cvolume;
+			block.impv = this.impv;
+			block.timevl = this.timevl;
+			block.offerrem1 = this.offerrem1;
+			block.bidrem1 = this.bidrem1;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.atmgubun = this.atmgubun;
+			block.jisuconv = this.jisuconv;
+
 		}
 	}
 

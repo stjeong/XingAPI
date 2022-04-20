@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8434InBlock block)
+		{
+			block.qrycnt = this.qrycnt;
+			block.focode = this.focode;
+
+		}
 	}
 
 	public partial class XQt8434OutBlock1 : XingBlock
@@ -341,6 +348,19 @@ namespace XingAPINet
 			if (focode?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt8434OutBlock1 block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.checnt = this.checnt;
+			block.focode = this.focode;
+
 		}
 	}
 

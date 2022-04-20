@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRJH0InBlock block)
+		{
+			block.futcode = this.futcode;
+
+		}
 	}
 
 	public partial class XRJH0OutBlock : XingBlock
@@ -1335,6 +1341,79 @@ namespace XingAPINet
 			// alloc_gubun char 1
 
 			return true;
+		}
+
+		public void CopyTo(XRJH0OutBlock block)
+		{
+			block.futcode = this.futcode;
+			block.hotime = this.hotime;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.offerrem1 = this.offerrem1;
+			block.bidrem1 = this.bidrem1;
+			block.offercnt1 = this.offercnt1;
+			block.bidcnt1 = this.bidcnt1;
+			block.offerho2 = this.offerho2;
+			block.bidho2 = this.bidho2;
+			block.offerrem2 = this.offerrem2;
+			block.bidrem2 = this.bidrem2;
+			block.offercnt2 = this.offercnt2;
+			block.bidcnt2 = this.bidcnt2;
+			block.offerho3 = this.offerho3;
+			block.bidho3 = this.bidho3;
+			block.offerrem3 = this.offerrem3;
+			block.bidrem3 = this.bidrem3;
+			block.offercnt3 = this.offercnt3;
+			block.bidcnt3 = this.bidcnt3;
+			block.offerho4 = this.offerho4;
+			block.bidho4 = this.bidho4;
+			block.offerrem4 = this.offerrem4;
+			block.bidrem4 = this.bidrem4;
+			block.offercnt4 = this.offercnt4;
+			block.bidcnt4 = this.bidcnt4;
+			block.offerho5 = this.offerho5;
+			block.bidho5 = this.bidho5;
+			block.offerrem5 = this.offerrem5;
+			block.bidrem5 = this.bidrem5;
+			block.offercnt5 = this.offercnt5;
+			block.bidcnt5 = this.bidcnt5;
+			block.offerho6 = this.offerho6;
+			block.bidho6 = this.bidho6;
+			block.offerrem6 = this.offerrem6;
+			block.bidrem6 = this.bidrem6;
+			block.offercnt6 = this.offercnt6;
+			block.bidcnt6 = this.bidcnt6;
+			block.offerho7 = this.offerho7;
+			block.bidho7 = this.bidho7;
+			block.offerrem7 = this.offerrem7;
+			block.bidrem7 = this.bidrem7;
+			block.offercnt7 = this.offercnt7;
+			block.bidcnt7 = this.bidcnt7;
+			block.offerho8 = this.offerho8;
+			block.bidho8 = this.bidho8;
+			block.offerrem8 = this.offerrem8;
+			block.bidrem8 = this.bidrem8;
+			block.offercnt8 = this.offercnt8;
+			block.bidcnt8 = this.bidcnt8;
+			block.offerho9 = this.offerho9;
+			block.bidho9 = this.bidho9;
+			block.offerrem9 = this.offerrem9;
+			block.bidrem9 = this.bidrem9;
+			block.offercnt9 = this.offercnt9;
+			block.bidcnt9 = this.bidcnt9;
+			block.offerho10 = this.offerho10;
+			block.bidho10 = this.bidho10;
+			block.offerrem10 = this.offerrem10;
+			block.bidrem10 = this.bidrem10;
+			block.offercnt10 = this.offercnt10;
+			block.bidcnt10 = this.bidcnt10;
+			block.totofferrem = this.totofferrem;
+			block.totbidrem = this.totbidrem;
+			block.totoffercnt = this.totoffercnt;
+			block.totbidcnt = this.totbidcnt;
+			block.danhochk = this.danhochk;
+			block.alloc_gubun = this.alloc_gubun;
+
 		}
 	}
 

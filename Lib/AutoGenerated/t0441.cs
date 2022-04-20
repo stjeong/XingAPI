@@ -141,6 +141,15 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt0441InBlock block)
+		{
+			block.accno = this.accno;
+			block.passwd = this.passwd;
+			block.cts_expcode = this.cts_expcode;
+			block.cts_medocd = this.cts_medocd;
+
+		}
 	}
 
 	public partial class XQt0441OutBlock : XingBlock
@@ -318,6 +327,16 @@ namespace XingAPINet
 			if (tsunik.ToString().Length > 18) return false; // long 18
 
 			return true;
+		}
+
+		public void CopyTo(XQt0441OutBlock block)
+		{
+			block.tdtsunik = this.tdtsunik;
+			block.cts_expcode = this.cts_expcode;
+			block.cts_medocd = this.cts_medocd;
+			block.tappamt = this.tappamt;
+			block.tsunik = this.tsunik;
+
 		}
 	}
 
@@ -636,6 +655,24 @@ namespace XingAPINet
 			// sunikrt float 10.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt0441OutBlock1 block)
+		{
+			block.expcode = this.expcode;
+			block.medosu = this.medosu;
+			block.jqty = this.jqty;
+			block.cqty = this.cqty;
+			block.pamt = this.pamt;
+			block.mamt = this.mamt;
+			block.medocd = this.medocd;
+			block.dtsunik = this.dtsunik;
+			block.sysprocseq = this.sysprocseq;
+			block.price = this.price;
+			block.appamt = this.appamt;
+			block.dtsunik1 = this.dtsunik1;
+			block.sunikrt = this.sunikrt;
+
 		}
 	}
 

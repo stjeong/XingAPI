@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8430InBlock block)
+		{
+			block.gubun = this.gubun;
+
+		}
 	}
 
 	public partial class XQt8430OutBlock : XingBlock
@@ -359,6 +365,21 @@ namespace XingAPINet
 			// gubun char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQt8430OutBlock block)
+		{
+			block.hname = this.hname;
+			block.shcode = this.shcode;
+			block.expcode = this.expcode;
+			block.etfgubun = this.etfgubun;
+			block.uplmtprice = this.uplmtprice;
+			block.dnlmtprice = this.dnlmtprice;
+			block.jnilclose = this.jnilclose;
+			block.memedan = this.memedan;
+			block.recprice = this.recprice;
+			block.gubun = this.gubun;
+
 		}
 	}
 

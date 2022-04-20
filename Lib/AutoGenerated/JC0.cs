@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRJC0InBlock block)
+		{
+			block.futcode = this.futcode;
+
+		}
 	}
 
 	public partial class XRJC0OutBlock : XingBlock
@@ -689,6 +695,41 @@ namespace XingAPINet
 			if (basprice.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XRJC0OutBlock block)
+		{
+			block.futcode = this.futcode;
+			block.chetime = this.chetime;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.drate = this.drate;
+			block.price = this.price;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.cgubun = this.cgubun;
+			block.cvolume = this.cvolume;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.mdvolume = this.mdvolume;
+			block.mdchecnt = this.mdchecnt;
+			block.msvolume = this.msvolume;
+			block.mschecnt = this.mschecnt;
+			block.cpower = this.cpower;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.openyak = this.openyak;
+			block.k200jisu = this.k200jisu;
+			block.theoryprice = this.theoryprice;
+			block.kasis = this.kasis;
+			block.sbasis = this.sbasis;
+			block.ibasis = this.ibasis;
+			block.openyakcha = this.openyakcha;
+			block.jgubun = this.jgubun;
+			block.jnilvolume = this.jnilvolume;
+			block.basprice = this.basprice;
+
 		}
 	}
 

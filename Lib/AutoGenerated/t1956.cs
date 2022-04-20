@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1956InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt1956OutBlock : XingBlock
@@ -1563,6 +1569,92 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1956OutBlock block)
+		{
+			block.hname = this.hname;
+			block.chetime = this.chetime;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.cvolume = this.cvolume;
+			block.volume = this.volume;
+			block.recprice = this.recprice;
+			block.avg = this.avg;
+			block.jnilvolume = this.jnilvolume;
+			block.jvolume = this.jvolume;
+			block.jnilclose = this.jnilclose;
+			block.volumechg = this.volumechg;
+			block.volumediff = this.volumediff;
+			block.open = this.open;
+			block.odiff = this.odiff;
+			block.opentime = this.opentime;
+			block.high = this.high;
+			block.hdiff = this.hdiff;
+			block.hightime = this.hightime;
+			block.low = this.low;
+			block.ldiff = this.ldiff;
+			block.lowtime = this.lowtime;
+			block.high52w = this.high52w;
+			block.high52wdiff = this.high52wdiff;
+			block.high52wdate = this.high52wdate;
+			block.low52w = this.low52w;
+			block.low52wdiff = this.low52wdiff;
+			block.low52wdate = this.low52wdate;
+			block.exhratio = this.exhratio;
+			block.listing = this.listing;
+			block.memedan = this.memedan;
+			block.vol = this.vol;
+			block.parity = this.parity;
+			block.berate = this.berate;
+			block.gearing = this.gearing;
+			block.elwexec = this.elwexec;
+			block.issueprice = this.issueprice;
+			block.convrate = this.convrate;
+			block.lastdate = this.lastdate;
+			block.capt = this.capt;
+			block.egearing = this.egearing;
+			block.premium = this.premium;
+			block.spread = this.spread;
+			block.espread = this.espread;
+			block.theoryprice = this.theoryprice;
+			block.impv = this.impv;
+			block.moneyness = this.moneyness;
+			block.delt = this.delt;
+			block.gama = this.gama;
+			block.vega = this.vega;
+			block.ceta = this.ceta;
+			block.rhox = this.rhox;
+			block.bjandatecnt = this.bjandatecnt;
+			block.mmsdate = this.mmsdate;
+			block.mmedate = this.mmedate;
+			block.payday = this.payday;
+			block.listdate = this.listdate;
+			block.lpmem = this.lpmem;
+			block.lp_holdvol = this.lp_holdvol;
+			block.bcode = this.bcode;
+			block.bgubun = this.bgubun;
+			block.bprice = this.bprice;
+			block.bsign = this.bsign;
+			block.bchange = this.bchange;
+			block.bdiff = this.bdiff;
+			block.bvolume = this.bvolume;
+			block.info1 = this.info1;
+			block.info2 = this.info2;
+			block.info3 = this.info3;
+			block.info4 = this.info4;
+			block.janginfo = this.janginfo;
+			block.basketgb = this.basketgb;
+			block.basketcnt = this.basketcnt;
+			block.elwtype = this.elwtype;
+			block.settletype = this.settletype;
+			block.lpord = this.lpord;
+			block.elwdetail = this.elwdetail;
+			block.valuation = this.valuation;
+			block.givemoney = this.givemoney;
+
+		}
 	}
 
 	public partial class XQt1956OutBlock1 : XingBlock
@@ -1795,6 +1887,19 @@ namespace XingAPINet
 			if (bskjnilclose.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt1956OutBlock1 block)
+		{
+			block.bskcode = this.bskcode;
+			block.bskbno = this.bskbno;
+			block.bskprice = this.bskprice;
+			block.bsksign = this.bsksign;
+			block.bskchange = this.bskchange;
+			block.bskdiff = this.bskdiff;
+			block.bskvolume = this.bskvolume;
+			block.bskjnilclose = this.bskjnilclose;
+
 		}
 	}
 

@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1958InBlock block)
+		{
+			block.shcode1 = this.shcode1;
+			block.shcode2 = this.shcode2;
+
+		}
 	}
 
 	public partial class XQt1958OutBlock : XingBlock
@@ -575,6 +582,33 @@ namespace XingAPINet
 			// diff float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1958OutBlock block)
+		{
+			block.hname = this.hname;
+			block.item1 = this.item1;
+			block.issuernmk = this.issuernmk;
+			block.elwopt = this.elwopt;
+			block.elwtype = this.elwtype;
+			block.settletype = this.settletype;
+			block.elwexec = this.elwexec;
+			block.convrate = this.convrate;
+			block.listing = this.listing;
+			block.mmsdate = this.mmsdate;
+			block.lastdate = this.lastdate;
+			block.nofdays = this.nofdays;
+			block.payday = this.payday;
+			block.parity = this.parity;
+			block.premium = this.premium;
+			block.berate = this.berate;
+			block.capt = this.capt;
+			block.gearing = this.gearing;
+			block.egearing = this.egearing;
+			block.price = this.price;
+			block.volume = this.volume;
+			block.diff = this.diff;
+
 		}
 	}
 
@@ -1043,6 +1077,33 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1958OutBlock1 block)
+		{
+			block.hname = this.hname;
+			block.item1 = this.item1;
+			block.issuernmk = this.issuernmk;
+			block.elwopt = this.elwopt;
+			block.elwtype = this.elwtype;
+			block.settletype = this.settletype;
+			block.elwexec = this.elwexec;
+			block.convrate = this.convrate;
+			block.listing = this.listing;
+			block.mmsdate = this.mmsdate;
+			block.lastdate = this.lastdate;
+			block.nofdays = this.nofdays;
+			block.payday = this.payday;
+			block.parity = this.parity;
+			block.premium = this.premium;
+			block.berate = this.berate;
+			block.capt = this.capt;
+			block.gearing = this.gearing;
+			block.egearing = this.egearing;
+			block.price = this.price;
+			block.volume = this.volume;
+			block.diff = this.diff;
+
+		}
 	}
 
 	public partial class XQt1958OutBlock2 : XingBlock
@@ -1509,6 +1570,33 @@ namespace XingAPINet
 			// diffcmp float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1958OutBlock2 block)
+		{
+			block.hnamecmp = this.hnamecmp;
+			block.item1cmp = this.item1cmp;
+			block.issuernmkcmp = this.issuernmkcmp;
+			block.elwoptcmp = this.elwoptcmp;
+			block.elwtypecmp = this.elwtypecmp;
+			block.settlecmp = this.settlecmp;
+			block.elwexeccmp = this.elwexeccmp;
+			block.convcmp = this.convcmp;
+			block.listingcmp = this.listingcmp;
+			block.mmsdatecmp = this.mmsdatecmp;
+			block.lastdatecmp = this.lastdatecmp;
+			block.nofdayscmp = this.nofdayscmp;
+			block.paydaycmp = this.paydaycmp;
+			block.paritycmp = this.paritycmp;
+			block.premiumcmp = this.premiumcmp;
+			block.beratecmp = this.beratecmp;
+			block.captcmp = this.captcmp;
+			block.gearingcmp = this.gearingcmp;
+			block.egearingcmp = this.egearingcmp;
+			block.pricecmp = this.pricecmp;
+			block.volumecmp = this.volumecmp;
+			block.diffcmp = this.diffcmp;
+
 		}
 	}
 

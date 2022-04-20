@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt0167InBlock block)
+		{
+			block.id = this.id;
+
+		}
 	}
 
 	public partial class XQt0167OutBlock : XingBlock
@@ -219,6 +225,13 @@ namespace XingAPINet
 			if (time?.Length > 12) return false; // char 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt0167OutBlock block)
+		{
+			block.dt = this.dt;
+			block.time = this.time;
+
 		}
 	}
 

@@ -205,6 +205,19 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1701InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.gubun = this.gubun;
+			block.fromdt = this.fromdt;
+			block.todt = this.todt;
+			block.prapp = this.prapp;
+			block.prgubun = this.prgubun;
+			block.orggubun = this.orggubun;
+			block.frggubun = this.frggubun;
+
+		}
 	}
 
 	public partial class XQt1701OutBlock : XingBlock
@@ -539,6 +552,25 @@ namespace XingAPINet
 			// sjrate float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1701OutBlock block)
+		{
+			block.date = this.date;
+			block.close = this.close;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.psnvolume = this.psnvolume;
+			block.orgvolume = this.orgvolume;
+			block.frgvolume = this.frgvolume;
+			block.frgvolumesum = this.frgvolumesum;
+			block.pgmvolume = this.pgmvolume;
+			block.listing = this.listing;
+			block.listupdn = this.listupdn;
+			block.sjrate = this.sjrate;
+
 		}
 	}
 

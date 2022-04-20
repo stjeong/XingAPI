@@ -141,6 +141,15 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1717InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.gubun = this.gubun;
+			block.fromdt = this.fromdt;
+			block.todt = this.todt;
+
+		}
 	}
 
 	public partial class XQt1717OutBlock : XingBlock
@@ -849,6 +858,47 @@ namespace XingAPINet
 			if (tjj0017_dan.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1717OutBlock block)
+		{
+			block.date = this.date;
+			block.close = this.close;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.tjj0000_vol = this.tjj0000_vol;
+			block.tjj0001_vol = this.tjj0001_vol;
+			block.tjj0002_vol = this.tjj0002_vol;
+			block.tjj0003_vol = this.tjj0003_vol;
+			block.tjj0004_vol = this.tjj0004_vol;
+			block.tjj0005_vol = this.tjj0005_vol;
+			block.tjj0006_vol = this.tjj0006_vol;
+			block.tjj0007_vol = this.tjj0007_vol;
+			block.tjj0008_vol = this.tjj0008_vol;
+			block.tjj0009_vol = this.tjj0009_vol;
+			block.tjj0010_vol = this.tjj0010_vol;
+			block.tjj0011_vol = this.tjj0011_vol;
+			block.tjj0018_vol = this.tjj0018_vol;
+			block.tjj0016_vol = this.tjj0016_vol;
+			block.tjj0017_vol = this.tjj0017_vol;
+			block.tjj0000_dan = this.tjj0000_dan;
+			block.tjj0001_dan = this.tjj0001_dan;
+			block.tjj0002_dan = this.tjj0002_dan;
+			block.tjj0003_dan = this.tjj0003_dan;
+			block.tjj0004_dan = this.tjj0004_dan;
+			block.tjj0005_dan = this.tjj0005_dan;
+			block.tjj0006_dan = this.tjj0006_dan;
+			block.tjj0007_dan = this.tjj0007_dan;
+			block.tjj0008_dan = this.tjj0008_dan;
+			block.tjj0009_dan = this.tjj0009_dan;
+			block.tjj0010_dan = this.tjj0010_dan;
+			block.tjj0011_dan = this.tjj0011_dan;
+			block.tjj0018_dan = this.tjj0018_dan;
+			block.tjj0016_dan = this.tjj0016_dan;
+			block.tjj0017_dan = this.tjj0017_dan;
+
 		}
 	}
 

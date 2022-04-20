@@ -73,6 +73,11 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRH01InBlock block)
+		{
+
+		}
 	}
 
 	public partial class XRH01OutBlock : XingBlock
@@ -941,6 +946,57 @@ namespace XingAPINet
 			// prgordde char 1
 
 			return true;
+		}
+
+		public void CopyTo(XRH01OutBlock block)
+		{
+			block.lineseq = this.lineseq;
+			block.accno = this.accno;
+			block.user = this.user;
+			block.seq = this.seq;
+			block.trcode = this.trcode;
+			block.megrpno = this.megrpno;
+			block.boardid = this.boardid;
+			block.memberno = this.memberno;
+			block.bpno = this.bpno;
+			block.ordno = this.ordno;
+			block.orgordno = this.orgordno;
+			block.expcode = this.expcode;
+			block.dosugb = this.dosugb;
+			block.mocagb = this.mocagb;
+			block.accno1 = this.accno1;
+			block.qty2 = this.qty2;
+			block.price = this.price;
+			block.ordgb = this.ordgb;
+			block.hogagb = this.hogagb;
+			block.sihogagb = this.sihogagb;
+			block.tradid = this.tradid;
+			block.treacode = this.treacode;
+			block.askcode = this.askcode;
+			block.creditcode = this.creditcode;
+			block.jakigb = this.jakigb;
+			block.trustnum = this.trustnum;
+			block.ptgb = this.ptgb;
+			block.substonum = this.substonum;
+			block.accgb = this.accgb;
+			block.accmarggb = this.accmarggb;
+			block.nationcode = this.nationcode;
+			block.investgb = this.investgb;
+			block.forecode = this.forecode;
+			block.medcode = this.medcode;
+			block.ordid = this.ordid;
+			block.macid = this.macid;
+			block.orddate = this.orddate;
+			block.rcvtime = this.rcvtime;
+			block.mem_filler = this.mem_filler;
+			block.mem_accno = this.mem_accno;
+			block.mem_filler1 = this.mem_filler1;
+			block.ordacpttm = this.ordacpttm;
+			block.qty = this.qty;
+			block.autogb = this.autogb;
+			block.rejcode = this.rejcode;
+			block.prgordde = this.prgordde;
+
 		}
 	}
 

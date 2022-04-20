@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1305InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.dwmcode = this.dwmcode;
+			block.date = this.date;
+			block.idx = this.idx;
+			block.cnt = this.cnt;
+
+		}
 	}
 
 	public partial class XQt1305OutBlock : XingBlock
@@ -300,6 +310,14 @@ namespace XingAPINet
 			if (idx.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1305OutBlock block)
+		{
+			block.cnt = this.cnt;
+			block.date = this.date;
+			block.idx = this.idx;
+
 		}
 	}
 
@@ -873,6 +891,39 @@ namespace XingAPINet
 			if (marketcap.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1305OutBlock1 block)
+		{
+			block.date = this.date;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.close = this.close;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.diff_vol = this.diff_vol;
+			block.chdegree = this.chdegree;
+			block.sojinrate = this.sojinrate;
+			block.changerate = this.changerate;
+			block.fpvolume = this.fpvolume;
+			block.covolume = this.covolume;
+			block.shcode = this.shcode;
+			block.value = this.value;
+			block.ppvolume = this.ppvolume;
+			block.o_sign = this.o_sign;
+			block.o_change = this.o_change;
+			block.o_diff = this.o_diff;
+			block.h_sign = this.h_sign;
+			block.h_change = this.h_change;
+			block.h_diff = this.h_diff;
+			block.l_sign = this.l_sign;
+			block.l_change = this.l_change;
+			block.l_diff = this.l_diff;
+			block.marketcap = this.marketcap;
+
 		}
 	}
 

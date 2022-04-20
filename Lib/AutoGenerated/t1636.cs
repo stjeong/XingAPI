@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1636InBlock block)
+		{
+			block.gubun = this.gubun;
+			block.gubun1 = this.gubun1;
+			block.gubun2 = this.gubun2;
+			block.shcode = this.shcode;
+			block.cts_idx = this.cts_idx;
+
+		}
 	}
 
 	public partial class XQt1636OutBlock : XingBlock
@@ -266,6 +276,12 @@ namespace XingAPINet
 			if (cts_idx.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1636OutBlock block)
+		{
+			block.cts_idx = this.cts_idx;
+
 		}
 	}
 
@@ -635,6 +651,27 @@ namespace XingAPINet
 			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XQt1636OutBlock1 block)
+		{
+			block.rank = this.rank;
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.svalue = this.svalue;
+			block.offervalue = this.offervalue;
+			block.stksvalue = this.stksvalue;
+			block.svolume = this.svolume;
+			block.offervolume = this.offervolume;
+			block.stksvolume = this.stksvolume;
+			block.sgta = this.sgta;
+			block.rate = this.rate;
+			block.shcode = this.shcode;
+
 		}
 	}
 

@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1410InBlock block)
+		{
+			block.gubun = this.gubun;
+			block.cts_shcode = this.cts_shcode;
+
+		}
 	}
 
 	public partial class XQt1410OutBlock : XingBlock
@@ -218,6 +225,12 @@ namespace XingAPINet
 			if (cts_shcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XQt1410OutBlock block)
+		{
+			block.cts_shcode = this.cts_shcode;
+
 		}
 	}
 
@@ -434,6 +447,18 @@ namespace XingAPINet
 			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XQt1410OutBlock1 block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.shcode = this.shcode;
+
 		}
 	}
 

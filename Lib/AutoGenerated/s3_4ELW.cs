@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRs3_InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRs3_OutBlock : XingBlock
@@ -672,6 +678,40 @@ namespace XingAPINet
 			if (lpvolume.ToString().Length > 15) return false; // long 15
 
 			return true;
+		}
+
+		public void CopyTo(XRs3_OutBlock block)
+		{
+			block.chetime = this.chetime;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.drate = this.drate;
+			block.price = this.price;
+			block.opentime = this.opentime;
+			block.open = this.open;
+			block.hightime = this.hightime;
+			block.high = this.high;
+			block.lowtime = this.lowtime;
+			block.low = this.low;
+			block.cgubun = this.cgubun;
+			block.cvolume = this.cvolume;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.mdvolume = this.mdvolume;
+			block.mdchecnt = this.mdchecnt;
+			block.msvolume = this.msvolume;
+			block.mschecnt = this.mschecnt;
+			block.cpower = this.cpower;
+			block.w_avrg = this.w_avrg;
+			block.offerho = this.offerho;
+			block.bidho = this.bidho;
+			block.status = this.status;
+			block.jnilvolume = this.jnilvolume;
+			block.premium = this.premium;
+			block.moneyness = this.moneyness;
+			block.shcode = this.shcode;
+			block.lpvolume = this.lpvolume;
+
 		}
 	}
 

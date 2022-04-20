@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRNWSInBlock block)
+		{
+			block.nwcode = this.nwcode;
+
+		}
 	}
 
 	public partial class XRNWSOutBlock : XingBlock
@@ -298,6 +304,18 @@ namespace XingAPINet
 			if (bodysize.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XRNWSOutBlock block)
+		{
+			block.date = this.date;
+			block.time = this.time;
+			block.id = this.id;
+			block.realkey = this.realkey;
+			block.title = this.title;
+			block.code = this.code;
+			block.bodysize = this.bodysize;
+
 		}
 	}
 

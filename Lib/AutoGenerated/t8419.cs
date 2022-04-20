@@ -189,6 +189,18 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8419InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.gubun = this.gubun;
+			block.qrycnt = this.qrycnt;
+			block.sdate = this.sdate;
+			block.edate = this.edate;
+			block.cts_date = this.cts_date;
+			block.comp_yn = this.comp_yn;
+
+		}
 	}
 
 	public partial class XQt8419OutBlock : XingBlock
@@ -554,6 +566,27 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8419OutBlock block)
+		{
+			block.shcode = this.shcode;
+			block.jisiga = this.jisiga;
+			block.jihigh = this.jihigh;
+			block.jilow = this.jilow;
+			block.jiclose = this.jiclose;
+			block.jivolume = this.jivolume;
+			block.disiga = this.disiga;
+			block.dihigh = this.dihigh;
+			block.dilow = this.dilow;
+			block.diclose = this.diclose;
+			block.disvalue = this.disvalue;
+			block.cts_date = this.cts_date;
+			block.s_time = this.s_time;
+			block.e_time = this.e_time;
+			block.dshmin = this.dshmin;
+			block.rec_count = this.rec_count;
+
+		}
 	}
 
 	public partial class XQt8419OutBlock1 : XingBlock
@@ -769,6 +802,18 @@ namespace XingAPINet
 			if (value.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt8419OutBlock1 block)
+		{
+			block.date = this.date;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.close = this.close;
+			block.jdiff_vol = this.jdiff_vol;
+			block.value = this.value;
+
 		}
 	}
 

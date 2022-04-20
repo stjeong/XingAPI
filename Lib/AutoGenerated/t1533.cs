@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1533InBlock block)
+		{
+			block.gubun = this.gubun;
+			block.chgdate = this.chgdate;
+
+		}
 	}
 
 	public partial class XQt1533OutBlock : XingBlock
@@ -218,6 +225,12 @@ namespace XingAPINet
 			if (bdate?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt1533OutBlock block)
+		{
+			block.bdate = this.bdate;
+
 		}
 	}
 
@@ -468,6 +481,20 @@ namespace XingAPINet
 			if (tmcode?.Length > 4) return false; // char 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1533OutBlock1 block)
+		{
+			block.tmname = this.tmname;
+			block.totcnt = this.totcnt;
+			block.upcnt = this.upcnt;
+			block.dncnt = this.dncnt;
+			block.uprate = this.uprate;
+			block.diff_vol = this.diff_vol;
+			block.avgdiff = this.avgdiff;
+			block.chgdiff = this.chgdiff;
+			block.tmcode = this.tmcode;
+
 		}
 	}
 

@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRESNInBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRESNOutBlock : XingBlock
@@ -451,6 +457,27 @@ namespace XingAPINet
 			// lp_impv float 5.2
 
 			return true;
+		}
+
+		public void CopyTo(XRESNOutBlock block)
+		{
+			block.time = this.time;
+			block.theoryprice = this.theoryprice;
+			block.delt = this.delt;
+			block.gama = this.gama;
+			block.ceta = this.ceta;
+			block.vega = this.vega;
+			block.rhox = this.rhox;
+			block.impv = this.impv;
+			block.egearing = this.egearing;
+			block.shcode = this.shcode;
+			block.elwclose = this.elwclose;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.date = this.date;
+			block.tickvalue = this.tickvalue;
+			block.lp_impv = this.lp_impv;
+
 		}
 	}
 

@@ -237,6 +237,21 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCEXAQ21200InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QryTp = this.QryTp;
+			block.OrdAmt = this.OrdAmt;
+			block.RatVal = this.RatVal;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.BnsTpCode = this.BnsTpCode;
+			block.OrdPrc = this.OrdPrc;
+			block.ErxPrcCndiTpCode = this.ErxPrcCndiTpCode;
+
+		}
 	}
 
 	public partial class XQCEXAQ21200OutBlock1 : XingBlock
@@ -499,6 +514,21 @@ namespace XingAPINet
 			// ErxPrcCndiTpCode char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQCEXAQ21200OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.QryTp = this.QryTp;
+			block.OrdAmt = this.OrdAmt;
+			block.RatVal = this.RatVal;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.BnsTpCode = this.BnsTpCode;
+			block.OrdPrc = this.OrdPrc;
+			block.ErxPrcCndiTpCode = this.ErxPrcCndiTpCode;
+
 		}
 	}
 
@@ -779,6 +809,22 @@ namespace XingAPINet
 			if (MnyOrdAbleAmt.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCEXAQ21200OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.QryDt = this.QryDt;
+			block.NowPrc = this.NowPrc;
+			block.OrdAbleQty = this.OrdAbleQty;
+			block.NewOrdAbleQty = this.NewOrdAbleQty;
+			block.LqdtOrdAbleQty = this.LqdtOrdAbleQty;
+			block.UsePreargMgn = this.UsePreargMgn;
+			block.UsePreargMnyMgn = this.UsePreargMnyMgn;
+			block.OrdAbleAmt = this.OrdAbleAmt;
+			block.MnyOrdAbleAmt = this.MnyOrdAbleAmt;
+
 		}
 	}
 

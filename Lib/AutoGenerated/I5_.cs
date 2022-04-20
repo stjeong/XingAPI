@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRI5_InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRI5_OutBlock : XingBlock
@@ -417,6 +423,25 @@ namespace XingAPINet
 			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XRI5_OutBlock block)
+		{
+			block.time = this.time;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.volume = this.volume;
+			block.navdiff = this.navdiff;
+			block.nav = this.nav;
+			block.navchange = this.navchange;
+			block.crate = this.crate;
+			block.grate = this.grate;
+			block.jisu = this.jisu;
+			block.jichange = this.jichange;
+			block.jirate = this.jirate;
+			block.shcode = this.shcode;
+
 		}
 	}
 

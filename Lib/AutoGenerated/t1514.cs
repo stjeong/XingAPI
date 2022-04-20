@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1514InBlock block)
+		{
+			block.upcode = this.upcode;
+			block.gubun1 = this.gubun1;
+			block.gubun2 = this.gubun2;
+			block.cts_date = this.cts_date;
+			block.cnt = this.cnt;
+			block.rate_gbn = this.rate_gbn;
+
+		}
 	}
 
 	public partial class XQt1514OutBlock : XingBlock
@@ -282,6 +293,12 @@ namespace XingAPINet
 			if (cts_date?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQt1514OutBlock block)
+		{
+			block.cts_date = this.cts_date;
+
 		}
 	}
 
@@ -787,6 +804,35 @@ namespace XingAPINet
 			// divrate float 7.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1514OutBlock1 block)
+		{
+			block.date = this.date;
+			block.jisu = this.jisu;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.diff_vol = this.diff_vol;
+			block.value1 = this.value1;
+			block.high = this.high;
+			block.unchg = this.unchg;
+			block.low = this.low;
+			block.uprate = this.uprate;
+			block.frgsvolume = this.frgsvolume;
+			block.openjisu = this.openjisu;
+			block.highjisu = this.highjisu;
+			block.lowjisu = this.lowjisu;
+			block.value2 = this.value2;
+			block.up = this.up;
+			block.down = this.down;
+			block.totjo = this.totjo;
+			block.orgsvolume = this.orgsvolume;
+			block.upcode = this.upcode;
+			block.rate = this.rate;
+			block.divrate = this.divrate;
+
 		}
 	}
 

@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1640InBlock block)
+		{
+			block.gubun = this.gubun;
+
+		}
 	}
 
 	public partial class XQt1640OutBlock : XingBlock
@@ -406,6 +412,24 @@ namespace XingAPINet
 			// sunvaldiff double 12.0
 
 			return true;
+		}
+
+		public void CopyTo(XQt1640OutBlock block)
+		{
+			block.offervolume = this.offervolume;
+			block.bidvolume = this.bidvolume;
+			block.volume = this.volume;
+			block.offerdiff = this.offerdiff;
+			block.biddiff = this.biddiff;
+			block.sundiff = this.sundiff;
+			block.basis = this.basis;
+			block.offervalue = this.offervalue;
+			block.bidvalue = this.bidvalue;
+			block.value = this.value;
+			block.offervaldiff = this.offervaldiff;
+			block.bidvaldiff = this.bidvaldiff;
+			block.sunvaldiff = this.sunvaldiff;
+
 		}
 	}
 

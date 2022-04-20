@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1959InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt1959OutBlock1 : XingBlock
@@ -495,6 +501,29 @@ namespace XingAPINet
 			// lp_spread float 5.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1959OutBlock1 block)
+		{
+			block.shcode = this.shcode;
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.rate = this.rate;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.lp_gb = this.lp_gb;
+			block.lp_mem_nm1 = this.lp_mem_nm1;
+			block.lp_mem_nm2 = this.lp_mem_nm2;
+			block.lp_mem_nm3 = this.lp_mem_nm3;
+			block.lp_mem_nm4 = this.lp_mem_nm4;
+			block.lp_mem_nm5 = this.lp_mem_nm5;
+			block.lp_min_qty = this.lp_min_qty;
+			block.lp_st_date = this.lp_st_date;
+			block.lp_end_date = this.lp_end_date;
+			block.lp_spread = this.lp_spread;
+
 		}
 	}
 

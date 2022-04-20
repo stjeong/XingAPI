@@ -73,6 +73,11 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRSC0InBlock block)
+		{
+
+		}
 	}
 
 	public partial class XRSC0OutBlock : XingBlock
@@ -2080,6 +2085,124 @@ namespace XingAPINet
 			if (ruseableamt.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XRSC0OutBlock block)
+		{
+			block.lineseq = this.lineseq;
+			block.accno = this.accno;
+			block.user = this.user;
+			block.len = this.len;
+			block.gubun = this.gubun;
+			block.compress = this.compress;
+			block.encrypt = this.encrypt;
+			block.offset = this.offset;
+			block.trcode = this.trcode;
+			block.compid = this.compid;
+			block.userid = this.userid;
+			block.media = this.media;
+			block.ifid = this.ifid;
+			block.seq = this.seq;
+			block.trid = this.trid;
+			block.pubip = this.pubip;
+			block.prvip = this.prvip;
+			block.pcbpno = this.pcbpno;
+			block.bpno = this.bpno;
+			block.termno = this.termno;
+			block.lang = this.lang;
+			block.proctm = this.proctm;
+			block.msgcode = this.msgcode;
+			block.outgu = this.outgu;
+			block.compreq = this.compreq;
+			block.funckey = this.funckey;
+			block.reqcnt = this.reqcnt;
+			block.filler = this.filler;
+			block.cont = this.cont;
+			block.contkey = this.contkey;
+			block.varlen = this.varlen;
+			block.varhdlen = this.varhdlen;
+			block.varmsglen = this.varmsglen;
+			block.trsrc = this.trsrc;
+			block.eventid = this.eventid;
+			block.ifinfo = this.ifinfo;
+			block.filler1 = this.filler1;
+			block.ordchegb = this.ordchegb;
+			block.marketgb = this.marketgb;
+			block.ordgb = this.ordgb;
+			block.orgordno = this.orgordno;
+			block.accno1 = this.accno1;
+			block.accno2 = this.accno2;
+			block.passwd = this.passwd;
+			block.expcode = this.expcode;
+			block.shtcode = this.shtcode;
+			block.hname = this.hname;
+			block.ordqty = this.ordqty;
+			block.ordprice = this.ordprice;
+			block.hogagb = this.hogagb;
+			block.etfhogagb = this.etfhogagb;
+			block.pgmtype = this.pgmtype;
+			block.gmhogagb = this.gmhogagb;
+			block.gmhogayn = this.gmhogayn;
+			block.singb = this.singb;
+			block.loandt = this.loandt;
+			block.cvrgordtp = this.cvrgordtp;
+			block.strtgcode = this.strtgcode;
+			block.groupid = this.groupid;
+			block.ordseqno = this.ordseqno;
+			block.prtno = this.prtno;
+			block.basketno = this.basketno;
+			block.trchno = this.trchno;
+			block.itemno = this.itemno;
+			block.brwmgmyn = this.brwmgmyn;
+			block.mbrno = this.mbrno;
+			block.procgb = this.procgb;
+			block.admbrchno = this.admbrchno;
+			block.futaccno = this.futaccno;
+			block.futmarketgb = this.futmarketgb;
+			block.tongsingb = this.tongsingb;
+			block.lpgb = this.lpgb;
+			block.dummy = this.dummy;
+			block.ordno = this.ordno;
+			block.ordtm = this.ordtm;
+			block.prntordno = this.prntordno;
+			block.mgempno = this.mgempno;
+			block.orgordundrqty = this.orgordundrqty;
+			block.orgordmdfyqty = this.orgordmdfyqty;
+			block.ordordcancelqty = this.ordordcancelqty;
+			block.nmcpysndno = this.nmcpysndno;
+			block.ordamt = this.ordamt;
+			block.bnstp = this.bnstp;
+			block.spareordno = this.spareordno;
+			block.cvrgseqno = this.cvrgseqno;
+			block.rsvordno = this.rsvordno;
+			block.mtordseqno = this.mtordseqno;
+			block.spareordqty = this.spareordqty;
+			block.orduserid = this.orduserid;
+			block.spotordqty = this.spotordqty;
+			block.ordruseqty = this.ordruseqty;
+			block.mnyordamt = this.mnyordamt;
+			block.ordsubstamt = this.ordsubstamt;
+			block.ruseordamt = this.ruseordamt;
+			block.ordcmsnamt = this.ordcmsnamt;
+			block.crdtuseamt = this.crdtuseamt;
+			block.secbalqty = this.secbalqty;
+			block.spotordableqty = this.spotordableqty;
+			block.ordableruseqty = this.ordableruseqty;
+			block.flctqty = this.flctqty;
+			block.secbalqtyd2 = this.secbalqtyd2;
+			block.sellableqty = this.sellableqty;
+			block.unercsellordqty = this.unercsellordqty;
+			block.avrpchsprc = this.avrpchsprc;
+			block.pchsamt = this.pchsamt;
+			block.deposit = this.deposit;
+			block.substamt = this.substamt;
+			block.csgnmnymgn = this.csgnmnymgn;
+			block.csgnsubstmgn = this.csgnsubstmgn;
+			block.crdtpldgruseamt = this.crdtpldgruseamt;
+			block.ordablemny = this.ordablemny;
+			block.ordablesubstamt = this.ordablesubstamt;
+			block.ruseableamt = this.ruseableamt;
+
 		}
 	}
 

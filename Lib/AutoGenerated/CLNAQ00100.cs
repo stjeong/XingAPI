@@ -173,6 +173,17 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCLNAQ00100InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.QryTp = this.QryTp;
+			block.IsuNo = this.IsuNo;
+			block.SecTpCode = this.SecTpCode;
+			block.LoanIntrstGrdCode = this.LoanIntrstGrdCode;
+			block.LoanTp = this.LoanTp;
+
+		}
 	}
 
 	public partial class XQCLNAQ00100OutBlock1 : XingBlock
@@ -367,6 +378,17 @@ namespace XingAPINet
 			// LoanTp char 1
 
 			return true;
+		}
+
+		public void CopyTo(XQCLNAQ00100OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.QryTp = this.QryTp;
+			block.IsuNo = this.IsuNo;
+			block.SecTpCode = this.SecTpCode;
+			block.LoanIntrstGrdCode = this.LoanIntrstGrdCode;
+			block.LoanTp = this.LoanTp;
+
 		}
 	}
 
@@ -822,6 +844,32 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCLNAQ00100OutBlock2 block)
+		{
+			block.IsuNo = this.IsuNo;
+			block.IsuNm = this.IsuNm;
+			block.Parprc = this.Parprc;
+			block.PrdayCprc = this.PrdayCprc;
+			block.RatVal = this.RatVal;
+			block.SubstPrc = this.SubstPrc;
+			block.RegTpNm = this.RegTpNm;
+			block.SpotMgnLevyClssNm = this.SpotMgnLevyClssNm;
+			block.FnoTrdStopRsnCnts = this.FnoTrdStopRsnCnts;
+			block.DgrsPtnNm = this.DgrsPtnNm;
+			block.AcdPtnNm = this.AcdPtnNm;
+			block.MktTpNm = this.MktTpNm;
+			block.LmtVal = this.LmtVal;
+			block.AcntLmtVal = this.AcntLmtVal;
+			block.LoanGrdCode = this.LoanGrdCode;
+			block.LoanAmt = this.LoanAmt;
+			block.LoanAbleRat = this.LoanAbleRat;
+			block.LoanIntrat1 = this.LoanIntrat1;
+			block.RegPsnId = this.RegPsnId;
+			block.Rat01 = this.Rat01;
+			block.Rat02 = this.Rat02;
+
+		}
 	}
 
 	public partial class XQCLNAQ00100OutBlock3 : XingBlock
@@ -948,6 +996,13 @@ namespace XingAPINet
 			if (LrgMnyoutSumAmt.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCLNAQ00100OutBlock3 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.LrgMnyoutSumAmt = this.LrgMnyoutSumAmt;
+
 		}
 	}
 

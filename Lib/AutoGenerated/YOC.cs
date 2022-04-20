@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRYOCInBlock block)
+		{
+			block.optcode = this.optcode;
+
+		}
 	}
 
 	public partial class XRYOCOutBlock : XingBlock
@@ -281,6 +287,17 @@ namespace XingAPINet
 			if (optcode?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XRYOCOutBlock block)
+		{
+			block.ychetime = this.ychetime;
+			block.yeprice = this.yeprice;
+			block.jnilysign = this.jnilysign;
+			block.preychange = this.preychange;
+			block.jnilydrate = this.jnilydrate;
+			block.optcode = this.optcode;
+
 		}
 	}
 

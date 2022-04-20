@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCFOAT00300InBlock1 block)
+		{
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.OrgOrdNo = this.OrgOrdNo;
+			block.CancQty = this.CancQty;
+
+		}
 	}
 
 	public partial class XQCFOAT00300OutBlock1 : XingBlock
@@ -590,6 +600,31 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCFOAT00300OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.OrdMktCode = this.OrdMktCode;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.FnoOrdPtnCode = this.FnoOrdPtnCode;
+			block.OrgOrdNo = this.OrgOrdNo;
+			block.CancQty = this.CancQty;
+			block.CommdaCode = this.CommdaCode;
+			block.DscusBnsCmpltTime = this.DscusBnsCmpltTime;
+			block.GrpId = this.GrpId;
+			block.OrdSeqno = this.OrdSeqno;
+			block.PtflNo = this.PtflNo;
+			block.BskNo = this.BskNo;
+			block.TrchNo = this.TrchNo;
+			block.ItemNo = this.ItemNo;
+			block.MgempNo = this.MgempNo;
+			block.FundId = this.FundId;
+			block.FundOrgOrdNo = this.FundOrgOrdNo;
+			block.FundOrdNo = this.FundOrdNo;
+
+		}
 	}
 
 	public partial class XQCFOAT00300OutBlock2 : XingBlock
@@ -852,6 +887,21 @@ namespace XingAPINet
 			if (OrdAbleQty.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCFOAT00300OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.OrdNo = this.OrdNo;
+			block.BrnNm = this.BrnNm;
+			block.AcntNm = this.AcntNm;
+			block.IsuNm = this.IsuNm;
+			block.OrdAbleAmt = this.OrdAbleAmt;
+			block.MnyOrdAbleAmt = this.MnyOrdAbleAmt;
+			block.OrdMgn = this.OrdMgn;
+			block.MnyOrdMgn = this.MnyOrdMgn;
+			block.OrdAbleQty = this.OrdAbleQty;
+
 		}
 	}
 

@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1449InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.dategb = this.dategb;
+
+		}
 	}
 
 	public partial class XQt1449OutBlock : XingBlock
@@ -320,6 +327,18 @@ namespace XingAPINet
 			if (mdvolume.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1449OutBlock block)
+		{
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.msvolume = this.msvolume;
+			block.mdvolume = this.mdvolume;
+
 		}
 	}
 
@@ -570,6 +589,20 @@ namespace XingAPINet
 			// msdiff float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1449OutBlock1 block)
+		{
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.tickdiff = this.tickdiff;
+			block.cvolume = this.cvolume;
+			block.diff = this.diff;
+			block.mdvolume = this.mdvolume;
+			block.msvolume = this.msvolume;
+			block.msdiff = this.msdiff;
+
 		}
 	}
 

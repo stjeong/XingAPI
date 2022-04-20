@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRS4_InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XRS4_OutBlock : XingBlock
@@ -366,6 +372,22 @@ namespace XingAPINet
 			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XRS4_OutBlock block)
+		{
+			block.sign = this.sign;
+			block.change = this.change;
+			block.drate = this.drate;
+			block.price = this.price;
+			block.opentime = this.opentime;
+			block.open = this.open;
+			block.hightime = this.hightime;
+			block.high = this.high;
+			block.lowtime = this.lowtime;
+			block.low = this.low;
+			block.shcode = this.shcode;
+
 		}
 	}
 

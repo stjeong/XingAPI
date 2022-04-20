@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRJIFInBlock block)
+		{
+			block.jangubun = this.jangubun;
+
+		}
 	}
 
 	public partial class XRJIFOutBlock : XingBlock
@@ -213,6 +219,13 @@ namespace XingAPINet
 			if (jstatus?.Length > 2) return false; // char 2
 
 			return true;
+		}
+
+		public void CopyTo(XRJIFOutBlock block)
+		{
+			block.jangubun = this.jangubun;
+			block.jstatus = this.jstatus;
+
 		}
 	}
 

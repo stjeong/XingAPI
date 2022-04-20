@@ -125,6 +125,14 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1638InBlock block)
+		{
+			block.gubun1 = this.gubun1;
+			block.shcode = this.shcode;
+			block.gubun2 = this.gubun2;
+
+		}
 	}
 
 	public partial class XQt1638OutBlock : XingBlock
@@ -459,6 +467,25 @@ namespace XingAPINet
 			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XQt1638OutBlock block)
+		{
+			block.rank = this.rank;
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.sigatotrt = this.sigatotrt;
+			block.obuyvol = this.obuyvol;
+			block.buyrem = this.buyrem;
+			block.psgvolume = this.psgvolume;
+			block.sellrem = this.sellrem;
+			block.pdgvolume = this.pdgvolume;
+			block.sigatot = this.sigatot;
+			block.shcode = this.shcode;
+
 		}
 	}
 

@@ -125,6 +125,14 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1662InBlock block)
+		{
+			block.gubun = this.gubun;
+			block.gubun1 = this.gubun1;
+			block.gubun3 = this.gubun3;
+
+		}
 	}
 
 	public partial class XQt1662OutBlock : XingBlock
@@ -476,6 +484,26 @@ namespace XingAPINet
 			if (volume.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt1662OutBlock block)
+		{
+			block.time = this.time;
+			block.k200jisu = this.k200jisu;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.k200basis = this.k200basis;
+			block.tot3 = this.tot3;
+			block.tot1 = this.tot1;
+			block.tot2 = this.tot2;
+			block.cha3 = this.cha3;
+			block.cha1 = this.cha1;
+			block.cha2 = this.cha2;
+			block.bcha3 = this.bcha3;
+			block.bcha1 = this.bcha1;
+			block.bcha2 = this.bcha2;
+			block.volume = this.volume;
+
 		}
 	}
 

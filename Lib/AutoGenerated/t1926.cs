@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1926InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt1926OutBlock : XingBlock
@@ -695,6 +701,41 @@ namespace XingAPINet
 			// dj20days float 9.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1926OutBlock block)
+		{
+			block.ynvolume = this.ynvolume;
+			block.ysvolume = this.ysvolume;
+			block.yjvolume = this.yjvolume;
+			block.yvchange = this.yvchange;
+			block.ygrate = this.ygrate;
+			block.yjrate = this.yjrate;
+			block.ynprice = this.ynprice;
+			block.ysprice = this.ysprice;
+			block.yjprice = this.yjprice;
+			block.yachange = this.yachange;
+			block.dnvolume = this.dnvolume;
+			block.dsvolume = this.dsvolume;
+			block.djvolume = this.djvolume;
+			block.dvchange = this.dvchange;
+			block.dgrate = this.dgrate;
+			block.djrate = this.djrate;
+			block.dnprice = this.dnprice;
+			block.dsprice = this.dsprice;
+			block.djprice = this.djprice;
+			block.dachange = this.dachange;
+			block.mmdate = this.mmdate;
+			block.close = this.close;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.pr5days = this.pr5days;
+			block.pr20days = this.pr20days;
+			block.yj5days = this.yj5days;
+			block.yj20days = this.yj20days;
+			block.dj5days = this.dj5days;
+			block.dj20days = this.dj20days;
+
 		}
 	}
 

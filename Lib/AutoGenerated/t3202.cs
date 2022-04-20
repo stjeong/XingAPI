@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt3202InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.date = this.date;
+
+		}
 	}
 
 	public partial class XQt3202OutBlock : XingBlock
@@ -324,6 +331,18 @@ namespace XingAPINet
 			if (upnm?.Length > 20) return false; // char 20
 
 			return true;
+		}
+
+		public void CopyTo(XQt3202OutBlock block)
+		{
+			block.recdt = this.recdt;
+			block.tableid = this.tableid;
+			block.upgu = this.upgu;
+			block.custno = this.custno;
+			block.custnm = this.custnm;
+			block.shcode = this.shcode;
+			block.upnm = this.upnm;
+
 		}
 	}
 

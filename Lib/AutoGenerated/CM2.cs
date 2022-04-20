@@ -73,6 +73,11 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XRCM2InBlock block)
+		{
+
+		}
 	}
 
 	public partial class XRCM2OutBlock : XingBlock
@@ -2182,6 +2187,130 @@ namespace XingAPINet
 			// avrprc_2 double 13.2
 
 			return true;
+		}
+
+		public void CopyTo(XRCM2OutBlock block)
+		{
+			block.lineseq = this.lineseq;
+			block.accno = this.accno;
+			block.user = this.user;
+			block.len = this.len;
+			block.gubun = this.gubun;
+			block.compress = this.compress;
+			block.encrypt = this.encrypt;
+			block.offset = this.offset;
+			block.trcode = this.trcode;
+			block.compid = this.compid;
+			block.userid = this.userid;
+			block.media = this.media;
+			block.ifid = this.ifid;
+			block.seq = this.seq;
+			block.trid = this.trid;
+			block.pubip = this.pubip;
+			block.prvip = this.prvip;
+			block.pcbpno = this.pcbpno;
+			block.bpno = this.bpno;
+			block.termno = this.termno;
+			block.lang = this.lang;
+			block.proctm = this.proctm;
+			block.msgcode = this.msgcode;
+			block.outgu = this.outgu;
+			block.compreq = this.compreq;
+			block.funckey = this.funckey;
+			block.reqcnt = this.reqcnt;
+			block.filler = this.filler;
+			block.cont = this.cont;
+			block.contkey = this.contkey;
+			block.varlen = this.varlen;
+			block.varhdlen = this.varhdlen;
+			block.varmsglen = this.varmsglen;
+			block.trsrc = this.trsrc;
+			block.eventid = this.eventid;
+			block.ifinfo = this.ifinfo;
+			block.filler1 = this.filler1;
+			block.trcode1 = this.trcode1;
+			block.firmno = this.firmno;
+			block.acntno = this.acntno;
+			block.acntno1 = this.acntno1;
+			block.acntnm = this.acntnm;
+			block.brnno = this.brnno;
+			block.ordmktcode = this.ordmktcode;
+			block.ordno1 = this.ordno1;
+			block.ordno = this.ordno;
+			block.orgordno1 = this.orgordno1;
+			block.orgordno = this.orgordno;
+			block.prntordno = this.prntordno;
+			block.prntordno1 = this.prntordno1;
+			block.isuno = this.isuno;
+			block.fnoIsuno = this.fnoIsuno;
+			block.fnoIsunm = this.fnoIsunm;
+			block.pdgrpcode = this.pdgrpcode;
+			block.fnoIsuptntp = this.fnoIsuptntp;
+			block.bnstp = this.bnstp;
+			block.mrctp = this.mrctp;
+			block.ordqty = this.ordqty;
+			block.hogatype = this.hogatype;
+			block.mmgb = this.mmgb;
+			block.ordprc = this.ordprc;
+			block.unercqty = this.unercqty;
+			block.commdacode = this.commdacode;
+			block.peeamtcode = this.peeamtcode;
+			block.mgempno = this.mgempno;
+			block.fnotrdunitamt = this.fnotrdunitamt;
+			block.trxtime = this.trxtime;
+			block.strtgcode = this.strtgcode;
+			block.grpId = this.grpId;
+			block.ordseqno = this.ordseqno;
+			block.ptflno = this.ptflno;
+			block.bskno = this.bskno;
+			block.trchno = this.trchno;
+			block.Itemno = this.Itemno;
+			block.userId = this.userId;
+			block.opdrtnno = this.opdrtnno;
+			block.rjtcode = this.rjtcode;
+			block.mrccnfqty = this.mrccnfqty;
+			block.orgordunercqty = this.orgordunercqty;
+			block.orgordmrcqty = this.orgordmrcqty;
+			block.ctrcttime = this.ctrcttime;
+			block.ctrctno = this.ctrctno;
+			block.execprc = this.execprc;
+			block.execqty = this.execqty;
+			block.newqty = this.newqty;
+			block.qdtqty = this.qdtqty;
+			block.lastqty = this.lastqty;
+			block.lallexecqty = this.lallexecqty;
+			block.allexecamt = this.allexecamt;
+			block.fnobalevaltp = this.fnobalevaltp;
+			block.bnsplamt = this.bnsplamt;
+			block.fnoIsuno1 = this.fnoIsuno1;
+			block.bnstp1 = this.bnstp1;
+			block.execprc1 = this.execprc1;
+			block.newqty1 = this.newqty1;
+			block.qdtqty1 = this.qdtqty1;
+			block.allexecamt1 = this.allexecamt1;
+			block.fnoIsuno2 = this.fnoIsuno2;
+			block.bnstp2 = this.bnstp2;
+			block.execprc2 = this.execprc2;
+			block.newqty2 = this.newqty2;
+			block.lqdtqty2 = this.lqdtqty2;
+			block.allexecamt2 = this.allexecamt2;
+			block.dps = this.dps;
+			block.ftsubtdsgnamt = this.ftsubtdsgnamt;
+			block.mgn = this.mgn;
+			block.mnymgn = this.mnymgn;
+			block.ordableamt = this.ordableamt;
+			block.mnyordableamt = this.mnyordableamt;
+			block.fnoIsuno_1 = this.fnoIsuno_1;
+			block.bnstp_1 = this.bnstp_1;
+			block.unsttqty_1 = this.unsttqty_1;
+			block.lqdtableqty_1 = this.lqdtableqty_1;
+			block.avrprc_1 = this.avrprc_1;
+			block.fnoIsuno_2 = this.fnoIsuno_2;
+			block.bnstp_2 = this.bnstp_2;
+			block.unsttqty_2 = this.unsttqty_2;
+			block.lqdtableqty_2 = this.lqdtableqty_2;
+			block.avrprc_2 = this.avrprc_2;
+
 		}
 	}
 

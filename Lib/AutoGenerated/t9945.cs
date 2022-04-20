@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt9945InBlock block)
+		{
+			block.gubun = this.gubun;
+
+		}
 	}
 
 	public partial class XQt9945OutBlock : XingBlock
@@ -274,6 +280,16 @@ namespace XingAPINet
 			if (filler?.Length > 5) return false; // char 5
 
 			return true;
+		}
+
+		public void CopyTo(XQt9945OutBlock block)
+		{
+			block.hname = this.hname;
+			block.shcode = this.shcode;
+			block.expcode = this.expcode;
+			block.etfchk = this.etfchk;
+			block.filler = this.filler;
+
 		}
 	}
 

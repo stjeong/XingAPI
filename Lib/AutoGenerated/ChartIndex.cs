@@ -285,6 +285,24 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQChartIndexInBlock block)
+		{
+			block.indexid = this.indexid;
+			block.indexname = this.indexname;
+			block.indexparam = this.indexparam;
+			block.market = this.market;
+			block.period = this.period;
+			block.shcode = this.shcode;
+			block.qrycnt = this.qrycnt;
+			block.ncnt = this.ncnt;
+			block.sdate = this.sdate;
+			block.edate = this.edate;
+			block.Isamend = this.Isamend;
+			block.Isgab = this.Isgab;
+			block.IsReal = this.IsReal;
+
+		}
 	}
 
 	public partial class XQChartIndexOutBlock : XingBlock
@@ -428,6 +446,14 @@ namespace XingAPINet
 			if (validdata_cnt.ToString().Length > 2) return false; // long 2
 
 			return true;
+		}
+
+		public void CopyTo(XQChartIndexOutBlock block)
+		{
+			block.indexid = this.indexid;
+			block.rec_cnt = this.rec_cnt;
+			block.validdata_cnt = this.validdata_cnt;
+
 		}
 	}
 
@@ -746,6 +772,24 @@ namespace XingAPINet
 			if (pos.ToString().Length > 8) return false; // long 8
 
 			return true;
+		}
+
+		public void CopyTo(XQChartIndexOutBlock1 block)
+		{
+			block.date = this.date;
+			block.time = this.time;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.close = this.close;
+			block.volume = this.volume;
+			block.value1 = this.value1;
+			block.value2 = this.value2;
+			block.value3 = this.value3;
+			block.value4 = this.value4;
+			block.value5 = this.value5;
+			block.pos = this.pos;
+
 		}
 	}
 

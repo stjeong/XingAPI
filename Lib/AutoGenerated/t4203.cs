@@ -237,6 +237,21 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt4203InBlock block)
+		{
+			block.shcode = this.shcode;
+			block.gubun = this.gubun;
+			block.ncnt = this.ncnt;
+			block.qrycnt = this.qrycnt;
+			block.tdgb = this.tdgb;
+			block.sdate = this.sdate;
+			block.edate = this.edate;
+			block.cts_date = this.cts_date;
+			block.cts_time = this.cts_time;
+			block.cts_daygb = this.cts_daygb;
+
+		}
 	}
 
 	public partial class XQt4203OutBlock : XingBlock
@@ -568,6 +583,25 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt4203OutBlock block)
+		{
+			block.shcode = this.shcode;
+			block.jisiga = this.jisiga;
+			block.jihigh = this.jihigh;
+			block.jilow = this.jilow;
+			block.jiclose = this.jiclose;
+			block.jivolume = this.jivolume;
+			block.disiga = this.disiga;
+			block.dihigh = this.dihigh;
+			block.dilow = this.dilow;
+			block.diclose = this.diclose;
+			block.disvalue = this.disvalue;
+			block.cts_date = this.cts_date;
+			block.cts_time = this.cts_time;
+			block.cts_daygb = this.cts_daygb;
+
+		}
 	}
 
 	public partial class XQt4203OutBlock1 : XingBlock
@@ -800,6 +834,19 @@ namespace XingAPINet
 			if (value.ToString().Length > 12) return false; // long 12
 
 			return true;
+		}
+
+		public void CopyTo(XQt4203OutBlock1 block)
+		{
+			block.date = this.date;
+			block.time = this.time;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.close = this.close;
+			block.jdiff_vol = this.jdiff_vol;
+			block.value = this.value;
+
 		}
 	}
 

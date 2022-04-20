@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt2101InBlock block)
+		{
+			block.focode = this.focode;
+
+		}
 	}
 
 	public partial class XQt2101OutBlock : XingBlock
@@ -1358,6 +1364,80 @@ namespace XingAPINet
 			// dnlmtprice_3rd float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt2101OutBlock block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.jnilclose = this.jnilclose;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.value = this.value;
+			block.mgjv = this.mgjv;
+			block.mgjvdiff = this.mgjvdiff;
+			block.open = this.open;
+			block.high = this.high;
+			block.low = this.low;
+			block.uplmtprice = this.uplmtprice;
+			block.dnlmtprice = this.dnlmtprice;
+			block.high52w = this.high52w;
+			block.low52w = this.low52w;
+			block.basis = this.basis;
+			block.recprice = this.recprice;
+			block.theoryprice = this.theoryprice;
+			block.glyl = this.glyl;
+			block.cbhprice = this.cbhprice;
+			block.cblprice = this.cblprice;
+			block.lastmonth = this.lastmonth;
+			block.jandatecnt = this.jandatecnt;
+			block.pricejisu = this.pricejisu;
+			block.jisusign = this.jisusign;
+			block.jisuchange = this.jisuchange;
+			block.jisudiff = this.jisudiff;
+			block.kospijisu = this.kospijisu;
+			block.kospisign = this.kospisign;
+			block.kospichange = this.kospichange;
+			block.kospidiff = this.kospidiff;
+			block.listhprice = this.listhprice;
+			block.listlprice = this.listlprice;
+			block.delt = this.delt;
+			block.gama = this.gama;
+			block.ceta = this.ceta;
+			block.vega = this.vega;
+			block.rhox = this.rhox;
+			block.gmprice = this.gmprice;
+			block.gmsign = this.gmsign;
+			block.gmchange = this.gmchange;
+			block.gmdiff = this.gmdiff;
+			block.theorypriceg = this.theorypriceg;
+			block.histimpv = this.histimpv;
+			block.impv = this.impv;
+			block.sbasis = this.sbasis;
+			block.ibasis = this.ibasis;
+			block.gmfutcode = this.gmfutcode;
+			block.actprice = this.actprice;
+			block.greeks_time = this.greeks_time;
+			block.greeks_confirm = this.greeks_confirm;
+			block.danhochk = this.danhochk;
+			block.yeprice = this.yeprice;
+			block.jnilysign = this.jnilysign;
+			block.jnilychange = this.jnilychange;
+			block.jnilydrate = this.jnilydrate;
+			block.alloc_gubun = this.alloc_gubun;
+			block.bjandatecnt = this.bjandatecnt;
+			block.focode = this.focode;
+			block.dy_gubun = this.dy_gubun;
+			block.dy_uplmtprice = this.dy_uplmtprice;
+			block.dy_dnlmtprice = this.dy_dnlmtprice;
+			block.updnstep_gubun = this.updnstep_gubun;
+			block.upstep = this.upstep;
+			block.dnstep = this.dnstep;
+			block.uplmtprice_3rd = this.uplmtprice_3rd;
+			block.dnlmtprice_3rd = this.dnlmtprice_3rd;
+
 		}
 	}
 

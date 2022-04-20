@@ -141,6 +141,15 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt3341InBlock block)
+		{
+			block.gubun = this.gubun;
+			block.gubun1 = this.gubun1;
+			block.gubun2 = this.gubun2;
+			block.idx = this.idx;
+
+		}
 	}
 
 	public partial class XQt3341OutBlock : XingBlock
@@ -267,6 +276,13 @@ namespace XingAPINet
 			if (idx.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt3341OutBlock block)
+		{
+			block.cnt = this.cnt;
+			block.idx = this.idx;
+
 		}
 	}
 
@@ -602,6 +618,25 @@ namespace XingAPINet
 			// peg float 13.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt3341OutBlock1 block)
+		{
+			block.rank = this.rank;
+			block.hname = this.hname;
+			block.salesgrowth = this.salesgrowth;
+			block.operatingincomegrowt = this.operatingincomegrowt;
+			block.ordinaryincomegrowth = this.ordinaryincomegrowth;
+			block.liabilitytoequity = this.liabilitytoequity;
+			block.enterpriseratio = this.enterpriseratio;
+			block.eps = this.eps;
+			block.bps = this.bps;
+			block.roe = this.roe;
+			block.shcode = this.shcode;
+			block.per = this.per;
+			block.pbr = this.pbr;
+			block.peg = this.peg;
+
 		}
 	}
 

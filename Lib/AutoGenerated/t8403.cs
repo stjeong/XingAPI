@@ -93,6 +93,12 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt8403InBlock block)
+		{
+			block.shcode = this.shcode;
+
+		}
 	}
 
 	public partial class XQt8403OutBlock : XingBlock
@@ -1443,6 +1449,85 @@ namespace XingAPINet
 			if (shcode?.Length > 6) return false; // char 6
 
 			return true;
+		}
+
+		public void CopyTo(XQt8403OutBlock block)
+		{
+			block.hname = this.hname;
+			block.price = this.price;
+			block.sign = this.sign;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.stimeqrt = this.stimeqrt;
+			block.jnilclose = this.jnilclose;
+			block.offerho1 = this.offerho1;
+			block.bidho1 = this.bidho1;
+			block.offerrem1 = this.offerrem1;
+			block.bidrem1 = this.bidrem1;
+			block.dcnt1 = this.dcnt1;
+			block.scnt1 = this.scnt1;
+			block.offerho2 = this.offerho2;
+			block.bidho2 = this.bidho2;
+			block.offerrem2 = this.offerrem2;
+			block.bidrem2 = this.bidrem2;
+			block.dcnt2 = this.dcnt2;
+			block.scnt2 = this.scnt2;
+			block.offerho3 = this.offerho3;
+			block.bidho3 = this.bidho3;
+			block.offerrem3 = this.offerrem3;
+			block.bidrem3 = this.bidrem3;
+			block.dcnt3 = this.dcnt3;
+			block.scnt3 = this.scnt3;
+			block.offerho4 = this.offerho4;
+			block.bidho4 = this.bidho4;
+			block.offerrem4 = this.offerrem4;
+			block.bidrem4 = this.bidrem4;
+			block.dcnt4 = this.dcnt4;
+			block.scnt4 = this.scnt4;
+			block.offerho5 = this.offerho5;
+			block.bidho5 = this.bidho5;
+			block.offerrem5 = this.offerrem5;
+			block.bidrem5 = this.bidrem5;
+			block.dcnt5 = this.dcnt5;
+			block.scnt5 = this.scnt5;
+			block.offerho6 = this.offerho6;
+			block.bidho6 = this.bidho6;
+			block.offerrem6 = this.offerrem6;
+			block.bidrem6 = this.bidrem6;
+			block.dcnt6 = this.dcnt6;
+			block.scnt6 = this.scnt6;
+			block.offerho7 = this.offerho7;
+			block.bidho7 = this.bidho7;
+			block.offerrem7 = this.offerrem7;
+			block.bidrem7 = this.bidrem7;
+			block.dcnt7 = this.dcnt7;
+			block.scnt7 = this.scnt7;
+			block.offerho8 = this.offerho8;
+			block.bidho8 = this.bidho8;
+			block.offerrem8 = this.offerrem8;
+			block.bidrem8 = this.bidrem8;
+			block.dcnt8 = this.dcnt8;
+			block.scnt8 = this.scnt8;
+			block.offerho9 = this.offerho9;
+			block.bidho9 = this.bidho9;
+			block.offerrem9 = this.offerrem9;
+			block.bidrem9 = this.bidrem9;
+			block.dcnt9 = this.dcnt9;
+			block.scnt9 = this.scnt9;
+			block.offerho10 = this.offerho10;
+			block.bidho10 = this.bidho10;
+			block.offerrem10 = this.offerrem10;
+			block.bidrem10 = this.bidrem10;
+			block.dcnt10 = this.dcnt10;
+			block.scnt10 = this.scnt10;
+			block.dvol = this.dvol;
+			block.svol = this.svol;
+			block.toffernum = this.toffernum;
+			block.tbidnum = this.tbidnum;
+			block.time = this.time;
+			block.shcode = this.shcode;
+
 		}
 	}
 

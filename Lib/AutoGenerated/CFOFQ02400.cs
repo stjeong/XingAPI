@@ -157,6 +157,16 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCFOFQ02400InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.RegMktCode = this.RegMktCode;
+			block.BuyDt = this.BuyDt;
+
+		}
 	}
 
 	public partial class XQCFOFQ02400OutBlock1 : XingBlock
@@ -334,6 +344,16 @@ namespace XingAPINet
 			if (BuyDt?.Length > 8) return false; // char 8
 
 			return true;
+		}
+
+		public void CopyTo(XQCFOFQ02400OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.Pwd = this.Pwd;
+			block.RegMktCode = this.RegMktCode;
+			block.BuyDt = this.BuyDt;
+
 		}
 	}
 
@@ -768,6 +788,31 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCFOFQ02400OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.FutsCtrctQty = this.FutsCtrctQty;
+			block.OptCtrctQty = this.OptCtrctQty;
+			block.CtrctQty = this.CtrctQty;
+			block.FutsCtrctAmt = this.FutsCtrctAmt;
+			block.FutsBuyctrAmt = this.FutsBuyctrAmt;
+			block.FutsSlctrAmt = this.FutsSlctrAmt;
+			block.CalloptCtrctAmt = this.CalloptCtrctAmt;
+			block.CallBuyAmt = this.CallBuyAmt;
+			block.CallSellAmt = this.CallSellAmt;
+			block.PutoptCtrctAmt = this.PutoptCtrctAmt;
+			block.PutBuyAmt = this.PutBuyAmt;
+			block.PutSellAmt = this.PutSellAmt;
+			block.AllCtrctAmt = this.AllCtrctAmt;
+			block.BuyctrAsmAmt = this.BuyctrAsmAmt;
+			block.SlctrAsmAmt = this.SlctrAsmAmt;
+			block.FutsPnlSum = this.FutsPnlSum;
+			block.OptPnlSum = this.OptPnlSum;
+			block.AllPnlSum = this.AllPnlSum;
+
+		}
 	}
 
 	public partial class XQCFOFQ02400OutBlock3 : XingBlock
@@ -1086,6 +1131,24 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCFOFQ02400OutBlock3 block)
+		{
+			block.FnoClssCode = this.FnoClssCode;
+			block.FutsSellQty = this.FutsSellQty;
+			block.FutsSellPnl = this.FutsSellPnl;
+			block.FutsBuyQty = this.FutsBuyQty;
+			block.FutsBuyPnl = this.FutsBuyPnl;
+			block.CallSellQty = this.CallSellQty;
+			block.CallSellPnl = this.CallSellPnl;
+			block.CallBuyQty = this.CallBuyQty;
+			block.CallBuyPnl = this.CallBuyPnl;
+			block.PutSellQty = this.PutSellQty;
+			block.PutSellPnl = this.PutSellPnl;
+			block.PutBuyQty = this.PutBuyQty;
+			block.PutBuyPnl = this.PutBuyPnl;
+
+		}
 	}
 
 	public partial class XQCFOFQ02400OutBlock4 : XingBlock
@@ -1386,6 +1449,23 @@ namespace XingAPINet
 			// EvalErnrat double 12.6
 
 			return true;
+		}
+
+		public void CopyTo(XQCFOFQ02400OutBlock4 block)
+		{
+			block.IsuNo = this.IsuNo;
+			block.IsuNm = this.IsuNm;
+			block.BnsTpCode = this.BnsTpCode;
+			block.BnsTpNm = this.BnsTpNm;
+			block.BalQty = this.BalQty;
+			block.FnoAvrPrc = this.FnoAvrPrc;
+			block.BgnAmt = this.BgnAmt;
+			block.ThdayLqdtQty = this.ThdayLqdtQty;
+			block.Curprc = this.Curprc;
+			block.EvalAmt = this.EvalAmt;
+			block.EvalPnlAmt = this.EvalPnlAmt;
+			block.EvalErnrat = this.EvalErnrat;
+
 		}
 	}
 

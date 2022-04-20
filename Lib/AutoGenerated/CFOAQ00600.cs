@@ -237,6 +237,21 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCFOAQ00600InBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.InptPwd = this.InptPwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.FnoClssCode = this.FnoClssCode;
+			block.PrdgrpCode = this.PrdgrpCode;
+			block.PrdtExecTpCode = this.PrdtExecTpCode;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+			block.CommdaCode = this.CommdaCode;
+
+		}
 	}
 
 	public partial class XQCFOAQ00600OutBlock1 : XingBlock
@@ -500,6 +515,21 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQCFOAQ00600OutBlock1 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNo = this.AcntNo;
+			block.InptPwd = this.InptPwd;
+			block.QrySrtDt = this.QrySrtDt;
+			block.QryEndDt = this.QryEndDt;
+			block.FnoClssCode = this.FnoClssCode;
+			block.PrdgrpCode = this.PrdgrpCode;
+			block.PrdtExecTpCode = this.PrdtExecTpCode;
+			block.StnlnSeqTp = this.StnlnSeqTp;
+			block.CommdaCode = this.CommdaCode;
+
+		}
 	}
 
 	public partial class XQCFOAQ00600OutBlock2 : XingBlock
@@ -694,6 +724,17 @@ namespace XingAPINet
 			if (OptExecQty.ToString().Length > 16) return false; // long 16
 
 			return true;
+		}
+
+		public void CopyTo(XQCFOAQ00600OutBlock2 block)
+		{
+			block.RecCnt = this.RecCnt;
+			block.AcntNm = this.AcntNm;
+			block.FutsOrdQty = this.FutsOrdQty;
+			block.FutsExecQty = this.FutsExecQty;
+			block.OptOrdQty = this.OptOrdQty;
+			block.OptExecQty = this.OptExecQty;
+
 		}
 	}
 
@@ -1199,6 +1240,35 @@ namespace XingAPINet
 			if (CommdaCodeNm?.Length > 40) return false; // char 40
 
 			return true;
+		}
+
+		public void CopyTo(XQCFOAQ00600OutBlock3 block)
+		{
+			block.OrdDt = this.OrdDt;
+			block.OrdNo = this.OrdNo;
+			block.OrgOrdNo = this.OrgOrdNo;
+			block.OrdTime = this.OrdTime;
+			block.FnoIsuNo = this.FnoIsuNo;
+			block.IsuNm = this.IsuNm;
+			block.BnsTpNm = this.BnsTpNm;
+			block.MrcTpNm = this.MrcTpNm;
+			block.FnoOrdprcPtnCode = this.FnoOrdprcPtnCode;
+			block.FnoOrdprcPtnNm = this.FnoOrdprcPtnNm;
+			block.OrdPrc = this.OrdPrc;
+			block.OrdQty = this.OrdQty;
+			block.OrdTpNm = this.OrdTpNm;
+			block.ExecTpNm = this.ExecTpNm;
+			block.ExecPrc = this.ExecPrc;
+			block.ExecQty = this.ExecQty;
+			block.CtrctTime = this.CtrctTime;
+			block.CtrctNo = this.CtrctNo;
+			block.ExecNo = this.ExecNo;
+			block.BnsplAmt = this.BnsplAmt;
+			block.UnercQty = this.UnercQty;
+			block.UserId = this.UserId;
+			block.CommdaCode = this.CommdaCode;
+			block.CommdaCodeNm = this.CommdaCodeNm;
+
 		}
 	}
 

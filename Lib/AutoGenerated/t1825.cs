@@ -109,6 +109,13 @@ namespace XingAPINet
 
 			return true;
 		}
+
+		public void CopyTo(XQt1825InBlock block)
+		{
+			block.search_cd = this.search_cd;
+			block.gubun = this.gubun;
+
+		}
 	}
 
 	public partial class XQt1825OutBlock : XingBlock
@@ -218,6 +225,12 @@ namespace XingAPINet
 			if (JongCnt.ToString().Length > 4) return false; // long 4
 
 			return true;
+		}
+
+		public void CopyTo(XQt1825OutBlock block)
+		{
+			block.JongCnt = this.JongCnt;
+
 		}
 	}
 
@@ -468,6 +481,20 @@ namespace XingAPINet
 			// volumerate float 6.2
 
 			return true;
+		}
+
+		public void CopyTo(XQt1825OutBlock1 block)
+		{
+			block.shcode = this.shcode;
+			block.hname = this.hname;
+			block.sign = this.sign;
+			block.signcnt = this.signcnt;
+			block.close = this.close;
+			block.change = this.change;
+			block.diff = this.diff;
+			block.volume = this.volume;
+			block.volumerate = this.volumerate;
+
 		}
 	}
 
