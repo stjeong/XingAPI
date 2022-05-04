@@ -19,9 +19,12 @@ namespace XingAPINet
         public XAQueryResult QueryResult => _queryResult;
         public string ReceiveMessage => $"Code = {_queryResult.Code}, Message = {_queryResult.Message}";
 
+        string _trCode = null;
+
         public XingQuery(string resFileCode)
         {
             _xaQuery = new XAQueryClass();
+            _trCode = resFileCode;
             _xaQuery.ResFileName = $".\\Res\\{resFileCode}.res";
             _xaQuery.ReceiveData += _xaQuery_ReceiveData;
             _xaQuery.ReceiveMessage += _xaQuery_ReceiveMessage;
@@ -44,8 +47,10 @@ namespace XingAPINet
         /// 연속 조회 시 true로 설정, 만약 기본 값 null을 설정하면 XQ[tNNNN] 객체 생성 후 최초 호출인 경우 false, 이후로는 true를 자동으로 지정
         /// </summary>
         /// <param name="bNext">true == 연속 조회, false == 단일 조회</param>
+        /// <param name="doService">true인 경우 RequestService 호출, false(기본값)인 경우 Request 호출</param>
+        /// <param name="serviceData">RequestService 호출의 2번째 인자인 szData에 넘길 값</param>
         /// <returns></returns>
-        public int Request(bool? bNext = null)
+        public int Request(bool? bNext = null, bool? doService = null, string serviceData = "")
         {
             _ewh_RecvSync.Reset();
             _queryResult = null;
@@ -63,7 +68,17 @@ namespace XingAPINet
             }
 
             _lastQueryTime = DateTime.Now;
-            int result = _xaQuery.Request(_nextCall);
+            int result = 0;
+            
+            if (doService != null && doService.Value == true)
+            {
+                result = _xaQuery.RequestService(_trCode, serviceData);
+            }
+            else
+            {
+                _xaQuery.Request(_nextCall);
+            }
+
             _nextCall = true;
 
             if (result >= 0)
