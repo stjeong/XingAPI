@@ -4,6 +4,9 @@ using XingAPINet;
 
 namespace t3320
 {
+    // C# XingAPI - 주식 종목에 따른 PBR, PER, ROE, ROA 구하는 방법(t3320, t8430 예제)
+    // ; https://www.sysnet.pe.kr/2/0/13034
+
     class Program
     {
         static void Main(string[] args)
